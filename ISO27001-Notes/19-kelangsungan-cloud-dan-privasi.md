@@ -2,93 +2,99 @@
 day: 19
 title: 'Memperluas ISMS: kelangsungan layanan, cloud, dan privasi'
 researched_on: 2026-10-10
-versions_checked: 'ISO/IEC 27031:2011 ditarik pada 2025-05-16 dan digantikan ISO/IEC 27031:2025; ISO/IEC 27017:2015 ditarik dan digantikan ISO/IEC 27017:2026; ISO/IEC 27018:2019 ditarik dan digantikan ISO/IEC 27018:2025; ISO/IEC 27701:2019 ditarik dan digantikan ISO/IEC 27701:2025 edisi 2 yang terbit 2025-10-14; ISO 22301:2019 published dan ditandai sedang ditinjau; rujukan Day 01, 02, 08, 12, 18'
+versions_checked: 'ISO 22301:2019 edisi 2 + Amd 1:2024 (stage 90.92, akan direvisi; ISO/CD 22301 sedang disusun); ISO/IEC 27031:2025 edisi 2, terbit 2025-05-16, menggantikan 27031:2011; ISO/IEC 27017:2026 edisi 2, terbit 2026-07-27, menggantikan 27017:2015; ISO/IEC 27018:2025 edisi 3, terbit 2025-08-26, menggantikan 27018:2019; ISO/IEC 27701:2025 edisi 2, terbit 2025-10-14, standar sistem manajemen mandiri; ISO/IEC 27706:2025 edisi 1, terbit 2025-10-14, menggantikan ISO/IEC TS 27006-2:2021'
 ---
 
 # Day 19: Memperluas ISMS
 
-Cakupan: empat standar yang paling sering ditambahkan di atas ISO 27001, apa yang masing-masing tutup, dan kenapa hampir semua panduan daring tentangnya sekarang sudah usang.
+Cakupan: empat standar yang paling sering ditambahkan di atas ISO 27001 (kelangsungan, cloud, dan privasi), apa yang masing-masing tambahkan, status edisinya, dan cara memutuskan apakah organisasimu membutuhkannya.
 
 ## 1. Tujuan belajar
 
 Setelah menyelesaikan Day ini, kamu bisa:
 
-- menyebutkan celah apa yang ditutup masing-masing standar tambahan dan kapan ia relevan.
-- membedakan standar yang bisa disertifikasi dari yang berupa panduan.
-- memutuskan apakah organisasimu membutuhkan tambahan itu atau cukup memperluas ISMS yang ada.
-- mengenali bahwa edisi yang dirujuk panduan daring kemungkinan besar sudah ditarik.
+- menyebutkan celah yang ditutup masing-masing standar tambahan dan kapan ia relevan.
+- membedakan standar persyaratan yang bisa disertifikasi dari standar panduan.
+- menjelaskan apa yang 22301, 27031, 27017, 27018, dan 27701 tambahkan di atas kontrol Annex A yang sudah ada.
+- mengenali panduan online yang masih merujuk edisi yang sudah ditarik.
+- memutuskan apakah organisasimu perlu menambah standar atau cukup memperluas ISMS yang ada.
 - menyusun rencana penambahan yang tidak menggandakan pekerjaan.
-- menjelaskan ke manajemen apa yang didapat dan apa biayanya.
 
 ## 2. Konteks singkat
 
-ISO 27001 menetapkan sistem manajemen keamanan informasi, dan Annex A menyediakan kendali untuk menurunkan risiko. Tetapi ada beberapa hal yang tidak ditanganinya secara khusus, dan tiga yang paling sering muncul di pekerjaan nyata adalah kesiapan layanan menghadapi gangguan, hubungan khusus antara penyedia dan pengguna layanan awan, dan kewajiban terhadap data pribadi yang sifatnya bukan sekadar keamanan.
+ISO 27001 menetapkan sistem manajemen keamanan informasi, dan Annex A menyediakan kontrol untuk menurunkan risiko. Ada tiga hal yang hanya disentuh secara umum oleh Annex A: kesiapan layanan menghadapi gangguan (kontrol 5.29 dan 5.30), pembagian tanggung jawab antara penyedia dan pengguna layanan cloud (5.23), dan kewajiban terhadap data pribadi di luar soal keamanan (5.34). Untuk ketiganya ada standar tambahan dengan rincian yang jauh lebih dalam.
 
-Untuk ketiganya ada standar tambahan, dan di situlah masalah praktis dimulai. Keempat standar yang dibahas di Day ini direvisi dalam waktu yang berdekatan, sehingga hampir semua artikel, templat, dan materi pelatihan yang beredar masih merujuk edisi yang sudah ditarik. Day ini menyebutkan status terbarunya, dan sekaligus menunjukkan cara menilai apakah kamu benar-benar membutuhkannya.
-
-Judul, edisi, tanggal, dan status setiap standar di Day ini berasal dari katalog ISO. Penjelasan isinya adalah penilaian praktis yang disusun dari judul resmi, struktur keluarga standar, dan praktik umum; cocokkan dengan teks standarnya sebelum dipakai sebagai dasar keputusan sertifikasi.
+Masalah praktisnya: empat dari standar itu direvisi antara Mei 2025 dan Juli 2026, sehingga banyak artikel, templat, dan materi pelatihan yang beredar masih merujuk edisi yang sudah ditarik, lengkap dengan penomoran kontrol 27002:2013. Day ini memberi status terbarunya dan cara menilai apakah kamu benar-benar membutuhkannya.
 
 ## 3. Konsep inti
 
-### 3.1 Status terbaru keempatnya
+### 3.1 Status terbaru
 
-Ini bagian yang paling cepat usang, jadi periksa sendiri saat membacanya kembali.
-
-| Standar | Edisi lama | Status edisi lama | Edisi baru |
+| Standar | Edisi lama dan statusnya | Edisi berlaku | Sifat |
 |---|---|---|---|
-| ISO/IEC 27031 | 2011 | ditarik pada 2025-05-16 [S1] | ISO/IEC 27031:2025 [S1] |
-| ISO/IEC 27017 | 2015 | ditarik [S2] | ISO/IEC 27017:2026 [S2] |
-| ISO/IEC 27018 | 2019 | ditarik [S3] | ISO/IEC 27018:2025 [S3] |
-| ISO/IEC 27701 | 2019 | ditarik [S4] | ISO/IEC 27701:2025, edisi 2, terbit 2025-10-14 [S5] |
+| ISO 22301 | 2019 masih berlaku, ditandai akan direvisi [S6] | ISO 22301:2019 + Amd 1:2024 | Persyaratan, bisa disertifikasi |
+| ISO/IEC 27031 | 2011 ditarik 2025-05-16 [S1] | ISO/IEC 27031:2025 edisi 2, terbit 2025-05-16 [S7] | Panduan |
+| ISO/IEC 27017 | 2015 ditarik 2026-07-27 [S2] | ISO/IEC 27017:2026 edisi 2, terbit 2026-07-27 [S8] | Panduan kontrol |
+| ISO/IEC 27018 | 2019 ditarik 2025-08-26 [S3] | ISO/IEC 27018:2025 edisi 3, terbit 2025-08-26 [S9] | Panduan kontrol |
+| ISO/IEC 27701 | 2019 ditarik [S4] | ISO/IEC 27701:2025 edisi 2, terbit 2025-10-14 [S5] | Persyaratan, sistem manajemen mandiri |
 
-Empat revisi dalam rentang waktu yang berdekatan. Konsekuensinya untuk pekerjaanmu:
+Konsekuensinya untuk pekerjaanmu:
 
-- Panduan daring, perbandingan kendali, dan templat yang kamu temukan hampir pasti merujuk edisi lama. Periksa tanggal terbit tulisannya sebelum memakainya.
-- Bila organisasimu sudah tersertifikasi terhadap salah satunya, ada masa transisi yang perlu kamu tanyakan ke badan sertifikasi.
-- Pelatihan yang pernah kamu ikuti sebelum 2025 membahas edisi yang sudah ditarik, termasuk nomor kendalinya.
+- Perbandingan kontrol dan templat dari internet hampir pasti merujuk edisi lama. Periksa tanggal terbit tulisannya dan edisi yang dirujuk.
+- Edisi baru 27017 dan 27018 kini dibangun di atas 27002:2022 (empat tema, 93 kontrol), sehingga pemetaan lama berbasis nomor 2013 (misalnya A.12.4.1) perlu dipetakan ulang [S8][S9].
+- Bila organisasimu tersertifikasi 27701:2019, ada masa transisi yang ditetapkan badan akreditasi (bagian 3.4).
 
-Bila kamu hanya mengambil satu hal dari Day ini, ambil ini: jangan memakai perbandingan kendali dari internet tanpa memeriksa edisi yang dirujuknya.
+### 3.2 Kesiapan layanan menghadapi gangguan: 22301 dan 27031
 
-### 3.2 Kesiapan layanan menghadapi gangguan
+Annex A 27001:2022 sudah punya dua kontrol kelangsungan: 5.29 meminta keamanan informasi tetap terjaga saat gangguan, dan 5.30 meminta kesiapan ICT direncanakan, diterapkan, dipelihara, dan diuji berdasarkan sasaran kelangsungan bisnis. Kontrol pendukungnya 8.13 (backup) dan 8.14 (redundansi fasilitas pemrosesan). Dua standar di bawah ini memperdalamnya dari arah berbeda.
 
-Dua standar yang sering tertukar:
+**ISO 22301:2019** adalah standar persyaratan sistem manajemen kelangsungan bisnis (BCMS) dengan struktur klausul 4-10 yang sama dengan 27001 [S6]. Yang ia tambahkan ada di klausul 8 [S10]:
 
-| Standar | Sifat | Cakupan |
-|---|---|---|
-| ISO 22301 | Sistem manajemen, bisa disertifikasi | Kelangsungan bisnis secara keseluruhan |
-| ISO/IEC 27031 | Panduan, tidak disertifikasi | Kesiapan teknologi informasi dan komunikasi untuk mendukung kelangsungan bisnis [S1] |
+| Klausul | Isi |
+|---|---|
+| 8.2 | Business impact analysis (BIA) dan penilaian risiko: aktivitas yang mendukung produk dan layanan, bagaimana dampak bertambah seiring lamanya gangguan, prioritas waktu pemulihan (RTO), serta ketergantungan dan sumber daya pendukung |
+| 8.3 | Strategi dan solusi kelangsungan, termasuk kebutuhan sumber dayanya |
+| 8.4 | Rencana dan prosedur: struktur respons, peringatan dan komunikasi, rencana kelangsungan, pemulihan |
+| 8.5 | Program latihan (exercise) |
+| 8.6 | Evaluasi dokumentasi dan kemampuan kelangsungan |
 
-Perbedaan praktisnya besar. Yang pertama adalah sistem manajemen tersendiri dengan klausulnya sendiri, dan menambahkannya berarti menambah beban tata kelola. Yang kedua adalah panduan yang bisa kamu pakai untuk memperkuat kendali kelangsungan di dalam ISMS yang sudah ada, tanpa sistem baru.
+Amd 1:2024 menambah pertimbangan perubahan iklim, sejalan dengan amandemen 27001. Katalog ISO mencatat 22301:2019 akan direvisi dan drafnya (ISO/CD 22301) sedang disusun [S6].
 
-Untuk sebagian besar organisasi menengah, jalur yang masuk akal adalah memperkuat kendali kelangsungan di ISMS memakai panduan, lalu mempertimbangkan sistem manajemen tersendiri hanya bila pelanggan atau regulator memintanya.
+**ISO/IEC 27031:2025** (judul edisi baru diawali "Cybersecurity") adalah panduan kesiapan ICT untuk kelangsungan bisnis: kerangka metode dan proses untuk membuat ICT siap mencegah, merespons, dan pulih dari gangguan, dari serangan siber sampai kegagalan sistem [S7]. Ia melengkapi 27001 di sisi kontinuitas ICT dan mendukung 22301 dengan menyelaraskan kesiapan ICT ke sasaran kelangsungan bisnis. Edisi 2025 juga membahas ketergantungan pada layanan eksternal seperti penyedia cloud [S7].
 
-Yang perlu kamu periksa lebih dulu, apa pun jalurnya: apakah organisasimu sudah punya analisis dampak terhadap bisnis yang nyata, dan apakah rencana pemulihan pernah diuji dengan pemulihan sungguhan, bukan hanya dibaca. Tanpa keduanya, menambah standar tidak akan menambah ketahanan.
+Untuk organisasi menengah, jalur yang masuk akal biasanya memperkuat kontrol 5.29, 5.30, 8.13, dan 8.14 di dalam ISMS memakai 27031 sebagai panduan, lalu mempertimbangkan BCMS 22301 tersendiri hanya bila pelanggan atau regulator memintanya. Apa pun jalurnya, periksa dulu apakah sudah ada BIA yang nyata dan apakah rencana pemulihan pernah diuji dengan pemulihan sungguhan. Di Indonesia, sebagian regulasi sektor menuntut uji ini secara eksplisit, misalnya DRP bank yang diuji minimal setahun sekali (Day 18).
 
-### 3.3 Hubungan penyedia dan pengguna layanan awan
+### 3.3 Cloud: 27017 dan 27018
 
-Dua standar yang berpasangan:
+**ISO/IEC 27017:2026** adalah panduan kontrol keamanan informasi untuk layanan cloud berbasis 27002 [S8]. Yang ia tambahkan:
 
-- **ISO/IEC 27017** memberi panduan kendali keamanan informasi untuk layanan awan [S2]. Yang khas darinya adalah pembagian tanggung jawab antara penyedia dan pengguna: untuk banyak kendali, ada sisi yang menjadi tanggung jawab penyedia dan sisi yang menjadi tanggung jawab pengguna.
-- **ISO/IEC 27018** memberi panduan pelindungan informasi pribadi yang dapat diidentifikasi pada layanan awan publik yang bertindak sebagai pemroses [S3].
+- panduan tambahan untuk kontrol 27002:2022 yang relevan, ditulis berdampingan untuk cloud service customer dan cloud service provider;
+- kontrol tambahan khusus cloud, untuk risiko dan tanggung jawab yang tidak ada di 27002;
+- penjelasan cara kontrol berlaku ketika tanggung jawab, infrastruktur, dan operasi terbagi antara beberapa pihak;
+- cakupan public, private, dan hybrid cloud; untuk private cloud, kontrol perlu disesuaikan dengan hubungan antar departemen internal.
 
-Nilai terbesar keduanya bukan pada sertifikasinya, melainkan pada kerangka pembagian tanggung jawab. Banyak kegagalan di lingkungan awan berasal dari asumsi bahwa penyedia menangani sesuatu yang sebenarnya tanggung jawab pengguna, atau sebaliknya.
+Menurut ringkasan iso27001security.com, edisi 2026 menambah empat kontrol di atas 93 kontrol 27002: 5.38 dan 5.39 (peran dan tanggung jawab bersama yang disepakati), 8.35 (segregasi di lingkungan komputasi virtual), dan 8.36 (mendeteksi dan mencegah pemakaian layanan cloud yang tidak sah), ditambah Annex A pemetaan edisi 2015 ke 2026 dan Annex B tentang pemantauan keamanan cloud [S11]. Edisi 2015 memakai tujuh kontrol berawalan CLD dengan penomoran 2013. Nomor dan judul kontrol edisi 2026 perlu dicocokkan dengan teks standar sebelum dipakai di SoA.
 
-Untuk pekerjaanmu, dua pemakaian yang paling langsung:
+**ISO/IEC 27018:2025** adalah panduan pelindungan PII di public cloud yang bertindak sebagai PII processor [S9]. Ia menyesuaikan kontrol 27002 untuk pemrosesan PII di cloud, mencakup pengumpulan, penyimpanan, pemrosesan, transmisi, dan penghapusan, dan dirancang melengkapi ISMS berbasis 27001. Edisi 2025 diselaraskan dengan 27002:2022 dan menambah Annex B berisi panduan penerapan yang lebih rinci [S9]. Contoh kontrol tambahannya: penyedia memberi tahu pelanggan bila memakai subkontraktor untuk memproses PII [S12].
 
-1. **Sebagai daftar periksa saat menilai penyedia** (Day 12). Tanyakan sisi mana yang mereka tangani untuk kendali yang penting bagimu.
-2. **Sebagai dasar menyusun pembagian tanggung jawab internal.** Buat matriks yang menyatakan siapa menangani apa untuk tiap layanan awan yang kamu pakai, lalu uji asumsinya.
+Nilai terbesar keduanya ada pada kerangka pembagian tanggung jawab, bukan pada sertifikatnya. Banyak kegagalan di lingkungan cloud berasal dari asumsi bahwa penyedia menangani sesuatu yang sebenarnya tanggung jawab pengguna, atau sebaliknya. Dua pemakaian yang paling langsung:
 
-Perlu diingat bahwa sertifikasi penyedia terhadap standar ini tidak memindahkan tanggung jawabmu. Sisi pengguna tetap milikmu, dan auditor maupun regulator akan menanyakannya.
+1. **Daftar periksa saat menilai penyedia** (Day 12): tanyakan sisi mana yang mereka tangani untuk kontrol yang penting bagimu, dan apakah sertifikat 27017/27018 mereka sudah memakai edisi baru.
+2. **Dasar matriks tanggung jawab internal** (bagian 4.2): siapa menangani apa untuk tiap layanan cloud, lalu uji asumsinya.
 
-### 3.4 Privasi di atas keamanan
+Sertifikasi penyedia tidak memindahkan tanggung jawabmu. Kontrol 5.23 tetap menuntut organisasimu sendiri menetapkan proses pemakaian layanan cloud, dan sisi pengguna tetap akan ditanyakan auditor maupun regulator.
 
-ISO/IEC 27701 adalah standar sistem manajemen informasi privasi, dan edisi keduanya terbit pada Oktober 2025 [S5]. Posisinya berubah antara edisi lama dan baru, dan itu perlu kamu perhatikan.
+### 3.4 Privasi: 27701:2025 sebagai sistem manajemen mandiri
 
-Edisi lama disusun sebagai perluasan terhadap ISO/IEC 27001 dan ISO/IEC 27002 untuk manajemen informasi privasi [S4], sehingga ia menempel pada ISMS. Edisi baru berjudul sistem manajemen informasi privasi dengan persyaratan dan panduan [S5], yang menandakan posisinya sebagai standar persyaratan tersendiri. Perbedaan ini mempengaruhi apakah kamu bisa menerapkannya tanpa ISMS, dan bagaimana sertifikasinya bekerja. Periksa ke badan sertifikasi, karena pertanyaan itu tidak bisa dijawab dari halaman katalog.
+ISO/IEC 27701:2019 berjudul perluasan (extension) terhadap 27001 dan 27002 [S4], sehingga hanya bisa diterapkan dan disertifikasi bersama ISMS. Edisi 2025 berjudul sistem manajemen informasi privasi, persyaratan dan panduan, dan katalog ISO menyebutnya standar sistem manajemen yang independen dan bisa dipakai sendiri, untuk PII controller maupun PII processor [S5]. Perubahan isinya [S13]:
 
-Kapan ini relevan bagimu: ketika kewajiban yang kamu petakan di Day 18 memuat hal-hal yang tidak punya padanan di ISMS, terutama dasar pemrosesan, persetujuan, dan hak subjek data. Standar privasi menyediakan kerangka untuk hal-hal itu, sehingga kamu tidak merancangnya dari nol.
+- klausul 4-10 sendiri dengan struktur sistem manajemen yang sama seperti 27001 (konteks, kepemimpinan, perencanaan, dukungan, operasi, evaluasi kinerja, perbaikan);
+- Annex A berupa katalog kontrol privasi untuk controller dan processor, bergaya seperti Annex A 27001;
+- tetap bisa diintegrasikan dengan ISMS untuk mengurangi duplikasi.
 
-Kapan belum relevan: ketika ISMS-mu sendiri belum berjalan stabil. Menambahkan sistem manajemen kedua di atas yang pertama yang masih goyah akan menggandakan beban tanpa menambah kepatuhan.
+Sertifikasinya kini punya standar badan sertifikasi sendiri, ISO/IEC 27706:2025, yang menggantikan ISO/IEC TS 27006-2:2021 dan menambah persyaratan di atas 17021-1 (Day 17) [S14]. Badan akreditasi menetapkan transisinya; contohnya SAC Singapura mewajibkan badan sertifikasi selesai bertransisi ke 27701:2025 dan 27706:2025 paling lambat 31 Oktober 2027 dan memindahkan seluruh kliennya paling lambat 31 Oktober 2028, serta akan menerbitkan sertifikat PIMS dan ISMS secara terpisah [S15]. Tenggat di badan akreditasi lain, termasuk KAN, perlu dicek di masing-masing.
+
+Kapan ini relevan bagimu: ketika kewajiban yang kamu petakan di Day 18 memuat hal yang tidak punya padanan di ISMS, terutama dasar pemrosesan, DPIA, dan hak subjek data dengan tenggat 3 x 24 jam. Karena 27701:2025 bisa berdiri sendiri, organisasi yang tidak butuh ISMS tersertifikasi pun kini bisa memakainya. Kapan belum relevan: ketika ISMS-mu sendiri belum stabil. Menambahkan sistem manajemen kedua di atas yang pertama yang masih goyah menggandakan beban tanpa menambah kepatuhan.
 
 ### 3.5 Memutuskan: tambah standar atau perluas ISMS
 
@@ -111,31 +117,25 @@ Pertanyaan yang menentukan, berurutan:
    ya  -> pakai standarnya sebagai panduan, bukan sebagai sistem manajemen baru
 ```
 
-Jalur yang paling sering benar untuk organisasi menengah adalah memakai standar tambahan sebagai panduan untuk memperkuat ISMS yang ada, bukan sebagai sistem manajemen terpisah. Sertifikasi tambahan masuk akal ketika ada permintaan pasar yang nyata, dan itu keputusan bisnis, bukan keputusan teknis.
+Untuk organisasi menengah, jalur yang paling sering tepat adalah memakai standar tambahan sebagai panduan untuk memperkuat ISMS. Sertifikasi tambahan masuk akal ketika ada permintaan pasar yang nyata, dan itu keputusan bisnis.
 
 ### 3.6 Menambah tanpa menggandakan
 
-Bila kamu memutuskan menambah, prinsip yang sama seperti Day 18 berlaku:
+Bila kamu memutuskan menambah, prinsip yang sama seperti Day 18 berlaku: satu register risiko (risiko privasi dan kelangsungan masuk register yang sama), satu program audit dengan lingkup diperluas, satu management review dengan agenda ditambah, satu jalur tindakan korektif, dan prosedur yang diperluas, bukan diduplikasi.
 
-- **Satu register risiko.** Risiko privasi dan risiko kelangsungan masuk ke register yang sama.
-- **Satu program audit.** Lingkup audit internal diperluas, bukan program kedua.
-- **Satu management review.** Agenda ditambah, bukan rapat baru.
-- **Satu jalur tindakan korektif.** Temuan dari lingkup baru masuk ke jalur yang sama.
-- **Dokumen yang menyatu.** Prosedur yang sudah ada diperluas bila memungkinkan, bukan diduplikasi.
+Yang memang perlu terpisah: pernyataan keberlakuan untuk lingkup baru (27701:2025 punya Annex A sendiri), bukti spesifik yang diminta auditor untuk standar itu, dan peran baru bila standarnya menuntutnya.
 
-Yang memang perlu terpisah: pernyataan keberlakuan untuk lingkup baru, bukti spesifik yang diminta auditor untuk standar itu, dan peran baru bila standarnya menuntutnya.
-
-Satu uji sederhana untuk mengetahui apakah kamu menggandakan: bila orang yang sama diminta memberikan bukti yang sama kepada dua proses berbeda, kamu sedang menggandakan.
+Uji sederhananya: bila orang yang sama diminta memberikan bukti yang sama kepada dua proses berbeda, kamu sedang menggandakan.
 
 ## 4. Contoh dokumen / artefak (organisasi fiktif)
 
-> Seluruh isi di bawah adalah contoh untuk organisasi fiktif PT AN. Nomor kendali dan rincian standar tidak dikutip dari teksnya; isi dari hasil pembacaanmu sendiri bila kamu memiliki aksesnya.
+> Seluruh isi di bawah adalah contoh untuk organisasi fiktif PT AN. Nomor kontrol tambahan 27017:2026 hanya dipakai sebagai ilustrasi; cocokkan dengan teks standar.
 
 ### 4.1 Lembar keputusan penambahan standar
 
 ```
 LEMBAR KEPUTUSAN                              Nomor: KS-2027-002
-Standar yang dipertimbangkan : sistem manajemen informasi privasi
+Standar yang dipertimbangkan : ISO/IEC 27701:2025 (PIMS)
 Disusun oleh                 : <nama>          Tanggal: 2027-04-10
 
 1. PERMINTAAN PASAR
@@ -144,8 +144,8 @@ Disusun oleh                 : <nama>          Tanggal: 2027-04-10
 
 2. CELAH YANG TIDAK TERTUTUP ISMS  (dari Day 18 bagian 4.2)
    dasar pemrosesan dan persetujuan   : belum ada proses
-   hak subjek data                    : belum ada proses
-   penilaian dampak pelindungan data  : belum ada proses
+   hak subjek data (3 x 24 jam)       : belum ada proses
+   DPIA (UU PDP Pasal 34)             : belum ada proses
 
 3. KESTABILAN ISMS SAAT INI
    audit internal berjalan sesuai program          : ya
@@ -153,71 +153,71 @@ Disusun oleh                 : <nama>          Tanggal: 2027-04-10
    penilaian                                       : cukup stabil, dengan catatan
 
 4. PERKIRAAN BEBAN
-   peran baru            : pejabat pelindungan data (sudah ada, perlu diperjelas perannya)
-   dokumen baru          : 4 prosedur, 1 pernyataan keberlakuan
-   audit tambahan        : <perkiraan hari, tanyakan ke badan sertifikasi>
+   peran baru            : PPDP (sudah ada, perlu diperjelas perannya)
+   dokumen baru          : 4 prosedur, 1 SoA PIMS terhadap Annex A 27701:2025
+   audit tambahan        : <perkiraan hari, tanyakan ke badan sertifikasi berakreditasi 27706>
    biaya berkelanjutan   : <perkiraan>
 
 REKOMENDASI
   Tahap 1 (2027): perluas ISMS dengan tiga proses di butir 2, tanpa sertifikasi.
-  Tahap 2 (2028): tinjau ulang kebutuhan sertifikasi berdasarkan permintaan pasar nyata.
+  Tahap 2 (2028): tinjau ulang sertifikasi berdasarkan permintaan pasar nyata.
   Alasan: celah di butir 2 harus ditutup apa pun keputusan sertifikasinya, dan menutupnya
   lebih dulu membuat sertifikasi nanti jauh lebih murah.
 
 CATATAN EDISI
-  Pastikan rujukan memakai edisi terbaru; edisi sebelumnya sudah ditarik.
+  Jangan memulai dengan 27701:2019; edisi itu sudah ditarik dan sertifikatnya sedang
+  ditransisikan.
 ```
 
-Blok rekomendasi dua tahap itu pola yang sering tepat: tutup celahnya dulu, putuskan sertifikasinya kemudian.
+Pola dua tahap itu sering tepat: tutup celahnya dulu, putuskan sertifikasinya kemudian.
 
-### 4.2 Matriks pembagian tanggung jawab awan
+### 4.2 Matriks pembagian tanggung jawab cloud
 
-| Kendali | Penyedia | Pengguna (kami) | Bukti yang kami punya | Diuji? |
+| Kontrol | Penyedia | Pengguna (kami) | Bukti yang kami punya | Diuji? |
 |---|---|---|---|---|
-| Keamanan fisik pusat data | penuh | tidak ada | laporan audit penyedia | tidak perlu |
-| Enkripsi data saat disimpan | menyediakan kemampuan | mengaktifkan dan mengelola kunci | konfigurasi; prosedur kunci | ya, 2027-02 |
-| Manajemen akses ke konsol | menyediakan kemampuan | konfigurasi, tinjauan berkala | hasil tinjauan hak akses | ya, 2027-01 |
-| Pencadangan data aplikasi | tidak, kecuali dinyatakan | penuh | konfigurasi pencadangan; uji pemulihan | belum diuji |
-| Pencatatan aktivitas konsol | menyediakan kemampuan | mengaktifkan, mengumpulkan, meninjau | konfigurasi; catatan tinjauan | ya, 2027-03 |
-| Respons insiden di lapis layanan | sebagian | penuh di lapis kami | prosedur IR-01 | ya, latihan meja |
+| 7.1-7.4 keamanan fisik pusat data | penuh | tidak ada | laporan audit penyedia, lingkup dibaca | tidak perlu |
+| 8.24 kriptografi (data saat disimpan) | menyediakan kemampuan | mengaktifkan dan mengelola kunci | konfigurasi; prosedur kunci | ya, 2027-02 |
+| 5.15, 8.2 akses ke konsol | menyediakan kemampuan | konfigurasi, tinjauan berkala | hasil tinjauan hak akses | ya, 2027-01 |
+| 8.13 backup data aplikasi | tidak, kecuali dinyatakan | penuh | konfigurasi backup; uji pemulihan | belum diuji |
+| 8.15 logging aktivitas konsol | menyediakan kemampuan | mengaktifkan, mengumpulkan, meninjau | konfigurasi; catatan tinjauan | ya, 2027-03 |
+| 5.24-5.26 respons insiden di lapis layanan | sebagian | penuh di lapis kami | prosedur IR-01 | ya, latihan meja |
+| Peran dan tanggung jawab bersama (27017:2026) | menyatakan di perjanjian | memeriksa dan menyetujui | perjanjian layanan, lampiran tanggung jawab | ya, 2027-01 |
 
-Dua kolom terakhir yang membuat matriks ini bukan sekadar teori. Baris pencadangan yang belum diuji adalah temuan, dan ia akan muncul di audit bila kamu tidak menemukannya lebih dulu.
-
-Catatan penting: menyebut laporan audit penyedia sebagai bukti hanya sah bila kamu benar-benar membacanya dan memeriksa lingkupnya (Day 17 bagian 3.4).
+Dua kolom terakhir yang membuat matriks ini bisa diaudit. Baris backup yang belum diuji adalah temuan, dan akan muncul di audit bila kamu tidak menemukannya lebih dulu. Laporan audit penyedia hanya sah sebagai bukti bila kamu benar-benar membaca lingkupnya (Day 17 bagian 3.5).
 
 ### 4.3 Daftar periksa kesiapan layanan
 
 Dipakai sebelum memutuskan menambah standar kelangsungan:
 
 ```
-DASAR YANG HARUS ADA LEBIH DULU
-  [ ] Daftar layanan dengan tingkat kepentingannya terhadap bisnis
-  [ ] Untuk tiap layanan kritis: berapa lama boleh berhenti, dan berapa banyak data boleh hilang
-  [ ] Ketergantungan tiap layanan: sistem lain, pemasok, orang, lokasi
-  [ ] Rencana pemulihan tertulis untuk layanan kritis
-  [ ] Rencana itu PERNAH DIJALANKAN, bukan hanya dibaca
+DASAR YANG HARUS ADA LEBIH DULU (padanan 22301 klausul 8.2-8.6; kontrol 5.29, 5.30)
+  [ ] Daftar layanan dengan tingkat kepentingannya terhadap bisnis       (BIA, 8.2)
+  [ ] Untuk tiap layanan kritis: RTO dan RPO yang disepakati pemilik bisnis
+  [ ] Ketergantungan tiap layanan: sistem lain, pemasok, cloud, orang, lokasi
+  [ ] Rencana pemulihan tertulis untuk layanan kritis                    (8.4)
+  [ ] Rencana itu PERNAH DIJALANKAN, bukan hanya dibaca                  (8.5)
   [ ] Hasil uji dicatat, termasuk yang gagal
-  [ ] Perbedaan antara target dan hasil uji ditindaklanjuti
+  [ ] Selisih antara target dan hasil uji ditindaklanjuti                 (8.6)
 
 BILA ADA YANG BELUM TERCENTANG
   kerjakan itu dulu; menambah standar tidak akan menambah ketahanan
 ```
 
-Butir kelima yang membedakan organisasi yang siap dari yang merasa siap. Rencana yang tidak pernah dijalankan hampir selalu memuat asumsi yang keliru, dan asumsi itu baru ketahuan saat benar-benar dibutuhkan.
+Butir kelima yang membedakan organisasi yang siap dari yang merasa siap. Rencana yang tidak pernah dijalankan hampir selalu memuat asumsi keliru, dan asumsi itu baru ketahuan saat benar-benar dibutuhkan.
 
 ### 4.4 Rencana penambahan yang tidak menggandakan
 
 | Unsur ISMS yang ada | Yang dilakukan | Yang tidak dilakukan |
 |---|---|---|
-| Register risiko | Tambahkan kategori risiko baru | Membuat register kedua |
+| Register risiko | Tambahkan kategori risiko privasi dan kelangsungan | Membuat register kedua |
 | Program audit internal | Perluas lingkup area yang diaudit | Membuat program audit kedua |
 | Management review | Tambahkan masukan ke agenda | Membuat rapat tinjauan kedua |
 | Tindakan korektif | Pakai jalur yang sama | Membuat sistem tiket kedua |
-| Prosedur insiden | Tambahkan jalur untuk jenis insiden baru | Membuat prosedur insiden kedua |
-| Pernyataan keberlakuan | Buat yang terpisah untuk lingkup baru | Menggabungkan paksa ke yang lama |
+| Prosedur insiden | Tambahkan jalur untuk kegagalan pelindungan data pribadi | Membuat prosedur insiden kedua |
+| Pernyataan keberlakuan | Buat yang terpisah untuk Annex A 27701 | Menggabungkan paksa ke yang lama |
 | Peran | Perjelas peran yang sudah ada | Membuat struktur paralel |
 
-Baris keenam adalah pengecualian yang disengaja: pernyataan keberlakuan memang perlu terpisah karena lingkupnya berbeda, dan menggabungkannya justru menyulitkan audit.
+Baris pernyataan keberlakuan adalah pengecualian yang disengaja: katalog kontrolnya berbeda, dan menggabungkannya justru menyulitkan audit.
 
 ### 4.5 Menjelaskan ke manajemen
 
@@ -225,15 +225,15 @@ Baris keenam adalah pengecualian yang disengaja: pernyataan keberlakuan memang p
 USULAN: MEMPERLUAS ISMS UNTUK PRIVASI
 
 MASALAH YANG DISELESAIKAN
-  Tiga kewajiban dari pemetaan regulasi (Day 18) tidak punya proses sama sekali di
-  organisasi kita: dasar pemrosesan, hak subjek data, dan penilaian dampak.
-  Ini bukan masalah keamanan; ISMS kita memang tidak dirancang untuk itu.
+  Tiga kewajiban UU PDP dari pemetaan regulasi (Day 18) tidak punya proses sama sekali:
+  dasar pemrosesan, hak subjek data dengan tenggat 3 x 24 jam, dan DPIA.
+  ISMS kita memang tidak dirancang untuk itu.
 
 DUA PILIHAN
-  A. Perluas ISMS dengan tiga proses baru, tanpa sertifikasi
+  A. Perluas ISMS dengan tiga proses baru memakai 27701:2025 sebagai panduan, tanpa sertifikasi
      biaya: waktu tim, tanpa biaya audit tambahan
      hasil: kewajiban terpenuhi; tidak ada sertifikat untuk ditunjukkan pelanggan
-  B. Perluas lalu sertifikasi
+  B. Perluas lalu sertifikasi 27701:2025
      biaya: pilihan A ditambah biaya audit dan biaya berkelanjutan
      hasil: kewajiban terpenuhi; ada sertifikat untuk pengadaan
 
@@ -244,124 +244,120 @@ YANG PERLU DIPUTUSKAN HARI INI
   Persetujuan untuk pilihan A dan penunjukan pemilik ketiga proses baru.
 ```
 
-Pola dua pilihan dengan rekomendasi ini jauh lebih mudah diputuskan daripada presentasi tentang isi standar.
+Pola dua pilihan dengan rekomendasi jauh lebih mudah diputuskan daripada presentasi tentang isi standar.
 
 ## 5. Lab praktik
 
 **Prasyarat:** hasil Day 12 (pemasok), Day 17 (sertifikasi), dan Day 18 (regulasi). Seluruh lab bersifat memeriksa katalog, menilai, dan menulis.
 
-1. Periksa sendiri status terkini keempat standar di bagian 3.1 lewat katalog, dan catat bila ada yang sudah berubah lagi sejak catatan ini ditulis.
-2. Cari tiga artikel daring tentang salah satu standar itu, lalu catat edisi mana yang dirujuk masing-masing dan apakah edisi itu masih berlaku.
-3. Isi daftar periksa kesiapan layanan bagian 4.3 untuk organisasi fiktif PT AN, dan tandai butir yang belum tercentang.
-4. Susun matriks pembagian tanggung jawab bagian 4.2 untuk tiga layanan awan yang benar-benar dipakai organisasi fiktifmu.
-5. Untuk satu baris di matriks itu, uji asumsinya: cari dokumentasi penyedia dan buktikan siapa sebenarnya yang bertanggung jawab. Catat bila asumsimu keliru.
-6. Ambil hasil pemetaan Day 18 bagian 4.2, lalu daftarkan kewajiban yang tidak punya padanan di ISMS.
-7. Jalankan empat pertanyaan di bagian 3.5 untuk organisasi fiktifmu, dan tulis jawabannya satu per satu.
-8. Susun lembar keputusan bagian 4.1 berdasarkan jawaban langkah 7.
-9. Susun rencana penambahan bagian 4.4 untuk pilihan yang kamu rekomendasikan, dan pastikan tidak ada unsur yang digandakan.
-10. Tulis usulan satu halaman bagian 4.5, lalu bacakan ke rekan yang berperan sebagai manajemen dan catat pertanyaan yang tidak bisa kamu jawab.
+1. Buka halaman katalog committee.iso.org untuk kelima standar di bagian 3.1 dan catat bila ada status yang berubah sejak catatan ini ditulis, terutama 22301 yang sedang direvisi.
+2. Cari tiga artikel online tentang 27017 atau 27701, lalu catat edisi yang dirujuk, apakah edisi itu masih berlaku, dan apakah penomoran kontrolnya memakai 27002:2013 atau 2022.
+3. Isi daftar periksa kesiapan layanan bagian 4.3 untuk PT AN, lengkap dengan RTO dan RPO fiktif untuk tiga layanan, dan tandai butir yang belum tercentang.
+4. Susun matriks pembagian tanggung jawab bagian 4.2 untuk tiga layanan cloud fiktif (IaaS, SaaS email, platform database terkelola). Perhatikan bagaimana kolom penyedia berubah antar model layanan.
+5. Untuk satu baris matriks, uji asumsinya: baca dokumentasi shared responsibility penyedia yang kamu pakai di lab dan buktikan siapa yang bertanggung jawab. Catat bila asumsimu keliru.
+6. Ambil hasil pemetaan Day 18 bagian 4.2 dan daftarkan kewajiban yang tidak punya padanan di ISMS, lalu tulis bagian 27701:2025 mana (klausul atau Annex A) yang akan kamu pakai sebagai kerangka untuk tiap kewajiban.
+7. Jalankan empat pertanyaan di bagian 3.5 untuk PT AN dan tulis jawabannya satu per satu, lalu susun lembar keputusan bagian 4.1.
+8. Susun rencana penambahan bagian 4.4 untuk pilihan yang kamu rekomendasikan, dan pastikan tidak ada unsur yang digandakan.
+9. Tulis usulan satu halaman bagian 4.5, bacakan ke rekan yang berperan sebagai manajemen, dan catat pertanyaan yang tidak bisa kamu jawab.
 
 **Hasil yang sebaiknya tersimpan:**
-- Status terkini keempat standar hasil pemeriksaan sendiri.
-- Catatan edisi yang dirujuk tiga artikel daring beserta status edisi itu.
-- Daftar periksa kesiapan layanan dengan penandaan butir yang belum tercentang.
-- Matriks pembagian tanggung jawab untuk tiga layanan awan.
-- Hasil pengujian satu asumsi tanggung jawab terhadap dokumentasi penyedia.
-- Daftar kewajiban yang tidak punya padanan di ISMS.
-- Jawaban atas empat pertanyaan keputusan.
-- Lembar keputusan penambahan standar.
+- Status terkini kelima standar dari katalog.
+- Catatan edisi dan penomoran kontrol tiga artikel online.
+- Daftar periksa kesiapan layanan dengan RTO dan RPO fiktif.
+- Matriks tanggung jawab untuk tiga model layanan cloud.
+- Hasil pengujian satu asumsi tanggung jawab.
+- Daftar kewajiban tanpa padanan beserta kerangka 27701:2025 untuk tiap kewajiban.
+- Jawaban empat pertanyaan keputusan dan lembar keputusan.
 - Rencana penambahan tanpa penggandaan.
-- Usulan satu halaman beserta daftar pertanyaan yang belum terjawab.
+- Usulan satu halaman beserta pertanyaan yang belum terjawab.
 
 ## 6. Troubleshooting
 
 | Gejala | Kemungkinan penyebab | Cara memeriksa |
 |---|---|---|
-| Nomor kendali di artikel tidak cocok dengan standar | Artikel merujuk edisi yang sudah ditarik | Periksa edisi di katalog sebelum memakai perbandingan apa pun |
-| Materi pelatihan membahas isi yang berbeda | Pelatihan sebelum revisi | Periksa tanggal materi; minta versi terbaru |
+| Nomor kontrol di artikel tidak cocok dengan standar | Artikel merujuk edisi yang sudah ditarik atau penomoran 2013 | Periksa edisi di katalog sebelum memakai perbandingan apa pun |
+| Kontrol CLD.x dari 27017:2015 masih ada di SoA | SoA belum dipetakan ke edisi 2026 | Pakai annex pemetaan di 27017:2026 |
 | Penambahan standar menambah beban tanpa hasil | ISMS dasar belum stabil | Jalankan pertanyaan 3 di bagian 3.5 lebih dulu |
 | Orang yang sama diminta bukti yang sama dua kali | Sistem digandakan | Pakai tabel bagian 4.4 untuk menyatukan |
-| Asumsi tanggung jawab awan ternyata keliru | Tidak pernah diuji ke dokumentasi penyedia | Uji tiap baris matriks, jangan hanya mengisi |
-| Sertifikasi penyedia dianggap menutup kewajiban kita | Sisi pengguna tetap milik kita | Pisahkan kolom penyedia dan pengguna (bagian 4.2) |
+| Asumsi tanggung jawab cloud ternyata keliru | Tidak pernah diuji ke dokumentasi penyedia | Uji tiap baris matriks |
+| Sertifikasi penyedia dianggap menutup kewajiban kita | Sisi pengguna tetap milik kita (kontrol 5.23) | Pisahkan kolom penyedia dan pengguna (bagian 4.2) |
 | Rencana pemulihan gagal saat dibutuhkan | Tidak pernah dijalankan sungguhan | Jalankan uji pemulihan; catat yang gagal |
-| Tidak jelas apakah standar privasi bisa berdiri sendiri | Posisinya berubah antar edisi | Tanyakan ke badan sertifikasi; katalog tidak menjawabnya |
-| Manajemen menolak usulan | Diajukan sebagai isi standar, bukan sebagai masalah | Pakai bentuk bagian 4.5 |
+| Sertifikat 27701:2019 pemasok mendekati tenggat transisi | Transisi ke edisi 2025 belum dijadwalkan | Tanyakan rencana transisinya; cek tenggat badan akreditasinya |
 
 ## 7. Kesalahan umum dan jebakan
 
-- Memakai perbandingan kendali dari internet tanpa memeriksa edisi yang dirujuknya.
+- Memakai perbandingan kontrol dari internet tanpa memeriksa edisi yang dirujuknya.
+- Menganggap 27701 masih harus menempel pada 27001; sejak edisi 2025 ia bisa berdiri sendiri.
 - Menambahkan sistem manajemen kedua sementara yang pertama belum stabil.
 - Menggandakan register, program audit, dan jalur tindakan korektif.
-- Menganggap sertifikasi penyedia awan menutup tanggung jawab sisi pengguna.
-- Mengisi matriks tanggung jawab tanpa menguji asumsinya ke dokumentasi penyedia.
-- Melupakan pencadangan dan pemulihan sebagai tanggung jawab pengguna.
-- Menambahkan standar kelangsungan sebelum punya analisis dampak dan uji pemulihan.
-- Memperlakukan rencana pemulihan yang belum pernah dijalankan sebagai kesiapan.
-- Mengajukan usulan ke manajemen dalam bentuk penjelasan isi standar.
+- Menganggap sertifikasi penyedia cloud menutup tanggung jawab sisi pengguna.
+- Mengisi matriks tanggung jawab tanpa mengujinya ke dokumentasi penyedia.
+- Melupakan backup dan pemulihan sebagai tanggung jawab pengguna.
+- Menambahkan standar kelangsungan sebelum punya BIA dan uji pemulihan.
 - Menunda menutup celah kewajiban sambil menunggu keputusan sertifikasi.
 
 ## 8. Catatan terkini
 
-- Keempat standar yang dibahas di Day ini direvisi dalam rentang waktu berdekatan, dan edisi lamanya sudah ditarik [S1][S2][S3][S4][S5]. Ini berarti sebagian besar materi daring tentangnya, termasuk perbandingan kendali dan templat, merujuk edisi yang tidak lagi berlaku.
-- ISO/IEC 27031:2011 ditarik pada 16 Mei 2025 dan digantikan edisi 2025 [S1]. Bila panduan kelangsungan internalmu menyebut edisi 2011, perbarui rujukannya.
-- ISO/IEC 27701 edisi kedua terbit pada 14 Oktober 2025, dan judulnya menandakan posisi yang berbeda dari edisi pertama yang disusun sebagai perluasan terhadap ISO/IEC 27001 dan 27002 [S4][S5]. Apakah ia kini bisa diterapkan tanpa ISMS adalah pertanyaan yang perlu kamu tanyakan ke badan sertifikasi.
-- ISO 22301:2019 berstatus published dan ditandai sedang ditinjau [S6]. Bila kamu merencanakan sistem manajemen kelangsungan, perhitungkan kemungkinan edisi baru dalam rencana jangka menengahmu.
-- ISO/IEC 27017 edisi 2026 terbit 27 Juli 2026 dan diselaraskan dengan 27002:2022 (Day 12). Templat pembagian tanggung jawab cloud yang masih memakai penomoran kontrol 2013 perlu dipetakan ulang.
+- ISO/IEC 27017:2015 ditarik dan digantikan edisi 2026 pada 27 Juli 2026 [S2][S8]. Bila organisasimu atau penyedia cloud-mu diaudit terhadap 27017, tanyakan ke badan sertifikasi kapan audit beralih ke edisi baru.
+- ISO/IEC 27701:2025 dan ISO/IEC 27706:2025 terbit 14 Oktober 2025 [S5][S14]. Masa transisi sertifikat 27701:2019 ditetapkan per badan akreditasi; contoh SAC: badan sertifikasi selesai 31 Oktober 2027, klien selesai 31 Oktober 2028 [S15].
+- ISO 22301:2019 berstatus akan direvisi sejak Desember 2025, dengan ISO/CD 22301 sedang disusun [S6]. Bila kamu merencanakan BCMS, perhitungkan kemungkinan edisi baru dalam rencana jangka menengahmu.
 
 ## 9. Cheat sheet
 
 ```
-STATUS (periksa sendiri; bagian ini paling cepat usang)
-  ISO/IEC 27031  2011 DITARIK 16 Mei 2025  -> edisi 2025
-  ISO/IEC 27017  2015 DITARIK              -> edisi 2026
-  ISO/IEC 27018  2019 DITARIK              -> edisi 2025
-  ISO/IEC 27701  2019 DITARIK              -> edisi 2 terbit 14 Okt 2025
-  ISO 22301      2019 published, SEDANG DITINJAU
-  => hampir semua artikel/templat/pelatihan daring merujuk EDISI YANG SUDAH DITARIK
-  => JANGAN pakai perbandingan kendali dari internet tanpa memeriksa edisinya
+STATUS (cek katalog; bagian ini paling cepat usang)
+  ISO 22301:2019 + Amd 1:2024   berlaku, AKAN DIREVISI (ISO/CD 22301)      persyaratan BCMS
+  ISO/IEC 27031:2025 (ed 2)     2011 ditarik 16 Mei 2025                   panduan kesiapan ICT
+  ISO/IEC 27017:2026 (ed 2)     2015 ditarik 27 Jul 2026                   panduan kontrol cloud
+  ISO/IEC 27018:2025 (ed 3)     2019 ditarik 26 Agu 2025                   panduan PII di public cloud
+  ISO/IEC 27701:2025 (ed 2)     2019 ditarik; terbit 14 Okt 2025           PIMS MANDIRI, bisa disertifikasi
+  ISO/IEC 27706:2025            ganti TS 27006-2:2021                       aturan badan sertifikasi PIMS
+  => banyak artikel/templat merujuk edisi DITARIK dan nomor kontrol 2013
 
-KELANGSUNGAN  ISO 22301 = SISTEM MANAJEMEN, bisa disertifikasi, menambah beban tata kelola
-              ISO/IEC 27031 = PANDUAN kesiapan TIK, TIDAK disertifikasi
-  jalur masuk akal untuk organisasi menengah: perkuat kendali kelangsungan DI DALAM ISMS
-  SYARAT SEBELUM MENAMBAH APA PUN: ada analisis dampak + rencana PERNAH DIJALANKAN sungguhan
-  rencana yang hanya dibaca selalu memuat asumsi keliru
+KELANGSUNGAN  Annex A: 5.29, 5.30, 8.13, 8.14
+  22301 klausul 8: 8.2 BIA + risiko | 8.3 strategi | 8.4 rencana | 8.5 latihan | 8.6 evaluasi
+  27031 = panduan kesiapan ICT, termasuk ketergantungan cloud
+  syarat sebelum menambah: BIA nyata + rencana PERNAH DIJALANKAN
 
-CLOUD  27017 panduan kendali keamanan untuk layanan awan
-       27018 pelindungan data pribadi pada layanan awan publik sebagai pemroses
-  nilai terbesarnya = KERANGKA PEMBAGIAN TANGGUNG JAWAB penyedia vs pengguna
-  SERTIFIKASI PENYEDIA TIDAK MEMINDAHKAN TANGGUNG JAWABMU; sisi pengguna tetap milikmu
-  isi matriks + UJI asumsinya ke dokumentasi penyedia; jangan hanya mengisi
-  yang sering terlewat: PENCADANGAN dan PEMULIHAN = tanggung jawab pengguna
+CLOUD  Annex A: 5.23
+  27017:2026 = panduan 27002:2022 untuk customer + provider, plus kontrol tambahan khusus cloud
+              (menurut ringkasan sekunder: 5.38, 5.39 peran bersama; 8.35 segregasi virtual;
+               8.36 pemakaian cloud tidak sah)
+  27018:2025 = PII di public cloud sebagai processor; selaras 27002:2022; Annex B baru
+  SERTIFIKASI PENYEDIA TIDAK MEMINDAHKAN TANGGUNG JAWABMU; uji matriks ke dokumentasi penyedia
 
-PRIVASI  27701 untuk kewajiban yang TIDAK punya padanan di ISMS:
-         dasar pemrosesan, persetujuan, HAK SUBJEK DATA, penilaian dampak
-  posisinya BERUBAH antar edisi (perluasan 27001/27002 -> standar persyaratan tersendiri)
-  bisa berdiri sendiri atau tidak: TANYAKAN KE BADAN SERTIFIKASI, katalog tidak menjawabnya
-  JANGAN tambahkan bila ISMS sendiri belum stabil
+PRIVASI  Annex A: 5.34
+  27701:2025 = klausul 4-10 sendiri + Annex A kontrol controller/processor; bisa tanpa ISMS
+  sertifikasi via badan berakreditasi 27706:2025; transisi per badan akreditasi (SAC: klien 31 Okt 2028)
+  pakai untuk: dasar pemrosesan, DPIA, hak subjek data (Day 18)
 
 EMPAT PERTANYAAN KEPUTUSAN
-  1 ada pihak luar yang MEMINTA sertifikat? -> pertimbangkan sertifikasi, hitung biaya
-  2 ada kewajiban TANPA PADANAN di ISMS?    -> perluas ISMS, tanpa sertifikasi
-  3 ISMS yang ada SUDAH STABIL?             -> kalau belum, perbaiki itu dulu
-  4 beban tata kelola sebanding?            -> kalau tidak, pakai sebagai PANDUAN saja
+  1 ada pihak luar MEMINTA sertifikat? | 2 ada kewajiban TANPA PADANAN di ISMS?
+  3 ISMS SUDAH STABIL?                  | 4 beban tata kelola SEBANDING?
   pola yang sering tepat: TUTUP CELAHNYA DULU, putuskan sertifikasinya kemudian
 
 JANGAN GANDAKAN  satu register risiko | satu program audit | satu management review
-                 satu jalur tindakan korektif | perluas prosedur, jangan duplikasi
-  yang MEMANG terpisah: pernyataan keberlakuan lingkup baru + bukti khusus auditor
-  UJI PENGGANDAAN: orang yang sama diminta bukti yang sama oleh dua proses = kamu menggandakan
+  yang MEMANG terpisah: SoA untuk katalog kontrol baru + bukti khusus auditor
 ```
 
 ## 10. Sumber
 
 | ID | Judul | URL | Tipe | Terbit/diakses | Keandalan dan catatan |
 |---|---|---|---|---|---|
-| S1 | ISO/IEC 27031:2011 Guidelines for information and communication technology readiness for business continuity (katalog) | https://committee.iso.org/standard/44374.html | primer (katalog ISO) | dilihat 2026-10-09 | Tinggi untuk judul, edisi pertama Maret 2011, status withdrawn pada 2025-05-16, dan keterangan bahwa versi baru ISO/IEC 27031:2025 tersedia |
-| S2 | ISO/IEC 27017:2015 Code of practice for information security controls for cloud services (katalog) | https://committee.iso.org/standard/43757.html | primer (katalog ISO) | dilihat 2026-10-09 | Tinggi untuk status withdrawn dan keterangan bahwa edisi penggantinya ISO/IEC 27017:2026 |
-| S3 | ISO/IEC 27018:2019 Protection of personally identifiable information (PII) in public clouds acting as PII processors (katalog) | https://committee.iso.org/standard/76559.html | primer (katalog ISO) | dilihat 2026-10-09 | Tinggi untuk status withdrawn dan keterangan bahwa edisi penggantinya ISO/IEC 27018:2025 |
-| S4 | ISO/IEC 27701:2019 Extension to ISO/IEC 27001 and ISO/IEC 27002 for privacy information management (katalog) | https://committee.iso.org/standard/71670.html | primer (katalog ISO) | dilihat 2026-10-09 | Tinggi untuk judul edisi lama yang menyatakan posisinya sebagai perluasan, dan untuk status withdrawn |
-| S5 | ISO/IEC 27701:2025 Privacy information management systems, requirements and guidance (katalog) | https://committee.iso.org/standard/85819.html | primer (katalog ISO) | dilihat 2026-10-09 | Tinggi untuk judul, edisi 2, tanggal terbit 2025-10-14, dan status published pada stage 60.60 |
-| S6 | ISO 22301:2019 Business continuity management systems (katalog) | https://committee.iso.org/standard/75106.html | primer (katalog ISO) | dilihat 2026-10-09 | Tinggi untuk edisi dan keterangan bahwa standar ini sedang ditinjau |
-| S7 | ISO27001-note Day 01, 02, 08, 12, 15, 16, 17, 18 | (lokal) | rujukan internal | 2026-10-09 | Keterkaitan antar Day |
+| S1 | ISO/IEC 27031:2011 (katalog) | https://committee.iso.org/standard/44374.html | primer (katalog ISO) | diakses 2026-10-10 | Tinggi untuk status withdrawn 2025-05-16 dan penggantinya |
+| S2 | ISO/IEC 27017:2015 (katalog) | https://committee.iso.org/standard/43757.html | primer (katalog ISO) | diakses 2026-10-10 | Tinggi untuk status withdrawn 2026-07-27 dan penggantinya |
+| S3 | ISO/IEC 27018:2019 (katalog) | https://committee.iso.org/standard/76559.html | primer (katalog ISO) | diakses 2026-10-10 | Tinggi untuk status withdrawn 2025-08-26 dan penggantinya |
+| S4 | ISO/IEC 27701:2019 Extension to ISO/IEC 27001 and ISO/IEC 27002 for privacy information management (katalog) | https://committee.iso.org/standard/71670.html | primer (katalog ISO) | dilihat 2026-10-09 | Tinggi untuk judul yang menyatakan posisinya sebagai perluasan, dan status withdrawn |
+| S5 | ISO/IEC 27701:2025 Privacy information management systems, requirements and guidance (katalog) | https://committee.iso.org/standard/85819.html | primer (katalog ISO) | diakses 2026-10-10 | Tinggi untuk edisi 2, tanggal terbit 2025-10-14, dan pernyataan sebagai standar sistem manajemen independen |
+| S6 | ISO 22301:2019 Business continuity management systems, requirements (katalog) | https://committee.iso.org/standard/75106.html | primer (katalog ISO) | diakses 2026-10-10 | Tinggi untuk edisi 2, stage 90.92 (akan direvisi), ISO/CD 22301, dan Amd 1:2024 |
+| S7 | ISO/IEC 27031:2025 Cybersecurity, ICT readiness for business continuity (katalog) | https://committee.iso.org/standard/80975.html | primer (katalog ISO) | diakses 2026-10-10 | Tinggi untuk edisi 2, tanggal terbit, dan ringkasan cakupan (hubungan dengan 27001 dan 22301, ketergantungan cloud) |
+| S8 | ISO/IEC 27017:2026 Information security controls based on ISO/IEC 27002 for cloud services (katalog) | https://committee.iso.org/standard/82878.html | primer (katalog ISO) | diakses 2026-10-10 | Tinggi untuk edisi 2, tanggal 2026-07-27, dan ringkasan isi; jumlah kontrol tambahan tidak disebut |
+| S9 | ISO/IEC 27018:2025 Guidelines for protection of PII in public clouds acting as PII processors (katalog) | https://committee.iso.org/standard/88150.html | primer (katalog ISO) | diakses 2026-10-10 | Tinggi untuk edisi 3, tanggal 2025-08-26, keselarasan dengan 27002:2022, dan Annex B baru |
+| S10 | GlocertInternational, ISO 22301 requirements overview | https://www.glocertinternational.com/resources/articles/iso-22301-requirements-overview/ | sekunder (lembaga sertifikasi) | diakses 2026-10-10 | Sedang untuk judul subklausul 8.1-8.6 dan isi BIA |
+| S11 | ISO27001security.com, ISO/IEC 27017 | https://www.iso27001security.com/html/27017 | sekunder (situs praktisi) | diakses 2026-10-10 | Sedang untuk struktur edisi 2026 dan empat kontrol tambahan; situs ini menyebut terbit Agustus 2026, katalog ISO menyebut 27 Juli 2026 |
+| S12 | ISO27001security.com, ISO/IEC 27018 | https://www.iso27001security.com/html/27018 | sekunder (situs praktisi) | diakses 2026-10-10 | Sedang untuk contoh kontrol tambahan (pemberitahuan subkontraktor) |
+| S13 | ISO27001security.com, ISO/IEC 27701 | https://www.iso27001security.com/html/27701 | sekunder (situs praktisi) | diakses 2026-10-10 | Sedang untuk struktur klausul 4-10, Annex A, dan sertifikasi lewat 27706 |
+| S14 | ISO/IEC 27706:2025 Requirements for bodies providing audit and certification of privacy information management systems (katalog) | https://committee.iso.org/standard/82894.html | primer (katalog ISO) | diakses 2026-10-10 | Tinggi untuk edisi 1, tanggal terbit 2025-10-14, dan penggantian TS 27006-2:2021 |
+| S15 | SAC, SAC announces transition to new privacy information management system standard | https://www.sac-accreditation.gov.sg/media/sac-announces-transition-to-new-privacy-information-management-system-standard/ | primer (badan akreditasi Singapura) | 20 April 2026; diakses 2026-10-10 | Tinggi untuk tenggat transisi SAC dan sertifikat PIMS terpisah; tenggat badan akreditasi lain bisa berbeda |
 
-**Catatan sumber:** dari katalog ISO hanya diambil judul, edisi, tanggal, dan status. Penjelasan isi masing-masing standar, termasuk kerangka pembagian tanggung jawab cloud dan cakupan standar privasi, disusun dari judul resmi dan praktik umum, bukan parafrase teksnya. Tanggal terbit ISO/IEC 27031:2025 dan 27018:2025 perlu dicek di halaman katalog edisi barunya. Apakah ISO/IEC 27701:2025 bisa disertifikasi tanpa ISMS 27001 dan bagaimana transisi sertifikat edisi 2019 diatur perlu ditanyakan ke badan sertifikasi. Seluruh angka, nama, dan isi di bagian 4 adalah fiktif.
+**Catatan sumber:** judul, edisi, tanggal, dan status diambil dari katalog ISO. Daftar kontrol tambahan 27017:2026, struktur Annex A 27701:2025, dan judul subklausul 22301 berasal dari sumber sekunder [S10][S11][S13] dan perlu dicocokkan dengan teks standar sebelum dipakai di SoA atau dokumen audit. Tenggat transisi 27701:2025 di KAN belum ditemukan. Seluruh angka, nama, dan isi di bagian 4 adalah fiktif.

@@ -2,14 +2,14 @@
 day: 03
 title: 'Klausul 4-5: konteks, scope, pihak berkepentingan, kepemimpinan, kebijakan, dan peran'
 researched_on: 2026-10-10
-versions_checked: 'ISO/IEC 27001:2022 + Amd 1:2024 (Climate action changes, Feb 2024); SNI ISO/IEC 27001:2022/Amd.1:2024 (BSN, 2024); IAF-ISO Joint Communique 22 Feb 2024'
+versions_checked: 'ISO/IEC 27001:2022 + Amd 1:2024 (Climate action changes, terbit 23 Feb 2024); SNI ISO/IEC 27001:2022/Amd.1:2024 (BSN, 2024); IAF-ISO Joint Communique 22 Feb 2024 dan IAF TC Final Decision; UU No. 27 Tahun 2022'
 ---
 
 # Day 03: Klausul 4-5, konteks organisasi dan kepemimpinan
 
-> Catatan pribadi, bukan materi resmi ISO, dan bukan nasihat hukum atau audit. Catatan ini hanya menyebut nomor dan judul singkat klausul, lalu menjelaskannya dengan kata-kata sendiri.
+Cakupan: klausul 4.1-4.4 dan 5.1-5.3 ISO/IEC 27001:2022 termasuk Amd 1:2024, serta hubungannya dengan kontrol organisasi di Annex A (5.1-5.4, 5.31).
 
-Cakupan: klausul 4.1-4.4 dan 5.1-5.3 ISO/IEC 27001:2022 termasuk Amd 1:2024, serta hubungannya dengan kontrol organisasi di Annex A (5.1-5.4, 5.31). Risk assessment di klausul 6 dibahas di Day 04.
+> Catatan pribadi, bukan materi resmi ISO, dan bukan nasihat hukum atau audit. Catatan ini hanya menyebut nomor dan judul singkat klausul, lalu menjelaskannya dengan kata-kata sendiri.
 
 ## 1. Tujuan belajar
 
@@ -23,34 +23,33 @@ Setelah menyelesaikan Day ini, kamu bisa:
 
 ## 2. Konteks singkat
 
-Klausul 4 dan 5 adalah fondasi. Jika konteks dan scope salah, semua yang dibangun di atasnya ikut miring: risiko yang dinilai bukan risiko yang relevan, kontrol yang dipilih tidak menjawab kebutuhan klien, dan sertifikat tidak mencakup layanan yang sebenarnya dibeli orang.
+Klausul 4 dan 5 adalah fondasi. Bila konteks dan scope salah, risiko yang dinilai tidak relevan, kontrol tidak menjawab kebutuhan klien, dan sertifikat tidak mencakup layanan yang dibeli orang.
 
-Bagi analyst SOC, dua klausul ini terasa jauh dari pekerjaan harian. Padahal keduanya menentukan tiga hal yang langsung memengaruhi SOC:
+Bagi analyst SOC, dua klausul ini terasa jauh dari pekerjaan harian, padahal keduanya menentukan tiga hal:
 
 - apakah SOC dan sistem yang dipantaunya masuk scope;
 - persyaratan klien atau regulator mana yang harus dipenuhi SOC, misalnya tenggat pelaporan insiden;
 - siapa yang berwenang memutuskan saat insiden besar terjadi.
 
-Kapan dipakai: saat organisasi memulai ISMS, saat scope diperluas (misalnya layanan baru), saat ada regulasi atau kontrak baru, dan setiap management review.
-Kapan tidak cukup: klausul 4-5 tidak memberi tahu kontrol apa yang dipilih. Itu hasil risk assessment (Day 04).
+Klausul ini dipakai saat organisasi memulai ISMS, saat scope diperluas, saat ada regulasi atau kontrak baru, dan setiap management review. Kontrol apa yang dipilih bukan urusan klausul 4-5, melainkan hasil risk assessment (Day 04).
 
 ## 3. Konsep inti
 
 ### 3.1 Klausul 4.1: isu internal dan eksternal
 
-Organisasi harus memahami isu internal dan eksternal yang relevan dengan tujuannya dan memengaruhi kemampuan ISMS mencapai hasil yang diinginkan. Standar tidak menentukan formatnya. Banyak organisasi memakai PESTLE (politik, ekonomi, sosial, teknologi, legal, lingkungan) untuk isu eksternal dan SWOT untuk isu internal [S7]. Keduanya alat bantu, bukan persyaratan.
+Organisasi menentukan isu internal dan eksternal yang relevan dengan tujuannya dan memengaruhi kemampuan ISMS mencapai hasil yang diinginkan. Formatnya bebas; banyak organisasi memakai PESTLE (politik, ekonomi, sosial, teknologi, legal, lingkungan) untuk isu eksternal dan SWOT untuk internal [S7], tetapi keduanya alat bantu, bukan persyaratan.
 
 Contoh isu yang relevan untuk perusahaan hosting:
 
 | Jenis | Contoh | Kenapa relevan untuk ISMS |
 |---|---|---|
-| Eksternal, legal | UU No. 27 Tahun 2022 tentang Pelindungan Data Pribadi | Mewajibkan pelindungan data pribadi dan pemberitahuan tertulis paling lambat 3 x 24 jam bila terjadi kegagalan pelindungan (Pasal 46, lihat Day 10 bagian 3.6). Titik mulai hitungan tenggat perlu dicek di teks resmi UU PDP |
+| Eksternal, legal | UU No. 27 Tahun 2022 tentang Pelindungan Data Pribadi, berlaku 17 Oktober 2022 [S9] | Pengendali data wajib memberi tahu subjek data dan lembaga secara tertulis paling lambat 3 x 24 jam bila terjadi kegagalan pelindungan data pribadi (Pasal 46 ayat 1; detail di Day 10 bagian 3.6) |
 | Eksternal, teknologi | Serangan ransomware ke penyedia hosting meningkat | Memengaruhi prioritas risiko dan kebutuhan deteksi |
 | Eksternal, lingkungan | Banjir musiman di Jakarta | Memengaruhi ketersediaan data center |
 | Internal | Turnover analyst SOC tinggi | Memengaruhi kompetensi (7.2) dan konsistensi triage |
 | Internal | Migrasi sebagian log dari Splunk ke Wazuh karena biaya lisensi | Perubahan ISMS yang harus direncanakan (6.3) |
 
-**Tambahan Amd 1:2024:** di akhir 4.1 ditambahkan satu kalimat yang mewajibkan organisasi menentukan apakah perubahan iklim merupakan isu yang relevan [S1]. Perhatikan kata "menentukan apakah". Organisasi boleh menyimpulkan bahwa perubahan iklim tidak relevan, tetapi keputusan itu harus diambil dengan sadar dan bisa ditunjukkan.
+**Tambahan Amd 1:2024:** di akhir 4.1 ditambahkan satu kalimat persyaratan: organisasi menentukan apakah perubahan iklim merupakan isu yang relevan [S1][S10]. Kata kuncinya "menentukan apakah". Organisasi boleh menyimpulkan perubahan iklim tidak relevan, tetapi keputusan itu harus diambil dengan sadar dan bisa ditunjukkan.
 
 ### 3.2 Klausul 4.2: pihak berkepentingan dan persyaratannya
 
@@ -60,22 +59,24 @@ Contoh isu yang relevan untuk perusahaan hosting:
 2. persyaratan relevan dari pihak-pihak itu (bisa berupa persyaratan hukum, regulasi, dan kontrak);
 3. persyaratan mana yang akan ditangani lewat ISMS. Butir ketiga ini baru di edisi 2022 [S4], diturunkan dari Annex SL 2021 [S3].
 
-Butir ketiga mengakui kenyataan bahwa tidak semua persyaratan pihak berkepentingan adalah urusan ISMS. Klien mungkin menuntut harga murah atau SLA uptime 99,9%. Uptime ada hubungannya dengan availability, tetapi target bisnisnya diatur di luar ISMS. Register yang baik menuliskan keputusan itu secara eksplisit, supaya auditor tidak menganggapnya terlewat.
+Butir ketiga mengakui bahwa tidak semua persyaratan pihak berkepentingan urusan ISMS. Klien mungkin menuntut harga murah atau SLA uptime 99,9%; uptime terkait availability, tetapi target bisnisnya diatur di luar ISMS. Register yang baik menuliskan keputusan itu supaya auditor tidak menganggapnya terlewat.
 
-**Tambahan Amd 1:2024:** catatan baru (Note 2) di 4.2 menyebut bahwa pihak berkepentingan yang relevan bisa punya persyaratan terkait perubahan iklim [S1]. Catatan di standar ISO bersifat informatif, bukan persyaratan tambahan. Fungsinya mengingatkan agar persyaratan semacam itu ikut dipertimbangkan.
+**Tambahan Amd 1:2024:** catatan baru (Note 2, di SNI "Catatan 2") di akhir 4.2 menyebut pihak berkepentingan yang relevan bisa punya persyaratan terkait perubahan iklim [S1]. Catatan di standar ISO bersifat informatif, bukan persyaratan tambahan; fungsinya mengingatkan agar persyaratan semacam itu ikut dipertimbangkan.
 
 ### 3.3 Cara auditor menilai tambahan perubahan iklim
 
-Komunike bersama IAF dan ISO (22 Februari 2024) menjelaskan maksud amandemen ini [S2]:
+IAF dan ISO menerbitkan komunike bersama pada 22 Februari 2024, dan IAF menyertainya dengan keputusan Technical Committee yang menjelaskan dampaknya bagi organisasi, CB, dan badan akreditasi [S2]. Isinya:
 
-- Inti persyaratan 4.1 dan 4.2 tidak berubah. Amandemen dianggap klarifikasi, sehingga tidak ada program transisi penuh dan sertifikat tidak perlu diterbitkan ulang.
-- Organisasi tersertifikasi diharapkan sudah mempertimbangkan aspek dan risiko perubahan iklim. Bila relevan, isu itu masuk evaluasi risiko di dalam scope.
-- Lembaga sertifikasi (CB) diharapkan memastikan perubahan iklim sudah dipertimbangkan. Bila organisasi menyimpulkan tidak relevan, CB menilai apakah proses pengambilan keputusannya efektif.
-- Sejak amandemen terbit (dijadwalkan 23 Februari 2024), CB memasukkan teks baru ke audit konteks. Bila organisasi tidak bisa menunjukkan pertimbangan itu, auditor menerbitkan temuan yang sesuai.
+- Maksud persyaratan 4.1 dan 4.2 tidak berubah, karena isu internal dan eksternal sejak awal sudah harus dipertimbangkan. Amandemen diperlakukan sebagai klarifikasi, sehingga tidak ada program transisi penuh.
+- Organisasi tersertifikasi menentukan apakah perubahan iklim relevan, dan bila relevan memasukkannya ke evaluasi risiko di dalam scope tiap sistem manajemen yang dimiliki.
+- CB memastikan perubahan iklim sudah dipertimbangkan. Bila relevan, CB memastikan isu itu masuk ke sasaran dan tindakan mitigasi bila diperlukan. Bila organisasi menyimpulkan tidak relevan, CB menilai efektivitas proses pengambilan keputusan itu.
+- Badan akreditasi memastikan CB memeriksa hal ini dalam siklus akreditasi rutin.
+- Amandemen terbit 23 Februari 2024 [S10]. Sejak itu CB memasukkan teks baru ke audit konteks, dan bila organisasi tidak bisa menunjukkan pertimbangan itu, auditor menerbitkan temuan yang sesuai.
+- Sertifikat tidak perlu diterbitkan ulang, karena tahun terbit standar dan scope sertifikasi tidak berubah.
 
-Konflik sumber: satu artikel konsultan menulis bahwa tidak mencantumkan perubahan iklim "otomatis" menjadi minor nonconformity [S7]. Komunike IAF hanya menyebut "temuan yang sesuai", tanpa menetapkan tingkatnya [S2]. Catatan ini mengikuti sumber primer: tingkat temuan bergantung pada penilaian auditor.
+Konflik sumber: satu artikel konsultan menulis bahwa tidak mencantumkan perubahan iklim "otomatis" menjadi minor nonconformity [S7]. Dokumen IAF hanya menyebut temuan yang sesuai, tanpa menetapkan tingkatnya [S2]. Catatan ini mengikuti sumber primer: tingkat temuan bergantung pada penilaian auditor.
 
-Contoh untuk SOC: perubahan iklim relevan bila memengaruhi ketersediaan data center (banjir, panas ekstrem yang membebani pendingin) atau bila klien menanyakannya dalam kuesioner keamanan. Dampaknya biasanya masuk ke risiko availability dan kontrol kontinuitas, bukan ke deteksi.
+Untuk SOC, perubahan iklim relevan bila memengaruhi ketersediaan data center (banjir, panas ekstrem yang membebani pendingin) atau bila klien menanyakannya dalam kuesioner keamanan. Dampaknya biasanya masuk ke risiko availability dan kontrol kontinuitas, bukan ke deteksi.
 
 ### 3.4 Klausul 4.3: scope ISMS
 
@@ -88,20 +89,20 @@ Dua istilah itu sering tertukar:
 
 Scope yang baik biasanya menyebut batas organisasi (unit, tim), batas fisik (lokasi), batas teknologi (jaringan, platform), layanan atau proses yang dicakup, dan pengecualian beserta alasannya [S5]. Scope sebaiknya dikelola sebagai dokumen hidup dengan versi dan persetujuan, bukan dibuat ulang setiap menjelang audit [S5].
 
-Kenapa ini penting untuk SOC: bila SOC berada di luar scope, kontrol logging dan monitoring di dalam scope tetap butuh bukti. Bukti itu akhirnya harus datang dari pihak yang tidak diaudit. Biasanya lebih mudah memasukkan SOC ke scope, atau memperlakukannya sebagai dependency dengan perjanjian layanan yang jelas.
+Untuk SOC: bila SOC di luar scope, bukti kontrol logging dan monitoring harus datang dari pihak yang tidak diaudit. Lebih mudah memasukkan SOC ke scope, atau memperlakukannya sebagai dependency dengan perjanjian layanan yang jelas.
 
 ### 3.5 Klausul 4.4: ISMS dan proses-prosesnya
 
-4.4 meminta organisasi membangun, menerapkan, memelihara, dan terus meningkatkan ISMS. Sejak 2022, ISMS secara eksplisit mencakup proses yang dibutuhkan beserta interaksinya [S4]. Bukti yang wajar adalah peta proses seperti diagram di Day 02 bagian 3.3: proses apa saja yang ada (risk assessment, manajemen insiden, audit internal, kontrol dokumen), siapa pemiliknya, serta input dan output masing-masing.
+4.4 meminta organisasi membangun, menerapkan, memelihara, dan terus meningkatkan ISMS, dan sejak 2022 secara eksplisit termasuk proses yang dibutuhkan beserta interaksinya [S4]. Bukti yang wajar adalah peta proses (Day 02 bagian 3.3): proses yang ada, pemiliknya, serta input dan output masing-masing.
 
 ### 3.6 Klausul 5.1: kepemimpinan dan komitmen
 
-Top management harus menunjukkan kepemimpinan, bukan hanya menandatangani kebijakan. Isi 5.1 kira-kira mencakup:
+Top management harus menunjukkan kepemimpinan, bukan hanya menandatangani kebijakan. Butir a sampai h di 5.1 [S6]:
 
-- memastikan kebijakan dan sasaran keamanan selaras dengan arah strategis;
+- memastikan kebijakan dan sasaran keamanan ditetapkan dan selaras dengan arah strategis;
 - mengintegrasikan persyaratan ISMS ke proses bisnis;
 - menyediakan sumber daya;
-- mengomunikasikan pentingnya keamanan informasi dan kesesuaian dengan ISMS;
+- mengomunikasikan pentingnya manajemen keamanan informasi yang efektif dan kepatuhan pada persyaratan ISMS;
 - memastikan ISMS mencapai hasil yang diinginkan;
 - mengarahkan dan mendukung orang yang berkontribusi;
 - mendorong perbaikan berkelanjutan;
@@ -130,7 +131,7 @@ Top management memastikan tanggung jawab dan wewenang untuk peran yang relevan d
 1. memastikan ISMS sesuai dengan persyaratan standar;
 2. melaporkan kinerja ISMS kepada top management.
 
-Standar tidak mewajibkan jabatan bernama CISO atau ISMS Manager. Yang diwajibkan adalah kedua tanggung jawab itu dimiliki seseorang dan semua orang tahu siapa orangnya.
+Standar tidak mewajibkan jabatan CISO atau ISMS Manager; yang wajib, kedua tanggung jawab itu dimiliki seseorang dan diketahui organisasi.
 
 Kontrol Annex A terkait:
 
@@ -138,7 +139,7 @@ Kontrol Annex A terkait:
 - 5.3 Segregation of duties (pemisahan tugas yang bertentangan);
 - 5.4 Management responsibilities (manajer memastikan stafnya menjalankan kebijakan).
 
-Untuk SOC, pemisahan tugas punya contoh nyata. Analyst yang menulis rule deteksi sebaiknya tidak sendirian menyetujui penonaktifan rule itu, dan admin SIEM sebaiknya tidak bisa menghapus log audit aksinya sendiri tanpa jejak.
+Contoh di SOC: penulis rule deteksi tidak sendirian menyetujui penonaktifan rule itu, dan admin SIEM tidak bisa menghapus log audit aksinya sendiri tanpa jejak.
 
 ## 4. Contoh dokumen / artefak (organisasi fiktif)
 
@@ -163,12 +164,12 @@ Cara membaca: kolom "Tindak lanjut" menunjukkan isu tidak berhenti di register. 
 |---|---|---|---|
 | Klien perbankan | Laporan insiden keamanan yang memengaruhi layanan dalam tenggat kontrak | Ya | Masuk prosedur IR dan SLA SOC |
 | Klien perbankan | Harga tetap selama kontrak | Tidak | Urusan komersial |
-| Regulator (PDP) | Pelindungan data pribadi dan pemberitahuan kegagalan pelindungan maks 3 x 24 jam | Ya | Detail di Day 10 bagian 3.6 |
+| Lembaga PDP dan subjek data | Pemberitahuan kegagalan pelindungan maks 3 x 24 jam | Ya | Masuk prosedur IR |
 | Penyedia colocation | Akses fisik teknisi sesuai jadwal | Ya (sebagian) | Interface fisik; kontrol 7.2 Physical entry |
 | Karyawan SOC | Jadwal shift yang adil | Tidak | Urusan HR, di luar ISMS |
 | Investor | Tidak ada kebocoran data yang berdampak reputasi | Ya | Masuk sasaran keamanan 6.2 |
 
-Kenapa kolom "Ditangani lewat ISMS?" ada: butir ketiga 4.2 meminta keputusan ini [S4]. Baris "Tidak" sama pentingnya dengan baris "Ya", karena menunjukkan persyaratan itu sudah dipertimbangkan dan sengaja diletakkan di luar ISMS.
+Kolom "Ditangani lewat ISMS?" menjawab butir 4.2 c [S4]. Baris "Tidak" sama pentingnya dengan "Ya": ia menunjukkan persyaratan sudah dipertimbangkan dan sengaja diletakkan di luar ISMS.
 
 ### 4.3 Pernyataan scope v1.0 (4.3)
 
@@ -205,28 +206,25 @@ Acuan: ISO/IEC 27001:2022 + Amd 1:2024; SoA v1.1
 | Menonaktifkan rule deteksi | - | I | A | R | - |
 | Mengaudit proses SOC | I | C | C | C | R |
 
-R = responsible, A = accountable, C = consulted, I = informed. RACI adalah alat bantu, bukan bentuk yang diwajibkan standar. Perhatikan baris "Menonaktifkan rule deteksi": yang mengusulkan (R) berbeda dengan yang menyetujui (A). Pemisahan ini adalah contoh kecil kontrol 5.3 Segregation of duties.
+R = responsible, A = accountable, C = consulted, I = informed. RACI alat bantu, bukan bentuk wajib. Di baris "Menonaktifkan rule deteksi", pengusul (R) berbeda dengan penyetuju (A): contoh kecil kontrol 5.3 Segregation of duties.
 
 ## 5. Lab praktik
 
-Latihan berupa dokumen untuk organisasi fiktifmu dari Day 01-02. Simpan di `ISO27001-note/latihan/day03-<nama-org-fiktif>.md`.
+Latihan dokumen untuk organisasi fiktifmu dari Day 01-02.
 
-1. Tulis register konteks berisi minimal 8 isu: 4 eksternal (pakai PESTLE) dan 4 internal (pakai SWOT). Setiap isu wajib punya kolom tindak lanjut.
-2. Tambahkan satu baris keputusan perubahan iklim, relevan atau tidak, dengan alasan dua sampai tiga kalimat.
-3. Susun register pihak berkepentingan berisi minimal 6 pihak dan 8 persyaratan. Minimal dua persyaratan diputuskan "Tidak ditangani lewat ISMS" beserta alasannya.
-4. Tulis ulang scope dari Day 01 menjadi v1.0 dengan format bagian 4.3. Pisahkan interface dan dependency, dan sebutkan minimal dua dari masing-masing.
-5. Tulis kerangka kebijakan keamanan informasi tingkat atas (5.2), maksimal satu halaman, dengan kata-katamu sendiri. Pastikan keempat unsur di bagian 3.7 ada.
-6. Buat matriks RACI untuk minimal 6 aktivitas SOC. Tandai satu baris yang menunjukkan pemisahan tugas.
-7. Hubungkan ke lab: di Splunk atau Wazuh lab-mu, catat siapa saja yang punya hak admin. Tulis apakah satu orang bisa membuat rule, menonaktifkannya, dan menghapus jejaknya sendiri. Bila bisa, tulis sebagai temuan untuk kontrol 5.3 dan usulan perbaikannya. Cukup amati konfigurasi peran di UI; jangan mengubah apa pun dulu.
-
-**Hasil yang seharusnya teramati:** empat dokumen pendek yang saling merujuk. Isu di register konteks mengarah ke risiko atau perubahan, persyaratan di register pihak berkepentingan muncul di scope atau kebijakan, dan peran di RACI cocok dengan pemilik di peta ISMS Day 02.
+1. Tulis register konteks minimal 8 isu (4 eksternal dengan PESTLE, 4 internal dengan SWOT), masing-masing dengan tindak lanjut.
+2. Tambahkan satu baris keputusan perubahan iklim, relevan atau tidak, beserta alasannya.
+3. Susun register pihak berkepentingan minimal 6 pihak dan 8 persyaratan; minimal dua diputuskan "Tidak ditangani lewat ISMS" dengan alasan.
+4. Tulis ulang scope Day 01 menjadi v1.0 dengan format bagian 4.3, minimal dua interface dan dua dependency.
+5. Tulis kerangka kebijakan tingkat atas (5.2) maksimal satu halaman yang memuat keempat unsur di bagian 3.7.
+6. Buat matriks RACI minimal 6 aktivitas SOC dan tandai satu baris pemisahan tugas.
+7. Hubungkan ke lab: di Splunk atau Wazuh lab-mu, catat siapa yang punya hak admin dan apakah satu orang bisa membuat rule, menonaktifkannya, dan menghapus jejaknya sendiri. Bila bisa, tulis sebagai temuan kontrol 5.3 beserta usulan perbaikan. Cukup amati konfigurasi peran di UI.
 
 **Hasil yang sebaiknya tersimpan:**
-- Ada keputusan perubahan iklim yang eksplisit beserta alasannya.
-- Register pihak berkepentingan punya kolom "ditangani lewat ISMS".
-- Scope menyebut pengecualian beralasan, interface, dan dependency.
-- Kebijakan memuat sasaran atau kerangkanya, komitmen persyaratan, dan komitmen perbaikan.
-- Dua tanggung jawab wajib 5.3 punya pemilik bernama (jabatan fiktif).
+- Empat dokumen pendek di `latihan/day03-<nama-org-fiktif>.md` yang saling merujuk: isu konteks mengarah ke risiko atau perubahan, persyaratan pihak berkepentingan muncul di scope atau kebijakan, dan peran di RACI cocok dengan pemilik di peta ISMS Day 02.
+- Keputusan perubahan iklim yang eksplisit beserta alasannya, dan kolom "ditangani lewat ISMS" di register pihak berkepentingan.
+- Scope dengan pengecualian beralasan, interface, dan dependency.
+- Dua tanggung jawab wajib 5.3 dengan pemilik bernama (jabatan fiktif).
 - Tidak ada kalimat yang disalin dari teks standar.
 
 **Variasi tantangan:** organisasimu memutuskan memakai MSSP untuk monitoring malam hari. Tulis ulang scope dan RACI-nya. Apakah MSSP menjadi interface, dependency, atau keduanya? Kontrol Annex A mana yang mulai relevan (petunjuk: kelompok supplier 5.19-5.22)?
@@ -235,27 +233,24 @@ Latihan berupa dokumen untuk organisasi fiktifmu dari Day 01-02. Simpan di `ISO2
 
 | Gejala | Kemungkinan penyebab | Cara memeriksa/memperbaiki |
 |---|---|---|
-| Register konteks berisi daftar panjang tanpa tindak lanjut | Dibuat untuk memenuhi formalitas | Tambahkan kolom tindak lanjut; isu tanpa tindak lanjut ditandai "dipantau" beserta alasannya |
-| Bingung apakah sesuatu interface atau dependency | Definisi tercampur | Interface adalah titik temu; dependency adalah ketergantungan pada pihak atau layanan di luar |
+| Register konteks tanpa tindak lanjut | Dibuat untuk formalitas | Tambahkan kolom tindak lanjut; isu tanpa tindakan ditandai "dipantau" dengan alasan |
+| Bingung interface atau dependency | Definisi tercampur | Interface titik temu; dependency ketergantungan pada pihak luar |
 | Scope terlalu luas sehingga ISMS tidak terkelola | Ingin "seluruh perusahaan" sejak awal | Mulai dari layanan yang diminta klien; perluas bertahap |
 | Kebijakan 5.2 sepuluh halaman berisi detail teknis | Kebijakan tingkat atas tercampur kebijakan topik khusus | Pisahkan ke kebijakan topik (kontrol 5.1) atau standar teknis |
 | Tidak jelas siapa pemegang 5.3 a dan b | Peran tidak ditetapkan tertulis | Tulis di dokumen penetapan peran yang disetujui pimpinan dan komunikasikan |
 
 ## 7. Kesalahan umum dan jebakan
 
-- Menganggap perubahan iklim wajib dinyatakan relevan. Yang wajib adalah menentukan apakah relevan, lalu bisa menunjukkan keputusan dan alasannya [S1][S2].
-- Menganggap catatan (Note) di standar sebagai persyaratan. Note 2 di 4.2 bersifat informatif.
+- Menganggap perubahan iklim wajib dinyatakan relevan. Yang wajib adalah menentukan apakah relevan dan bisa menunjukkan keputusan beserta alasannya [S1][S2].
 - Scope yang mengecualikan SOC, lalu kesulitan menunjukkan bukti logging dan insiden.
-- Register pihak berkepentingan tanpa keputusan "ditangani lewat ISMS", padahal butir ini baru di 2022 [S4]. Sejalan dengan itu, URM melaporkan input 9.3.2 c (perubahan kebutuhan pihak berkepentingan) sering terlewat di management review [S8].
+- Register pihak berkepentingan tanpa keputusan "ditangani lewat ISMS" (butir 4.2 c, baru di 2022) [S4]. Pasangannya di management review, input 9.3.2 c, juga dilaporkan sering terlewat [S8].
 - Kebijakan ditandatangani tetapi tidak pernah dikomunikasikan atau dibaca. Temuan ini dilaporkan untuk kontrol 5.1 [S8].
-- Mengira 5.3 mewajibkan jabatan CISO. Yang wajib adalah dua tanggung jawab itu dimiliki seseorang dan diketahui organisasi.
 
 ## 8. Catatan terkini
 
-- Amd 1:2024 (Climate action changes) terbit Februari 2024. Isinya satu kalimat di akhir 4.1 dan satu catatan (Note 2) di akhir 4.2 [S1]. Amandemen serupa diterapkan ke sejumlah standar sistem manajemen lain (misalnya ISO 9001 dan 14001) sebagai tindak lanjut London Declaration ISO [S2].
-- IAF dan ISO menyatakan tidak ada program transisi penuh dan sertifikat tidak perlu diterbitkan ulang. CB menilai pertimbangan perubahan iklim mulai saat amandemen terbit [S2].
+- Amd 1:2024 (Climate action changes) terbit 23 Februari 2024 [S10]. Amandemen serupa diterapkan ke sejumlah standar sistem manajemen lain (misalnya ISO 9001 dan 14001) sebagai tindak lanjut London Declaration on Climate Action [S2].
 - BSN menetapkan SNI ISO/IEC 27001:2022/Amd.1:2024 secara identik dengan metode terjemahan dua bahasa. Rapat konsensus berlangsung 21 Juni 2024 dan jajak pendapat 18 Juli sampai 1 Agustus 2024 [S1].
-- Komunike IAF menyebut teks perubahan iklim juga akan dimasukkan ke semua standar sistem manajemen yang baru atau sedang direvisi [S2]. Jadi edisi 27001 berikutnya akan memuatnya langsung di teks. Pantau status revisi 27001 di katalog ISO.
+- Dokumen IAF menyebut kedua pernyataan iklim akan dimasukkan ke semua standar sistem manajemen yang baru atau sedang direvisi [S2], sehingga edisi 27001 berikutnya akan memuatnya langsung di teks.
 
 ## 9. Cheat sheet
 
@@ -280,13 +275,15 @@ IAF-ISO Feb 2024: tanpa transisi penuh; CB menilai sejak terbit; temuan "yang se
 
 | ID | Judul | URL | Tipe | Terbit/diakses | Keandalan dan catatan |
 |---|---|---|---|---|---|
-| S1 | BSN: RSNI3 ISO/IEC 27001:2022/Amd.1:2024 | https://bsn.go.id/uploads/attachment/rsni_iso_iec_27001-2022-amd1_1.pdf | primer | 2024; diakses 2026-10-08 | Tinggi. Teks perubahan 4.1 dan 4.2 (dua bahasa), prakata, susunan komite |
-| S2 | IAF-ISO Joint Communique on Addition of Climate Change Considerations to MSS | https://iaf.nu/wp-content/uploads/2024/02/IAF-ISO-Joint-Communique-_2024F.pdf | primer (IAF) | 2024-02-22; diakses 2026-10-08 | Tinggi. Ekspektasi untuk organisasi, CB, AB, dan waktu berlaku |
-| S3 | IAF news: New 2021 edition of Annex SL | https://iaf.news/2021/07/02/new-2021-edition-of-annex-sl-for-management-system-standards/ | sekunder (situs berita IAF) | 2021-07-02; diakses 2026-10-08 | Sedang-tinggi. Asal butir "persyaratan yang ditangani lewat sistem manajemen" |
-| S4 | Cloud Security Alliance (penulis A-LIGN): ISO 27001:2013 vs 2022 | https://cloudsecurityalliance.org/articles/what-s-the-difference-between-iso-27001-2013-and-iso-27001-2022 | sekunder | 2023-02-10; diakses 2026-10-08 | Sedang. Perubahan 4.2, 4.4, 5.3 |
-| S5 | Hicomply: ISO 27001 clause 4.3 determining the scope of the ISMS | https://www.hicomply.com/hub/iso-27001-clause-4-3-determining-the-scope-of-the-information-security-management-system | sekunder (vendor) | 2026-07-15; diakses 2026-10-08 | Sedang. Input scope, interface dan dependency |
-| S6 | Advisera: ISO 27001 clause 5 leadership | https://advisera.com/iso27001/clause-5-leadership/ | sekunder (konsultan) | tanpa tanggal; diakses 2026-10-08 | Sedang. Isi 5.1-5.3 dan bukti yang dicari auditor |
-| S7 | HighTable: ISO 27001 external issues | https://hightable.io/iso-27001-2022/external-issues/ | sekunder (konsultan) | diperbarui 2026-10-06; diakses 2026-10-08 | Sedang. PESTLE/SWOT. Klaim "otomatis minor NC" bertentangan dengan S2 |
+| S1 | BSN: RSNI3 ISO/IEC 27001:2022/Amd.1:2024 | https://bsn.go.id/uploads/attachment/rsni_iso_iec_27001-2022-amd1_1.pdf | primer | 2024; diakses 2026-10-10 | Tinggi. Teks perubahan 4.1 dan 4.2 (dua bahasa), prakata, komite |
+| S2 | IAF: IAF-ISO Joint Communique on Addition of Climate Change Considerations to MSS (memuat IAF TC Final Decision) | https://iaf.nu/wp-content/uploads/2024/02/IAF-ISO-Joint-Communique-_2024F.pdf | primer (IAF) | 2024-02-23; diakses 2026-10-10 | Tinggi. Ekspektasi untuk organisasi, CB, badan akreditasi, waktu berlaku, dan sertifikat |
+| S3 | IAF news: New 2021 edition of Annex SL | https://iaf.news/2021/07/02/new-2021-edition-of-annex-sl-for-management-system-standards/ | sekunder (situs berita IAF) | 2021-07-02; diakses 2026-10-10 | Sedang-tinggi. Asal butir 4.2 c |
+| S4 | Cloud Security Alliance (A-LIGN): ISO 27001:2013 vs 2022 | https://cloudsecurityalliance.org/articles/what-s-the-difference-between-iso-27001-2013-and-iso-27001-2022 | sekunder | 2023-02-10; diakses 2026-10-08 | Sedang. Perubahan 4.2, 4.4, 5.3 |
+| S5 | Hicomply: ISO 27001 clause 4.3 determining the scope of the ISMS | https://www.hicomply.com/hub/iso-27001-clause-4-3-determining-the-scope-of-the-information-security-management-system | sekunder (vendor) | 2026-07-15; diakses 2026-10-08 | Sedang. Input scope, interface, dependency |
+| S6 | Advisera: ISO 27001 clause 5 leadership | https://advisera.com/iso27001/clause-5-leadership/ | sekunder (konsultan) | diakses 2026-10-08 | Sedang. Isi 5.1-5.3 dan bukti yang dicari auditor |
+| S7 | HighTable: ISO 27001 external issues | https://hightable.io/iso-27001-2022/external-issues/ | sekunder (konsultan) | diperbarui 2026-10-06; diakses 2026-10-08 | Sedang. PESTLE/SWOT; klaim "otomatis minor NC" bertentangan dengan S2 |
 | S8 | URM Consulting: Common issues identified during audits of ISO 27001:2022 | https://urmconsulting.com/blog/common-issues-identified-during-audits-of-iso-27001-2022 | sekunder (praktisi audit) | 2026-04-09; diakses 2026-10-08 | Sedang. Pengalaman satu konsultan |
+| S9 | BPK: UU No. 27 Tahun 2022 tentang Pelindungan Data Pribadi | https://peraturan.bpk.go.id/Details/229798/uu-no-27-tahun-2022 | primer (database peraturan) | ditetapkan dan berlaku 2022-10-17; diakses 2026-10-10 | Tinggi. Judul, nomor, dan tanggal berlaku |
+| S10 | ISO committee: ISO/IEC 27001:2022/Amd 1:2024 Climate action changes | https://committee.iso.org/standard/88435.html | primer (katalog ISO) | terbit 2024-02-23; diakses 2026-10-10 | Tinggi untuk judul dan tanggal terbit |
 
-**Catatan sumber:** isi 5.1-5.3 di bagian 3.6-3.8 disusun dari ringkasan sekunder yang saling cocok, bukan dari teks standar; urutan dan pengelompokan butirnya bisa sedikit berbeda dari teks ISO/IEC 27001:2022. Teks amandemen iklim (S1) dan ekspektasi IAF-ISO (S2) berasal dari sumber primer. Kewajiban UU PDP di tabel bagian 3.1 dan 4.2 hanya dirangkum; tenggat 3 x 24 jam (Pasal 46) cukup pasti, sedangkan titik mulai hitungannya perlu dicek di teks resmi UU No. 27 Tahun 2022.
+**Catatan sumber:** butir 5.1-5.3 disusun dari ringkasan sekunder yang saling cocok; urutan butir 5.1 bisa sedikit berbeda dari teks ISO/IEC 27001:2022. Pasal 46 UU PDP tidak menyebut secara eksplisit sejak kapan 3 x 24 jam dihitung; cek penjelasan pasal dan peraturan pelaksananya di peraturan.bpk.go.id sebelum dipakai untuk prosedur IR.

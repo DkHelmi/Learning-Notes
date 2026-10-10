@@ -2,80 +2,86 @@
 day: 16
 title: 'Menutup temuan dengan benar: koreksi, tindakan korektif, dan management review'
 researched_on: 2026-10-10
-versions_checked: 'ISO/IEC 27001:2022 klausul 9.3 dan 10; ISO 9000:2015 sebagai sumber kosakata manajemen mutu yang memisahkan koreksi dan tindakan korektif (katalog ISO, published); ISO 19011:2026; rujukan Day 06, 09, 10, 13, 15'
+versions_checked: 'ISO/IEC 27001:2022 + Amd 1:2024 klausul 9.3 dan 10.2; ISO 9000:2026 (edisi 5, 27 Mei 2026, menggantikan ISO 9000:2015); ISO 19011:2026 (edisi 4)'
 ---
 
 # Day 16: Menutup temuan dengan benar
 
-Cakupan: membedakan koreksi dari tindakan korektif, menemukan akar penyebab yang benar, memverifikasi efektivitas, dan menjalankan management review sebagai rapat yang menghasilkan keputusan.
+Cakupan: memenuhi klausul 10.2 dan 9.3 dalam praktik, yaitu membedakan koreksi dari tindakan korektif, menemukan akar penyebab, memverifikasi efektivitas, dan menjalankan management review yang menghasilkan keputusan.
 
 ## 1. Tujuan belajar
 
 Setelah menyelesaikan Day ini, kamu bisa:
 
+- menjelaskan langkah yang dituntut klausul 10.2 dan memetakannya ke lembar tindakan korektif.
 - membedakan koreksi dan tindakan korektif, dan tahu kenapa pembedaan itu menentukan.
 - menjalankan analisis akar penyebab yang berhenti di tempat yang benar.
-- menilai apakah sebuah tindakan korektif akan menutup temuan atau hanya menundanya.
 - merancang verifikasi efektivitas yang bisa dibuktikan, bukan dinyatakan.
-- menyiapkan dan menjalankan management review yang menghasilkan keputusan tertulis.
+- menyiapkan management review yang mencakup semua input 9.3.2 dan menghasilkan keputusan 9.3.3.
 - mengenali pola kegagalan yang membuat temuan yang sama muncul berulang.
 
 ## 2. Konteks singkat
 
-Day 06 membahas klausul 9.3 dan 10 sebagai persyaratan, dan Day 15 membahas cara menghasilkan temuan. Day ini mengerjakan apa yang terjadi sesudahnya, dan di situlah sebagian besar sistem manajemen gagal secara diam-diam.
+Day 06 membahas klausul 9.3 dan 10 sebagai persyaratan, dan Day 15 membahas cara menghasilkan temuan. Day ini mengerjakan apa yang terjadi sesudahnya, dan di situlah banyak sistem manajemen gagal diam-diam.
 
-Polanya khas dan mudah dikenali: temuan muncul, seseorang memperbaiki gejalanya, tiket ditutup, dan temuan yang sama muncul lagi tahun berikutnya. Siklus itu memenuhi persyaratan di atas kertas tetapi tidak memperbaiki apa pun, dan ia menghabiskan kepercayaan manajemen terhadap seluruh sistem.
-
-Day ini membangun disiplin untuk memutus siklus itu, lalu menyambungkannya ke management review, yaitu tempat keputusan yang tidak bisa diambil tim operasional seharusnya diambil.
+Polanya mudah dikenali: temuan muncul, seseorang memperbaiki gejalanya, tiket ditutup, dan temuan yang sama muncul lagi tahun berikutnya. Siklus itu memenuhi persyaratan di atas kertas tetapi tidak memperbaiki apa pun, dan menghabiskan kepercayaan manajemen terhadap ISMS. Bagi SOC, ini relevan langsung: banyak nonconformity berasal dari insiden dan post-incident review, dan tindakan korektifnya sering berupa perubahan rule, runbook, atau konfigurasi.
 
 ## 3. Konsep inti
 
-### 3.1 Koreksi dan tindakan korektif
+### 3.1 Apa yang dituntut klausul 10.2
 
-Kosakata manajemen mutu memisahkan dua hal yang sering disamakan, dan definisinya ada di standar kosakata [S2]:
+Saat nonconformity terjadi, termasuk yang berasal dari audit, insiden, atau keluhan, klausul 10.2 menuntut urutan berikut. Kolom kanan menunjukkan di mana langkah itu muncul pada lembar tindakan korektif di bagian 4.1 [S4]:
 
-| Istilah | Yang dilakukan | Contoh pada temuan di Day 15 |
-|---|---|---|
-| Koreksi | Menghilangkan ketidaksesuaian yang ditemukan | Mengisi alasan penutupan pada enam tiket yang kosong |
-| Tindakan korektif | Menghilangkan penyebab ketidaksesuaian agar tidak terulang | Membuat kolom alasan menjadi wajib di sistem tiket |
+| Tuntutan 10.2 (parafrase) | Di lembar TK-2027-004 |
+|---|---|
+| a) Bereaksi: bila relevan, mengendalikan dan mengoreksi nonconformity, serta menangani konsekuensinya | Blok KOREKSI dan KONSEKUENSI |
+| b) Mengevaluasi perlunya tindakan untuk menghilangkan penyebab agar tidak terulang atau terjadi di tempat lain, dengan: meninjau nonconformity, menentukan penyebabnya, dan menentukan apakah nonconformity serupa ada atau bisa terjadi | Blok ANALISIS AKAR PENYEBAB dan tindakan TK-c |
+| c) Menerapkan tindakan yang dibutuhkan | TK-a, TK-b, TK-c dengan pemilik dan tenggat |
+| d) Meninjau efektivitas tindakan korektif | Blok VERIFIKASI EFEKTIVITAS |
+| e) Mengubah ISMS bila perlu | Blok PERUBAHAN ISMS |
 
-Keduanya diperlukan, dan keduanya berbeda. Mengisi enam tiket menyelesaikan masalah hari ini; membuat kolom itu wajib mencegah masalah besok.
+Dua tuntutan lain sering terlupa. Tindakan korektif harus sepadan dengan dampak nonconformity-nya: kesalahan kecil tidak butuh proyek besar, dan nonconformity yang membuka risiko serius tidak cukup ditangani dengan pengingat. Lalu informasi terdokumentasi harus disimpan sebagai bukti sifat nonconformity, tindakan yang diambil, dan hasil tindakan korektif [S4]. Lembar di bagian 4.1 dan daftar pantau di 4.3 adalah bukti itu.
 
-Kesalahan yang paling sering: melaporkan koreksi sebagai tindakan korektif. Auditor eksternal mengenali ini dengan cepat, karena pertanyaan lanjutannya sederhana dan sulit dijawab, yaitu apa yang mencegah hal ini terjadi lagi.
+### 3.2 Koreksi dan tindakan korektif
 
-Aturan praktis untuk menguji sendiri: bila tindakanmu hanya menyentuh kasus yang ditemukan auditor dan tidak menyentuh kasus yang belum ditemukan, itu koreksi.
+Kosakata sistem manajemen memisahkan dua hal yang sering disamakan. ISO 9000:2015 mendefinisikan keduanya, dan edisi penggantinya, ISO 9000:2026, terbit Mei 2026 [S2]:
 
-### 3.2 Mencari akar penyebab tanpa berhenti terlalu cepat
+| Istilah | Yang dilakukan | Langkah 10.2 | Contoh pada temuan di Day 15 |
+|---|---|---|---|
+| Koreksi (correction) | Menghilangkan ketidaksesuaian yang terdeteksi | a) | Mengisi alasan penutupan pada enam tiket yang kosong |
+| Tindakan korektif (corrective action) | Menghilangkan penyebab ketidaksesuaian agar tidak terulang | b) sampai d) | Membuat kolom alasan menjadi wajib di sistem tiket |
 
-Analisis akar penyebab gagal karena dua hal berlawanan: berhenti terlalu cepat, sehingga akarnya ternyata hanya gejala lain; atau berjalan terlalu jauh, sehingga berakhir pada hal yang tidak bisa kamu kendalikan.
+Keduanya diperlukan. Mengisi enam tiket menyelesaikan masalah hari ini; membuat kolom itu wajib mencegah masalah besok. Kesalahan yang paling sering adalah melaporkan koreksi sebagai tindakan korektif. Auditor mengenalinya dengan satu pertanyaan: apa yang mencegah hal ini terjadi lagi?
 
-Tanda berhenti terlalu cepat: akar penyebabnya berupa kesalahan satu orang. Hampir selalu ada lapis di bawahnya, yaitu kenapa sistemnya mengizinkan kesalahan itu terjadi, atau kenapa kesalahan itu tidak terdeteksi.
+Uji sendiri: bila tindakanmu hanya menyentuh kasus yang ditemukan auditor dan tidak menyentuh kasus yang belum ditemukan, itu koreksi.
 
-Tanda berjalan terlalu jauh: akar penyebabnya berupa kekurangan anggaran atau budaya organisasi. Keduanya mungkin benar, tetapi tidak bisa ditindaklanjuti sebagai tindakan korektif oleh tim yang menerima temuan.
+### 3.3 Mencari akar penyebab tanpa berhenti terlalu cepat
 
-Berhenti yang benar ada di antara keduanya, yaitu pada hal yang bisa kamu ubah dan yang bila diubah akan mencegah terulangnya. Satu cara mengujinya: bayangkan akar penyebab itu dihilangkan, lalu tanyakan apakah temuan ini masih mungkin terjadi.
+Analisis akar penyebab adalah cara memenuhi langkah "menentukan penyebab" di 10.2 b). Ia gagal karena dua hal berlawanan: berhenti terlalu cepat, sehingga akarnya ternyata hanya gejala lain; atau berjalan terlalu jauh, sehingga berakhir pada hal yang tidak bisa kamu ubah.
 
-Metode apa pun bisa dipakai, dan yang penting bukan metodenya melainkan disiplin mencatat alasan di tiap langkah. Pertanyaan berulang cocok untuk penyebab tunggal; diagram sebab akibat lebih cocok bila penyebabnya beberapa dan saling menguatkan.
+Tanda berhenti terlalu cepat: akar penyebabnya berupa kesalahan satu orang. Hampir selalu ada lapis di bawahnya, yaitu kenapa sistemnya mengizinkan kesalahan itu, atau kenapa kesalahan itu tidak terdeteksi. Kerangka RCA2 dari Institute for Healthcare Improvement menegaskan hal yang sama: kinerja individu diperlakukan sebagai gejala masalah sistem, bukan sasaran analisis [S6].
 
-### 3.3 Membedakan tiga jenis penyebab
+Tanda berjalan terlalu jauh: akar penyebabnya berupa kekurangan anggaran atau budaya organisasi. Keduanya mungkin benar, tetapi tidak bisa ditindaklanjuti oleh tim yang menerima temuan; bawa ke management review bila memang itu akarnya.
 
-Pengelompokan ini membantu memilih tindakan yang sesuai:
+Berhenti yang benar ada di antara keduanya, yaitu pada hal yang bisa kamu ubah dan yang bila diubah akan mencegah terulangnya. Uji berhenti: bayangkan akar penyebab itu dihilangkan, lalu tanyakan apakah temuan ini masih mungkin terjadi.
+
+Standar tidak mewajibkan metode tertentu. 5 whys cocok untuk penyebab tunggal; diagram sebab akibat (fishbone) lebih cocok bila penyebabnya beberapa dan saling menguatkan. Yang penting adalah alasan di tiap langkah tercatat.
+
+### 3.4 Jenis penyebab dan kekuatan tindakan
 
 | Jenis | Ciri | Tindakan yang sesuai |
 |---|---|---|
-| Penyebab sistemik | Prosedur tidak ada, tidak jelas, atau tidak mungkin dijalankan | Ubah prosedur atau alirkan ulang prosesnya |
-| Penyebab teknis | Sistem mengizinkan keadaan yang tidak diinginkan | Ubah konfigurasi atau tambahkan kendali teknis |
+| Penyebab sistemik | Prosedur tidak ada, tidak jelas, atau tidak mungkin dijalankan | Ubah prosedur atau alur prosesnya |
+| Penyebab teknis | Sistem mengizinkan keadaan yang tidak diinginkan | Ubah konfigurasi atau tambahkan kontrol teknis |
 | Penyebab manusia | Orang tidak tahu, tidak mampu, atau tidak terdorong | Pelatihan, kejelasan peran, atau ubah insentif |
 
-Yang perlu diperhatikan: penyebab manusia hampir tidak pernah berdiri sendiri. Bila kesimpulanmu adalah orang kurang teliti, tanyakan kenapa sistemnya bergantung pada ketelitian. Kendali teknis yang membuat kesalahan tidak mungkin terjadi hampir selalu lebih kuat daripada pelatihan.
+Penyebab manusia hampir tidak pernah berdiri sendiri. Bila kesimpulanmu "orang kurang teliti", tanyakan kenapa sistemnya bergantung pada ketelitian.
 
-Urutan kekuatan tindakan, dari yang paling kuat: membuat kesalahan tidak mungkin terjadi, membuat kesalahan terdeteksi otomatis, membuat kesalahan terdeteksi lewat tinjauan berkala, lalu mengandalkan orang untuk tidak salah. Naikkan tindakanmu ke tingkat setinggi yang masuk akal.
+Urutan kekuatan tindakan, dari yang paling kuat: membuat kesalahan tidak mungkin terjadi, membuat kesalahan terdeteksi otomatis, membuat kesalahan terdeteksi lewat tinjauan berkala, lalu mengandalkan orang untuk tidak salah. Gagasan ini dipinjam dari action hierarchy di dunia keselamatan pasien, yang dibuat untuk memilih tindakan dengan efek paling kuat dan bertahan [S6]. Naikkan tindakanmu ke tingkat setinggi yang masuk akal, sambil ingat tuntutan 10.2 agar tindakan sepadan dengan dampaknya.
 
-### 3.4 Merancang verifikasi efektivitas
+### 3.5 Merancang verifikasi efektivitas
 
-Ini bagian yang paling sering kosong di lembar tindakan korektif, dan yang paling ditanyakan auditor.
-
-Verifikasi efektivitas menjawab satu pertanyaan: dari mana kita tahu ini berhasil. Jawabannya harus berupa bukti yang bisa diperiksa, dengan waktu yang ditentukan di muka.
+Langkah 10.2 d) paling sering kosong di lembar tindakan korektif, dan paling sering ditanyakan auditor. Verifikasi efektivitas menjawab satu pertanyaan: dari mana kita tahu ini berhasil. Jawabannya harus berupa bukti yang bisa diperiksa, dengan waktu yang ditentukan di muka.
 
 | Lemah | Kuat |
 |---|---|
@@ -83,35 +89,41 @@ Verifikasi efektivitas menjawab satu pertanyaan: dari mana kita tahu ini berhasi
 | Prosedur sudah diperbarui | Audit ulang area itu pada siklus berikutnya, tanpa temuan serupa |
 | Sudah diingatkan di rapat | Laporan otomatis bulanan menunjukkan nol kasus selama tiga bulan |
 
-Tiga unsur yang harus ada: apa yang diukur, kapan diukurnya, dan apa ambang yang dianggap berhasil. Tanpa ambang, verifikasi berubah menjadi penilaian subjektif yang selalu lolos.
+Tiga unsur wajib: apa yang diukur, kapan diukur, dan ambang yang dianggap berhasil. Tanpa ambang, verifikasi menjadi penilaian subjektif yang selalu lolos. Tetapkan juga apa yang terjadi bila verifikasi gagal: temuan dibuka kembali, bukan ditutup dengan catatan.
 
-Tetapkan juga apa yang terjadi bila verifikasi gagal. Temuan dibuka kembali, bukan ditutup dengan catatan.
+### 3.6 Pola kegagalan yang berulang
 
-### 3.5 Pola kegagalan yang berulang
-
-Lima pola yang membuat temuan kembali muncul:
-
-- **Koreksi dilaporkan sebagai tindakan korektif.** Dibahas di bagian 3.1.
+- **Koreksi dilaporkan sebagai tindakan korektif.** Dibahas di bagian 3.2.
 - **Akar penyebab berupa nama orang.** Orangnya berganti, masalahnya tetap.
-- **Tindakan bergantung pada kedisiplinan.** Berhasil selama tiga bulan pertama, lalu meluruh.
-- **Tidak ada verifikasi efektivitas.** Tidak ada yang tahu apakah berhasil, dan tidak ada yang kembali memeriksa.
+- **Tindakan bergantung pada kedisiplinan.** Berhasil tiga bulan pertama, lalu meluruh.
+- **Tidak ada verifikasi efektivitas.** Tidak ada yang tahu apakah berhasil.
 - **Tidak ada pemilik tunggal.** Tindakan dimiliki sebuah tim, dan karena itu tidak dimiliki siapa pun.
 
-Bila kamu memegang daftar temuan beberapa tahun, periksa berapa yang berulang. Angka itu adalah ukuran kesehatan proses perbaikanmu, dan ia layak dibawa ke management review.
+Bila kamu memegang daftar temuan beberapa tahun, hitung berapa yang berulang. Angka itu adalah ukuran kesehatan proses perbaikanmu, dan ia masuk ke input "tren nonconformity dan tindakan korektif" di management review.
 
-### 3.6 Management review sebagai rapat kerja
+### 3.7 Management review: persyaratan 9.3
 
-Klausul 9.3 menetapkan management review sebagai persyaratan, dan Day 06 membahas unsur masukannya. Sebagai pengingat, masukan yang harus dipertimbangkan mencakup status tindakan dari review sebelumnya, perubahan isu internal dan eksternal, perubahan kebutuhan pihak berkepentingan, tren nonconformity dan tindakan korektif, hasil monitoring, hasil audit, pencapaian sasaran, umpan balik pihak berkepentingan, hasil risk assessment dan status risk treatment plan, serta peluang perbaikan. Keluarannya harus berupa keputusan tentang perbaikan dan perubahan ISMS, dengan bukti tersimpan. Yang dibahas di sini adalah cara membuatnya berguna, bukan seremonial.
+Klausul 9.3.1 meminta top management meninjau ISMS pada interval terencana untuk memastikan ISMS tetap sesuai (suitable), memadai (adequate), dan efektif [S5]. Klausul 9.3.2 menyebut hal yang harus dipertimbangkan [S5]:
 
-Tanda management review yang tidak berguna: isinya presentasi status, tidak ada keputusan yang dicatat, dan tidak ada yang berubah sesudahnya.
+| Huruf | Input 9.3.2 (parafrase) |
+|---|---|
+| a | Status tindakan dari management review sebelumnya |
+| b | Perubahan isu eksternal dan internal yang relevan dengan ISMS |
+| c | Perubahan kebutuhan dan harapan pihak berkepentingan yang relevan dengan ISMS (baru di edisi 2022) |
+| d | Umpan balik kinerja keamanan informasi, termasuk tren: 1) nonconformity dan tindakan korektif, 2) hasil monitoring dan pengukuran, 3) hasil audit, 4) pencapaian sasaran keamanan informasi |
+| e | Umpan balik dari pihak berkepentingan |
+| f | Hasil risk assessment dan status risk treatment plan |
+| g | Peluang perbaikan berkelanjutan |
 
-Tiga hal yang mengubahnya:
+Klausul 9.3.3 meminta hasil review memuat keputusan tentang peluang perbaikan berkelanjutan dan kebutuhan perubahan ISMS, dan bukti hasil itu disimpan sebagai informasi terdokumentasi [S5]. Auditor akan mencari dua hal di risalah: jejak bahwa ketujuh input dipertimbangkan, dan keputusan yang jelas.
 
-1. **Bawa keputusan, bukan laporan.** Setiap bahan disiapkan sebagai pilihan yang perlu diputuskan, bukan sebagai informasi. Bila sebuah bahan tidak membutuhkan keputusan, kirim sebagai lampiran tertulis dan jangan bahas di rapat.
-2. **Bawa yang buruk, bukan hanya yang baik.** Temuan yang berulang, tindakan yang lewat tenggat, dan risiko yang naik adalah isi yang paling bernilai. Review yang hanya memuat kabar baik tidak memberi manajemen apa pun untuk diputuskan.
-3. **Catat keputusan dengan pemilik dan tenggat.** Risalah tanpa pemilik dan tenggat bukan keputusan, melainkan catatan percakapan.
+Tanda management review yang tidak berguna: isinya presentasi status, tidak ada keputusan yang dicatat, dan tidak ada yang berubah sesudahnya. Tiga hal yang mengubahnya:
 
-Satu hal yang sering kurang dimanfaatkan: management review adalah tempat yang tepat untuk mengeskalasi hal yang tidak bisa diselesaikan tim operasional, misalnya sumber daya, konflik prioritas antar unit, atau risiko yang perlu diterima secara formal. Bawa hal semacam itu ke sana, dengan pilihan yang sudah kamu siapkan.
+1. **Bawa keputusan, bukan laporan.** Bahan yang tidak membutuhkan keputusan dikirim sebagai lampiran tertulis sebelum rapat. Lampiran itu tetap dicatat di risalah sebagai sudah ditinjau, karena 9.3.2 menuntut setiap input dipertimbangkan.
+2. **Bawa yang buruk, bukan hanya yang baik.** Temuan berulang, tindakan lewat tenggat, dan risiko yang naik adalah isi yang paling bernilai.
+3. **Catat keputusan dengan pemilik dan tenggat.** Risalah tanpa pemilik dan tenggat hanyalah catatan percakapan.
+
+Management review juga tempat yang tepat untuk mengeskalasi hal yang tidak bisa diselesaikan tim operasional: sumber daya, konflik prioritas antar unit, atau risiko yang perlu diterima secara formal.
 
 ## 4. Contoh dokumen / artefak (organisasi fiktif)
 
@@ -123,7 +135,7 @@ Satu hal yang sering kurang dimanfaatkan: management review adalah tempat yang t
 TINDAKAN KOREKTIF                                   Nomor: TK-2027-004
 Asal temuan   : AI-2027-01 / T-01 (audit internal, minor)
 Pemilik       : <nama>, Manajer Operasi Keamanan        <- satu orang, bukan tim
-Dibuka        : 2027-02-14          Tenggat tindakan : 2027-03-31
+Dibuka        : 2027-02-15          Tenggat tindakan : 2027-03-31
 
 PERNYATAAN TEMUAN
   Penutupan alert tidak selalu disertai alasan, sehingga peninjauan ulang tidak dimungkinkan.
@@ -132,6 +144,11 @@ KOREKSI (menyelesaikan kasus yang ditemukan)
   Enam tiket yang kosong dilengkapi alasannya berdasarkan ingatan analyst dan data pendukung.
   Dicatat bahwa tiga di antaranya diisi dengan keterangan "alasan tidak dapat direkonstruksi".
   Selesai: 2027-02-18
+
+KONSEKUENSI (10.2 a)
+  Tiga alert yang alasannya tidak bisa direkonstruksi ditinjau ulang oleh analyst lain
+  untuk memastikan tidak ada yang sebenarnya insiden. Hasil: ketiganya false positive.
+  Selesai: 2027-02-19
 
 ANALISIS AKAR PENYEBAB
   Kenapa alasan tidak tercatat?        kolom alasan opsional di sistem tiket
@@ -147,7 +164,8 @@ TINDAKAN KOREKTIF (menghilangkan penyebab)
   TK-a  Kolom alasan dijadikan wajib di sistem tiket           pemilik <nama>  tenggat 2027-03-10
   TK-b  Daftar periksa perubahan prosedur ditambahi langkah
         "periksa sistem pendukung yang terdampak"              pemilik <nama>  tenggat 2027-03-31
-  TK-c  Ditinjau apakah prosedur lain punya masalah serupa     pemilik <nama>  tenggat 2027-03-31
+  TK-c  Ditinjau apakah prosedur lain punya masalah serupa
+        (10.2 b: nonconformity serupa ada atau bisa terjadi)   pemilik <nama>  tenggat 2027-03-31
 
 JENIS PENYEBAB   sistemik (utama) dan teknis (pendukung)
 KEKUATAN TINDAKAN  TK-a membuat kesalahan tidak mungkin terjadi; TK-b dan TK-c sistemik
@@ -155,15 +173,19 @@ KEKUATAN TINDAKAN  TK-a membuat kesalahan tidak mungkin terjadi; TK-b dan TK-c s
 VERIFIKASI EFEKTIVITAS
   apa yang diukur : proporsi tiket yang ditutup tanpa alasan
   cara mengukur   : pengambilan 20 tiket acak
-  kapan           : 2027-06-30 (tiga bulan setelah TK-a selesai)
+  kapan           : 2027-06-30 (tiga bulan setelah tenggat seluruh tindakan)
   ambang berhasil : nol dari 20
   bila gagal      : temuan dibuka kembali; akar penyebab ditinjau ulang
   pelaksana       : auditor internal, bukan pemilik tindakan
 
+PERUBAHAN ISMS (10.2 e)
+  LOG-02 versi 3.2: pasal 7.3 merujuk kolom wajib; prosedur pengendalian dokumen ditambah
+  langkah pemeriksaan sistem pendukung
+
 STATUS   [ ] dibuka  [x] tindakan selesai  [ ] diverifikasi efektif  [ ] ditutup
 ```
 
-Dua hal yang membuat lembar ini kuat. Koreksi dicatat terpisah dan jujur, termasuk bagian yang tidak bisa direkonstruksi. Dan verifikasi dijalankan oleh orang yang berbeda dari pemilik tindakan, sehingga independensinya terjaga.
+Lembar ini memuat semua langkah 10.2 (bagian 3.1). Koreksi dicatat jujur, termasuk bagian yang tidak bisa direkonstruksi, dan konsekuensinya ditangani dengan memeriksa ulang alert yang meragukan. Verifikasi dijalankan oleh orang yang berbeda dari pemilik tindakan.
 
 ### 4.2 Menguji kekuatan tindakan
 
@@ -177,48 +199,54 @@ Latihan singkat yang layak dijalankan untuk setiap tindakan sebelum disetujui:
 | Laporan otomatis bila ada tiket kosong | deteksi otomatis | Kuat |
 | Kolom wajib di sistem | kesalahan tidak mungkin | Paling kuat |
 
-Dua catatan. Tindakan paling kuat tidak selalu paling tepat; kolom wajib bisa mendorong orang mengisi asal-asalan, dan itu masalah baru. Dan tindakan di tingkat mana pun tetap butuh verifikasi efektivitas.
+Tindakan paling kuat tidak selalu paling tepat: kolom wajib bisa mendorong orang mengisi asal-asalan. Tindakan di tingkat mana pun tetap butuh verifikasi efektivitas.
 
 ### 4.3 Daftar pantau tindakan korektif
+
+Posisi per 2027-06-25, disiapkan untuk management review semester 1.
 
 | Nomor | Asal | Pemilik | Tenggat tindakan | Status | Verifikasi | Catatan |
 |---|---|---|---|---|---|---|
 | TK-2026-011 | Audit eksternal 2026 | <nama> | 2026-09-30 | diverifikasi efektif | 2027-01-15, lulus | ditutup |
-| TK-2026-014 | Insiden INC-2026-008 | <nama> | 2026-11-30 | tindakan selesai | dijadwalkan 2027-02-28 | |
+| TK-2026-014 | Insiden INC-2026-008 | <nama> | 2026-11-30 | tindakan selesai | belum dijadwalkan | dijadwalkan saat penyusunan daftar ini |
 | TK-2027-002 | Audit internal AI-2026-04 | <nama> | 2027-01-31 | lewat tenggat | belum dijadwalkan | dieskalasi ke management review |
 | TK-2027-004 | Audit internal AI-2027-01 | <nama> | 2027-03-31 | tindakan selesai | dijadwalkan 2027-06-30 | |
 
-Kolom verifikasi yang membedakan daftar ini dari daftar tugas biasa. Baris yang statusnya tindakan selesai tetapi verifikasinya belum dijadwalkan adalah baris yang paling sering terlupakan, dan auditor eksternal menanyakannya.
+Kolom verifikasi yang membedakan daftar ini dari daftar tugas biasa. Baris kedua, tindakan selesai tetapi verifikasi belum dijadwalkan tujuh bulan kemudian, adalah pola yang paling sering terlupakan dan paling sering ditanyakan auditor eksternal.
 
-Baris ketiga memperlihatkan jalur eskalasi yang benar: tindakan yang lewat tenggat tidak diam-diam diperpanjang, melainkan dibawa ke tingkat yang bisa memutuskan.
+Baris ketiga memperlihatkan jalur eskalasi yang benar: tindakan lewat tenggat dibawa ke tingkat yang bisa memutuskan, bukan diam-diam diperpanjang.
 
 ### 4.4 Agenda management review yang menghasilkan keputusan
 
 ```
 MANAGEMENT REVIEW                            Periode: semester 1 2027
-Tanggal, peserta, ketua                      : (diisi)
+Tanggal, peserta, ketua                      : 2027-07-01; (diisi)
 
-A. KEPUTUSAN YANG DIMINTA  (dibahas; inti rapat)
-  A1. TK-2027-002 lewat tenggat 5 bulan. Pilihan:
+A. KEPUTUSAN YANG DIMINTA  (dibahas; inti rapat)                       input 9.3.2
+  A1. TK-2027-002 lewat tenggat hampir 5 bulan. Pilihan:                d1
       (i) tambah sumber daya, (ii) turunkan lingkup, (iii) terima risiko secara formal
       Rekomendasi penyusun: (i) dengan alasan <...>
-  A2. Dua temuan berulang pada area manajemen akses dalam tiga siklus audit.
+  A2. Dua temuan berulang pada area manajemen akses dalam tiga siklus.  d1, d3
       Pilihan: (i) ubah proses, (ii) ganti alat, (iii) terima dan pantau
-  A3. Permintaan menerima risiko R-014 secara formal sampai 2028
+  A3. Permintaan menerima risiko R-014 secara formal sampai 2028        f
 
-B. INFORMASI YANG PERLU DIKETAHUI  (tidak dibahas; lampiran tertulis)
-  B1. Ringkasan kinerja ISMS terhadap sasaran
-  B2. Hasil audit internal dan eksternal periode ini
-  B3. Umpan balik pihak berkepentingan
-  B4. Status risiko dan perubahan konteks
-  B5. Peluang perbaikan yang tidak memerlukan keputusan
+B. INFORMASI  (lampiran dikirim 5 hari kerja sebelumnya; tidak dipresentasikan)
+  B1. Status tindakan dari review sebelumnya                            a
+  B2. Perubahan isu internal dan eksternal                              b
+  B3. Perubahan kebutuhan pihak berkepentingan (kontrak baru, UU PDP)   c
+  B4. Daftar pantau tindakan korektif dan 4 angka kesehatan (4.3, 4.6)  d1
+  B5. Metrik SOC dan ISMS terhadap sasaran                              d2, d4
+  B6. Hasil audit internal dan eksternal periode ini                    d3
+  B7. Umpan balik pihak berkepentingan (keluhan, kuesioner klien)       e
+  B8. Hasil risk assessment dan status risk treatment plan              f
+  B9. Peluang perbaikan yang tidak memerlukan keputusan                 g
 
 C. KELUARAN  (dicatat saat rapat)
   Setiap keputusan: apa yang diputuskan, siapa pemiliknya, kapan tenggatnya,
   dan bagaimana pelaksanaannya akan diperiksa
 ```
 
-Pemisahan blok A dan B yang membuat rapat ini berbeda. Blok B dikirim sebelumnya dan tidak dipresentasikan, sehingga waktu rapat dipakai untuk hal yang memang membutuhkan orang-orang itu berada di satu ruangan.
+Pemisahan blok A dan B yang membuat rapat ini berbeda: waktu rapat dipakai untuk hal yang memang membutuhkan orang-orang itu berada di satu ruangan. Kolom kanan memastikan ketujuh input 9.3.2 (a sampai g, termasuk empat sub-butir d) tercakup, sehingga auditor bisa menelusuri tiap input ke agenda dan risalah.
 
 ### 4.5 Risalah yang berisi keputusan
 
@@ -238,12 +266,15 @@ KEPUTUSAN
         Pemilik: <nama>   Tenggat tinjau ulang: 2028-03-31
         Pemeriksaan: laporan pemantauan bulanan dilampirkan ke review berikutnya
 
+INPUT YANG DITINJAU
+  Lampiran B1-B9 dinyatakan sudah ditinjau peserta; tidak ada keberatan atas isinya.
+
 TIDAK DIPUTUSKAN
   Usulan perubahan lingkup sertifikasi ditunda; menunggu kepastian rencana bisnis kuartal depan.
   Akan dibawa kembali pada review berikutnya.
 ```
 
-Blok terakhir sengaja ada. Menyatakan apa yang tidak diputuskan, beserta alasan dan kapan akan dibahas lagi, mencegah hal itu hilang tanpa jejak.
+K-01 sampai K-03 adalah keputusan 9.3.3 (perbaikan dan perubahan ISMS). Blok input yang ditinjau menjadi jejak bahwa 9.3.2 dipertimbangkan, dan blok tidak diputuskan mencegah usulan hilang tanpa jejak.
 
 ### 4.6 Ukuran kesehatan proses perbaikan
 
@@ -256,32 +287,29 @@ Empat angka yang layak dibawa ke tiap management review:
 4. jumlah tindakan yang lewat tenggat, dan berapa lama
 ```
 
-Angka ketiga yang paling jarang dilaporkan dan paling informatif. Proporsi yang rendah berarti analisis akar penyebab di organisasimu belum bekerja, dan itu masalah yang berbeda dari kurangnya sumber daya.
+Angka ketiga paling jarang dilaporkan dan paling informatif: proporsi yang rendah berarti analisis akar penyebab belum bekerja, masalah yang berbeda dari kurangnya sumber daya. Keempat angka ini mengisi input d1 (tren nonconformity dan tindakan korektif).
 
 ## 5. Lab praktik
 
 **Prasyarat:** temuan dari Day 15, daftar risiko dari Day 09, dan catatan insiden dari Day 10.
 
-1. Ambil tiga temuan dari Day 15, lalu untuk masing-masing tulis koreksi dan tindakan korektif secara terpisah. Periksa apakah ada yang sebenarnya hanya koreksi.
-2. Untuk satu temuan, jalankan analisis akar penyebab sampai berhenti, lalu terapkan uji berhenti di bagian 3.2. Bila gagal uji, lanjutkan satu lapis lagi.
+1. Ambil tiga temuan dari Day 15, lalu untuk masing-masing isi kelima langkah 10.2 (bagian 3.1), termasuk konsekuensi dan cek nonconformity serupa. Periksa apakah ada tindakan korektif yang sebenarnya hanya koreksi.
+2. Untuk satu temuan, jalankan analisis akar penyebab sampai berhenti, lalu terapkan uji berhenti di bagian 3.3. Bila gagal uji, lanjutkan satu lapis lagi.
 3. Ulangi langkah 2 dengan sengaja berhenti terlalu cepat dan sengaja berjalan terlalu jauh, lalu bandingkan tindakan yang dihasilkan ketiganya.
-4. Kelompokkan penyebab dari ketiga temuan ke dalam tiga jenis di bagian 3.3, lalu periksa apakah ada yang kamu beri label penyebab manusia padahal ada lapis sistemik di bawahnya.
+4. Kelompokkan penyebab dari ketiga temuan ke dalam tiga jenis di bagian 3.4, lalu periksa apakah ada yang kamu beri label penyebab manusia padahal ada lapis sistemik di bawahnya.
 5. Untuk setiap tindakan yang kamu usulkan, tentukan tingkat kekuatannya memakai tabel bagian 4.2, lalu naikkan satu tingkat bila memungkinkan dan catat konsekuensinya.
 6. Tulis verifikasi efektivitas untuk ketiga tindakan, lengkap dengan apa yang diukur, kapan, ambang, dan apa yang terjadi bila gagal.
 7. Susun daftar pantau bagian 4.3 untuk seluruh tindakan fiktifmu, dan sengaja masukkan satu yang lewat tenggat.
-8. Susun agenda management review bagian 4.4 dengan pemisahan blok keputusan dan blok informasi, memakai bahan nyata dari langkah sebelumnya.
+8. Susun agenda management review bagian 4.4 dengan pemisahan blok keputusan dan blok informasi, lalu pastikan setiap input 9.3.2 (a sampai g, termasuk d1-d4) punya baris.
 9. Jalankan simulasi rapat dengan rekan sebagai manajemen, lalu tulis risalahnya dalam bentuk bagian 4.5 termasuk blok tidak diputuskan.
 10. Hitung keempat angka di bagian 4.6 dari data fiktifmu, lalu tulis satu paragraf tentang apa yang angka itu katakan tentang proses perbaikanmu.
 
 **Hasil yang sebaiknya tersimpan:**
-- Tiga temuan dengan koreksi dan tindakan korektif yang terpisah.
-- Analisis akar penyebab yang lulus uji berhenti.
-- Perbandingan tindakan dari tiga titik berhenti yang berbeda.
-- Pengelompokan penyebab ke tiga jenis, dengan koreksi bila ada yang salah label.
-- Penilaian kekuatan tindakan beserta konsekuensi menaikkannya.
-- Verifikasi efektivitas lengkap untuk tiga tindakan.
+- Tiga lembar tindakan korektif yang memuat kelima langkah 10.2, dengan verifikasi efektivitas lengkap.
+- Analisis akar penyebab yang lulus uji berhenti, dibandingkan dengan dua titik berhenti yang salah.
+- Pengelompokan penyebab dan penilaian kekuatan tindakan, beserta koreksi label bila ada.
 - Daftar pantau tindakan termasuk satu yang lewat tenggat.
-- Agenda management review dengan dua blok terpisah.
+- Agenda management review dengan dua blok terpisah dan pemetaan ke input 9.3.2.
 - Risalah berisi keputusan dengan pemilik dan tenggat, plus blok tidak diputuskan.
 - Empat angka kesehatan proses perbaikan beserta tafsirannya.
 
@@ -289,41 +317,41 @@ Angka ketiga yang paling jarang dilaporkan dan paling informatif. Proporsi yang 
 
 | Gejala | Kemungkinan penyebab | Cara memeriksa |
 |---|---|---|
-| Temuan yang sama muncul lagi | Yang dilakukan hanya koreksi | Periksa apakah tindakan menyentuh kasus yang belum ditemukan (bagian 3.1) |
+| Temuan yang sama muncul lagi | Yang dilakukan hanya koreksi | Periksa apakah tindakan menyentuh kasus yang belum ditemukan (bagian 3.2) |
 | Akar penyebab berupa nama orang | Berhenti terlalu cepat | Tanyakan kenapa sistem mengizinkan dan kenapa tidak terdeteksi |
-| Akar penyebab berupa anggaran atau budaya | Berjalan terlalu jauh | Berhenti pada hal yang bisa kamu ubah |
 | Tindakan berhasil tiga bulan lalu meluruh | Bergantung pada kedisiplinan | Naikkan tingkat kekuatan tindakan (bagian 4.2) |
 | Auditor menanyakan bukti efektivitas | Verifikasi tidak dirancang di muka | Tambahkan apa, kapan, ambang, dan konsekuensi gagal |
 | Verifikasi selalu lulus | Tidak ada ambang, atau diverifikasi pemilik tindakan | Tetapkan ambang; serahkan verifikasi ke pihak lain |
-| Tindakan tidak ada yang mengerjakan | Pemiliknya sebuah tim | Tetapkan satu orang sebagai pemilik |
 | Tindakan lewat tenggat diperpanjang diam-diam | Tidak ada jalur eskalasi | Bawa ke management review sebagai keputusan |
 | Management review tidak mengubah apa pun | Isinya presentasi status | Pisahkan blok keputusan dari blok informasi (bagian 4.4) |
-| Risalah tidak bisa ditindaklanjuti | Keputusan tanpa pemilik dan tenggat | Pakai bentuk bagian 4.5 |
+| Auditor bertanya apakah input c atau e dipertimbangkan | Agenda tidak dipetakan ke 9.3.2 | Tambah kolom huruf input di agenda dan blok input yang ditinjau di risalah |
 
 ## 7. Kesalahan umum dan jebakan
 
-- Melaporkan koreksi sebagai tindakan korektif.
-- Menghentikan analisis akar penyebab pada kesalahan satu orang.
-- Melanjutkan analisis sampai ke hal yang tidak bisa dikendalikan tim.
+- Melaporkan koreksi sebagai tindakan korektif, atau melewatkan penanganan konsekuensi (10.2 a).
+- Tidak memeriksa apakah nonconformity serupa ada di tempat lain (10.2 b).
+- Menghentikan analisis akar penyebab pada kesalahan satu orang, atau melanjutkannya sampai ke hal yang tidak bisa diubah tim.
 - Memilih pelatihan sebagai tindakan untuk masalah yang sebenarnya teknis atau sistemik.
-- Menutup tindakan tanpa verifikasi efektivitas.
-- Menyerahkan verifikasi kepada pemilik tindakan itu sendiri.
-- Menetapkan verifikasi tanpa ambang yang jelas.
+- Menutup tindakan tanpa verifikasi efektivitas, tanpa ambang, atau dengan verifikasi oleh pemilik tindakan sendiri.
 - Menetapkan pemilik tindakan berupa tim, bukan orang.
 - Memperpanjang tenggat tanpa membawanya ke tingkat yang bisa memutuskan.
-- Menjalankan management review sebagai presentasi status tanpa keputusan tercatat.
+- Management review yang melewatkan satu input 9.3.2 (yang sering terlewat adalah c, perubahan kebutuhan pihak berkepentingan), atau tidak menghasilkan keputusan 9.3.3.
 
 ## 8. Catatan terkini
 
-- Pemisahan antara koreksi dan tindakan korektif berasal dari kosakata manajemen mutu yang dipakai bersama oleh standar sistem manajemen [S2]. Memakai istilah yang benar di dokumenmu memudahkan auditor memahami maksudmu, dan sebaliknya mencampurnya menimbulkan pertanyaan.
-- Panduan audit sistem manajemen terbit dalam edisi baru sebagai ISO 19011:2026 [S3], dan edisi baru itu juga menjadi rujukan bagi verifikasi tindak lanjut audit. Tinjau templat tindak lanjutmu bila selama ini mengikuti edisi lama.
-- Isi Day ini adalah praktik yang disusun di atas Day 06, bukan parafrase teks standar. Untuk kesesuaian formal, cocokkan templat tindakan korektif dan risalah review dengan teks klausul 9.3 dan 10.
-- Proporsi tindakan yang lulus verifikasi pada percobaan pertama adalah ukuran yang jarang dipakai dan sangat informatif. Bila kamu mulai mengukurnya sekarang, dalam dua siklus kamu akan punya dasar untuk menilai apakah proses perbaikanmu membaik.
-- Management review yang hanya memuat kabar baik adalah tanda bahwa jalur eskalasi tidak bekerja. Manajemen yang tidak pernah diminta memutuskan apa pun juga tidak pernah benar-benar terlibat, dan keterlibatan itu sendiri adalah persyaratan.
+- ISO 9000:2026 (edisi 5) terbit 27 Mei 2026 dan menggantikan ISO 9000:2015 [S2]. Definisi correction dan corrective action yang dikutip materi pelatihan biasanya masih nomor istilah edisi 2015; cocokkan nomornya di edisi 2026 bila kamu mengutipnya di prosedur.
+- ISO/IEC 27000:2026 (edisi 6) memangkas daftar definisinya (Day 07), jadi definisi resmi istilah perbaikan untuk ISMS perlu dicari di standar masing-masing atau di ISO 9000.
+- ISO 19011:2026 (edisi 4) terbit 27 Mei 2026 [S3]. Bagian tindak lanjut audit, tempat panduan verifikasi tindakan korektif oleh auditor, sudah ada sejak edisi 2018; tinjau templat tindak lanjutmu terhadap edisi baru.
+- ISO/IEC 27001:2022 dengan Amd 1:2024 masih edisi berlaku [S1]. Amandemen 2024 menambah pertimbangan perubahan iklim di 4.1 dan 4.2, sehingga isu iklim bisa muncul sebagai input b dan c di management review.
 
 ## 9. Cheat sheet
 
 ```
+10.2  a bereaksi: tahan dan koreksi, tangani konsekuensi
+      b evaluasi perlu tindakan: tinjau NC | tentukan penyebab | NC serupa ada / bisa terjadi?
+      c terapkan | d tinjau efektivitas | e ubah ISMS bila perlu
+      tindakan SEPADAN dampak; simpan: sifat NC, tindakan, hasil CA
+
 KOREKSI vs TINDAKAN KOREKTIF
   koreksi          : menghilangkan ketidaksesuaian YANG DITEMUKAN (kasus ini)
   tindakan korektif: menghilangkan PENYEBAB agar TIDAK TERULANG
@@ -354,12 +382,17 @@ VERIFIKASI EFEKTIVITAS (wajib, dirancang DI MUKA)
 POLA GAGAL  koreksi dilaporkan sebagai korektif | akar berupa nama orang
             tindakan bergantung kedisiplinan | tanpa verifikasi | pemilik berupa TIM (= tak ada pemilik)
 
-MANAGEMENT REVIEW  bawa KEPUTUSAN, bukan laporan
+MANAGEMENT REVIEW 9.3  top management, interval terencana: sesuai | memadai | efektif
+  input 9.3.2: a status tindakan lalu | b isu int/eks | c kebutuhan pihak berkepentingan
+               d kinerja: d1 NC+CA, d2 monitoring, d3 audit, d4 sasaran
+               e umpan balik pihak berkepentingan | f risk assessment + RTP | g peluang perbaikan
+  output 9.3.3: keputusan peluang perbaikan + kebutuhan perubahan ISMS; simpan buktinya
+  bawa KEPUTUSAN, bukan laporan
   blok A (dibahas): pilihan yang perlu diputuskan, dengan rekomendasi penyusun
-  blok B (lampiran, TIDAK dipresentasikan): status, hasil audit, umpan balik, risiko
+  blok B (lampiran, TIDAK dipresentasikan, tetapi dicatat sudah ditinjau): input a-g
   bawa yang BURUK: temuan berulang, tindakan lewat tenggat, risiko yang naik
   risalah tanpa PEMILIK + TENGGAT = bukan keputusan
-  catat juga APA YANG TIDAK DIPUTUSKAN beserta kapan dibahas lagi
+  catat juga INPUT YANG DITINJAU dan APA YANG TIDAK DIPUTUSKAN beserta kapan dibahas lagi
   tempat yang tepat untuk eskalasi: sumber daya, konflik prioritas, penerimaan risiko formal
 
 4 ANGKA KESEHATAN  temuan berulang | median waktu tutup | LULUS VERIFIKASI PERCOBAAN PERTAMA
@@ -371,9 +404,11 @@ MANAGEMENT REVIEW  bawa KEPUTUSAN, bukan laporan
 
 | ID | Judul | URL | Tipe | Terbit/diakses | Keandalan dan catatan |
 |---|---|---|---|---|---|
-| S1 | ISO/IEC 27001:2022 (katalog) | https://www.iso.org/standard/27001 | primer (katalog ISO) | dirujuk 2026-10-09 | Tinggi untuk keberadaan dan judul klausul 9.3 dan 10 |
-| S2 | ISO 9000:2015 Quality management systems, fundamentals and vocabulary (katalog) | https://committee.iso.org/standard/45481.html | primer (katalog ISO) | dilihat 2026-10-09 | Tinggi untuk edisi dan status published. Dipakai sebagai sumber pemisahan istilah koreksi dan tindakan korektif yang berlaku lintas standar sistem manajemen |
-| S3 | ISO 19011:2026 Guidelines for auditing management systems (katalog) | https://committee.iso.org/standard/88984.html | primer (katalog ISO) | dilihat 2026-10-09 | Tinggi untuk edisi dan status; edisi 2018 ditandai withdrawn |
-| S4 | ISO27001-note Day 06 (klausul 9 dan 10), Day 09 (risiko), Day 10 (insiden), Day 13 (audit dan bukti), Day 15 (menjalankan audit internal) | (lokal) | rujukan internal | 2026-10-09 | Keterkaitan antar Day |
+| S1 | ISO committee: ISO/IEC 27001:2022 | https://committee.iso.org/standard/82875.html | primer (katalog ISO) | Oktober 2022; diakses 2026-10-10 | Tinggi. Edisi 3, Amd 1:2024 |
+| S2 | ISO committee: ISO 9000:2026 Quality management, fundamentals and vocabulary | https://committee.iso.org/standard/88465.html | primer (katalog ISO) | 2026-05-27; diakses 2026-10-10 | Tinggi untuk edisi dan status; ISO 9000:2015 withdrawn |
+| S3 | ISO committee: ISO 19011:2026 Guidelines for auditing management systems | https://committee.iso.org/standard/88984.html | primer (katalog ISO) | 2026-05-27; diakses 2026-10-10 | Tinggi untuk edisi dan status |
+| S4 | HighTable: ISO 27001 clause 10.2 nonconformity and corrective action | https://hightable.io/iso-27001-clause-10-1-nonconformity-and-corrective-action-essential-guide/ | sekunder (konsultan) | diperbarui 2026-10-10; diakses 2026-10-10 | Sedang. Urutan langkah 10.2 dan informasi terdokumentasi; konsisten dengan Day 06 |
+| S5 | Hicomply: ISO 27001 clause 9.3 management review (2022) | https://hicomply.com/hub/iso-27001-clause-9-3-management-review-2022 | sekunder (vendor) | diakses 2026-10-10 | Sedang. Isi 9.3.1-9.3.3; pengelompokan butir d di halaman itu kurang rapi, urutan a-g mengikuti Day 06 |
+| S6 | Institute for Healthcare Improvement: RCA2, improving root cause analyses and actions to prevent harm | https://www.ihi.org/library/tools/rca2-improving-root-cause-analyses-and-actions-prevent-harm | sekunder (lembaga keselamatan pasien) | RCA2 2015, Action Hierarchy 2019; diakses 2026-10-10 | Sedang-tinggi untuk fokus sistem dan tujuan action hierarchy; bukan standar ISO |
 
-**Catatan sumber:** dari sumber primer hanya diambil keberadaan, edisi, dan status ISO/IEC 27001, ISO 9000, dan ISO 19011. Pemisahan koreksi dan tindakan korektif adalah pembedaan baku di kosakata manajemen mutu, tetapi rumusannya di Day ini kata-kata sendiri, bukan kutipan definisi. Tingkat kekuatan tindakan di bagian 3.3 dan 4.2 serta empat ukuran kesehatan di bagian 4.6 adalah kerangka susunan sendiri dari praktik keselamatan dan keandalan, bukan persyaratan ISO. Seluruh nomor dokumen, nama, tenggat, ambang, dan angka di bagian 4 adalah fiktif.
+**Catatan sumber:** isi 10.2 dan 9.3 diparafrasekan dari ringkasan sekunder [S4][S5] yang cocok dengan Day 06, bukan dari teks standar. Pemisahan correction dan corrective action di ISO 9000:2015 adalah kosakata baku, tetapi tidak ada sumber terbuka di tabel ini yang memuat teks definisinya. Urutan kekuatan tindakan di bagian 3.4 dan 4.2 diadaptasi dari gagasan action hierarchy [S6]; rincian tingkatnya di Day ini susunan sendiri. Empat ukuran kesehatan di bagian 4.6 bukan persyaratan ISO. Seluruh nomor dokumen, nama, tenggat, ambang, dan angka di bagian 4 adalah fiktif.
