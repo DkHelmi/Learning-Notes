@@ -8,7 +8,7 @@ Kumpulan catatan belajar mandiri untuk membangun kemampuan sebagai security anal
 
 Setiap topik dipecah menjadi beberapa Day. Satu Day adalah satu unit bacaan: konsep, contoh, lab, lalu rangkuman. Urutan bacaan bebas, tetapi Day yang lebih awal sering dirujuk oleh Day berikutnya.
 
-Aturan bahasa, format, dan akurasi untuk semua topik mengikuti standar penulisan pribadi (STANDAR-NOTE.md), yang tidak disertakan di repo ini.
+Aturan bahasa, format, dan akurasi untuk semua topik mengikuti standar penulisan pribadi.
 
 ## Topik dan urutan prioritas
 
@@ -37,15 +37,3 @@ Alasan urutan:
 
 Urutan ini boleh diubah bila kebutuhan pekerjaan berubah.
 
-## Struktur tiap folder
-
-| File | Isi |
-|---|---|
-| `README.md` | Tujuan topik, versi acuan, temuan penting, dan daftar isi |
-| `SOURCES.md` | Indeks sumber |
-| `NN-<slug>.md` | Satu Day (nomor dua digit, lalu slug topik) |
-| `LICENSE` | Lisensi CC BY 4.0 |
-
-## Jangan di-commit
-
-Data, log, atau screenshot dari pekerjaan; kredensial dan token; sampel malware; PDF standar atau materi berbayar milik pihak lain.
