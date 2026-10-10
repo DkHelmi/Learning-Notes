@@ -45,14 +45,6 @@ Status standar dan dokumen acuan per Oktober 2026.
 
 Latihan semua Day memakai organisasi fiktif yang sama (PT Awan Nusantara) dan disimpan di `latihan/dayNN-<org>.md`.
 
-## Struktur folder
-
-| File | Isi |
-|---|---|
-| `README.md` | Tujuan, versi acuan, temuan penting, dan daftar isi |
-| `SOURCES.md` | Indeks sumber yang dipakai di semua Day |
-| `NN-<slug>.md` | Satu Day per file |
-| `LICENSE` | Lisensi CC BY 4.0 |
 
 ## Daftar isi
 
@@ -78,7 +70,4 @@ Latihan semua Day memakai organisasi fiktif yang sama (PT Awan Nusantara) dan di
 | 18 | [Regulasi Indonesia dan ISMS: memetakan kewajiban ke kendali](18-regulasi-indonesia-dan-isms.md) |
 | 19 | [Memperluas ISMS: kelangsungan, cloud, dan privasi](19-kelangsungan-cloud-dan-privasi.md) |
 
-## Catatan repo
-
-Jangan commit: data/log/screenshot dari pekerjaan, kredensial, token API, sampel berbahaya, PDF standar, atau materi berbayar pihak lain.
 
