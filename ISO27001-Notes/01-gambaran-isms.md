@@ -9,27 +9,6 @@ versions_checked: 'ISO/IEC 27001:2022 edisi 3 + Amd 1:2024 (masih edisi berlaku 
 
 Cakupan: pengertian ISMS, pembagian peran standar keluarga ISO/IEC 27000, struktur klausul 4-10 dan Annex A, posisi PDCA, beda selaras dan tersertifikasi, serta letak pekerjaan SOC/IR/forensik di dalam ISMS.
 
-> Catatan pribadi, bukan materi resmi ISO, dan bukan nasihat hukum atau audit. Teks standar ISO berhak cipta: catatan ini hanya menyebut nomor dan judul singkat klausul/kontrol, lalu menjelaskannya dengan kata-kata sendiri.
-
-## 1. Tujuan belajar
-
-Setelah menyelesaikan Day ini, kamu bisa:
-
-- menjelaskan apa itu ISMS dalam satu paragraf, dan kenapa ISO/IEC 27001 disebut standar persyaratan (requirements).
-- membedakan peran 27000, 27001, 27002, 27005, dan 27035, serta memilih standar mana yang dirujuk untuk sebuah pertanyaan.
-- menjelaskan hubungan PDCA dengan klausul 4-10, termasuk fakta bahwa sejak 2013 PDCA tidak lagi diwajibkan secara eksplisit.
-- membedakan "selaras/patuh" dari "tersertifikasi", dan menyebut aktor dalam rantai sertifikasi.
-- memetakan pekerjaan SOC/IR/forensik ke gambaran besar ISMS.
-
-## 2. Konteks singkat
-
-Di lowongan kerja, frasa "familiar with ISO 27001" biasanya berarti hal-hal berikut:
-- Kamu paham bahwa pekerjaan SOC menghasilkan bukti untuk ISMS, misalnya log review, insiden yang tercatat, dan sinkronisasi waktu.
-- Kamu bisa berbicara dengan bahasa auditor.
-- Kamu tidak kaget saat diminta menjelaskan "kontrol apa yang didukung proses ini".
-
-Kamu tidak perlu menjadi implementer atau auditor. Day ini membangun peta. Detail klausul ada di Day 02-06 dan kontrol di Day 08-12.
-
 **Kapan relevan:** organisasi tempatmu bekerja tersertifikasi atau sedang menuju sertifikasi; klien meminta bukti kepatuhan; regulator sektor merujuk ISO 27001.
 **Kapan bukan jawaban:** ISO 27001 tidak memberi tahu *cara* mengonfigurasi Splunk atau Wazuh. Ia menetapkan apa yang harus dikelola dan dibuktikan, bukan resep teknis.
 
