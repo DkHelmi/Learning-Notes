@@ -8,6 +8,26 @@
 
 Familiar dengan ISO 27001 (bukan mengejar sertifikasi): menjelaskan struktur ISMS, memahami bahasa audit, memetakan pekerjaan SOC/IR/forensik ke klausul dan kontrol. Latihan memakai organisasi fiktif.
 
+## Analogi jangkar
+
+Istilah ISO dipetakan ke hal yang sudah dikenal dari pekerjaan SOC. Analogi yang sama dipakai di semua Day. Kolom "Batas analogi" menunjukkan di mana analogi berhenti berlaku, supaya penyederhanaannya tidak menjadi salah.
+
+| Istilah ISO | Padanan di SOC | Batas analogi |
+|---|---|---|
+| ISMS | Cara SOC dijalankan: proses, peran, metrik, review. Bukan SIEM-nya | ISMS mencakup seluruh organisasi dalam scope, bukan hanya tim keamanan |
+| Risiko | Threat model: apa yang bisa terjadi dan seberapa parah | Risiko ISO juga mencakup hal non-teknis (orang, pemasok, fisik) |
+| Kontrol | Apa pun yang menurunkan risiko: detection rule, hardening, prosedur, pelatihan | |
+| Klausul 4-10 | Cara kerja SOC yang tertulis di SOP | Klausul wajib dipenuhi semua, tanpa pengecualian |
+| Annex A | Ruleset bawaan (ruleset Wazuh, repo Sigma): daftar acuan, tidak semua diaktifkan | Annex A tetap wajib dibandingkan dengan kontrol yang dipilih |
+| SoA | Coverage matrix: kontrol mana yang dipakai, mana yang tidak, dan alasannya | SoA adalah dokumen wajib yang diaudit |
+| 27001 vs 27002 | Requirement ("harus ada deteksi brute force") vs runbook ("begini cara menulisnya") | |
+| Scope | Daftar aset dan log source yang masuk monitoring | Scope ditetapkan formal dan tercantum di sertifikat |
+| Audit | QA tiket: ambil sampel, cocokkan dengan prosedur | Auditor eksternal independen dan terakreditasi |
+| Bukti (evidence) | Artefak yang bisa ditunjukkan: tiket, laporan, dashboard, log | |
+| Nonconformity | Finding: prosedur bilang X, kenyataannya tidak | |
+| Continual improvement | Siklus tuning detection setelah miss atau false positive | Berlaku untuk seluruh ISMS, bukan hanya deteksi |
+| Badan akreditasi, CB, sertifikat | Rantai kepercayaan TLS: root store, CA, sertifikat untuk satu domain | Tidak ada verifikasi kriptografis; kepercayaan dibangun lewat audit berkala |
+
 ## Versi acuan
 
 Status standar dan dokumen acuan per Oktober 2026.
@@ -43,7 +63,6 @@ Status standar dan dokumen acuan per Oktober 2026.
 
 Latihan semua Day memakai organisasi fiktif yang sama (PT Awan Nusantara) dan disimpan di `latihan/dayNN-<org>.md`.
 
-
 ## Daftar isi
 
 | Day | Topik |
@@ -67,5 +86,3 @@ Latihan semua Day memakai organisasi fiktif yang sama (PT Awan Nusantara) dan di
 | 17 | [Sistem sertifikasi dan akreditasi: arti sebuah sertifikat](17-sistem-sertifikasi-dan-akreditasi.md) |
 | 18 | [Regulasi Indonesia dan ISMS: memetakan kewajiban ke kendali](18-regulasi-indonesia-dan-isms.md) |
 | 19 | [Memperluas ISMS: kelangsungan, cloud, dan privasi](19-kelangsungan-cloud-dan-privasi.md) |
-
-
