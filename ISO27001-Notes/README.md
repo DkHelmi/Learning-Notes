@@ -8,8 +8,6 @@
 
 Familiar dengan ISO 27001 (bukan mengejar sertifikasi): menjelaskan struktur ISMS, memahami bahasa audit, memetakan pekerjaan SOC/IR/forensik ke klausul dan kontrol. Latihan memakai organisasi fiktif.
 
-Aturan bahasa, format, dan penanda mengikuti standar penulisan pribadi (STANDAR-NOTE.md), yang tidak disertakan di repo ini.
-
 ## Versi acuan
 
 Status standar dan dokumen acuan per Oktober 2026.
