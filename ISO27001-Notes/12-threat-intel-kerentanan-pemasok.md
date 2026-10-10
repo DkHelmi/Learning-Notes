@@ -2,14 +2,14 @@
 day: 12
 title: 'Threat intelligence dan manajemen kerentanan: kontrol 5.7 dan 8.8, bentuk bukti, serta pemasok dan cloud secara ringkas'
 researched_on: 2026-10-10
-versions_checked: 'ISO/IEC 27001:2022 + Amd 1:2024; ISO/IEC 27002:2022; ISO/IEC 27017:2026 (edisi 2, 27 Jul 2026); CVSS v4.0 (FIRST); EPSS (FIRST, model terbaru); CISA KEV (1.734 entri per 2026-10-08)'
+versions_checked: 'ISO/IEC 27001:2022 + Amd 1:2024; ISO/IEC 27002:2022; ISO/IEC 27017:2026 (edisi 2, 27 Jul 2026); ISO/IEC 27036-3:2023 (edisi 2); CVSS v4.0 (FIRST, 1 Nov 2023, dokumen spesifikasi v1.2); EPSS v4 (Maret 2025); CISA KEV (1.739 entri per 2026-10-10); CISA BOD 26-04 (10 Jun 2026); TLP 2.0 (FIRST)'
 ---
 
 # Day 12: Threat intelligence, manajemen kerentanan, dan pemasok
 
-> Catatan pribadi, bukan materi resmi ISO, dan bukan nasihat hukum atau audit. Semua CVE, pemasok, dan angka di contoh PT AN adalah fiktif.
+Cakupan: kontrol 5.7 Threat intelligence dan 8.8 Management of technical vulnerabilities, alat prioritas (CVSS v4.0, EPSS, KEV), hubungannya dengan SOC dan risk register, serta kontrol pemasok dan cloud (5.19-5.23) secara ringkas.
 
-Cakupan: kontrol 5.7 Threat intelligence dan 8.8 Management of technical vulnerabilities, alat prioritas (CVSS v4.0, EPSS, KEV), hubungan dengan CTI, SOC, dan risk register, serta kontrol pemasok dan cloud (5.19-5.23) secara ringkas.
+> Catatan pribadi, bukan materi resmi ISO, dan bukan nasihat hukum atau audit. Semua CVE, pemasok, dan angka di contoh PT AN adalah fiktif.
 
 ## 1. Tujuan belajar
 
@@ -23,45 +23,47 @@ Setelah menyelesaikan Day ini, kamu bisa:
 
 ## 2. Konteks singkat
 
-Kontrol 5.7 baru ada di edisi 2022. Sebelumnya, banyak organisasi tersertifikasi tanpa proses intelijen yang jelas. Sekarang auditor bisa bertanya: "intel apa yang kalian kumpulkan, dari mana, dan apa yang berubah karenanya?" Kontrol 8.8 sudah lama ada, tetapi masih sering menjadi sumber temuan, karena kerentanan kritis yang dibiarkan terbuka mudah dibuktikan.
+Kontrol 5.7 baru ada di edisi 2022, sehingga auditor bisa bertanya: "intel apa yang kalian kumpulkan, dari mana, dan apa yang berubah karenanya?" Kontrol 8.8 (dulu A.12.6.1) masih sering menjadi sumber temuan, karena kerentanan kritis yang terbuka mudah dibuktikan.
 
-Bagi analyst SOC, kedua kontrol ini sangat konkret. Advisori tentang VPN yang sedang dieksploitasi adalah intelijen (5.7). Keputusan memprioritaskan patch VPN itu adalah manajemen kerentanan (8.8). Rule deteksi tambahan untuk eksploitasi tersebut adalah monitoring (8.16). Bila semua langkah itu tercatat, satu kejadian menghasilkan bukti untuk tiga kontrol.
+Bagi SOC, kedua kontrol ini konkret: advisori VPN yang sedang dieksploitasi adalah intelijen (5.7), keputusan mempercepat patch-nya manajemen kerentanan (8.8), dan rule deteksi eksploitasinya monitoring (8.16). Bila tercatat, satu kejadian menjadi bukti tiga kontrol.
 
 Kapan dipakai: brief intel rutin, triage advisori, rapat prioritas patch, dan persiapan audit.
-Kapan tidak cukup: 5.7 tidak menentukan platform TI (MISP, OpenCTI) atau langganan feed. Pilihan itu bergantung pada risiko dan sumber daya.
+Kapan tidak cukup: 5.7 tidak menentukan platform intel (MISP, OpenCTI) atau langganan feed.
 
 ## 3. Konsep inti
 
 ### 3.1 Kontrol 5.7: threat intelligence
 
-Tujuan kontrol ini adalah memberi organisasi pemahaman tentang ancaman yang relevan, supaya bisa mengambil tindakan pencegahan dan deteksi yang tepat [S1].
+Tujuannya memberi pemahaman tentang ancaman yang relevan agar tindakan pencegahan dan deteksi tepat [S1].
 
-Tiga tingkat intelijen [S1]:
+Tiga tingkat intelijen menurut panduan 27002 [S6]:
 
 | Tingkat | Isi | Pengguna utama | Contoh |
 |---|---|---|---|
-| Strategic | Gambaran tingkat tinggi tentang lanskap ancaman: jenis pelaku, tren serangan | Pimpinan, ISMS Manager | "Ransomware ke penyedia hosting di Asia Tenggara meningkat" |
-| Operational | Taktik, teknik, prosedur, dan alat pelaku | Lead SOC, threat hunter | "Kelompok X memakai eksploitasi VPN lalu RMM tool untuk persistence" |
-| Tactical | Indikator teknis serangan tertentu | Analyst SOC, engineer deteksi | Hash, domain, IP, signature |
+| Strategic | Informasi tingkat tinggi tentang lanskap ancaman yang berubah: jenis pelaku, jenis serangan | Pimpinan, ISMS Manager | "Ransomware ke penyedia hosting di Asia Tenggara meningkat" |
+| Tactical | Metodologi, alat, dan teknologi pelaku (TTP) | Lead SOC, threat hunter | "Kelompok X memakai eksploitasi VPN lalu RMM tool untuk persistence" |
+| Operational | Rincian serangan tertentu, termasuk indikator teknis | Analyst SOC, engineer deteksi | Hash, domain, IP, signature dari kampanye yang sedang berjalan |
 
-Perhatikan bahwa pembagian di 27002 menempatkan TTP di operational dan IOC di tactical. Beberapa literatur CTI memakai urutan sebaliknya: tactical untuk TTP, dan operational untuk informasi tentang kampanye atau serangan tertentu yang akan datang. Saat membaca laporan atau kontrak layanan intel, cek definisi yang dipakai, bukan hanya labelnya. Untuk audit ISMS, pakai pembagian 27002 supaya bahasanya sama dengan auditor.
+Perhatian: sebagian ringkasan vendor (ISMS.online, Rapid7) membalik label, menaruh TTP di operational dan indikator di tactical [S1][S7], dan literatur CTI pun tidak seragam. Saat membaca kontrak layanan intel, cek definisinya, bukan labelnya; untuk audit, cocokkan dengan teks 27002 5.7 milik organisasimu.
 
-Intelijen yang berguna punya empat ciri: relevan, memberi wawasan (sebagian ringkasan menerjemahkannya "perceptive", sebagian "insightful"), kontekstual, dan bisa ditindaklanjuti [S1][S7]. Aktivitas yang disarankan meliputi menetapkan tujuan intelijen, mengidentifikasi dan memilih sumber, mengumpulkan, memproses, menganalisis, lalu mengomunikasikan hasilnya ke pihak yang tepat. Intelijen dipakai sebagai input proses risiko, pemilihan kontrol pencegahan dan deteksi, serta pengujian kontrol [S1]. Cek urutan aktivitas di teks 27002 5.7.
+Intelijen yang berguna itu relevan, memberi wawasan ("insightful" atau "perceptive" di ringkasan berbeda), kontekstual, dan bisa ditindaklanjuti [S6][S1]. Aktivitas yang disarankan [S6]:
 
-Bukti yang biasanya diminta auditor:
+1. menetapkan tujuan intelijen;
+2. mengidentifikasi, memeriksa, dan memilih sumber internal dan eksternal;
+3. mengumpulkan informasi;
+4. memproses (menerjemahkan, memformat, menguatkan dengan sumber lain);
+5. menganalisis dampaknya bagi organisasi;
+6. mengomunikasikan ke orang yang tepat dalam format yang mudah dipahami.
 
-- daftar kebutuhan intelijen atau tujuan intel;
-- daftar sumber beserta penilaian keandalannya;
-- brief atau laporan berkala;
-- catatan tindakan yang diambil karena intel, misalnya rule baru, patch dipercepat, atau risiko dinilai ulang.
+Hasilnya menjadi input proses risiko, kontrol pencegahan dan deteksi tambahan, serta pengujian keamanan [S1].
 
-Bukti terakhir paling penting. Feed yang hanya diimpor ke SIEM tanpa catatan keputusan sulit dibuktikan sebagai intelijen.
+Bukti yang biasa diminta auditor: kebutuhan intelijen, daftar sumber dengan penilaian keandalan, brief berkala, dan catatan tindakan karena intel (rule baru, patch dipercepat, risiko dinilai ulang). Yang terakhir paling penting; feed yang hanya diimpor ke SIEM tanpa catatan keputusan sulit dibuktikan sebagai intelijen.
 
 ### 3.2 Kontrol 8.8: manajemen kerentanan teknis
 
 Panduan 8.8 bisa diringkas menjadi alur berikut [S2]:
 
-1. **Prasyarat:** inventaris aset yang lengkap dan mutakhir, termasuk vendor, versi, dan lokasi perangkat lunak (kontrol 5.9).
+1. **Prasyarat:** inventaris aset yang lengkap dan mutakhir, termasuk vendor, versi, dan lokasi perangkat lunak (5.9 Inventory of information and other associated assets).
 2. **Peran:** siapa yang memantau, menilai, dan memperbaiki.
 3. **Identifikasi:** pemindaian otomatis, penetration test, advisori vendor, kewajiban pemasok melaporkan kerentanan, dan pemantauan library pihak ketiga.
 4. **Evaluasi:** analisis laporan dan keputusan tindakan, dengan prioritas pada sistem kritis dan berisiko tinggi.
@@ -69,7 +71,7 @@ Panduan 8.8 bisa diringkas menjadi alur berikut [S2]:
 6. **Cloud:** praktik kerentanan penyedia layanan harus sesuai standar organisasi dan tertuang di perjanjian.
 7. **Rekaman:** jejak semua aktivitas untuk respons insiden dan perbaikan proses.
 
-Bila tidak ada patch, "perketat monitoring" adalah tindakan yang sah. Di sini SOC berperan langsung: rule deteksi khusus untuk eksploitasi kerentanan itu adalah kontrol kompensasi yang harus tercatat.
+Bila patch belum ada, rule deteksi khusus dari SOC adalah kontrol kompensasi yang sah, asalkan tercatat.
 
 ### 3.3 Alat prioritas: CVSS, EPSS, KEV
 
@@ -77,15 +79,17 @@ Ketiga alat ini menjawab pertanyaan yang berbeda:
 
 | Alat | Pertanyaan yang dijawab | Catatan |
 |---|---|---|
-| CVSS v4.0 (FIRST) | Seberapa parah kerentanan ini secara teknis? | Kelompok metrik: Base, Threat (dulu Temporal), Environmental, dan Supplemental yang tidak memengaruhi skor [S3]. Skor Base saja bukan ukuran risiko |
-| EPSS (FIRST) | Seberapa mungkin CVE ini dieksploitasi dalam 30 hari ke depan? | Model machine learning; skor probabilitas 0-1 dan persentil, diperbarui harian [S4] |
-| KEV (CISA) | Apakah CVE ini sudah terbukti dieksploitasi? | Katalog otoritatif; 1.734 entri per 2026-10-08; tersedia dalam CSV dan JSON [S8] |
+| CVSS v4.0 (FIRST) | Seberapa parah kerentanan ini secara teknis? | Kelompok metrik Base, Threat (dulu Temporal), Environmental, dan Supplemental [S3]. Skor Base saja bukan ukuran risiko |
+| EPSS (FIRST) | Seberapa mungkin CVE ini dieksploitasi dalam 30 hari ke depan? | Probabilitas 0-1 beserta persentil, diterbitkan setiap hari untuk setiap CVE [S4] |
+| KEV (CISA) | Apakah CVE ini sudah terbukti dieksploitasi? | Katalog otoritatif; 1.739 entri per 2026-10-10; tersedia dalam CSV dan JSON [S8] |
 
-Cara menggabungkan yang umum: KEV sebagai pemicu tercepat (sudah dieksploitasi), EPSS untuk membedakan antar CVE yang belum masuk KEV, CVSS untuk dampak teknis, lalu kritikalitas aset dan paparan (menghadap internet atau tidak) dari inventaris sendiri. Tidak ada satu skor yang cukup sendirian.
+**CVSS v4.0** dirilis FIRST pada 1 November 2023; dokumen spesifikasinya kini revisi v1.2 (Juni 2024) [S9]. Skor disebut bersama kelompok metriknya: CVSS-B (Base), CVSS-BT (Base dan Threat), CVSS-BE, atau CVSS-BTE. Metrik Supplemental seperti Safety, Automatable, dan Provider Urgency tidak mengubah skor, tetapi berguna untuk keputusan [S3]. Banyak scanner masih menampilkan skor v3.1, jadi cek versinya sebelum membandingkan angka.
 
-Catatan versi: CVSS v4.0 dirilis FIRST pada November 2023 dan menggantikan v3.1 sebagai versi terbaru, walaupun banyak scanner dan database masih menampilkan skor v3.1 berdampingan. Model EPSS terbaru dilaporkan sumber sekunder sebagai versi 4 (Maret 2025); halaman utama EPSS tidak menyebut nomor versi, jadi cek di halaman model EPSS sebelum mengutipnya. Skor EPSS dari versi model berbeda tidak bisa dibandingkan langsung.
+**EPSS** versi model 4 dirilis Maret 2025 dengan tambahan data deteksi malware dan endpoint [S10]. Model dilatih ulang kira-kira setahun sekali bila performanya turun, dan baris komentar pertama file CSV EPSS menyebut model yang dipakai [S4]. Jangan membandingkan skor dari versi model berbeda.
 
-Halaman KEV per 2026-10-08 merujuk Binding Operational Directive 26-04 tentang prioritas update keamanan berbasis risiko [S8]. BOD hanya mengikat lembaga federal AS. Untuk PT AN, KEV dipakai sebagai sumber intel, bukan kewajiban. Cek hubungan BOD 26-04 dengan BOD 22-01 yang sebelumnya terkait KEV.
+**KEV dan BOD 26-04.** CISA menerbitkan BOD 26-04 (Prioritizing Security Updates Based on Risk) pada 10 Juni 2026, yang mencabut BOD 22-01 (asal katalog KEV) dan BOD 19-02 [S11]. Katalog KEV tetap berjalan, tetapi tenggat perbaikan kini ditentukan empat faktor: aset terekspos publik atau tidak, CVE ada di KEV atau tidak, eksploitasi bisa diotomasi atau tidak, dan seberapa jauh penyerang menguasai aset (sebagian atau total). Tingkat paling mendesak diberi 3 hari plus forensic triage [S11]; ringkasan sekunder menyebut tingkat lain 14 hari, 60 hari, atau ditunda ke upgrade berikutnya, jadi cek tabel tenggat di dokumen CISA. BOD hanya mengikat lembaga sipil federal AS; bagi PT AN, KEV dan logika empat faktor itu referensi praktik yang baik.
+
+Cara menggabungkan yang umum: KEV sebagai pemicu tercepat, EPSS untuk membedakan CVE di luar KEV, CVSS untuk dampak teknis, lalu kritikalitas aset dan paparan internet dari inventaris sendiri.
 
 ### 3.4 Alur intel, kerentanan, deteksi, dan risiko
 
@@ -100,26 +104,24 @@ Sumber intel (advisori, KEV, feed, laporan) --> 5.7 analisis: relevan untuk aset
         +---------------------> rekaman: tiket patch, ID rule, catatan risiko, brief intel
 ```
 
-Satu advisori yang relevan sebaiknya menghasilkan minimal satu keputusan yang tercatat. Bila advisori dinilai tidak relevan (produk tidak dipakai), catat juga keputusan itu. Catatan "tidak relevan" adalah bukti bahwa proses 5.7 berjalan.
+Satu advisori yang relevan sebaiknya menghasilkan minimal satu keputusan tercatat. Advisori yang tidak relevan (produk tidak dipakai) juga dicatat, karena catatan itu bukti proses 5.7 berjalan.
 
 ### 3.5 Pemasok dan cloud secara ringkas
 
-SOC modern hampir selalu bergantung pada pihak ketiga: SIEM cloud, feed intel berbayar, MSSP, atau EDR berbasis SaaS. Kontrol yang relevan:
+SOC hampir selalu bergantung pada pihak ketiga (SIEM cloud, feed intel, MSSP, EDR SaaS). Kontrol yang relevan:
 
 | Kontrol | Gagasan inti | Contoh SOC |
 |---|---|---|
-| 5.19 Supplier relationships | Proses dan prosedur untuk risiko pemasok | Penilaian keamanan sebelum memilih SIEM cloud |
-| 5.20 Supplier agreements | Persyaratan keamanan di kontrak | Notifikasi insiden pemasok, lokasi data, hak audit |
-| 5.21 ICT supply chain | Risiko rantai pasok TIK | Update agent dari vendor yang dikompromikan |
-| 5.22 Monitoring of supplier services | Pemantauan, tinjauan, dan perubahan layanan pemasok | Laporan SLA MSSP, tinjauan tahunan |
-| 5.23 Use of cloud services | Proses memperoleh, memakai, mengelola, dan mengakhiri layanan cloud | Rencana keluar (exit) bila ganti penyedia SIEM |
+| 5.19 Information security in supplier relationships | Proses dan prosedur untuk risiko pemakaian produk dan layanan pemasok | Penilaian keamanan sebelum memilih SIEM cloud |
+| 5.20 Addressing information security within supplier agreements | Persyaratan keamanan yang disepakati di kontrak | Notifikasi insiden pemasok, lokasi data, hak audit |
+| 5.21 Managing information security in the ICT supply chain | Risiko rantai pasok produk dan layanan TIK | Update agent dari vendor yang dikompromikan |
+| 5.22 Monitoring, review and change management of supplier services | Pemantauan, tinjauan, dan perubahan layanan pemasok | Laporan SLA MSSP, tinjauan tahunan |
+| 5.23 Information security for use of cloud services | Proses memperoleh, memakai, mengelola, dan mengakhiri layanan cloud | Rencana keluar (exit) bila ganti penyedia SIEM |
 
 Standar pendukung:
 
-- **ISO/IEC 27017:2026 (edisi 2)** terbit 27 Juli 2026. Isinya panduan kontrol keamanan berbasis 27002 untuk layanan cloud, bagi pelanggan maupun penyedia cloud, termasuk kejelasan pembagian tanggung jawab [S5]. Edisi ini menggantikan 27017:2015.
-- **Seri ISO/IEC 27036** membahas keamanan hubungan dengan pemasok: bagian 1 berisi gambaran dan konsep, bagian 2 persyaratan, bagian 3 panduan rantai pasok perangkat keras, perangkat lunak, dan layanan TIK, dan bagian 4 panduan untuk layanan cloud. Bagian-bagiannya sedang diperbarui; katalog standar nasional Selandia Baru mencantumkan draft adopsi 27036-1 tahun 2025 [S6]. Cek edisi tiap bagian di katalog ISO.
-
-Konsultan URM melaporkan temuan audit 2026 berupa tidak adanya ketentuan keluar (exit) untuk layanan cloud (5.23) (lihat Day 08). DBIR 2026 juga menyoroti peningkatan keterlibatan pihak ketiga dalam breach (Day 09).
+- **ISO/IEC 27017:2026 (edisi 2)** terbit 27 Juli 2026 dan menggantikan 27017:2015. Isinya panduan kontrol keamanan berbasis 27002:2022 untuk layanan cloud, plus kontrol tambahan khusus cloud, bagi pelanggan maupun penyedia, untuk model public, private, dan hybrid [S5].
+- **Seri ISO/IEC 27036** (hubungan dengan pemasok): bagian 1 konsep (edisi 2, 2021) [S12], bagian 2 persyaratan, bagian 3 rantai pasok perangkat keras, perangkat lunak, dan layanan (edisi 2, Juni 2023) [S13], bagian 4 layanan cloud. Edisi bagian 2 (2022) dan 4 (2016) perlu dicek di katalog ISO.
 
 ## 4. Contoh dokumen / artefak (organisasi fiktif)
 
@@ -134,37 +136,39 @@ Organisasi fiktif: PT Awan Nusantara (PT AN). CVE di bawah memakai label fiktif 
 | PIR-3 | Apakah ada data atau kredensial PT AN yang beredar di luar? | ISMS Manager | Layanan pemantauan kebocoran (sesuai ToS dan hukum) |
 | PIR-4 | Tren regulasi dan ancaman apa yang perlu diketahui pimpinan per kuartal? | Direksi | Laporan strategis, advisori pemerintah |
 
-PIR membuat 5.7 bisa diaudit, karena setiap brief bisa dicek: pertanyaan mana yang dijawab, dan tindakan apa yang diambil.
+PIR menjawab aktivitas pertama 5.7 (menetapkan tujuan) dan membuat setiap brief bisa diaudit terhadap pertanyaannya.
 
 ### 4.2 Kebijakan SLA kerentanan (cuplikan)
+
+Kategori dievaluasi dari atas; kategori pertama yang kriterianya terpenuhi yang berlaku.
 
 | Kategori | Kriteria | Tenggat tindakan |
 |---|---|---|
 | Darurat | Ada di KEV atau intel menunjukkan eksploitasi aktif, dan aset menghadap internet | 72 jam (patch atau mitigasi) |
 | Tinggi | CVSS Base minimal 7.0 dan EPSS minimal 0,1, atau aset kritis | 14 hari |
-| Sedang | CVSS Base 4.0-6.9, atau CVSS tinggi pada aset internal non-kritis dengan EPSS rendah | 30 hari |
+| Sedang | CVSS Base 4.0-6.9, atau CVSS minimal 7.0 pada aset internal non-kritis dengan EPSS kurang dari 0,1 | 30 hari |
 | Rendah | Sisanya | Siklus patch berikutnya (maks 90 hari) |
 
-Bila tenggat tidak bisa dipenuhi, harus ada pengecualian tertulis dengan kontrol kompensasi (misalnya rule deteksi khusus) dan persetujuan risk owner.
+Tenggat yang tidak terpenuhi butuh pengecualian tertulis dengan kontrol kompensasi dan persetujuan risk owner.
 
 ### 4.3 Contoh keputusan prioritas
 
 | CVE | Aset | Internet? | KEV | EPSS | CVSS Base | Kategori | Alasan |
 |---|---|---|---|---|---|---|---|
 | CVE-FIKTIF-01 | VPN appliance | Ya | Ya | 0,94 | 9.8 | Darurat | KEV dan menghadap internet |
-| CVE-FIKTIF-02 | Hypervisor mgmt | Tidak (VPN) | Tidak | 0,32 | 8.1 | Tinggi | CVSS 8.1 dan EPSS 0,32 memenuhi kriteria Tinggi; juga aset kritis |
-| CVE-FIKTIF-03 | Server build internal | Tidak | Tidak | 0,02 | 9.1 | Sedang | CVSS tinggi tetapi EPSS rendah dan aset internal non-kritis |
-| CVE-FIKTIF-04 | Wiki dokumentasi internal | Tidak | Tidak | 0,04 | 5.3 | Sedang | CVSS 5.3 dan aset non-kritis |
-| CVE-FIKTIF-05 | Laptop staf | Tidak | Ya | 0,71 | 7.8 | Tinggi | Di KEV tetapi tidak menghadap internet, jadi tidak memenuhi syarat Darurat; CVSS 7.8 dan EPSS 0,71 memenuhi Tinggi |
+| CVE-FIKTIF-02 | Hypervisor mgmt | Tidak (VPN) | Tidak | 0,32 | 8.1 | Tinggi | CVSS 8.1 dan EPSS 0,32; juga aset kritis |
+| CVE-FIKTIF-03 | Server build internal | Tidak | Tidak | 0,02 | 9.1 | Sedang | CVSS tinggi, tetapi EPSS rendah dan aset internal non-kritis |
+| CVE-FIKTIF-04 | Wiki dokumentasi internal | Tidak | Tidak | 0,04 | 5.3 | Sedang | CVSS 5.3 pada aset non-kritis |
+| CVE-FIKTIF-05 | Laptop staf | Tidak | Ya | 0,71 | 7.8 | Tinggi | Di KEV tetapi tidak menghadap internet, jadi bukan Darurat; CVSS 7.8 dan EPSS 0,71 memenuhi Tinggi |
 
-Periksa konsistensi baris CVE-FIKTIF-03. CVSS 9.1 memenuhi syarat pertama kategori Tinggi, tetapi EPSS 0,02 kurang dari 0,1 dan aset tidak kritis, sehingga kriteria Tinggi tidak terpenuhi. Kriteria Sedang di tabel 4.2 secara eksplisit mencakup kasus ini. Tanpa kalimat itu, CVE-FIKTIF-03 tidak masuk kategori mana pun. Menguji kebijakan dengan contoh nyata seperti ini adalah cara menemukan celah aturan.
+Uji CVE-FIKTIF-03: EPSS 0,02 dan aset non-kritis membuat Tinggi tidak terpenuhi. Tanpa kalimat kedua di kriteria Sedang, CVE dengan CVSS 9.1 ini jatuh ke Rendah ("sisanya") dengan tenggat 90 hari. Aturan "kategori pertama yang cocok" mencegah tumpang tindih, misalnya CVSS 5.0 di aset kritis yang memenuhi Tinggi sekaligus Sedang. Menguji kebijakan dengan contoh menemukan celah aturan.
 
-Baris CVE-FIKTIF-05 menunjukkan keputusan yang bisa diperdebatkan. Laptop memang tidak menghadap internet, tetapi laptop berpindah jaringan. Tim bisa memutuskan menaikkannya ke Darurat. Apa pun keputusannya, alasannya harus tertulis.
+Baris CVE-FIKTIF-05 bisa diperdebatkan: laptop tidak menghadap internet, tetapi berpindah jaringan. Apa pun keputusannya, alasannya harus tertulis.
 
 ### 4.4 Brief intel bulanan (kerangka)
 
 ```
-TI-BRIEF 2026-09 (TLP:AMBER, distribusi: internal PT AN)
+TI-BRIEF 2026-09 (TLP:AMBER+STRICT, distribusi: internal PT AN saja)
 1. Ringkasan untuk pimpinan (PIR-4): 3 kalimat
 2. Kerentanan dieksploitasi yang relevan (PIR-1): CVE-FIKTIF-01 -> tiket PATCH-2231, selesai 2026-09-04
 3. TTP kelompok ransomware relevan (PIR-2): 2 teknik baru -> rule DET-118, hunt HUNT-2026-07
@@ -173,30 +177,26 @@ TI-BRIEF 2026-09 (TLP:AMBER, distribusi: internal PT AN)
 6. Advisori yang dinilai tidak relevan: 4 (produk tidak dipakai), dicatat di log intel
 ```
 
-Bagian 5 dan 6 adalah bukti terkuat untuk 5.7, karena menunjukkan intel menghasilkan keputusan, termasuk keputusan "tidak relevan". Label TLP mengikuti standar TLP 2.0 dari FIRST.
+Bagian 5 dan 6 adalah bukti terkuat untuk 5.7, karena menunjukkan intel menghasilkan keputusan. Label mengikuti TLP 2.0 (FIRST, sejak Agustus 2022): RED hanya penerima yang disebut, AMBER organisasi penerima dan kliennya sebatas perlu tahu, AMBER+STRICT hanya organisasi penerima, GREEN komunitas tanpa kanal publik, CLEAR tanpa batas [S14]. Brief internal karena itu berlabel AMBER+STRICT.
 
 ## 5. Lab praktik
 
-Latihan untuk organisasi fiktifmu. Simpan di `ISO27001-note/latihan/day12-<nama-org-fiktif>.md`.
+Latihan untuk organisasi fiktifmu. Simpan di `latihan/day12-<nama-org-fiktif>.md`.
 
-1. Tulis 4-5 PIR untuk organisasimu, masing-masing dengan pengguna dan sumber utama.
-2. Buat daftar sumber intel minimal 6, berisi nama, jenis (gratis atau berbayar), tingkat (strategic, operational, tactical), penilaian keandalan, dan label TLP default.
-3. Tulis kebijakan SLA kerentanan seperti bagian 4.2. Uji dengan 6 kerentanan fiktif dan pastikan setiap kerentanan masuk tepat satu kategori. Bila ada yang tidak masuk kategori mana pun, perbaiki kebijakannya.
+1. Tulis 4-5 PIR, masing-masing dengan pengguna dan sumber utama.
+2. Buat daftar minimal 6 sumber intel: nama, jenis (gratis atau berbayar), tingkat (strategic, tactical, operational), penilaian keandalan, dan label TLP default.
+3. Tulis kebijakan SLA kerentanan seperti bagian 4.2. Uji dengan 6 kerentanan fiktif dan pastikan setiap kerentanan masuk tepat satu kategori; perbaiki kebijakan bila ada yang jatuh ke kategori yang tidak masuk akal.
 4. Tulis brief intel bulanan dengan kerangka bagian 4.4. Minimal satu tindakan untuk 8.8, satu untuk 8.16, dan satu catatan advisori yang tidak relevan.
-5. Tulis kuesioner singkat (10 pertanyaan) untuk menilai penyedia SIEM cloud: notifikasi insiden, lokasi data, retensi, akses admin penyedia, hak audit, ketentuan keluar, dan praktik kerentanan penyedia.
+5. Tulis kuesioner 10 pertanyaan untuk penyedia SIEM cloud: notifikasi insiden, lokasi data, retensi, akses admin penyedia, hak audit, ketentuan keluar, dan praktik kerentanan.
 6. Hubungkan ke lab:
    - bila Wazuh lab-mu mengaktifkan deteksi kerentanan, ambil daftar kerentanan untuk satu VM lab dan klasifikasikan dengan kebijakan langkah 3. Cek nama modul dan menu di versi Wazuh lab-mu;
    - bila tidak, buat inventaris perangkat lunak 2 VM lab secara manual (nama dan versi).
-   Cocokkan dengan KEV dalam format CSV atau JSON dari situs CISA; file ini hanya data teks, bukan biner.
-
-**Hasil yang seharusnya teramati:** PIR, daftar sumber, kebijakan SLA yang sudah diuji, brief intel dengan keputusan, kuesioner pemasok, dan satu klasifikasi kerentanan dari lab-mu.
+   Cocokkan dengan file KEV (CSV atau JSON) dari situs CISA.
 
 **Hasil yang sebaiknya tersimpan:**
-- Setiap brief intel memuat keputusan dan tindakan, bukan hanya berita.
-- Kebijakan SLA diuji dengan contoh dan tidak ada kerentanan yang jatuh di luar kategori.
-- Pengecualian SLA butuh kontrol kompensasi dan persetujuan risk owner.
-- Kuesioner pemasok mencakup ketentuan keluar (5.23).
-- Data kerentanan dari lab hanya berasal dari VM lab.
+- PIR, daftar sumber, dan brief intel yang memuat keputusan dan tindakan, bukan hanya berita.
+- Kebijakan SLA yang sudah diuji, termasuk aturan pengecualian dengan kontrol kompensasi dan persetujuan risk owner.
+- Kuesioner pemasok yang mencakup ketentuan keluar (5.23), dan satu klasifikasi kerentanan dari VM lab.
 
 **Variasi tantangan:** advisori baru menyebut eksploitasi aktif pada produk yang kamu pakai, tetapi patch baru tersedia 10 hari lagi. Tulis langkah lengkapnya: keputusan 5.7, mitigasi sementara 8.8, rule deteksi 8.16, perubahan kemungkinan di risk register, dan siapa yang menyetujui pengecualian SLA.
 
@@ -208,50 +208,56 @@ Latihan untuk organisasi fiktifmu. Simpan di `ISO27001-note/latihan/day12-<nama-
 | Ribuan temuan scanner, tidak tahu mulai dari mana | Prioritas hanya berdasarkan CVSS | Tambahkan KEV, EPSS, paparan internet, dan kritikalitas aset |
 | Kerentanan "Tinggi" terbuka berbulan-bulan | Tidak ada SLA atau pengecualian tidak dikelola | SLA tertulis, laporan umur kerentanan bulanan, pengecualian dengan tenggat |
 | Tidak tahu versi perangkat lunak di server | Inventaris aset (5.9) lemah | Perbaiki inventaris dulu; 8.8 bergantung padanya |
-| Penyedia cloud menolak memberi informasi | Persyaratan tidak dimasukkan saat kontrak | Masukkan klausul di perpanjangan berikutnya; gunakan laporan audit pihak ketiga penyedia |
+| Skor CVSS satu CVE berbeda antar tool | Versi CVSS (3.1 vs 4.0) atau kelompok metrik berbeda | Cek label versi dan nomenklatur (CVSS-B, CVSS-BT) |
+| Penyedia cloud menolak memberi informasi | Persyaratan tidak ada di kontrak | Masukkan klausul saat perpanjangan; minta laporan audit pihak ketiga |
 
 ## 7. Kesalahan umum dan jebakan
 
 - Menyamakan "berlangganan feed" dengan memenuhi 5.7. Kontrol ini menuntut analisis dan tindakan.
-- Memakai skor CVSS Base sebagai satu-satunya ukuran prioritas.
 - Membaca EPSS sebagai kepastian. EPSS adalah probabilitas, dan CVE dengan EPSS rendah tetap bisa dieksploitasi pada targetmu.
-- Menganggap BOD CISA mengikat organisasi di luar pemerintah federal AS.
-- Mengabaikan kerentanan pada layanan cloud karena "itu tanggung jawab penyedia". Pembagian tanggung jawab harus tertulis (5.23, 27017).
-- Membagikan intel berlabel TLP:AMBER ke grup yang lebih luas dari yang diizinkan. Hormati label TLP.
+- Menganggap BOD CISA mengikat organisasi di luar lembaga federal AS, atau masih menyebut BOD 22-01 berlaku.
+- Mengabaikan kerentanan layanan cloud sebagai "tanggung jawab penyedia" tanpa pembagian tanggung jawab tertulis (5.23, 27017).
+- Memberi label TLP:AMBER pada dokumen khusus internal; AMBER masih boleh sampai ke klien penerima.
 
 ## 8. Catatan terkini
 
+- BOD 26-04 (10 Juni 2026) mencabut BOD 22-01 dan 19-02 [S11]; halaman KEV kini menandai kebutuhan forensic triage per entri dan berisi 1.739 entri per 2026-10-10 [S8].
+- EPSS v4 (Maret 2025) adalah model terakhir yang tercatat di sumber publik per Oktober 2026 [S10]; cek baris komentar file CSV EPSS.
 - ISO/IEC 27017:2026 (edisi 2) terbit 27 Juli 2026 dan diselaraskan dengan 27002:2022 [S5].
-- Katalog KEV CISA berisi 1.734 entri per 2026-10-08 dan merujuk BOD 26-04 tentang prioritas update keamanan berbasis risiko [S8].
-- CVSS v4.0 memperkenalkan kelompok metrik Threat (pengganti Temporal) dan Supplemental [S3].
-- EPSS dihitung harian untuk setiap CVE dengan jendela prediksi 30 hari [S4]. Nomor versi model terbaru perlu dicek di halaman model EPSS (lihat bagian 3.3).
 
 ## 9. Cheat sheet
 
 ```
-5.7 TI: strategic (lanskap, pimpinan) | operational (TTP) | tactical (IOC)
+5.7 TI (27002): strategic (lanskap, pimpinan) | tactical (TTP pelaku) | operational (serangan tertentu, IOC)
     ciri: relevan, wawasan, kontekstual, bisa ditindaklanjuti
-    alur: tujuan/PIR -> sumber -> kumpulkan -> proses -> analisis -> komunikasikan -> TINDAKAN TERCATAT
+    alur: tujuan/PIR -> pilih sumber -> kumpulkan -> proses -> analisis -> komunikasikan -> TINDAKAN TERCATAT
     bukti: PIR, daftar sumber, brief, keputusan (termasuk "tidak relevan")
 8.8 Kerentanan: inventaris (5.9) -> peran -> identifikasi -> evaluasi -> tindakan (patch/workaround/filter/monitor) -> rekaman
     cloud: praktik penyedia di kontrak
 Prioritas: KEV (sudah dieksploitasi) > EPSS (peluang 30 hari) + CVSS v4 (keparahan) + paparan + kritikalitas aset
-CVSS v4.0: Base | Threat (eks Temporal) | Environmental | Supplemental (tidak ubah skor)
+CVSS v4.0 (Nov 2023): Base | Threat (eks Temporal) | Environmental | Supplemental (tidak ubah skor) ; CVSS-B/BT/BE/BTE
+BOD 26-04 (Jun 2026, cabut 22-01 & 19-02): exposure | KEV | automatable | partial/total control ; tingkat teratas 3 hari + forensic triage
 Pemasok: 5.19 hubungan | 5.20 kontrak | 5.21 rantai pasok TIK | 5.22 pantau & tinjau | 5.23 cloud (+ exit)
-Standar: 27017:2026 ed.2 (cloud) | seri 27036 (pemasok) | TLP 2.0 (FIRST) untuk berbagi intel
+Standar: 27017:2026 ed.2 (cloud) | 27036-1:2021, -3:2023 (pemasok) | TLP 2.0: RED, AMBER, AMBER+STRICT, GREEN, CLEAR
 ```
 
 ## 10. Sumber
 
 | ID | Judul | URL | Tipe | Terbit/diakses | Keandalan dan catatan |
 |---|---|---|---|---|---|
-| S1 | ISMS.online: ISO 27002 control 5.7 threat intelligence | https://isms.online/iso-27002/control-5-7-threat-intelligence | sekunder (vendor) | diakses 2026-10-08 | Sedang. Tiga tingkat, ciri, aktivitas, pemakaian |
+| S1 | ISMS.online: ISO 27002 control 5.7 threat intelligence | https://isms.online/iso-27002/control-5-7-threat-intelligence | sekunder (vendor) | diakses 2026-10-10 | Sedang. Tujuan dan pemakaian intel; label tingkat terbalik dibanding S6 |
 | S2 | ISMS.online: ISO 27002 control 8.8 management of technical vulnerabilities | https://www.isms.online/iso-27002/control-8-8-management-of-technical-vulnerabilities/ | sekunder (vendor) | 2025-07-25; diakses 2026-10-08 | Sedang. Alur 8.8 dari inventaris sampai rekaman |
-| S3 | FIRST: CVSS v4.0 | https://www.first.org/cvss/v4-0/ | primer (pemilik standar) | diakses 2026-10-08 | Tinggi untuk kelompok metrik |
-| S4 | FIRST: Exploit Prediction Scoring System | https://www.first.org/epss/ | primer (pemilik model) | diakses 2026-10-08 | Tinggi. Jendela 30 hari, pembaruan harian |
-| S5 | ISO committee: ISO/IEC 27017:2026 | https://committee.iso.org/standard/27017 | primer (katalog ISO) | 2026-07-27; diakses 2026-10-08 | Tinggi |
-| S6 | Standards New Zealand: DZ ISO/IEC 27036-1:2025 (draft adopsi) | https://www.standards.govt.nz/shop/DZ-ISOIEC-27036-12025 | sekunder (badan standar nasional) | diakses 2026-10-08 | Rendah-sedang. Petunjuk bahwa seri 27036 sedang direvisi; edisi tiap bagian perlu dicek di katalog ISO |
-| S7 | Rapid7: ISO 27002 emphasizes need for threat intelligence | https://www.rapid7.com/blog/post/2022/07/25/iso-27002-emphasizes-need-for-threat-intelligence/ | sekunder (vendor) | 2022-07-25; diakses 2026-10-08 | Sedang. Ciri intelijen dan variasi istilahnya |
-| S8 | CISA: Known Exploited Vulnerabilities Catalog | https://www.cisa.gov/known-exploited-vulnerabilities-catalog | primer (lembaga pemerintah) | diakses 2026-10-08 | Tinggi. Jumlah entri dan rujukan BOD 26-04 per tanggal akses |
+| S3 | FIRST: CVSS v4.0 | https://www.first.org/cvss/v4-0/ | primer (pemilik standar) | diakses 2026-10-10 | Tinggi. Kelompok metrik, nomenklatur, metrik Supplemental |
+| S4 | FIRST: Exploit Prediction Scoring System (halaman utama dan FAQ) | https://www.first.org/epss/ | primer (pemilik model) | diakses 2026-10-10 | Tinggi. Jendela 30 hari, pembaruan harian, model tercantum di CSV |
+| S5 | ISO committee: ISO/IEC 27017:2026 | https://committee.iso.org/standard/27017 | primer (katalog ISO) | 2026-07-27; diakses 2026-10-10 | Tinggi |
+| S6 | GRC Solutions: Threat intelligence, ISO 27001:2022 control 5.7 explained | https://grcsolutions.io/threat-intelligence-iso-270012022-control-5-7-explained/ | sekunder (konsultan) | diakses 2026-10-10 | Sedang. Mengutip rumusan 27002 untuk tiga tingkat, ciri, dan aktivitas |
+| S7 | Rapid7: ISO 27002 emphasizes need for threat intelligence | https://www.rapid7.com/blog/post/2022/07/25/iso-27002-emphasizes-need-for-threat-intelligence/ | sekunder (vendor) | 2022-07-25; diakses 2026-10-10 | Sedang. Contoh ringkasan dengan label tactical/operational terbalik |
+| S8 | CISA: Known Exploited Vulnerabilities Catalog | https://www.cisa.gov/known-exploited-vulnerabilities-catalog | primer (lembaga pemerintah) | diakses 2026-10-10 | Tinggi. Jumlah entri dan rujukan BOD 26-04 per tanggal akses |
+| S9 | FIRST: CVSS v4.0 Specification Document | https://www.first.org/cvss/v4.0/specification-document | primer (pemilik standar) | 2023-11-01, revisi dokumen v1.2 2024-06-18; diakses 2026-10-10 | Tinggi. Tanggal rilis |
+| S10 | Empirical Security (Jay Jacobs): Introducing EPSS version 4 | https://research.empiricalsecurity.com/research/introducing-epss-version-4 | sekunder (penulis inti EPSS) | Maret 2025; diakses 2026-10-10 | Sedang-tinggi. Perubahan data model v4 |
+| S11 | CISA: BOD 26-04 Prioritizing Security Updates Based on Risk | https://www.cisa.gov/news-events/directives/bod-26-04-prioritizing-security-updates-based-risk | primer (lembaga pemerintah) | 2026-06-10; diakses 2026-10-10 | Tinggi. Cakupan, empat faktor, pencabutan BOD lama |
+| S12 | ISO27k: ISO/IEC 27036-1 | https://www.iso27001security.com/html/27036 | sekunder (komentar praktisi) | diperbarui 2026-08-19; diakses 2026-10-10 | Sedang. Edisi 2 bagian 1 (2021) |
+| S13 | ISO committee: ISO/IEC 27036-3:2023 | https://committee.iso.org/standard/82890.html | primer (katalog ISO) | 2023-06-13; diakses 2026-10-10 | Tinggi |
+| S14 | FIRST: Traffic Light Protocol (TLP) | https://www.first.org/tlp/ | primer (pemilik standar) | TLP 2.0 berlaku sejak Agustus 2022; diakses 2026-10-10 | Tinggi. Definisi lima label |
 
-**Catatan sumber:** isi 5.7, 8.8, dan 5.19-5.23 disusun dari ringkasan sekunder, bukan dari teks 27002; urutan aktivitas 5.7 dan langkah 8.8 perlu dicocokkan dengan teks standar sebelum dikutip. Nomor versi model EPSS dan isi BOD 26-04 serta hubungannya dengan BOD 22-01 perlu dicek di situs FIRST dan CISA. Jumlah entri KEV berubah hampir setiap minggu; angka 1.734 hanya berlaku per 2026-10-08.
+**Catatan sumber:** isi 5.7, 8.8, dan 5.19-5.23 berasal dari ringkasan sekunder yang tidak sepakat soal label tactical dan operational; bagian 3.1 mengikuti sumber yang mengutip rumusan 27002. Tenggat BOD 26-04 selain 3 hari berasal dari ringkasan sekunder. Edisi 27036-2 dan 27036-4 belum dicek di katalog ISO.

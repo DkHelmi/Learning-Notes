@@ -2,39 +2,55 @@
 day: 15
 title: 'Menjalankan audit internal: dari program sampai laporan, dari sisi auditor'
 researched_on: 2026-10-10
-versions_checked: 'ISO 19011:2026 Guidelines for auditing management systems (terbit, stage 60.60; ISO 19011:2018 berstatus withdrawn); ISO/IEC 27007:2020 Guidelines for information security management systems auditing (published, stage 90.92 yang menandakan sedang ditinjau); ISO/IEC 27001:2022 klausul 9.2; rujukan Day 06, 09, 11, 12, 13'
+versions_checked: 'ISO/IEC 27001:2022 + Amd 1:2024 klausul 9.2; ISO 19011:2026 (edisi 4, 27 Mei 2026; edisi 2018 withdrawn); ISO/IEC 27007:2020 (90.92, akan direvisi); ISO/IEC DIS 27007 (edisi 4, stage 40.60 per 2026-09-23); ISO/IEC 17021-1:2015'
 ---
 
 # Day 15: Menjalankan audit internal
 
-Cakupan: menyiapkan dan menjalankan audit internal dari kursi auditor, mulai dari program tahunan sampai laporan yang bisa ditindaklanjuti.
+Cakupan: menyiapkan dan menjalankan audit internal dari kursi auditor, mulai dari persyaratan 9.2 dan program audit sampai laporan yang bisa ditindaklanjuti.
 
 ## 1. Tujuan belajar
 
 Setelah menyelesaikan Day ini, kamu bisa:
 
-- menyusun program audit internal yang cakupannya bisa dipertanggungjawabkan, bukan sekadar merata.
+- menjelaskan apa yang dituntut klausul 9.2.1 dan 9.2.2 dari program dan pelaksanaan audit internal.
+- menyusun program audit internal yang frekuensinya punya dasar, bukan dibagi rata.
 - menulis rencana dan daftar periksa audit untuk satu area teknis.
 - menjalankan wawancara audit yang menghasilkan bukti, bukan hanya jawaban.
 - mengambil sampel dengan cara yang bisa dijelaskan dan diulang.
 - menulis temuan yang memuat pernyataan, bukti, dan kriteria secara terpisah.
-- menjaga objektivitas dan independensi auditor dalam organisasi kecil.
+- menjaga objektivitas dan imparsialitas auditor dalam organisasi kecil, dan menjelaskan kenapa badan sertifikasi tidak boleh menjadi auditor internalmu.
 
 ## 2. Konteks singkat
 
-Day 06 membahas klausul 9.2 sebagai persyaratan, dan Day 13 membahas bagaimana rasanya diaudit beserta cara menyiapkan bukti. Day ini melihat dari kursi sebaliknya: kamu yang menjadi auditor internal.
+Day 06 membahas klausul 9.2 sebagai persyaratan, dan Day 13 membahas rasanya diaudit beserta cara menyiapkan bukti. Day ini melihat dari kursi sebaliknya: kamu yang menjadi auditor internal.
 
-Posisi ini sering jatuh ke orang teknis di organisasi kecil, justru karena ia memahami sistemnya. Masalahnya, pemahaman teknis tanpa disiplin audit menghasilkan dua kegagalan khas: audit berubah menjadi sesi perbaikan teknis sehingga temuan tidak tercatat, atau audit berubah menjadi pemeriksaan dokumen sehingga keadaan sebenarnya tidak tersentuh.
+Posisi ini sering jatuh ke orang teknis di organisasi kecil karena ia memahami sistemnya. Tanpa disiplin audit, hasilnya dua kegagalan khas: audit berubah menjadi sesi perbaikan teknis sehingga temuan tidak tercatat, atau menjadi pemeriksaan dokumen sehingga keadaan sebenarnya tidak tersentuh.
 
-Day ini membangun disiplin di antara keduanya. Panduan untuk mengaudit sistem manajemen ada di ISO 19011, yang edisi terbarunya terbit sebagai ISO 19011:2026 sementara edisi 2018 berstatus ditarik [S1]. Panduan khusus untuk audit sistem manajemen keamanan informasi ada di ISO/IEC 27007:2020, yang statusnya published tetapi berada di tahap yang menandakan sedang ditinjau [S2]. Isi Day ini adalah praktik audit internal yang umum dipakai, disusun dengan kata sendiri dan dibangun di atas Day 06 dan 13. Bila organisasimu perlu menunjukkan kesesuaian formal dengan panduan 19011 atau 27007, cocokkan langkah-langkah di sini dengan teks standarnya.
+Persyaratannya datang dari klausul 9.2 ISO/IEC 27001:2022 [S3][S4]. Cara mengauditnya mengikuti panduan ISO 19011:2026 [S1] dan, khusus ISMS, ISO/IEC 27007:2020 yang sedang direvisi [S2][S5]. Kedua panduan itu tidak disertifikasi; yang diperiksa CB adalah apakah audit internalmu memenuhi 9.2.
 
 ## 3. Konsep inti
 
-### 3.1 Program audit, bukan daftar audit
+### 3.1 Apa yang dituntut klausul 9.2
 
-Program audit adalah rencana beberapa periode, biasanya satu siklus sertifikasi, yang memastikan seluruh lingkup tersentuh dengan frekuensi yang sesuai risikonya. Yang membedakannya dari daftar audit biasa adalah dasar penentuan frekuensi.
+Klausul 9.2.1 meminta audit internal dijalankan pada interval terencana untuk memberi informasi apakah ISMS sesuai dengan persyaratan organisasi sendiri dan persyaratan standar, serta apakah ISMS diterapkan dan dipelihara secara efektif [S4].
 
-Dasar yang bisa dipertanggungjawabkan:
+Klausul 9.2.2 mengatur programnya. Dengan kata sendiri, organisasi harus [S4]:
+
+| Unsur 9.2.2 | Artinya dalam praktik | Dibahas di |
+|---|---|---|
+| Program audit dengan frekuensi, metode, tanggung jawab, persyaratan perencanaan, dan pelaporan | Satu dokumen program, bukan hanya kalender | 3.2, 4.1 |
+| Program mempertimbangkan pentingnya proses dan hasil audit sebelumnya | Frekuensi punya dasar risiko dan riwayat temuan | 3.2 |
+| Kriteria dan lingkup ditetapkan untuk tiap audit | Setiap audit punya rencana tertulis | 3.5, 4.2 |
+| Auditor dipilih dan audit dijalankan sehingga objektif dan imparsial | Auditor tidak mengaudit pekerjaannya sendiri | 3.3, 3.4 |
+| Hasil dilaporkan kepada manajemen terkait | Laporan sampai ke pemilik area dan manajemen yang bisa bertindak | 4.6 |
+| Informasi terdokumentasi disimpan sebagai bukti program dan hasil audit | Program, rencana, kertas kerja, dan laporan diarsipkan | 3.9 |
+
+Tiga hal sering salah dibaca. "Interval terencana" tidak berarti tiap klausul tiap tahun; program boleh bergulir asalkan seluruh lingkup tercakup dalam siklus. Persyaratan organisasi sendiri ikut menjadi kriteria. Dan 9.2 tidak mewajibkan auditor bersertifikat; yang dituntut objektivitas, imparsialitas, dan kompetensi yang bisa ditunjukkan (7.2).
+
+### 3.2 Program audit, bukan daftar audit
+
+Program audit adalah rencana beberapa periode, biasanya satu siklus sertifikasi, yang memastikan seluruh lingkup tersentuh dengan frekuensi sesuai risikonya. Dasar frekuensi yang bisa dipertanggungjawabkan, turunan dari frasa "pentingnya proses dan hasil audit sebelumnya" di 9.2.2:
 
 | Faktor | Pengaruh pada frekuensi |
 |---|---|
@@ -44,33 +60,45 @@ Dasar yang bisa dipertanggungjawabkan:
 | Insiden | Area yang terlibat insiden masuk ke jadwal berikutnya |
 | Kewajiban eksternal | Area yang disorot regulator atau pelanggan |
 
-Yang perlu dihindari adalah membagi klausul secara merata ke dalam dua belas bulan tanpa alasan. Itu memenuhi persyaratan di atas kertas, tetapi auditor eksternal akan menanyakan dasar pemilihannya, dan tidak adanya dasar itu sendiri bisa menjadi temuan.
+Membagi klausul merata ke dua belas bulan tanpa alasan akan ditanyakan auditor eksternal. Catat satu kalimat alasan di sebelah tiap baris program.
 
-Satu kebiasaan yang membantu: catat alasan di sebelah tiap baris program. Satu kalimat per baris sudah cukup, dan kalimat itulah yang kamu bacakan saat ditanya.
+### 3.3 Prinsip audit menurut ISO 19011
 
-### 3.2 Independensi dalam organisasi kecil
+ISO 19011:2018 merumuskan tujuh prinsip audit [S7]:
 
-Prinsipnya auditor tidak mengaudit pekerjaannya sendiri. Di organisasi kecil, ini sering tampak mustahil karena orang yang paham sistem adalah orang yang membangunnya.
+1. **Integritas:** jujur, cermat, dan tidak mengubah temuan karena tekanan.
+2. **Penyajian yang adil (fair presentation):** laporan mencerminkan keadaan sebenarnya, termasuk hambatan dan perbedaan pendapat yang belum selesai.
+3. **Kecermatan profesional (due professional care):** memakai pertimbangan dan skeptisisme yang sepadan dengan pentingnya audit.
+4. **Kerahasiaan:** informasi yang diperoleh selama audit dilindungi.
+5. **Independensi:** bebas dari bias dan konflik kepentingan; sejauh praktis, auditor terpisah dari kegiatan yang diaudit.
+6. **Pendekatan berbasis bukti:** kesimpulan bertumpu pada bukti yang bisa diverifikasi dari proses sampling yang sistematis.
+7. **Pendekatan berbasis risiko:** perencanaan dan pelaksanaan audit difokuskan pada hal yang paling berpengaruh.
 
-Tiga jalan keluar yang biasa dipakai:
+Edisi 2026 tetap memuat bagian prinsip audit [S1]. Ringkasan pihak ketiga menyebut fondasi prinsipnya pada dasarnya tidak berubah dan penekanan pada risiko diperkuat [S8]. Rumusan persis tiap prinsip di edisi 2026, termasuk kalimat tentang independensi auditor internal, perlu dicek di teks standarnya. Prinsip 5 dan 6 adalah dasar praktik di bagian 3.4, 3.6, dan 3.7; prinsip 2 adalah alasan laporan memuat blok "tidak diperiksa" (bagian 4.6).
+
+### 3.4 Objektivitas dalam organisasi kecil, dan batas peran badan sertifikasi
+
+Auditor tidak mengaudit pekerjaannya sendiri. Di organisasi kecil ini tampak sulit karena orang yang paham sistem adalah yang membangunnya. Tiga jalan keluar yang biasa dipakai:
 
 - **Pertukaran antar fungsi.** Orang infrastruktur mengaudit area aplikasi dan sebaliknya, dengan pendamping yang paham areanya.
-- **Auditor dari luar yang bukan badan sertifikasi.** Konsultan atau auditor independen bisa menjalankan audit internal; yang tidak boleh adalah badan sertifikasimu sendiri yang menjalankannya.
-- **Audit berpasangan.** Dua orang mengaudit bersama, satu memahami area dan satu menjaga disiplin audit, dengan pembagian peran yang tertulis.
+- **Auditor dari luar yang bukan badan sertifikasi.** Konsultan atau auditor independen boleh menjalankan audit internal.
+- **Audit berpasangan.** Satu orang memahami area dan satu menjaga disiplin audit, dengan pembagian peran tertulis.
 
-Apa pun yang dipilih, tuliskan pengaturan independensinya di rencana audit. Auditor eksternal akan menanyakannya, dan jawaban lisan tidak cukup.
+Yang tidak boleh adalah badan sertifikasi (CB) yang menyertifikasimu menjalankan audit internalmu. ISO/IEC 17021-1:2015 klausul 5.2.6 melarang CB menawarkan audit internal kepada klien yang disertifikasinya; konsensus badan akreditasi Eropa menambahkan bahwa CB boleh mengaudit internal organisasi lain, tetapi perlu jeda sekitar dua tahun sebelum menyertifikasinya [S6]. Alasannya imparsialitas: CB akan menilai hasil kerjanya sendiri saat audit sertifikasi. Klausul 5.2 yang sama juga melarang CB memberi konsultasi sistem manajemen.
 
-### 3.3 Dari kriteria ke pertanyaan
+Apa pun pengaturannya, tuliskan di rencana audit beserta siapa yang menyetujuinya. Itu bukti langsung untuk tuntutan objektivitas dan imparsialitas di 9.2.2.
 
-Audit memeriksa kesesuaian terhadap kriteria, dan kriteria pada audit internal ISMS biasanya tiga lapis:
+### 3.5 Dari kriteria ke pertanyaan
+
+9.2.2 meminta kriteria dan lingkup ditetapkan untuk tiap audit. Kriteria audit internal ISMS biasanya tiga lapis:
 
 1. Persyaratan standar, yaitu klausul yang berlaku.
 2. Dokumen internal organisasi, yaitu kebijakan dan prosedur yang kamu tetapkan sendiri.
 3. Kewajiban eksternal yang relevan, misalnya kontrak dan regulasi.
 
-Lapis kedua sering menghasilkan temuan paling banyak, karena organisasi menuliskan prosedur yang lebih ketat daripada yang benar-benar dijalankan. Perlu diingat bahwa ketidaksesuaian terhadap prosedur sendiri tetap ketidaksesuaian.
+Lapis kedua sering menghasilkan temuan paling banyak, karena organisasi menuliskan prosedur yang lebih ketat daripada yang dijalankan. Karena 9.2.1 menyebut persyaratan organisasi sendiri, ketidaksesuaian terhadap prosedur internal tetap nonconformity.
 
-Cara menurunkan kriteria menjadi pertanyaan: untuk setiap kriteria, tanyakan tiga hal berurutan.
+Untuk setiap kriteria, tanyakan tiga hal berurutan. Urutan ini mengikuti dua tuntutan 9.2.1: sesuai persyaratan, lalu diterapkan dan dipelihara secara efektif.
 
 ```
 1. Apakah ada aturannya?        -> periksa dokumen
@@ -78,13 +106,11 @@ Cara menurunkan kriteria menjadi pertanyaan: untuk setiap kriteria, tanyakan tig
 3. Apakah berjalan efektif?     -> periksa hasilnya, bukan hanya pelaksanaannya
 ```
 
-Lapis ketiga yang membedakan auditor yang baik. Prosedur tinjauan hak akses yang dijalankan rutin tetapi tidak pernah menghasilkan pencabutan hak adalah bukti yang perlu dipertanyakan, bukan bukti yang menenangkan.
+Pertanyaan ketiga yang membedakan auditor yang baik. Tinjauan hak akses yang rutin dijalankan tetapi tidak pernah menghasilkan pencabutan hak adalah bukti yang perlu dipertanyakan, bukan yang menenangkan.
 
-### 3.4 Wawancara yang menghasilkan bukti
+### 3.6 Wawancara yang menghasilkan bukti
 
-Kesalahan paling umum adalah bertanya dengan cara yang jawabannya ya atau tidak. Jawaban itu bukan bukti.
-
-Pola bertanya yang bekerja:
+Prinsip pendekatan berbasis bukti berarti jawaban lisan belum menjadi bukti sampai ditunjukkan rekamannya. Kesalahan paling umum adalah bertanya dengan cara yang jawabannya ya atau tidak. Pola yang bekerja:
 
 | Alih-alih | Tanyakan |
 |---|---|
@@ -93,29 +119,27 @@ Pola bertanya yang bekerja:
 | Apakah ada prosedur insiden? | Ceritakan insiden terakhir dan tunjukkan jejaknya |
 | Apakah backup diuji? | Kapan terakhir pemulihan diuji dan apa hasilnya |
 
-Pola kedua di tabel itu menunjukkan teknik yang paling produktif: minta satu kejadian nyata yang baru, lalu telusuri jejaknya dari awal sampai akhir. Penelusuran satu kasus mengungkap lebih banyak daripada memeriksa sepuluh dokumen.
+Teknik paling produktif: minta satu kejadian nyata yang baru, lalu telusuri jejaknya dari awal sampai akhir. Penelusuran satu kasus mengungkap lebih banyak daripada memeriksa sepuluh dokumen.
 
-Tiga aturan sikap: catat apa yang dikatakan dan siapa yang mengatakannya; jangan memperbaiki apa pun selama audit, karena itu mengubah bukti dan mengaburkan temuan; dan jangan berdebat, karena tugasmu mengumpulkan bukti, bukan meyakinkan.
+Tiga aturan sikap: catat apa yang dikatakan dan oleh siapa; jangan memperbaiki apa pun selama audit karena itu mengubah bukti; dan jangan berdebat, karena tugasmu mengumpulkan bukti, bukan meyakinkan.
 
-### 3.5 Sampling yang bisa dijelaskan
+### 3.7 Sampling yang bisa dijelaskan
 
-Day 13 membahas sampling dari sisi yang diaudit. Dari sisi auditor, yang penting adalah metodenya bisa dijelaskan dan diulang.
-
-Tiga cara yang sah, dan masing-masing dipakai untuk tujuan berbeda:
+Day 13 bagian 3.3 menjelaskan dua pendekatan sampling di ISO 19011: berbasis pertimbangan dan statistik. Dari kursi auditor internal, yang penting metodenya bisa dijelaskan dan diulang. Dalam praktik ada tiga cara:
 
 | Cara | Kapan dipakai | Kelemahan |
 |---|---|---|
-| Acak | Ingin memperkirakan keadaan populasi | Bisa melewatkan kasus penting |
-| Terarah | Ingin memeriksa kasus berisiko tinggi | Tidak bisa dipakai menyimpulkan populasi |
+| Acak (statistik) | Ingin memperkirakan keadaan populasi | Bisa melewatkan kasus penting |
+| Terarah (berbasis pertimbangan) | Ingin memeriksa kasus berisiko tinggi | Tidak bisa dipakai menyimpulkan populasi |
 | Menyeluruh | Populasi kecil | Mahal pada populasi besar |
 
 Yang harus kamu tulis di kertas kerja: ukuran populasi, jumlah sampel, cara pemilihan, dan alasan. Tanpa keempatnya, temuanmu bisa dibantah dengan mengatakan sampelnya kebetulan buruk.
 
-Satu catatan jujur: tidak ada angka sampel baku yang berlaku umum. Aturan yang beredar berasal dari praktik tiap badan sertifikasi dan tiap organisasi. Tetapkan aturanmu sendiri secara tertulis, lalu konsisten, dan sebutkan bahwa itu aturan internal.
+Tidak ada angka sampel baku untuk audit internal di 27001 maupun 19011. Tetapkan aturanmu secara tertulis, pakai konsisten, dan sebutkan bahwa itu aturan internal.
 
-### 3.6 Menulis temuan
+### 3.8 Menulis temuan
 
-Temuan yang baik memisahkan tiga hal dan tidak mencampurnya:
+Temuan yang baik memisahkan tiga hal. "Pernyataan" di sini sama dengan "kondisi" di Day 13.
 
 ```
 PERNYATAAN : apa yang tidak sesuai, dalam satu kalimat
@@ -125,13 +149,13 @@ KRITERIA   : klausul atau dokumen internal yang dilanggar
 
 Yang sering salah adalah mencampurkan rekomendasi ke dalam temuan. Tugas auditor menyatakan apa yang tidak sesuai; menentukan cara memperbaikinya adalah tugas pemilik area, dan auditor yang menentukan perbaikan kehilangan independensinya untuk memeriksa perbaikan itu nanti.
 
-Bila kamu melihat sesuatu yang baik, catat juga. Observasi positif membuat laporan lebih jujur dan membuat penerima lebih mau membaca bagian yang negatif.
+Catat juga hal yang baik; observasi positif membuat laporan lebih jujur dan lebih mau dibaca.
 
-### 3.7 Kertas kerja
+### 3.9 Kertas kerja
 
-Kertas kerja adalah catatan yang memungkinkan orang lain menelusuri bagaimana kamu sampai pada kesimpulan. Isinya: siapa yang diwawancarai dan kapan, dokumen apa yang diperiksa dengan versinya, sampel apa yang diambil dan bagaimana dipilih, apa yang dilihat, dan kesimpulan per kriteria.
+Kertas kerja memungkinkan orang lain menelusuri bagaimana kamu sampai pada kesimpulan. Isinya: siapa yang diwawancarai dan kapan, dokumen apa yang diperiksa dengan versinya, sampel apa yang diambil dan bagaimana dipilih, apa yang dilihat, dan kesimpulan per kriteria.
 
-Simpan terpisah dari laporan. Laporan untuk pembaca, kertas kerja untuk penelusuran, dan auditor eksternal kadang meminta yang kedua untuk menilai mutu audit internalmu.
+Simpan terpisah dari laporan. Laporan untuk pembaca, kertas kerja untuk penelusuran. Bersama program, rencana, dan laporan, kertas kerja adalah informasi terdokumentasi yang diminta 9.2.2 sebagai bukti program dan hasil audit, dan auditor eksternal kadang memintanya untuk menilai mutu audit internalmu.
 
 ## 4. Contoh dokumen / artefak (organisasi fiktif)
 
@@ -139,26 +163,30 @@ Simpan terpisah dari laporan. Laporan untuk pembaca, kertas kerja untuk penelusu
 
 ### 4.1 Program audit internal dengan alasan
 
-| Periode | Area | Kriteria utama | Alasan pemilihan |
-|---|---|---|---|
-| 2026 Q4 | Manajemen akses | A.5.15, A.5.18, prosedur AKS-01 | Dua temuan minor pada audit sebelumnya belum terverifikasi efektif |
-| 2027 Q1 | Logging dan pemantauan | A.8.15, A.8.16, prosedur LOG-02 | Sumber log baru ditambahkan pada Q3 2026; belum pernah diaudit |
-| 2027 Q1 | Manajemen pemasok | A.5.19 sampai A.5.22 | Dua pemasok baru dengan akses jaringan |
-| 2027 Q2 | Respons insiden | Klausul 10, A.5.24 sampai A.5.28 | Satu insiden nyata pada Q4 2026; menguji pembelajarannya |
-| 2027 Q3 | Klausul 4 sampai 7 | Konteks, kepemimpinan, risiko, dukungan | Siklus wajib; persiapan audit surveillance |
-| 2027 Q4 | Kelangsungan dan pemulihan | A.5.29, A.5.30 | Belum pernah diuji sejak sistem dipindahkan ke cloud |
+Kolom program memuat unsur 9.2.2: frekuensi, metode, tanggung jawab, dan dasar pemilihan. Aturan perencanaan dan pelaporan ditulis di pengantar program: tiap audit punya rencana tertulis (bentuk 4.2), dan laporannya dikirim ke pemilik area serta ISMS Manager dalam 10 hari kerja.
 
-Kolom terakhir yang membuat program ini bisa dipertahankan. Tanpa kolom itu, tabel di atas hanya jadwal.
+| Periode | Area | Kriteria utama | Metode | Auditor | Alasan pemilihan |
+|---|---|---|---|---|---|
+| 2026 Q4 | Manajemen akses | 5.15, 5.18, prosedur AKS-01 | Sampling tiket akses, wawancara | Tim GRC | Dua temuan minor pada audit sebelumnya belum terverifikasi efektif |
+| 2027 Q1 | Logging dan pemantauan | 9.1; 8.15, 8.16; prosedur LOG-02 | Penelusuran alert, cek konfigurasi | Fungsi aplikasi | Sumber log baru ditambahkan pada Q3 2026; belum pernah diaudit |
+| 2027 Q1 | Manajemen pemasok | 5.19 sampai 5.22 | Tinjauan kontrak, wawancara | Tim GRC | Dua pemasok baru dengan akses jaringan |
+| 2027 Q2 | Respons insiden | Klausul 10.2; 5.24 sampai 5.28 | Penelusuran satu insiden | Konsultan independen | Satu insiden nyata pada Q4 2026; menguji pembelajarannya |
+| 2027 Q3 | Klausul 4 sampai 10 kecuali 9.2 | Konteks, kepemimpinan, risiko, dukungan, operasi, evaluasi | Tinjauan dokumen, wawancara pimpinan | Tim GRC | Seluruh klausul harus tercakup dalam siklus; persiapan surveillance |
+| 2027 Q3 | Klausul 9.2 (proses audit internal itu sendiri) | 9.2.1, 9.2.2 | Tinjauan program dan laporan | Konsultan independen | Tim GRC tidak boleh mengaudit pekerjaannya sendiri |
+| 2027 Q4 | Kelangsungan dan pemulihan | 5.29, 5.30 | Observasi uji pemulihan | Fungsi infrastruktur | Belum pernah diuji sejak sistem dipindahkan ke cloud |
+
+Kolom alasan yang membuat program ini bisa dipertahankan; tanpanya tabel di atas hanya jadwal. Baris audit atas klausul 9.2 sering terlupa: proses audit internal juga harus diaudit, dan pelakunya tidak boleh tim yang menjalankannya.
 
 ### 4.2 Rencana audit satu area
 
 ```
 RENCANA AUDIT INTERNAL                     Nomor: AI-2027-01
 Area        : Logging dan pemantauan
-Tanggal     : 12 sampai 13 Februari 2027
+Tanggal     : 11 sampai 12 Februari 2027
 Auditor     : <nama>, tidak terlibat dalam pengelolaan platform logging
 Pendamping  : <nama>, memahami area tetapi tidak menilai
-Independensi: auditor berasal dari fungsi aplikasi; pengaturan ini disepakati oleh <jabatan>
+Independensi: auditor berasal dari fungsi aplikasi; pengaturan ini disetujui oleh <jabatan>
+Pelaporan  : laporan ke Lead SOC dan ISMS Manager paling lambat 10 hari kerja setelah rapat penutup
 
 KRITERIA
   ISO/IEC 27001:2022 klausul 9.1; Annex A 8.15 dan 8.16
@@ -189,13 +217,13 @@ ATURAN SAMPEL (internal)
 | Jam sistem diselaraskan | LOG-02 pasal 5 | Konfigurasi sumber waktu | Selisih waktu antar sumber pada satu kejadian nyata |
 | Retensi sesuai kontrak | Kontrak pelanggan X | Konfigurasi retensi | Log tertua yang benar-benar ada |
 
-Kolom ketiga yang membedakan audit ini dari pemeriksaan dokumen. Dua baris terakhir memakai teknik dari Day 11, yaitu memeriksa keadaan nyata, bukan konfigurasi yang diklaim.
+Kolom ketiga yang membedakan audit ini dari pemeriksaan dokumen. Dua baris terakhir memakai teknik Day 11: memeriksa keadaan nyata, bukan konfigurasi yang diklaim.
 
 ### 4.4 Catatan wawancara
 
 ```
 WAWANCARA                                   AI-2027-01 / W-03
-Tanggal   : 13 Februari 2027, 09:10 sampai 09:55
+Tanggal   : 12 Februari 2027, 09:10 sampai 09:55
 Narasumber: <nama>, analyst SOC
 Auditor   : <nama>
 
@@ -213,7 +241,7 @@ BUKTI YANG DIAMBIL
   daftar 10 tiket sampel dengan kolom alasan penutupan
 ```
 
-Perhatikan dua hal. Catatan auditor dipisahkan dari jawaban narasumber. Dan satu jawaban ditandai tidak terverifikasi, bukan diterima begitu saja; kejujuran semacam itu yang membuat kertas kerja bernilai.
+Catatan auditor dipisahkan dari jawaban narasumber, dan satu jawaban ditandai tidak terverifikasi, bukan diterima begitu saja. Kejujuran semacam itu yang membuat kertas kerja bernilai.
 
 ### 4.5 Temuan dengan tiga bagian terpisah
 
@@ -224,29 +252,35 @@ PERNYATAAN
   Penutupan alert tidak selalu disertai alasan, sehingga peninjauan ulang tidak dimungkinkan.
 
 BUKTI
-  Dari 10 tiket sampel periode 14 Januari sampai 12 Februari 2027, 6 ditutup tanpa
+  Dari 10 tiket sampel acak periode 13 Januari sampai 11 Februari 2027, 6 ditutup tanpa
   catatan alasan (tiket #4380, #4391, #4402, #4412, #4418, #4425).
-  Diperiksa pada 13 Februari 2027 bersama <nama>.
+  Diperiksa pada 12 Februari 2027 bersama <nama>.
 
 KRITERIA
   Prosedur internal LOG-02 versi 3.1 pasal 7.3 mewajibkan alasan penutupan dicatat.
+
+ALASAN KLASIFIKASI
+  Alert tetap ditinjau dan ditangani; yang hilang adalah rekaman alasannya. Kemampuan ISMS
+  mencapai hasilnya belum terganggu, sehingga minor. Bila pola yang sama ditemukan di area lain,
+  pertimbangkan major karena menunjukkan kegagalan sistemik (Day 13 bagian 3.4).
 
 CATATAN
   Tidak ada rekomendasi perbaikan di sini; penentuan tindakan adalah tanggung jawab pemilik area
   dan akan dicatat di lembar tindakan korektif (Day 16).
 ```
 
-Baris catatan terakhir sengaja ada untuk mengingatkan pembaca, dan untuk melindungi independensimu saat memverifikasi perbaikannya nanti.
+Baris catatan terakhir melindungi independensimu saat memverifikasi perbaikannya nanti.
 
 ### 4.6 Ringkasan laporan audit
 
 ```
 LAPORAN AUDIT INTERNAL                      AI-2027-01
 Area, tanggal, auditor, kriteria, lingkup   : (lihat rencana)
+Dikirim kepada                              : Lead SOC, ISMS Manager (9.2.2: manajemen terkait)
 
 KESIMPULAN
   ISMS pada area ini secara umum berjalan sesuai kriteria, dengan 1 temuan minor
-  dan 2 observasi. Tidak ditemukan ketidaksesuaian mayor.
+  dan 2 observasi. Tidak ditemukan major nonconformity.
 
 TEMUAN
   T-01 minor : penutupan alert tanpa alasan tercatat
@@ -264,80 +298,77 @@ TIDAK DIPERIKSA
   log aplikasi pihak ketiga yang tidak terintegrasi (di luar lingkup; dicatat untuk program berikutnya)
 ```
 
-Blok terakhir penting dan sering dihilangkan. Menyatakan apa yang tidak diperiksa mencegah laporan dibaca sebagai jaminan menyeluruh.
+Blok terakhir sering dihilangkan. Menyatakan apa yang tidak diperiksa (prinsip penyajian yang adil) mencegah laporan dibaca sebagai jaminan menyeluruh.
 
 ## 5. Lab praktik
 
 **Prasyarat:** dokumen fiktif dari Day sebelumnya, terutama hasil Day 06, Day 09, dan Day 11. Seluruh lab bersifat menulis dan melatih wawancara dengan rekan.
 
-1. Susun program audit internal satu siklus untuk PT AN memakai bentuk bagian 4.1, dan pastikan setiap baris punya alasan yang berbeda satu sama lain.
-2. Tulis pengaturan independensi untuk organisasi dengan delapan orang di tim TI, lalu minta rekan menilai apakah pengaturan itu akan diterima auditor eksternal.
+1. Susun program audit internal satu siklus untuk PT AN memakai bentuk bagian 4.1. Cocokkan dengan tabel 9.2.2 di bagian 3.1: apakah frekuensi, metode, tanggung jawab, perencanaan, dan pelaporan semuanya tertulis, dan apakah seluruh klausul 4-10 serta kontrol di SoA tercakup dalam siklus?
+2. Tulis pengaturan objektivitas untuk organisasi dengan delapan orang di tim TI, termasuk siapa yang mengaudit proses audit internal itu sendiri, lalu minta rekan menilai apakah pengaturan itu akan diterima auditor eksternal.
 3. Susun rencana audit satu area memakai bentuk bagian 4.2, lengkap dengan aturan sampel internal dan alasannya.
 4. Buat daftar periksa berlapis tiga bagian 4.3 untuk area yang sama, minimal delapan baris, dan pastikan kolom ketiga benar-benar menguji efektivitas, bukan pelaksanaan.
-5. Latih wawancara dengan rekan yang berperan sebagai pemilik area. Pakai pola pertanyaan bagian 3.4, dan catat hasilnya dalam bentuk bagian 4.4.
+5. Latih wawancara dengan rekan yang berperan sebagai pemilik area. Pakai pola pertanyaan bagian 3.6, dan catat hasilnya dalam bentuk bagian 4.4.
 6. Tinjau catatan wawancaramu: tandai mana yang bukti dan mana yang pernyataan lisan tanpa bukti. Hitung perbandingannya.
-7. Ambil sampel dari populasi fiktif memakai ketiga cara di bagian 3.5, lalu tulis bagaimana kesimpulan yang bisa kamu tarik berbeda untuk masing-masing.
+7. Ambil sampel dari populasi fiktif memakai ketiga cara di bagian 3.7, lalu tulis bagaimana kesimpulan yang bisa kamu tarik berbeda untuk masing-masing.
 8. Tulis tiga temuan memakai bentuk bagian 4.5, lalu periksa apakah ada rekomendasi yang tercampur ke dalamnya dan buang bila ada.
 9. Susun laporan ringkas bagian 4.6, termasuk blok tidak diperiksa.
 10. Minta rekan membaca laporanmu dan menandai kalimat yang bisa dibantah karena buktinya tidak cukup. Perbaiki kalimat itu.
 
 **Hasil yang sebaiknya tersimpan:**
-- Program audit satu siklus dengan alasan per baris.
-- Pengaturan independensi beserta penilaian rekan.
-- Rencana audit satu area dengan aturan sampel.
-- Daftar periksa berlapis tiga, minimal delapan baris.
-- Catatan wawancara dengan pemisahan jawaban dan catatan auditor.
-- Perbandingan jumlah bukti dan pernyataan lisan tanpa bukti.
-- Perbandingan kesimpulan dari tiga cara sampling.
-- Tiga temuan dengan tiga bagian terpisah.
-- Laporan ringkas dengan blok tidak diperiksa.
+- Program audit satu siklus dengan alasan per baris dan cek kelengkapan unsur 9.2.2.
+- Pengaturan objektivitas beserta penilaian rekan.
+- Rencana audit, daftar periksa tiga lapis, dan catatan wawancara untuk satu area.
+- Rasio bukti terhadap pernyataan lisan, dan perbandingan kesimpulan dari tiga cara sampling.
+- Tiga temuan tanpa rekomendasi dan laporan ringkas dengan blok tidak diperiksa.
 - Daftar kalimat yang diperbaiki setelah ditinjau rekan.
 
 ## 6. Troubleshooting
 
 | Gejala | Kemungkinan penyebab | Cara memeriksa |
 |---|---|---|
-| Audit berubah jadi sesi perbaikan teknis | Auditor memperbaiki selama audit | Catat, jangan perbaiki; perbaikan masuk jalur tindakan korektif |
-| Semua jawaban ya tetapi tidak ada bukti | Pertanyaan berbentuk ya atau tidak | Pakai pola bagian 3.4; minta tunjukkan, bukan jelaskan |
+| Semua jawaban ya tetapi tidak ada bukti | Pertanyaan berbentuk ya atau tidak | Pakai pola bagian 3.6; minta tunjukkan, bukan jelaskan |
 | Temuan dibantah dengan alasan sampel buruk | Metode sampling tidak tercatat | Tulis populasi, jumlah, cara, dan alasan di kertas kerja |
-| Auditor eksternal mempertanyakan program audit | Tidak ada dasar pemilihan frekuensi | Tambahkan kolom alasan (bagian 4.1) |
-| Independensi dipertanyakan | Auditor mengaudit areanya sendiri | Pakai salah satu pengaturan di bagian 3.2 dan tuliskan |
-| Laporan dianggap jaminan menyeluruh | Tidak ada blok tidak diperiksa | Tambahkan blok itu di setiap laporan |
-| Temuan sulit ditindaklanjuti | Pernyataan, bukti, dan kriteria tercampur | Pisahkan menjadi tiga bagian (bagian 4.5) |
-| Audit internal selalu bersih tanpa temuan | Lapis efektivitas tidak diuji | Tambahkan kolom ketiga di daftar periksa |
+| Objektivitas dipertanyakan | Auditor mengaudit areanya sendiri | Pakai salah satu pengaturan di bagian 3.4 dan tuliskan |
+| CB menawarkan audit internal sekaligus sertifikasi | Tidak paham batas imparsialitas | Tolak; pakai auditor internal atau konsultan yang bukan bagian CB (bagian 3.4) |
 | Dokumen tertinggal dari praktik tidak terdeteksi | Hanya memeriksa dokumen, bukan keadaan nyata | Bandingkan daftar di dokumen dengan keadaan sistem |
 
 ## 7. Kesalahan umum dan jebakan
 
-- Membagi klausul merata ke dalam setahun tanpa dasar risiko.
-- Tidak menuliskan alasan pemilihan di program audit.
-- Mengaudit area yang kamu kelola sendiri tanpa pengaturan independensi tertulis.
-- Bertanya dengan pertanyaan yang jawabannya ya atau tidak.
-- Menerima penjelasan lisan sebagai bukti.
-- Memperbaiki masalah selama audit berlangsung.
+- Membagi klausul merata ke dalam setahun tanpa dasar risiko atau alasan tertulis.
+- Mengaudit area yang kamu kelola sendiri, atau tidak pernah mengaudit proses audit internal itu sendiri.
+- Meminta badan sertifikasi yang sama menjalankan audit internal.
+- Menerima penjelasan lisan sebagai bukti, atau memperbaiki masalah selama audit berlangsung.
 - Mencampurkan rekomendasi ke dalam pernyataan temuan.
-- Tidak mencatat metode sampling, sehingga temuan mudah dibantah.
-- Hanya menguji keberadaan aturan dan pelaksanaannya, tanpa menguji efektivitasnya.
-- Menulis laporan tanpa menyatakan apa yang tidak diperiksa.
+- Hanya menguji keberadaan aturan dan pelaksanaannya, tanpa menguji efektivitasnya. Audit internal yang tidak pernah menemukan apa pun biasanya tanda lapis ini terlewat, dan auditor eksternal mengenali pola itu.
+- Laporan tidak sampai ke manajemen yang bisa bertindak, sehingga tuntutan pelaporan 9.2.2 tidak terpenuhi.
 
 ## 8. Catatan terkini
 
-- Panduan untuk mengaudit sistem manajemen terbit dalam edisi baru sebagai ISO 19011:2026, dan edisi 2018 berstatus ditarik [S1]. Materi pelatihan dan templat internal yang masih merujuk edisi lama perlu ditinjau, termasuk milik penyedia pelatihan.
-- Panduan khusus audit ISMS, ISO/IEC 27007:2020, berstatus published tetapi berada pada tahap yang menandakan sedang ditinjau [S2]. Perkirakan akan ada edisi baru, dan jangan membangun templat yang terlalu terikat pada rincian edisi sekarang.
-- Praktik di Day ini bukan parafrase 19011 atau 27007. Bila organisasimu memerlukan kesesuaian formal dengan panduannya, sesuaikan templat setelah mencocokkan dengan teks standar.
-- Tidak ada angka sampel baku yang berlaku umum untuk audit internal. Yang beredar adalah praktik badan sertifikasi dan aturan internal organisasi. Tetapkan aturanmu sendiri secara tertulis dan konsisten.
-- Audit internal yang tidak pernah menemukan apa pun hampir selalu berarti lapis efektivitas tidak diuji. Auditor eksternal mengenali pola itu, dan audit internal yang terlalu bersih justru menimbulkan pertanyaan.
+- ISO 19011:2026 (edisi 4) terbit 27 Mei 2026 dan edisi 2018 berstatus withdrawn [S1]. Tidak ada masa transisi karena 19011 adalah panduan, tetapi templat dan materi pelatihan yang masih merujuk edisi 2018 sebaiknya ditinjau.
+- ISO/IEC 27007:2020 berada di stage 90.92 (diputuskan untuk direvisi) setelah systematic review 2025 [S2]. Penggantinya, ISO/IEC DIS 27007 (edisi 4), menutup pemungutan suara DIS pada 23 September 2026 (stage 40.60) [S5]. Pantau terbitnya; isinya kemungkinan menyesuaikan 19011:2026.
+- ISO/IEC 17021-1:2015, sumber larangan audit internal oleh CB, sedang dalam systematic review (Day 13 bagian 8).
 
 ## 9. Cheat sheet
 
 ```
-PROGRAM AUDIT (bukan sekadar jadwal)
+9.2.1  interval terencana; sesuai persyaratan SENDIRI + standar; diterapkan dan dipelihara efektif
+9.2.2  program: frekuensi | metode | tanggung jawab | perencanaan | pelaporan
+       pertimbangkan pentingnya proses + hasil audit sebelumnya
+       tiap audit: kriteria + lingkup | auditor objektif dan imparsial | lapor ke manajemen terkait
+       simpan bukti program dan hasil
+19011:2018 prinsip: integritas | penyajian adil | kecermatan profesional | kerahasiaan
+                    independensi | berbasis bukti | berbasis risiko
+
+PROGRAM AUDIT (lebih dari jadwal)
   dasar frekuensi: RISIKO area | hasil audit sebelumnya | perubahan besar | insiden | kewajiban eksternal
   TULIS ALASAN di sebelah tiap baris; tanpa itu, auditor eksternal akan mempertanyakannya
   membagi klausul merata tanpa alasan = memenuhi di atas kertas saja
 
 INDEPENDENSI (organisasi kecil)
   pertukaran antar fungsi | auditor luar yang BUKAN badan sertifikasimu | audit berpasangan
+  CB dilarang audit internal klien yang disertifikasinya (17021-1 5.2.6; jeda 2 tahun)
+  proses audit internal juga diaudit, oleh pihak lain
   TULISKAN pengaturannya di rencana audit; jawaban lisan tidak cukup
 
 KRITERIA 3 LAPIS  persyaratan standar | DOKUMEN INTERNAL SENDIRI | kewajiban eksternal
@@ -369,9 +400,13 @@ LAPORAN  selalu sertakan blok APA YANG TIDAK DIPERIKSA
 
 | ID | Judul | URL | Tipe | Terbit/diakses | Keandalan dan catatan |
 |---|---|---|---|---|---|
-| S1 | ISO 19011:2026 Guidelines for auditing management systems (katalog) | https://committee.iso.org/standard/88984.html | primer (katalog ISO) | dilihat 2026-10-09 | Tinggi untuk edisi dan status: edisi 2026 terbit pada stage 60.60, dan ISO 19011:2018 ditandai withdrawn |
-| S2 | ISO/IEC 27007:2020 Guidelines for information security management systems auditing (katalog) | https://committee.iso.org/standard/77802.html | primer (katalog ISO) | dilihat 2026-10-09 | Tinggi untuk edisi dan status: published dengan stage 90.92 yang menandakan sedang ditinjau |
-| S3 | ISO/IEC 27001:2022 (katalog) | https://www.iso.org/standard/27001 | primer (katalog ISO) | dirujuk 2026-10-09 | Tinggi untuk keberadaan dan judul klausul 9.2 |
-| S4 | ISO27001-note Day 06 (klausul 9 dan 10), Day 09 (manajemen risiko), Day 11 (logging dan waktu), Day 12 (pemasok), Day 13 (audit dan bukti) | (lokal) | rujukan internal | 2026-10-09 | Keterkaitan antar Day |
+| S1 | ISO committee: ISO 19011:2026 Guidelines for auditing management systems | https://committee.iso.org/standard/88984.html | primer (katalog ISO) | 2026-05-27; diakses 2026-10-10 | Tinggi untuk edisi dan status; edisi 2018 withdrawn |
+| S2 | ISO committee: ISO/IEC 27007:2020 Guidelines for ISMS auditing | https://committee.iso.org/standard/77802.html | primer (katalog ISO) | 2020-01-21; diakses 2026-10-10 | Tinggi. Stage 90.92 sejak 2025-06-10 |
+| S3 | ISO committee: ISO/IEC 27001:2022 | https://committee.iso.org/standard/82875.html | primer (katalog ISO) | Oktober 2022; diakses 2026-10-10 | Tinggi untuk edisi dan status |
+| S4 | Hicomply: ISO 27001 clause 9.2 internal audit (2022) | https://hicomply.com/hub/iso-27001-clause-9-2-internal-audit-2022 | sekunder (vendor) | 2026-07-15; diakses 2026-10-10 | Sedang. Ringkasan isi 9.2.1 dan 9.2.2, konsisten dengan Day 06 |
+| S5 | ISO committee: ISO/IEC DIS 27007 | https://committee.iso.org/standard/92416.html | primer (katalog ISO) | stage 40.60 pada 2026-09-23; diakses 2026-10-10 | Tinggi untuk status draf |
+| S6 | European Accreditation FAQ: Question CW2017 3 (ISO/IEC 17021-1:2015 klausul 5.2.6) | https://european-accreditation.org/?p=43180 | primer (konsensus badan akreditasi) | jawaban Maret 2018; diakses 2026-10-10 | Tinggi. Larangan audit internal oleh CB, jeda 2 tahun |
+| S7 | Open Exam Prep: ISO 19011 audit principles and framework | https://open-exam-prep.com/study-guides/iso-27001-lead-auditor/fundamental-audit-concepts-and-principles/iso-19011-audit-principles-and-framework | sekunder (materi studi) | diakses 2026-10-10 | Sedang. Tujuh prinsip ISO 19011:2018 |
+| S8 | TRECCERT: ISO 19011:2026 is here | https://treccert.com/iso-19011-2026-is-here-what-the-new-standard-means-for-management-system-auditing/ | sekunder (lembaga sertifikasi) | 2026-05-28; diakses 2026-10-10 | Rendah-sedang. Ringkasan perubahan; tidak merinci prinsip |
 
-**Catatan sumber:** dari sumber primer hanya diambil edisi dan status ISO 19011:2026 dan ISO/IEC 27007:2020; isi Day ini adalah praktik audit internal yang umum, bukan parafrase kedua standar itu. Kode tahapan ISO (60.60 berarti standar sudah terbit, 90.92 berarti standar terbit yang diputuskan untuk direvisi) bisa dicek di penjelasan tahapan pengembangan standar ISO. Seluruh nomor prosedur, tiket, temuan, dan aturan sampel di bagian 4 adalah fiktif dan bukan persyaratan standar.
+**Catatan sumber:** isi 9.2.1 dan 9.2.2 diparafrasekan dari ringkasan sekunder [S4] yang cocok dengan Day 06, bukan dari teks standar. Daftar tujuh prinsip berasal dari edisi 2018 [S7]; rumusan prinsip di edisi 2026 belum dicocokkan dengan teks standar. Larangan konsultasi oleh CB (17021-1 klausul 5.2) belum punya sumber terbuka terpisah. Praktik wawancara, daftar periksa tiga lapis, dan format kertas kerja adalah praktik audit umum yang disusun sendiri. Seluruh nomor prosedur, tiket, temuan, dan aturan sampel di bagian 4 adalah fiktif.

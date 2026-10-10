@@ -2,7 +2,7 @@
 day: 01
 title: 'Gambaran besar ISMS: PDCA, keluarga ISO/IEC 27000, sertifikasi vs kepatuhan'
 researched_on: 2026-10-10
-versions_checked: ISO/IEC 27001:2022 + Amd 1:2024 (masih edisi berlaku); ISO/IEC 27002:2022; ISO/IEC 27005:2022 (edisi ke-4); ISO/IEC 27035-1:2023; ISO/IEC 27000:2026 (edisi ke-6, 3 Jul 2026); SNI ISO/IEC 27001:2022 dan SNI ISO/IEC 27001:2022/Amd.1:2024 (BSN)
+versions_checked: 'ISO/IEC 27001:2022 edisi 3 + Amd 1:2024 (masih edisi berlaku per 2026-10-10); ISO/IEC 27002:2022 edisi 3; ISO/IEC 27005:2022 edisi 4; ISO/IEC 27035-1:2023 edisi 2; ISO/IEC 27000:2026 edisi 6 (3 Jul 2026); SNI ISO/IEC 27001:2022 dan SNI ISO/IEC 27001:2022/Amd.1:2024 (BSN)'
 ---
 
 # Day 01: Gambaran besar ISMS (PDCA, keluarga ISO/IEC 27000, sertifikasi vs kepatuhan)
@@ -43,12 +43,12 @@ Intinya: ISMS adalah sistem manajemen, bukan produk atau alat. Firewall dan SIEM
 
 ### 3.2 Keluarga ISO/IEC 27000: siapa melakukan apa
 
-| Standar | Peran | Bisa disertifikasi? | Status per 2026-10-07 |
+| Standar | Peran | Bisa disertifikasi? | Edisi berlaku (dicek 2026-10-10) |
 |---|---|---|---|
-| ISO/IEC 27000 | Gambaran umum dan kosakata keluarga ISMS | Tidak | Edisi ke-6 terbit 3 Jul 2026; standar lain diperkirakan diselaraskan bertahap; tidak memengaruhi validitas sertifikat [S2] |
-| ISO/IEC 27001 | Persyaratan ISMS (klausul 4-10 + Annex A berisi daftar kontrol) | Ya | 27001:2022 + Amd 1:2024 (perubahan terkait aksi iklim di klausul 4.1 dan 4.2) [S3][S4]; belum ada edisi baru [S2] |
+| ISO/IEC 27000 | Gambaran umum dan kosakata keluarga ISMS | Tidak | Edisi 6 terbit 3 Jul 2026, menggantikan edisi 2018 [S9]; tidak memengaruhi validitas sertifikat [S2] |
+| ISO/IEC 27001 | Persyaratan ISMS (klausul 4-10 + Annex A berisi daftar kontrol) | Ya | 27001:2022 (edisi 3, terbit Okt 2022) + Amd 1:2024 (terbit 23 Feb 2024, perubahan terkait aksi iklim di 4.1 dan 4.2) [S11][S3][S4] |
 | ISO/IEC 27002 | Panduan penerapan kontrol (penjelasan tiap kontrol di Annex A) | Tidak | 27002:2022; 93 kontrol dalam 4 tema [S5] |
-| ISO/IEC 27005 | Panduan manajemen risiko keamanan informasi | Tidak | 27005:2022 (edisi ke-4, Oktober 2022) |
+| ISO/IEC 27005 | Panduan manajemen risiko keamanan informasi | Tidak | 27005:2022 (edisi 4, terbit 25 Okt 2022) [S10] |
 | ISO/IEC 27035 (seri) | Panduan manajemen insiden keamanan informasi | Tidak | 27035-1:2023, edisi 2, terbit 13 Feb 2023 [S6] |
 
 **Aturan praktis:**
@@ -100,8 +100,8 @@ Pembagian 37/8/14/34 cocok dengan penomoran kontrolnya: 5.1-5.37 (Organizational
 ### 3.5 Sertifikasi vs kepatuhan
 
 - **Selaras/patuh (aligned/compliant):** organisasi menerapkan praktik sesuai 27001, tetapi tidak diaudit pihak ketiga terakreditasi. Ini klaim internal.
-- **Tersertifikasi:** lembaga sertifikasi (certification body, CB) yang terakreditasi mengaudit ISMS terhadap 27001 dan menerbitkan sertifikat untuk scope tertentu. ISO sendiri tidak menerbitkan sertifikat. Akreditasi CB dilakukan badan akreditasi nasional; di Indonesia badan itu adalah KAN (Komite Akreditasi Nasional). Badan akreditasi nasional saling mengakui secara internasional lewat kesepakatan IAF MLA, sehingga sertifikat dari CB terakreditasi KAN diakui di negara lain.
-- **Siklus umum:** audit tahap 1 (kesiapan dan dokumen), audit tahap 2 (efektivitas penerapan), lalu surveillance audit tahunan dalam siklus sertifikat tiga tahun, diakhiri recertification audit (aturan audit untuk CB ada di ISO/IEC 17021-1 dan ISO/IEC 27006-1).
+- **Tersertifikasi:** lembaga sertifikasi (certification body, CB) yang terakreditasi mengaudit ISMS terhadap 27001 dan menerbitkan sertifikat untuk scope tertentu. ISO sendiri tidak menerbitkan sertifikat. Akreditasi CB dilakukan badan akreditasi nasional; di Indonesia badan itu adalah KAN (Komite Akreditasi Nasional). Badan akreditasi nasional saling mengakui hasil akreditasinya lewat pengaturan multilateral yang selama ini dikenal sebagai IAF MLA, sehingga sertifikat dari CB terakreditasi di satu negara diakui di negara lain. IAF berhenti beroperasi pada 1 Januari 2026 dan fungsinya dilanjutkan Global Accreditation Cooperation Incorporated (Global ACI), yang menjalankan pengaturan multilateralnya sendiri [S12]. Dokumen lama tetap menyebut IAF MLA dan IAF MD; cakupan pengakuan KAN untuk sertifikasi ISMS saat ini perlu dicek di direktori KAN atau daftar penanda tangan Global ACI.
+- **Siklus umum:** audit tahap 1 (kesiapan dan dokumen), audit tahap 2 (efektivitas penerapan), lalu surveillance audit minimal sekali setahun selama siklus sertifikat tiga tahun, diakhiri recertification audit. Aturan audit untuk CB ada di ISO/IEC 17021-1 (semua sistem manajemen) dan ISO/IEC 27006-1:2024 (tambahan khusus ISMS). Detailnya di Day 13 dan 17.
 - Scope itu krusial. Sertifikat bisa hanya mencakup satu data center atau satu layanan. "Perusahaan X tersertifikasi ISO 27001" tidak otomatis berarti SOC atau semua sistemnya ada di dalam scope.
 
 Di CV, tulis "berkontribusi pada bukti kontrol logging/insiden untuk ISMS yang tersertifikasi ISO/IEC 27001", bukan "certified ISO 27001". Sertifikat dimiliki organisasi, bukan individu. Sertifikasi individu (lead implementer/auditor) adalah hal yang berbeda.
@@ -109,7 +109,7 @@ Di CV, tulis "berkontribusi pada bukti kontrol logging/insiden untuk ISMS yang t
 ### 3.6 Kenapa perusahaan melakukannya
 
 - **Tuntutan pasar/kontrak:** klien dan mitra (terutama layanan TI/cloud/keuangan) meminta bukti.
-- **Regulasi:** beberapa regulator sektor merujuk atau mendorong standar ini. Di Indonesia, BSN mengadopsi 27001:2022 sebagai SNI secara identik, menggantikan SNI 27001:2013. Masa transisinya selaras dengan batas transisi global sertifikat 27001:2013, yaitu 31 Oktober 2025. Nomor dan tanggal penetapan SNI 27001:2022 perlu dicek di katalog SNI BSN. Amd 1:2024 juga sudah diadopsi menjadi SNI [S4].
+- **Regulasi:** beberapa regulator sektor merujuk atau mendorong standar ini. Di Indonesia, BSN mengadopsi 27001:2022 secara identik sebagai SNI ISO/IEC 27001:2022, dan Amd 1:2024 diadopsi sebagai amandemen pertamanya (SNI ISO/IEC 27001:2022/Amd.1:2024, ditetapkan 2024) [S4]. Nomor keputusan penetapan SNI ISO/IEC 27001:2022 dan masa transisi dari SNI edisi 2013 perlu dicek di JDIH BSN (jdih.bsn.go.id). Untuk sertifikat terakreditasi, masa transisi global dari edisi 2013 sudah berakhir 31 Oktober 2025: sejak 30 April 2024 sertifikasi awal dan resertifikasi harus memakai edisi 2022, dan sertifikat edisi 2013 yang belum ditransisikan gugur setelah tanggal itu [S13].
 - **Tata kelola internal:** keputusan keamanan berbasis risiko yang terdokumentasi, bukan berbasis selera atau vendor.
 - Bahasa bersama dengan standar sistem manajemen lain (struktur seragam) [S1].
 
@@ -176,8 +176,8 @@ Latihan ISO berupa dokumen, bukan lab teknis.
 5. **Hubungkan ke lab:** di Splunk/Wazuh lab, identifikasi tiga artefak yang bisa menjadi bukti. Contohnya: dashboard jumlah sumber log aktif, laporan alert yang ditriage per bulan, dan status sinkronisasi NTP host. Tulis tiap artefak, kontrol/klausul yang mungkin didukung, dan pemilik (nomor kontrol dibahas lebih rinci di Day 11).
 6. Tulis dua baris CV yang jujur tentang keterlibatanmu dengan ISMS (atau rencana keterlibatan), tanpa mengklaim sertifikasi pribadi.
 
-**Hasil yang seharusnya:** satu dokumen 1-2 halaman di `ISO27001-note/latihan/day01-<nama-org-fiktif>.md`.
 **Hasil yang sebaiknya tersimpan:**
+- Satu dokumen 1-2 halaman di `latihan/day01-<nama-org-fiktif>.md`.
 - Scope menyebut yang masuk, yang tidak, dan antarmuka.
 - Setiap baris tabel menunjuk standar yang tepat (27001 vs 27002 vs 27005 vs 27035).
 - Tidak ada kalimat yang disalin dari teks standar.
@@ -193,7 +193,7 @@ Latihan ISO berupa dokumen, bukan lab teknis.
 | Scope terlalu luas/sempit | Tidak dikaitkan dengan layanan/klien | Mulai dari "apa yang dibeli klien dan apa yang diminta regulator" |
 | Jumlah kontrol berbeda di berbagai artikel | Artikel memakai edisi 2013 (114) atau salah hitung | Pastikan edisi 2022 (93; 37/8/14/34) [S5] |
 | Ragu apakah PDCA wajib | Materi lama (2005) | Sejak 2013 tidak eksplisit; continual improvement yang wajib [S1] |
-| Tidak tahu versi SNI yang berlaku | Masa transisi | Cek bsn.go.id; Amd.1:2024 sudah SNI [S4], cek nomor penetapan |
+| Tidak tahu versi SNI yang berlaku | Dokumen lama masih menyebut SNI edisi 2013 | Acuan saat ini SNI ISO/IEC 27001:2022 + Amd.1:2024 [S4]; nomor keputusan penetapan dicek di JDIH BSN |
 
 ## 7. Kesalahan umum dan jebakan
 
@@ -207,9 +207,11 @@ Latihan ISO berupa dokumen, bukan lab teknis.
 
 ## 8. Catatan terkini
 
-- ISO/IEC 27000:2026 (edisi ke-6) terbit 3 Jul 2026; adopsi Eropa (EN) 15 Jul 2026. Sertifikat 27001 yang ada tetap valid, dan 27001/27002 diperkirakan diselaraskan bertahap [S2]. Pantau kemungkinan revisi 27001 di masa depan, perlu dicek.
-- Amd 1:2024 (climate action changes) terbit Feb 2024 dan menambah pertimbangan isu iklim di konteks organisasi (4.1) dan pihak berkepentingan (4.2) [S3][S4].
-- **SNI:** SNI ISO/IEC 27001:2022/Amd.1:2024 diadopsi identik, disusun Komtek 35-04, konsensus 21 Jun 2024, jajak pendapat Jul-Agu 2024, dan ditetapkan BSN tahun 2024 [S4].
+- ISO/IEC 27000:2026 (edisi 6) terbit 3 Jul 2026 [S9]; adopsi Eropa (EN) menyusul 15 Jul 2026. Sertifikat 27001 yang ada tetap valid [S2]. Per 2026-10-10 katalog ISO masih mencantumkan 27001:2022 dengan satu amandemen sebagai edisi berlaku [S11]; cek katalog yang sama bila ada kabar revisi 27001.
+- Amd 1:2024 (Climate action changes) terbit 23 Feb 2024 dan menambah pertimbangan isu iklim di konteks organisasi (4.1) dan pihak berkepentingan (4.2) [S3][S4]. Rinciannya di Day 03.
+- SNI ISO/IEC 27001:2022/Amd.1:2024 diadopsi identik, disusun Komtek 35-04 (sekretariat di BSSN), konsensus 21 Jun 2024, jajak pendapat 18 Jul sampai 1 Agu 2024, dan ditetapkan BSN tahun 2024 [S4].
+- Masa transisi sertifikat dari 27001:2013 ke 2022 berakhir 31 Oktober 2025 [S13]. Sertifikat edisi 2013 yang masih ditunjukkan pemasok setelah tanggal itu sudah tidak berlaku.
+- Sejak 1 Januari 2026, IAF dan ILAC digantikan Global ACI [S12]. Situs iaf.nu kini berstatus arsip.
 - ISO/IEC 27035-1:2023 (edisi 2) adalah acuan manajemen insiden terbaru untuk Day 10 [S6].
 
 ## 9. Cheat sheet
@@ -231,13 +233,18 @@ SNI ISO/IEC 27001:2022 (+ Amd.1:2024) = adopsi identik oleh BSN
 
 | ID | Judul | URL | Tipe | Terbit/diakses | Keandalan dan catatan |
 |---|---|---|---|---|---|
-| S1 | IT Governance Ltd: Comparing ISO 27001:2005 to ISO 27001:2013 (whitepaper) | tautan asli tidak lagi tersedia | sekunder (konsultan) | Okt 2013 | Sedang-tinggi untuk fakta perubahan 2005 ke 2013 (PDCA tidak lagi eksplisit, struktur seragam, peran SoA). Fakta ini stabil dan sudah dinyatakan lengkap di bagian 3.3-3.4 |
-| S2 | DQS: ISO/IEC 27000:2026 released | https://www.dqsglobal.com/en/explore/blog/iso-iec-27000-2026-released | sekunder (lembaga sertifikasi) | 2026; diakses 2026-10-07 | Sedang-tinggi |
-| S3 | ISO: ISO/IEC 27001:2022/Amd 1:2024 (halaman katalog) | https://www.iso.org/standard/88435.html | primer | Feb 2024 | Tinggi untuk judul dan tanggal terbit |
-| S4 | BSN: RSNI3 ISO/IEC 27001:2022/Amd.1:2024 | https://bsn.go.id/uploads/attachment/rsni_iso_iec_27001-2022-amd1_1.pdf | primer | 2024; diakses 2026-10-07 | Tinggi (bagian prakata) |
+| S1 | IT Governance Ltd: Comparing ISO 27001:2005 to ISO 27001:2013 (whitepaper) | tautan asli tidak lagi tersedia | sekunder (konsultan) | Okt 2013 | Sedang-tinggi untuk fakta perubahan 2005 ke 2013 (PDCA tidak lagi eksplisit, struktur seragam, peran SoA) |
+| S2 | DQS: ISO/IEC 27000:2026 released | https://www.dqsglobal.com/en/explore/blog/iso-iec-27000-2026-released | sekunder (lembaga sertifikasi) | 2026; diakses 2026-10-10 | Sedang-tinggi. Tanggal adopsi EN dan dampak ke sertifikat |
+| S3 | ISO committee: ISO/IEC 27001:2022/Amd 1:2024 Climate action changes | https://committee.iso.org/standard/88435.html | primer (katalog ISO) | terbit 2024-02-23; diakses 2026-10-10 | Tinggi untuk judul dan tanggal terbit |
+| S4 | BSN: RSNI3 ISO/IEC 27001:2022/Amd.1:2024 | https://bsn.go.id/uploads/attachment/rsni_iso_iec_27001-2022-amd1_1.pdf | primer | 2024; diakses 2026-10-10 | Tinggi. Prakata (adopsi identik, amandemen pertama SNI ISO/IEC 27001:2022, tanggal konsensus dan jajak pendapat) dan susunan komite |
 | S5 | Pivot Point Security: The new ISO 27002:2022: what are themes | https://www.pivotpointsecurity.com/the-new-iso-270022022-what-are-themes-and-why-are-they-cool | sekunder (konsultan) | 2022-03-15, diperbarui 2025-02-12; diakses 2026-10-07 | Sedang. Angka 37/8/14/34, cocok dengan penomoran kontrol |
-| S6 | ISO: ISO/IEC 27035-1:2023 (halaman katalog) | https://www.iso.org/standard/78973.html | primer | 2023-02-13 | Sedang-tinggi untuk edisi dan tanggal terbit |
+| S6 | ISO committee: ISO/IEC 27035-1:2023 | https://committee.iso.org/standard/78973.html | primer (katalog ISO) | terbit 2023-02-13; diakses 2026-10-10 | Tinggi untuk edisi dan tanggal terbit |
 | S7 | BSI: The final stretch of the ISO/IEC 27001 version transition (materi webinar) | https://www.bsigroup.com/globalassets/localfiles/en-th/webinars/document/material/the-final-stretch-of-the-isoiec-27001-version-transition-3-aug-24.pdf | sekunder (lembaga sertifikasi) | Agu 2024 | Sedang. Harmonized Structure dan urutan klausul 10; pemetaan PDCA ke klausul adalah interpretasi |
 | S8 | Advisera: ISO 27001 control 8.15 Logging | https://advisera.com/iso27001/control-8-15-logging/ | sekunder (konsultan) | diakses 2026-10-07 | Sedang. Nomor dan judul 8.15 serta gambaran ekspektasi auditor |
+| S9 | ISO committee: ISO/IEC 27000:2026 | https://committee.iso.org/standard/84257.html | primer (katalog ISO) | terbit 2026-07-03; diakses 2026-10-10 | Tinggi untuk edisi 6 dan tanggal terbit |
+| S10 | ISO committee: ISO/IEC 27005:2022 | https://committee.iso.org/standard/80585.html | primer (katalog ISO) | terbit 2022-10-25; diakses 2026-10-10 | Tinggi untuk edisi 4 dan tanggal terbit |
+| S11 | ISO committee: ISO/IEC 27001:2022 | https://committee.iso.org/standard/82875.html | primer (katalog ISO) | terbit 2022-10-25; diakses 2026-10-10 | Tinggi untuk edisi 3, status published, dan satu amandemen (Amd 1:2024) |
+| S12 | IAF (situs arsip): pemberitahuan penghentian operasi IAF dan pembentukan Global ACI | https://iaf.nu/en/home/ | primer (IAF) | diakses 2026-10-10 | Tinggi untuk tanggal 1 Januari 2026; tidak merinci nasib pengakuan IAF MLA yang lama |
+| S13 | NSAI: ISO/IEC 27001:2022 transition policy | https://www.nsai.ie/certification/management-systems/iso-iec-27001-information-security-management-system/iso-iec-270012022-transition-policy/ | sekunder (lembaga sertifikasi) | diakses 2026-10-10 | Sedang-tinggi. Batas 30 April 2024 dan 31 Oktober 2025 menurut IAF MD 26 |
 
-**Catatan sumber:** status edisi 27001, 27005, dan 27035 di tabel bagian 3.2 bersandar pada halaman katalog ISO dan sumber sekunder; cocokkan dengan katalog ISO atau BSN bila butuh kepastian untuk dokumen resmi. Poin tentang KAN, IAF MLA, ISO/IEC 17021-1, dan ISO/IEC 27006-1 di bagian 3.5 adalah pengetahuan umum yang stabil dan dibahas lebih rinci di Day 13 dan 17. Pemetaan PDCA ke klausul 4-10 adalah interpretasi materi pelatihan, bukan teks persyaratan.
+**Catatan sumber:** pemetaan PDCA ke klausul 4-10 adalah interpretasi materi pelatihan, bukan teks persyaratan. Batas transisi 2013 ke 2022 diambil dari kebijakan transisi satu lembaga sertifikasi yang merujuk IAF MD 26, bukan dari dokumen IAF MD 26 itu sendiri. Nomor keputusan penetapan SNI ISO/IEC 27001:2022 belum ditemukan di sumber yang dipakai, sehingga ditulis sebagai hal yang perlu dicek di JDIH BSN.
