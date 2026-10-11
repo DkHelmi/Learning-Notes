@@ -7,32 +7,55 @@ versions_checked: 'ISO/IEC 27001:2022 + Amd 1:2024; ISO 19011:2026 (edisi 4, 27 
 
 # Day 06: Klausul 9-10, evaluasi kinerja dan perbaikan
 
-Cakupan: klausul 9.1-9.3 dan 10.1-10.2 ISO/IEC 27001:2022, sedangkan audit sertifikasi eksternal, sampling, dan grading temuan dibahas di Day 13.
+Cakupan: klausul 9.1-9.3 dan 10.1-10.2 ISO/IEC 27001:2022 sebagai siklus yang membuat ISMS belajar (ukur, uji, putuskan, perbaiki), termasuk beda insiden dan nonconformity. Audit sertifikasi eksternal, sampling, dan grading temuan dibahas di Day 13.
 
-> Catatan pribadi, bukan materi resmi ISO, dan bukan nasihat hukum atau audit. Catatan ini hanya menyebut nomor dan judul singkat klausul, lalu menjelaskannya dengan kata-kata sendiri.
+## Ide inti
 
-## 1. Tujuan belajar
+Klausul 9 menjawab "apakah ISMS bekerja, dan bagaimana kita tahu?". Klausul 10 menjawab "apa yang kita lakukan saat tidak bekerja?". Keduanya membentuk satu siklus: metrik memberi data, internal audit menguji apakah praktik sesuai persyaratan, management review mengambil keputusan, dan nonconformity diperbaiki sampai ke akar masalahnya. Tanpa siklus ini, ISMS hanya tumpukan dokumen; dengan siklus ini, ISMS menjadi sistem yang belajar.
 
-Setelah menyelesaikan Day ini, kamu bisa:
+Kamu sudah menjalankan siklus yang sama di SOC. Metrik bulanan menunjukkan apakah detection berjalan dan berhasil, QA tiket oleh tim lain menguji apakah analyst mengikuti SOP, rapat review bulanan dengan pimpinan memutuskan headcount dan prioritas, dan post-incident review mencari root cause supaya kejadian yang sama tidak terulang. Yang ditambahkan ISO adalah aturan mainnya: siapa mengukur dan siapa mengevaluasi, auditor tidak boleh mengaudit pekerjaannya sendiri, input rapat ditetapkan, dan perbaikan baru dianggap selesai bila efektivitasnya terbukti.
 
-- merancang metrik 9.1 yang menyebut apa yang diukur, metode, waktu, pelaksana, dan siapa yang mengevaluasi.
-- menjelaskan tujuan internal audit, isi program audit, dan syarat objektivitas auditor internal.
-- menyusun agenda management review yang mencakup semua input 9.3.2 dan menghasilkan keputusan yang bisa ditindaklanjuti.
-- membedakan correction dari corrective action, dan menjalankan analisis akar masalah untuk satu nonconformity.
-- menjelaskan kapan insiden keamanan merupakan nonconformity dan kapan bukan.
+```
+9.1 metrik (data)
+  -> 9.2 internal audit (apakah sesuai dan efektif?)
+  -> 9.3 management review (keputusan: anggaran, sasaran, risiko, tindakan)
+  -> 10.2 nonconformity: correction + corrective action + cek efektivitas
+  -> 10.1 continual improvement (tidak harus menunggu nonconformity)
+  -> kembali ke 6.1 dan 8.2 (risiko dinilai ulang)
+```
 
-## 2. Konteks singkat
+Situasi yang dipakai sepanjang Day ini: tiga minggu sebelum management review 20 November 2026, Direktur Operasional PT Awan Nusantara (PT AN, penyedia hosting fiktif) mengirim pesan ke ISMS Manager dan Lead SOC:
 
-Klausul 9 menjawab pertanyaan "apakah ISMS bekerja, dan bagaimana kita tahu?" Klausul 10 menjawab "apa yang kita lakukan saat tidak bekerja?" Keduanya mengubah ISMS dari tumpukan dokumen menjadi sistem yang belajar.
+> "Untuk rapat nanti saya minta tiga hal. Pertama, bukti bahwa ISMS kita bekerja, bukan dashboard yang penuh angka. Kedua, hasil audit internal yang jujur. Ketiga, jaminan bahwa kasus akun default di VM pelanggan bulan Juli-Agustus lalu tidak akan terulang. Satu lagi: tim Platform bilang setiap insiden harus dicatat sebagai nonconformity. Benar begitu?"
+
+Permintaan pertama adalah 9.1, kedua 9.2, ketiga 10.2, dan pertanyaan terakhir menyangkut beda insiden dan nonconformity. Rapatnya sendiri adalah 9.3.
 
 SOC punya posisi istimewa di sini. Banyak data yang dibutuhkan 9.1 sudah ada di SIEM dan sistem tiket: cakupan log, waktu deteksi, waktu respons, dan tren insiden. Banyak nonconformity juga ditemukan SOC lebih dulu, misalnya kontrol yang ternyata tidak berjalan saat insiden. Analyst yang paham klausul 9-10 bisa mengubah temuan teknis menjadi bahan keputusan manajemen.
 
-Kapan dipakai: laporan bulanan, persiapan audit, setelah insiden besar, dan rapat management review.
-Kapan tidak cukup: klausul 9-10 tidak menentukan nilai target. Target datang dari sasaran 6.2 dan kriteria risiko 6.1.2.
+**Kapan relevan:** laporan bulanan, persiapan audit, setelah insiden besar, dan rapat management review.
+**Kapan bukan jawaban:** klausul 9-10 tidak menentukan nilai target. Target datang dari sasaran 6.2 dan kriteria risiko 6.1.2.
 
-## 3. Konsep inti
+## 1. Konsep inti
 
-### 3.1 Klausul 9.1: monitoring, pengukuran, analisis, dan evaluasi
+### 1.0 Istilah di Day ini
+
+Tabel ini memuat istilah yang muncul di Day ini. Kolom padanan memakai analogi SOC yang sama di semua Day. Internal audit, management review, nonconformity, corrective action, dan continual improvement sudah diperkenalkan di Day 01-02; Day ini merinci isinya.
+
+| Istilah | Arti singkat | Padanan di SOC |
+|---|---|---|
+| Monitoring dan pengukuran | Mengamati status dan menentukan nilai sesuatu secara terencana | Metrik SOC bulanan |
+| Analisis dan evaluasi | Mengolah hasil ukur lalu menilai apakah sudah cukup | Review metrik oleh Lead SOC |
+| Metrik pelaksanaan vs metrik hasil | Apakah kontrol berjalan vs apakah risiko benar-benar turun (interpretasi praktis) | Log masuk, alert ditriage dalam SLA vs waktu containment, insiden berulang |
+| Program audit | Rencana audit internal untuk satu periode: frekuensi, metode, tanggung jawab, pelaporan | Jadwal QA tiket bergilir berbasis risiko |
+| Objektivitas dan imparsialitas | Auditor tidak mengaudit pekerjaannya sendiri dan tidak punya kepentingan atas hasilnya | QA dilakukan tim lain, bukan shift yang diperiksa |
+| Correction | Memperbaiki gejala yang terdeteksi | Menutup tiket, memblokir IOC |
+| Corrective action | Menghilangkan akar masalah supaya tidak terulang | Perbaikan root cause dari post-incident review |
+| Analisis akar masalah | Metode mencari penyebab yang bisa dikendalikan, misalnya 5 whys atau fishbone | Post-incident review |
+| Efektivitas corrective action | Bukti bahwa tindakan benar-benar mencegah pengulangan | Rule yang sudah di-tuning diuji ulang dan tidak miss lagi |
+
+### 1.1 Klausul 9.1: monitoring, pengukuran, analisis, dan evaluasi
+
+Permintaan pertama Direktur Operasional menolak "dashboard yang penuh angka". Itu sejalan dengan 9.1: yang diminta bukan banyaknya data, tetapi pengukuran yang terencana dan dievaluasi.
 
 Organisasi menentukan [S1]:
 
@@ -45,9 +68,9 @@ Organisasi menentukan [S1]:
 
 Informasi terdokumentasi wajib tersedia sebagai bukti hasilnya, dan organisasi mengevaluasi kinerja keamanan serta efektivitas ISMS secara keseluruhan.
 
-Di edisi 2022, kalimat bahwa metode sebaiknya menghasilkan hasil yang bisa dibandingkan dan bisa diulang agar dianggap valid masuk ke badan butir b (di edisi 2013 masih berupa catatan). Prinsipnya sama dengan 6.1.2 b: metrik yang definisinya berubah tiap bulan tidak bisa menunjukkan tren.
+Butir b meminta metode yang menghasilkan hasil yang bisa dibandingkan dan bisa diulang agar dianggap valid. Prinsipnya sama dengan 6.1.2 b: metrik yang definisinya berubah tiap bulan tidak bisa menunjukkan tren.
 
-Ada dua jenis metrik yang sebaiknya dibedakan (pembagian ini interpretasi, bukan istilah standar):
+Ada dua jenis metrik yang sebaiknya dibedakan. Pembagian ini interpretasi, bukan istilah standar, tetapi membantu mengecek apakah katalog metrik hanya mengukur aktivitas.
 
 | Jenis | Pertanyaan | Contoh SOC |
 |---|---|---|
@@ -56,9 +79,11 @@ Ada dua jenis metrik yang sebaiknya dibedakan (pembagian ini interpretasi, bukan
 
 Konsultan URM (Agustus 2026) mengingatkan agar organisasi tidak mengumpulkan data hanya karena tersedia. Laporan sederhana yang menghubungkan kinerja, risiko, dan tindakan lebih berguna daripada dashboard rinci yang tidak dipakai siapa pun [S1]. URM juga menyarankan bukti disimpan minimal 12 bulan agar tren terlihat [S1]. Angka itu saran praktisi, bukan persyaratan standar.
 
-Untuk merancang program pengukuran, NIST merilis SP 800-55 dalam dua volume pada 4 Desember 2024. Volume 1 membahas cara memilih dan memprioritaskan ukuran, sedangkan Volume 2 membahas cara membangun program pengukuran [S2]. Dokumen NIST bukan bagian dari keluarga ISO, tetapi bisa dipakai sebagai panduan metode untuk 9.1.
+Untuk merancang program pengukuran, NIST SP 800-55 terbit dalam dua volume. Volume 1 membahas cara memilih dan memprioritaskan ukuran, sedangkan Volume 2 membahas cara membangun program pengukuran [S2]. Dokumen NIST bukan bagian dari keluarga ISO, tetapi bisa dipakai sebagai panduan metode untuk 9.1.
 
-### 3.2 Klausul 9.2: internal audit
+### 1.2 Klausul 9.2: internal audit
+
+Permintaan kedua, "hasil audit internal yang jujur", bergantung pada siapa yang mengaudit dan bagaimana programnya disusun. Padanannya QA tiket: berguna hanya bila dilakukan orang di luar shift yang diperiksa dan mengikuti jadwal yang jelas.
 
 9.2.1 meminta internal audit pada interval terencana untuk memberi informasi apakah ISMS (a) sesuai dengan persyaratan organisasi sendiri dan persyaratan standar, serta (b) diterapkan dan dipelihara secara efektif.
 
@@ -71,15 +96,17 @@ Hal praktis yang perlu diingat:
 - **Program bergulir boleh dipakai.** Sebelum sertifikasi awal, seluruh ISMS diaudit. Setelahnya, cakupan penuh boleh disebar dalam siklus sertifikat tiga tahun [S7].
 - **Prioritas berbasis risiko.** URM melaporkan temuan audit 2026 berupa program audit yang tidak memakai hasil risk assessment untuk menentukan frekuensi, dan tidak bisa menunjukkan cakupan seluruh klausul dan kontrol [S6].
 
-Panduan umum cara mengaudit sistem manajemen ada di ISO 19011; edisi keempatnya, ISO 19011:2026, terbit 27 Mei 2026 dan menggantikan edisi 2018 [S3]. Untuk ISMS ada panduan khusus ISO/IEC 27007, yang menambahkan konteks keamanan informasi di atas 19011. Edisi berlakunya 27007:2020; revisinya (edisi 4) sedang berjalan (status di bagian 8) [S9].
+Panduan umum cara mengaudit sistem manajemen ada di ISO 19011 [S3]. Untuk ISMS ada panduan khusus ISO/IEC 27007, yang menambahkan konteks keamanan informasi di atas 19011 [S9]. Keduanya panduan, bukan persyaratan; status edisinya ada di bagian 6.
 
-### 3.3 Klausul 9.3: management review
+### 1.3 Klausul 9.3: management review
+
+Rapat 20 November itu sendiri adalah 9.3. Padanannya rapat review operasi SOC bulanan bersama pimpinan, tetapi bahan rapatnya ditetapkan standar dan hasilnya wajib terdokumentasi.
 
 9.3.1: top management meninjau ISMS pada interval terencana untuk memastikan ISMS tetap sesuai, memadai, dan efektif. Input yang harus dipertimbangkan (9.3.2) [S4]:
 
 - a. status tindakan dari review sebelumnya;
 - b. perubahan isu eksternal dan internal yang relevan dengan ISMS;
-- c. perubahan kebutuhan dan harapan pihak berkepentingan yang relevan dengan ISMS (baru di 2022);
+- c. perubahan kebutuhan dan harapan pihak berkepentingan yang relevan dengan ISMS;
 - d. umpan balik kinerja keamanan, termasuk tren (1) nonconformity dan corrective action, (2) hasil monitoring dan pengukuran, (3) hasil audit, dan (4) pencapaian sasaran keamanan;
 - e. umpan balik dari pihak berkepentingan;
 - f. hasil risk assessment dan status risk treatment plan;
@@ -89,11 +116,15 @@ Hasilnya (9.3.3) mencakup keputusan tentang peluang perbaikan berkelanjutan dan 
 
 Notulen yang hanya berisi "semua berjalan baik" adalah tanda bahaya. Auditor mencari keputusan: anggaran disetujui, sasaran diubah, risiko diterima, atau tindakan ditugaskan beserta pemilik dan tenggatnya. URM melaporkan input c sering terlewat [S6].
 
-### 3.4 Klausul 10.1: continual improvement
+### 1.4 Klausul 10.1: continual improvement
 
-Organisasi terus meningkatkan kesesuaian, kecukupan, dan efektivitas ISMS. Edisi 2022 menaruh 10.1 lebih dulu dan nonconformity di 10.2 (kebalikan edisi 2013) [S8], yang menegaskan bahwa peningkatan tidak harus menunggu nonconformity. Sumbernya bisa hasil metrik, ide tim, pelajaran insiden, atau hasil hunting yang menunjukkan celah deteksi.
+Tidak semua perbaikan berawal dari kesalahan. Ide tim SOC untuk mengotomasi pengumpulan bukti lewat SOAR juga perbaikan, walaupun tidak ada yang dilanggar.
 
-### 3.5 Klausul 10.2: nonconformity dan corrective action
+Organisasi terus meningkatkan kesesuaian, kecukupan, dan efektivitas ISMS. Edisi 2022 menaruh 10.1 sebelum nonconformity (10.2), yang menegaskan bahwa peningkatan tidak harus menunggu nonconformity [S8]. Sumbernya bisa hasil metrik, ide tim, pelajaran insiden, atau hasil hunting yang menunjukkan celah deteksi.
+
+### 1.5 Klausul 10.2: nonconformity dan corrective action
+
+Permintaan ketiga, "jaminan bahwa kasus akun default tidak akan terulang", tidak bisa dijawab dengan "akun-akun itu sudah dinonaktifkan". Itu baru correction. Jaminannya datang dari corrective action yang terbukti efektif.
 
 Nonconformity adalah tidak terpenuhinya sebuah persyaratan, baik dari standar, kebijakan organisasi, prosedur, kontrak, maupun regulasi. Saat nonconformity terjadi, organisasi harus [S5]:
 
@@ -109,17 +140,25 @@ Corrective action harus sepadan dengan dampak nonconformity-nya; kesalahan kecil
 - **Correction** memperbaiki gejala yang terdeteksi, misalnya menonaktifkan akun default yang ditemukan di satu VM.
 - **Corrective action** menghilangkan akar masalah supaya tidak terulang, misalnya mengubah image VM dan checklist provisioning [S5].
 
-Laporan yang hanya berisi correction akan ditanya auditor: "kenapa ini tidak akan terjadi lagi?"
+Laporan yang hanya berisi correction akan ditanya auditor: "kenapa ini tidak akan terjadi lagi?" Di SOC, ini beda antara memblokir IOC dan menutup tiket dengan memperbaiki celah yang membuat serangan berhasil.
 
-**Insiden tidak otomatis nonconformity.** Serangan yang berhasil walaupun semua kontrol berjalan sesuai rencana adalah insiden, dan pelajarannya masuk ke risk assessment (8.2) dan improvement (10.1). Insiden menjadi nonconformity bila ada persyaratan yang tidak dipenuhi, misalnya langkah provisioning dilewati, log tidak dikirim padahal kebijakan mewajibkan, atau tenggat pelaporan ke klien terlewat. Sumber nonconformity lainnya: hasil audit, management review, dan temuan monitoring [S5].
+**Analisis akar masalah.** Metode tidak diwajibkan. Yang umum dipakai adalah 5 whys dan diagram fishbone. Untuk SOC, 5 whys biasanya cukup, asalkan berhenti pada penyebab yang bisa dikendalikan organisasi, bukan pada "human error".
 
-Metode analisis akar masalah tidak diwajibkan. Yang umum dipakai adalah 5 whys dan diagram fishbone. Untuk SOC, 5 whys biasanya cukup, asalkan berhenti pada penyebab yang bisa dikendalikan organisasi, bukan pada "human error".
+### 1.6 Insiden tidak otomatis nonconformity
 
-## 4. Contoh dokumen / artefak (organisasi fiktif)
+Pertanyaan terakhir Direktur Operasional ("setiap insiden harus dicatat sebagai nonconformity?") menyamakan dua hal yang berbeda. Di SOC, bedanya seperti true positive yang ditangani sesuai SOP dan SOP yang tidak dijalankan.
 
-Organisasi fiktif: PT Awan Nusantara (PT AN). Semua angka dan nama adalah ilustrasi.
+Serangan yang berhasil walaupun semua kontrol berjalan sesuai rencana adalah insiden, dan pelajarannya masuk ke risk assessment (8.2) dan improvement (10.1). Insiden menjadi nonconformity bila ada persyaratan yang tidak dipenuhi, misalnya langkah provisioning dilewati, log tidak dikirim padahal kebijakan mewajibkan, atau tenggat pelaporan ke klien terlewat. Sumber nonconformity lainnya: hasil audit, management review, dan temuan monitoring [S5].
 
-### 4.1 Katalog metrik 9.1
+Pertanyaan pengujinya selalu sama: "persyaratan mana yang tidak dipenuhi?". Kasus akun default PT AN adalah nonconformity karena prosedur provisioning mewajibkan akun default dinonaktifkan dan langkah itu dilewati.
+
+## 2. Contoh dokumen / artefak (organisasi fiktif)
+
+Organisasi fiktif: PT Awan Nusantara (PT AN). Semua angka dan nama adalah ilustrasi. Keempat artefak ini adalah yang dibawa ISMS Manager dan Lead SOC ke rapat 20 November.
+
+### 2.1 Katalog metrik 9.1
+
+Jawaban untuk permintaan pertama: setiap metrik punya metode, waktu, pengukur, pengevaluasi, dan target.
 
 | ID | Metrik | Metode | Kapan diukur | Pengukur | Kapan dan siapa evaluasi | Target (dari 6.2) |
 |---|---|---|---|---|---|---|
@@ -131,7 +170,9 @@ Organisasi fiktif: PT Awan Nusantara (PT AN). Semua angka dan nama adalah ilustr
 
 M-01 sampai M-04 adalah metrik pelaksanaan, sedangkan M-05 adalah metrik hasil. Kolom "Kapan dan siapa evaluasi" sering dilupakan, padahal standar memisahkan siapa yang mengukur dari siapa yang mengevaluasi.
 
-### 4.2 Program audit internal 2026-2027 (cuplikan)
+### 2.2 Program audit internal 2026-2027 (cuplikan)
+
+Jawaban untuk permintaan kedua: program yang berbasis risiko, mencakup semua area, dan auditornya objektif.
 
 | Kuartal | Area yang diaudit | Alasan prioritas | Auditor | Tidak boleh mengaudit |
 |---|---|---|---|---|
@@ -142,7 +183,9 @@ M-01 sampai M-04 adalah metrik pelaksanaan, sedangkan M-05 adalah metrik hasil. 
 
 Program ini menunjukkan tiga hal yang dicari auditor eksternal: prioritas berbasis risiko dan hasil sebelumnya, cakupan penuh dalam satu siklus, dan objektivitas auditor.
 
-### 4.3 Agenda management review (9.3)
+### 2.3 Agenda management review (9.3)
+
+Agenda rapat 20 November. Setiap butir dipetakan ke input 9.3.2, dan bagian keputusan ada di bawah.
 
 ```
 Management Review ISMS PT AN, 2026-11-20
@@ -165,7 +208,9 @@ D-4 Pilot SOAR untuk pengumpulan bukti; Lead SOC, Q2 2027
 
 Setiap butir agenda dipetakan ke input 9.3.2, dan setiap keputusan punya pemilik dan tenggat. Butir 2 menyebut klien baru, yang memenuhi input c (perubahan kebutuhan pihak berkepentingan) yang sering terlewat.
 
-### 4.4 Catatan nonconformity dengan 5 whys (10.2)
+### 2.4 Catatan nonconformity dengan 5 whys (10.2)
+
+Jawaban untuk permintaan ketiga. Perhatikan pemisahan correction dan corrective action, serta baris efektivitas.
 
 ```
 ID           : CA-2026-014
@@ -195,17 +240,17 @@ Cara membaca:
 - Penutupan didasarkan pada bukti efektivitas, bukan pada "tindakan sudah dikerjakan".
 - Angka 14 dari 60 VM berarti sekitar 23% VM di periode itu terdampak, dan angka itu yang dilaporkan ke management review.
 
-## 5. Lab praktik
+## 3. Lab praktik
 
 Latihan untuk organisasi fiktifmu. Simpan di `latihan/day06-<nama-org-fiktif>.md`.
 
-1. Buat katalog 6 metrik dengan format bagian 4.1. Minimal 2 metrik pelaksanaan dan 2 metrik hasil. Setiap metrik terhubung ke sasaran 6.2 yang kamu tulis di Day 04.
+1. Buat katalog 6 metrik dengan format bagian 2.1. Minimal 2 metrik pelaksanaan dan 2 metrik hasil. Setiap metrik terhubung ke sasaran 6.2 yang kamu tulis di Day 04.
 2. Susun program audit internal 12 bulan yang mencakup seluruh klausul 4-10 dan kontrol yang kamu pilih di SoA Day 04. Untuk setiap audit tulis alasan prioritas, auditor, dan siapa yang tidak boleh mengaudit.
 3. Tulis rencana audit untuk satu audit proses SOC, berisi lingkup, kriteria, 6 pertanyaan audit, dan bukti yang akan diambil sampelnya. Contoh: "ambil 5 tiket insiden prioritas tinggi bulan lalu, cocokkan dengan langkah runbook".
-4. Tulis agenda dan notulen fiktif management review dengan format bagian 4.3. Pastikan ketujuh input 9.3.2 muncul dan minimal 3 keputusan punya pemilik dan tenggat.
+4. Tulis agenda dan notulen fiktif management review dengan format bagian 2.3. Pastikan ketujuh input 9.3.2 muncul dan minimal 3 keputusan punya pemilik dan tenggat.
 5. Tulis satu catatan NC lengkap dengan 5 whys, pemeriksaan "serupa di tempat lain", corrective action, dan bukti efektivitas.
 6. Tulis dua kejadian: satu insiden yang merupakan nonconformity dan satu insiden yang bukan. Jelaskan alasannya dengan menyebut persyaratan yang dilanggar atau tidak dilanggar.
-7. Hubungkan ke lab: rancang dashboard metrik bulanan di Splunk atau Wazuh lab untuk 3 metrik dari langkah 1. Tulis judul panel, sumber data, dan periode waktunya. Query cakupan log dari Day 04 bagian 5 bisa dipakai untuk M-01. Cukup rancangan; implementasi boleh dikerjakan di sesi lab terpisah.
+7. Hubungkan ke lab: rancang dashboard metrik bulanan di Splunk atau Wazuh lab untuk 3 metrik dari langkah 1. Tulis judul panel, sumber data, dan periode waktunya. Query cakupan log dari Day 04 bagian 3 bisa dipakai untuk M-01. Cukup rancangan; implementasi boleh dikerjakan di sesi lab terpisah.
 
 **Hasil yang sebaiknya tersimpan:**
 - Satu paket dokumen yang menutup siklus: metrik memberi data, audit menguji, review memutuskan, dan NC memperbaiki.
@@ -218,7 +263,7 @@ Latihan untuk organisasi fiktifmu. Simpan di `latihan/day06-<nama-org-fiktif>.md
 
 **Variasi tantangan:** auditor internal menemukan bahwa M-01 dihitung dengan daftar aset yang berbeda setiap bulan. Tulis temuan audit itu (kondisi, kriteria, bukti) dan jelaskan klausul mana yang tidak dipenuhi.
 
-## 6. Troubleshooting
+## 4. Troubleshooting
 
 | Gejala | Kemungkinan penyebab | Cara memeriksa/memperbaiki |
 |---|---|---|
@@ -228,7 +273,7 @@ Latihan untuk organisasi fiktifmu. Simpan di `latihan/day06-<nama-org-fiktif>.md
 | NC ditutup tetapi terulang | Hanya correction, akar masalah tidak dicari | Wajibkan 5 whys dan bukti efektivitas sebelum NC ditutup |
 | Setiap insiden dicatat sebagai NC | Tidak membedakan insiden dan nonconformity | Tanyakan "persyaratan mana yang tidak dipenuhi?"; bila tidak ada, catat sebagai insiden dan pelajaran |
 
-## 7. Kesalahan umum dan jebakan
+## 5. Kesalahan umum dan jebakan
 
 - Mengumpulkan metrik karena datanya tersedia, bukan karena berguna untuk keputusan [S1].
 - Program audit yang tidak berbasis risiko dan tidak menunjukkan cakupan penuh [S6].
@@ -237,14 +282,17 @@ Latihan untuk organisasi fiktifmu. Simpan di `latihan/day06-<nama-org-fiktif>.md
 - Menulis "human error" sebagai akar masalah. Pertanyaan berikutnya selalu "kenapa sistem membiarkan kesalahan itu terjadi?"
 - Menganggap ISO 19011 sebagai persyaratan. Itu panduan, dan organisasi tidak disertifikasi terhadapnya [S3].
 
-## 8. Catatan terkini
+## 6. Catatan terkini
+
+Bagian ini menampung edisi panduan audit dan pengukuran serta perubahan dari edisi 2013. Berguna saat memilih rujukan atau membaca prosedur lama.
 
 - ISO 19011:2026 (edisi 4) terbit 27 Mei 2026 dan menggantikan edisi 2018, yang kini berstatus withdrawn [S3]. Rincian perubahannya (audit jarak jauh, teknologi digital, pengelolaan program audit, kompetensi auditor) baru berasal dari ringkasan pihak ketiga; cocokkan dengan pendahuluan teks standar bila tersedia.
 - ISO/IEC DIS 27007 (edisi 4, pengganti 27007:2020) menutup pemungutan suara DIS pada 23 September 2026 [S9]. Selama belum terbit, 27007:2020 tetap edisi berlaku; pantau tanggal terbitnya di katalog ISO.
 - NIST SP 800-55 Vol. 1 dan Vol. 2 terbit 4 Desember 2024 dan menggantikan SP 800-55 Rev. 1 [S2].
-- Edisi 2022 memecah 9.2 menjadi 9.2.1 dan 9.2.2 serta 9.3 menjadi 9.3.1-9.3.3, dengan isi persyaratan yang hampir sama kecuali input 9.3.2 c yang baru [S8]. Amd 1:2024 tidak mengubah klausul 9 dan 10.
+- Di edisi 2022, kalimat bahwa metode sebaiknya menghasilkan hasil yang bisa dibandingkan dan bisa diulang masuk ke badan butir 9.1 b; di edisi 2013 masih berupa catatan.
+- Edisi 2022 memecah 9.2 menjadi 9.2.1 dan 9.2.2 serta 9.3 menjadi 9.3.1-9.3.3, dengan isi persyaratan yang hampir sama kecuali input 9.3.2 c yang baru [S8]. Urutan 10.1 dan 10.2 juga dibalik dari edisi 2013 [S8]. Amd 1:2024 tidak mengubah klausul 9 dan 10.
 
-## 9. Cheat sheet
+## 7. Cheat sheet
 
 ```
 9.1  a apa | b metode (valid = bisa dibandingkan + diulang, kini di badan teks) | c kapan ukur
@@ -261,11 +309,86 @@ Latihan untuk organisasi fiktifmu. Simpan di `latihan/day06-<nama-org-fiktif>.md
 10.2 a reaksi (kendalikan, perbaiki, tangani akibat) | b tinjau, cari penyebab, cek serupa
      | c tindakan | d tinjau efektivitas | e ubah ISMS bila perlu | f-g bukti; sepadan dengan dampak
 correction = gejala   corrective action = akar masalah
-insiden != NC kecuali ada persyaratan yang dilanggar
+insiden != NC kecuali ada persyaratan yang dilanggar ("persyaratan mana yang tidak dipenuhi?")
 ISO 19011:2026 ed.4 | ISO/IEC 27007:2020 (DIS ed.4 berjalan) | NIST SP 800-55 v1/v2 (Des 2024)
 ```
 
-## 10. Sumber
+## 8. Uji diri
+
+Coba jawab dulu tanpa membuka bagian di atas. Bila jawabanmu berbeda dengan kunci, baca ulang bagian yang disebut di kunci.
+
+**1. Pertanyaan jebakan.** SOC PT AN punya dashboard Splunk dengan 40 panel yang diperbarui otomatis. Apakah itu sudah memenuhi 9.1?
+
+<details><summary>Jawaban</summary>
+
+Belum tentu. 9.1 meminta organisasi menentukan apa yang diukur, metodenya, kapan diukur, siapa yang mengukur, kapan hasilnya dianalisis dan dievaluasi, dan siapa yang mengevaluasi, lalu menyimpan bukti hasilnya. Dashboard otomatis menjawab sebagian butir a-d, tetapi sering tidak menjawab e dan f: tidak ada yang ditugaskan mengevaluasi dan memutuskan tindak lanjut. Metrik juga sebaiknya menunjuk ke sasaran 6.2 atau risiko; panel yang tidak dipakai untuk keputusan tidak menambah nilai. Lihat bagian 1.1 dan 2.1.
+
+</details>
+
+**2. Skenario keputusan.** Lembaga sertifikasi yang akan mengaudit PT AN menawarkan paket hemat: mereka juga menjalankan audit internal PT AN, dengan auditor yang berbeda dari tim sertifikasi. Apa tanggapan yang tepat?
+
+- A. Terima, karena auditornya berbeda orang.
+- B. Tolak. Lembaga sertifikasi tidak boleh menjadi internal auditor klien yang disertifikasinya; pakai auditor internal dari tim lain atau konsultan yang tidak terkait.
+- C. Terima, asalkan hasil audit internal tidak dipakai di audit sertifikasi.
+
+<details><summary>Jawaban</summary>
+
+B. ISO/IEC 17021-1:2015 klausul 5.2.6 melarang lembaga sertifikasi menjadi internal auditor klien yang disertifikasinya, demi imparsialitas. Larangan itu berlaku untuk lembaganya, sehingga A dan C tetap keliru: mengganti orang atau memisahkan pemakaian hasil tidak menghilangkan konflik kepentingan. Pilihan yang sah adalah auditor internal yang tidak mengaudit pekerjaannya sendiri, misalnya dari tim GRC, atau konsultan eksternal yang bukan lembaga sertifikasinya. Lihat bagian 1.2 dan 2.2.
+
+</details>
+
+**3. Pertanyaan jebakan.** Notulen management review PT AN periode lalu berbunyi: "Semua berjalan baik. Tidak ada perubahan." Notulen ditandatangani direksi. Apakah 9.3 terpenuhi?
+
+<details><summary>Jawaban</summary>
+
+Sangat diragukan. 9.3.3 meminta hasil yang mencakup keputusan tentang peluang perbaikan dan kebutuhan perubahan ISMS, dan auditor mencari keputusan konkret: anggaran, perubahan sasaran, penerimaan risiko, atau tindakan dengan pemilik dan tenggat. Notulen itu juga tidak menunjukkan bahwa ketujuh input 9.3.2 dipertimbangkan, termasuk input c yang sering terlewat. Tanda tangan membuktikan rapat terjadi, bukan bahwa tinjauannya memadai. Lihat bagian 1.3 dan 2.3.
+
+</details>
+
+**4. Skenario keputusan.** Akun default ditemukan aktif di 14 VM pelanggan karena langkah provisioning dilewati. Apa yang paling tepat?
+
+- A. Nonaktifkan akun di 14 VM lalu tutup nonconformity.
+- B. Nonaktifkan akun di 14 VM, cari akar masalah, periksa apakah pola serupa ada di tempat lain, jalankan corrective action, dan tutup setelah efektivitasnya terbukti.
+- C. Catat akar masalah sebagai "human error engineer" dan beri teguran.
+
+<details><summary>Jawaban</summary>
+
+B. Menonaktifkan akun adalah correction; 10.2 juga meminta penyebab dicari, pola serupa diperiksa, tindakan dijalankan, dan efektivitasnya ditinjau. Di catatan CA-2026-014, pemeriksaan pola serupa menemukan satu template container lain, dan NC baru ditutup setelah audit sampel 20 VM baru menunjukkan nol akun default aktif. A keliru karena hanya correction, sehingga masalah bisa terulang. C keliru karena analisis akar masalah sebaiknya berhenti pada penyebab yang bisa dikendalikan organisasi; pertanyaan berikutnya selalu "kenapa sistem membiarkan kesalahan itu terjadi?". Lihat bagian 1.5 dan 2.4.
+
+</details>
+
+**5. Pertanyaan jebakan.** Seorang karyawan mengklik email phishing yang sangat meyakinkan. Filter email, EDR, dan prosedur SOC semuanya berjalan sesuai rencana, dan insiden ditangani dalam SLA. Tim Platform ingin mencatatnya sebagai nonconformity. Benarkah?
+
+<details><summary>Jawaban</summary>
+
+Tidak, bila memang tidak ada persyaratan yang dilanggar. Serangan yang berhasil walaupun semua kontrol berjalan sesuai rencana adalah insiden. Pelajarannya masuk ke risk assessment (8.2) dan continual improvement (10.1), misalnya menilai ulang risiko phishing atau memperbaiki materi awareness. Insiden baru menjadi nonconformity bila ada persyaratan yang tidak dipenuhi, misalnya tenggat pelaporan terlewat atau langkah prosedur dilewati. Lihat bagian 1.6.
+
+</details>
+
+**6. Jelaskan ulang.** Lead SOC mengusulkan metrik "jumlah alert per bulan" untuk laporan 9.1. Jelaskan dalam tiga kalimat kenapa metrik itu kurang berguna, lalu usulkan satu metrik pelaksanaan dan satu metrik hasil.
+
+<details><summary>Contoh jawaban dan kesalahan yang sering muncul</summary>
+
+Contoh: "Jumlah alert naik atau turun bisa karena tuning, perubahan sumber log, atau serangan, jadi angkanya tidak menunjukkan apakah kontrol berjalan atau risiko turun. Metrik yang lebih berguna adalah persentase alert prioritas tinggi yang ditriage dalam 15 menit, untuk melihat apakah proses triage berjalan. Untuk melihat hasilnya, pakai median waktu dari alert sampai containment insiden prioritas tinggi, atau jumlah insiden berulang dengan akar masalah yang sama."
+
+Kesalahan yang sering muncul:
+- Mengusulkan metrik baru tanpa menyebut siapa yang mengukur dan siapa yang mengevaluasi.
+- Menyebut dua metrik pelaksanaan dan menganggap salah satunya metrik hasil.
+- Lupa menghubungkan metrik ke sasaran 6.2 atau risiko.
+
+</details>
+
+**7. Interview question (English).** "Tell me how a security incident should lead to improvement, in ISO 27001 terms."
+
+<details><summary>Sample answer</summary>
+
+"First I ask whether a requirement was not met. If the incident happened because a procedure step was skipped, it's a nonconformity under 10.2. We make the correction, for example disabling the exposed accounts, then do a root cause analysis like 5 whys, check whether the same pattern exists elsewhere, implement the corrective action, and only close it once we have evidence that it works, such as a sample check showing zero recurrences. If every control worked as designed and the attack still succeeded, it's not a nonconformity; the lessons go into the risk assessment and continual improvement. Either way, the trend goes into the management review."
+
+What makes this answer strong: it separates incidents from nonconformities, distinguishes correction from corrective action, and closes on evidence of effectiveness rather than on completed tasks.
+
+</details>
+
+## 9. Sumber
 
 | ID | Judul | URL | Tipe | Terbit/diakses | Keandalan dan catatan |
 |---|---|---|---|---|---|
