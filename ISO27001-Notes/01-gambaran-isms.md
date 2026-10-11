@@ -43,7 +43,7 @@ Email singkat itu memuat hampir semua isi Day ini: apa yang dimaksud ISO 27001, 
 
 ### 1.0 Istilah di Day ini
 
-Tabel ini memuat semua istilah ISO yang muncul di Day ini. Kolom padanan memakai analogi SOC yang sama di semua Day; tabel lengkapnya ada di README bagian Analogi jangkar. Baca kolom kedua dulu, lalu kembali ke tabel ini saat menemukan istilah yang terlupa.
+Tabel ini memuat semua istilah ISO yang muncul di Day ini. Kolom padanan memakai analogi SOC yang sama di semua Day. Baca kolom kedua dulu, lalu kembali ke tabel ini saat menemukan istilah yang terlupa.
 
 | Istilah | Arti singkat | Padanan di SOC |
 |---|---|---|

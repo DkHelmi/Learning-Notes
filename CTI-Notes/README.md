@@ -1,31 +1,10 @@
-# CTI-note: Dasar Cyber Threat Intelligence
+# CTI
 
 > Personal study notes. Not affiliated with or endorsed by any vendor or standards body mentioned. Not legal or audit advice.
 >
 > License: [CC BY 4.0](LICENSE).
 
-## Tujuan
-
-Memahami CTI operasional/taktis/teknis untuk SOC/IR dan membuat produk intelijen sederhana yang menggerakkan deteksi dan hunting (brief 2 halaman, layer ATT&CK Navigator, hipotesis hunting, ide deteksi).
-
-Aturan bahasa, format, dan penanda mengikuti standar penulisan pribadi (STANDAR-NOTE.md), yang tidak disertakan di repo ini.
-
-## Versi acuan dan temuan awal
-
-Persiapan awal: 2026-10-07.
-
-Versi yang dipakai di catatan (dicek 2026-10-10): MITRE ATT&CK v19, FIRST TLP 2.0 (berlaku sejak Agustus 2022), OASIS STIX 2.1 dan TAXII 2.1 (OASIS Standard sejak 10 Juni 2021), CVSS v4.0, MISP seri 2.5, OpenCTI v7 (track LTS), dan CTI-CMM versi 1.3. Versi lain disebut di front matter tiap Day.
-
-## Struktur folder
-
-| File | Isi |
-|---|---|
-| `README.md` | Tujuan, versi acuan, temuan penting, dan daftar isi |
-| `SOURCES.md` | Indeks sumber yang dipakai di semua Day |
-| `NN-<slug>.md` | Satu Day per file |
-| `LICENSE` | Lisensi CC BY 4.0 |
-
-## Daftar isi
+Catatan saya belajar cyber threat intelligence untuk kebutuhan SOC dan IR.
 
 | Day | Topik |
 |---|---|
@@ -45,8 +24,3 @@ Versi yang dipakai di catatan (dicek 2026-10-10): MITRE ATT&CK v19, FIRST TLP 2.
 | 14 | [Ekosistem kriminal dibaca secara defensif: RaaS, access broker, data leak site](14-ekosistem-kriminal.md) |
 | 15 | [Intelligence requirements dan metrik program](15-intelligence-requirements-dan-metrik-program.md) |
 | 16 | [Konteks Indonesia: lembaga, pelaporan, batas berbagi](16-konteks-indonesia.md) |
-
-## Catatan repo
-
-Jangan commit: data/log/screenshot dari pekerjaan, kredensial, token API, sampel berbahaya, PDF standar, atau materi berbayar pihak lain.
-

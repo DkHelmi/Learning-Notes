@@ -1,47 +1,10 @@
-# Splunk-Notes: Splunk Enterprise dan Enterprise Security untuk analyst
+# Splunk
 
 > Personal study notes. Not affiliated with or endorsed by any vendor or standards body mentioned. Not legal or audit advice.
 >
 > License: [CC BY 4.0](LICENSE).
 
-## Tujuan
-
-Mampu memakai Splunk Enterprise dan Enterprise Security sebagai analyst profesional: menulis SPL yang efisien, membaca dan membangun detection, menjalankan risk based alerting, menginvestigasi finding sampai selesai, dan memahami sisi platform yang menentukan apakah semua itu bisa dipercaya (onboarding data, retensi, kuota search, kontrol akses). Bagian yang paling banyak digali karena paling sering dipakai dan paling mudah salah: `tstats`, `foreach`, CIM dan data model beserta acceleration, Asset and Identity, RBA, alur kerja ES, dan SOAR playbook.
-
-Aturan bahasa, format, dan penanda mengikuti standar penulisan pribadi (STANDAR-NOTE.md), yang tidak disertakan di repo ini.
-
-## Peta 35 Day
-
-| Kelompok | Day | Fokus |
-|---|---|---|
-| 1 | 01-07 | SPL dan search efisien, ditutup review |
-| 2 | 08-14 | Sumber data, CIM, data model, Asset and Identity, organisasi SOC, framework |
-| 3 | 15-23 | Ancaman, threat intel, TTP, investigasi, metrik, istilah dan dashboard ES, RBA, detection |
-| 4 | 24-29 | Hunting, adaptive response, SOAR, dua Day review dan rencana memperkuat kelemahan |
-| 5 | 30-35 | Sisi platform dan operasi: onboarding data, arsitektur dan biaya, penyimpanan hasil, Mission Control, kontrol akses, dan studi kasus investigasi |
-
-## Versi acuan
-
-Catatan disusun mulai 2026-10-07. Versi acuan: Splunk Enterprise 10.6, ES 8.7.0, CIM 6.4, SSE 3.8.x, ESCU v6.7.0, SOAR on-prem 8.6.0, MITRE ATT&CK v19.2.
-
-## Temuan penting
-
-- **Istilah ES 8 berbeda dari ES 7.** Correlation search menjadi detection, notable event menjadi finding, contributing events menjadi intermediate finding, Incident Review menjadi analyst queue, risk object menjadi entity, threat object menjadi observable. Untuk risk notable, glosarium ES 8.7 memetakannya ke finding, sedangkan dalam praktik outputnya adalah finding group dari finding-based detection. Dokumentasi dan tulisan lama memakai istilah ES 7, jadi dua-duanya perlu dikenali. Lihat Day 06, 20, dan 28.
-- **MITRE ATT&CK v19 (April 2026).** Defense Evasion dipecah menjadi Stealth (TA0005) dan Defense Impairment (TA0112), sehingga kini ada 15 taktik. Daftar ini sesuai attack.mitre.org per v19.2. Materi lama masih menyebut 14 taktik. Lihat Day 08, 15, dan 17.
-- **Lima tahap investigasi** berasal dari artikel Splunk Lantern: Review events, Assessment, Determine risk, Mitigate, Re-assess. Materi pelatihan resmi bisa memakai nama sedikit berbeda; konsepnya tetap sama.
-- **Kategori hunting** (configuration, modeling, indicators, behavioral analytics) mengikuti model Dragos "Four Types of Threat Detection" dan matriks 2x2 Robert M. Lee (environment atau threat, known atau unknown), dengan contoh CRASHOVERRIDE di Day 24. Model ini milik Dragos, bukan kerangka resmi Splunk.
-- Dokumentasi resmi kini di help.splunk.com; tautan docs.splunk.com lama masih beredar dan sebagian sudah dialihkan. Klaim yang hanya berasal dari forum komunitas ditandai `[komunitas]` di Day terkait dan perlu diuji di lab.
-
-## Struktur folder
-
-| File | Isi |
-|---|---|
-| `README.md` | Tujuan, versi acuan, temuan penting, dan daftar isi |
-| `SOURCES.md` | Indeks sumber yang dipakai di semua Day |
-| `NN-<slug>.md` | Satu Day per file |
-| `LICENSE` | Lisensi CC BY 4.0 |
-
-## Daftar isi
+Catatan saya belajar Splunk Enterprise dan Enterprise Security, dari SPL sampai alur kerja ES, RBA, dan SOAR.
 
 | Day | Topik |
 |---|---|
@@ -80,7 +43,3 @@ Catatan disusun mulai 2026-10-07. Versi acuan: Splunk Enterprise 10.6, ES 8.7.0,
 | 33 | [Mission Control, investigation, response plan, dan threat intelligence ES 8](33-mission-control-investigasi-threat-intel.md) |
 | 34 | [RBAC, srchFilter, dan penanganan data sensitif](34-rbac-dan-data-sensitif.md) |
 | 35 | [Tiga studi kasus investigasi: phishing, serangan web, lateral movement](35-studi-kasus-investigasi.md) |
-
-## Catatan repo
-
-Jangan commit: data, log, atau screenshot dari pekerjaan; kredensial dan token API; sampel berbahaya; PDF standar atau materi berbayar milik pihak lain.

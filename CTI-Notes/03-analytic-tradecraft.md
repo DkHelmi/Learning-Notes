@@ -9,30 +9,66 @@ versions_checked: 'ICD 203 (2015, amandemen teknis 2022); PHIA Probability Yards
 
 Cakupan: cara berpikir analis intelijen, yaitu menilai sumber dan informasi dengan skala Admiralty, menyatakan probabilitas dan keyakinan dengan istilah terdefinisi, mengenali bias, dan memakai structured analytic techniques seperti Key Assumptions Check dan ACH dengan contoh kerja.
 
-## 1. Tujuan belajar
+## Ide inti
 
-Setelah menyelesaikan Day ini, kamu bisa:
+Tahap analysis dalam siklus intelijen (Day 02) adalah tempat data menjadi intelijen, dan di sinilah tradecraft menentukan kualitas. Dua analis dengan data yang sama bisa sampai ke kesimpulan berbeda. Yang membedakan analis yang bisa dipercaya adalah disiplinnya: menilai sumber dan isi informasi secara terpisah, menyatakan probabilitas dan keyakinan dengan istilah yang terdefinisi, menyadari bias, dan menguji penjelasan alternatif sebelum memilih satu. Tanpa itu, CTI berubah menjadi tebakan yang terdengar yakin karena dibungkus bahasa teknis.
 
-- menilai keandalan sumber dan kredibilitas informasi secara terpisah dengan skala Admiralty, termasuk untuk sumber siber seperti vendor, feed, dan telemetri sendiri.
-- memakai istilah probabilitas dari ICD 203 atau PHIA secara konsisten, dan memisahkannya dari tingkat keyakinan.
-- membedakan fakta, penilaian, dan spekulasi di tingkat kalimat.
-- mengenali bias kognitif yang umum di CTI dan memilih teknik untuk menguranginya.
-- menjalankan Key Assumptions Check, Quality of Information Check, dan ACH pada kasus fiktif, termasuk analisis sensitivitas.
-- menulis pernyataan atribusi yang jujur tentang keyakinan dan alternatifnya.
+Bagi analis forensik dan SOC, prinsipnya sudah akrab. Di forensik kamu menjaga rantai bukti dan memisahkan artefak dari interpretasi: "file ini dibuat pukul 02:05" berbeda dari "penyerang membuat file ini". Saat triage alert, kamu juga menimbang beberapa penjelasan sekaligus (serangan nyata, aktivitas admin yang sah, salah konfigurasi) sebelum menutup tiket, dan kamu memberi confidence pada alert berdasarkan kekuatan bukti, bukan berdasarkan dampaknya. Yang baru di Day ini adalah kosakata dan teknik terstruktur supaya penalaran itu bisa ditulis dan diperiksa rekan.
 
-## 2. Konteks singkat
+```
+Butir informasi (log sendiri, laporan vendor, HR, posting anonim)
+  -> nilai sumber (A-F) dan isi (1-6) secara terpisah  -> kode Admiralty per butir
+  -> tulis asumsi yang menopang dugaan awal            -> Key Assumptions Check
+  -> uji beberapa hipotesis terhadap semua bukti       -> ACH: hitung I, bukan C
+  -> cek bukti mana yang paling menentukan             -> analisis sensitivitas
+  -> tulis penilaian: probabilitas + keyakinan (kalimat terpisah) + alternatif + apa yang akan mengubahnya
+Kode Admiralty menempel di butir informasi; kesimpulan memakai probabilitas dan keyakinan.
+```
 
-Tahap analysis dalam siklus (Day 02) adalah tempat data menjadi intelijen, dan di sinilah tradecraft menentukan kualitas. Dua analis dengan data yang sama bisa sampai ke kesimpulan berbeda. Yang membedakan analis yang bisa dipercaya adalah disiplinnya: menilai sumber, menyatakan keyakinan dengan jujur, menyadari bias, dan menguji alternatif. Tanpa itu, CTI berubah menjadi tebakan yang terdengar yakin karena dibungkus bahasa teknis.
+Situasi yang dipakai sepanjang Day ini: Sabtu 2026-10-03, sekitar 600 file di file server keuangan PT Logistik Contoh (PT LC, perusahaan logistik fiktif dengan gudang di Jakarta, Surabaya, dan Medan, dan banyak vendor yang masuk lewat VPN) berubah ekstensi menjadi `.lck`, dan muncul file catatan tebusan di setiap folder. Dugaan awal yang tertulis di tiket pagi itu: ransomware oleh afiliasi kriminal dari luar. Menjelang siang, CISO meneruskan pesan dari direksi:
 
-Bagi analis forensik dan SOC, prinsipnya sudah akrab (rantai bukti, artefak berbeda dari interpretasi); yang baru adalah kosakata dan teknik terstruktur agar penalaran bisa ditulis dan diperiksa rekan.
+> "HR bilang ada staf keuangan yang kemarin menerima surat pemutusan kontrak, dan ada akun anonim di media sosial yang menulis pelakunya orang dalam. Sebelum rapat jam dua, saya perlu tahu: ini serangan dari luar atau orang dalam? Seberapa bisa dipercaya info-info itu, dan seberapa yakin kalian?"
 
-**Kapan dipakai:** setiap penilaian intelijen, atribusi, jawaban RFI, dan produk tertulis.
+Pesan itu memuat lima pertanyaan:
 
-**Kapan terbatas:** teknik formal seperti ACH memakan waktu dan tidak cocok untuk RFI yang harus dijawab dalam satu jam. Untuk kasus seperti itu, pakai versi ringkas: kode sumber, satu kalimat keyakinan, dan satu alternatif yang dipertimbangkan.
+1. Seberapa bisa dipercaya setiap informasi yang dimiliki tim, dari log VPN sampai posting anonim?
+2. Bagaimana menyatakan "seberapa yakin" supaya semua direktur membacanya sama?
+3. Bagaimana memisahkan apa yang tercatat di log dari tafsiran tim?
+4. Bagaimana tim tidak terseret dugaan awal di tiket atau kabar yang terasa kuat secara emosional?
+5. Bagaimana menguji "dari luar atau orang dalam" dan menulis jawaban atas "siapa pelakunya"?
 
-## 3. Konsep inti
+Pertanyaan 1 dijawab di bagian 1.1 sampai 1.3 dan 2.1, pertanyaan 2 di bagian 1.4 dan 1.5, pertanyaan 3 di bagian 1.6, pertanyaan 4 di bagian 1.7, 1.8, dan 2.2, dan pertanyaan 5 di bagian 1.9, 1.10, 2.3, dan 2.4.
 
-### 3.1 Keandalan sumber dan kredibilitas informasi
+**Kapan relevan:** setiap penilaian intelijen, atribusi, jawaban RFI, dan produk tertulis.
+**Kapan bukan jawaban:** teknik formal seperti ACH memakan waktu dan tidak cocok untuk RFI yang harus dijawab dalam satu jam. Untuk kasus seperti itu, pakai versi ringkas: kode sumber, satu kalimat keyakinan, dan satu alternatif yang dipertimbangkan.
+
+## 1. Konsep inti
+
+### 1.0 Istilah di Day ini
+
+Tabel ini memuat istilah yang muncul di Day ini. Kolom padanan memakai analogi SOC yang sama di semua Day CTI. Istilah dari Day sebelumnya (CTI, TTP, PIR, RFI, siklus intelijen dan tahap-tahapnya) tidak diulang; bahasa keyakinan dari Day 01 diulang karena Day ini memisahkannya dari probabilitas.
+
+| Istilah | Arti singkat | Padanan di SOC |
+|---|---|---|
+| Analytic tradecraft | Disiplin penalaran analis yang bisa ditulis dan diperiksa rekan | Disiplin forensik: rantai bukti, artefak dipisah dari interpretasi |
+| Keandalan sumber (reliability) | Seberapa bisa dipercaya sumbernya, dari rekam jejak dan kemampuannya mengetahui hal yang dilaporkan | Kualitas log source: sensor terkonfigurasi benar, waktu tersinkron |
+| Kredibilitas informasi (credibility) | Seberapa masuk akal isi informasinya, dari logika dan konfirmasi sumber lain | Apakah satu event masuk akal dan terlihat juga di log lain |
+| Kode Admiralty | Kode dua karakter: huruf untuk sumber, angka untuk isi (mis. B2) | Dua kolom terpisah: kualitas log source dan kualitas event |
+| Bahasa probabilitas | Istilah baku dengan rentang angka untuk menyatakan seberapa mungkin sesuatu benar atau terjadi | "Kemungkinan besar true positive" di tiket, tetapi dengan rentang baku |
+| Keyakinan (confidence) | Seberapa kuat dasar sebuah penilaian | Confidence pada alert |
+| ICD 203 dan PHIA | Dua standar pemerintah (AS dan Inggris) yang menetapkan istilah probabilitas | Kamus severity yang disepakati tim |
+| Fakta, penilaian, spekulasi | Observasi, kesimpulan dari bukti, dan dugaan tanpa dasar kuat | Artefak, interpretasi, dan dugaan di laporan forensik |
+| Bias kognitif | Pola pikir yang menyimpangkan penilaian secara sistematis | Bertahan pada penilaian pertama di tiket walau bukti berubah |
+| Structured analytic techniques (SAT) | Prosedur yang memaksa penalaran keluar dari jalur kebiasaan | Checklist investigasi yang memaksa memeriksa jalur lain |
+| Key Assumptions Check | Daftar asumsi di balik kesimpulan beserta kapan asumsi itu salah | Menulis asumsi di catatan triage ("akun ini dipakai vendor") lalu mengeceknya |
+| ACH | Analysis of Competing Hypotheses: menguji beberapa hipotesis terhadap seluruh bukti | Triage yang menguji beberapa penjelasan sekaligus: serangan, aktivitas sah, salah konfigurasi |
+| Bukti diagnostik | Bukti yang membedakan satu hipotesis dari yang lain | Artefak yang hanya muncul bila penjelasan tertentu benar |
+| Analisis sensitivitas | Memeriksa bagaimana kesimpulan berubah bila bukti tertentu salah | "Kalau log ini keliru, apakah kesimpulan tiketnya berubah?" |
+| Atribusi dan clustering | Menisbahkan aktivitas ke aktor; clustering mengelompokkan aktivitas tanpa menyebut aktor | Mengelompokkan alert yang berbagi infrastruktur sebelum menamai pelakunya |
+
+### 1.1 Keandalan sumber dan kredibilitas informasi
+
+Pada Sabtu pagi tim PT LC punya butir informasi dari sumber yang sangat berbeda: log VPN sendiri, EDR, laporan vendor, HR, change calendar, dan posting anonim. Pertanyaan direksi "seberapa bisa dipercaya?" sebenarnya dua pertanyaan.
 
 Dua hal ini berbeda dan sering dicampur [S1]:
 
@@ -41,7 +77,11 @@ Dua hal ini berbeda dan sering dicampur [S1]:
 
 Keduanya dinilai terpisah agar reputasi sumber tidak memengaruhi penilaian isi. Hasilnya kode dua karakter seperti B2. Pemisahan ini mencegah dua kesalahan klasik: percaya informasi lemah karena sumbernya bagus, atau membuang informasi kuat karena sumbernya baru.
 
-### 3.2 Skala Admiralty
+### 1.2 Skala Admiralty
+
+Supaya enam butir informasi PT LC dinilai dengan ukuran yang sama, tim memakai skala Admiralty. Skala ini memberi setiap butir dua penilaian yang bisa dibandingkan dan diperiksa rekan.
+
+Dua tabel berikut adalah skalanya. Tabel pertama menilai sumber, tabel kedua menilai isi; perhatikan baris terakhir masing-masing, karena keduanya paling sering disalahartikan.
 
 | Kode | Keandalan sumber | Makna ringkas |
 |---|---|---|
@@ -61,9 +101,13 @@ Keduanya dinilai terpisah agar reputasi sumber tidak memengaruhi penilaian isi. 
 | 5 | Improbable | Tidak logis dan bertentangan dengan informasi lain |
 | 6 | Truth cannot be judged | Tidak ada dasar menilai |
 
-Dua hal yang sering terlewat. Pertama, F dan 6 bukan nilai buruk; artinya "belum bisa dinilai". Sumber baru selalu mulai dari F, dan naik atau turun seiring rekam jejaknya. Kedua, kesimpulan analis tidak diberi kode Admiralty; kode menempel pada butir informasi, sedangkan kesimpulan memakai bahasa probabilitas dan keyakinan (bagian 3.3) [S1].
+Dua hal yang sering terlewat. Pertama, F dan 6 bukan nilai buruk; artinya "belum bisa dinilai". Sumber baru selalu mulai dari F, dan naik atau turun seiring rekam jejaknya. Kedua, kesimpulan analis tidak diberi kode Admiralty; kode menempel pada butir informasi, sedangkan kesimpulan memakai bahasa probabilitas dan keyakinan (bagian 1.4 dan 1.5) [S1].
 
-Untuk sumber siber, terjemahkan "rekam jejak" menjadi pertanyaan yang bisa dijawab:
+### 1.3 Admiralty untuk sumber siber
+
+Skala Admiralty lahir dari dunia intelijen klasik, sedangkan sumber PT LC adalah EDR, log VPN, laporan vendor, dan akun media sosial. "Rekam jejak" perlu diterjemahkan ke pertanyaan yang bisa dijawab untuk sumber seperti itu.
+
+Tabel berikut memberi pertanyaan penilaian dan kode awal untuk jenis sumber yang umum di CTI. Kolom terakhir adalah titik mulai yang wajar, bukan peringkat baku.
 
 | Sumber | Pertanyaan penilaian keandalan | Kode awal yang wajar |
 |---|---|---|
@@ -75,9 +119,13 @@ Untuk sumber siber, terjemahkan "rekam jejak" menjadi pertanyaan yang bisa dijaw
 
 Angka kredibilitas menyangkut isi, jadi laporan vendor B bisa membawa informasi 2 (teknik yang dijelaskan dengan sampel), 3 (atribusi tanpa bukti yang ditunjukkan), atau 6 (klaim tentang niat aktor).
 
-### 3.3 Bahasa probabilitas dan keyakinan
+### 1.4 Bahasa probabilitas
+
+Direksi PT LC bertanya "seberapa yakin kalian". Bila tim menjawab "mungkin dari luar", setiap direktur bisa membaca kata "mungkin" dengan angka yang berbeda.
 
 Kata seperti "mungkin" atau "kemungkinan besar" ditafsirkan sangat berbeda oleh pembaca. Survei yang dikutip pemerintah Inggris menunjukkan frasa seperti "realistic possibility" dibaca dari sekitar 10% sampai hampir pasti oleh orang yang berbeda [S3]. Karena itu standar analitik menetapkan istilah dengan rentang angka.
+
+Tabel berikut menyandingkan dua skala resmi. Cari baris yang rentangnya cocok dengan penilaianmu, lalu pakai istilah dari satu skala saja.
 
 | ICD 203 (istilah utama) | Padanan ICD 203 | Rentang | PHIA Probability Yardstick (UK) | Rentang PHIA |
 |---|---|---|---|---|
@@ -91,7 +139,13 @@ Kata seperti "mungkin" atau "kemungkinan besar" ditafsirkan sangat berbeda oleh 
 
 Sumber: ICD 203 [S2], PHIA [S3]. Skala PHIA sengaja punya celah antar rentang agar tidak memberi kesan presisi palsu [S3]. Pilih satu skala untuk tim-mu, tulis di template produk, dan jangan mencampur istilah dari dua skala dalam satu dokumen.
 
-Keyakinan (confidence) adalah hal lain. Probabilitas menjawab "seberapa mungkin hal ini benar atau terjadi"; keyakinan menjawab "seberapa kuat dasar penilaian kita". ICD 203 meminta analis menyatakan keduanya secara eksplisit dan menjelaskan dasar ketidakpastiannya [S2]. Pedoman praktis tingkat keyakinan yang umum dipakai tim CTI:
+### 1.5 Keyakinan terpisah dari probabilitas
+
+Misalkan tim PT LC menilai "kemungkinan besar dari luar". Kalimat itu belum memberi tahu direksi seberapa kuat dasarnya: log VPN dan EDR kuat, tetapi perangkat vendor belum bisa diperiksa.
+
+Keyakinan (confidence) adalah hal lain. Probabilitas menjawab "seberapa mungkin hal ini benar atau terjadi"; keyakinan menjawab "seberapa kuat dasar penilaian kita". ICD 203 meminta analis menyatakan keduanya secara eksplisit dan menjelaskan dasar ketidakpastiannya [S2]. Di SOC, ini sama dengan confidence pada alert: ia menilai kekuatan bukti dan sumber, bukan seberapa parah dampaknya.
+
+Tabel berikut adalah pedoman praktis tingkat keyakinan yang umum dipakai tim CTI. Pakai untuk memeriksa apakah dasar penilaianmu cukup untuk tingkat keyakinan yang kamu tulis.
 
 | Keyakinan | Dasar yang biasanya dibutuhkan |
 |---|---|
@@ -101,7 +155,11 @@ Keyakinan (confidence) adalah hal lain. Probabilitas menjawab "seberapa mungkin 
 
 Contoh kalimat yang benar: "Kami menilai kemungkinan besar (likely) aktor masuk lewat akun VPN vendor. Keyakinan sedang: bukti log kuat, tetapi kami belum bisa memeriksa perangkat vendor." Probabilitas dan keyakinan ditulis di kalimat terpisah agar tidak dibaca sebagai satu angka.
 
-### 3.4 Fakta, penilaian, spekulasi
+### 1.6 Fakta, penilaian, spekulasi
+
+Laporan untuk rapat direksi akan dibaca orang yang tidak bisa membedakan isi log dari tafsiran tim, kecuali kalimatnya sendiri yang membedakan.
+
+Tabel berikut memberi satu contoh untuk tiap jenis kalimat. Perhatikan kata kerja yang dipakai, karena di situlah pembaca mengenali jenisnya.
 
 | Jenis | Arti | Contoh (fiktif) |
 |---|---|---|
@@ -111,9 +169,11 @@ Contoh kalimat yang benar: "Kami menilai kemungkinan besar (likely) aktor masuk 
 
 Teknik sederhana agar pembaca tahu jenis kalimat: fakta memakai kata kerja observasi ("tercatat di log"), penilaian diawali "kami menilai", dan spekulasi diberi label atau dihindari di produk eksekutif.
 
-### 3.5 Bias kognitif dan penangkalnya
+### 1.7 Bias kognitif dan penangkalnya
 
-Heuer menunjukkan bahwa bias kognitif tidak hilang hanya karena analis menyadarinya; yang membantu adalah prosedur yang memaksa penalaran keluar dari jalur kebiasaan [S4].
+Di PT LC, dua tarikan muncul bersamaan. Dugaan awal "afiliasi kriminal dari luar" sudah tertulis di tiket sejak pagi, sementara kabar pemutusan kontrak dan posting "orang dalam" membuat sebagian tim yakin sebaliknya.
+
+Heuer menunjukkan bahwa bias kognitif tidak hilang hanya karena analis menyadarinya; yang membantu adalah prosedur yang memaksa penalaran keluar dari jalur kebiasaan [S4]. Tabel berikut memetakan bias yang paling sering muncul di CTI ke bentuk konkret dan penangkalnya. Cari bias yang paling mungkin menimpa kasus yang sedang kamu kerjakan.
 
 | Bias | Bentuknya di CTI | Penangkal |
 |---|---|---|
@@ -123,9 +183,11 @@ Heuer menunjukkan bahwa bias kognitif tidak hilang hanya karena analis menyadari
 | Availability | Ancaman yang sedang ramai di berita dianggap paling mungkin | Bandingkan dengan data insiden sektor, bukan berita |
 | Attribution bias | Teknik mirip langsung dianggap aktor yang sama | Pisahkan clustering dari atribusi; ACH dengan hipotesis "aktor lain memakai alat sama" |
 
-### 3.6 Structured analytic techniques
+### 1.8 Structured analytic techniques
 
-Tradecraft Primer pemerintah Amerika Serikat (2009) mengelompokkan teknik terstruktur menjadi tiga jenis [S5]:
+Karena menyadari bias saja tidak cukup, tim PT LC butuh prosedur yang bisa dijalankan dan diperiksa rekan. Prosedur seperti itu disebut structured analytic techniques.
+
+Tradecraft Primer pemerintah Amerika Serikat (2009) mengelompokkan teknik terstruktur menjadi tiga jenis [S5]. Tabel berikut membantu memilih teknik; baca kolom terakhir untuk mencocokkan teknik dengan pertanyaan yang sedang kamu hadapi.
 
 | Kelompok | Teknik | Kapan berguna di CTI |
 |---|---|---|
@@ -139,7 +201,9 @@ Tiga teknik paling sering dipakai di CTI harian:
 - **Quality of Information Check:** periksa sumber yang paling menentukan kesimpulan. Apakah ada konfirmasi independen? Apakah ada laporan yang sudah ditarik atau dikoreksi? Apakah informasi ambigu sudah diberi catatan? [S5]
 - **Indicators or Signposts of Change:** daftar observasi yang, bila muncul, menandakan penilaian perlu diubah. Di CTI ini sering menjadi daftar pemantauan atau bahkan rule deteksi.
 
-### 3.7 Analysis of Competing Hypotheses
+### 1.9 Analysis of Competing Hypotheses
+
+Pertanyaan direksi "dari luar atau orang dalam?" adalah pertanyaan tentang hipotesis yang bersaing, dan jawabannya harus mempertimbangkan lebih dari dua kemungkinan itu. ACH dibuat untuk pertanyaan seperti ini.
 
 ACH dikembangkan Richards Heuer untuk melawan confirmation bias dengan menguji beberapa hipotesis sekaligus terhadap seluruh bukti [S4]. Delapan langkahnya:
 
@@ -152,9 +216,11 @@ ACH dikembangkan Richards Heuer untuk melawan confirmation bias dengan menguji b
 7. Laporkan kesimpulan dengan membahas kemungkinan relatif semua hipotesis, bukan hanya pemenangnya.
 8. Tetapkan milestone: observasi masa depan yang akan menandakan kesimpulan perlu diubah.
 
-Inti ACH adalah logika pembantahan. Seratus bukti yang konsisten tidak membuktikan hipotesis bila bukti itu juga konsisten dengan hipotesis lain, sedangkan satu bukti kuat yang tidak konsisten bisa menggugurkannya. Karena itu menghitung C tidak berguna; yang dihitung adalah I, dan bobot I bergantung pada kualitas buktinya. Contoh kerja lengkap ada di bagian 4.3.
+Inti ACH adalah logika pembantahan. Seratus bukti yang konsisten tidak membuktikan hipotesis bila bukti itu juga konsisten dengan hipotesis lain, sedangkan satu bukti kuat yang tidak konsisten bisa menggugurkannya. Karena itu menghitung C tidak berguna; yang dihitung adalah I, dan bobot I bergantung pada kualitas buktinya. Contoh kerja lengkap ada di bagian 2.3.
 
-### 3.8 Atribusi dan kerendahan hati analitis
+### 1.10 Atribusi dan kerendahan hati analitis
+
+Pertanyaan pertama direksi PT LC adalah "siapa pelakunya?". Jawaban jujurnya bergantung pada tingkat atribusi mana yang benar-benar didukung bukti.
 
 Atribusi (menisbahkan aktivitas ke aktor) adalah penilaian tersulit dan paling rawan bias.
 
@@ -165,11 +231,13 @@ Atribusi (menisbahkan aktivitas ke aktor) adalah penilaian tersulit dan paling r
 
 Menyatakan batas dan ketidakpastian adalah tanda tradecraft matang. Produk yang jujur tentang keyakinannya lebih dipercaya, dan ketika ternyata salah, kerusakannya lebih kecil karena pembaca sudah tahu batasnya.
 
-## 4. Contoh artefak intelijen
+## 2. Contoh artefak intelijen
 
-Semua contoh fiktif dan berlabel ilustrasi. Kasusnya: Sabtu 2026-10-03, sekitar 600 file di file server keuangan PT Logistik Contoh berubah ekstensi menjadi `.lck` dan muncul file catatan tebusan di setiap folder.
+Semua contoh di bagian ini fiktif dan berlabel ilustrasi; keempatnya memakai kasus file server keuangan PT LC dari bagian Ide inti.
 
-### 4.1 Kode Admiralty untuk butir informasi kasus
+### 2.1 Kode Admiralty untuk butir informasi kasus
+
+Ini jawaban untuk pertanyaan pertama direksi: setiap butir informasi yang dimiliki tim diberi kode Admiralty beserta alasannya. Baca kolom Alasan untuk melihat bahwa huruf dan angka dinilai terpisah.
 
 | Butir | Sumber | Kode | Alasan |
 |---|---|---|---|
@@ -180,9 +248,9 @@ Semua contoh fiktif dan berlabel ilustrasi. Kasusnya: Sabtu 2026-10-03, sekitar 
 | E5: Tidak ada pengujian red team atau proyek enkripsi di change calendar | Change management | B2 | Kalender kadang tidak lengkap |
 | E6: Posting anonim di media sosial mengklaim "orang dalam" pelakunya | Akun anonim | F6 | Tidak ada dasar menilai |
 
-### 4.2 Key Assumptions Check untuk dugaan awal
+### 2.2 Key Assumptions Check untuk dugaan awal
 
-Dugaan awal tim pada Sabtu pagi: "Ini ransomware oleh afiliasi kriminal dari luar."
+Sebelum membandingkan hipotesis, tim memeriksa asumsi di balik dugaan awal yang tertulis di tiket pada Sabtu pagi: "Ini ransomware oleh afiliasi kriminal dari luar." Tabel berikut menulis setiap asumsi beserta kondisi yang membuatnya salah; cari asumsi yang dampaknya tinggi bila salah.
 
 | Asumsi | Kenapa dianggap benar | Kapan bisa salah | Dampak bila salah |
 |---|---|---|---|
@@ -192,7 +260,9 @@ Dugaan awal tim pada Sabtu pagi: "Ini ransomware oleh afiliasi kriminal dari lua
 
 **Cara membaca hasil:** asumsi pertama paling menentukan dan paling murah dicek: telepon kontak vendor dan minta log sisi mereka. Itu tindakan pertama, sebelum menulis atribusi apa pun.
 
-### 4.3 Matriks ACH
+### 2.3 Matriks ACH
+
+Ini inti jawaban untuk pertanyaan "dari luar atau orang dalam": empat hipotesis diuji terhadap bukti yang sama, lalu hasilnya ditulis sebagai penilaian untuk rapat pukul 14.00.
 
 Hipotesis:
 
@@ -200,6 +270,8 @@ Hipotesis:
 - H2: sabotase orang dalam (staf yang kontraknya diputus) yang meniru ransomware.
 - H3: kesalahan operasional, misalnya alat enkripsi atau backup yang salah konfigurasi.
 - H4: pengujian red team yang tidak terkoordinasi.
+
+Matriks berikut memuat setiap bukti beserta kode Admiralty-nya. Baca baris terakhir (jumlah I), bukan jumlah C, lalu periksa kode bukti di balik setiap I.
 
 | Bukti | Kode | H1 | H2 | H3 | H4 |
 |---|---|---|---|---|---|
@@ -233,7 +305,9 @@ Yang akan mengubah penilaian: konfirmasi vendor tentang akun, dan apakah
   staf terkait pernah memegang kredensial vendor.it01.
 ```
 
-### 4.4 Menulis ulang penilaian yang terlalu yakin
+### 2.4 Menulis ulang penilaian yang terlalu yakin
+
+Bila direksi meminta satu kalimat "siapa pelakunya", godaan menulis versi yang terlalu yakin sangat besar. Contoh berikut menunjukkan versi buruk, masalahnya, dan versi yang lebih baik.
 
 Versi buruk: "Serangan ini dilakukan oleh kelompok ransomware X dari Eropa Timur yang menargetkan sektor logistik. IP penyerang adalah 198.51.100[.]23."
 
@@ -241,17 +315,17 @@ Masalahnya: atribusi ke kelompok dan wilayah tanpa dasar yang ditunjukkan, tidak
 
 Versi yang lebih baik: "Akun VPN vendor.it01 login dari 198.51.100[.]23 sebelum enkripsi (fakta, log VPN). Satu laporan vendor mengaitkan IP ini dengan afiliasi ransomware (B3). Kami belum punya dasar untuk mengaitkan insiden ini dengan kelompok tertentu; keyakinan atribusi rendah. Bila sampel encryptor tersedia, perbandingan dengan sampel publik dapat menaikkan keyakinan."
 
-## 5. Lab praktik
+## 3. Lab praktik
 
 Lab ini memakai editor teks saja. Skenario fiktif; jangan pakai data kerja; jangan mengakses forum kriminal.
 
 1. **Kode sumber.** Ambil lima sumber fiktif (SIEM, vendor, blog peneliti, akun anonim, ISAC) dan beri kode Admiralty untuk satu butir informasi dari masing-masing. Tulis alasan huruf dan angka secara terpisah.
 2. **Bahasa probabilitas.** Tulis tiga penilaian fiktif dengan istilah ICD 203 atau PHIA, masing-masing dengan kalimat keyakinan terpisah dan dasar ketidakpastiannya.
 3. **Fakta, penilaian, spekulasi.** Ambil satu paragraf laporan publik apa pun dan tandai setiap kalimat. Hitung berapa kalimat penilaian yang tidak menyebut keyakinan.
-4. **Key Assumptions Check.** Untuk kasus bagian 4, tambahkan dua asumsi yang belum ada di tabel 4.2 dan nilai dampaknya.
+4. **Key Assumptions Check.** Untuk kasus file server keuangan di bagian 2, tambahkan dua asumsi yang belum ada di tabel bagian 2.2 dan nilai dampaknya.
 5. **ACH.** Buat kasus fiktif sendiri (misalnya akun cloud admin login dari negara tak biasa) dengan minimal empat hipotesis dan enam bukti berkode Admiralty. Isi matriks, hitung I, lalu lakukan analisis sensitivitas pada bukti terlemah.
 6. **Atribusi.** Tulis satu pernyataan atribusi yang memisahkan clustering dari atribusi, menyebut keyakinan, dan menyebut kemungkinan false flag.
-7. **Indicators of change.** Untuk kesimpulan ACH-mu, tulis dua observasi yang akan menaikkan keyakinan dan dua yang akan mengubah kesimpulan (lihat baris "Yang akan mengubah penilaian" di bagian 4.3).
+7. **Indicators of change.** Untuk kesimpulan ACH-mu, tulis dua observasi yang akan menaikkan keyakinan dan dua yang akan mengubah kesimpulan (lihat baris "Yang akan mengubah penilaian" di bagian 2.3).
 
 **Hasil yang sebaiknya tersimpan:**
 
@@ -264,7 +338,9 @@ Lab ini memakai editor teks saja. Skenario fiktif; jangan pakai data kerja; jang
 
 **Variasi tantangan:** kerjakan ACH yang sama dengan seorang rekan secara terpisah, lalu bandingkan isi sel yang berbeda. Perbedaan di sel biasanya menunjukkan asumsi yang tidak ditulis; diskusikan sampai asumsi itu eksplisit.
 
-## 6. Troubleshooting
+## 4. Troubleshooting
+
+Tabel ini dibaca dari kolom Gejala: cari keluhan yang mirip dengan yang kamu alami, lalu periksa penyebab yang paling sering.
 
 | Gejala | Kemungkinan penyebab | Cara memeriksa/memperbaiki |
 |---|---|---|
@@ -274,7 +350,7 @@ Lab ini memakai editor teks saja. Skenario fiktif; jangan pakai data kerja; jang
 | Matriks ACH semua C | Bukti tidak diagnostik atau hipotesis terlalu mirip | Cari bukti pembeda; gabungkan hipotesis yang tidak bisa dibedakan |
 | Kesimpulan ACH berubah total saat satu sel diubah | Kesimpulan bertumpu pada satu bukti lemah | Laporkan sensitivitasnya; cari konfirmasi untuk bukti itu |
 
-## 7. Kesalahan umum dan jebakan
+## 5. Kesalahan umum dan jebakan
 
 - Memberi satu kode untuk sumber dan isi sekaligus. Kode Admiralty selalu dua karakter, dan isinya dinilai terpisah dari reputasi sumber.
 - Mengode kesimpulan dengan Admiralty. Kode menempel pada butir informasi; kesimpulan memakai probabilitas dan keyakinan.
@@ -283,14 +359,16 @@ Lab ini memakai editor teks saja. Skenario fiktif; jangan pakai data kerja; jang
 - Mencampur skala ICD 203 dan PHIA. Pilih satu dan tulis di template.
 - Menganggap kesadaran bias sudah cukup. Heuer menunjukkan bias bertahan walau disadari; prosedur yang membantu [S4].
 
-## 8. Catatan terkini
+## 6. Catatan terkini
 
-- ICD 203 ditandatangani pada 2 Januari 2015 dan mendapat amandemen teknis pada Desember 2022; tabel istilah probabilitas di bagian 3.3 tetap sama. Cek teks terbaru di situs ODNI bila kamu memakainya sebagai standar resmi [S2].
+Bagian ini menampung tanggal terbit dan perubahan standar yang dipakai di Day ini. Berguna saat mengutip standar secara resmi, tetapi tidak mengubah cara menilai sumber atau menulis penilaian.
+
+- ICD 203 ditandatangani pada 2 Januari 2015 dan mendapat amandemen teknis pada Desember 2022; tabel istilah probabilitas di bagian 1.4 tetap sama. Cek teks terbaru di situs ODNI bila kamu memakainya sebagai standar resmi [S2].
 - Pemerintah Inggris menerbitkan penjelasan publik tentang PHIA Probability Yardstick pada Maret 2025, termasuk alasan skala ini memakai celah antar rentang [S3].
 - Banyak vendor CTI memakai penamaan cluster (misalnya awalan UNC, TA, atau Storm) sebelum atribusi penuh. Penamaan ini adalah praktik kerendahan hati analitis dalam bentuk konkret.
 - Day 04 masuk ke framework (Kill Chain, Diamond, ATT&CK, Pyramid of Pain) yang menstrukturkan analisis teknis.
 
-## 9. Cheat sheet
+## 7. Cheat sheet
 
 ```
 ADMIRALTY   sumber A-F (rekam jejak) + info 1-6 (logis, terkonfirmasi) ; dinilai TERPISAH ; mis. B3
@@ -307,7 +385,82 @@ ACH         hipotesis -> bukti -> matriks C/I/N -> buang non-diagnostik -> hitun
 ATRIBUSI    clustering < kelompok dilacak < entitas nyata ; jangan dari satu jenis bukti
 ```
 
-## 10. Sumber
+## 8. Uji diri
+
+Coba jawab dulu tanpa membuka bagian di atas. Bila jawabanmu berbeda dengan kunci, baca ulang bagian yang disebut di kunci.
+
+**1. Pertanyaan jebakan.** "Vendor ini biasanya andal (B), jadi semua klaim di laporannya, termasuk atribusi tanpa bukti yang ditunjukkan, bisa diberi kode B1." Benarkah?
+
+<details><summary>Jawaban</summary>
+
+Tidak. Huruf menilai sumber, angka menilai isi, dan keduanya dinilai terpisah agar reputasi sumber tidak memengaruhi penilaian isi. Kode 1 berarti dikonfirmasi sumber independen lain. Laporan vendor B bisa membawa informasi 2 (teknik yang dijelaskan dengan sampel), 3 (atribusi tanpa bukti yang ditunjukkan), atau 6 (klaim tentang niat aktor). Di kasus PT LC, klaim vendor bahwa IP 198.51.100[.]23 pernah dipakai afiliasi ransomware diberi B3 karena laporan tidak menunjukkan bukti teknis untuk IP itu. Lihat bagian 1.1, 1.3, dan 2.1.
+
+</details>
+
+**2. Skenario keputusan.** Posting anonim yang mengklaim "orang dalam" pelakunya diberi kode F6. Apa yang sebaiknya dilakukan dengan butir ini?
+
+- A. Buang dari analisis, karena F6 adalah nilai terburuk di skala Admiralty.
+- B. Simpan dan masukkan ke matriks ACH dengan kodenya; F6 berarti belum bisa dinilai, dan butir ini ternyata konsisten dengan H2 tetapi netral untuk hipotesis lain, sehingga tidak membedakan H1 dari H2.
+- C. Naikkan kodenya menjadi A1, karena isinya cocok dengan kabar pemutusan kontrak dari HR.
+
+<details><summary>Jawaban</summary>
+
+B. F dan 6 bukan nilai buruk; artinya tidak ada dasar menilai. Butir seperti ini tetap dicatat, tetapi bobotnya terlihat dari kodenya dan dari posisinya di matriks: E6 hanya konsisten dengan H2 dan netral untuk yang lain, jadi tidak membantah H1. A keliru karena F6 bukan nilai terburuk; sumber yang terbukti tidak andal adalah E, dan isi yang tidak logis dan bertentangan adalah 5. C keliru karena huruf menilai sumber dan sumber anonim tidak punya rekam jejak yang bisa diperiksa, dan kecocokan dengan E4 tidak sama dengan konfirmasi independen atas klaim "orang dalam". Lihat bagian 1.2, 2.1, dan 2.3.
+
+</details>
+
+**3. Pertanyaan jebakan.** "Di matriks ACH, H1 punya paling banyak sel C, jadi H1 adalah hipotesis terkuat." Apakah alasan itu benar?
+
+<details><summary>Jawaban</summary>
+
+Tidak. Kesimpulannya kebetulan sama di kasus PT LC, tetapi alasannya keliru. ACH bekerja dengan logika pembantahan: bukti yang konsisten dengan beberapa hipotesis sekaligus tidak membedakan apa pun, sedangkan satu bukti kuat yang tidak konsisten bisa menggugurkan hipotesis. Yang dihitung adalah I, dan bobot setiap I bergantung pada kualitas buktinya. H1 terkuat karena tidak punya inkonsistensi, dan satu-satunya I milik H2 berasal dari E3 yang berkode B3, sehingga kesimpulan itu harus disertai analisis sensitivitas. Lihat bagian 1.9 dan 2.3.
+
+</details>
+
+**4. Jelaskan ulang.** Jelaskan kepada direksi PT LC dalam tiga kalimat arti "kemungkinan besar (likely), keyakinan sedang" di laporan pukul 14.00.
+
+<details><summary>Contoh jawaban dan kesalahan yang sering muncul</summary>
+
+Contoh: "'Kemungkinan besar' adalah penilaian kami tentang seberapa mungkin pelakunya pihak luar yang memakai akun VPN vendor; di skala yang kami pakai, artinya sekitar 55 sampai 80 persen. 'Keyakinan sedang' menjelaskan seberapa kuat dasar penilaian itu: log VPN dan EDR kami kuat, tetapi kaitan IP dengan afiliasi ransomware hanya dari satu laporan vendor yang belum menunjukkan bukti, dan vendor belum mengonfirmasi akunnya. Kami belum mengesampingkan sabotase orang dalam, dan penilaian ini akan kami ubah bila konfirmasi vendor atau pemeriksaan akses staf menunjukkan hal lain."
+
+Kesalahan yang sering muncul:
+- Menganggap keyakinan sedang berarti probabilitasnya sekitar 50 persen. Probabilitas dan keyakinan menjawab dua pertanyaan berbeda.
+- Memberi kode Admiralty pada kesimpulan. Kode menempel pada butir informasi, bukan pada penilaian.
+- Mencampur istilah ICD 203 dan PHIA dalam satu penjelasan.
+
+</details>
+
+**5. Skenario keputusan.** Pukul 13.00, seorang anggota tim mengusulkan laporan untuk direksi berbunyi "pelakunya staf keuangan yang diputus kontraknya", karena kabar dari HR terasa sangat meyakinkan. Apa yang paling tepat?
+
+- A. Setuju. Kabar HR berkode A1, jadi kesimpulan bahwa staf itu pelakunya juga A1.
+- B. Laporkan bahwa pihak luar lewat akun vendor kemungkinan besar pelakunya dengan keyakinan sedang, sebut bahwa sabotase orang dalam belum dapat dikesampingkan, dan sebut apa yang akan mengubah penilaian (konfirmasi vendor, akses staf ke kredensial `vendor.it01`).
+- C. Jangan laporkan apa pun sampai tim 100% yakin siapa pelakunya.
+
+<details><summary>Jawaban</summary>
+
+B. Itulah isi laporan ringkas hasil ACH: penilaian dengan probabilitas dan keyakinan, alternatif yang masih terbuka, dan observasi yang akan mengubahnya. A keliru karena E4 adalah fakta bahwa seseorang diputus kontraknya, bukan bukti bahwa ia pelakunya; E4 konsisten dengan H2 tetapi netral untuk H1, sehingga tidak membedakan keduanya, dan rasa yakin karena kabar yang kuat secara emosional adalah jebakan anchoring. Selain itu kode Admiralty tidak dipakai untuk kesimpulan. C keliru karena kerendahan hati analitis berarti menyatakan batas dan ketidakpastian, bukan menahan penilaian; produk yang jujur tentang keyakinannya tetap bisa dipakai untuk keputusan. Lihat bagian 1.10, 2.2, dan 2.3.
+
+</details>
+
+**6. Pertanyaan jebakan.** "Semua analis kita sudah ikut pelatihan bias kognitif, jadi penilaian mereka sudah aman dari bias." Benarkah?
+
+<details><summary>Jawaban</summary>
+
+Tidak. Heuer menunjukkan bias kognitif tidak hilang hanya karena analis menyadarinya. Yang membantu adalah prosedur yang memaksa penalaran keluar dari jalur kebiasaan: ACH untuk confirmation bias, penilaian ulang terjadwal dan rekan yang menilai tanpa melihat kesimpulan awal untuk anchoring, Red Team Analysis untuk mirror imaging, serta memisahkan clustering dari atribusi untuk attribution bias. Lihat bagian 1.7 dan 1.8.
+
+</details>
+
+**7. Interview question (English).** "How do you communicate uncertainty when you attribute an incident to a threat actor?"
+
+<details><summary>Sample answer</summary>
+
+"I separate three things. First, I grade each piece of evidence on its own, rating the source and the information separately, for example with the Admiralty scale, so a good vendor doesn't automatically make an unproven claim look solid. Second, I state the judgement with a defined probability term from one scale, like ICD 203's 'likely', and I state my confidence in a separate sentence that explains what it rests on and what gaps remain. Third, I test competing hypotheses, for example with ACH, focusing on the evidence that is inconsistent with each one rather than counting what fits, and I check how sensitive the conclusion is to the weakest item. In the report I also distinguish clustering from attribution to a named group, mention the alternatives I couldn't rule out, and list what would change my assessment. For most enterprise decisions, a well-supported cluster or tracked group is enough; naming a country or a person rarely changes what we defend."
+
+What makes this answer strong: it separates source and content grading, keeps probability and confidence apart, shows a structured way to test alternatives, and shows analytic humility by stating alternatives and what would change the judgement.
+
+</details>
+
+## 9. Sumber
 
 | ID | Judul | URL | Tipe | Terbit/diakses | Keandalan dan catatan |
 |---|---|---|---|---|---|
@@ -317,4 +470,4 @@ ATRIBUSI    clustering < kelompok dilacak < entitas nyata ; jangan dari satu jen
 | S4 | Richards J. Heuer Jr.: Psychology of Intelligence Analysis (CIA Center for the Study of Intelligence) | https://www.cia.gov/resources/csi/books-monographs/psychology-of-intelligence-analysis-2/ | primer | 1999; diakses 2026-10-10 | Tinggi. Bias kognitif dan delapan langkah ACH (bab 8) |
 | S5 | US Government: A Tradecraft Primer: Structured Analytic Techniques for Improving Intelligence Analysis | https://www.cia.gov/resources/csi/static/Tradecraft-Primer-apr09.pdf | primer | 2009-03; diakses 2026-10-10 | Tinggi. Pengelompokan SAT dan Quality of Information Check |
 
-**Catatan sumber:** rentang persen ICD 203 dikutip dari teks direktif sebagaimana direproduksi di sumber sekunder (taksonomi MISP); cocokkan dengan PDF ODNI bila tersedia. Tabel tingkat keyakinan high/moderate/low di bagian 3.3 adalah pedoman praktik umum, bukan definisi resmi ICD 203. Kode awal untuk jenis sumber siber di bagian 3.2 adalah titik mulai yang wajar, bukan peringkat baku.
+**Catatan sumber:** rentang persen ICD 203 dikutip dari teks direktif sebagaimana direproduksi di sumber sekunder (taksonomi MISP); cocokkan dengan PDF ODNI bila tersedia. Tabel tingkat keyakinan high/moderate/low di bagian 1.5 adalah pedoman praktik umum, bukan definisi resmi ICD 203. Kode awal untuk jenis sumber siber di bagian 1.3 adalah titik mulai yang wajar, bukan peringkat baku.
