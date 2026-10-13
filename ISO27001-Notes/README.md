@@ -19,7 +19,7 @@ Catatan saya belajar ISO 27001 dari sudut pandang orang SOC. Contoh organisasi d
 | 09 | [Manajemen risiko praktik (27005)](09-manajemen-risiko-praktik.md) |
 | 10 | [Kontrol insiden dan pelaporan event (27035)](10-insiden-dan-27035.md) |
 | 11 | [Logging, monitoring, sinkronisasi waktu](11-logging-monitoring-waktu.md) |
-| 12 | [Threat intelligence dan manajemen kerentanan](12-threat-intel-kerentanan-pemasok.md) |
+| 12 | [Threat intelligence, manajemen kerentanan, dan pemasok](12-threat-intel-kerentanan-pemasok.md) |
 | 13 | [Audit dan bukti](13-audit-dan-bukti.md) |
 | 14 | [Capstone dan interview](14-capstone-dan-interview.md) |
 | 15 | [Menjalankan audit internal: dari program sampai laporan](15-menjalankan-audit-internal.md) |

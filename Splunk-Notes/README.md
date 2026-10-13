@@ -16,14 +16,14 @@ Catatan saya belajar Splunk Enterprise dan Enterprise Security, dari SPL sampai 
 | 06 | [Sumber daya SPL di ES, SSE, Lantern](06-sumber-daya-spl-es-sse-lantern.md) |
 | 07 | [Review Minggu 1](07-review-minggu-1.md) |
 | 08 | [Defenses dan sumber data](08-defenses-dan-sumber-data.md) |
-| 09 | [SIEM practices, CIM, data model](09-siem-cim-data-model.md) |
+| 09 | [Praktik SIEM, CIM, data model](09-siem-cim-data-model.md) |
 | 10 | [Acceleration dan Asset and Identity](10-acceleration-asset-identity.md) |
 | 11 | [Field CIM untuk investigasi](11-field-cim-investigasi.md) |
 | 12 | [SSE dan ES menilai sumber data](12-sse-es-menilai-sumber-data.md) |
 | 13 | [Organisasi SOC](13-organisasi-soc.md) |
 | 14 | [Framework, CIA, risiko](14-framework-cia-risiko.md) |
-| 15 | [Serangan dan istilah](15-serangan-dan-istilah.md) |
-| 16 | [Tiers threat intel dan annotations](16-tiers-threat-intel-annotations.md) |
+| 15 | [Jenis serangan, attack vector, glosarium](15-serangan-dan-istilah.md) |
+| 16 | [Tingkatan threat intel dan annotations](16-tiers-threat-intel-annotations.md) |
 | 17 | [TTP](17-ttp.md) |
 | 18 | [Continuous monitoring dan lima tahap investigasi](18-continuous-monitoring-5-tahap-investigasi.md) |
 | 19 | [Metrik dan disposisi](19-metrik-dan-disposisi.md) |
