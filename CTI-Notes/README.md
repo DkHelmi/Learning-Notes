@@ -4,7 +4,7 @@
 >
 > License: [CC BY 4.0](LICENSE).
 
-Catatan saya belajar cyber threat intelligence untuk kebutuhan SOC dan IR.
+Catatan saya belajar cyber threat intelligence untuk kebutuhan SOC dan IR. Contoh organisasi di dalamnya fiktif.
 
 | Day | Topik |
 |---|---|
@@ -15,7 +15,7 @@ Catatan saya belajar cyber threat intelligence untuk kebutuhan SOC dan IR.
 | 05 | [Sumber pengumpulan: OSINT, vendor, ISAC, feed; etika dan legal](05-sumber-pengumpulan-etika.md) |
 | 06 | [Review Minggu 1](06-review-minggu-1.md) |
 | 07 | [IOC dan pengayaan; dasar STIX/TAXII](07-ioc-pengayaan-stix-taxii.md) |
-| 08 | [MISP/OpenCTI ringan](08-misp-opencti.md) |
+| 08 | [MISP dan OpenCTI ringan](08-misp-opencti.md) |
 | 09 | [Profil aktor dan membaca laporan](09-profil-aktor-membaca-laporan.md) |
 | 10 | [Mengoperasionalkan CTI: deteksi, hunting, pengayaan SIEM](10-operasionalisasi-cti.md) |
 | 11 | [Menulis produk CTI; TLP](11-menulis-produk-tlp.md) |
