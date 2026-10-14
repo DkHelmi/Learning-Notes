@@ -8,6 +8,8 @@ Catatan saya belajar Splunk Enterprise dan Enterprise Security, dari SPL sampai 
 
 | Day | Topik |
 |---|---|
+| 03 | [Log Windows Security: logon, akun, proses](03-log-windows-security.md) |
+| 07 | [Alur triage alert L1: disposisi, eskalasi, handover](07-alur-triage-alert-l1.md) |
 | 11 | [rex dan eval](11-rex-eval.md) |
 | 12 | [foreach, lookup, makeresults](12-foreach-lookup-makeresults.md) |
 | 13 | [transaction dan first/last](13-transaction-first-last.md) |
