@@ -13,6 +13,7 @@ Catatan saya belajar Splunk Enterprise dan Enterprise Security, dari SPL sampai 
 | 03 | [Log Windows Security: logon, akun, proses](03-log-windows-security.md) |
 | 04 | [Sysmon dan PowerShell](04-sysmon-powershell.md) |
 | 05 | [Log jaringan: firewall, proxy, DNS, VPN](05-log-jaringan.md) |
+| 06 | [Log Linux dan identitas cloud: linux_secure, auditd, Entra ID, M365](06-log-linux-identitas-cloud.md) |
 | 07 | [Alur triage alert L1: disposisi, eskalasi, handover](07-alur-triage-alert-l1.md) |
 | 08 | [chart, timechart, dan memilih visualisasi](08-chart-timechart-visualisasi.md) |
 | 09 | [Report, scheduled alert, throttle, dashboard](09-report-alert-dashboard.md) |
@@ -20,8 +21,14 @@ Catatan saya belajar Splunk Enterprise dan Enterprise Security, dari SPL sampai 
 | 12 | [foreach, lookup, makeresults](12-foreach-lookup-makeresults.md) |
 | 13 | [transaction dan first/last](13-transaction-first-last.md) |
 | 14 | [Search efisien](14-search-efisien.md) |
+| 15 | [Field Extractor dan sharing knowledge object](15-field-extractor-dan-sharing.md) |
+| 16 | [Field alias, calculated field, urutan operasi search-time](16-field-alias-calculated-field.md) |
+| 17 | [Event type dan tag](17-event-type-dan-tag.md) |
+| 18 | [Macro](18-macro.md) |
+| 19 | [Workflow action GET, POST, dan Search](19-workflow-action.md) |
 | 20 | [Review Minggu 1](20-review-spl-dan-knowledge-object.md) |
 | 21 | [Defenses dan sumber data](21-defenses-dan-sumber-data.md) |
+| 22 | [Membuat data model dan memakai Pivot](22-data-model-dan-pivot.md) |
 | 23 | [Praktik SIEM, CIM, data model](23-siem-cim-data-model.md) |
 | 24 | [Field CIM untuk investigasi](24-field-cim-investigasi.md) |
 | 25 | [tstats](25-tstats.md) |

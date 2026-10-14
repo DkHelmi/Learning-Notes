@@ -9,25 +9,18 @@ versions_checked: Splunk Enterprise SPL Search Reference 10.2 (foreach, lookup, 
 
 Cakupan: mengulang logika atas banyak field dengan `foreach`, memperkaya hasil dengan `lookup` (termasuk CIDR dan wildcard), dan menguji logika deteksi dengan data sintetis dari `makeresults`.
 
-## 1. Tujuan belajar
+## Ide inti
 
-Setelah menyelesaikan Day ini, kamu bisa:
+Tiga command di Day ini jarang muncul di tutorial pertama, tetapi ketiganya menentukan apakah SPL yang kamu tulis bisa dirawat orang lain. `foreach` menjalankan satu template atas banyak field, sehingga logika yang sama tidak ditulis sepuluh kali dan menambah satu field baru tidak berarti menyunting ulang rumusnya. `lookup` menempelkan konteks dari tabel referensi, dan konteks itulah yang mengubah "10.20.5.7 gagal login" menjadi "server billing pelanggan gagal login". `makeresults` membuat data buatan yang hasilnya bisa kamu hitung lebih dulu, sehingga logika diuji sebelum dipercayakan ke data nyata. Dasar SPL-nya ada di Day 02; Day ini menambahkan tiga kebiasaan di atasnya.
 
-- memakai `foreach` (mode multifield dan multivalue) dengan token `<<FIELD>>`, `<<MATCHSTR>>`, dan `<<ITEM>>` untuk menghindari `eval` yang berulang-ulang.
-- memperkaya event dengan `lookup` (OUTPUT vs OUTPUTNEW, penempatan setelah `stats`), dan menjelaskan lookup definition dengan match type CIDR/WILDCARD.
-- membangun dan merawat baseline "first seen" dengan `inputlookup`/`outputlookup`.
-- membuat data uji dengan `makeresults` untuk menguji regex, eval, dan logika deteksi tanpa menyentuh index.
+Analoginya datang langsung dari pekerjaan NOC. `lookup` adalah tabel referensi seperti daftar pelanggan atau inventaris perangkat: berguna selama ada yang merawatnya, dan batas analoginya justru di situ, karena lookup yang basi menghasilkan konteks yang salah dengan sangat percaya diri, sehingga setiap lookup butuh pemilik dan jadwal pembaruan. `foreach` adalah loop di script operasional yang menjalankan perintah yang sama untuk setiap interface; batasnya, token di `foreach` diekspansi sebagai teks dan field tujuan yang sudah ada akan ditimpa tanpa peringatan. `makeresults` adalah menguji alarm dengan trap palsu sebelum menunggu gangguan nyata; batasnya, data buatan tidak punya kekacauan data nyata seperti field kosong, zona waktu aneh, atau nilai multivalue, jadi lulus uji di `makeresults` bukan jaminan jalan di produksi.
 
-## 2. Konteks singkat
+**Kapan relevan:** enrichment atas hasil agregasi, baseline "first seen" yang diperbarui terjadwal, pengujian regex dan ambang sebelum dipasang di alert, serta SPL yang jumlah field-nya bisa berubah seiring waktu.
+**Kapan bukan jawaban:** `lookup` bukan pengganti data yang benar di sumbernya; kalau field-nya salah karena parsing, perbaikannya di onboarding (Day 28), bukan di tabel referensi. Daftar aset dan identitas di ES dikelola framework-nya sendiri, bukan dengan `outputlookup` ke lookup inti (Day 26). Dan uji `makeresults` yang lulus tidak membuktikan detection-mu bekerja di data nyata, hanya membuktikan logikanya seperti yang kamu maksud.
 
-Tiga command ini mewakili tiga kebiasaan analyst yang matang:
-1. **`foreach`**: menulis SPL yang ringkas dan tahan perubahan. Satu template untuk banyak field, bukan sepuluh `eval` yang hampir sama.
-2. **`lookup`**: konteks. Alert "10.1.2.3 login gagal" jauh lebih berguna setelah tahu bahwa 10.1.2.3 adalah server keuangan milik tim X. Di ES, konteks ini dibangun oleh Asset & Identity framework (Day 26) dan threat intel, yang keduanya adalah lookup.
-3. **`makeresults`**: menguji sebelum menjalankan. Kamu bisa memeriksa regex, ambang, atau logika `case()` pada data yang kamu tentukan sendiri.
+## 1. Konsep inti
 
-## 3. Konsep inti
-
-### 3.1 foreach
+### 1.1 foreach
 
 `foreach` menjalankan sebuah template untuk setiap elemen [S1]. Mode yang tersedia di 10.2:
 
@@ -49,7 +42,7 @@ Pola komunitas yang sering muncul [S5]:
 
 `foreach` juga menimpa field tujuan bila beberapa field cocok dan template menulis ke satu field yang sama [S5]. Inisialisasi akumulator (mis. `eval score=0`) sebelum `foreach`, karena operasi dengan null menghasilkan null (Day 11).
 
-### 3.2 lookup
+### 1.2 lookup
 
 Sintaks [S2]:
 
@@ -71,9 +64,9 @@ Lookup definition dan match type. CSV yang diunggah perlu lookup definition agar
 **Command saudara:**
 - `inputlookup`: membaca isi lookup sebagai hasil search (generating command).
 - `outputlookup`: menulis hasil search ke lookup.
-- Kombinasi keduanya membentuk pola baseline yang diperbarui (bagian 4.4).
+- Kombinasi keduanya membentuk pola baseline yang diperbarui (bagian 2.4).
 
-### 3.3 makeresults
+### 1.3 makeresults
 
 `| makeresults [count=<n>] [annotate=<bool>]` membuat hasil sementara di memori, tanpa meng-index apa pun [S3]:
 - `count` default 1. Setiap hasil mendapat `_time` (waktu eksekusi).
@@ -81,17 +74,17 @@ Lookup definition dan match type. CSV yang diunggah perlu lookup definition agar
 - Opsi `format=csv|json` dengan `data=` membuat event dari data inline. Batasnya 29.999 karakter [S3]. Cek versi yang mulai mendukung opsi ini.
 - Di lingkungan terdistribusi atau federated, hasil bisa berlipat sesuai jumlah server bila `splunk_server` tidak dibatasi [S3].
 
-### 3.4 Enterprise vs ES
+### 1.4 Enterprise vs ES
 
 - Ketiga command adalah fitur inti Splunk Enterprise.
 - **ES memakai lookup secara masif**: daftar aset dan identitas, threat intelligence, dan banyak lookup pendukung detection. Kamu umumnya tidak mengedit lookup inti ES secara langsung, tetapi lewat menu konfigurasi ES, cek nama menu di ES 8.x.
 - `makeresults` sering dipakai untuk menguji detection dan adaptive response di ES tanpa menunggu kejadian nyata.
 
-## 4. Contoh SPL dan langkah di ES
+## 2. Contoh SPL dan langkah di ES
 
 > Keluaran berlabel ilustrasi. Lookup di bawah adalah fiktif dan dibuat sendiri di lab.
 
-### 4.1 foreach multifield: merapikan hasil tstats
+### 2.1 foreach multifield: merapikan hasil tstats
 
 Hasil `tstats` atas data model memberi field berprefiks (`Processes.dest`, `Processes.user`, ...). Selain `rename Processes.* AS *` (Day 25), `foreach` bisa melakukan transformasi per field:
 
@@ -109,9 +102,9 @@ Hasil `tstats` atas data model memberi field berprefiks (`Processes.dest`, `Proc
 
 Di sini `rename` sebenarnya lebih sederhana. Contoh ini untuk memahami token. Gunakan `foreach` bila kamu juga perlu mengubah nilai, mis. `eval <<MATCHSTR>>=lower('<<FIELD>>')`.
 
-### 4.2 foreach untuk skor dari banyak flag
+### 2.2 foreach untuk skor dari banyak flag
 
-Melanjutkan Day 11 bagian 4.3: ada beberapa field flag `f_*` bernilai 0/1.
+Melanjutkan Day 11 bagian 2.3: ada beberapa field flag `f_*` bernilai 0/1.
 
 ```
 ... | eval f_sqli=..., f_traversal=..., f_scanner_ua=..., f_long_uri=...
@@ -123,7 +116,7 @@ Melanjutkan Day 11 bagian 4.3: ada beberapa field flag `f_*` bernilai 0/1.
 - `eval score=0`: inisialisasi. Tanpanya, `null + 1 = null`.
 - Template dijalankan untuk setiap field `f_*`. Menambah flag baru (`f_xss`) tidak perlu mengubah baris skor. Itulah keuntungan `foreach`.
 
-### 4.3 lookup: enrichment aset dan IOC
+### 2.3 lookup: enrichment aset dan IOC
 
 Buat lookup fiktif `lab_assets.csv`:
 
@@ -172,7 +165,7 @@ src_ip            count   sites  asset_name   owner    criticality
 
 Perhatikan bahwa yang dipanggil adalah nama definition (`lab_subnets`), bukan nama file `.csv`, karena match type melekat pada definition. Cek perilaku ini di versi lab-mu.
 
-### 4.4 Baseline "first seen" dengan inputlookup/outputlookup
+### 2.4 Baseline "first seen" dengan inputlookup/outputlookup
 
 **Tujuan:** mendeteksi proses yang belum pernah terlihat di host mana pun. Ini pola klasik deteksi "new/rare".
 
@@ -206,7 +199,7 @@ Deteksi:
 - Stats kedua menggabungkan: `min(firstSeen)` mempertahankan pertama kali terlihat.
 - **Kapan gagal:** lookup tumbuh tanpa batas (tambahkan pembersihan berdasarkan `lastSeen`); dua jadwal menulis lookup yang sama secara bersamaan; path biner yang berisi nama user atau versi membuat semuanya tampak baru. Normalisasi dengan `rex mode=sed` (Day 11).
 
-### 4.5 makeresults: menguji logika sebelum memakai data nyata
+### 2.5 makeresults: menguji logika sebelum memakai data nyata
 
 Uji regex `-enc` dari Day 11 terhadap kasus positif dan negatif:
 
@@ -248,19 +241,19 @@ Membuat deret waktu sintetis untuk menguji ambang deteksi:
 - `_time = now() - n*60`: satu event per menit ke belakang.
 - Hasil yang diharapkan: satu baris `alice` (6 gagal, 4 sukses). Jika tidak muncul, logikanya salah, bukan datanya.
 
-### 4.6 Di ES (generik)
+### 2.6 Di ES (generik)
 
 - Daftar aset/identitas dan threat intel di ES adalah lookup yang dikelola framework. Kamu menambah sumbernya lewat konfigurasi ES, tidak dengan `outputlookup` ke lookup inti, cek prosedur di ES 8.x (Day 26, Day 30).
 - `makeresults` sering dipakai untuk memicu uji adaptive response atau notable/finding di lingkungan lab (Day 41).
 
-## 5. Lab praktik
+## 3. Lab praktik
 
 1. Unggah `lab_assets.csv` (Settings > Lookups > Lookup table files), lalu buat lookup definition-nya.
-2. Jalankan bagian 4.3. Bandingkan durasi bila `lookup` ditaruh sebelum `stats` (pada semua event) vs sesudah.
+2. Jalankan bagian 2.3. Bandingkan durasi bila `lookup` ditaruh sebelum `stats` (pada semua event) vs sesudah.
 3. Buat `lab_subnets.csv` + definition dengan Match type `CIDR(subnet)`. Uji dengan `| makeresults | eval src_ip="192.168.250.33" | lookup lab_subnets subnet AS src_ip OUTPUT zone`. Hasil yang diharapkan: `zone=corp-lan`.
-4. Jalankan bagian 4.4 inisialisasi + deteksi. Di VM Windows lab, jalankan biner jinak yang belum pernah dijalankan (mis. salin `notepad.exe` ke folder lain dengan nama baru). Jalankan pembaruan dan deteksi. Hasil yang diharapkan: biner baru muncul.
-5. Jalankan bagian 4.5, lalu ubah regex/ambang sampai ketiga baris berperilaku sesuai keinginanmu. Catat perubahannya.
-6. Jalankan bagian 4.2 dengan menambah satu flag baru tanpa mengubah baris skor.
+4. Jalankan bagian 2.4 inisialisasi + deteksi. Di VM Windows lab, jalankan biner jinak yang belum pernah dijalankan (mis. salin `notepad.exe` ke folder lain dengan nama baru). Jalankan pembaruan dan deteksi. Hasil yang diharapkan: biner baru muncul.
+5. Jalankan bagian 2.5, lalu ubah regex/ambang sampai ketiga baris berperilaku sesuai keinginanmu. Catat perubahannya.
+6. Jalankan bagian 2.2 dengan menambah satu flag baru tanpa mengubah baris skor.
 
 **Hasil yang sebaiknya tersimpan:**
 - Lookup aset dan CIDR bekerja.
@@ -268,9 +261,9 @@ Membuat deret waktu sintetis untuk menguji ambang deteksi:
 - Baseline first-seen menangkap biner baru di lab.
 - Regex `-enc` diuji dengan kasus positif dan negatif lewat `makeresults`.
 
-**Variasi tantangan:** tambahkan pembersihan baseline pada bagian 4.4, yaitu buang entri dengan `lastSeen` lebih tua dari 90 hari sebelum `outputlookup`. Jelaskan risikonya: proses langka yang sah akan dianggap "baru" lagi.
+**Variasi tantangan:** tambahkan pembersihan baseline pada bagian 2.4, yaitu buang entri dengan `lastSeen` lebih tua dari 90 hari sebelum `outputlookup`. Jelaskan risikonya: proses langka yang sah akan dianggap "baru" lagi.
 
-## 6. Troubleshooting
+## 4. Troubleshooting
 
 | Gejala | Kemungkinan penyebab | Cara memeriksa/memperbaiki |
 |---|---|---|
@@ -282,7 +275,7 @@ Membuat deret waktu sintetis untuk menguji ambang deteksi:
 | `makeresults` menghasilkan baris ganda | Dijalankan di beberapa server (distributed/federated) | `splunk_server=local` [S3] |
 | `makeresults format=csv` error | Versi lama tidak mendukung; data > 29.999 karakter | Cek versi; pecah data [S3] |
 
-## 7. Kesalahan umum dan jebakan
+## 5. Kesalahan umum dan jebakan
 
 - Lookup sebelum agregasi pada jutaan event. Lambat tanpa manfaat [S2].
 - `OUTPUT` menimpa field CIM (mis. `user`). Ini mengacaukan detection lain di search yang sama. Gunakan `OUTPUTNEW` atau alias [S2].
@@ -291,13 +284,13 @@ Membuat deret waktu sintetis untuk menguji ambang deteksi:
 - Kutip tunggal di `foreach` terlupa untuk field bertitik [S1].
 - `[komunitas]` Pola `addtotals` + `foreach` untuk persentase dan peringatan "foreach menimpa field tujuan" berasal dari thread Splunk Community [S5]. Perilaku itu konsisten dengan cara kerja `eval`: field tujuan yang sudah ada akan ditimpa tanpa peringatan.
 
-## 8. Catatan terkini
+## 6. Catatan terkini
 
 - `foreach` 10.2 mendokumentasikan mode `multivalue`, `json_array`, dan `auto_collections` selain `multifield` [S1]. Ini berguna untuk log cloud JSON. Materi lama hanya mengenal mode multifield.
 - `makeresults` mendukung `format=csv|json` + `data=` untuk data inline [S3]. Sebelumnya, data uji biasanya dibuat dengan `eval` + `makemv` + `mvexpand`.
 - Fungsi eval `lookup()` (Day 11) memberi cara alternatif melakukan lookup CSV di dalam ekspresi, dengan hasil berupa objek JSON [S4].
 
-## 9. Cheat sheet
+## 7. Cheat sheet
 
 ```
 foreach <wildcard> [eval <<MATCHSTR>>='<<FIELD>>']          multifield (default); token: <<FIELD>> <<MATCHSTR>> <<MATCHSEG1>>
@@ -312,7 +305,61 @@ inputlookup <x> [append=true] | outputlookup <x>                   baseline firs
 | makeresults count=10 | streamstats count AS n | eval _time=now()-n*60
 ```
 
-## 10. Sumber
+## 8. Uji diri
+
+Coba jawab dulu tanpa membuka bagian di atas. Bila jawabanmu berbeda dengan kunci, baca ulang bagian yang disebut di kunci.
+
+**1. Pertanyaan jebakan.** Kamu menjumlahkan beberapa field flag dengan `| foreach f_* [eval score = score + '<<FIELD>>']` dan kolom `score` keluar kosong untuk semua baris. Apa penyebabnya?
+
+<details><summary>Jawaban</summary>
+
+Akumulatornya tidak diinisialisasi, sehingga iterasi pertama menghitung `null + 1`, dan operasi dengan null menghasilkan null, bukan nol. Tambahkan `eval score=0` sebelum `foreach`. Jebakan kedua yang gejalanya mirip: bila nama field memuat titik atau spasi, token di dalam template wajib dibungkus kutip tunggal (`'<<FIELD>>'`), kalau tidak yang dipakai adalah teks nama field, bukan nilainya. Lihat bagian 1.1 dan 2.2.
+
+</details>
+
+**2. Skenario keputusan.** Sebuah search menghasilkan beberapa juta event, dan kamu perlu menempelkan nama aset dan pemiliknya dari sebuah lookup, lalu merekap per `src_ip`. Urutan mana yang kamu tulis?
+
+- A. `lookup` dulu pada semua event, lalu `stats` supaya setiap event sudah terenrich sejak awal.
+- B. `stats` dulu per `src_ip`, lalu `lookup` pada baris hasil agregasi.
+- C. Tidak ada bedanya, karena hasil akhirnya sama.
+
+<details><summary>Jawaban</summary>
+
+B. Hasil akhirnya memang sama, tetapi biayanya tidak: pada urutan A, lookup dijalankan untuk setiap event, sedangkan pada urutan B hanya untuk satu baris per `src_ip`. Dokumentasi `lookup` sendiri menyarankan menempatkannya setelah command transformasi bila memungkinkan. C keliru karena menyamakan kebenaran hasil dengan biaya menghasilkannya; di search ad hoc selisihnya terasa, di dashboard dan alert terjadwal selisihnya menumpuk. Pengecualiannya hanya bila hasil lookup itu sendiri dibutuhkan sebagai kolom pengelompokan `stats`. Lihat bagian 1.2 dan 2.3.
+
+</details>
+
+**3. Pertanyaan jebakan.** "Enrichment aset sudah aku pasang dengan `lookup assets.csv ip AS src_ip OUTPUT asset_name owner user`, jadi sekarang setiap event punya konteks lengkap." Apa yang berpotensi rusak?
+
+<details><summary>Jawaban</summary>
+
+`OUTPUT` menimpa field event yang sudah ada, dan `user` adalah field CIM yang kemungkinan besar sudah terisi dari log aslinya. Setelah baris itu, nilai `user` di sisa pipeline berasal dari lookup, bukan dari event, sehingga logika lain di search yang sama ikut salah tanpa memunculkan error. Pakai `OUTPUTNEW`, yang hanya mengisi bila field itu belum ada, atau beri nama lain dengan klausa `AS`. Jebakan pendampingnya: bila tidak ada baris lookup yang cocok, field output tidak terisi, jadi tambahkan `fillnull` atau `coalesce` bila baris tanpa konteks tetap perlu terlihat. Lihat bagian 1.2 dan 2.3.
+
+</details>
+
+**4. Skenario keputusan.** Kamu baru menulis regex untuk menangkap argumen terenkode di command line dan ingin memastikannya benar sebelum dipakai di alert. Langkah mana yang paling tepat?
+
+- A. Jalankan di index produksi dengan rentang 30 hari, karena hanya data nyata yang membuktikan.
+- B. Buat lima baris uji dengan `makeresults format=csv data=...` yang memuat kasus positif, kasus negatif, dan variasi yang kamu duga akan terlewat, lalu jalankan regexnya di situ.
+- C. Pasang langsung sebagai alert dengan ambang tinggi, lalu amati seminggu.
+
+<details><summary>Jawaban</summary>
+
+B. Data buatan punya satu keunggulan yang tidak dimiliki data nyata: hasilnya bisa kamu hitung lebih dulu, sehingga perbedaan antara yang kamu harapkan dan yang keluar langsung menunjuk ke kesalahan logika. Kasus negatif dan variasi itulah yang menemukan celah; regex yang hanya pernah diuji dengan satu contoh positif yang rapi adalah cara detection diam-diam melewatkan kejadian. A mahal dan tidak memberi jawaban "seharusnya berapa". C menunda pembuktian ke waktu ketika kesalahannya sudah berbiaya. Yang perlu diingat setelah lulus uji: data buatan tidak punya kekacauan data nyata seperti field kosong, zona waktu aneh, atau nilai multivalue, jadi lulus di `makeresults` membuktikan logikanya sesuai maksudmu, bukan membuktikan detection-nya bekerja. Lihat bagian 1.3 dan 2.5.
+
+</details>
+
+**5. Interview question (English).** "How do you add context like asset owner or criticality to a Splunk search, and what goes wrong with that approach over time?"
+
+<details><summary>Sample answer</summary>
+
+"I use a lookup, and I place it after the aggregation rather than before it, so I'm enriching one row per host instead of every event. I prefer OUTPUTNEW over OUTPUT so the enrichment can't quietly overwrite a field the log already populated, like user, and I fill the misses explicitly, because a host that isn't in the asset table is itself a finding rather than a blank cell. What goes wrong over time is almost never the SPL: it's the table. A lookup with no owner and no refresh schedule keeps answering confidently with last year's data, so a decommissioned server still looks critical and a new one looks unknown, and analysts start distrusting the whole column. So for anything that feeds a dashboard or a detection I want to know who maintains the table, how often it's rebuilt, and what happens when it's stale, and for baseline tables I build with outputlookup I also add a cleanup step, because a table that only grows will eventually be both slow and wrong."
+
+What makes this answer strong: it gets the placement and the OUTPUTNEW choice right, treats a lookup miss as information rather than a gap to hide, and moves the real risk from the query to the data ownership question, which is where it actually lives.
+
+</details>
+
+## 9. Sumber
 
 | ID | Judul | URL | Tipe | Terbit/diakses | Keandalan dan catatan |
 |---|---|---|---|---|---|
