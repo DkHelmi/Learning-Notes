@@ -9,22 +9,18 @@ versions_checked: MITRE ATT&CK v19.2 (Agu 2026; v18 Okt 2025 mengganti Data Sour
 
 Cakupan: mengidentifikasi jenis sistem pertahanan siber, alat analisis, dan sumber data yang paling berguna untuk analisis ancaman.
 
-## 1. Tujuan belajar
+## Ide inti
 
-Setelah menyelesaikan Day ini, kamu bisa:
+Detection, hunting, dan investigasi hanya sebaik data yang masuk, jadi pertanyaan pertama sebelum membahas data model dan normalisasi adalah pertanyaan yang jauh lebih sederhana: apa yang sebenarnya bisa kita lihat? Day 03 sampai 06 membahas isi masing-masing sumber log satu per satu, mulai dari Windows Security dan Sysmon sampai log jaringan, Linux, dan identitas cloud. Day ini memundurkan sudut pandang satu langkah: mengelompokkan sistem pertahanan menurut lapisan yang dijaganya, mengenali data yang dihasilkan setiap lapisan, lalu memilih sumber berdasarkan pertanyaan analisis yang mau dijawab, bukan berdasarkan daftar produk yang sudah dibeli. Dari situ muncul dua pekerjaan yang bisa dikerjakan dengan SPL biasa, yaitu membuat inventaris sumber data beserta kesegarannya dan memetakan sourcetype ke data model, dan keduanya menjadi pintu masuk ke pembahasan CIM di Day berikutnya.
 
-- mengelompokkan sistem pertahanan (network, endpoint, identity, email/web, cloud, data) beserta fungsinya: mencegah, mendeteksi, atau merespons.
-- membedakan alat analisis: SIEM, SOAR, UEBA, EDR/XDR, NDR, TIP, sandbox, vulnerability scanner.
-- memilih sumber data yang paling berguna untuk sebuah pertanyaan analisis, dan memetakannya ke data model CIM.
-- membuat inventaris sumber data di Splunk (apa yang ada, seberapa segar, dan ke data model mana mengalirnya).
+Analoginya adalah titik monitoring di jaringan. Gangguan hanya terlihat di segmen yang benar-benar dipantau, dan POP tanpa titik ukur akan diam saja sampai pelanggan menelepon. Batas analoginya ada di langkah setelah data masuk: di NMS, perangkat yang sudah terpantau langsung muncul di grafik, sedangkan di SIEM sumber yang sudah masuk index belum tentu terpakai, karena tanpa tag dan field yang benar data bervolume besar tetap tidak muncul di data model dan detection yang bergantung pada model itu tidak akan pernah fire. Kesegaran data punya analogi yang sama tajamnya: polling yang berhenti memberi grafik rata, dan grafik rata mudah disalahartikan sebagai jaringan yang tenang. Sumber log yang mendadak diam juga bukan sekadar masalah operasional, karena salah satu penyebabnya adalah agent yang dimatikan penyerang.
 
-## 2. Konteks singkat
+**Kapan relevan:** menilai cakupan visibilitas sebelum menjanjikan sebuah detection, menjelaskan kenapa satu pertanyaan investigasi tidak bisa dijawab dengan data yang ada, menyusun usulan sumber data berikutnya beserta alasannya, dan membenarkan biaya ingest ke pihak yang membayarnya.
+**Kapan bukan jawaban:** daftar sumber yang panjang bukan bukti kemampuan deteksi. Sumber yang masuk tanpa normalisasi tetap tidak terbaca data model (Day 23), dan menambah sumber tanpa use case justru menaikkan biaya sekaligus menenggelamkan sinyal [S6]. Inventaris juga bukan pengganti perbaikan di sisi sumbernya: kalau command line tidak terekam karena audit policy atau konfigurasi Sysmon tidak mengaktifkan event yang kamu butuhkan, yang harus diubah adalah konfigurasi di host, bukan query di Splunk.
 
-Semuanya dimulai dari pertanyaan dasar: apa yang bisa kita lihat? Detection, hunting, dan investigasi hanya sebaik data yang masuk. Sebagai analyst SOC berpengalaman kamu sudah memakai banyak sumber ini; yang perlu dilatih adalah mengkategorikan sumber dan menjelaskan nilai analitisnya dengan cepat. Di pekerjaan, kemampuan itu dipakai untuk membenarkan biaya ingest dan menemukan celah visibilitas.
+## 1. Konsep inti
 
-## 3. Konsep inti
-
-### 3.1 Sistem pertahanan menurut lapisan
+### 1.1 Sistem pertahanan menurut lapisan
 
 | Lapisan | Contoh sistem | Fungsi utama | Data yang dihasilkan untuk SIEM |
 |---|---|---|---|
@@ -39,7 +35,7 @@ Semuanya dimulai dari pertanyaan dasar: apa yang bisa kita lihat? Detection, hun
 
 Prinsip defense in depth: tidak ada satu lapisan yang cukup. SIEM bernilai karena mengorelasikan jejak dari banyak lapisan atas kejadian yang sama.
 
-### 3.2 Alat analisis
+### 1.2 Alat analisis
 
 | Alat | Peran | Hubungan dengan Splunk |
 |---|---|---|
@@ -54,7 +50,7 @@ Prinsip defense in depth: tidak ada satu lapisan yang cukup. SIEM bernilai karen
 
 Batas antar kategori kabur dan sarat pemasaran (mis. XDR vs SIEM). Pegang fungsinya, bukan nama produknya.
 
-### 3.3 Sumber data paling berguna: mulai dari pertanyaan
+### 1.3 Sumber data paling berguna: mulai dari pertanyaan
 
 Panduan bersama ASD ACSC, CISA, FBI, NSA, dan mitra internasional (Agustus 2024) menekankan empat faktor [S1][S2]:
 1. Kebijakan event logging yang disetujui perusahaan.
@@ -92,22 +88,22 @@ Sysmon layak disebut khusus karena gratis dan sangat informatif untuk Windows [S
 
 Event ditulis ke log `Microsoft-Windows-Sysmon/Operational` dengan timestamp UTC. Halaman terbaru menyebut Sysmon berjalan di Windows 11+ dan Server 2019+ [S4]. Sysmon tidak menganalisis apa pun dan tidak menyembunyikan diri. Analisis terjadi di SIEM [S4].
 
-### 3.4 ATT&CK dan sumber data: perubahan penting
+### 1.4 ATT&CK dan sumber data: perubahan penting
 
 Dulu ATT&CK memetakan teknik ke Data Sources/Data Components. Sejak v18 (28 Okt 2025), Data Sources dipensiunkan dan diganti Detection Strategies (DETxxxx) dan Analytics (ANxxxx) untuk setiap teknik. Analytics menunjuk log source dan data component yang relevan [S3]. Versi ATT&CK saat ini adalah v19.2 (Agustus 2026; v19 dirilis April 2026). v19.2 adalah rilis "Agile" pertama yang memperbarui Groups/Software/Campaigns di luar jadwal dua kali setahun [S5].
 
 Implikasinya: materi lama yang menyebut "ATT&CK data sources" masih relevan secara konsep. Saat mencari di attack.mitre.org sekarang, kamu akan melihat Detection Strategies dan Analytics. Cek tampilan halaman teknik di v19.
 
-### 3.5 Enterprise vs ES
+### 1.5 Enterprise vs ES
 
 - Ingest, normalisasi CIM, dan inventaris data bisa dilakukan di Splunk Enterprise + add-on CIM + TA vendor.
 - ES menambahkan cara menilai cakupan sumber data, mis. dashboard audit data model dan konten yang memeriksa sumber data (Day 27), serta memakai data itu untuk detection, risk, dan aset/identitas.
 
-## 4. Contoh SPL dan langkah di ES
+## 2. Contoh SPL dan langkah di ES
 
 > Keluaran berlabel ilustrasi.
 
-### 4.1 Inventaris sumber data dan kesegaran (freshness)
+### 2.1 Inventaris sumber data dan kesegaran (freshness)
 
 ```
 | tstats count latest(_time) AS last_event where index=* by index sourcetype
@@ -132,7 +128,7 @@ proxy     bluecoat:proxysg:access            0.9 jt    10/06/2026 03:10:55   231
 
 **Cara membaca hasil:** proxy yang "stale" berarti investigasi web selama sekitar 38 jam terakhir buta. Itu temuan, bukan sekadar masalah teknis.
 
-### 4.2 Peta sourcetype ke data model
+### 2.2 Peta sourcetype ke data model
 
 ```
 | tstats count from datamodel=Authentication by sourcetype
@@ -148,7 +144,7 @@ proxy     bluecoat:proxysg:access            0.9 jt    10/06/2026 03:10:55   231
 - Hasilnya adalah matriks cakupan: data model yang kosong berarti detection berbasis model itu tidak akan pernah fire (Day 45).
 - Tanpa akselerasi, `tstats` dari data model tetap jalan (lebih lambat) karena `summariesonly` default false (Day 25).
 
-### 4.3 Profil cepat satu sumber: Sysmon
+### 2.3 Profil cepat satu sumber: Sysmon
 
 ```
 index=* sourcetype="XmlWinEventLog:Microsoft-Windows-Sysmon/Operational" earliest=-24h
@@ -160,7 +156,7 @@ index=* sourcetype="XmlWinEventLog:Microsoft-Windows-Sysmon/Operational" earlies
 - **Cara membaca hasil:** jika EID 3, 10, atau 22 tidak ada, kemungkinan konfigurasi Sysmon tidak mengaktifkannya. Ingat, EID 3 default nonaktif [S4]. Detection yang bergantung pada event itu akan buta.
 - Di lab, ganti `index=*` dengan index Sysmon-mu (efisiensi, Day 14).
 
-### 4.4 Metadata cepat
+### 2.4 Metadata cepat
 
 ```
 | metadata type=sourcetypes index=botsv1
@@ -170,19 +166,19 @@ index=* sourcetype="XmlWinEventLog:Microsoft-Windows-Sysmon/Operational" earlies
 
 - `metadata` adalah generating command yang membaca metadata index (cepat), cek field `firstTime`/`lastTime`/`totalCount` di versi-mu.
 
-### 4.5 Di ES (generik)
+### 2.5 Di ES (generik)
 
 - Gunakan dashboard audit data model/akselerasi (Day 25, Data Model Audit) dan halaman aset/identitas untuk memastikan sumber identitas dan aset terisi (Day 26).
 - Hubungkan inventaris sumber data dengan konten: SSE dan ES dapat menilai sumber data dan menyarankan konten (Day 27).
 
-## 5. Lab praktik
+## 3. Lab praktik
 
-1. Jalankan bagian 4.1 di Splunk lab. Daftarkan setiap sumber dengan statusnya.
-2. Jalankan bagian 4.2. Buat matriks data model x sourcetype.
-3. Isi tabel bagian 3.3 untuk lab-mu: kolom "ada / tidak / sebagian". Contoh: Authentication ada (Windows Security), Web tidak ada (belum ada proxy).
-4. Periksa konfigurasi Sysmon di VM Windows (`sysmon -c` untuk dump konfigurasi [S4]) dan jalankan bagian 4.3. Catat event ID yang aktif.
+1. Jalankan bagian 2.1 di Splunk lab. Daftarkan setiap sumber dengan statusnya.
+2. Jalankan bagian 2.2. Buat matriks data model x sourcetype.
+3. Isi tabel bagian 1.3 untuk lab-mu: kolom "ada / tidak / sebagian". Contoh: Authentication ada (Windows Security), Web tidak ada (belum ada proxy).
+4. Periksa konfigurasi Sysmon di VM Windows (`sysmon -c` untuk dump konfigurasi [S4]) dan jalankan bagian 2.3. Catat event ID yang aktif.
 5. Pilih 3 teknik ATT&CK yang relevan untuk lab (mis. scheduled task, PowerShell, credential dumping). Untuk masing-masing, buka halaman teknik di attack.mitre.org v19, baca Detection Strategy/Analytics, lalu tentukan apakah data lab-mu memadai.
-6. Tulis rekomendasi "3 sumber data berikutnya" untuk lab, dengan alasan berbasis tabel bagian 3.3 dan panduan ASD/CISA [S2].
+6. Tulis rekomendasi "3 sumber data berikutnya" untuk lab, dengan alasan berbasis tabel bagian 1.3 dan panduan ASD/CISA [S2].
 
 **Hasil yang sebaiknya tersimpan:**
 - Inventaris dengan status fresh/delayed/stale.
@@ -193,7 +189,7 @@ index=* sourcetype="XmlWinEventLog:Microsoft-Windows-Sysmon/Operational" earlies
 
 **Variasi tantangan:** buat alert terjadwal sederhana yang memicu bila sourcetype penting (Security, Sysmon) tidak mengirim data lebih dari 60 menit. Jelaskan kenapa "data berhenti" adalah sinyal keamanan juga (mis. agent dimatikan penyerang).
 
-## 6. Troubleshooting
+## 4. Troubleshooting
 
 | Gejala | Kemungkinan penyebab | Cara memeriksa/memperbaiki |
 |---|---|---|
@@ -203,7 +199,7 @@ index=* sourcetype="XmlWinEventLog:Microsoft-Windows-Sysmon/Operational" earlies
 | `_time` meleset jam-an | Zona waktu/parsing timestamp | Normalisasi UTC; perbaiki `TZ` di props (admin) [S2] |
 | Volume ingest membengkak tanpa nilai | Sumber berisik dengan sinyal rendah | Filter di sumber; prioritas berbasis use case [S6] |
 
-## 7. Kesalahan umum dan jebakan
+## 5. Kesalahan umum dan jebakan
 
 - "Kumpulkan semua" tanpa use case. Mahal dan menenggelamkan sinyal [S6].
 - Tidak memantau kesegaran data. Detection "hijau" di atas data yang berhenti mengalir.
@@ -212,14 +208,14 @@ index=* sourcetype="XmlWinEventLog:Microsoft-Windows-Sysmon/Operational" earlies
 - Memakai istilah ATT&CK "data sources" tanpa sadar perubahan v18 [S3].
 - Pandangan "output-driven SIEM" dan pola 80/20 berasal dari blog praktisi [S6]. Arah umumnya sejalan dengan panduan pemerintah [S2], tetapi angka 80/20 adalah heuristik, bukan hasil pengukuran.
 
-## 8. Catatan terkini
+## 6. Catatan terkini
 
 - **ATT&CK v18 (Okt 2025):** Data Sources dipensiunkan, diganti Detection Strategies + Analytics [S3]. v19 (Apr 2026) dan v19.2 (Agu 2026, rilis Agile pertama) [S5].
 - Panduan logging ASD/CISA (Agu 2024) masih menjadi rujukan utama lintas negara untuk prioritas log [S1][S2].
 - Sysmon (halaman diperbarui 10 Sep 2026) mencantumkan event hingga EID 29 (FileExecutableDetected) dan dukungan Windows 11+/Server 2019+ [S4].
 - CIM 6.4.0 (4 Feb 2026) menambah field unit bisnis di data model Data Access untuk aset/identitas, plus beberapa field di Network Sessions, Network Traffic, dan Endpoint [S7].
 
-## 9. Cheat sheet
+## 7. Cheat sheet
 
 ```
 LAPISAN   network(FW/IDS/IPS/WAF/VPN) | web/email(proxy, mail GW) | DNS | endpoint(EPP/EDR/HIDS/Sysmon)
@@ -234,7 +230,59 @@ ATT&CK    v18: data sources -> Detection Strategies + Analytics ; kini v19.2
 INVENTARIS | tstats count latest(_time) where index=* by index sourcetype -> lag
 ```
 
-## 10. Sumber
+## 8. Uji diri
+
+Coba jawab dulu tanpa membuka bagian di atas. Bila jawabanmu berbeda dengan kunci, baca ulang bagian yang disebut di kunci.
+
+**1. Pertanyaan jebakan.** "Sysmon sudah terpasang dan volumenya paling besar di antara semua sourcetype, jadi detection berbasis data model Endpoint sudah pasti bekerja." Apa dua hal yang masih bisa membuat kalimat ini salah?
+
+<details><summary>Jawaban</summary>
+
+Pertama, volume bukan jaminan normalisasi. Sourcetype bisa penuh event tetapi data model tetap kosong bila add-on tidak memetakan field dan tag yang dibutuhkan, dan detection yang membaca data model itu tidak akan pernah fire. Cara memeriksanya adalah menghitung dari data model, bukan dari index, seperti pada peta sourcetype ke data model. Kedua, Sysmon hanya mencatat apa yang dinyalakan di konfigurasinya: event network connection tidak aktif secara default, dan event seperti process access ke LSASS atau DNS query bisa tidak ada sama sekali, sehingga profil per host perlu diperiksa sebelum detection dijanjikan. Lihat bagian 1.3, 2.2, 2.3, dan 4.
+
+</details>
+
+**2. Skenario keputusan.** Inventaris sumber datamu menunjukkan sourcetype proxy berstatus stale, dengan event terakhir sekitar 38 jam lalu. Apa langkah yang paling tepat?
+
+- A. Serahkan ke tim infrastruktur sebagai masalah teknis forwarder, lalu lanjutkan triage seperti biasa.
+- B. Catat sebagai temuan visibilitas: beri tahu pemilik sumber, tandai rentang 38 jam itu sebagai periode buta untuk investigasi web, lalu buat alert bila sumber penting berhenti mengirim data.
+- C. Ganti pertanyaan investigasi web ke log firewall, karena keduanya sama-sama log jaringan.
+
+<details><summary>Jawaban</summary>
+
+B. Sumber yang diam berarti setiap pertanyaan tentang akses web selama 38 jam itu tidak bisa dijawab, dan kesimpulan "tidak ada bukti akses ke domain itu" menjadi tidak sah untuk rentang tersebut. Karena itu statusnya temuan, bukan sekadar tiket operasional, dan tindak lanjut yang masuk akal adalah alert sederhana yang memicu bila sourcetype penting tidak mengirim data lebih dari satu jam. A tidak salah sebagai langkah operasional, tetapi membiarkan triage berjalan seolah datanya lengkap. C menukar pertanyaan dengan pertanyaan lain: firewall menjawab siapa berbicara dengan siapa, sedangkan URL, user, dan kategori hanya ada di log proxy. Lihat bagian 1.3, 2.1, 3, dan 4.
+
+</details>
+
+**3. Pertanyaan jebakan.** Kamu membuka halaman sebuah teknik di attack.mitre.org untuk melihat daftar Data Sources seperti yang kamu ingat, tetapi tidak menemukannya. Apa yang terjadi, dan apakah materi lama yang menyebut "ATT&CK data sources" otomatis jadi salah?
+
+<details><summary>Jawaban</summary>
+
+Sejak ATT&CK v18 (Oktober 2025) Data Sources dipensiunkan dan diganti Detection Strategies serta Analytics per teknik, dan Analytics itulah yang sekarang menunjuk log source dan data component yang relevan. Versi saat ini v19.2 (Agustus 2026). Materi lama tidak menjadi salah secara konsep, karena gagasannya tetap sama yaitu memetakan teknik ke data yang bisa membuktikannya; yang berubah adalah nama dan tempatnya di halaman teknik. Yang perlu dijaga adalah kosakata saat berbicara dengan orang lain, supaya diskusi cakupan tidak memakai istilah yang sudah tidak ada di sumbernya. Lihat bagian 1.4 dan 6.
+
+</details>
+
+**4. Jelaskan ulang.** Jelaskan ke SOC lead, dalam tiga kalimat, kenapa menambah dua sumber log baru belum tentu menambah kemampuan deteksi.
+
+<details><summary>Contoh jawaban dan kesalahan yang sering muncul</summary>
+
+Contoh jawaban: "Sumber baru hanya menambah kemampuan kalau ada pertanyaan analisis yang sebelumnya tidak bisa kita jawab, misalnya kita belum punya jawaban untuk URL apa yang diakses siapa, atau proses apa berjalan dengan command line apa. Setelah masuk, sumber itu masih harus dinormalisasi ke field dan tag yang benar supaya terbaca data model, dipantau kesegarannya, dan punya konten yang memakainya; tanpa itu dia hanya menambah biaya ingest. Jadi urutannya pertanyaan dulu, lalu sumber, lalu normalisasi dan konten, dan sumber bervolume terbesar sering justru bukan yang paling banyak membawa sinyal keamanan."
+
+Kesalahan yang sering muncul: menjawab dengan jumlah sumber atau volume ingest sebagai ukuran kemajuan; mengira EDR bisa menggantikan log identitas dan jaringan padahal pertanyaannya berbeda; dan melewatkan kesegaran data, sehingga detection terlihat sehat di atas sumber yang sudah berhenti mengalir. Lihat bagian 1.3, 2.1, dan 5.
+
+</details>
+
+**5. Interview question (English).** "You are building out visibility for a SOC. How do you decide which log sources to onboard first?"
+
+<details><summary>Sample answer</summary>
+
+"I start from the questions the SOC has to answer during triage, not from the product list: who logged in from where and whether it succeeded, what process ran with what command line, who a host talked to, what domains it resolved, what URLs a user opened, and who changed an account or a configuration. Each of those maps to a source and to a CIM data model, so the gaps become concrete instead of a feeling. I then weight them the way the joint ASD and CISA logging guidance does: critical systems and the data most likely to be targeted, internet-facing services, identity and domain platforms, EDR, cloud, OT, and network infrastructure, and I insist on consistent structured formats with trustworthy synchronised timestamps in UTC, because without that cross-source correlation quietly fails. Onboarding is not finished when data arrives: it has to be normalised so the data models actually populate, monitored for freshness, and tied to content that uses it, otherwise I have added cost rather than coverage. And I treat volume with suspicion, since the noisiest source is often the one carrying the least security signal."
+
+What makes this answer strong: it drives source selection from analytical questions and names the data models they land in, cites the published prioritisation rather than personal preference, and treats normalisation, freshness and content as part of onboarding instead of afterthoughts.
+
+</details>
+
+## 9. Sumber
 
 | ID | Judul | URL | Tipe | Terbit/diakses | Keandalan dan catatan |
 |---|---|---|---|---|---|

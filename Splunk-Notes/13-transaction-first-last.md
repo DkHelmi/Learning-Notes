@@ -9,30 +9,18 @@ versions_checked: Splunk Enterprise SPL Search Reference 10.2 (transaction), Sea
 
 Cakupan: mengelompokkan event menjadi sesi dengan `transaction`, memilih `stats` sebagai alternatif yang lebih murah, dan membedakan `first`/`last` dari `earliest`/`latest`.
 
-## 1. Tujuan belajar
+## Ide inti
 
-Setelah menyelesaikan Day ini, kamu bisa:
+Sebagian pertanyaan investigasi bukan soal hitungan, melainkan soal urutan dan rentang waktu: berapa lama sesi RDP ke jump host itu berlangsung, apakah ada rangkaian login gagal ke VPN yang diakhiri satu login berhasil, klien mana yang mengirim ratusan request web dalam beberapa menit. `transaction` menjawabnya dengan menyatukan beberapa event menjadi satu transaksi, lalu memberi `duration`, `eventcount`, dan `closed_txn`. Harganya mahal: transaksi yang belum tertutup ditahan di memori dan pekerjaannya tidak bisa dipecah ke indexer seperti `stats`, sehingga dokumentasi Splunk sendiri menempatkan `stats` sebagai pilihan utama di sebagian besar kasus [S2]. Day ini sebenarnya melatih satu keputusan: kapan sesi harus benar-benar direkonstruksi, dan kapan cukup diringkas per ID. Dasar SPL dan `stats` sudah ada di Day 02; Day ini menambahkan pengelompokan event menjadi sesi dan satu jebakan urutan yang sering lolos, yaitu `first`/`last`.
 
-- menulis `transaction` dengan `maxspan`, `maxpause`, `startswith`, dan `endswith`, serta menjelaskan field yang ditambahkannya (`duration`, `eventcount`, `closed_txn`).
-- memutuskan kapan `transaction` benar-benar diperlukan dan kapan `stats` memberi hasil yang sama dengan biaya jauh lebih kecil.
-- membedakan `first()`/`last()` (urutan pemrosesan) dari `earliest()`/`latest()` (urutan waktu), lalu memilih yang tepat untuk timeline investigasi.
-- mendiagnosis transaksi yang terpotong, terbuang (evicted), atau salah gabung.
+Analoginya dekat dengan pekerjaan merekonstruksi satu sesi dari banyak baris log, misalnya mengikuti satu call flow di log SIP dari INVITE sampai BYE: yang dicari adalah kisah satu sesi, bukan rekap semua sesi. Batas analoginya ada di biaya dan keutuhan. Rekonstruksi manual bisa diteruskan sampai selesai, sedangkan `transaction` dibatasi memori dan jumlah event, sehingga sesi tertua bisa dibuang di tengah jalan tanpa pesan error. Untuk rekap biasa, `stats` adalah `sort | uniq -c` dengan agregasi per kolom dan jauh lebih murah, dengan batas bahwa hasilnya kehilangan event mentah, jadi field yang masih kamu butuhkan harus diselamatkan lewat `values()` atau `list()`.
 
-## 2. Konteks singkat
+**Kapan relevan:** ID pengelompokan dipakai ulang sehingga butuh batas waktu atau jeda, awal dan akhir sesi ditandai teks tertentu, atau kamu perlu melihat raw event yang tergabung dalam satu sesi [S2].
+**Kapan bukan jawaban:** ada ID yang unik di dalam rentang search (session ID, `Logon_ID` yang tidak dipakai ulang, `trade_id`) dan yang kamu butuhkan hanya durasi, hitungan, atau nilai unik. Pakai `stats`. `transaction` juga bukan pilihan untuk search terjadwal yang berjalan tiap beberapa menit, karena beban memori dan waktu jalannya menumpuk di search head. Dan untuk urutan waktu, `first`/`last` bukan pengganti `earliest`/`latest`.
 
-Banyak pertanyaan investigasi berbentuk sesi atau urutan:
-- Berapa lama sesi RDP ini berlangsung?
-- Apakah ada rangkaian login gagal yang diakhiri login berhasil?
-- Klien mana yang punya sesi web dengan banyak request dalam waktu singkat?
+## 1. Konsep inti
 
-`transaction` menjawabnya dengan menyatukan beberapa event menjadi satu "transaksi". Masalahnya, `transaction` mahal. Dokumentasi Splunk sendiri menyarankan `stats` di sebagian besar kasus, karena lebih efisien terutama di lingkungan terdistribusi [S2]. Di ujian maupun di pekerjaan, kemampuan yang dinilai adalah memilih di antara keduanya, bukan sekadar menghafal sintaks.
-
-**Kapan `transaction` dipakai:** ID yang tersedia dipakai ulang sehingga perlu batas waktu atau jeda; awal/akhir sesi ditandai teks tertentu; atau kamu perlu melihat raw event yang tergabung [S2].
-**Kapan tidak:** ada ID unik (session ID, `Logon_ID` yang tidak dipakai ulang dalam jendela waktu, `trade_id`), dan kamu hanya butuh durasi, hitungan, atau nilai unik. Untuk itu, pakai `stats`.
-
-## 3. Konsep inti
-
-### 3.1 Cara kerja transaction
+### 1.1 Cara kerja transaction
 
 `transaction` mengelompokkan event yang punya nilai sama pada field yang disebut (field-list), lalu menerapkan aturan batas [S1]:
 - `maxspan`: jarak maksimal antara event pertama dan terakhir dalam satu transaksi. Default tidak terbatas (-1).
@@ -49,12 +37,12 @@ Field yang ditambahkan [S1]:
 - `closed_txn`: 1 jika transaksi tertutup normal, 0 jika di-evict.
 - `field_match_sum` dan `linecount`: field pelacakan internal.
 
-### 3.2 Kenapa mahal
+### 1.2 Kenapa mahal
 
 Ada tiga sumber biaya:
 1. `transaction` harus memegang transaksi yang masih terbuka di memori sampai kriteria penutupnya terpenuhi. Opsi `maxopentxn` dan `maxopenevents` membatasinya. Bila batas tercapai, transaksi tertua di-evict (LRU) [S1]. Akibatnya, hasil bisa diam-diam tidak lengkap kecuali kamu memeriksa `closed_txn` atau menyalakan `keepevicted`.
 2. Ia bergantung pada urutan waktu. Event harus dalam urutan waktu menurun sebelum `maxspan` diterapkan. Jika urutannya sudah diubah, misalnya oleh `sort`, kembalikan dengan `| sort -_time` tepat sebelum `transaction` [S1].
-3. Ia tidak bisa dipecah ke indexer seperti `stats`. `stats` bisa melakukan pra-agregasi di indexer, lalu hasil parsialnya digabung di search head. Inilah alasan dokumentasi menyebut `stats` lebih efisien di lingkungan terdistribusi [S2]. Detail eksekusinya, cek di "Search under the hood" / dokumentasi distributed search.
+3. Ia tidak bisa dipecah ke indexer seperti `stats`. `stats` bisa melakukan pra-agregasi di indexer, lalu hasil parsialnya digabung di search head. Karena itu dokumentasi menyebut `stats` lebih efisien di lingkungan terdistribusi [S2]. Detail eksekusinya, cek di "Search under the hood" / dokumentasi distributed search.
 
 Praktisi di Splunk Community berulang kali memberi saran yang sama [S5]:
 - Ganti `transaction` dengan `stats`, `eventstats`, atau `streamstats` bila bisa.
@@ -62,7 +50,7 @@ Praktisi di Splunk Community berulang kali memberi saran yang sama [S5]:
 
 Saran ini konsisten dengan dokumentasi primer [S2].
 
-### 3.3 Pola "stats sebagai transaksi semu"
+### 1.3 Pola "stats sebagai transaksi semu"
 
 Dokumentasi memberi contoh kesetaraan [S2]:
 
@@ -85,7 +73,7 @@ Yang tidak dimiliki `stats` adalah `maxspan`/`maxpause` dan penanda `startswith`
 
 Alternatif di tengah: hitung batas sesi dengan `streamstats` (mis. jeda dari event sebelumnya), beri nomor sesi, lalu `stats ... BY session_id`. Pola ini lebih maju; cukup dikenali dulu.
 
-### 3.4 first/last vs earliest/latest
+### 1.4 first/last vs earliest/latest
 
 Ini jebakan yang sering menipu, bahkan analyst berpengalaman [S3][S4]:
 - `first(field)`: nilai pertama yang dilihat perintah statistik. Karena urutan default hasil search adalah waktu menurun, nilai ini biasanya yang paling baru.
@@ -97,17 +85,17 @@ Jadi, untuk timeline investigasi ("IP pertama yang dipakai akun ini"), gunakan `
 
 Varian `earliest_time()` dan `latest_time()` mengembalikan timestamp saat nilai itu muncul. Ini berguna untuk kolom firstSeen/lastSeen, cek ketersediaannya di versi lab-mu.
 
-### 3.5 Enterprise vs ES
+### 1.5 Enterprise vs ES
 
 `transaction`, `stats`, dan semua fungsi di atas adalah fitur inti Splunk Enterprise, tidak butuh ES. Di ES, kamu akan melihat pola `stats earliest/latest` (sering dalam bentuk `min(_time) as firstTime max(_time) as lastTime`) di hampir setiap detection, karena alasan biaya yang sama. Lihat contoh security_content di Day 25.
 
-## 4. Contoh SPL dan langkah di ES
+## 2. Contoh SPL dan langkah di ES
 
 > Keluaran berlabel ilustrasi. Asumsi: BOTS v1 di `index=botsv1`; log Windows Security dari TA Windows dengan field gaya klasik (`EventCode`, `Account_Name`, `Logon_ID`, `Source_Network_Address`). Cek nama field di lab-mu: event berformat XML memakai nama lain, misalnya `TargetLogonId`.
 >
 > Jebakan format klasik: event 4624 dan 4625 memuat dua blok akun (Subject dan New Logon / Account For Which Logon Failed). TA Windows biasanya mengekstrak `Account_Name` dan `Logon_ID` sebagai multivalue, misalnya `Logon_ID` berisi `0x3E7` (Subject) dan ID sesi yang sebenarnya. Cek dulu dengan `| eval n=mvcount(Logon_ID)`. Bila bernilai 2, ambil nilai kedua dengan `eval logon_id=mvindex(Logon_ID, 1)` dan pakai field itu untuk pengelompokan, atau pakai format XML (`TargetLogonId`, `TargetUserName`) yang tidak ambigu. Cek urutan nilai multivalue di TA versi lab-mu.
 
-### 4.1 Durasi sesi logon Windows dengan transaction
+### 2.1 Durasi sesi logon Windows dengan transaction
 
 **Tujuan:** menghitung durasi setiap sesi logon, dari 4624 (logon) sampai 4634/4647 (logoff), cek arti event ID di Microsoft Learn.
 
@@ -138,7 +126,7 @@ we8105desk  svc_backup    0x1F002B   43200     1           0
 **Cara membaca hasil:** baris kedua adalah sesi tanpa logoff dalam 12 jam. Penyebabnya bisa layanan, log yang hilang, atau sesi yang masih aktif. Jangan langsung menyebut anomali sebelum mengecek tipe logon (`Logon_Type`).
 **Kapan gagal/lambat:** rentang waktu panjang tanpa filter; Logon_ID dipakai ulang setelah reboot (karena itu ada `maxspan`); event 4634 tidak dikumpulkan karena audit policy; `Logon_ID` multivalue di event 4624 sehingga transaksi salah gabung (lihat catatan jebakan di atas).
 
-### 4.2 Versi stats untuk kebutuhan yang sama
+### 2.2 Versi stats untuk kebutuhan yang sama
 
 ```
 index=botsv1 sourcetype="WinEventLog:Security" (EventCode=4624 OR EventCode=4634 OR EventCode=4647)
@@ -154,9 +142,9 @@ index=botsv1 sourcetype="WinEventLog:Security" (EventCode=4624 OR EventCode=4634
 - `where mvcount(codes) > 1`: buang sesi yang hanya punya salah satu event.
 - **Batasan:** jika Logon_ID terpakai ulang di host yang sama dalam rentang search, dua sesi akan tergabung. Itu tidak terdeteksi tanpa logika tambahan. Persempit rentang waktu atau kembali ke `transaction` dengan `maxspan`.
 
-**Eksperimen yang wajib dicoba:** jalankan bagian 4.1 dan 4.2 di rentang yang sama, lalu bandingkan jumlah baris dan durasi job (Job > Inspect Job). Hasil yang diharapkan: `stats` jauh lebih cepat, dengan hasil sama atau hampir sama bila ID tidak dipakai ulang.
+**Eksperimen yang wajib dicoba:** jalankan bagian 2.1 dan 2.2 di rentang yang sama, lalu bandingkan jumlah baris dan durasi job (Job > Inspect Job). Hasil yang diharapkan: `stats` jauh lebih cepat, dengan hasil sama atau hampir sama bila ID tidak dipakai ulang.
 
-### 4.3 Rangkaian brute force yang diakhiri sukses
+### 2.3 Rangkaian brute force yang diakhiri sukses
 
 **Tujuan:** menemukan sumber yang gagal berkali-kali lalu berhasil login dalam 15 menit. Ini kasus khas yang membutuhkan urutan.
 
@@ -182,9 +170,9 @@ Versi `stats` yang mendekati:
 | where fails >= 5 AND success >= 1
 ```
 
-**Perbedaan penting:** versi `stats` dengan `bin` tidak menjamin bahwa sukses terjadi setelah gagal, dan rangkaian yang melewati batas bucket 15 menit bisa terpecah. Untuk deteksi terjadwal biasanya masih bisa diterima karena murah. Untuk investigasi urutan, `transaction` lebih tepat. Inilah trade-off yang harus bisa kamu jelaskan.
+**Perbedaan penting:** versi `stats` dengan `bin` tidak menjamin bahwa sukses terjadi setelah gagal, dan rangkaian yang melewati batas bucket 15 menit bisa terpecah. Untuk deteksi terjadwal biasanya masih bisa diterima karena murah. Untuk investigasi urutan, `transaction` lebih tepat. Trade-off inilah yang harus bisa kamu jelaskan.
 
-### 4.4 first/last vs earliest/latest dalam satu query
+### 2.4 first/last vs earliest/latest dalam satu query
 
 ```
 index=botsv1 sourcetype="WinEventLog:Security" EventCode=4624 Account_Name="bob.smith"
@@ -201,21 +189,21 @@ first_fn      last_fn       earliest_fn   latest_fn
 
 **Cara membaca hasil:** `first_fn` sama dengan `latest_fn` dan `last_fn` sama dengan `earliest_fn`, karena hasil search mengalir dari yang terbaru [S3]. Jika kamu menambahkan `| sort 0 _time` sebelum `stats`, `first`/`last` akan berbalik. Hasil `earliest`/`latest` tidak berubah.
 
-### 4.5 Di ES (generik)
+### 2.5 Di ES (generik)
 
 - Di panel investigasi ES, timeline aktivitas aset/identitas pada dasarnya dibangun dari pola `earliest/latest` per entitas. Nama panel bervariasi antar versi ES, cek di ES 8.x.
 - Saat membuat atau menyunting detection (correlation search di versi lama), hindari `transaction` di search yang berjalan tiap beberapa menit. Gunakan `tstats`/`stats` (Day 25, Day 36).
 
-## 5. Lab praktik
+## 3. Lab praktik
 
 **Data:** BOTS v1, atau log Security dari VM Windows lab.
 
 1. Jalankan `index=botsv1 sourcetype="WinEventLog:Security" | stats count by EventCode | sort - count` untuk mengetahui event ID apa yang tersedia.
-2. Jalankan bagian 4.1. Catat jumlah transaksi dengan `closed_txn=0`.
-3. Jalankan bagian 4.2 di rentang yang sama. Bandingkan jumlah baris dan durasi job di Inspect Job.
-4. Jalankan bagian 4.3. Jika tidak ada hasil di BOTS v1, turunkan ambang ke `eventcount >= 3`, atau buat datanya sendiri: di VM Windows lab, coba login RDP/lokal dengan password salah 5 kali, lalu benar.
-5. Jalankan versi `stats` bagian 4.3 dan cari kasus yang berbeda hasilnya. Jelaskan perbedaannya.
-6. Jalankan bagian 4.4, lalu ulangi dengan `| sort 0 _time` sebelum `stats`. Catat perubahannya.
+2. Jalankan bagian 2.1. Catat jumlah transaksi dengan `closed_txn=0`.
+3. Jalankan bagian 2.2 di rentang yang sama. Bandingkan jumlah baris dan durasi job di Inspect Job.
+4. Jalankan bagian 2.3. Jika tidak ada hasil di BOTS v1, turunkan ambang ke `eventcount >= 3`, atau buat datanya sendiri: di VM Windows lab, coba login RDP/lokal dengan password salah 5 kali, lalu benar.
+5. Jalankan versi `stats` bagian 2.3 dan cari kasus yang berbeda hasilnya. Jelaskan perbedaannya.
+6. Jalankan bagian 2.4, lalu ulangi dengan `| sort 0 _time` sebelum `stats`. Catat perubahannya.
 
 **Hasil yang sebaiknya tersimpan:**
 - Ada angka durasi job `transaction` vs `stats`.
@@ -225,18 +213,18 @@ first_fn      last_fn       earliest_fn   latest_fn
 
 **Variasi tantangan:** dengan `sourcetype=stream:http` di BOTS v1, buat sesi web per `src_ip` dengan `maxpause=5m`, lalu cari sesi dengan `eventcount` sangat tinggi dan `duration` pendek (indikasi scanning/brute force web). Setelah itu tulis versi `streamstats` yang menandai jeda > 5 menit sebagai sesi baru. Cek nama field `src_ip` di sourcetype itu.
 
-## 6. Troubleshooting
+## 4. Troubleshooting
 
 | Gejala | Kemungkinan penyebab | Cara memeriksa/memperbaiki |
 |---|---|---|
 | Durasi transaksi aneh/negatif atau `maxspan` tidak bekerja | Urutan event berubah (mis. setelah `sort`) | Tambahkan `\| sort -_time` tepat sebelum `transaction` [S1] |
 | Jumlah transaksi lebih sedikit dari dugaan | Transaksi di-evict karena batas memori; `maxevents` 1000 tercapai | `keepevicted=true`, cek `closed_txn`; persempit data; naikkan batas hanya jika paham dampaknya [S1] |
 | Dua sesi berbeda tergabung | ID dipakai ulang tanpa `maxspan`/`maxpause` | Tambah `maxspan`/`maxpause` atau `startswith`/`endswith` [S2] |
-| `startswith`/`endswith` tidak pernah cocok | Kutipan salah; field belum ada saat itu | Buat field dengan `eval` lebih dulu (bagian 4.3); uji ekspresinya dengan `search` terpisah |
+| `startswith`/`endswith` tidak pernah cocok | Kutipan salah; field belum ada saat itu | Buat field dengan `eval` lebih dulu (bagian 2.3); uji ekspresinya dengan `search` terpisah |
 | Search sangat lambat | `transaction` atas data besar | Filter awal, rentang lebih pendek, atau ganti `stats` [S2][S5] |
 | `first()` memberi nilai "terbaru" | Urutan default menurun | Pakai `earliest()` untuk urutan waktu [S3] |
 
-## 7. Kesalahan umum dan jebakan
+## 5. Kesalahan umum dan jebakan
 
 - Memakai `transaction` sebagai default. Dokumentasi menempatkan `stats` sebagai pilihan utama kecuali ada alasan spesifik [S2].
 - Mengira `first` = paling awal. Justru biasanya paling baru [S3][S4].
@@ -245,13 +233,13 @@ first_fn      last_fn       earliest_fn   latest_fn
 - `transaction` di scheduled search yang sering berjalan. Ini membebani search head dan berisiko skipped searches.
 - `[komunitas]` Thread Splunk Community ("transaction vs stats", "Optimize transaction query", "Alternative of transaction") konsisten menyarankan `stats`/`eventstats`/`streamstats` dan pembatasan data sebelum `transaction` [S5]. Saran ini dikonfirmasi dokumentasi primer [S2].
 
-## 8. Catatan terkini
+## 6. Catatan terkini
 
 - Sintaks dan default `transaction` di referensi 10.2 konsisten dengan versi 9.x. Tidak ada perubahan perilaku besar yang tercatat; bila ragu, cek release notes 10.4/10.6.
 - Dokumentasi "About transactions" ada untuk Splunk Enterprise 9.1 sampai 10.6 dan Cloud 10.0.2503 dengan isi panduan yang sama [S2].
 - Halaman event order functions kini juga tersedia untuk SPL2 dengan definisi `first/last` yang sama. Jangan bingung saat menemukan dokumentasi SPL2 ketika mencari referensi. SPL2 dipakai di Edge Processor/Ingest Processor, dan SPL "klasik" tetap dipakai di Search & Reporting dan ES, cek cakupan SPL2 di versi-mu.
 
-## 9. Cheat sheet
+## 7. Cheat sheet
 
 ```
 transaction <fields> [maxspan=] [maxpause=] [maxevents=1000] [startswith=] [endswith=]
@@ -269,7 +257,59 @@ first()/last()  = urutan PEMROSESAN (default: first = terbaru, last = terlama)
 earliest()/latest() = urutan WAKTU  -> pakai ini untuk timeline
 ```
 
-## 10. Sumber
+## 8. Uji diri
+
+Coba jawab dulu tanpa membuka bagian di atas. Bila jawabanmu berbeda dengan kunci, baca ulang bagian yang disebut di kunci.
+
+**1. Pertanyaan jebakan.** Kamu ingin tahu IP pertama yang dipakai sebuah akun dalam rentang search, lalu menulis `| stats first(Source_Network_Address) AS ip_pertama BY Account_Name`. Kenapa hasilnya justru cenderung IP terbaru?
+
+<details><summary>Jawaban</summary>
+
+`first()` dan `last()` mengikuti urutan pemrosesan, bukan urutan waktu. Hasil search default mengalir dari event terbaru ke terlama, jadi nilai pertama yang dilihat perintah statistik biasanya justru yang paling baru. Untuk urutan waktu pakai `earliest()` dan `latest()` yang menilai `_time` event dan tidak bergantung urutan masuknya. `first`/`last` baru aman bila kamu sendiri yang menentukan urutannya dengan `sort` lebih dulu. Lihat bagian 1.4 dan 2.4.
+
+</details>
+
+**2. Skenario keputusan.** Kamu diminta membuat detection terjadwal tiap lima menit untuk pola "lima login gagal lalu satu login berhasil dari sumber yang sama". Mana yang paling tepat dijadikan dasar search-nya?
+
+- A. `transaction Source_Network_Address Account_Name maxspan=15m startswith="outcome=fail" endswith="outcome=success"`, karena hanya ini yang menjamin urutannya benar.
+- B. `bin _time span=15m` lalu `stats count(eval(outcome="fail")) ... BY _time Source_Network_Address Account_Name`, dengan kesadaran bahwa urutan tidak dijamin.
+- C. `transaction` tanpa `maxspan` supaya tidak ada rangkaian yang terpotong batas waktu.
+
+<details><summary>Jawaban</summary>
+
+B. Untuk search yang berjalan tiap lima menit, yang menentukan adalah biaya: `stats` bisa melakukan pra-agregasi di indexer, sedangkan `transaction` menahan transaksi terbuka di memori dan tidak terdistribusi. Konsekuensinya diterima secara sadar: versi `bin` plus `stats` tidak menjamin sukses terjadi setelah gagal, dan rangkaian yang melintasi batas bucket bisa terpecah, yang untuk detection biasanya masih dapat diterima karena bisa divalidasi saat triage. A benar secara urutan dan cocok untuk investigasi ad hoc, tetapi mahal bila dijalankan terus-menerus dan berisiko membuat search terlewat. C lebih buruk lagi: tanpa `maxspan`, sesi yang tidak pernah tertutup menumpuk sampai batas memori dan transaksi tertua dibuang. Lihat bagian 1.2, 1.3, dan 2.3.
+
+</details>
+
+**3. Pertanyaan jebakan.** "Search `transaction` saya mengembalikan 40 baris, jadi di rentang itu memang ada 40 sesi." Apa yang salah dari kesimpulan ini?
+
+<details><summary>Jawaban</summary>
+
+Jumlah baris hasil bukan jumlah sesi yang sebenarnya. Transaksi yang melewati batas memori (`maxopentxn`, `maxopenevents`) di-evict dan, karena `keepevicted` default false, hilang dari hasil tanpa peringatan apa pun; batas `maxevents` yang default 1000 juga memotong transaksi panjang. Cara memeriksanya adalah menyalakan `keepevicted=true` lalu membaca `closed_txn`: nilai 0 berarti transaksi tidak tertutup normal. Sesi tanpa event penutup juga bisa muncul karena logoff tidak dikumpulkan audit policy, bukan karena sesinya aneh. Lihat bagian 1.1, 1.2, dan 4.
+
+</details>
+
+**4. Jelaskan ulang.** Jelaskan ke analyst L1 yang baru belajar SPL, dalam tiga kalimat, kapan dia sebaiknya memakai `transaction` dan kapan `stats`.
+
+<details><summary>Contoh jawaban dan kesalahan yang sering muncul</summary>
+
+Contoh jawaban: "Kalau kamu cuma butuh durasi, jumlah event, atau daftar nilai per satu ID yang unik, pakai `stats ... BY id` dengan `range(_time)` untuk durasinya, karena jauh lebih murah dan bisa dikerjakan paralel di indexer. Pakai `transaction` kalau ID-nya dipakai ulang sehingga kamu butuh `maxspan` atau `maxpause` sebagai pemisah sesi, kalau awal dan akhir sesi ditandai teks tertentu, atau kalau kamu memang perlu melihat raw event yang tergabung. Kalau terpaksa memakai `transaction`, persempit dulu index, sourcetype, dan rentang waktunya, lalu cek `closed_txn` sebelum percaya jumlah hasilnya."
+
+Kesalahan yang sering muncul: menyebut `transaction` sebagai cara "yang benar" dan `stats` sebagai jalan pintas, padahal dokumentasi menempatkan `stats` sebagai pilihan utama; lupa menyebut bahwa `stats` akan menggabungkan dua sesi menjadi satu bila ID dipakai ulang di rentang search; dan lupa `host` di field-list untuk ID yang hanya unik per host seperti Logon ID dan PID. Lihat bagian 1.2, 1.3, dan 5.
+
+</details>
+
+**5. Interview question (English).** "Splunk's own documentation says to prefer stats over transaction. So when do you still reach for transaction?"
+
+<details><summary>Sample answer</summary>
+
+"I default to stats, because it aggregates in parallel on the indexers and gives me most of what transaction does: range of _time for duration, count for event volume, values or list for what happened inside the group. I reach for transaction when the grouping key gets reused and I need a time boundary to separate one session from the next, when the start and end of a session are marked by specific text rather than a key, or when I actually need to read the raw events that belong together. When I do use it, I narrow index, sourcetype and time range first, always set maxspan, and check closed_txn, because evicted transactions silently disappear from the results by default, so the row count can look reassuring while the data is incomplete. And I never put transaction in a detection that runs every few minutes; that work belongs in stats or tstats."
+
+What makes this answer strong: it names the specific stats functions that replace transaction instead of waving at "stats is faster", gives three concrete conditions that justify the expensive command, and shows awareness that the real risk is silently incomplete results rather than slowness alone.
+
+</details>
+
+## 9. Sumber
 
 | ID | Judul | URL | Tipe | Terbit/diakses | Keandalan dan catatan |
 |---|---|---|---|---|---|
