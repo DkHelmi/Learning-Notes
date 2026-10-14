@@ -37,11 +37,10 @@ Catatan saya belajar Splunk Enterprise dan Enterprise Security, dari SPL sampai 
 | 28 | [Onboarding data dan konfigurasi index-time](28-onboarding-data-index-time.md) |
 | 29 | [SOC, peran, framework, dan risiko](29-soc-peran-framework-risiko.md) |
 | 30 | [Serangan, ATT&CK, TTP, dan tingkatan threat intelligence](30-serangan-attack-ttp.md) |
-| 31 | [Istilah ES](31-istilah-es.md) |
+| 31 | [Istilah dan objek ES](31-istilah-es.md) |
 | 32 | [Dashboard ES](32-dashboard-es.md) |
-| 33 | [Mission Control, investigation, response plan, dan threat intelligence ES 8](33-mission-control-investigasi-threat-intel.md) |
+| 33 | [Mission Control, investigation, threat intelligence, dan annotations ES 8](33-mission-control-investigasi-threat-intel.md) |
 | 34 | [Continuous monitoring dan lima tahap investigasi](34-investigasi-dan-metrik.md) |
-| 34b | [Metrik dan disposisi](34b-metrik-dan-disposisi.md) |
 | 35 | [Risk framework dan RBA](35-risk-framework-rba.md) |
 | 36 | [Correlation search dan detection](36-correlation-search.md) |
 | 37 | [Review paruh pertama: SOC, ancaman, data, investigasi](37-review-data-konteks-es.md) |

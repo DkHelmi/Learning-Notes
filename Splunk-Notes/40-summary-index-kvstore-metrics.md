@@ -2,38 +2,25 @@
 day: 40
 title: 'Summary index, KV store lookup, dan metrics: menyimpan baseline, first-seen, dan allowlist yang hidup'
 researched_on: 2026-10-10
-versions_checked: 'Splunk Enterprise 10.6 (Knowledge Manager Manual: summary indexing, lookups, KV store; SPL Search Reference: collect, sistats, mstats, mcatalog, inputlookup, outputlookup); rujukan Day 01, 04, 10, 23, 25'
+versions_checked: 'Splunk Enterprise 10.6 (Knowledge Manager Manual: summary indexing, lookups, KV store; SPL Search Reference: collect, sistats, mstats, mcatalog, inputlookup, outputlookup); rujukan Day 12, 25, 26, 36, 39'
 ---
 
 # Day 40: Summary index, KV store lookup, dan metrics
 
 Cakupan: tiga cara menyimpan hasil search supaya bisa dipakai berulang (summary index, lookup KV store, metrics index), kapan masing-masing tepat, dan pola pemakaiannya yang paling berguna untuk analyst: baseline jangka panjang, tabel first-seen, dan allowlist yang bisa diperbarui tanpa mengubah detection.
 
-## 1. Tujuan belajar
+## Ide inti
 
-Setelah menyelesaikan Day ini, kamu bisa:
+Day ini menjawab pertanyaan yang baru muncul setelah dua hunt pertama selesai: hasilnya disimpan di mana. Day 38 memberi empat cara memilih dari mana mulai mencari dan Day 39 memberi teknik statistiknya, tetapi keduanya menghasilkan hal yang hilang begitu jendela search ditutup, yaitu baseline, daftar normal yang sudah diverifikasi, dan pengetahuan bahwa sebuah entitas belum pernah terlihat sebelumnya. Memang banyak pekerjaan analyst bersifat berulang dan bergantung pada sejarah: "apakah host ini pernah menjalankan proses ini sebelumnya", "apakah akun ini biasa login jam tiga pagi", "apakah domain ini baru pertama kali muncul di jaringan". Menjawabnya dengan search mentah ke 90 hari data setiap kali adalah pemborosan, dan sering tidak mungkin karena data mentah sudah frozen (Day 43). Jawabannya menyimpan hasil, bukan mengulang pekerjaan. Splunk memberi tiga wadah dengan sifat berbeda: summary index untuk agregat historis, lookup KV store untuk tabel keadaan yang diperbarui terus, dan metrics index untuk angka yang diambil berkala. Salah memilih wadah membuat solusi yang bekerja di lab tetapi tidak bertahan di produksi.
 
-- memilih antara summary index, report acceleration, dan data model acceleration untuk sebuah kebutuhan.
-- menulis scheduled search yang mengisi summary index dengan `sistats` dan `collect`, lalu membacanya kembali dengan benar.
-- membedakan lookup CSV dan lookup KV store, dan menjelaskan kapan KV store wajib dipakai.
-- membangun tabel first-seen (host, user, proses, domain) yang bertahan lebih lama daripada retensi data mentah.
-- membuat allowlist yang bisa diperbarui tanpa menyentuh logika detection.
-- memakai `mstats` untuk data metrics dan menyebut kapan metrics lebih tepat daripada event.
-- mengenali cara summary dan lookup tercemar, lalu memperbaikinya.
+Analoginya rekap trafik harian yang disimpan NOC. Begitu angka per hari sudah dihitung dan dicatat, laporan tahunan selesai dalam hitungan detik, dan rekap itu tetap ada walaupun log perangkat asalnya sudah dirotasi keluar. Batas analoginya satu dan menentukan: isi rekap tidak ikut berubah ketika data asalnya diperbaiki. Bila ternyata satu POP salah dihitung selama dua minggu, grafik tahunan tetap salah sampai ada yang mengisi ulang periode itu dengan sengaja. Summary index berperilaku sama, dan dari sifat itu datang hampir semua masalah di bagian 1.7: data yang terlambat masuk, ringkasan yang jalan dua kali, dan skema yang berubah di tengah jalan.
 
-## 2. Konteks singkat
+**Kapan relevan:** saat hunting butuh baseline berbulan-bulan; saat detection butuh konteks "pernah terlihat atau tidak"; saat tuning butuh allowlist yang sering berubah; saat dashboard operasional lambat karena menghitung ulang hal yang sama.
+**Kapan bukan jawaban:** untuk satu kasus yang sedang diinvestigasi, search mentah tetap lebih tepat daripada membangun wadah baru. Untuk kecepatan pada search lebar atas data CIM, yang dipakai data model acceleration, bukan summary index (Day 26). Ketiga wadah di Day ini juga tidak memperbaiki data yang sudah salah sejak ingest, karena ringkasan hanya mewarisi kesalahan di sumbernya (Day 28). Dan first-seen maupun baseline bukan bukti kejahatan, hanya alat untuk memberi prioritas.
 
-Banyak pekerjaan analyst bersifat berulang dan bergantung pada sejarah: "apakah host ini pernah menjalankan proses ini sebelumnya", "apakah akun ini biasa login jam tiga pagi", "apakah domain ini baru pertama kali muncul di jaringan". Menjawabnya dengan search mentah ke 90 hari data setiap kali adalah pemborosan, dan sering tidak mungkin karena data mentah sudah frozen (Day 43).
+## 1. Konsep inti
 
-Jawabannya adalah menyimpan hasil, bukan mengulang pekerjaan. Splunk memberi tiga wadah dengan sifat berbeda: summary index untuk agregat historis, lookup KV store untuk tabel keadaan yang diperbarui terus, dan metrics index untuk angka yang diambil berkala. Salah memilih wadah membuat solusi yang bekerja di lab tetapi tidak bertahan di produksi.
-
-Day 39 memakai `rare` dan stacking untuk long tail, Day 26 memakai data model terakselerasi. Day ini melengkapi keduanya: bagaimana hasil hunt dan baseline tidak hilang ketika data mentahnya hilang.
-
-**Kapan dipakai:** saat hunting butuh baseline berbulan-bulan; saat detection butuh konteks "pernah terlihat atau tidak"; saat tuning butuh allowlist yang sering berubah; saat dashboard operasional lambat karena menghitung ulang hal yang sama.
-
-## 3. Konsep inti
-
-### 3.1 Tiga wadah dan sifatnya
+### 1.1 Tiga wadah dan sifatnya
 
 | Wadah | Isi | Diperbarui | Dibaca dengan | Cocok untuk |
 |---|---|---|---|---|
@@ -49,7 +36,7 @@ Dua mekanisme percepatan yang berbeda dari summary index dan sering tertukar den
 
 Aturan memilih yang cukup dipakai sehari-hari: butuh kecepatan untuk search lebar atas data CIM, pakai data model acceleration. Butuh menyimpan angka berbulan-bulan dengan bentuk yang kamu tentukan sendiri, pakai summary index. Butuh tabel keadaan yang berubah per baris, pakai KV store.
 
-### 3.2 Summary index: `sistats` dan `collect`
+### 1.2 Summary index: `sistats` dan `collect`
 
 Dua cara mengisi summary index:
 
@@ -77,12 +64,12 @@ Aturan praktis: bila summary hanya akan dibaca pada granularitas yang sama denga
 Tiga disiplin wajib saat memakai `collect`:
 
 1. **Rentang waktu rapi (snapped).** Pakai `earliest=-1h@h latest=@h`, bukan `-60m`. Tanpa snap, periode tumpang tindih atau bolong.
-2. **Beri jeda terhadap ingest lag.** Bila p95 lag sourcetype itu 4 menit (Day 28 bagian 3.6), jalankan ringkasan jam 01:10 untuk periode 00:00 sampai 01:00, bukan tepat 01:00.
+2. **Beri jeda terhadap ingest lag.** Bila p95 lag sourcetype itu 4 menit (Day 28 bagian 1.6), jalankan ringkasan jam 01:10 untuk periode 00:00 sampai 01:00, bukan tepat 01:00.
 3. **Tandai asalnya.** `source` dan `marker` membuat satu summary index bisa menampung banyak jenis ringkasan tanpa saling tercampur, dan membuat pembersihan selektif mungkin.
 
 Untuk mengisi periode yang sudah lewat, Splunk menyediakan skrip backfill (`fill_summary_index.py`) yang menjalankan saved search untuk rentang masa lalu [S1]. Jalankan dengan hati-hati: menjalankannya dua kali untuk periode yang sama menghasilkan data ganda.
 
-### 3.3 Lookup KV store dan kekuatannya
+### 1.3 Lookup KV store dan kekuatannya
 
 Lookup CSV diganti seluruhnya setiap kali ditulis. Itu aman untuk daftar referensi, tetapi tidak cocok untuk tabel yang diperbarui terus oleh beberapa search, karena dua penulisan bersamaan bisa saling menimpa.
 
@@ -90,7 +77,7 @@ KV store menyimpan baris dalam koleksi (collection) dengan kunci unik `_key`. Da
 
 - `| outputlookup <lookup> append=true key_field=_key` memperbarui baris yang `_key`-nya sama dan menambah yang baru, bukan menimpa seluruh tabel.
 - Baris bisa dihapus selektif lewat REST atau dengan menulis ulang hasil filter.
-- Ukurannya jauh lebih nyaman daripada CSV besar, dan tidak perlu direplikasi sebagai file di search head cluster (Day 43 bagian 3.4).
+- Ukurannya jauh lebih nyaman daripada CSV besar, dan tidak perlu direplikasi sebagai file di search head cluster (Day 43 bagian 1.4).
 
 Definisinya butuh dua bagian: koleksi di `collections.conf` dan definisi lookup di `transforms.conf`.
 
@@ -112,7 +99,7 @@ fields_list = _key, entity, kind, first_seen, last_seen, count
 
 Setelah itu `lab_first_seen_lookup` dipakai seperti lookup biasa di `lookup`, `inputlookup`, dan `outputlookup`.
 
-### 3.4 Pola first-seen
+### 1.4 Pola first-seen
 
 First-seen adalah salah satu konteks paling berharga dan paling murah untuk investigasi. Pertanyaan yang dijawabnya: entitas ini (host, user, proses, domain, user agent) pertama kali terlihat kapan, dan apakah ia baru?
 
@@ -124,7 +111,7 @@ Pola yang dipakai:
 
 Keunggulannya dibanding menghitung first-seen dari data mentah: tabelnya tetap benar walaupun data mentah sudah frozen, dan pencariannya instan karena hanya membaca satu tabel kecil.
 
-### 3.5 Allowlist yang hidup
+### 1.5 Allowlist yang hidup
 
 Masalah klasik tuning (Day 34, Day 36): setiap kali ada false positive, orang menambah `NOT` ke dalam search detection. Setelah enam bulan, detection berisi dua puluh pengecualian yang tidak ada yang tahu alasannya.
 
@@ -148,7 +135,7 @@ Di dalam detection:
 
 Tiga kolom yang membuat perbedaan besar: `reason` (kenapa dikecualikan), `owner` (siapa yang memutuskan), dan `expires_at` (kapan ditinjau ulang). Pengecualian tanpa tanggal kedaluwarsa adalah lubang permanen yang akan terlupakan.
 
-### 3.6 Metrics index dan `mstats`
+### 1.6 Metrics index dan `mstats`
 
 Data metrics berbeda dari event: ia tidak punya teks, hanya nama metrik, nilai numerik, timestamp, dan dimensi. Karena itu penyimpanannya jauh lebih padat dan pencariannya lebih cepat untuk pertanyaan numerik [S2].
 
@@ -167,22 +154,22 @@ Kapan metrics lebih tepat daripada event:
 
 Kapan tetap pakai event: apa pun yang perlu diinvestigasi per kejadian. Metrics tidak bisa menjawab "siapa yang melakukannya", karena isinya bukan cerita, hanya angka.
 
-### 3.7 Bagaimana summary dan lookup tercemar
+### 1.7 Bagaimana summary dan lookup tercemar
 
 Empat penyebab, semuanya pernah membuat baseline salah:
 
 1. **Data terlambat.** Ringkasan jam 01:00 dijalankan tepat jam 01:00, lalu event jam 00:58 masuk jam 01:03. Angka jam itu kurang selamanya. Perbaikannya jeda jadwal.
 2. **Jalan dua kali.** Backfill diulang, atau jadwal berubah dan periode tumpang tindih. Hasilnya angka ganda yang membuat baseline naik tanpa alasan.
-3. **Baseline tercemar aktivitas penyerang.** Bila periode baseline memuat insiden, perilaku jahat menjadi "normal" (Day 39 bagian 7).
+3. **Baseline tercemar aktivitas penyerang.** Bila periode baseline memuat insiden, perilaku jahat menjadi "normal" (Day 39 bagian 5).
 4. **Skema berubah.** Nama field di sumber berubah, summary lama memakai nama lama. Hasil gabungan menjadi setengah kosong tanpa error.
 
 Mitigasi yang murah: simpan `source` dan `marker` yang jelas, jalankan pemeriksaan konsistensi berkala yang membandingkan summary dengan data mentah untuk periode yang masih tersedia, dan catat tanggal perubahan skema di catatanmu sendiri.
 
-## 4. Contoh SPL dan langkah di ES
+## 2. Contoh SPL dan langkah di ES
 
 > Keluaran berlabel ilustrasi. Nama index, lookup, dan field mengikuti lab sendiri.
 
-### 4.1 Baseline login per jam yang bertahan lama
+### 2.1 Baseline login per jam yang bertahan lama
 
 **Tujuan:** menyimpan jumlah login per user per jam supaya bisa dipakai setahun ke depan, walaupun `index=lab_auth` hanya disimpan 90 hari.
 
@@ -220,7 +207,7 @@ Cara membacanya: `svc_backup` biasanya tidak login jam 03, lalu tiba-tiba 48 kal
 
 **Kapan gagal:** bila `sistats` diganti `stats` saat menyimpan, kolom `dc(src)` tidak bisa dijumlahkan ulang dengan benar dan hasil 90 hari akan menyesatkan.
 
-### 4.2 Mengisi periode yang sudah lewat
+### 2.2 Mengisi periode yang sudah lewat
 
 ```
 # dijalankan dari $SPLUNK_HOME/bin, di lab sendiri
@@ -237,7 +224,7 @@ index=summary_lab source="si_baseline_login" earliest=-31d
 
 Hari dengan jumlah dua kali lipat dari hari lain berarti ada duplikasi yang perlu dibersihkan sebelum baseline dipakai.
 
-### 4.3 Tabel first-seen untuk proses per host
+### 2.3 Tabel first-seen untuk proses per host
 
 Saved search harian:
 
@@ -285,7 +272,7 @@ LAB-WS-05   7z.exe            12     2.1        34
 
 Cara membacanya: `rclone.exe` baru pertama kali terlihat di seluruh lab. Itu bukan bukti exfiltration, tetapi layak diperiksa lebih dulu daripada `7z.exe` yang sudah lama ada. Ini cara memberi prioritas pada daftar panjang tanpa mengandalkan intuisi.
 
-### 4.4 Allowlist dengan tanggal kedaluwarsa
+### 2.4 Allowlist dengan tanggal kedaluwarsa
 
 Menambahkan satu pengecualian:
 
@@ -312,7 +299,7 @@ Meninjau pengecualian yang akan kedaluwarsa, dijadwalkan mingguan:
 
 Pola ini mengubah tuning dari pekerjaan sekali jalan menjadi daftar yang ditinjau. Tanpa `expires_at`, allowlist hanya bertambah.
 
-### 4.5 Metrics untuk kesehatan lab
+### 2.5 Metrics untuk kesehatan lab
 
 ```
 | mstats avg(_value) AS nilai WHERE index=lab_metrics metric_name IN ("splunk.indexer.queue.fill","splunk.indexer.eps") span=10m BY metric_name host
@@ -321,7 +308,7 @@ Pola ini mengubah tuning dari pekerjaan sekali jalan menjadi daftar yang ditinja
 
 Bandingkan biaya pertanyaan yang sama bila disimpan sebagai event: untuk 30 hari data per 10 detik, metrics index biasanya jauh lebih kecil dan `mstats` jauh lebih cepat daripada `stats` atas event. Ukur sendiri di lab dengan Job Inspector (Day 14) supaya kamu punya angkanya.
 
-### 4.6 Memeriksa summary masih benar
+### 2.6 Memeriksa summary masih benar
 
 Dijadwalkan mingguan, selama data mentah masih ada:
 
@@ -340,20 +327,20 @@ index=summary_lab source="si_baseline_login" earliest=-30d
 | where count=0
 ```
 
-Setiap jam yang kosong adalah ringkasan yang gagal, dan biasanya penyebabnya skipped search (Day 43 bagian 3.6).
+Setiap jam yang kosong adalah ringkasan yang gagal, dan biasanya penyebabnya skipped search (Day 43 bagian 1.6).
 
-## 5. Lab praktik
+## 3. Lab praktik
 
 **Prasyarat:** Splunk lab dengan data autentikasi dan proses (Day 23 sampai Day 24), izin membuat index dan lookup, serta akses `index=_internal`.
 
-1. Buat index `summary_lab` dan koleksi KV store `lab_first_seen` serta `lab_detection_exceptions` sesuai bagian 3.3 dan 3.5.
+1. Buat index `summary_lab` dan koleksi KV store `lab_first_seen` serta `lab_detection_exceptions` sesuai bagian 1.3 dan 1.5.
 2. Buat dua saved search pengisi baseline: satu memakai `stats`, satu memakai `sistats`, keduanya untuk jam yang sama. Jalankan seminggu (atau backfill 7 hari), lalu coba hitung `dc(src)` 7 hari dari keduanya. Catat perbedaannya dan simpan sebagai bukti kenapa `sistats` dipakai.
 3. Sengaja jalankan ringkasan tanpa jeda (`latest=now()`), lalu bandingkan angkanya dengan versi berjeda 12 menit untuk jam yang sama. Catat berapa event yang hilang akibat ingest lag.
-4. Bangun tabel first-seen proses per host (bagian 4.3). Jalankan tiga hari berturut-turut, lalu buktikan `first_seen` tidak bergeser maju untuk entitas lama.
-5. Jalankan satu proses baru yang jinak di VM lab (misalnya `7z.exe` versi portable), lalu buktikan ia muncul sebagai entitas baru di search investigasi bagian 4.3.
+4. Bangun tabel first-seen proses per host (bagian 2.3). Jalankan tiga hari berturut-turut, lalu buktikan `first_seen` tidak bergeser maju untuk entitas lama.
+5. Jalankan satu proses baru yang jinak di VM lab (misalnya `7z.exe` versi portable), lalu buktikan ia muncul sebagai entitas baru di search investigasi bagian 2.3.
 6. Tambahkan dua pengecualian ke `lab_detection_exceptions`, salah satunya dengan `expires_at` di masa lalu. Pasang lookup itu ke satu detection lab dan buktikan pengecualian kedaluwarsa tidak lagi menyembunyikan alert.
 7. Buat metrics index lab dan kirim beberapa metrik sederhana (bisa dari input yang tersedia di instance-mu), lalu bandingkan kecepatan `mstats` dengan `stats` atas event untuk pertanyaan yang sama. Simpan angka Job Inspector keduanya.
-8. Jalankan pemeriksaan jam kosong (bagian 4.6) dan hubungkan setiap lubang dengan catatan scheduler.
+8. Jalankan pemeriksaan jam kosong (bagian 2.6) dan hubungkan setiap lubang dengan catatan scheduler.
 
 **Hasil yang sebaiknya tersimpan:**
 - Perbandingan `stats` dan `sistats` untuk `dc()` 7 hari.
@@ -362,7 +349,7 @@ Setiap jam yang kosong adalah ringkasan yang gagal, dan biasanya penyebabnya ski
 - Satu detection yang memakai lookup pengecualian, beserta isi tabel pengecualiannya.
 - Perbandingan Job Inspector `mstats` dan `stats`.
 
-## 6. Troubleshooting
+## 4. Troubleshooting
 
 | Gejala | Kemungkinan penyebab | Cara memeriksa |
 |---|---|---|
@@ -375,7 +362,7 @@ Setiap jam yang kosong adalah ringkasan yang gagal, dan biasanya penyebabnya ski
 | Lookup lambat dipakai di detection | Tabel terlalu besar untuk dipakai per event | Pindahkan filter sebelum `lookup`; pertimbangkan `inputlookup` dengan `stats` (Day 12) |
 | Baseline menganggap aktivitas jahat normal | Periode baseline memuat insiden | Bandingkan dengan periode lain; kecualikan rentang insiden saat membangun baseline |
 
-## 7. Kesalahan umum dan jebakan
+## 5. Kesalahan umum dan jebakan
 
 - Memakai `stats` saat menyimpan summary yang nantinya akan diagregasi ulang.
 - Menjadwalkan ringkasan tepat di batas jam tanpa jeda untuk ingest lag.
@@ -386,14 +373,14 @@ Setiap jam yang kosong adalah ringkasan yang gagal, dan biasanya penyebabnya ski
 - Menganggap first-seen sebagai bukti kejahatan. Ia hanya alat prioritas.
 - Lupa bahwa summary index juga punya retensi. Index yang dibuat untuk jangka panjang perlu `frozenTimePeriodInSecs` yang sesuai (Day 43).
 
-## 8. Catatan terkini
+## 6. Catatan terkini
 
 - Summary indexing, `collect`, dan si-command adalah bagian lama SPL yang stabil. Yang berubah adalah tren pemakaiannya: untuk data CIM, data model acceleration lebih sering dipilih, dan summary index dipakai untuk hal yang bentuknya tidak pas di data model (metrik SOC, baseline khusus, hasil hunt).
 - KV store berbasis MongoDB internal di Splunk Enterprise, dan versi engine-nya pernah berubah antar rilis mayor. Kalau instance lab tidak bisa memulai KV store setelah upgrade, itu area pertama yang dicek di `index=_internal`.
 - Metrics index dan `mstats` terus berkembang, termasuk dukungan histogram dan integrasi OpenTelemetry di sisi observability Splunk. Cek ketersediaan fitur di versi yang kamu pakai bila ingin memakai tipe metrik selain gauge dan counter sederhana.
 - Di ES 8, pendekatan menyimpan konteks juga tersedia lewat Asset and Identity framework (Day 26) dan threat list (Day 33). Untuk konteks yang bersifat keamanan dan dipakai banyak detection, dua mekanisme ES itu lebih rapi daripada lookup buatan sendiri.
 
-## 9. Cheat sheet
+## 7. Cheat sheet
 
 ```
 PILIH   search lebar atas CIM -> data model acceleration (tstats, Day 26)
@@ -410,7 +397,59 @@ METRICS | mstats avg(_value) WHERE index=X metric_name="a.b.c" span=5m BY host  
 PERIKSA  summary: timechart span=1h count | where count=0   ;   lookup: stats count BY entity | where count>1
 ```
 
-## 10. Sumber
+## 8. Uji diri
+
+Coba jawab dulu tanpa membuka bagian di atas. Bila jawabanmu berbeda dengan kunci, baca ulang bagian yang disebut di kunci.
+
+**1. Pertanyaan jebakan.** Baseline login disimpan setiap jam dengan `stats count AS login_count dc(src) AS src_count BY user`. Setelah sebulan, kamu membaca summary itu untuk 30 hari dan menjumlahkan kedua kolomnya per akun. Kolom mana yang hasilnya salah, dan kenapa?
+
+<details><summary>Jawaban</summary>
+
+Kolom `src_count`. Jumlah login per jam boleh dijumlahkan karena `count` bersifat aditif, tetapi `dc()` tidak: satu `src` yang muncul di 24 jam berbeda akan dihitung 24 kali ketika angka per jam dijumlahkan, sehingga jumlah sumber unik membengkak. Informasi antara yang dibutuhkan untuk menghitung ulang nilai unik sudah hilang saat `stats` menuliskan hasilnya. Yang menyimpan bentuk antara itu adalah `sistats`, `sichart`, dan `sitimechart`, dan hasilnya dibaca kembali dengan `stats` biasa di atas summary [S1]. Gejalanya di lapangan adalah field berawalan `psrsvd` yang ada pada summary versi si-command dan tidak ada pada summary versi `stats`. Lihat bagian 1.2 dan 4.
+
+</details>
+
+**2. Skenario keputusan.** Kamu butuh tabel first-seen untuk pasangan host dan nama proses, diperbarui setiap jam, dan nantinya juga diisi oleh satu search kedua untuk domain. Wadah mana yang dipakai?
+
+- A. Lookup CSV yang ditulis ulang dengan `outputlookup` setiap kali search selesai.
+- B. Lookup KV store dengan `outputlookup append=true key_field=_key`.
+- C. Summary index yang diisi `collect` setiap jam, lalu dibaca dengan `stats min(_time)`.
+
+<details><summary>Jawaban</summary>
+
+B. Yang dibutuhkan adalah tabel keadaan yang diperbarui per baris oleh lebih dari satu search, dan itu tepat definisi KV store: setiap baris punya `_key` unik, sehingga `outputlookup append=true key_field=_key` memperbarui baris yang sudah ada dan menambah yang baru, tanpa menyentuh baris lain. A gagal justru pada titik itu, karena lookup CSV diganti seluruhnya setiap kali ditulis, sehingga dua search yang menulis berdekatan bisa saling menimpa. C menjawab kebutuhan yang berbeda: summary index menyimpan agregat historis yang terus ditambah, dan untuk pertanyaan "pertama kali kapan" ia memaksa kamu memindai seluruh riwayat setiap kali, padahal yang diinginkan satu tabel kecil yang dibaca seketika. Lihat bagian 1.1, 1.3, dan 1.4.
+
+</details>
+
+**3. Pertanyaan jebakan.** Baseline per jam yang sudah berjalan sebulan dipakai untuk mencari jam yang tidak biasa, dan hasilnya menandai hampir semua jam pada satu akun sebagai menyimpang. Apa tiga hal yang kamu periksa sebelum menyentuh ambangnya?
+
+<details><summary>Jawaban</summary>
+
+Pertama, kelengkapan summary: jalankan `timechart span=1h count` di atas summary lalu cari jam yang kosong, karena jam yang hilang akibat scheduled search skipped atau rentang yang tidak snapped akan membuat rata-rata dan simpangan baku dihitung dari periode yang bolong. Kedua, duplikasi: hari dengan jumlah baris dua kali lipat biasanya berarti backfill diulang atau dua saved search menulis ke `source` yang sama, dan itu mengangkat baseline tanpa alasan. Ketiga, jeda terhadap ingest lag dan perubahan skema: ringkasan yang jalan tepat di batas jam kehilangan event yang datang terlambat, dan nama field yang berubah di sumber membuat sebagian summary lama tidak lagi bergabung dengan yang baru tanpa pesan error. Ambangnya baru layak dibahas setelah ketiganya bersih. Lihat bagian 1.7 dan 2.6.
+
+</details>
+
+**4. Jelaskan ulang.** Jelaskan ke SOC lead, dalam tiga kalimat, kenapa setiap baris allowlist wajib punya `reason`, `owner`, dan `expires_at`.
+
+<details><summary>Contoh jawaban dan kesalahan yang sering muncul</summary>
+
+Contoh jawaban: "Pengecualian adalah lubang yang kita buat sendiri di detection, jadi ia harus bisa dipertanggungjawabkan seperti perubahan lain: `reason` menjelaskan kenapa lubang itu dibuat, dan `owner` menunjukkan siapa yang memutuskan. Tanpa `expires_at`, allowlist hanya bertambah, dan setelah enam bulan tidak ada yang berani mencabut satu baris pun karena tidak ada yang tahu apakah masih berlaku. Dengan ketiga kolom itu, tuning berubah dari pekerjaan sekali jalan menjadi daftar yang ditinjau, dan satu search mingguan sudah cukup untuk memunculkan pengecualian yang mendekati kedaluwarsa."
+
+Kesalahan yang sering muncul: menyimpan pengecualian sebagai `NOT` di dalam SPL detection, sehingga alasannya hilang dan detection menjadi tidak bisa dibaca; memakai lookup CSV yang ditulis ulang seluruhnya, sehingga dua orang yang menambah pengecualian pada waktu berdekatan saling menimpa; dan memasang `expires_at` tanpa pernah menjadwalkan search peninjauannya, yang hasilnya sama saja dengan tidak punya tanggal kedaluwarsa. Lihat bagian 1.5 dan 2.4.
+
+</details>
+
+**5. Interview question (English).** "You need a baseline that survives longer than your raw data retention. How do you build it, and how do you know it is still trustworthy six months later?"
+
+<details><summary>Sample answer</summary>
+
+"I would summarise it on a schedule into a summary index rather than recomputing it from raw events, because the raw data will roll to frozen long before the baseline stops being useful. The search that fills it uses snapped time ranges, so periods neither overlap nor leave gaps, and it runs with a deliberate delay behind the hour boundary, sized from the measured ingest lag of that sourcetype, otherwise late events are lost from that bucket permanently. I write it with sistats rather than stats whenever the numbers will later be rolled up to a longer period, because distinct counts and averages cannot be re-aggregated from a plain stats result. I also tag every write with its own source and marker value, so one summary index can hold several kinds of summary and can be cleaned selectively. For trust six months later I do not rely on the search looking fine; I schedule two checks. One counts rows per hour and flags any empty hour, which is usually a skipped scheduled search. The other looks for hours or days with roughly double the normal count, which is usually a repeated backfill. And I keep a note of schema changes at the source, because a renamed field makes old and new summary rows stop joining with no error at all. If a state table is what I need instead of aggregates, for instance first-seen entities or an exception list, I use a KV store lookup with upserts by key rather than rewriting a CSV, so two searches cannot overwrite each other."
+
+What makes this answer strong: it names the specific mechanism for each choice instead of listing features, treats scheduling and ingest lag as correctness problems rather than operational details, and ends with the monitoring that makes the baseline auditable, which is what distinguishes a baseline that is used from one that is quietly wrong.
+
+</details>
+
+## 9. Sumber
 
 | ID | Judul | URL | Tipe | Terbit/diakses | Keandalan dan catatan |
 |---|---|---|---|---|---|

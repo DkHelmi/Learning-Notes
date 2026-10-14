@@ -9,27 +9,18 @@ versions_checked: 'Splunk ES 8.7 User Guide: Analytics (Executive summary, Secur
 
 Cakupan: mengidentifikasi dashboard bawaan umum di Enterprise Security dan informasi dasar yang dimuatnya.
 
-## 1. Tujuan belajar
+## Ide inti
 
-Setelah menyelesaikan Day ini, kamu bisa:
+Dashboard bawaan ES bukan hiasan dan bukan satu layar serbaguna. Masing-masing dibangun untuk satu audiens dan satu pertanyaan: manajer melihat tren dan metrik, analyst melihat finding per domain keamanan, dan engineer melihat kesehatan data serta konten. Karena itu keterampilan yang benar-benar dipakai di pekerjaan bukan menghafal nama panel, melainkan dua hal: menjawab "informasi ini ada di dashboard mana" dalam hitungan detik, dan mengetahui data model di balik setiap panel, karena itulah yang menjelaskan kenapa sebuah panel kosong. Satu hal lagi yang menghemat waktu sejak hari pertama: antrean kerja analyst tidak berada di Analytics, melainkan di Mission Control.
 
-- menyebut dashboard bawaan ES 8.7 dan pertanyaan yang dijawab masing-masing.
-- membaca panel kunci Security posture, Executive summary, dan SOC operations, termasuk metrik dan disposisi (Day 34).
-- memilih dashboard yang tepat untuk sebuah tugas: triage, investigasi domain, pelaporan manajemen, audit platform.
-- memahami bahwa urgensi finding dihitung dari gabungan prioritas aset dan severity detection (Day 26).
+Analoginya layar besar di NOC, yang panelnya dibaca sekilas untuk tahu di mana harus menoleh. Batas analoginya ada di arti panel kosong. Di layar NOC, grafik yang rata biasanya berarti perangkatnya mati atau polling berhenti, dan setiap panel juga adalah search yang jalan setiap dibuka, sehingga dashboard berat ikut membebani search head. Di ES, panel kosong lebih sering berarti data model yang dibacanya kosong, belum selesai terakselerasi, atau field-nya belum ternormalisasi ke CIM, dan untuk kelompok Audit sering sekadar soal izin role terhadap index internal. Di PT JAB keadaan itu nyata: ES baru dinyalakan di search head terpisah dan daftar aset serta identitas belum lengkap, sehingga kolom urgensi di panel-panel triage belum bisa dipercaya sebelum data aset dibenahi.
 
-## 2. Konteks singkat
+**Kapan relevan:** triage pagi dan memilih dari mana mulai menoleh, menyusun laporan bulanan untuk manajemen, menilai kualitas detection lewat panel disposisi, dan mendiagnosis panel kosong sebelum menyimpulkan bahwa tidak ada aktivitas.
+**Kapan bukan jawaban:** untuk mengerjakan kasus satu per satu, tempatnya analyst queue di Mission Control, bukan dashboard (Day 31 dan 33). Untuk menyetel ambang dan bobot risiko, dashboard hanya menampilkan akibatnya (Day 35). Dan bila yang bermasalah adalah datanya, perbaikannya di onboarding dan normalisasi, bukan di panel (Day 23 dan 28).
 
-Dashboard ES bukan hiasan. Masing-masing dirancang untuk audiens dan pertanyaan tertentu:
-- manajer melihat tren dan metrik;
-- analyst melihat finding per domain;
-- engineer melihat kesehatan data dan konten.
+## 1. Konsep inti
 
-Pertanyaan yang paling sering muncul di pekerjaan adalah "informasi X ada di dashboard mana". Mengetahui jawabannya menghemat waktu triage, dan mengetahui data model di balik setiap dashboard menjelaskan kenapa sebuah panel kosong.
-
-## 3. Konsep inti
-
-### 3.1 Peta dashboard ES 8.7
+### 1.1 Peta dashboard ES 8.7
 
 Bagian Analytics di dokumentasi ES 8.7 mencakup [S1][S2]:
 
@@ -43,14 +34,14 @@ Bagian Analytics di dokumentasi ES 8.7 mencakup [S1][S2]:
 | Endpoint dashboards | Analyst | Malware, proses, perubahan sistem (domain Endpoint) |
 | Network dashboards | Analyst | Trafik, IDS, port/protokol (domain Network) |
 | Asset and identity dashboards | Analyst | Konteks aset/identitas, investigasi per entity (Day 26) |
-| Threat intelligence dashboards | Analyst/CTI | Aktivitas yang cocok dengan intel (Day 30) |
-| Web intelligence dashboards | Analyst | Aktivitas web/proxy: kategori HTTP, user-agent, domain baru, ukuran trafik, panjang URL (bagian 3.7) |
-| Audit dashboards | Engineer/admin | Kesehatan platform dan konten: forwarder, indexing, view, suppression, threat intel, adaptive response (bagian 3.7) |
+| Threat intelligence dashboards | Analyst/CTI | Aktivitas yang cocok dengan intel (Day 33) |
+| Web intelligence dashboards | Analyst | Aktivitas web/proxy: kategori HTTP, user-agent, domain baru, ukuran trafik, panjang URL (bagian 1.6) |
+| Audit dashboards | Engineer/admin | Kesehatan platform dan konten: forwarder, indexing, view, suppression, threat intel, adaptive response (bagian 1.6) |
 | Predictive analytics | Analyst lanjutan | Analitik prediktif/anomali atas data model, cek isi di 8.7 |
 
-Antrean kerja analyst sendiri (finding, investigation) berada di Mission Control > analyst queue, bukan di Analytics (Day 34/31).
+Antrean kerja analyst sendiri (finding, investigation) berada di Mission Control > analyst queue, bukan di Analytics (Day 33 dan 31).
 
-### 3.2 Security posture
+### 1.2 Security posture
 
 Panel [S2]:
 1. **Key indicators**: jumlah finding per security domain dalam 24 jam terakhir.
@@ -61,7 +52,7 @@ Panel [S2]:
 
 **Cara membaca:** lonjakan di satu domain + sumber yang sama di top sources adalah titik awal triage. Urgensi bergantung pada prioritas aset. Jika data A&I kosong, urgensi menjadi tidak informatif (Day 26).
 
-### 3.3 Executive summary
+### 1.3 Executive summary
 
 Panel [S1]:
 - **KPI:** Mean time to triage, Mean time to resolution (dengan tren vs periode sebelumnya), Investigations created.
@@ -72,7 +63,7 @@ Panel [S1]:
 
 Perhatikan bahwa dokumentasi 8.7 di dashboard ini masih memakai istilah lama (*notable*, *risk notable*, *correlation search*) berdampingan dengan istilah baru. Jangan heran bila menu dan dokumentasi tidak konsisten.
 
-### 3.4 SOC operations
+### 1.4 SOC operations
 
 Panel [S3]:
 - **Key metrics:** Mean time to triage (rata-rata menit untuk memprioritaskan), Mean time to resolution (rata-rata menit sampai status akhir), Investigations created.
@@ -81,15 +72,13 @@ Panel [S3]:
 
 **Cara membaca:** detection yang dominan di panel "incorrect logic" adalah daftar kerja detection engineer. Yang dominan di "inaccurate data" adalah daftar kerja data engineer.
 
-### 3.5 Domain dashboards dan data model
+### 1.5 Domain dashboards dan data model
 
 Dashboard domain (Access, Endpoint, Network, Web) dibangun di atas data model CIM (Day 23/24). Jika data model kosong atau tidak terakselerasi, dashboard kosong atau lambat. Itulah alasan engineer memantau Audit dashboards (status akselerasi, ukuran, kesehatan konten).
 
-### 3.6 Enterprise vs ES
+**Tanpa ES:** dashboard di atas khusus ES. Di Splunk Enterprise, kamu membangun dashboard sendiri (Dashboard Studio atau Classic) dari data model dan CIM, dan Monitoring Console menyediakan kesehatan platform (Day 14).
 
-Dashboard di atas khusus ES. Di Splunk Enterprise, kamu membangun dashboard sendiri (Dashboard Studio/Classic) dari data model/CIM, dan Monitoring Console menyediakan kesehatan platform (Day 14).
-
-### 3.7 Sub-dashboard domain dan data model di baliknya
+### 1.6 Sub-dashboard domain dan data model di baliknya
 
 Kelompok dashboard domain berisi banyak sub-dashboard. Tabel referensi ES 8.7 memetakan setiap sub-dashboard ke data model CIM yang dibacanya [S5]. Peta ini adalah alat diagnosis paling berguna: panel kosong hampir selalu berarti data model di kolom kanan kosong, belum terakselerasi, atau field-nya tidak ter-CIM.
 
@@ -113,17 +102,17 @@ Cara memakainya saat sebuah panel kosong:
 
 Beberapa sub-dashboard Audit tidak memakai data model sama sekali dan membaca index internal, lookup, atau REST. Panel Audit yang kosong biasanya soal izin role terhadap index internal, bukan soal CIM.
 
-## 4. Contoh SPL dan langkah di ES
+## 2. Contoh SPL dan langkah di ES
 
 > Keluaran berlabel ilustrasi. Query membantu memahami sumber data panel. Panel aslinya mungkin memakai macro/data model ES berbeda, cek dengan "Open in Search" pada panel.
 
-### 4.1 Membongkar panel: lihat SPL di balik panel
+### 2.1 Membongkar panel: lihat SPL di balik panel
 
 Di setiap panel ES, gunakan menu panel (mis. "Open in Search") untuk melihat SPL aslinya, cek tersedia di ES 8.7. Kebiasaan ini membantu:
 - memahami sumber data (notable/finding, risk, data model);
 - membuat varian panel untuk kebutuhan tim.
 
-### 4.2 Meniru "Findings by urgency" (ES 7 pola)
+### 2.2 Meniru "Findings by urgency" (ES 7 pola)
 
 ```
 `notable` earliest=-24h
@@ -133,7 +122,7 @@ Di setiap panel ES, gunakan menu panel (mis. "Open in Search") untuk melihat SPL
 
 - `security_domain` (access, endpoint, network, threat, identity, audit) dan `urgency` adalah field notable klasik, cek di ES 8.
 
-### 4.3 Meniru "Top findings sources"
+### 2.3 Meniru "Top findings sources"
 
 ```
 `notable` earliest=-24h
@@ -141,7 +130,7 @@ Di setiap panel ES, gunakan menu panel (mis. "Open in Search") untuk melihat SPL
 | sort - count | head 10
 ```
 
-### 4.4 Meniru panel SOC operations: close rate per analyst
+### 2.4 Meniru panel SOC operations: close rate per analyst
 
 ```
 `notable` earliest=-30d
@@ -153,7 +142,7 @@ Di setiap panel ES, gunakan menu panel (mis. "Open in Search") untuk melihat SPL
 
 - Gunakan dengan hati-hati. Close rate tinggi tanpa memperhatikan kualitas bisa mendorong penutupan prematur (Day 34).
 
-### 4.5 Lab tanpa ES: dashboard "security posture mini"
+### 2.5 Lab tanpa ES: dashboard "security posture mini"
 
 Buat dashboard Splunk (Dashboard Studio) dengan 4 panel dari data lab:
 1. Jumlah alert per "domain" (Authentication, Endpoint, Network) dari `tstats` data model (Day 24).
@@ -161,7 +150,7 @@ Buat dashboard Splunk (Dashboard Studio) dengan 4 panel dari data lab:
 3. Top 10 `src` dari Network_Traffic yang diblokir.
 4. Top detection dari index alert lab (Day 31 lab).
 
-### 4.6 Contoh membaca Security posture saat triage pagi
+### 2.6 Contoh membaca Security posture saat triage pagi
 
 Skenario fiktif: Senin pukul 08.00, analyst membuka Security posture dengan rentang 24 jam. Keluaran ilustrasi dari panel-panelnya:
 
@@ -184,10 +173,10 @@ Cara membacanya, berurutan:
 
 Kesalahan yang sering terjadi di skenario seperti ini adalah mulai dari detection dengan volume tertinggi karena terlihat paling "ramai". Volume menunjukkan di mana noise berada; urgency dan konteks aset menunjukkan di mana risiko berada.
 
-## 5. Lab praktik
+## 3. Lab praktik
 
 1. **Dengan ES:** buka Security posture, Executive summary, SOC operations, dan Risk analysis. Untuk setiap dashboard, catat 3 panel dan pertanyaan yang dijawabnya. Gunakan "Open in Search" pada 2 panel dan simpan SPL-nya.
-2. **Tanpa ES:** bangun dashboard bagian 4.5.
+2. **Tanpa ES:** bangun dashboard bagian 2.5.
 3. Buat tabel tugas dan dashboard yang tepat:
    - triage pagi: Security posture;
    - laporan bulanan CISO: Executive summary;
@@ -203,7 +192,7 @@ Kesalahan yang sering terjadi di skenario seperti ini adalah mulai dari detectio
 
 **Variasi tantangan:** tambahkan panel "jenis event risiko yang tidak menghasilkan risk notable" (meniru Executive summary [S1]) dari risk index lab (Day 31 analog), lalu jelaskan arti panel itu untuk tuning RBA.
 
-## 6. Troubleshooting
+## 4. Troubleshooting
 
 | Gejala | Kemungkinan penyebab | Perbaikan |
 |---|---|---|
@@ -213,21 +202,21 @@ Kesalahan yang sering terjadi di skenario seperti ini adalah mulai dari detectio
 | Panel disposisi tidak bermakna | Disposition tidak diisi/selalu Undetermined | Wajibkan disposition (Day 34) |
 | Dashboard lambat | Rentang waktu besar, akselerasi belum selesai | Persempit waktu; cek akselerasi |
 
-## 7. Kesalahan umum dan jebakan
+## 5. Kesalahan umum dan jebakan
 
 - Mencari antrean kerja di Analytics. Antrean ada di Mission Control (analyst queue).
 - Menganggap urgensi = severity. Urgensi menggabungkan severity dan prioritas aset [S2].
-- Membaca close rate sebagai kualitas (bagian 4.4).
+- Membaca close rate sebagai kualitas (bagian 2.4).
 - Mengabaikan Audit dashboards. Dashboard keamanan hanya sebaik data dan akselerasinya.
 - `[komunitas]` Tidak ada sumber komunitas. Konten dari dokumentasi ES 8.7.
 
-## 8. Catatan terkini
+## 6. Catatan terkini
 
 - Dokumentasi ES 8.7 menempatkan dashboard di bagian Analytics User Guide [S1][S2][S3].
 - Panel ES 8.7 masih memakai istilah ES 7 (notable, risk notable, correlation search) di beberapa tempat [S1][S3]. Jangan bingung saat membandingkan dengan glosarium.
 - Predictive analytics dashboard terdaftar di navigasi 8.7 [S1], cek isinya.
 
-## 9. Cheat sheet
+## 7. Cheat sheet
 
 ```
 SECURITY POSTURE   key indicators (24h per domain) | findings by urgency (aset prio x severity) | over time | top findings | top sources (src)
@@ -241,7 +230,61 @@ AUDIT              kesehatan data model/konten/platform ; PREDICTIVE analytics
 ANTREAN            Mission Control > analyst queue (bukan Analytics)
 ```
 
-## 10. Sumber
+## 8. Uji diri
+
+Coba jawab dulu tanpa membuka bagian di atas. Bila jawabanmu berbeda dengan kunci, baca ulang bagian yang disebut di kunci.
+
+**1. Pertanyaan jebakan.** Analyst PT JAB membuka Intrusion Center di kelompok Network dan panelnya kosong, lalu menulis di tiket "tidak ada aktivitas IDS dalam 24 jam terakhir". Apa yang keliru?
+
+<details><summary>Jawaban</summary>
+
+Panel kosong bukan pernyataan tentang aktivitas, melainkan pernyataan tentang data model yang dibaca panel itu. Intrusion Center membaca data model Intrusion Detection, jadi urutan pemeriksaannya: cari sub-dashboard itu di tabel pemetaan, jalankan `| tstats summariesonly=false count from datamodel=<DM>` untuk memastikan modelnya punya data sama sekali, lalu ulangi dengan `summariesonly=true`. Selisih besar antara keduanya berarti akselerasi belum selesai atau rentang waktunya di luar jendela summary, sedangkan nol di dua-duanya berarti masalahnya di onboarding atau tag CIM, bukan di dashboard. Kesimpulan "tidak ada aktivitas" baru sah setelah langkah itu dilakukan. Lihat bagian 1.5 dan 1.6.
+
+</details>
+
+**2. Skenario keputusan.** SOC lead meminta dua hal dalam satu minggu: bahan laporan bulanan untuk direksi, dan penilaian apakah detection brute force yang berisik itu layak dipertahankan. Dashboard mana yang kamu pakai?
+
+- A. Security posture untuk keduanya, karena di situ semua finding dan top detection terlihat.
+- B. Executive summary untuk laporan direksi (MTT triage, MTT resolution, investigasi, distribusi urgensi dan domain), dan SOC operations untuk menilai detection lewat panel disposisi.
+- C. Risk analysis untuk keduanya, karena skor risiko entity adalah ukuran paling obyektif.
+
+<details><summary>Jawaban</summary>
+
+B. Executive summary memang dirancang untuk audiens manajemen: metrik waktu, jumlah investigasi, distribusi finding per urgensi dan domain, serta perbandingan risk notable dengan notable biasa. SOC operations memuat panel disposisi dari waktu ke waktu beserta sumber yang menghasilkan disposisi tertentu, sehingga detection yang dominan di "incorrect logic" langsung terbaca sebagai pekerjaan detection engineer, dan yang dominan di "inaccurate data" sebagai pekerjaan data engineer. A hanya memberi gambaran 24 jam terakhir tanpa metrik dan tanpa disposisi. C menjawab pertanyaan lain, yaitu entity mana yang berisiko tinggi. Lihat bagian 1.1, 1.3, dan 1.4.
+
+</details>
+
+**3. Pertanyaan jebakan.** Di Security posture PT JAB hampir semua finding berurgensi medium atau unknown, dan seorang rekan menyimpulkan "berarti severity detection kita semua medium". Apa yang perlu dikoreksi?
+
+<details><summary>Jawaban</summary>
+
+Urgensi bukan severity. Urgensi dihitung dari gabungan severity detection dan prioritas aset, jadi daftar aset dan identitas yang kosong atau belum lengkap membuat kolom urgensi menumpuk di satu nilai dan kehilangan daya pembeda. Di PT JAB hal ini memang sedang terjadi karena aset POP dan perangkat pelanggan belum masuk, sehingga perbaikannya ada di melengkapi data aset, bukan di menaikkan severity detection satu per satu. Lihat bagian 1.2 dan bagian 4.
+
+</details>
+
+**4. Skenario keputusan.** Manajemen ingin memakai panel close rate per analyst di SOC operations sebagai target bulanan per orang. Apa jawabanmu?
+
+- A. Setuju, karena angkanya sudah disediakan dashboard bawaan dan mudah dibandingkan antar analyst.
+- B. Tolak seluruh panel itu, karena metrik per analyst tidak pernah berguna.
+- C. Setuju memakainya sebagai bahan diskusi beban kerja, tetapi tolak menjadikannya target, dan sarankan membacanya bersama panel disposisi serta kualitas penutupan.
+
+<details><summary>Jawaban</summary>
+
+C. Close rate tinggi bisa berarti analyst yang produktif, atau antrean yang ditutup prematur, dan dashboard tidak bisa membedakan keduanya. Panel itu berguna untuk melihat sebaran beban dan penugasan, sedangkan kualitasnya hanya terbaca lewat disposisi: detection yang dominan di "incorrect logic" dan "inaccurate data" menunjukkan di mana pekerjaan perbaikan berada. A mendorong perilaku yang justru merusak data metrik, karena disposisi yang diisi sembarangan membuat seluruh panel SOC operations tidak bermakna. B berlebihan: panelnya tetap berguna selama tidak dijadikan target. Lihat bagian 1.4 dan 2.4.
+
+</details>
+
+**5. Interview question (English).** "You open your SIEM in the morning and the dashboard shows a 380 percent spike in one domain. Walk me through what you do."
+
+<details><summary>Sample answer</summary>
+
+"I read the spike against the other panels before I touch a single case. If almost all of it comes from one detection and one source address, that is a noisy source pattern rather than a broad attack, so my first question is what that address actually is, which I answer from the asset and identity dashboards or the asset lookup: a scanner, or an application with expired credentials, behaves very differently from a workstation. Then I ignore volume for a moment and open the two critical findings first, because urgency combines detection severity with asset priority, so two critical findings on important assets outrank several hundred medium ones. If one host has a dozen malware findings, I work it as one case rather than twelve tickets. After triage I write the tuning note: a brute force detection fired hundreds of times by a single benign source is a candidate for a narrow allowlist or for sending its output into risk instead of straight into the queue. And if a panel I rely on is empty, I do not read that as quiet; I check the data model behind it, because an empty panel is usually missing data, missing CIM tags, or incomplete acceleration."
+
+What makes this answer strong: it separates volume from risk, names urgency as a combination of severity and asset priority, groups findings per host into one case, closes the loop with a tuning decision, and treats an empty panel as a data question rather than good news.
+
+</details>
+
+## 9. Sumber
 
 | ID | Judul | URL | Tipe | Terbit/diakses | Keandalan dan catatan |
 |---|---|---|---|---|---|
@@ -251,4 +294,4 @@ ANTREAN            Mission Control > analyst queue (bukan Analytics)
 | S4 | ES 7.3: Executive Summary dashboard (pembanding) | https://help.splunk.com/en/splunk-enterprise-security-7/user-guide/7.3/dashboard-reference/executive-summary-dashboard | primer | diakses 2026-10-07 | Sedang; konteks ES 7 |
 | S5 | ES 8.7: Data model reference for dashboards in Splunk Enterprise Security | https://help.splunk.com/en/splunk-enterprise-security-8/administer/8.7/dashboards/data-model-reference-for-dashboards-in-splunk-enterprise-security | primer | diakses 2026-10-10 | Tinggi untuk nama dashboard dan data model-nya |
 
-**Catatan sumber:** ketersediaan menu "Open in Search" di panel ES 8.7 dan nama field notable/finding di ES 8 perlu dicek di instance. Daftar sub-dashboard di bagian 3.7 berasal dari tabel referensi data model ES 8.7 [S5]; letak menunya di navigasi bisa berbeda antar versi. Angka di bagian 4.6 fiktif.
+**Catatan sumber:** ketersediaan menu "Open in Search" di panel ES 8.7 dan nama field notable/finding di ES 8 perlu dicek di instance. Daftar sub-dashboard di bagian 1.6 berasal dari tabel referensi data model ES 8.7 [S5]; letak menunya di navigasi bisa berbeda antar versi. Angka di bagian 2.6 fiktif.
