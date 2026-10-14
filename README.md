@@ -9,11 +9,12 @@ Coretan belajar mandiri saya seputar security operations. Ditulis untuk diri sen
 Tiap folder berisi catatan yang dipecah per Day.
 
 - [Splunk](Splunk-Notes/)
-- [Wazuh](Wazuh-Notes/)
+- [Incident Response](Incident-Response-Notes/)
+- [Endpoint Forensics](Endpoint-Forensics-Notes/)
 - [Detection Engineering](Detection-Engineering-Notes/)
 - [Threat Hunting](Threat-Hunting-Notes/)
-- [Endpoint Forensics](Endpoint-Forensics-Notes/)
+- [Wazuh](Wazuh-Notes/)
 - [Network Forensics](Network-Forensics-Notes/)
-- [CTI](CTI-Notes/)
 - [Malware Triage](Malware-Triage-Notes/)
+- [CTI](CTI-Notes/)
 - [ISO 27001](ISO27001-Notes/)
