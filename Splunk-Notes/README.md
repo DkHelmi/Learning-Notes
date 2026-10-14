@@ -29,17 +29,14 @@ Catatan saya belajar Splunk Enterprise dan Enterprise Security, dari SPL sampai 
 | 20 | [Review Minggu 1](20-review-spl-dan-knowledge-object.md) |
 | 21 | [Defenses dan sumber data](21-defenses-dan-sumber-data.md) |
 | 22 | [Membuat data model dan memakai Pivot](22-data-model-dan-pivot.md) |
-| 23 | [Praktik SIEM, CIM, data model](23-siem-cim-data-model.md) |
+| 23 | [CIM, CIM Add-on, dan praktik terbaik SIEM](23-siem-cim-data-model.md) |
 | 24 | [Field CIM untuk investigasi](24-field-cim-investigasi.md) |
 | 25 | [tstats](25-tstats.md) |
-| 26 | [Acceleration dan Asset and Identity](26-acceleration-asset-identity.md) |
+| 26 | [Acceleration dan Asset & Identity framework](26-acceleration-asset-identity.md) |
 | 27 | [SSE dan ES menilai sumber data](27-sse-es-menilai-sumber-data.md) |
 | 28 | [Onboarding data dan konfigurasi index-time](28-onboarding-data-index-time.md) |
-| 29 | [Organisasi SOC](29-soc-peran-framework-risiko.md) |
-| 29b | [Framework, CIA, risiko](29b-framework-cia-risiko.md) |
-| 30 | [Jenis serangan, attack vector, glosarium](30-serangan-attack-ttp.md) |
-| 30b | [TTP](30b-ttp.md) |
-| 30c | [Tingkatan threat intel dan annotations](30c-tiers-threat-intel-annotations.md) |
+| 29 | [SOC, peran, framework, dan risiko](29-soc-peran-framework-risiko.md) |
+| 30 | [Serangan, ATT&CK, TTP, dan tingkatan threat intelligence](30-serangan-attack-ttp.md) |
 | 31 | [Istilah ES](31-istilah-es.md) |
 | 32 | [Dashboard ES](32-dashboard-es.md) |
 | 33 | [Mission Control, investigation, response plan, dan threat intelligence ES 8](33-mission-control-investigasi-threat-intel.md) |
