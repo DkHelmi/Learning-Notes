@@ -9,24 +9,18 @@ versions_checked: Splunk Security Essentials 3.8 (Data Inventory, Security Conte
 
 Cakupan: bagaimana Splunk Security Essentials dan ES dapat dipakai menilai sumber data, termasuk sourcetype umum on-prem dan cloud, serta cara menemukan content untuk sebuah sourcetype.
 
-## 1. Tujuan belajar
+## Ide inti
 
-Setelah menyelesaikan Day ini, kamu bisa:
+Pertanyaan yang dijawab Day ini hanya satu: dari data yang sudah masuk, deteksi apa yang sebenarnya bisa jalan sekarang? Jawabannya bukan daftar sourcetype, karena sebuah content baru bekerja bila tiga hal terpenuhi bersamaan, yaitu jenis event yang tepat benar-benar ada di dalam data, field-nya sudah dinormalisasi ke nama CIM, dan ada content yang memang memakainya. SSE dan ES menyediakan jalur untuk memeriksa ketiganya secara sistematis: Data Inventory mendaftarkan product beserta sourcetype, volume, dan CIM compliance; data source category menjadi bahasa penghubung antara event yang ada dan content yang membutuhkannya; Analytics Advisor dan Detection Studio menunjukkan content yang bisa diaktifkan sekarang, content yang masih kekurangan data, dan detection yang sudah aktif tetapi sebenarnya tidak sehat. Day 45 menjawab di mana konten berada dan Day 21 menjawab data apa yang ada, lalu Day ini menghubungkan keduanya menjadi satu laporan kesiapan data. Laporan itu yang dipakai sebagai dasar argumen kenapa sebuah log perlu di-ingest, sekaligus dasar menolak ingest yang tidak menambah deteksi apa pun.
 
-- menjalankan alur Data Inventory di SSE: introspeksi otomatis, product, data source category, CIM coverage.
-- menemukan content untuk sebuah sourcetype atau data source di SSE (Security Content, MITRE ATT&CK dashboard) dan di ES 8.7 (Detection Studio).
-- menyebut sourcetype umum untuk sumber on-prem dan cloud, serta add-on yang menghasilkannya.
-- menyusun "laporan kesiapan data" yang menghubungkan data yang ada, content yang bisa diaktifkan, dan celahnya.
+Analoginya adalah titik monitoring di jaringan: gangguan hanya terlihat di segmen yang benar-benar dipantau, dan daftar perangkat yang sudah dipasangi titik ukur bukan jaminan sebuah gangguan bisa dibuktikan. Batas analoginya ada di langkah setelah data masuk. Di NMS, perangkat yang sudah dipantau langsung muncul di grafik, sedangkan di SIEM sumber yang sudah masuk index belum tentu terpakai: tanpa kategori event dan field yang benar, data model tetap kosong dan content yang bergantung padanya tidak pernah fire. Di PT JAB keadaannya persis begitu. Sepuluh index sudah terisi dan volumenya besar, tetapi ES baru dipasang di search head terpisah, Asset & Identity belum lengkap, dan sebagian add-on belum menormalisasi field yang dibutuhkan, sehingga "lognya sudah masuk" belum berarti alert yang dibangun di atasnya bisa dipercaya.
 
-## 2. Konteks singkat
+**Kapan relevan:** sebelum menjanjikan sebuah detection ke SOC lead, saat menyusun usulan sumber data berikutnya beserta alasannya, saat ditanya kenapa skor cakupan ATT&CK rendah padahal log yang masuk banyak, dan saat harus memilih mana yang lebih dulu dikerjakan antara menambah sumber baru dan membenahi normalisasi sumber yang sudah ada.
+**Kapan bukan jawaban:** angka cakupan bukan ukuran kemampuan deteksi. Skor ATT&CK yang tinggi bisa berisi detection yang tidak kompatibel dengan data yang ada, dan status "Available" di SSE hanya berarti kategori event-nya terlihat ada, bukan bahwa field dan macro-nya sudah benar. Day ini juga bukan tempat memperbaiki datanya: kalau kategori event yang kurang disebabkan audit policy, konfigurasi agent, atau add-on yang belum dipasang, yang harus diubah ada di sumber dan di onboarding (Day 28), bukan di dashboard penilaian.
 
-Day 45 menjawab "di mana konten berada". Day 21 menjawab "data apa yang ada". Hari ini keduanya dihubungkan secara sistematis, karena itulah fungsi SSE dan fitur penilaian di ES: memberi tahu content mana yang bisa jalan dengan data yang kamu punya, dan data apa yang perlu ditambah untuk menutup celah.
+## 1. Konsep inti
 
-Di pekerjaan, ini dasar argumen "kenapa kita perlu ingest log X", dan dasar untuk menolak ingest yang tidak menambah deteksi apa pun.
-
-## 3. Konsep inti
-
-### 3.1 SSE Data Inventory
+### 1.1 SSE Data Inventory
 
 Data Inventory di SSE (menu Data > Data Inventory) dipakai untuk mendaftarkan product yang ada di lingkunganmu [S1]:
 - Setiap product memuat metadata: sourcetype, volume event, dan CIM compliance. Product terhubung ke data source category [S1].
@@ -36,7 +30,7 @@ Data Inventory di SSE (menu Data > Data Inventory) dipakai untuk mendaftarkan pr
 
 Data source category adalah jenis event spesifik yang harus ada agar sebuah content bekerja, misalnya "Windows process launch with command line" atau "authentication". Setiap content SSE dipetakan ke kategori ini [S2]. Content juga memakai input (pre-filter) macro untuk konfigurasi spesifik lingkungan (index, source, sourcetype) [S2], cek nama macro per content.
 
-### 3.2 Menemukan content di SSE
+### 1.2 Menemukan content di SSE
 
 - **Security Content page**: katalog content (SSE + ESCU) dengan filter. Bagian "Review your content with the Security Content page" di dokumentasi 3.8 [S3].
 - **Analytics Advisor**:
@@ -45,7 +39,7 @@ Data source category adalah jenis event spesifik yang harus ada agar sebuah cont
   - Analytics Advisor dirancang untuk menunjukkan celah cakupan, memetakan content ke ATT&CK dan Kill Chain, serta menunjukkan kematangan terhadap Security Data Journey [S2].
 - SSE 3.8 menambah dashboard MITRE ATT&CK Benchmark (20 teknik teratas di laporan ancaman) dan Security Data Journey 4 level (Day 45).
 
-### 3.3 Menilai di ES 8.7: Detection Studio
+### 1.3 Menilai di ES 8.7: Detection Studio
 
 ES 8.x menyediakan Detection Studio, dengan jalur menu Splunk Enterprise Security > Security content > Detection Studio > Launchpad [S5]:
 - **Detection coverage**: skor cakupan teknik MITRE ATT&CK untuk detection yang aktif, perubahan cakupan dari waktu ke waktu, dan detection berprioritas tinggi yang tersedia untuk diaktifkan [S5].
@@ -55,7 +49,9 @@ ES 8.x menyediakan Detection Studio, dengan jalur menu Splunk Enterprise Securit
 
 Selain itu, di ES: Data Model Audit (Day 25/26), daftar aset/identitas (Day 26), dan inventaris tstats (Day 21) membantu menilai kesiapan data.
 
-### 3.4 Sourcetype umum
+**Tanpa ES:** SSE adalah app gratis, jadi Data Inventory, Security Content page, dan dashboard MITRE ATT&CK Framework bisa dipakai di Splunk Enterprise biasa tanpa Enterprise Security. Yang hanya ada di ES adalah Detection Studio beserta skor cakupan dan kesehatan detection (ES 8.x) [S5], ditambah Data Model Audit dan daftar aset serta identitas yang terkelola. Tanpa ES, padanannya dikerjakan sendiri: inventaris sourcetype dan volume dengan `tstats` seperti di bagian 2.1, pemeriksaan kesiapan satu kategori event seperti di bagian 2.2, dan matriks celah di bagian 2.4 yang diisi manual.
+
+### 1.4 Sourcetype umum
 
 On-prem (sourcetype bergantung add-on dan versinya; nilai di bawah adalah konvensi umum, cek di instance Splunk-mu):
 
@@ -82,23 +78,15 @@ Contoh dari BOTS v1 (Day 20): Windows event log, Sysmon, Fortigate, IIS, Nessus,
 | AWS VPC Flow Logs | `aws:cloudwatchlogs:vpcflow` | Splunk Add-on for AWS | Splunk tidak menyarankan add-on AWS untuk mengumpulkan CloudWatch Logs; disarankan lewat Kinesis Firehose add-on [S6] |
 | Microsoft 365 audit | `o365:management:activity` | Splunk Add-on for Microsoft Office 365 | Autentikasi, akun, akses data, audit lain [S7] |
 | Entra ID (Azure AD), Azure | `azure:monitor:aad`, `azure:monitor:activity`, `azure:monitor:resource`, `mscs:azure:eventhub` | Splunk Add-on for Microsoft Cloud Services | Add-on Office 365 lebih aktif dikembangkan dan dapat menggantikan beberapa sourcetype lama [S7] |
-| Okta, GCP, CrowdStrike, dll. | (bervariasi menurut add-on) | add-on vendor |, cek di halaman add-on masing-masing |
+| Okta, GCP, CrowdStrike, dll. | (bervariasi menurut add-on) | add-on vendor | cek di halaman add-on masing-masing |
 
 **Prinsip:** sourcetype adalah label dari add-on. Nama yang sama bisa berubah antar versi (contoh: `ms:o365:management` berganti menjadi `o365:management:activity` [S7]). Jangan menghardcode sourcetype di detection. Gunakan data model CIM (Day 23/24).
 
-### 3.5 Enterprise vs ES
-
-| Kemampuan | Tanpa ES | Dengan ES |
-|---|---|---|
-| SSE (Data Inventory, Security Content, ATT&CK dashboard) | Ya (app gratis) | Ya |
-| Detection Studio (coverage + health) | Tidak | Ya, ES 8.x [S5] |
-| Data Model Audit, A&I | Sebagian (manual) | Ya |
-
-## 4. Contoh SPL dan langkah di ES
+## 2. Contoh SPL dan langkah di ES
 
 > Keluaran berlabel ilustrasi.
 
-### 4.1 Daftar product kasar dari data yang ada (pra-introspeksi)
+### 2.1 Daftar product kasar dari data yang ada (pra-introspeksi)
 
 ```
 | tstats count dc(host) AS hosts where index=* earliest=-7d by index sourcetype
@@ -108,7 +96,7 @@ Contoh dari BOTS v1 (Day 20): Windows event log, Sysmon, Fortigate, IIS, Nessus,
 
 Ini mirip informasi yang dikumpulkan introspeksi SSE (sourcetype, host, volume) [S1]. Gunakan untuk memverifikasi hasil introspeksi.
 
-### 4.2 Cek kesiapan data untuk satu data source category
+### 2.2 Cek kesiapan data untuk satu data source category
 
 Contoh kategori "Windows process launch with command line":
 
@@ -123,13 +111,13 @@ Contoh kategori "Windows process launch with command line":
 - Bagian kedua: apakah event 4688 punya command line. Tanpa command line, banyak content proses tidak berguna. Nama field command line bergantung TA dan format XML/klasik, perlu dicek.
 - **Cara membaca hasil:** host di Endpoint jauh lebih sedikit dari total workstation berarti cakupan agent/Sysmon belum merata.
 
-### 4.3 Dari sourcetype ke content: tiga jalur
+### 2.3 Dari sourcetype ke content: tiga jalur
 
-1. **SSE > Security Content**: filter data source, product, atau sourcetype (bagian 3.2) [S3].
+1. **SSE > Security Content**: filter data source, product, atau sourcetype (bagian 1.2) [S3].
 2. **research.splunk.com**: navigasi Data Sources, pilih sumber (mis. Sysmon EventID 1), lalu lihat daftar detection (Day 45).
 3. **ES 8.7 > Security content > Detection Studio**: lihat detection tersedia berprioritas tinggi dan statusnya [S5].
 
-### 4.4 Matriks data, content, dan celah (template laporan)
+### 2.4 Matriks data, content, dan celah (template laporan)
 
 ```
 | Data source category                | Product / sourcetype           | Status  | CIM | Content tersedia | Aktif | Celah utama                 |
@@ -141,7 +129,7 @@ Contoh kategori "Windows process launch with command line":
 
 Template ini menjadi deliverable yang bagus untuk manajemen dan untuk portofolio.
 
-### 4.5 Langkah di ES/SSE (generik)
+### 2.5 Langkah di ES/SSE (generik)
 
 1. Pasang SSE di search head yang punya akses data (atau lab).
 2. Data > Data Inventory > Launch Automated Introspection [S1]. Periksa hasilnya dan perbaiki tanda X/? dengan Update.
@@ -149,13 +137,13 @@ Template ini menjadi deliverable yang bagus untuk manajemen dan untuk portofolio
 4. **Analytics Advisor > MITRE ATT&CK Framework**: ubah pewarnaan ke "Available" dan "Needs data" [S4].
 5. Di ES 8.7: Security content > Detection Studio > Launchpad. Catat skor cakupan dan detection yang ditandai tidak sehat [S5].
 
-## 5. Lab praktik
+## 3. Lab praktik
 
 1. Pasang SSE 3.8.x di Splunk lab. Jalankan Automated Introspection [S1].
-2. Bandingkan hasil introspeksi dengan bagian 4.1. Perbaiki product yang salah kategori.
+2. Bandingkan hasil introspeksi dengan bagian 2.1. Perbaiki product yang salah kategori.
 3. Buka MITRE ATT&CK Framework dashboard. Catat 5 teknik dengan status "Available" (bisa diaktifkan sekarang) dan 5 dengan "Needs data" [S4].
-4. Untuk satu teknik "Needs data", tentukan data source category yang kurang dan sourcetype yang akan menyediakannya (bagian 3.4).
-5. Isi matriks bagian 4.4 untuk lab-mu.
+4. Untuk satu teknik "Needs data", tentukan data source category yang kurang dan sourcetype yang akan menyediakannya (bagian 1.4).
+5. Isi matriks bagian 2.4 untuk lab-mu.
 6. (Opsional, bila ada ES 8.7) Buka Detection Studio. Catat skor cakupan dan 3 rekomendasi teratas [S5].
 
 **Hasil yang sebaiknya tersimpan:**
@@ -166,7 +154,7 @@ Template ini menjadi deliverable yang bagus untuk manajemen dan untuk portofolio
 
 **Variasi tantangan:** pilih satu sumber cloud yang bisa kamu dapatkan secara gratis untuk lab, misalnya log dari akun cloud uji milikmu sendiri (bukan akun kerja). Rencanakan onboarding: add-on, sourcetype, data model target, dan 3 content yang menjadi "Available" setelahnya. Cek biaya dan syarat layanan cloud tersebut.
 
-## 6. Troubleshooting
+## 4. Troubleshooting
 
 | Gejala | Kemungkinan penyebab | Cara memeriksa/memperbaiki |
 |---|---|---|
@@ -177,7 +165,7 @@ Template ini menjadi deliverable yang bagus untuk manajemen dan untuk portofolio
 | Sourcetype O365 berbeda dari panduan | Pergantian add-on/sourcetype | Cek dokumentasi add-on yang terpasang [S7] |
 | Skor cakupan Detection Studio rendah padahal banyak detection aktif | Detection aktif tidak bisa jalan (kompatibilitas data) | Lihat KPI Compatibility/Health [S5] |
 
-## 7. Kesalahan umum dan jebakan
+## 5. Kesalahan umum dan jebakan
 
 - Menganggap "ada sourcetype" = "content bisa jalan". Butuh kategori event dan field yang tepat (CIM) [S1][S2].
 - Menghardcode sourcetype di detection. Sourcetype berubah antar versi add-on [S7].
@@ -186,14 +174,14 @@ Template ini menjadi deliverable yang bagus untuk manajemen dan untuk portofolio
 - Mengumpulkan log cloud dengan metode yang tidak disarankan [S6].
 - `[komunitas, belum terkonfirmasi]` Thread Splunk Community soal definisi sourcetype Microsoft Cloud Services [S7] menunjukkan bahwa nama sourcetype add-on ini sering membingungkan. Selalu cek sourcetype yang benar-benar masuk dengan `| tstats count where index=<idx> by sourcetype`.
 
-## 8. Catatan terkini
+## 6. Catatan terkini
 
 - ES 8.x Detection Studio (dokumentasi tersedia sejak setidaknya 8.4, kini 8.7): cakupan ATT&CK + kesehatan detection + rekomendasi berprioritas [S5]. Repo contentctl (alat build security_content) tidak lagi menerima PR karena investasi dialihkan ke Detection Studio (Day 45). Hubungan resmi keduanya perlu dicek di README contentctl.
 - SSE 3.8 memakai endpoint API ESCU baru. SSE 3.7.1 ke bawah tertahan di ESCU 4.22.0 (Day 45).
 - **Microsoft 365:** add-on Office 365 lebih aktif dikembangkan dibanding Microsoft Cloud Services untuk data audit M365 [S7].
 - **AWS:** rekomendasi Firehose untuk CloudWatch Logs dan VPC Flow [S6].
 
-## 9. Cheat sheet
+## 7. Cheat sheet
 
 ```
 SSE  Data > Data Inventory : Automated Introspection (search head produksi) | Manually Configure
@@ -208,7 +196,59 @@ CLOUD    aws:cloudtrail | aws:cloudwatchlogs:vpcflow (pakai Firehose) | o365:man
 PRINSIP  sourcetype = label add-on (bisa berubah) -> tulis detection di atas CIM
 ```
 
-## 10. Sumber
+## 8. Uji diri
+
+Coba jawab dulu tanpa membuka bagian di atas. Bila jawabanmu berbeda dengan kunci, baca ulang bagian yang disebut di kunci.
+
+**1. Pertanyaan jebakan.** Data Inventory menampilkan product Sysmon dengan status data ada dan volume harian terbesar di lingkunganmu, dan sebuah content yang membutuhkan kategori "Windows process launch with command line" berstatus Available. Apakah itu cukup untuk menyimpulkan content-nya akan bekerja?
+
+<details><summary>Jawaban</summary>
+
+Belum. Status Available berarti data yang dibutuhkan terlihat ada, bukan bahwa content-nya siap jalan. Dua hal masih bisa menggagalkannya: CIM compliance yang tidak lengkap, sehingga field yang dipakai content tidak terisi walaupun event-nya ada, dan input atau pre-filter macro yang belum disesuaikan ke index, source, serta sourcetype lingkunganmu. Untuk kategori yang membutuhkan command line ada syarat tambahan di sisi sumber: event 4688 tanpa command line tidak berguna untuk content proses, dan nama field command line berbeda antar add-on dan antar format XML atau klasik, jadi perlu dicek. Cara memeriksanya adalah menghitung dari data model dan dari field command line secara langsung, seperti di bagian 2.2, bukan dari volume index. Lihat bagian 1.1, 1.2, 2.2, dan 4.
+
+</details>
+
+**2. Skenario keputusan.** Detection Studio menunjukkan skor cakupan ATT&CK yang rendah, padahal daftar detection di ES memperlihatkan banyak detection berstatus aktif. Apa langkah pertama yang paling tepat?
+
+- A. Aktifkan semua detection berprioritas tinggi yang masih tersedia supaya skornya naik.
+- B. Buka sisi health di halaman yang sama dan periksa KPI Compatibility detection yang aktif, karena detection aktif yang tidak bisa jalan di atas data yang ada tidak menyumbang cakupan.
+- C. Abaikan skornya, karena cakupan ATT&CK hanya angka untuk laporan manajemen.
+
+<details><summary>Jawaban</summary>
+
+B. Detection Studio memang dirancang menampilkan dua hal sekaligus, yaitu cakupan teknik untuk detection yang aktif dan kesehatan detection lewat KPI Performance, Compatibility, Impact, dan Confidence, dan skor prioritas rekomendasinya ikut mempertimbangkan performa serta kompatibilitas dengan data yang ada. Jadi skor rendah dengan banyak detection aktif adalah gejala khas detection yang aktif tetapi tidak kompatibel, dan diagnosisnya ada di halaman itu juga. A menambah beban search tanpa membuktikan datanya mendukung, dan itu pola yang persis dihindari di bagian 5. C membuang informasi yang sebenarnya bisa ditindaklanjuti. Lihat bagian 1.3, 4, dan 5.
+
+</details>
+
+**3. Pertanyaan jebakan.** Sebuah detection internal kamu tulis dengan filter `sourcetype="ms:o365:management"` dan sudah setahun berjalan. Setelah add-on diperbarui, detection itu berhenti fire padahal log M365 tetap masuk. Apa yang terjadi, dan bagaimana menulisnya supaya tidak terulang?
+
+<details><summary>Jawaban</summary>
+
+Sourcetype adalah label yang diberikan add-on, dan namanya bisa berganti antar versi: `ms:o365:management` berganti menjadi `o365:management:activity` [S7]. Detection yang menghardcode sourcetype ikut mati tanpa pesan error, karena secara sintaks searchnya tetap sah dan hasilnya nol. Perbaikannya ada dua lapis: tulis detection di atas data model CIM (Day 23 dan Day 24) atau lewat satu macro input yang isinya tinggal diganti di satu tempat, lalu verifikasi apa yang benar-benar masuk dengan `| tstats count where index=<idx> by sourcetype` sebelum menyimpulkan datanya hilang. Lihat bagian 1.4 dan 5.
+
+</details>
+
+**4. Jelaskan ulang.** Jelaskan ke SOC lead, dalam tiga kalimat, kenapa permintaan ingest satu sumber log baru sebaiknya datang bersama daftar content yang akan hidup karenanya, bukan hanya nama sumbernya.
+
+<details><summary>Contoh jawaban dan kesalahan yang sering muncul</summary>
+
+Contoh jawaban: "Nilai sebuah sumber baru diukur dari deteksi dan pertanyaan investigasi yang sebelumnya tidak bisa kita jawab, jadi saya menuliskannya sebagai kategori event yang kurang dan content yang berubah status dari butuh data menjadi bisa diaktifkan. Dengan begitu permintaannya bisa dinilai: berapa content yang hidup, teknik ATT&CK mana yang tertutup, dan apa yang masih kosong setelah sumber itu masuk. Kalau daftarnya kosong, yang kita beli hanya biaya ingest, dan uang yang sama biasanya lebih berguna untuk membenahi normalisasi sumber yang sudah ada supaya content yang sudah terpasang mulai bekerja."
+
+Kesalahan yang sering muncul: memakai volume atau jumlah sumber sebagai bukti kemajuan; menjanjikan deteksi hanya karena sourcetype akan muncul, padahal field CIM dan macro masih harus disesuaikan; dan lupa menyebutkan celah yang tetap terbuka setelah sumber itu masuk, sehingga manajemen menganggap satu pembelian menutup seluruh teknik. Lihat bagian 1.1, 1.2, 2.4, dan 5.
+
+</details>
+
+**5. Interview question (English).** "How do you check whether the data in your SIEM actually supports the detection coverage you claim?"
+
+<details><summary>Sample answer</summary>
+
+"I separate three questions that people tend to merge: what data arrives, whether it is normalised, and whether any content uses it. For the first I build an inventory of index, sourcetype, host count and daily volume, which is roughly what the Security Essentials data inventory collects through its automated introspection, and I run that introspection on a search head that can actually see production data, otherwise the result is empty for the wrong reason. For the second I stop counting from the index and start counting from the data model, because a source can be large and still leave the model empty when the add-on has not mapped the fields and tags the content needs. For the third I work from data source categories, the specific event types a piece of content requires, and I use the ATT&CK coverage views to see what is available with today's data versus what needs data, and in Enterprise Security the Detection Studio view also tells me whether the detections I already enabled are healthy and compatible. The deliverable is a short matrix: category, product and sourcetype, whether the data is present, CIM status, content available, content enabled, and the main gap, which is also the document I take into a budget conversation."
+
+What makes this answer strong: it treats arrival, normalisation and content as three separate tests instead of one, names the concrete artefacts that answer each test, and ends with a deliverable a manager can act on rather than a coverage percentage.
+
+</details>
+
+## 9. Sumber
 
 | ID | Judul | URL | Tipe | Terbit/diakses | Keandalan dan catatan |
 |---|---|---|---|---|---|
