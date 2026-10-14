@@ -22,7 +22,7 @@ Setelah menyelesaikan Day ini, kamu bisa:
 
 ## 2. Konteks singkat
 
-Day 18 memberi kerangka lima tahap investigasi, Day 19 memberi metrik dan disposition, Day 22 dan Day 23 memberi cara finding lahir. Day ini menyambungkan semuanya di tempat pekerjaan itu benar-benar terjadi: Mission Control, antarmuka tempat analyst ES 8 bekerja sehari-hari.
+Day 34 memberi kerangka lima tahap investigasi serta metrik dan disposition, Day 35 dan Day 36 memberi cara finding lahir. Day ini menyambungkan semuanya di tempat pekerjaan itu benar-benar terjadi: Mission Control, antarmuka tempat analyst ES 8 bekerja sehari-hari.
 
 Dokumentasi Splunk menempatkan Mission Control sebagai tempat analyst melakukan triage, investigasi, dan respons terhadap insiden, lengkap dengan timeline untuk melihat kapan finding terjadi [S1]. Finding dan finding group yang muncul di analyst queue dihasilkan oleh detection, baik dari raw event maupun dari alert pihak ketiga [S1].
 
@@ -36,9 +36,9 @@ Yang membuat Day ini layak dipelajari serius: sebagian besar nilai sebuah SOC ti
 
 | Objek | Apa itu | Dibuat oleh |
 |---|---|---|
-| Finding | Satu hasil detection yang perlu dilihat analyst (istilah ES 7: notable event) | Event-based detection (Day 23) |
-| Intermediate finding | Jejak risiko yang dikumpulkan, bukan untuk ditriage satu per satu (istilah ES 7: risk event) | Risk rule atau detection dengan output risiko (Day 22) |
-| Finding group | Kumpulan finding dan intermediate finding yang terkait pada satu entity, hasil finding-based detection | Finding-based detection (Day 22) |
+| Finding | Satu hasil detection yang perlu dilihat analyst (istilah ES 7: notable event) | Event-based detection (Day 36) |
+| Intermediate finding | Jejak risiko yang dikumpulkan, bukan untuk ditriage satu per satu (istilah ES 7: risk event) | Risk rule atau detection dengan output risiko (Day 35) |
+| Finding group | Kumpulan finding dan intermediate finding yang terkait pada satu entity, hasil finding-based detection | Finding-based detection (Day 35) |
 | Investigation | Wadah terstruktur untuk mengumpulkan bukti dan menjalankan respons [S1] | Analyst, dari satu atau beberapa finding |
 
 Perbedaan penting dalam praktik: finding adalah pemicu, investigation adalah pekerjaan. Satu investigation bisa menampung banyak finding, dan justru itu gunanya. Membuat satu investigation per finding untuk insiden yang sama menghasilkan metrik yang menyesatkan dan pekerjaan ganda.
@@ -60,7 +60,7 @@ Yang perlu ditambahkan dari sisi praktik, karena dokumentasi tidak menuliskannya
 - **Assign sebelum bekerja, bukan sesudah.** Dua analyst yang mengerjakan finding yang sama adalah pemborosan paling umum di shift yang sibuk.
 - **Tulis hipotesis di note sejak awal.** Satu kalimat: "dugaan awal: brute force berhasil dari IP luar ke akun svc_backup". Hipotesis yang tertulis membuat bias lebih mudah dikoreksi.
 - **Catat yang tidak kamu temukan.** "Tidak ada proses anak mencurigakan dalam 2 jam setelah login" adalah temuan, bukan kekosongan.
-- **Cantumkan cakupan data.** Rentang waktu, index, dan keterbatasan (Day 31 bagian 3.7). Ini yang membedakan laporan yang bisa dipertahankan dari laporan yang hanya terdengar meyakinkan.
+- **Cantumkan cakupan data.** Rentang waktu, index, dan keterbatasan (Day 43 bagian 3.7). Ini yang membedakan laporan yang bisa dipertahankan dari laporan yang hanya terdengar meyakinkan.
 
 ### 3.3 Investigation sebagai wadah bukti
 
@@ -72,7 +72,7 @@ Isi sebuah investigation yang sehat:
 - **Files:** lampiran seperti hasil ekspor, screenshot dashboard, atau laporan triage.
 - **Timeline:** urutan kejadian, bukan urutan pekerjaanmu.
 
-Bedakan dua jenis waktu ini secara sadar. Timeline insiden berisi kapan penyerang melakukan sesuatu. Riwayat pekerjaan berisi kapan kamu melakukan sesuatu. Keduanya perlu, tetapi mencampurnya membuat laporan sulit dibaca dan membuat perhitungan dwell time salah (Day 19).
+Bedakan dua jenis waktu ini secara sadar. Timeline insiden berisi kapan penyerang melakukan sesuatu. Riwayat pekerjaan berisi kapan kamu melakukan sesuatu. Keduanya perlu, tetapi mencampurnya membuat laporan sulit dibaca dan membuat perhitungan dwell time salah (Day 34).
 
 Satu kebiasaan yang membuat note jauh lebih berguna: tulis query lengkap beserta rentang waktunya di dalam note, bukan hanya kesimpulannya. Enam bulan kemudian, query itu yang membuat temuanmu bisa diulang.
 
@@ -84,7 +84,7 @@ Yang perlu diketahui saat membuat plan sendiri [S2]:
 
 - Plan dibangun dari phase, dan setiap phase berisi task.
 - Deskripsi task mendukung Markdown, jadi langkah bisa ditulis rapi dengan daftar dan blok kode.
-- Satu task bisa dilampiri action atau playbook (Day 26 dan Day 27), sehingga analyst tidak perlu berpindah antarmuka.
+- Satu task bisa dilampiri action atau playbook (Day 41 dan Day 42), sehingga analyst tidak perlu berpindah antarmuka.
 - Satu task bisa memuat search yang bisa dijalankan langsung dari task itu. Saat dijalankan dari tab Response, search bawaan task berjalan untuk 24 jam terakhir secara default [S4].
 - Plan hanya bisa dipasang ke investigation setelah statusnya Published.
 - Plan bisa diimpor dari file JSON, dan JSON adalah satu-satunya format yang didukung.
@@ -94,13 +94,13 @@ Cara memakai fitur ini dengan baik: jangan menyalin prosedur panjang apa adanya.
 
 ### 3.5 Disposition dan penutupan
 
-Saat menutup, analyst memberi disposition. Pilihan intinya di ES 8 mencakup true positive, benign positive, false positive, dan undetermined, dengan rincian seperti false positive karena logika analitik yang salah atau karena data tidak akurat (Day 19 bagian 3.3) [S4].
+Saat menutup, analyst memberi disposition. Pilihan intinya di ES 8 mencakup true positive, benign positive, false positive, dan undetermined, dengan rincian seperti false positive karena logika analitik yang salah atau karena data tidak akurat (Day 34 bagian 3.3) [S4].
 
 Kenapa ini bukan formalitas:
 
-- Disposition adalah sumber data untuk mengukur kualitas detection. Tanpa itu, tidak ada cara objektif menentukan detection mana yang perlu di-tuning (Day 19).
-- Benign positive memberi informasi berbeda dari false positive. Benign positive berarti deteksimu benar dan aktivitasnya nyata, tetapi diizinkan. Perbaikannya ada di allowlist yang terkelola (Day 32 bagian 3.5), bukan di logika.
-- False positive karena data tidak akurat mengarahkan perbaikan ke onboarding (Day 30), bukan ke search.
+- Disposition adalah sumber data untuk mengukur kualitas detection. Tanpa itu, tidak ada cara objektif menentukan detection mana yang perlu di-tuning (Day 34).
+- Benign positive memberi informasi berbeda dari false positive. Benign positive berarti deteksimu benar dan aktivitasnya nyata, tetapi diizinkan. Perbaikannya ada di allowlist yang terkelola (Day 40 bagian 3.5), bukan di logika.
+- False positive karena data tidak akurat mengarahkan perbaikan ke onboarding (Day 28), bukan ke search.
 
 Aturan yang membuat metrik tetap bersih: disposition diberikan oleh orang yang mengerjakan, pada hari yang sama, dan selalu disertai satu baris alasan di note.
 
@@ -114,7 +114,7 @@ Ini bagian yang paling sering membuat bingung, dan perlu dibaca dengan teliti ka
 
 Konsekuensi praktis yang wajib kamu ingat: halaman Intelligence di dalam sebuah investigation menampilkan data dari TIM (Cloud) saja, bukan dari koleksi KV store native [S5]. Jadi bila di lab kamu memakai jalur native lalu membuka tab Intelligence dan melihatnya kosong, itu bukan kesalahan konfigurasi indikator, melainkan perbedaan jalur.
 
-Istilah pendamping: observable adalah data yang menandakan sebuah event teramati di sistem, jaringan, atau entitas digital lain [S5]. Di ES 7 istilah yang dipakai adalah threat object atau indicator (Day 20).
+Istilah pendamping: observable adalah data yang menandakan sebuah event teramati di sistem, jaringan, atau entitas digital lain [S5]. Di ES 7 istilah yang dipakai adalah threat object atau indicator (Day 31).
 
 ### 3.7 Menulis note yang masih berguna nanti
 
@@ -123,7 +123,7 @@ Kerangka note yang terbukti praktis, cukup lima baris:
 ```
 [2026-10-09 14:22] Hipotesis: brute force berhasil ke svc_backup dari 203.0.113.50 (finding FG-128).
 [2026-10-09 14:35] Dicek: index=lab_auth earliest=-24h@h user=svc_backup -> 412 gagal, 1 sukses 13:58 dari 203.0.113.50.
-[2026-10-09 14:50] Dicek: Endpoint.Processes dest=LAB-SRV-01 setelah 13:58 -> tidak ada proses anak di luar baseline (first-seen bersih, Day 32).
+[2026-10-09 14:50] Dicek: Endpoint.Processes dest=LAB-SRV-01 setelah 13:58 -> tidak ada proses anak di luar baseline (first-seen bersih, Day 40).
 [2026-10-09 15:05] Penilaian: kredensial kemungkinan bocor (keyakinan sedang); belum ada tanda eksekusi. Keterbatasan: EDR tidak terpasang di SRV-01.
 [2026-10-09 15:10] Tindakan: reset kredensial (tiket LAB-114), blokir IP di edge, tambah hunt harian untuk akun service.
 ```
@@ -138,13 +138,13 @@ Empat unsur yang harus selalu ada: hipotesis, bukti beserta query dan rentangnya
 
 1. Buka Mission Control, urutkan analyst queue berdasarkan urgency, lalu pilih satu finding.
 2. Assign ke dirimu dan ubah status menjadi in progress. Ini mencegah pekerjaan ganda [S1].
-3. Baca finding-nya sendiri dulu: detection apa yang memicunya, entity apa yang terlibat, annotation ATT&CK apa yang terbawa (Day 16).
+3. Baca finding-nya sendiri dulu: detection apa yang memicunya, entity apa yang terlibat, annotation ATT&CK apa yang terbawa (Day 30).
 4. Buat investigation dari finding itu, atau tambahkan ke investigation yang sudah ada bila insidennya sama.
 5. Tulis note hipotesis (bagian 3.7) sebelum menjalankan search apa pun.
 6. Tambahkan response plan yang sesuai jenis insiden lewat tab Response [S4].
 7. Kerjakan task satu per satu. Jalankan search bawaan task dan sesuaikan rentang waktunya, karena default-nya 24 jam terakhir [S4].
 8. Tambahkan event pendukung dan field entity ke investigation supaya timeline terbentuk.
-9. Jalankan action atau playbook bila diperlukan, misalnya lookup reputasi atau pengumpulan artefak (Day 26 dan Day 27).
+9. Jalankan action atau playbook bila diperlukan, misalnya lookup reputasi atau pengumpulan artefak (Day 41 dan Day 42).
 10. Tulis note penilaian, beri disposition, lalu tutup.
 
 ### 4.2 Search pendamping untuk melihat beban dan hasil triage
@@ -193,17 +193,17 @@ PHASE 1  Validasi
 PHASE 2  Penilaian dampak
   T2.1  Search proses di host tujuan 2 jam setelah login sukses.
   T2.2  Cek akses ke share dan aplikasi sensitif oleh akun itu.
-  T2.3  Tentukan apakah akun punya hak administratif (Asset and Identity, Day 10).
+  T2.3  Tentukan apakah akun punya hak administratif (Asset and Identity, Day 26).
 
 PHASE 3  Penanggulangan
   T3.1  Reset kredensial dan cabut sesi aktif. Catat nomor tiket.
-  T3.2  Blokir IP sumber bila masih aktif. Lampirkan playbook (Day 27).
+  T3.2  Blokir IP sumber bila masih aktif. Lampirkan playbook (Day 42).
   T3.3  Konfirmasi dengan pemilik sistem sebelum tindakan yang mengganggu layanan.
 
 PHASE 4  Penutupan dan umpan balik
   T4.1  Tulis note penilaian dengan keyakinan dan keterbatasan.
   T4.2  Beri disposition dan alasan satu baris.
-  T4.3  Bila FP: buat tiket tuning. Bila BP: tambah baris allowlist dengan expires_at (Day 32).
+  T4.3  Bila FP: buat tiket tuning. Bila BP: tambah baris allowlist dengan expires_at (Day 40).
   T4.4  Bila TP: usulkan detection atau hunt baru dari apa yang terlewat.
 ```
 
@@ -242,18 +242,18 @@ Nama field waktu tinjauan dan penutupan bergantung versi ES, jadi periksa dulu f
 Seluruh pola di Day ini bisa dilatih tanpa ES, karena yang dilatih sebenarnya adalah disiplin kerja:
 
 - Antrean finding diganti alert Wazuh atau hasil scheduled search Splunk Enterprise biasa.
-- Investigation diganti satu case di TheHive (Day 19) atau satu file Markdown per kasus.
+- Investigation diganti satu case di TheHive (Day 34) atau satu file Markdown per kasus.
 - Response plan diganti checklist phase dan task di file yang sama, dengan task berisi query lengkap.
 - Disposition diganti satu field di catatanmu, dengan nilai yang persis sama seperti di ES supaya kebiasaannya terbawa.
 
 ## 5. Lab praktik
 
-**Prasyarat:** ES lab bila ada; bila tidak, Splunk Enterprise plus TheHive atau catatan Markdown. Data autentikasi dan proses dari Day 09 sampai Day 11, serta satu detection dari Day 23.
+**Prasyarat:** ES lab bila ada; bila tidak, Splunk Enterprise plus TheHive atau catatan Markdown. Data autentikasi dan proses dari Day 23 sampai Day 24, serta satu detection dari Day 36.
 
 1. Picu satu detection lab dengan aktivitas jinak (brute force uji ke akun uji, lalu satu login sukses). Pastikan finding muncul di antrean.
 2. Jalankan alur bagian 4.1 sampai selesai, termasuk menulis note hipotesis sebelum search pertama.
 3. Buat response plan "Akun terkompromi (lab)" dengan empat phase seperti bagian 4.3. Bila di ES, publikasikan lalu pasang ke investigation; bila tidak, pakai sebagai checklist.
-4. Tambahkan satu task yang memuat search dan satu task yang memanggil action atau playbook (Day 26 dan Day 27). Catat apa yang berubah dalam kecepatan kerjamu.
+4. Tambahkan satu task yang memuat search dan satu task yang memanggil action atau playbook (Day 41 dan Day 42). Catat apa yang berubah dalam kecepatan kerjamu.
 5. Tutup investigation dengan disposition dan satu baris alasan. Ulangi untuk dua finding lain dengan disposition berbeda (satu benign positive, satu false positive).
 6. Jalankan analisis disposition (bagian 4.2) dan tulis satu paragraf: detection mana yang perlu tuning logika, mana yang perlu perbaikan data.
 7. Tambahkan satu indikator fiktif (domain `.example` atau IP dokumentasi `203.0.113.0/24`) lewat jalur threat intelligence yang tersedia di lab-mu, lalu buktikan ia tersimpan dan menghasilkan finding saat event lab memuatnya.
@@ -292,7 +292,7 @@ Seluruh pola di Day ini bisa dilatih tanpa ES, karena yang dilatih sebenarnya ad
 
 ## 8. Catatan terkini
 
-- Di ES 8.7, Mission Control adalah antarmuka utama analyst, dan istilah ES 7 (notable, Incident Review) sudah digantikan finding dan analyst queue. Dokumentasi masih memuat kedua istilah di beberapa tempat (Day 20 dan Day 21).
+- Di ES 8.7, Mission Control adalah antarmuka utama analyst, dan istilah ES 7 (notable, Incident Review) sudah digantikan finding dan analyst queue. Dokumentasi masih memuat kedua istilah di beberapa tempat (Day 31 dan Day 32).
 - Response plan bawaan mencakup NIST 800-61 dan Generic Incident Response, dan ES juga menyediakan jalur untuk mengubah dokumen prosedur organisasi menjadi response plan [S3]. Bila fitur itu dipakai, hasilnya tetap perlu ditinjau manusia supaya task-nya bisa diverifikasi.
 - Pemisahan native threat intelligence dan Threat Intelligence Management (Cloud) adalah perubahan yang paling sering membuat materi lama salah. Batas lima threat list dan tampilan halaman Intelligence berlaku untuk jalur TIM (Cloud) [S5].
 - Nama field pada finding (termasuk field waktu dan disposition) berbeda antar versi ES. Dashboard dan metrik yang dibangun di atasnya perlu dicek ulang setiap upgrade mayor.
@@ -321,6 +321,6 @@ TANPA ES  alert Wazuh/scheduled search + case TheHive/Markdown + checklist phase
 | S4 | Respond to investigations with response plans in Splunk Enterprise Security (ES 8.7) | https://help.splunk.com/en/splunk-enterprise-security-8/user-guide/8.7/mission-control/respond-to-investigations-with-response-plans-in-splunk-enterprise-security | primer | dilihat 2026-10-09 | Tinggi. Tab Response, task, search default 24 jam, disposition |
 | S5 | Configure threat lists in Splunk Enterprise Security (ES 8.7) | https://help.splunk.com/en/splunk-enterprise-security-8/administer/8.7/threat-intelligence/configure-threat-lists-in-splunk-enterprise-security | primer | dilihat 2026-10-09 | Tinggi. Batas lima threat list, berlaku untuk TIM (Cloud), tab Intelligence tidak menampilkan koleksi native |
 | S6 | Supported types of threat intelligence in Splunk Enterprise Security (ES 8.7) dan Overview of threat intelligence | https://help.splunk.com/en/splunk-enterprise-security-8/administer/8.7/threat-intelligence | primer | dilihat 2026-10-09 | Tinggi untuk daftar tipe indikator dan modular input `threatlist` |
-| S7 | Splunk-Notes Day 16 (annotations), Day 19 (metrik dan disposisi), Day 20 (istilah ES), Day 22 (RBA), Day 23 (detection), Day 26 (adaptive response), Day 27 (SOAR), Day 32 (allowlist dan first-seen) | (lokal) | rujukan internal | 2026-10-09 | Keterkaitan antar Day |
+| S7 | Splunk-Notes Day 30 (annotations), Day 34 (metrik dan disposisi), Day 31 (istilah ES), Day 35 (RBA), Day 36 (detection), Day 41 (adaptive response), Day 42 (SOAR), Day 40 (allowlist dan first-seen) | (lokal) | rujukan internal | 2026-10-09 | Keterkaitan antar Day |
 
 **Catatan sumber:** nama koleksi KV store untuk tiap tipe indikator, nama field waktu pada finding, dan bentuk nilai `disposition` berbeda antar versi ES, jadi tiga hal itu dicek langsung di instance sebelum dipakai di dashboard. Struktur JSON response plan paling aman diperoleh dengan mengekspor plan dari UI versi yang kamu pakai.
