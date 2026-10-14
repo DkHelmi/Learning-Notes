@@ -8,8 +8,14 @@ Catatan saya belajar Splunk Enterprise dan Enterprise Security, dari SPL sampai 
 
 | Day | Topik |
 |---|---|
+| 01 | [Cara Splunk menyimpan dan mencari data](01-index-sourcetype-time-picker.md) |
+| 02 | [SPL inti untuk triage](02-spl-inti-triage.md) |
 | 03 | [Log Windows Security: logon, akun, proses](03-log-windows-security.md) |
+| 04 | [Sysmon dan PowerShell](04-sysmon-powershell.md) |
+| 05 | [Log jaringan: firewall, proxy, DNS, VPN](05-log-jaringan.md) |
 | 07 | [Alur triage alert L1: disposisi, eskalasi, handover](07-alur-triage-alert-l1.md) |
+| 08 | [chart, timechart, dan memilih visualisasi](08-chart-timechart-visualisasi.md) |
+| 09 | [Report, scheduled alert, throttle, dashboard](09-report-alert-dashboard.md) |
 | 11 | [rex dan eval](11-rex-eval.md) |
 | 12 | [foreach, lookup, makeresults](12-foreach-lookup-makeresults.md) |
 | 13 | [transaction dan first/last](13-transaction-first-last.md) |
