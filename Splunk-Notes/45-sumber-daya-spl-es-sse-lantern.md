@@ -9,24 +9,22 @@ versions_checked: Splunk Enterprise Security 8.7.0 (2 Sep 2026; glosarium ES 8.7
 
 Cakupan: memetakan sumber konten dan panduan SPL (research.splunk.com/ESCU, Splunk Security Essentials, Splunk Lantern, content management ES) serta istilah ES 7 dan ES 8.
 
-## 1. Tujuan belajar
+## Ide inti
 
-Setelah menyelesaikan Day ini, kamu bisa:
+Analyst yang efektif tidak menulis semua detection dari nol. Splunk sudah menerbitkan ribuan konten siap pakai, jadi kemampuan yang menentukan bukan menulis SPL, melainkan tahu di mana konten itu disimpan, bagaimana membacanya, dan bagaimana menilai apakah ia bisa hidup di lingkunganmu sebelum diaktifkan. Ada empat tempat yang perlu dibedakan: research.splunk.com beserta app ESCU sebagai katalog detection dan analytic story dari Splunk Threat Research Team, Splunk Security Essentials sebagai app gratis untuk mencocokkan data yang kamu punya dengan konten yang bisa jalan, Splunk Lantern sebagai panduan cara melakukan sesuatu, dan content management di ES sebagai tempat detection benar-benar dikelola, diversikan, dan diberi annotation. Tiga yang pertama bisa dibaca tanpa lisensi apa pun; yang terakhir hanya ada di ES.
 
-- menjelaskan peran masing-masing: ESCU / research.splunk.com, Splunk Security Essentials (SSE), Splunk Lantern, dan content management di ES.
-- menemukan detection yang relevan untuk sebuah sumber data atau teknik ATT&CK, lalu membaca bagian kuncinya (search, required fields, how to implement, known false positives).
-- memetakan istilah ES 7.x (yang masih dipakai banyak dokumentasi dan tulisan lama) ke istilah ES 8.x (yang dipakai produk sekarang).
-- memeriksa dari SPL apakah prasyarat sebuah detection terpenuhi di lingkunganmu.
+Yang memisahkan pemakaian konten vendor yang sehat dari yang asal pasang adalah satu pertanyaan: apakah prasyarat datanya terpenuhi. Setiap detection menyebut sumber data, data model, macro, dan lookup yang dibutuhkannya, dan detection yang diaktifkan tanpa itu akan tampak aktif di daftar tanpa pernah bisa menyala sekali pun. Karena itu alur kerjanya selalu sama: baca "how to implement", buktikan data model yang diminta benar-benar terisi, jalankan search-nya secara manual, baca known false positives, lalu tuning lewat filter macro supaya pembaruan konten tidak menghapus pekerjaanmu. Di pekerjaan, ini juga cara cepat menjawab pertanyaan seperti "sumber log ini baru masuk, deteksi apa yang bisa langsung jalan?".
 
-## 2. Konteks singkat
+Padanannya di NOC adalah template alarm bawaan NMS beserta knowledge base vendor: ada ratusan template yang bisa diimpor, ada matriks kompatibilitas yang menyebut counter dan versi firmware yang dibutuhkan, dan ada artikel how-to untuk pekerjaan yang berulang. Batas analogi: template bawaan tidak tahu topologi dan sumber data milikmu, jadi alarm yang sudah terpasang tetap diam selamanya bila counter yang dipakainya tidak pernah dikirim perangkat, dan di layar hal itu terlihat seperti jaringan yang tenang.
 
-Analyst yang efektif tidak menulis semua detection dari nol. Splunk menyediakan ribuan konten siap pakai. Kemampuan yang menentukan di sini adalah tahu di mana mencarinya dan bagaimana menilainya sebelum mengaktifkan. Di pekerjaan, ini juga cara cepat menjawab pertanyaan seperti "kita punya log Okta, deteksi apa yang bisa langsung jalan?".
+Di PT Jaringan Anak Bangsa (PT JAB, ISP menengah fiktif), Sysmon baru masuk dari sekitar 40 persen workstation ke index `sysmon`, dan log identitas cloud masuk ke index `o365`. SOC lead bertanya deteksi apa yang bisa langsung jalan minggu ini tanpa menambah sumber data baru. Day ini adalah cara menjawab pertanyaan itu dengan bukti, bukan dengan jumlah detection yang diaktifkan.
 
-**Peringatan versi:** produk keamanan Splunk berubah cepat. Banyak dokumentasi, blog, dan materi pelatihan masih memakai istilah ES 7.x (*notable event*, *correlation search*), sedangkan ES 8.x memakai istilah baru (*finding*, *detection*). Dua-duanya perlu dikenali supaya tidak bingung saat membaca tulisan lama. Tabel pemetaan ada di bagian 3.5.
+**Kapan relevan:** saat sumber data baru masuk dan perlu diketahui konten apa yang bisa langsung dipakai, saat harus menilai satu detection vendor sebelum mengaktifkannya, saat mencari panduan prosedur resmi untuk pekerjaan yang berulang, dan saat membaca dokumentasi atau tulisan lama yang istilahnya tidak lagi sama dengan produk sekarang.
+**Kapan bukan jawaban:** konten siap pakai tidak menutup celah onboarding, parsing, dan normalisasi (Day 23 dan Day 28), tidak menggantikan detection kustom untuk risiko khas organisasimu, dan tidak menentukan ambang maupun daftar pengecualian yang hanya bisa dihitung dari datamu sendiri (Day 36).
 
-## 3. Konsep inti
+## 1. Konsep inti
 
-### 3.1 Splunk Security Content: ESCU dan research.splunk.com
+### 1.1 Splunk Security Content: ESCU dan research.splunk.com
 
 - research.splunk.com adalah katalog publik konten Splunk Threat Research Team (STRT). Saat diakses, situs ini mencantumkan sekitar 2.176 detection, 365 analytic story, dan 86 playbook, serta navigasi per data source, MITRE ATT&CK, dan produk. Rilis terbaru yang disebut adalah v6.7.0 [S1].
 - Konten yang sama dipaketkan sebagai app ES Content Update (ESCU) di Splunkbase untuk dipasang di ES [S1].
@@ -47,7 +45,7 @@ Setiap detection di research.splunk.com memuat bagian yang wajib dibaca sebelum 
 
 Status konten berubah: sebagian detection ESCU (sejak versi 5.4.0) ditandai deprecated, dan ES menyediakan dashboard Deprecation Assistant untuk melihat detection deprecated yang masih aktif [S3].
 
-### 3.2 Splunk Security Essentials (SSE)
+### 1.2 Splunk Security Essentials (SSE)
 
 SSE adalah app gratis untuk perencanaan dan penemuan konten: memetakan data yang kamu punya ke konten yang bisa dijalankan, serta melihat cakupan ATT&CK. Fakta terkini:
 - 3.8.3 adalah versi default (21 Jan 2026), kompatibel dengan Splunk 9.0-10.6 [S2].
@@ -58,7 +56,7 @@ SSE adalah app gratis untuk perencanaan dan penemuan konten: memetakan data yang
 
 Fitur SSE untuk menilai sumber data dan konten per sourcetype dibahas lebih dalam di Day 27. Untuk hari ini, cukup tahu bahwa SSE adalah tempat menjawab "konten apa yang cocok untuk data saya". Cek nama halaman (Security Content, Data Inventory, Analytics Advisor) di SSE 3.8.x lab-mu.
 
-### 3.3 Splunk Lantern
+### 1.3 Splunk Lantern
 
 Lantern adalah basis pengetahuan resmi berisi panduan praktis: cara melakukan sesuatu, use case, dan tips produk. Untuk keamanan, Use Case Explorer for Security menyusun panduan ke beberapa area [S4], misalnya:
 - deteksi ancaman lanjutan;
@@ -76,7 +74,7 @@ Bedanya dengan research.splunk.com: Lantern menjelaskan cara (prosedur, konfigur
 
 Beberapa artikel Lantern lama dipindahkan ke arsip, misalnya salinan lama "Use Case Explorer for Security" di jalur `KC_Sandbox/Archive` [S4]. Pakai versi aktif di `lantern.splunk.com/Security/UCE`; bila sebuah artikel berada di jalur arsip, anggap isinya mungkin sudah tidak diperbarui.
 
-### 3.4 Content di dalam ES
+### 1.4 Content di dalam ES
 
 Di ES 8.x:
 - Detection dikelola sebagai event-based detection (mengevaluasi raw event untuk membuat finding atau intermediate finding) dan finding-based detection (mengevaluasi finding di risk index untuk membuat finding group) [S5][S6].
@@ -117,11 +115,11 @@ Menurut glosarium ES 8.7 [S6] dan ringkasan rilis ES 8.0 [S8]:
 | Lantern | Tidak | Tidak |
 | Content management, detection editor, analyst queue | Ya (ES) | Lisensi ES |
 
-## 4. Contoh SPL dan langkah di ES
+## 2. Contoh SPL dan langkah di ES
 
 > Keluaran berlabel ilustrasi. Sebagian query memakai endpoint REST. Cek nama endpoint dan atribut di versi lab-mu, dan jalankan hanya dengan hak yang sesuai.
 
-### 4.1 Menilai sebuah detection sebelum mengaktifkannya (alur kerja)
+### 2.1 Menilai sebuah detection sebelum mengaktifkannya (alur kerja)
 
 Ambil contoh detection "Attacker Tools On Endpoint" dari Day 25:
 
@@ -133,7 +131,7 @@ Ambil contoh detection "Attacker Tools On Endpoint" dari Day 25:
 6. Tuning lewat filter macro (`attacker_tools_on_endpoint_filter`), bukan mengubah logika inti, agar pembaruan ESCU tidak menimpa perubahanmu, cek perilaku pembaruan filter macro.
 7. Aktifkan, lalu pantau volume finding/notable seminggu pertama.
 
-### 4.2 Apakah data saya memenuhi syarat detection?
+### 2.2 Apakah data saya memenuhi syarat detection?
 
 ```
 | tstats count from datamodel=Endpoint.Processes by sourcetype, Processes.vendor_product
@@ -152,7 +150,7 @@ XmlWinEventLog:Microsoft-Windows-Sysmon/Operational Microsoft Sysmon            
 XmlWinEventLog:Security                             Microsoft Windows              340 rb
 ```
 
-### 4.3 Melihat detection ESCU yang terpasang dan statusnya
+### 2.3 Melihat detection ESCU yang terpasang dan statusnya
 
 ```
 | rest /servicesNS/-/-/saved/searches splunk_server=local count=0
@@ -166,7 +164,7 @@ XmlWinEventLog:Security                             Microsoft Windows           
 - Hasil: jumlah detection ESCU yang aktif vs tidak.
 - Cek di ES 8, detection mungkin punya atribut/representasi berbeda dari saved search klasik. Gunakan halaman content management ES sebagai acuan utama.
 
-### 4.4 Membaca definisi macro security_content
+### 2.4 Membaca definisi macro security_content
 
 ```
 | rest /servicesNS/-/-/configs/conf-macros splunk_server=local count=0
@@ -178,7 +176,7 @@ XmlWinEventLog:Security                             Microsoft Windows           
 - Berguna saat menjalankan SPL ESCU di luar ES. Kamu bisa mengganti macro dengan nilai eksplisit.
 - Cek endpoint `configs/conf-macros` dan hak akses yang dibutuhkan.
 
-### 4.5 Memakai SPL dari research.splunk.com di lab tanpa ES
+### 2.5 Memakai SPL dari research.splunk.com di lab tanpa ES
 
 1. Salin SPL dari halaman detection.
 2. Ganti macro:
@@ -189,11 +187,11 @@ XmlWinEventLog:Security                             Microsoft Windows           
 3. Jalankan di data lab (BOTS atau Sysmon + Atomic Red Team).
 4. Catat hasil dan bandingkan dengan "Known false positives".
 
-### 4.6 Menggunakan Lantern dalam investigasi
+### 2.6 Menggunakan Lantern dalam investigasi
 
 Contoh alur: kamu perlu memperbaiki akselerasi data model yang lambat. cari di Lantern, baca panduannya (Day 25 [S6] dan "Optimizing search" di Day 14), terapkan constraint index, lalu verifikasi dengan `tstats` dan Data Model Audit.
 
-## 5. Lab praktik
+## 3. Lab praktik
 
 1. Buka research.splunk.com. Filter per data source Sysmon atau Windows Security, lalu pilih 3 detection yang relevan untuk lab-mu.
 2. Untuk masing-masing, isi tabel: nama | data source | data model | macro/lookup | known FP | teknik ATT&CK.
@@ -211,7 +209,7 @@ Contoh alur: kamu perlu memperbaiki akselerasi data model yang lambat. cari di L
 
 **Variasi tantangan:** pilih satu analytic story (mis. persistence Windows). Hitung berapa detection-nya yang bisa jalan di lab, berapa yang butuh data yang tidak kamu punya, dan apa sumber data yang paling "murah" untuk menutup celah terbesar.
 
-## 6. Troubleshooting
+## 4. Troubleshooting
 
 | Gejala | Kemungkinan penyebab | Cara memeriksa/memperbaiki |
 |---|---|---|
@@ -222,7 +220,7 @@ Contoh alur: kamu perlu memperbaiki akselerasi data model yang lambat. cari di L
 | Tuning hilang setelah update ESCU | Mengubah search inti, bukan filter macro | Tuning di filter macro, perlu dicek |
 | Bingung istilah di dokumentasi vs soal | ES 7 vs ES 8 | Tabel bagian 3.5 [S6] |
 
-## 7. Kesalahan umum dan jebakan
+## 5. Kesalahan umum dan jebakan
 
 - Mengaktifkan detection massal tanpa memeriksa prasyarat data, sehingga ratusan detection "hijau" tetapi tidak pernah bisa fire. Ini rasa aman palsu.
 - Mengaktifkan tanpa membaca known false positives. Akibatnya banjir finding/notable.
@@ -231,7 +229,7 @@ Contoh alur: kamu perlu memperbaiki akselerasi data model yang lambat. cari di L
 - Menganggap Lantern = konten detection. Lantern adalah panduan cara; kontennya di ESCU/research.
 - `[komunitas]` Belum ada klaim komunitas yang dipakai di Day ini.
 
-## 8. Catatan terkini
+## 6. Catatan terkini
 
 - ES 8.x memperkenalkan perubahan istilah besar, yang menurut ringkasan praktisi diselaraskan dengan Open Cybersecurity Schema Framework (OCSF) [S8], cek klaim OCSF di dokumentasi resmi.
 - ES 8.6.1 (Agu 2026) dan 8.7.0 (Sep 2026) menambahkan agen AI, misalnya untuk membantu membuat detection, menulis playbook, dan "AI SOC Analyst". Nama dan cakupan fitur ini masih sering berubah, jadi cek di release notes resmi versi-mu.
@@ -239,7 +237,7 @@ Contoh alur: kamu perlu memperbaiki akselerasi data model yang lambat. cari di L
 - SSE 3.8.0 memaksa upgrade untuk menerima ESCU baru (batas ESCU 4.22.0 bagi SSE 3.7.1 ke bawah) [S2].
 - Repo contentctl (alat build untuk security_content, yang mengubah file YAML detection menjadi paket app ESCU) tidak lagi menerima PR baru, karena Splunk mengalihkan investasi ke Detection Studio di ES. Yang paling terdampak adalah tim yang membangun konten kustom dengan contentctl; apakah ritme rilis ESCU ikut berubah perlu dicek di README repo contentctl dan release notes ESCU.
 
-## 9. Cheat sheet
+## 7. Cheat sheet
 
 ```
 research.splunk.com = katalog konten STRT (detections, analytic stories, playbooks; filter data source/ATT&CK/produk)
@@ -255,7 +253,7 @@ ES7 -> ES8: correlation search->detection | notable->finding | risk event/contri
             Incident Review->analyst queue | risk object->entity | threat object->observable | risk incident rule->finding-based detection
 ```
 
-## 10. Sumber
+## 9. Sumber
 
 | ID | Judul | URL | Tipe | Terbit/diakses | Keandalan dan catatan |
 |---|---|---|---|---|---|
