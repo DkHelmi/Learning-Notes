@@ -4,9 +4,9 @@ Indeks sumber global, disusun dari tabel bagian 9 setiap Day. Kolom "Dipakai di"
 
 | Judul | URL | Tipe | Diakses | Dipakai di |
 |---|---|---|---|---|
-| NIST SP 800-61 Rev. 3: Incident Response Recommendations and Considerations for Cybersecurity Risk Management: A CSF 2.0 Community Profile (PDF) | https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-61r3.pdf | primer | 2026-10-14 | Day 01, Day 02 |
+| NIST SP 800-61 Rev. 3: Incident Response Recommendations and Considerations for Cybersecurity Risk Management: A CSF 2.0 Community Profile (PDF) | https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-61r3.pdf | primer | 2026-10-14 | Day 01, Day 02, Day 03, Day 04, Day 05 |
 | NIST CSRC: SP 800-61 Rev. 3 (halaman publikasi) | https://csrc.nist.gov/pubs/sp/800/61/r3/final | primer | 2026-10-14 | Day 01, Day 02 |
-| NIST SP 800-61 Rev. 2: Computer Security Incident Handling Guide (PDF) | https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-61r2.pdf | primer | 2026-10-14 | Day 01, Day 02 |
+| NIST SP 800-61 Rev. 2: Computer Security Incident Handling Guide (PDF) | https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-61r2.pdf | primer | 2026-10-14 | Day 01, Day 02, Day 03, Day 04, Day 05 |
 | NIST CSRC: SP 800-61 Rev. 2 (halaman publikasi) | https://csrc.nist.gov/pubs/sp/800/61/r2/final | primer | 2026-10-14 | Day 01 |
 | NIST CSRC: The NIST Cybersecurity Framework (CSF) 2.0, CSWP 29 | https://csrc.nist.gov/pubs/cswp/29/the-nist-cybersecurity-framework-csf-20/final | primer | 2026-10-14 | Day 01 |
 | SANS: Incident Handler's Handbook (Patrick Kral) | https://www.sans.org/white-papers/33901 | sekunder | 2026-10-14 | Day 01 |
@@ -24,3 +24,15 @@ Indeks sumber global, disusun dari tabel bagian 9 setiap Day. Kolom "Dipakai di"
 | PagerDuty Incident Response Documentation: During an Incident | https://response.pagerduty.com/during/during_an_incident/ | sekunder | 2026-10-14 | Day 02 |
 | CIO.com: The RACI matrix, your blueprint for project success | https://www.cio.com/article/287088/project-management-what-is-raci-and-how-does-it-improve-clarity.html | sekunder | 2026-10-14 | Day 02 |
 | CISA: Federal Government Cybersecurity Incident and Vulnerability Response Playbooks | https://www.cisa.gov/resources-tools/resources/federal-government-cybersecurity-incident-and-vulnerability-response-playbooks | primer | 2026-10-14 | Day 02 |
+| CISA: Cybersecurity Incident and Vulnerability Response Playbooks (PDF, November 2021) | https://www.cisa.gov/sites/default/files/publications/Federal_Government_Cybersecurity_Incident_and_Vulnerability_Response_Playbooks_508C.pdf | primer | 2026-10-15 | Day 03, Day 04, Day 05 |
+| CISA: Technical Approaches to Uncovering and Remediating Malicious Activity (AA20-245A) | https://www.cisa.gov/news-events/cybersecurity-advisories/aa20-245a | primer | 2026-10-15 | Day 03, Day 04, Day 05 |
+| Google Cloud Blog: M-Trends 2026 | https://cloud.google.com/blog/topics/threat-intelligence/m-trends-2026/ | sekunder | 2026-10-15 | Day 03 |
+| RFC 3227: Guidelines for Evidence Collection and Archiving (BCP 55) | https://www.rfc-editor.org/rfc/rfc3227.txt | primer | 2026-10-15 | Day 04 |
+| NIST SP 800-86: Guide to Integrating Forensic Techniques into Incident Response (PDF) | https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-86.pdf | primer | 2026-10-15 | Day 04 |
+| Microsoft Learn: Take response actions on a device in Microsoft Defender for Endpoint | https://learn.microsoft.com/en-us/defender-endpoint/respond-machine-alerts | primer | 2026-10-15 | Day 04, Day 05 |
+| Microsoft Learn: Investigate entities on devices using live response in Microsoft Defender for Endpoint | https://learn.microsoft.com/en-us/defender-endpoint/live-response | primer | 2026-10-15 | Day 04 |
+| GitHub microsoft/avml: Acquire Volatile Memory for Linux | https://github.com/microsoft/avml | primer | 2026-10-15 | Day 04 |
+| GitHub 504ensicsLabs/LiME: Linux Memory Extractor | https://github.com/504ensicsLabs/LiME | primer | 2026-10-15 | Day 04 |
+| GitHub Velocidex/WinPmem | https://github.com/Velocidex/WinPmem | primer | 2026-10-15 | Day 04 |
+| Microsoft Learn: Revoke user access in an emergency in Microsoft Entra ID | https://learn.microsoft.com/en-us/entra/identity/users/users-revoke-access | primer | 2026-10-15 | Day 05 |
+| Microsoft Learn: [MS-KILE] Check Account Policy for Every Session Ticket Request | https://learn.microsoft.com/en-us/openspecs/windows_protocols/ms-kile/e19be8b8-9130-40a4-9cd1-92d0cbd46a51 | primer | 2026-10-15 | Day 05 |
