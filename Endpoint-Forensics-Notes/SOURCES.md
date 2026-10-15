@@ -1,6 +1,6 @@
 # SOURCES: Endpoint-Forensics-note
 
-Indeks sumber global, disusun dari tabel bagian 10 setiap Day. Kolom "Dipakai di" menunjuk Day yang merujuk sumber tersebut; rincian keandalan dan catatan ada di tabel bagian 10 Day terkait.
+Indeks sumber global, disusun dari tabel Sumber setiap Day (bagian 9 pada Day struktur baru, bagian 10 pada Day yang belum dimigrasi). Kolom "Dipakai di" menunjuk Day yang merujuk sumber tersebut; rincian keandalan dan catatan ada di tabel Sumber Day terkait.
 
 | Judul | URL | Tipe | Diakses | Dipakai di |
 |---|---|---|---|---|
@@ -90,3 +90,5 @@ Indeks sumber global, disusun dari tabel bagian 10 setiap Day. Kolom "Dipakai di
 | dfTimewolf | https://github.com/log2timeline/dftimewolf | primer | 2026-10-09 | Day 26 |
 | Timesketch (repo resmi) | https://github.com/google/timesketch | primer | 2026-10-09 | Day 26 |
 | Sigma rule specification (SigmaHQ) | https://github.com/SigmaHQ/sigma-specification | primer | 2026-10-10 | Day 26 |
+| NIST SP 800-61 Rev. 3: Incident Response Recommendations and Considerations for Cybersecurity Risk Management (PDF) | https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-61r3.pdf | primer | 2026-10-15 | Day 01 |
+| Microsoft Learn: Get-FileHash (Microsoft.PowerShell.Utility) | https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.utility/get-filehash | primer | 2026-10-15 | Day 01 |
