@@ -159,7 +159,7 @@ Tabel berikut menjawab permintaan pertama Dimas. Semua waktu WIB dan semua fakta
 |---|---|---|---|---|
 | Aktivitas penyerang sebelum deteksi | Email diterima 9 mailbox Senin 2026-10-12 15:58; lampiran dibuka Andi 16:05 | (direkonstruksi lewat pivot waktu) | Alert pertama Selasa 09:47, hampir 18 jam kemudian | Day 03 bagian 1.4 dan 2.5 |
 | Deteksi dan declare | Alert `SOC-2026-0203` Selasa 09:47 | Validasi Sari 10:30, declare SEV-3 oleh Dimas 10:40 | Kriteria insiden terpenuhi | Day 03 bagian Ide inti |
-| Scoping | 10:45 | Kartu jam pertama 10:55, hipotesis H1 sampai H5, case notes, scope statement v1 11:50 dan v2 14:00 | Empat syarat minimal containment terpenuhi di v2; v3 setelah 17:20 | Day 03 bagian 1.6, 2.1, 2.4, 2.5; Day 05 bagian 2.4 |
+| Scoping | 10:45 | Kartu jam pertama 10:55, hipotesis H1 sampai H5, case notes, scope statement v1 11:50 dan v2 13:00 | Empat syarat minimal containment terpenuhi di v2; v3 setelah 17:20 | Day 03 bagian 1.6, 2.1, 2.4, 2.5; Day 05 bagian 2.4 |
 | Pengamanan bukti | Rencana dikirim 12:25, disetujui 12:28 | Evidence log E01 sampai E12, chain of custody per item | Bukti volatil tiga host aman sebelum jam H; image disk sengaja ditunda ke rebuild | Day 04 bagian 2.1 dan 2.5 |
 | Containment | Memo keputusan 14:55, keputusan Hendra 15:10, jam H 16:00 | Memo pilihan A, B, C; rencana jam H; query validasi; update 18:00 | Dinyatakan berhasil Rabu 2026-10-14 17:20, 24 jam setelah host ketiga ditahan | Day 05 bagian 2.1 sampai 2.5; Day 06 bagian 2.2 |
 | Eradication | Rabu 17:20 | Hasil awal retainer Rabu 10:00, rencana eradication dan recovery, pencarian salinan kredensial | Rebuild, reimage, rotasi, dan penyebab langsung ditutup | Day 06 bagian 2.1 sampai 2.3 |
@@ -169,7 +169,7 @@ Tabel berikut menjawab permintaan pertama Dimas. Semua waktu WIB dan semua fakta
 Tiga hal yang terlihat bila tabel dibaca dari atas ke bawah:
 
 - **Tahap tumpang tindih.** Scoping masih berjalan saat bukti diambil, dan berjalan lagi setelah jam H. Eradication dan recovery dikerjakan bersama: `jkt-billing02` dibangun sementara laptop di-reimage. Ini sesuai panah balik di Rev. 2 dan catatan playbook CISA bahwa eradication dan recovery bisa berjalan bersamaan [S2][S3].
-- **Setiap tahap meninggalkan artefak yang dipakai tahap berikutnya.** Scope statement v2 menjadi dasar rencana bukti dan memo containment; evidence log menjadi dasar analisis retainer; analisis retainer menjadi dasar keputusan rebuild dan pelaporan DPO.
+- **Setiap tahap meninggalkan artefak yang dipakai tahap berikutnya.** Scope statement v1 menjadi dasar rencana bukti dan v2 menjadi dasar memo containment; evidence log menjadi dasar analisis retainer; analisis retainer menjadi dasar keputusan rebuild dan pelaporan DPO.
 - **Selesai selalu berarti kriteria.** Containment "berjalan" pukul 16:12, tetapi "berhasil" baru Rabu 17:20. Layanan "pulih" Kamis 23:00, tetapi recovery "selesai" baru Jumat 2026-10-23.
 
 ### 1.9 Benang keputusan dan severity
