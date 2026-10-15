@@ -25,7 +25,7 @@ Indeks sumber global, disusun dari tabel bagian 9 setiap Day. Kolom "Dipakai di"
 | CIO.com: The RACI matrix, your blueprint for project success | https://www.cio.com/article/287088/project-management-what-is-raci-and-how-does-it-improve-clarity.html | sekunder | 2026-10-14 | Day 02 |
 | CISA: Federal Government Cybersecurity Incident and Vulnerability Response Playbooks | https://www.cisa.gov/resources-tools/resources/federal-government-cybersecurity-incident-and-vulnerability-response-playbooks | primer | 2026-10-14 | Day 02 |
 | CISA: Cybersecurity Incident and Vulnerability Response Playbooks (PDF, November 2021) | https://www.cisa.gov/sites/default/files/publications/Federal_Government_Cybersecurity_Incident_and_Vulnerability_Response_Playbooks_508C.pdf | primer | 2026-10-15 | Day 03, Day 04, Day 05, Day 06, Day 07 |
-| CISA: Technical Approaches to Uncovering and Remediating Malicious Activity (AA20-245A) | https://www.cisa.gov/news-events/cybersecurity-advisories/aa20-245a | primer | 2026-10-15 | Day 03, Day 04, Day 05, Day 06, Day 07 |
+| CISA: Technical Approaches to Uncovering and Remediating Malicious Activity (AA20-245A) | https://www.cisa.gov/news-events/cybersecurity-advisories/aa20-245a | primer | 2026-10-15 | Day 03, Day 04, Day 05, Day 06, Day 07, Day 12, Day 13 |
 | Google Cloud Blog: M-Trends 2026 | https://cloud.google.com/blog/topics/threat-intelligence/m-trends-2026/ | sekunder | 2026-10-15 | Day 03, Day 07 |
 | RFC 3227: Guidelines for Evidence Collection and Archiving (BCP 55) | https://www.rfc-editor.org/rfc/rfc3227.txt | primer | 2026-10-15 | Day 04, Day 07 |
 | NIST SP 800-86: Guide to Integrating Forensic Techniques into Incident Response (PDF) | https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-86.pdf | primer | 2026-10-15 | Day 04, Day 07 |
@@ -34,52 +34,52 @@ Indeks sumber global, disusun dari tabel bagian 9 setiap Day. Kolom "Dipakai di"
 | GitHub microsoft/avml: Acquire Volatile Memory for Linux | https://github.com/microsoft/avml | primer | 2026-10-15 | Day 04 |
 | GitHub 504ensicsLabs/LiME: Linux Memory Extractor | https://github.com/504ensicsLabs/LiME | primer | 2026-10-15 | Day 04 |
 | GitHub Velocidex/WinPmem | https://github.com/Velocidex/WinPmem | primer | 2026-10-15 | Day 04 |
-| Microsoft Learn: Revoke user access in an emergency in Microsoft Entra ID | https://learn.microsoft.com/en-us/entra/identity/users/users-revoke-access | primer | 2026-10-15 | Day 05, Day 07, Day 10 |
+| Microsoft Learn: Revoke user access in an emergency in Microsoft Entra ID | https://learn.microsoft.com/en-us/entra/identity/users/users-revoke-access | primer | 2026-10-15 | Day 05, Day 07, Day 10, Day 13 |
 | Microsoft Learn: [MS-KILE] Check Account Policy for Every Session Ticket Request | https://learn.microsoft.com/en-us/openspecs/windows_protocols/ms-kile/e19be8b8-9130-40a4-9cd1-92d0cbd46a51 | primer | 2026-10-15 | Day 05, Day 07 |
-| Microsoft Learn: AD Forest Recovery, Reset the krbtgt password | https://learn.microsoft.com/en-us/windows-server/identity/ad-ds/manage/forest-recovery-guide/ad-forest-recovery-reset-the-krbtgt-password | primer | 2026-10-15 | Day 06, Day 07 |
-| CISA Eviction Strategies Tool: CM0050 Reset Kerberos Ticket Granting Ticket (KRBTGT) Password Twice | https://www.cisa.gov/eviction-strategies-tool/info-countermeasures/CM0050 | primer | 2026-10-15 | Day 06, Day 07 |
+| Microsoft Learn: AD Forest Recovery, Reset the krbtgt password | https://learn.microsoft.com/en-us/windows-server/identity/ad-ds/manage/forest-recovery-guide/ad-forest-recovery-reset-the-krbtgt-password | primer | 2026-10-15 | Day 06, Day 07, Day 12, Day 13 |
+| CISA Eviction Strategies Tool: CM0050 Reset Kerberos Ticket Granting Ticket (KRBTGT) Password Twice | https://www.cisa.gov/eviction-strategies-tool/info-countermeasures/CM0050 | primer | 2026-10-15 | Day 06, Day 07, Day 12, Day 13 |
 | CISA Eviction Strategies Tool: CM0027 Rebuild Compromised Host | https://www.cisa.gov/eviction-strategies-tool/info-countermeasures/CM0027 | primer | 2026-10-15 | Day 06 |
 | NCSC UK: Recovering from a highly disruptive cyber attack, Section 2 (Recovery and ongoing investigations) | https://www.ncsc.gov.uk/collection/disruptive-cyber-attacks/recovering/2-recovery-ongoing-investigations | primer | 2026-10-15 | Day 06, Day 07 |
 | Harlan Carvey: Incident Response Misconceptions (arsip blog Microsoft) | https://learn.microsoft.com/en-us/archive/blogs/industry_insiders/incident-response-misconceptions | sekunder | 2026-10-15 | Day 06 |
 | Microsoft Q&A: Reset krbtgt password (utas diskusi) | https://learn.microsoft.com/en-my/answers/questions/87978/reset-krbtgt-password | komunitas | 2026-10-15 | Day 06 |
 | RFC 7208: Sender Policy Framework (SPF) for Authorizing Use of Domains in Email, Version 1 | https://www.rfc-editor.org/rfc/rfc7208.html | primer | 2026-10-15 | Day 08 |
 | RFC 6376: DomainKeys Identified Mail (DKIM) Signatures | https://www.rfc-editor.org/rfc/rfc6376.html | primer | 2026-10-15 | Day 08 |
-| RFC 7489: Domain-based Message Authentication, Reporting, and Conformance (DMARC) | https://www.rfc-editor.org/rfc/rfc7489.html | primer | 2026-10-15 | Day 08 |
-| RFC 9989: Domain-Based Message Authentication, Reporting, and Conformance (DMARC) | https://www.rfc-editor.org/info/rfc9989 | primer | 2026-10-15 | Day 08 |
+| RFC 7489: Domain-based Message Authentication, Reporting, and Conformance (DMARC) | https://www.rfc-editor.org/rfc/rfc7489.html | primer | 2026-10-15 | Day 08, Day 13 |
+| RFC 9989: Domain-Based Message Authentication, Reporting, and Conformance (DMARC) | https://www.rfc-editor.org/info/rfc9989 | primer | 2026-10-15 | Day 08, Day 13 |
 | RFC 8601: Message Header Field for Indicating Message Authentication Status | https://www.rfc-editor.org/rfc/rfc8601.html | primer | 2026-10-15 | Day 08 |
-| Microsoft Learn: Anti-spam message headers in Microsoft 365 | https://learn.microsoft.com/en-us/defender-office-365/message-headers-eop-mdo | primer | 2026-10-15 | Day 08 |
-| Microsoft Learn: Get-MessageTraceV2 | https://learn.microsoft.com/en-us/powershell/module/exchangepowershell/get-messagetracev2 | primer | 2026-10-15 | Day 08, Day 09 |
-| Microsoft Learn: Remediate malicious email that was delivered in Office 365 | https://learn.microsoft.com/en-us/defender-office-365/remediate-malicious-email-delivered-office-365 | primer | 2026-10-15 | Day 08 |
-| Microsoft Learn: Find and delete email messages in eDiscovery | https://learn.microsoft.com/en-us/purview/edisc-search-mailbox-data | primer | 2026-10-15 | Day 08 |
-| Microsoft Learn: Zero-hour auto purge in Microsoft Defender for Office 365 | https://learn.microsoft.com/en-us/defender-office-365/zero-hour-auto-purge | primer | 2026-10-15 | Day 08 |
+| Microsoft Learn: Anti-spam message headers in Microsoft 365 | https://learn.microsoft.com/en-us/defender-office-365/message-headers-eop-mdo | primer | 2026-10-15 | Day 08, Day 13 |
+| Microsoft Learn: Get-MessageTraceV2 | https://learn.microsoft.com/en-us/powershell/module/exchangepowershell/get-messagetracev2 | primer | 2026-10-15 | Day 08, Day 09, Day 13 |
+| Microsoft Learn: Remediate malicious email that was delivered in Office 365 | https://learn.microsoft.com/en-us/defender-office-365/remediate-malicious-email-delivered-office-365 | primer | 2026-10-15 | Day 08, Day 13 |
+| Microsoft Learn: Find and delete email messages in eDiscovery | https://learn.microsoft.com/en-us/purview/edisc-search-mailbox-data | primer | 2026-10-15 | Day 08, Day 13 |
+| Microsoft Learn: Zero-hour auto purge in Microsoft Defender for Office 365 | https://learn.microsoft.com/en-us/defender-office-365/zero-hour-auto-purge | primer | 2026-10-15 | Day 08, Day 13 |
 | Microsoft Learn: Configure user reported message settings in Microsoft Defender for Office 365 | https://learn.microsoft.com/en-us/defender-office-365/submissions-user-reported-messages-custom-mailbox | primer | 2026-10-15 | Day 08 |
 | Microsoft Learn: UrlClickEvents table in the advanced hunting schema | https://learn.microsoft.com/en-us/defender-xdr/advanced-hunting-urlclickevents-table | primer | 2026-10-15 | Day 08 |
-| CISA, NSA, FBI, MS-ISAC: Phishing Guidance: Stopping the Attack Cycle at Phase One (PDF) | https://www.cisa.gov/sites/default/files/2025-03/Phishing%20Guidance%20-%20Stopping%20the%20Attack%20Cycle%20at%20Phase%20One%20508.pdf | primer | 2026-10-15 | Day 08 |
+| CISA, NSA, FBI, MS-ISAC: Phishing Guidance: Stopping the Attack Cycle at Phase One (PDF) | https://www.cisa.gov/sites/default/files/2025-03/Phishing%20Guidance%20-%20Stopping%20the%20Attack%20Cycle%20at%20Phase%20One%20508.pdf | primer | 2026-10-15 | Day 08, Day 13 |
 | Positive Security: urlscan.io's SOAR spot, Chatty security tools leaking private data | https://positive.security/blog/urlscan-data-leaks | komunitas | 2026-10-15 | Day 08 |
-| Microsoft Learn: Respond to a compromised email account in Microsoft 365 | https://learn.microsoft.com/en-us/defender-office-365/responding-to-a-compromised-email-account | primer | 2026-10-15 | Day 09 |
-| Microsoft Learn: Use MailItemsAccessed to investigate compromised accounts | https://learn.microsoft.com/en-us/purview/audit-log-investigate-accounts | primer | 2026-10-15 | Day 09 |
+| Microsoft Learn: Respond to a compromised email account in Microsoft 365 | https://learn.microsoft.com/en-us/defender-office-365/responding-to-a-compromised-email-account | primer | 2026-10-15 | Day 09, Day 13 |
+| Microsoft Learn: Use MailItemsAccessed to investigate compromised accounts | https://learn.microsoft.com/en-us/purview/audit-log-investigate-accounts | primer | 2026-10-15 | Day 09, Day 13 |
 | Microsoft Learn: Manage mailbox auditing | https://learn.microsoft.com/en-us/purview/audit-mailboxes | primer | 2026-10-15 | Day 09 |
-| Microsoft Learn: Manage audit log retention policies | https://learn.microsoft.com/en-us/purview/audit-log-retention-policies | primer | 2026-10-15 | Day 09 |
+| Microsoft Learn: Manage audit log retention policies | https://learn.microsoft.com/en-us/purview/audit-log-retention-policies | primer | 2026-10-15 | Day 09, Day 13 |
 | Microsoft Learn: Search-UnifiedAuditLog | https://learn.microsoft.com/en-us/powershell/module/exchangepowershell/search-unifiedauditlog | primer | 2026-10-15 | Day 09 |
 | Microsoft Learn: Audited activities | https://learn.microsoft.com/en-us/purview/audit-log-activities | primer | 2026-10-15 | Day 09 |
 | Microsoft Learn: Detect and remediate Outlook rules and custom forms injection attacks | https://learn.microsoft.com/en-us/defender-office-365/detect-and-remediate-outlook-rules-forms-attack | primer | 2026-10-15 | Day 09 |
-| Microsoft Learn: Detect and remediate illicit consent grants | https://learn.microsoft.com/en-us/defender-office-365/detect-and-remediate-illicit-consent-grants | primer | 2026-10-15 | Day 09, Day 10 |
-| Microsoft Security Blog: From cookie theft to BEC, attackers use AiTM phishing sites as entry point to further financial fraud | https://www.microsoft.com/en-us/security/blog/2022/07/12/from-cookie-theft-to-bec-attackers-use-aitm-phishing-sites-as-entry-point-to-further-financial-fraud/ | sekunder | 2026-10-15 | Day 09, Day 10 |
-| FBI IC3: Business Email Compromise, The $55 Billion Scam (I-091124-PSA) | https://www.ic3.gov/PSA/2024/PSA240911 | primer | 2026-10-15 | Day 09 |
+| Microsoft Learn: Detect and remediate illicit consent grants | https://learn.microsoft.com/en-us/defender-office-365/detect-and-remediate-illicit-consent-grants | primer | 2026-10-15 | Day 09, Day 10, Day 13 |
+| Microsoft Security Blog: From cookie theft to BEC, attackers use AiTM phishing sites as entry point to further financial fraud | https://www.microsoft.com/en-us/security/blog/2022/07/12/from-cookie-theft-to-bec-attackers-use-aitm-phishing-sites-as-entry-point-to-further-financial-fraud/ | sekunder | 2026-10-15 | Day 09, Day 10, Day 13 |
+| FBI IC3: Business Email Compromise, The $55 Billion Scam (I-091124-PSA) | https://www.ic3.gov/PSA/2024/PSA240911 | primer | 2026-10-15 | Day 09, Day 13 |
 | Proofpoint: mailbox rules as an O365 post-exploitation tactic in cloud account takeover | https://www.proofpoint.com/us/blog/threat-insight/mailbox-rules-o365-post-exploitation-tactic-cloud-ato | sekunder | 2026-10-15 | Day 09 |
 | NVISO Labs: What did the attacker read? MailItemsAccessed tells you | https://blog.nviso.eu/2025/10/02/what-did-the-attacker-read-mailitemaccessed-tells-you/ | komunitas | 2026-10-15 | Day 09 |
 | Office 365 for IT Pros: Microsoft finally delivers promised audit events to Purview Audit Standard tenants | https://office365itpros.com/2024/05/23/new-audit-events-may24/ | sekunder | 2026-10-15 | Day 09 |
 | Microsoft Learn: Sign-in logs in Microsoft Entra ID | https://learn.microsoft.com/en-us/entra/identity/monitoring-health/concept-sign-ins | primer | 2026-10-15 | Day 10 |
-| Microsoft Learn: Non-interactive sign-in logs | https://learn.microsoft.com/en-us/entra/identity/monitoring-health/concept-noninteractive-sign-ins | primer | 2026-10-15 | Day 10 |
+| Microsoft Learn: Non-interactive sign-in logs | https://learn.microsoft.com/en-us/entra/identity/monitoring-health/concept-noninteractive-sign-ins | primer | 2026-10-15 | Day 10, Day 13 |
 | Microsoft Learn: Learn about the sign-in log activity details | https://learn.microsoft.com/en-us/entra/identity/monitoring-health/concept-sign-in-log-activity-details | primer | 2026-10-15 | Day 10 |
 | Microsoft Graph beta: signIn resource type | https://learn.microsoft.com/en-us/graph/api/resources/signin?view=graph-rest-beta | primer | 2026-10-15 | Day 10 |
-| Microsoft Learn: Microsoft Entra data retention | https://learn.microsoft.com/en-us/entra/identity/monitoring-health/reference-reports-data-retention | primer | 2026-10-15 | Day 10 |
-| Microsoft Learn: Refresh tokens in the Microsoft identity platform | https://learn.microsoft.com/en-us/entra/identity-platform/refresh-tokens | primer | 2026-10-15 | Day 10 |
-| Microsoft Learn: Continuous access evaluation in Microsoft Entra | https://learn.microsoft.com/en-us/entra/identity/conditional-access/concept-continuous-access-evaluation | primer | 2026-10-15 | Day 10 |
-| Microsoft Learn: Token theft playbook | https://learn.microsoft.com/en-us/security/operations/token-theft-playbook | primer | 2026-10-15 | Day 10 |
-| Microsoft Learn: What are risk detections? (Microsoft Entra ID Protection) | https://learn.microsoft.com/en-us/entra/id-protection/concept-identity-protection-risks | primer | 2026-10-15 | Day 10 |
+| Microsoft Learn: Microsoft Entra data retention | https://learn.microsoft.com/en-us/entra/identity/monitoring-health/reference-reports-data-retention | primer | 2026-10-15 | Day 10, Day 13 |
+| Microsoft Learn: Refresh tokens in the Microsoft identity platform | https://learn.microsoft.com/en-us/entra/identity-platform/refresh-tokens | primer | 2026-10-15 | Day 10, Day 13 |
+| Microsoft Learn: Continuous access evaluation in Microsoft Entra | https://learn.microsoft.com/en-us/entra/identity/conditional-access/concept-continuous-access-evaluation | primer | 2026-10-15 | Day 10, Day 13 |
+| Microsoft Learn: Token theft playbook | https://learn.microsoft.com/en-us/security/operations/token-theft-playbook | primer | 2026-10-15 | Day 10, Day 13 |
+| Microsoft Learn: What are risk detections? (Microsoft Entra ID Protection) | https://learn.microsoft.com/en-us/entra/id-protection/concept-identity-protection-risks | primer | 2026-10-15 | Day 10, Day 13 |
 | Microsoft Learn: Microsoft Entra audit log activity reference | https://learn.microsoft.com/en-us/entra/identity/monitoring-health/reference-audit-activities | primer | 2026-10-15 | Day 10 |
-| Microsoft Learn: Control security information registration with Conditional Access | https://learn.microsoft.com/en-us/entra/identity/conditional-access/policy-all-users-security-info-registration | primer | 2026-10-15 | Day 10 |
+| Microsoft Learn: Control security information registration with Conditional Access | https://learn.microsoft.com/en-us/entra/identity/conditional-access/policy-all-users-security-info-registration | primer | 2026-10-15 | Day 10, Day 13 |
 | Microsoft Learn: Overview of Conditional Access authentication strengths | https://learn.microsoft.com/en-us/entra/identity/authentication/concept-authentication-strengths | primer | 2026-10-15 | Day 10 |
 | Microsoft Learn: How token protection enhances Conditional Access policies | https://learn.microsoft.com/en-us/entra/identity/conditional-access/concept-token-protection | primer | 2026-10-15 | Day 10 |
 | Microsoft Learn: Conditional Access adaptive session lifetime policies | https://learn.microsoft.com/en-us/entra/identity/conditional-access/concept-session-lifetime | primer | 2026-10-15 | Day 10 |
@@ -88,3 +88,38 @@ Indeks sumber global, disusun dari tabel bagian 9 setiap Day. Kolom "Dipakai di"
 | Microsoft Learn: Get-MgUserAuthenticationMethod | https://learn.microsoft.com/en-us/powershell/module/microsoft.graph.identity.signins/get-mguserauthenticationmethod | primer | 2026-10-15 | Day 10 |
 | Microsoft Learn: Remove-MgUserAuthenticationPhoneMethod | https://learn.microsoft.com/en-us/powershell/module/microsoft.graph.identity.signins/remove-mguserauthenticationphonemethod | primer | 2026-10-15 | Day 10 |
 | Microsoft Learn: Microsoft Entra authentication and authorization error codes | https://learn.microsoft.com/en-us/entra/identity-platform/reference-error-codes | primer | 2026-10-15 | Day 10 |
+| MITRE ATT&CK T1558.003: Kerberoasting | https://attack.mitre.org/techniques/T1558/003/ | primer | 2026-10-15 | Day 11, Day 13 |
+| MITRE ATT&CK T1558.004: AS-REP Roasting | https://attack.mitre.org/techniques/T1558/004/ | primer | 2026-10-15 | Day 11, Day 13 |
+| MITRE ATT&CK T1550.002: Pass the Hash | https://attack.mitre.org/techniques/T1550/002/ | primer | 2026-10-15 | Day 11, Day 13 |
+| MITRE ATT&CK T1550.003: Pass the Ticket | https://attack.mitre.org/techniques/T1550/003/ | primer | 2026-10-15 | Day 11 |
+| MITRE ATT&CK Detection Strategy DET0157: Detect Kerberoasting Attempts | https://attack.mitre.org/detectionstrategies/DET0157/ | primer | 2026-10-15 | Day 11 |
+| Microsoft Learn: 4768(S, F) A Kerberos authentication ticket (TGT) was requested | https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/auditing/event-4768 | primer | 2026-10-15 | Day 11, Day 12 |
+| Microsoft Learn: 4769(S, F) A Kerberos service ticket was requested | https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/auditing/event-4769 | primer | 2026-10-15 | Day 11, Day 12 |
+| Microsoft Learn: 4776(S, F) The computer attempted to validate the credentials for an account | https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/auditing/event-4776 | primer | 2026-10-15 | Day 11 |
+| Microsoft Learn: 4624(S) An account was successfully logged on | https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/auditing/event-4624 | primer | 2026-10-15 | Day 11 |
+| Microsoft Security Blog: Microsoft's guidance to help mitigate Kerberoasting | https://www.microsoft.com/en-us/security/blog/2024/10/11/microsofts-guidance-to-help-mitigate-kerberoasting/ | sekunder | 2026-10-15 | Day 11, Day 13 |
+| Microsoft Support: How to manage Kerberos KDC usage of RC4 for service account ticket issuance changes related to CVE-2026-20833 | https://support.microsoft.com/topic/1ebcda33-720a-4da8-93c1-b0496e1910dc | primer | 2026-10-15 | Day 11, Day 13 |
+| CISA: Detecting and Mitigating Active Directory Compromises | https://www.cisa.gov/resources-tools/resources/detecting-and-mitigating-active-directory-compromises | primer | 2026-10-15 | Day 11 |
+| Microsoft Learn: Group Managed Service Accounts overview | https://learn.microsoft.com/en-us/windows-server/identity/ad-ds/manage/group-managed-service-accounts/group-managed-service-accounts/group-managed-service-accounts-overview | primer | 2026-10-15 | Day 11 |
+| Microsoft Learn: Protected Users Security Group | https://learn.microsoft.com/en-us/windows-server/security/credentials-protection-and-management/protected-users-security-group | primer | 2026-10-15 | Day 11, Day 13 |
+| Microsoft Learn: DeviceLogonEvents table in the advanced hunting schema | https://learn.microsoft.com/en-us/defender-xdr/advanced-hunting-devicelogonevents-table | primer | 2026-10-15 | Day 11 |
+| adsecurity.org: Detecting Kerberoasting Activity Part 2, Creating a Kerberoast Service Account Honeypot | https://adsecurity.org/?p=3513 | komunitas | 2026-10-15 | Day 11 |
+| SigmaHQ (detection.fyi): Successful Overpass the Hash Attempt | https://detection.fyi/sigmahq/sigma/windows/builtin/security/account_management/win_security_overpass_the_hash | komunitas | 2026-10-15 | Day 11 |
+| MITRE ATT&CK: OS Credential Dumping: DCSync (T1003.006) | https://attack.mitre.org/techniques/T1003/006/ | primer | 2026-10-15 | Day 12, Day 13 |
+| MITRE ATT&CK: Steal or Forge Kerberos Tickets: Golden Ticket (T1558.001) | https://attack.mitre.org/techniques/T1558/001/ | primer | 2026-10-15 | Day 12, Day 13 |
+| MITRE ATT&CK: Steal or Forge Kerberos Tickets: Silver Ticket (T1558.002) | https://attack.mitre.org/techniques/T1558/002/ | primer | 2026-10-15 | Day 12 |
+| MITRE ATT&CK: Steal or Forge Authentication Certificates (T1649) | https://attack.mitre.org/techniques/T1649/ | primer | 2026-10-15 | Day 12, Day 13 |
+| Microsoft Learn: 4662(S, F) An operation was performed on an object | https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/auditing/event-4662 | primer | 2026-10-15 | Day 12, Day 13 |
+| Microsoft Learn: DS-Replication-Get-Changes extended right | https://learn.microsoft.com/en-us/windows/win32/adschema/r-ds-replication-get-changes | primer | 2026-10-15 | Day 12 |
+| Microsoft Learn: DS-Replication-Get-Changes-All extended right | https://learn.microsoft.com/en-us/windows/win32/adschema/r-ds-replication-get-changes-all | primer | 2026-10-15 | Day 12 |
+| Microsoft Learn: Securing PKI, Appendix A: Events to Monitor | https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/dn786423(v=ws.11) | primer | 2026-10-15 | Day 12 |
+| Microsoft Support: KB5014754, Certificate-based authentication changes on Windows domain controllers | https://support.microsoft.com/en-us/topic/kb5014754-certificate-based-authentication-changes-on-windows-domain-controllers-ad2c23b0-15d8-4340-a468-4d4f3b188f16 | primer | 2026-10-15 | Day 12, Day 13 |
+| Microsoft Learn: Microsoft Entra Connect, Accounts and permissions | https://learn.microsoft.com/en-us/entra/identity/hybrid/connect/reference-connect-accounts-permissions | primer | 2026-10-15 | Day 12, Day 13 |
+| Microsoft Learn: AD Forest Recovery, Determine how to recover the forest | https://learn.microsoft.com/en-us/windows-server/identity/ad-ds/manage/forest-recovery-guide/ad-forest-recovery-determine-how-to-recover | primer | 2026-10-15 | Day 12, Day 13 |
+| SpecterOps: Certified Pre-Owned (Will Schroeder, Lee Christensen) | https://specterops.io/blog/2021/06/17/certified-pre-owned/ | sekunder | 2026-10-15 | Day 12, Day 13 |
+| BloodHound documentation: Introduction to BloodHound | https://bloodhound.specterops.io/get-started/introduction | primer | 2026-10-15 | Day 12 |
+| BloodHound documentation: SharpHound Community Edition | https://bloodhound.specterops.io/collect-data/ce-collection/sharphound | primer | 2026-10-15 | Day 12 |
+| Canadian Centre for Cyber Security: Joint guidance on detecting and mitigating Active Directory compromises | https://www.cyber.gc.ca/en/news-events/joint-guidance-detecting-and-mitigating-active-directory-compromises | primer | 2026-10-15 | Day 12 |
+| Microsoft Learn: Microsoft Entra Connect, Prerequisites and hardware | https://learn.microsoft.com/en-us/entra/identity/hybrid/connect/how-to-connect-install-prerequisites | primer | 2026-10-15 | Day 12, Day 13 |
+| EventSentry: validasi krbtgt (mirror teks STIG Windows Server DISA) | https://www.eventsentry.com/validationscripts/guid/18ef977d-1c89-4ea7-ac53-0438873cb1db | sekunder | 2026-10-15 | Day 12 |
+| FRSecure: KRBTGT Password Reset Guide | https://frsecure.com/?p=32923 | komunitas | 2026-10-15 | Day 12 |

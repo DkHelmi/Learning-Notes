@@ -363,10 +363,10 @@ Timeline ini mengubah H1 dan H3 dari hipotesis menjadi temuan yang didukung data
 
 ### 2.4 Scope statement v2
 
-Scope statement ini menjawab permintaan keenam Dimas dan menjadi dasar keputusan containment di Day 05. Versi pertama dikirim 11:50, saat `jkt-billing01` ditemukan dan severity dinaikkan ke SEV-2; versi kedua di bawah dikirim 14:00 setelah pivot akun dan email selesai.
+Scope statement ini menjawab permintaan keenam Dimas dan menjadi dasar keputusan containment di Day 05. Versi pertama dikirim 11:50, saat `jkt-billing01` ditemukan dan severity dinaikkan ke SEV-2; versi kedua di bawah dikirim 13:00 setelah pivot akun dan email selesai.
 
 ```
-INC-2026-019 | Scope statement v2 | Selasa 2026-10-13 14:00 WIB
+INC-2026-019 | Scope statement v2 | Selasa 2026-10-13 13:00 WIB
 Disusun: Sari Kusuma (technical lead) | Disetujui: Dimas Prasetyo (IC)
 Severity: SEV-2 sejak 11:50 (sistem kritis jkt-billing01 terkompromi; akun service
           svc_billing disalahgunakan; data pribadi pelanggan mungkin terdampak)
@@ -409,13 +409,13 @@ PEMICU KENAIKAN KE SEV-1 (tertulis)
 - host atau akun berhak tinggi baru (adm.*, domain admin) dalam scope
 
 KESIAPAN CONTAINMENT: syarat minimal bagian 1.6 terpenuhi (host C2, akun dan
-kredensial, jenis persistence, batas visibilitas). Rekomendasi: amankan bukti
-dulu, lalu containment serentak. Review scope berikutnya: 16:00.
+kredensial, jenis persistence, batas visibilitas). Pengamanan bukti berjalan
+sejak 12:30; containment serentak setelah bukti aman. Review scope berikutnya: 16:00.
 ```
 
-Tabel berikut merangkum perubahan dari v1 (11:50) ke v2 (14:00). Perhatikan bahwa scope hampir selalu bertambah dan jarang berkurang.
+Tabel berikut merangkum perubahan dari v1 (11:50) ke v2 (13:00). Perhatikan bahwa scope hampir selalu bertambah dan jarang berkurang.
 
-| Elemen | v1 11:50 | v2 14:00 |
+| Elemen | v1 11:50 | v2 13:00 |
 |---|---|---|
 | Host | 3 host dari pivot IOC | Sama, ditambah daftar host yang sudah diperiksa dan batas visibilitas |
 | Akun | `andi.pratama`, `svc_billing` dugaan | `svc_billing` terkonfirmasi dengan waktu baca dan waktu pakai; `dewi.anggraini` |
@@ -454,7 +454,7 @@ saat dicek 11:25 = +2 detik terhadap jkt-ntp01.
 11:50  KEPUTUSAN (Dimas) SEV-3 naik ke SEV-2. Lihat timeline scribe.
 12:05  HIPOTESIS H5 (masuk lewat VPN) DIPATAHKAN: tidak ada login VPN
               andi.pratama di luar pola 30 hari (index vpn).
-13:30  FAKTA  Message trace: 9 penerima Senin 15:58. Eksekusi lampiran hanya
+12:50  FAKTA  Message trace: 9 penerima Senin 15:58. Eksekusi lampiran hanya
               di JKT-WS-0388 dan BDG-WS-0142 (EDR, Sysmon, DNS).
 ```
 
