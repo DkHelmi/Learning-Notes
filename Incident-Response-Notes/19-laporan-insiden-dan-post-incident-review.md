@@ -192,7 +192,7 @@ Semua isi bagian ini fiktif. Fakta kasus diambil dari Day 03 sampai Day 06; deta
 
 ### 2.1 Kerangka laporan insiden lengkap
 
-Kerangka ini menjawab bagian "isinya apa saja" dari pertanyaan pertama Hendra. Disimpan sebagai template `JAB-IRP-01` Lampiran G dan dipakai untuk setiap insiden SEV-1 dan SEV-2.
+Kerangka ini menjawab bagian "isinya apa saja" dari pertanyaan pertama Hendra. Disimpan sebagai template `JAB-IRP-01` Lampiran F dan dipakai untuk setiap insiden SEV-1 dan SEV-2.
 
 ```
 LAPORAN INSIDEN <nomor> | versi <n> | <tanggal> | Klasifikasi: <ditetapkan Legal>

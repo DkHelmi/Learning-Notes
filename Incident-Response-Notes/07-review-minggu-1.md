@@ -57,7 +57,7 @@ Pesan itu memuat lima permintaan:
 Permintaan 1 dijawab di bagian 1.8, permintaan 2 dan 3 di bagian 1.9, serta permintaan 4 dan 5 di bagian 1.10. Bagian 1.1 sampai 1.6 meringkas Day 01-06 sebagai bahannya, dan bagian 2-4 memintamu melakukan hal yang sama untuk insiden lain.
 
 **Kapan relevan:** sebelum masuk Day 08 dan seterusnya (setiap jenis insiden di minggu berikutnya memakai rantai yang sama), sebelum pertama kali masuk jadwal on-call atau memegang peran IC, dan sebelum interview yang meminta kamu menceritakan satu insiden dari awal sampai akhir.
-**Kapan bukan jawaban:** review ini tidak menambah aturan baru. Bila ada yang terasa baru, kembali ke Day asalnya. Review ini juga bukan post-incident review: format review setelah insiden dan laporan akhirnya dibahas tersendiri nanti.
+**Kapan bukan jawaban:** review ini tidak menambah aturan baru. Bila ada yang terasa baru, kembali ke Day asalnya. Review ini juga bukan post-incident review: format review setelah insiden dan laporan akhirnya dibahas di Day 19 bagian 1.5 dan 2.1.
 
 ## 1. Ringkasan, peta konsep, dan glosarium
 

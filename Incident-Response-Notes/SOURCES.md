@@ -4,9 +4,9 @@ Indeks sumber global, disusun dari tabel bagian 9 setiap Day. Kolom "Dipakai di"
 
 | Judul | URL | Tipe | Diakses | Dipakai di |
 |---|---|---|---|---|
-| NIST SP 800-61 Rev. 3: Incident Response Recommendations and Considerations for Cybersecurity Risk Management: A CSF 2.0 Community Profile (PDF) | https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-61r3.pdf | primer | 2026-10-14 | Day 01, Day 02, Day 03, Day 04, Day 05, Day 06, Day 07, Day 18, Day 19 |
+| NIST SP 800-61 Rev. 3: Incident Response Recommendations and Considerations for Cybersecurity Risk Management: A CSF 2.0 Community Profile (PDF) | https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-61r3.pdf | primer | 2026-10-14 | Day 01, Day 02, Day 03, Day 04, Day 05, Day 06, Day 07, Day 18, Day 19, Day 20, Day 21, Day 22 |
 | NIST CSRC: SP 800-61 Rev. 3 (halaman publikasi) | https://csrc.nist.gov/pubs/sp/800/61/r3/final | primer | 2026-10-14 | Day 01, Day 02 |
-| NIST SP 800-61 Rev. 2: Computer Security Incident Handling Guide (PDF) | https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-61r2.pdf | primer | 2026-10-14 | Day 01, Day 02, Day 03, Day 04, Day 05, Day 06, Day 07, Day 18, Day 19 |
+| NIST SP 800-61 Rev. 2: Computer Security Incident Handling Guide (PDF) | https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-61r2.pdf | primer | 2026-10-14 | Day 01, Day 02, Day 03, Day 04, Day 05, Day 06, Day 07, Day 18, Day 19, Day 22 |
 | NIST CSRC: SP 800-61 Rev. 2 (halaman publikasi) | https://csrc.nist.gov/pubs/sp/800/61/r2/final | primer | 2026-10-14 | Day 01, Day 07 |
 | NIST CSRC: The NIST Cybersecurity Framework (CSF) 2.0, CSWP 29 | https://csrc.nist.gov/pubs/cswp/29/the-nist-cybersecurity-framework-csf-20/final | primer | 2026-10-14 | Day 01 |
 | SANS: Incident Handler's Handbook (Patrick Kral) | https://www.sans.org/white-papers/33901 | sekunder | 2026-10-14 | Day 01, Day 07 |
@@ -16,7 +16,7 @@ Indeks sumber global, disusun dari tabel bagian 9 setiap Day. Kolom "Dipakai di"
 | PagerDuty Incident Response Documentation: Scribe training | https://response.pagerduty.com/training/scribe/ | sekunder | 2026-10-14 | Day 01 |
 | USENIX SREcon18 Americas: Incident Command for IT, What We've Learned from the Fire Department (Brent Chapman) | https://www.usenix.org/conference/srecon18americas/presentation/chapman | sekunder | 2026-10-14 | Day 01 |
 | CISA: National Cyber Incident Scoring System (NCISS) | https://www.cisa.gov/news-events/news/cisa-national-cyber-incident-scoring-system-nciss | primer | 2026-10-14 | Day 01 |
-| BPK JDIH: UU Nomor 27 Tahun 2022 tentang Pelindungan Data Pribadi | https://peraturan.bpk.go.id/Details/229798/uu-no-27-tahun-2022 | primer | 2026-10-14 | Day 01, Day 07, Day 18 |
+| BPK JDIH: UU Nomor 27 Tahun 2022 tentang Pelindungan Data Pribadi | https://peraturan.bpk.go.id/Details/229798/uu-no-27-tahun-2022 | primer | 2026-10-14 | Day 01, Day 07, Day 18, Day 22 |
 | Pasal.id: UU 27/2022 Pasal 46 | https://pasal.id/peraturan/uu/uu-no-27-tahun-2022/pasal-46 | sekunder | 2026-10-14 | Day 01, Day 07, Day 09 |
 | NCSC UK: Incident management collection, halaman Processes for Cyber Incident Response | https://www.ncsc.gov.uk/collection/incident-management/cyber-incident-response-processes | primer | 2026-10-14 | Day 02, Day 07, Day 18 |
 | Google SRE Book, bab 14: Managing Incidents | https://sre.google/sre-book/managing-incidents/ | sekunder | 2026-10-14 | Day 02 |
@@ -24,17 +24,17 @@ Indeks sumber global, disusun dari tabel bagian 9 setiap Day. Kolom "Dipakai di"
 | PagerDuty Incident Response Documentation: During an Incident | https://response.pagerduty.com/during/during_an_incident/ | sekunder | 2026-10-14 | Day 02 |
 | CIO.com: The RACI matrix, your blueprint for project success | https://www.cio.com/article/287088/project-management-what-is-raci-and-how-does-it-improve-clarity.html | sekunder | 2026-10-14 | Day 02 |
 | CISA: Federal Government Cybersecurity Incident and Vulnerability Response Playbooks | https://www.cisa.gov/resources-tools/resources/federal-government-cybersecurity-incident-and-vulnerability-response-playbooks | primer | 2026-10-14 | Day 02 |
-| CISA: Cybersecurity Incident and Vulnerability Response Playbooks (PDF, November 2021) | https://www.cisa.gov/sites/default/files/publications/Federal_Government_Cybersecurity_Incident_and_Vulnerability_Response_Playbooks_508C.pdf | primer | 2026-10-15 | Day 03, Day 04, Day 05, Day 06, Day 07, Day 18, Day 19 |
+| CISA: Cybersecurity Incident and Vulnerability Response Playbooks (PDF, November 2021) | https://www.cisa.gov/sites/default/files/publications/Federal_Government_Cybersecurity_Incident_and_Vulnerability_Response_Playbooks_508C.pdf | primer | 2026-10-15 | Day 03, Day 04, Day 05, Day 06, Day 07, Day 18, Day 19, Day 22 |
 | CISA: Technical Approaches to Uncovering and Remediating Malicious Activity (AA20-245A) | https://www.cisa.gov/news-events/cybersecurity-advisories/aa20-245a | primer | 2026-10-15 | Day 03, Day 04, Day 05, Day 06, Day 07, Day 12, Day 13 |
 | Google Cloud Blog: M-Trends 2026 | https://cloud.google.com/blog/topics/threat-intelligence/m-trends-2026/ | sekunder | 2026-10-15 | Day 03, Day 07 |
-| RFC 3227: Guidelines for Evidence Collection and Archiving (BCP 55) | https://www.rfc-editor.org/rfc/rfc3227.txt | primer | 2026-10-15 | Day 04, Day 07 |
+| RFC 3227: Guidelines for Evidence Collection and Archiving (BCP 55) | https://www.rfc-editor.org/rfc/rfc3227.txt | primer | 2026-10-15 | Day 04, Day 07, Day 21, Day 22 |
 | NIST SP 800-86: Guide to Integrating Forensic Techniques into Incident Response (PDF) | https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-86.pdf | primer | 2026-10-15 | Day 04, Day 07 |
 | Microsoft Learn: Take response actions on a device in Microsoft Defender for Endpoint | https://learn.microsoft.com/en-us/defender-endpoint/respond-machine-alerts | primer | 2026-10-15 | Day 04, Day 05, Day 07 |
 | Microsoft Learn: Investigate entities on devices using live response in Microsoft Defender for Endpoint | https://learn.microsoft.com/en-us/defender-endpoint/live-response | primer | 2026-10-15 | Day 04, Day 17 |
 | GitHub microsoft/avml: Acquire Volatile Memory for Linux | https://github.com/microsoft/avml | primer | 2026-10-15 | Day 04 |
 | GitHub 504ensicsLabs/LiME: Linux Memory Extractor | https://github.com/504ensicsLabs/LiME | primer | 2026-10-15 | Day 04 |
 | GitHub Velocidex/WinPmem | https://github.com/Velocidex/WinPmem | primer | 2026-10-15 | Day 04 |
-| Microsoft Learn: Revoke user access in an emergency in Microsoft Entra ID | https://learn.microsoft.com/en-us/entra/identity/users/users-revoke-access | primer | 2026-10-15 | Day 05, Day 07, Day 10, Day 13 |
+| Microsoft Learn: Revoke user access in an emergency in Microsoft Entra ID | https://learn.microsoft.com/en-us/entra/identity/users/users-revoke-access | primer | 2026-10-15 | Day 05, Day 07, Day 10, Day 13, Day 21, Day 22 |
 | Microsoft Learn: [MS-KILE] Check Account Policy for Every Session Ticket Request | https://learn.microsoft.com/en-us/openspecs/windows_protocols/ms-kile/e19be8b8-9130-40a4-9cd1-92d0cbd46a51 | primer | 2026-10-15 | Day 05, Day 07 |
 | Microsoft Learn: AD Forest Recovery, Reset the krbtgt password | https://learn.microsoft.com/en-us/windows-server/identity/ad-ds/manage/forest-recovery-guide/ad-forest-recovery-reset-the-krbtgt-password | primer | 2026-10-15 | Day 06, Day 07, Day 12, Day 13 |
 | CISA Eviction Strategies Tool: CM0050 Reset Kerberos Ticket Granting Ticket (KRBTGT) Password Twice | https://www.cisa.gov/eviction-strategies-tool/info-countermeasures/CM0050 | primer | 2026-10-15 | Day 06, Day 07, Day 12, Day 13 |
@@ -56,15 +56,15 @@ Indeks sumber global, disusun dari tabel bagian 9 setiap Day. Kolom "Dipakai di"
 | Microsoft Learn: UrlClickEvents table in the advanced hunting schema | https://learn.microsoft.com/en-us/defender-xdr/advanced-hunting-urlclickevents-table | primer | 2026-10-15 | Day 08 |
 | CISA, NSA, FBI, MS-ISAC: Phishing Guidance: Stopping the Attack Cycle at Phase One (PDF) | https://www.cisa.gov/sites/default/files/2025-03/Phishing%20Guidance%20-%20Stopping%20the%20Attack%20Cycle%20at%20Phase%20One%20508.pdf | primer | 2026-10-15 | Day 08, Day 13 |
 | Positive Security: urlscan.io's SOAR spot, Chatty security tools leaking private data | https://positive.security/blog/urlscan-data-leaks | komunitas | 2026-10-15 | Day 08 |
-| Microsoft Learn: Respond to a compromised email account in Microsoft 365 | https://learn.microsoft.com/en-us/defender-office-365/responding-to-a-compromised-email-account | primer | 2026-10-15 | Day 09, Day 13 |
+| Microsoft Learn: Respond to a compromised email account in Microsoft 365 | https://learn.microsoft.com/en-us/defender-office-365/responding-to-a-compromised-email-account | primer | 2026-10-15 | Day 09, Day 13, Day 22 |
 | Microsoft Learn: Use MailItemsAccessed to investigate compromised accounts | https://learn.microsoft.com/en-us/purview/audit-log-investigate-accounts | primer | 2026-10-15 | Day 09, Day 13 |
 | Microsoft Learn: Manage mailbox auditing | https://learn.microsoft.com/en-us/purview/audit-mailboxes | primer | 2026-10-15 | Day 09 |
 | Microsoft Learn: Manage audit log retention policies | https://learn.microsoft.com/en-us/purview/audit-log-retention-policies | primer | 2026-10-15 | Day 09, Day 13 |
-| Microsoft Learn: Search-UnifiedAuditLog | https://learn.microsoft.com/en-us/powershell/module/exchangepowershell/search-unifiedauditlog | primer | 2026-10-15 | Day 09 |
+| Microsoft Learn: Search-UnifiedAuditLog | https://learn.microsoft.com/en-us/powershell/module/exchangepowershell/search-unifiedauditlog | primer | 2026-10-15 | Day 09, Day 21 |
 | Microsoft Learn: Audited activities | https://learn.microsoft.com/en-us/purview/audit-log-activities | primer | 2026-10-15 | Day 09 |
 | Microsoft Learn: Detect and remediate Outlook rules and custom forms injection attacks | https://learn.microsoft.com/en-us/defender-office-365/detect-and-remediate-outlook-rules-forms-attack | primer | 2026-10-15 | Day 09 |
 | Microsoft Learn: Detect and remediate illicit consent grants | https://learn.microsoft.com/en-us/defender-office-365/detect-and-remediate-illicit-consent-grants | primer | 2026-10-15 | Day 09, Day 10, Day 13 |
-| Microsoft Security Blog: From cookie theft to BEC, attackers use AiTM phishing sites as entry point to further financial fraud | https://www.microsoft.com/en-us/security/blog/2022/07/12/from-cookie-theft-to-bec-attackers-use-aitm-phishing-sites-as-entry-point-to-further-financial-fraud/ | sekunder | 2026-10-15 | Day 09, Day 10, Day 13 |
+| Microsoft Security Blog: From cookie theft to BEC, attackers use AiTM phishing sites as entry point to further financial fraud | https://www.microsoft.com/en-us/security/blog/2022/07/12/from-cookie-theft-to-bec-attackers-use-aitm-phishing-sites-as-entry-point-to-further-financial-fraud/ | sekunder | 2026-10-15 | Day 09, Day 10, Day 13, Day 22 |
 | FBI IC3: Business Email Compromise, The $55 Billion Scam (I-091124-PSA) | https://www.ic3.gov/PSA/2024/PSA240911 | primer | 2026-10-15 | Day 09, Day 13 |
 | Proofpoint: mailbox rules as an O365 post-exploitation tactic in cloud account takeover | https://www.proofpoint.com/us/blog/threat-insight/mailbox-rules-o365-post-exploitation-tactic-cloud-ato | sekunder | 2026-10-15 | Day 09 |
 | NVISO Labs: What did the attacker read? MailItemsAccessed tells you | https://blog.nviso.eu/2025/10/02/what-did-the-attacker-read-mailitemaccessed-tells-you/ | komunitas | 2026-10-15 | Day 09 |
@@ -76,7 +76,7 @@ Indeks sumber global, disusun dari tabel bagian 9 setiap Day. Kolom "Dipakai di"
 | Microsoft Learn: Microsoft Entra data retention | https://learn.microsoft.com/en-us/entra/identity/monitoring-health/reference-reports-data-retention | primer | 2026-10-15 | Day 10, Day 13 |
 | Microsoft Learn: Refresh tokens in the Microsoft identity platform | https://learn.microsoft.com/en-us/entra/identity-platform/refresh-tokens | primer | 2026-10-15 | Day 10, Day 13 |
 | Microsoft Learn: Continuous access evaluation in Microsoft Entra | https://learn.microsoft.com/en-us/entra/identity/conditional-access/concept-continuous-access-evaluation | primer | 2026-10-15 | Day 10, Day 13 |
-| Microsoft Learn: Token theft playbook | https://learn.microsoft.com/en-us/security/operations/token-theft-playbook | primer | 2026-10-15 | Day 10, Day 13 |
+| Microsoft Learn: Token theft playbook | https://learn.microsoft.com/en-us/security/operations/token-theft-playbook | primer | 2026-10-15 | Day 10, Day 13, Day 22 |
 | Microsoft Learn: What are risk detections? (Microsoft Entra ID Protection) | https://learn.microsoft.com/en-us/entra/id-protection/concept-identity-protection-risks | primer | 2026-10-15 | Day 10, Day 13 |
 | Microsoft Learn: Microsoft Entra audit log activity reference | https://learn.microsoft.com/en-us/entra/identity/monitoring-health/reference-audit-activities | primer | 2026-10-15 | Day 10 |
 | Microsoft Learn: Control security information registration with Conditional Access | https://learn.microsoft.com/en-us/entra/identity/conditional-access/policy-all-users-security-info-registration | primer | 2026-10-15 | Day 10, Day 13 |
@@ -180,7 +180,7 @@ Indeks sumber global, disusun dari tabel bagian 9 setiap Day. Kolom "Dipakai di"
 | SentinelOne: Rapid Threat Hunting with Storylines (Feature Spotlight) | https://www.sentinelone.com/blog/rapid-threat-hunting-with-deep-visibility-feature-spotlight/ | sekunder | 2026-10-15 | Day 17 |
 | SentinelOne: Revolutionize Incident Response and Endpoint Management with Remote Script Orchestration | https://www.sentinelone.com/blog/revolutionize-incident-response-and-endpoint-management-with-remote-script-orchestration/ | sekunder | 2026-10-15 | Day 17 |
 | GitHub Bert-JanP: Hunting-Queries-Detection-Rules | https://github.com/Bert-JanP/Hunting-Queries-Detection-Rules | komunitas | 2026-10-15 | Day 17 |
-| Google SRE Book, bab 15: Postmortem Culture, Learning from Failure | https://sre.google/sre-book/postmortem-culture/ | sekunder | 2026-10-15 | Day 19 |
+| Google SRE Book, bab 15: Postmortem Culture, Learning from Failure | https://sre.google/sre-book/postmortem-culture/ | sekunder | 2026-10-15 | Day 19, Day 22 |
 | PagerDuty Postmortem Documentation: The Blameless Postmortem | https://postmortems.pagerduty.com/culture/blameless/ | sekunder | 2026-10-15 | Day 19 |
 | PagerDuty Postmortem Documentation: How to Write a Postmortem, Step by Step | https://postmortems.pagerduty.com/how_to_write/writing/ | sekunder | 2026-10-15 | Day 19 |
 | PagerDuty Postmortem Documentation: Postmortem Meeting | https://postmortems.pagerduty.com/meeting/ | sekunder | 2026-10-15 | Day 19 |
@@ -192,5 +192,21 @@ Indeks sumber global, disusun dari tabel bagian 9 setiap Day. Kolom "Dipakai di"
 | Kompas.com: Komdigi ungkap Perpres pembentukan Badan Perlindungan Data Pribadi sedang disusun | https://nasional.kompas.com/read/2026/07/27/15423511/komdigi-ungkap-perpres-pembentukan-badan-perlindungan-data-pribadi-sedang | sekunder | 2026-10-15 | Day 18 |
 | CNBC Indonesia: Lembaga perlindungan data belum ada, begini nasib data warga RI | https://www.cnbcindonesia.com/tech/20260916120242-37-768329/lembaga-perlindungan-data-belum-ada-begini-nasib-data-warga-ri | sekunder | 2026-10-15 | Day 18 |
 | DDS Law: PP 33 Tahun 2026 tentang Pelindungan Data Pribadi dan kewajiban penting perusahaan | https://ddslaw.id/pp-33-tahun-2026-pelindungan-data-pribadi/ | komunitas | 2026-10-15 | Day 18 |
-| KRES.ID: Hitung mundur 16 Januari 2027, PP 33/2026 terbit | https://www.kres.id/pp-33-2026-aturan-pelaksana-uu-pdp | sekunder | 2026-10-15 | Day 18 |
+| KRES.ID: Hitung mundur 16 Januari 2027, PP 33/2026 terbit | https://www.kres.id/pp-33-2026-aturan-pelaksana-uu-pdp | sekunder | 2026-10-15 | Day 18, Day 22 |
 | PostgreSQL 18 Documentation: LIMIT and OFFSET | https://www.postgresql.org/docs/current/queries-limit.html | primer | 2026-10-15 | Day 18 |
+| NIST SP 800-84: Guide to Test, Training, and Exercise Programs for IT Plans and Capabilities (PDF) | https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-84.pdf | primer | 2026-10-15 | Day 20, Day 22 |
+| FEMA: Homeland Security Exercise and Evaluation Program (HSEEP) Doctrine, revisi 2020 (PDF) | https://www.fema.gov/sites/default/files/2020-04/Homeland-Security-Exercise-and-Evaluation-Program-Doctrine-2020-Revision-2-2-25.pdf | primer | 2026-10-15 | Day 20 |
+| NCSC UK: Effective steps to cyber exercise creation | https://www.ncsc.gov.uk/guidance/effective-steps-to-cyber-exercise-creation | primer | 2026-10-15 | Day 20 |
+| NCSC UK: Exercise in a Box | https://www.ncsc.gov.uk/information/exercise-in-a-box | primer | 2026-10-15 | Day 20 |
+| CISA: CISA Tabletop Exercise Packages | https://www.cisa.gov/resources-tools/services/cisa-tabletop-exercise-packages | primer | 2026-10-15 | Day 20 |
+| Black Hills Information Security: Backdoors & Breaches | https://www.blackhillsinfosec.com/projects/backdoorsandbreaches/ | komunitas | 2026-10-15 | Day 20 |
+| Microsoft Learn: Get-WinEvent (Microsoft.PowerShell.Diagnostics) | https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.diagnostics/get-winevent | primer | 2026-10-15 | Day 21 |
+| Microsoft Learn: Creating Get-WinEvent queries with FilterHashtable | https://learn.microsoft.com/en-us/powershell/scripting/samples/creating-get-winevent-queries-with-filterhashtable | primer | 2026-10-15 | Day 21 |
+| Microsoft Learn: Making the second hop in PowerShell Remoting | https://learn.microsoft.com/en-us/powershell/scripting/security/remoting/ps-remoting-second-hop | primer | 2026-10-15 | Day 21 |
+| Microsoft Learn: Overview of Just Enough Administration (JEA) | https://learn.microsoft.com/en-us/powershell/scripting/security/remoting/jea/overview | primer | 2026-10-15 | Day 21 |
+| Microsoft Learn: Everything you wanted to know about ShouldProcess | https://learn.microsoft.com/en-us/powershell/scripting/learn/deep-dives/everything-about-shouldprocess | komunitas | 2026-10-15 | Day 21 |
+| Microsoft Learn: Get-MgAuditLogSignIn (Microsoft.Graph.Reports) | https://learn.microsoft.com/en-us/powershell/module/microsoft.graph.reports/get-mgauditlogsignin | primer | 2026-10-15 | Day 21 |
+| Python documentation: hashlib | https://docs.python.org/3/library/hashlib.html | primer | 2026-10-15 | Day 21 |
+| Python documentation: zoneinfo | https://docs.python.org/3/library/zoneinfo.html | primer | 2026-10-15 | Day 21 |
+| Splunk Enterprise 10.0 REST API Tutorials: Creating searches using the REST API | https://help.splunk.com/en/splunk-enterprise/leverage-rest-apis/rest-api-tutorials/10.0/rest-api-tutorials/creating-searches-using-the-rest-api | primer | 2026-10-15 | Day 21 |
+| Splunk Enterprise 10.0 REST API Reference: Search endpoint descriptions | https://help.splunk.com/en/splunk-enterprise/rest-api-reference/10.0/search-endpoints/search-endpoint-descriptions | primer | 2026-10-15 | Day 21 |
