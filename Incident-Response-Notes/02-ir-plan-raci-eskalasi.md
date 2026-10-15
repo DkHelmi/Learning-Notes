@@ -217,7 +217,7 @@ Untuk PT JAB, pengujian dibagi tiga tingkat dari yang paling murah:
 
 1. **Uji kontak (page test).** Setiap Senin, on-call baru ditelepon uji oleh scribe; waktu jawab dicatat. Ini menguji matriks eskalasi tanpa insiden.
 2. **Uji akses.** Setiap kuartal, on-call membuktikan bisa login ke EDR, Splunk ES, dan `jkt-bastion01` dari luar kantor, dan akun break-glass diuji dengan prosedur resmi.
-3. **Tabletop exercise.** Diskusi skenario untuk menguji keputusan dan komunikasi, bukan kemampuan mengetik perintah; desain, inject, dan fasilitasinya dibahas di Day tersendiri.
+3. **Tabletop exercise.** Diskusi skenario untuk menguji keputusan dan komunikasi, bukan kemampuan mengetik perintah; desain, inject, dan fasilitasinya dibahas di Day 20 bagian 1.2 sampai 1.6.
 
 Setiap SEV-1 dan SEV-2 juga menjadi uji nyata: post-incident review wajib menjawab "bagian mana dari plan yang dipakai, yang diabaikan, dan yang menghambat". Post-incident review 22 September menjawab pertanyaan itu untuk versi 1.2, dan dari jawabannya versi 2.0 disusun.
 
