@@ -179,7 +179,7 @@ Jawaban untuk pertanyaan 4 auditor. Baris klien dan media adalah yang ditanyakan
 |---|---|---|---|---|
 | Ringkasan metrik SOC | Bulanan | Manajemen, ISMS Manager | Laporan + rapat | Lead SOC |
 | Insiden yang memengaruhi layanan klien | Sesuai tenggat kontrak | Kontak keamanan klien | Email terenkripsi + telepon | Incident manager |
-| Pemberitahuan kegagalan pelindungan data pribadi | Tertulis, paling lambat 3 x 24 jam (UU PDP Pasal 46, Day 10 bagian 1.6); titik mulai hitungan perlu dicek di teks resmi UU di JDIH | Lembaga PDP, subjek data | Kanal resmi | DPO dan Legal |
+| Pemberitahuan kegagalan pelindungan data pribadi | Tertulis, paling lambat 3 x 24 jam (UU PDP Pasal 46, Day 10 bagian 1.6); UU dan penjelasannya tidak menyebut titik mulai, prosedur PT AN memakai saat kegagalan tervalidasi (Day 10 bagian 2.4) | Lembaga PDP, subjek data | Kanal resmi | DPO dan Legal |
 | Perubahan kebijakan keamanan | Saat terbit | Semua karyawan in-scope | Email + pengakuan baca | ISMS Manager |
 | Peringatan phishing aktif | Saat terdeteksi | Semua karyawan | Pesan singkat internal | Analyst on-duty |
 | Pertanyaan media soal insiden | Saat ada | Media | Hanya lewat juru bicara | Corporate communication |
