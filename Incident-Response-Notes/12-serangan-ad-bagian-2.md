@@ -166,13 +166,15 @@ Pertanyaan kelima Hendra adalah keputusan dengan trade-off nyata. Prinsip reset 
 
 **Yang ditulis sumber primer.** Panduan pemulihan forest Microsoft meminta reset dilakukan dua kali dengan jeda 10 jam, sesuai default Maximum lifetime for user ticket dan service ticket, dan lebih lama bila nilai itu diubah [S13]. CISA CM0050 meminta reset pertama tereplikasi sebelum reset kedua, menunggu minimal 10 jam, dan memeriksa kesehatan replikasi lebih dulu; CM0050 tidak membahas reset beruntun saat kompromi aktif [S15]. AA20-245A meminta reset pertama tereplikasi sebelum reset kedua tanpa menyebut lama jedanya [S16]. ATT&CK menulis langkah yang sama untuk menahan golden ticket: ubah sekali, paksa replikasi, lalu ubah lagi [S2].
 
+**Panduan containment taktis.** Playbook Microsoft Incident Response untuk ransomware justru memasukkan reset krbtgt dua kali secara cepat sebagai containment taktis saat kompromi aktif, dengan proses berskrip (`New-KrbtgtKeys`) untuk mengurangi gangguan autentikasi, opsi memperpendek masa berlaku tiket sebelum reset pertama, dan syarat semua DC yang dipertahankan sedang online [S24]. Jadi Microsoft punya dua panduan untuk dua konteks: pemulihan forest dengan jeda 10 jam, dan containment taktis saat penyerang mungkin masih aktif.
+
 **Pendapat lain.** Teks STIG Windows Server dari DISA, yang terbaca lewat mirror pihak ketiga, menyebut perubahan dua kali secara cepat memaksa klien, termasuk layanan aplikasi, untuk autentikasi ulang, dan hal itu diinginkan bila ada dugaan kompromi [S22]. Panduan praktisi FRSecure mendeskripsikan cara cepat itu sebagai metode darurat, tetapi menolak merekomendasikannya dalam keadaan apa pun karena risiko kerusakan tambahan, pemulihan yang lebih lama, dan hilangnya bukti forensik saat server harus di-restart [S23]. [komunitas] Pendapat praktisi ini belum dikonfirmasi sumber primer, tetapi konsisten dengan dampak yang ditulis CM0050 [S15].
 
 **Cara PT JAB memutuskan.** Dari sumber-sumber itu, PT JAB memakai jalur standar sebagai default dan jalur cepat sebagai pemicu tertulis:
 
 | | Jalur standar (default) | Jalur cepat (hanya dengan pemicu) |
 |---|---|---|
-| Dasar | Microsoft [S13], CM0050 [S15], AA20-245A [S16] | STIG DISA [S22]; ditolak praktisi [S23] |
+| Dasar | Panduan forest recovery Microsoft [S13], CM0050 [S15], AA20-245A [S16] | Playbook Microsoft Incident Response [S24], STIG DISA [S22]; ditolak sebagian praktisi [S23] |
 | Jeda | Replikasi terverifikasi, lalu minimal 10 jam | Segera setelah replikasi reset pertama terverifikasi |
 | Harga | Kunci lama mungkin masih berguna bagi penyerang sampai reset kedua | Semua tiket gugur sekaligus; layanan yang bergantung pada AD perlu autentikasi ulang atau restart |
 | Kompensasi | Host penyerang terisolasi, jalur masuk ditutup, akun Tier 0 dirotasi, pemantauan 4769 ketat | Jendela pemeliharaan, daftar layanan yang harus di-restart, tim aplikasi siaga |
@@ -548,7 +550,7 @@ SILVER TICKET: TGS palsu dari hash akun layanan; TIDAK lewat DC; cari di host ta
 
 KRBTGT: rotasi Tier 0 + akun sync DULU, lalu krbtgt
   standar: reset 1 -> cek replikasi -> >= 10 jam -> reset 2   (Microsoft, CISA)
-  cepat: reset 2 segera setelah replikasi, hanya dengan pemicu (STIG DISA; ditolak praktisi)
+  cepat: reset 2 segera setelah replikasi, hanya dengan pemicu (Microsoft IR, STIG DISA; ditolak sebagian praktisi)
   + KDS root key baru dan gMSA dibuat ulang bila DB AD terkompromi
 
 ENTRA CONNECT = Tier 0; admin server sync bisa memanipulasi user Entra
@@ -661,5 +663,6 @@ What makes this answer strong: it starts with verification instead of assumption
 | S21 | Microsoft Learn: Microsoft Entra Connect, Prerequisites and hardware | https://learn.microsoft.com/en-us/entra/identity/hybrid/connect/how-to-connect-install-prerequisites | primer | ms.date 2026-01-16; diakses 2026-10-15 | Tinggi. Tier 0 dan Control Plane, risiko manipulasi pengguna Entra, MFA, soft match dan hard match takeover, kewajiban upgrade sebelum 7 April 2027 |
 | S22 | EventSentry: validasi krbtgt (mirror teks STIG Windows Server DISA, V-254427, V-205877, V-225006) | https://www.eventsentry.com/validationscripts/guid/18ef977d-1c89-4ea7-ac53-0438873cb1db | sekunder (mirror teks STIG) | diakses 2026-10-15 | Sedang. Teks STIG tentang perubahan dua kali secara cepat bila ada dugaan kompromi, dibaca lewat mirror pihak ketiga, bukan situs DISA |
 | S23 | FRSecure: KRBTGT Password Reset Guide | https://frsecure.com/?p=32923 | komunitas (panduan praktisi) | 2025; diakses 2026-10-15 | Sedang. Metode cepat sebagai metode darurat yang tidak direkomendasikan, alasan, dan urutan mode skrip reset |
+| S24 | Microsoft Learn: Microsoft Incident Response ransomware approach and best practices | https://learn.microsoft.com/en-us/security/operations/incident-response-playbook-dart-ransomware-approach | primer (dokumentasi vendor) | ms.date 2024-10-16; diakses 2026-10-15 | Tinggi. Reset krbtgt dua kali secara cepat sebagai containment taktis, skrip `New-KrbtgtKeys`, memperpendek masa berlaku sebelum reset pertama, semua DC online |
 
 **Catatan sumber:** rule DCSync di bagian 2.1 (korelasi 4662 dengan 4624 lewat Logon ID dan pengecualian pasangan akun dan IP), aturan "domain dianggap dikuasai", tabel kriteria eviction dan pemulihan forest di bagian 1.7, dan pembagian jalur standar dan jalur cepat reset krbtgt di bagian 1.5 adalah susunan catatan ini dari sumber yang disebut, bukan daftar resmi. Pernyataan bahwa reset krbtgt dua kali secara cepat diinginkan saat dugaan kompromi hanya bersumber dari teks STIG DISA yang dibaca lewat mirror [S22] dan bertentangan dengan jeda yang diminta Microsoft dan CISA [S13][S15][S16]; cek teks STIG yang berlaku di situs resmi DISA bila keputusan ini akan dipakai. Query golden ticket di bagian 2.3 adalah penerapan analitik ATT&CK [S2] dengan jendela 10 jam dari umur tiket default [S13], dan perlu diuji di lab karena pola TGT dan TGS bisa berbeda per lingkungan. Sintaks `certutil -view` dan nama kolomnya perlu dicek dengan `certutil -schema` di CA versi-mu. Bahwa akun konektor Entra memerlukan prosedur rotasi berbeda setelah perpindahan ke autentikasi berbasis aplikasi perlu dicek di dokumentasi Entra Connect versi yang dipakai. Isi teknis panduan bersama lima negara edisi September 2026 belum dipakai di Day ini [S20]. Semua isi PT JAB, termasuk nama host, akun, nomor request, nomor seri sertifikat, dan hasil query, adalah contoh fiktif.

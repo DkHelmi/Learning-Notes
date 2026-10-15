@@ -38,7 +38,7 @@ Indeks sumber global, disusun dari tabel bagian 9 setiap Day. Kolom "Dipakai di"
 | Microsoft Learn: [MS-KILE] Check Account Policy for Every Session Ticket Request | https://learn.microsoft.com/en-us/openspecs/windows_protocols/ms-kile/e19be8b8-9130-40a4-9cd1-92d0cbd46a51 | primer | 2026-10-15 | Day 05, Day 07 |
 | Microsoft Learn: AD Forest Recovery, Reset the krbtgt password | https://learn.microsoft.com/en-us/windows-server/identity/ad-ds/manage/forest-recovery-guide/ad-forest-recovery-reset-the-krbtgt-password | primer | 2026-10-15 | Day 06, Day 07, Day 12, Day 13 |
 | CISA Eviction Strategies Tool: CM0050 Reset Kerberos Ticket Granting Ticket (KRBTGT) Password Twice | https://www.cisa.gov/eviction-strategies-tool/info-countermeasures/CM0050 | primer | 2026-10-15 | Day 06, Day 07, Day 12, Day 13 |
-| CISA Eviction Strategies Tool: CM0027 Rebuild Compromised Host | https://www.cisa.gov/eviction-strategies-tool/info-countermeasures/CM0027 | primer | 2026-10-15 | Day 06 |
+| CISA Eviction Strategies Tool: CM0027 Rebuild Compromised Host | https://www.cisa.gov/eviction-strategies-tool/info-countermeasures/CM0027 | primer | 2026-10-15 | Day 06, Day 15 |
 | NCSC UK: Recovering from a highly disruptive cyber attack, Section 2 (Recovery and ongoing investigations) | https://www.ncsc.gov.uk/collection/disruptive-cyber-attacks/recovering/2-recovery-ongoing-investigations | primer | 2026-10-15 | Day 06, Day 07 |
 | Harlan Carvey: Incident Response Misconceptions (arsip blog Microsoft) | https://learn.microsoft.com/en-us/archive/blogs/industry_insiders/incident-response-misconceptions | sekunder | 2026-10-15 | Day 06 |
 | Microsoft Q&A: Reset krbtgt password (utas diskusi) | https://learn.microsoft.com/en-my/answers/questions/87978/reset-krbtgt-password | komunitas | 2026-10-15 | Day 06 |
@@ -123,3 +123,45 @@ Indeks sumber global, disusun dari tabel bagian 9 setiap Day. Kolom "Dipakai di"
 | Microsoft Learn: Microsoft Entra Connect, Prerequisites and hardware | https://learn.microsoft.com/en-us/entra/identity/hybrid/connect/how-to-connect-install-prerequisites | primer | 2026-10-15 | Day 12, Day 13 |
 | EventSentry: validasi krbtgt (mirror teks STIG Windows Server DISA) | https://www.eventsentry.com/validationscripts/guid/18ef977d-1c89-4ea7-ac53-0438873cb1db | sekunder | 2026-10-15 | Day 12 |
 | FRSecure: KRBTGT Password Reset Guide | https://frsecure.com/?p=32923 | komunitas | 2026-10-15 | Day 12 |
+| CISA: #StopRansomware Guide (ransomware guide) | https://www.cisa.gov/stopransomware/ransomware-guide | primer | 2026-10-15 | Day 14 |
+| NCSC UK: Mitigating malware and ransomware attacks | https://www.ncsc.gov.uk/guidance/mitigating-malware-and-ransomware-attacks | primer | 2026-10-15 | Day 14 |
+| MITRE ATT&CK: Data Encrypted for Impact (T1486) | https://attack.mitre.org/techniques/T1486/ | primer | 2026-10-15 | Day 14 |
+| MITRE ATT&CK: Inhibit System Recovery (T1490) | https://attack.mitre.org/techniques/T1490/ | primer | 2026-10-15 | Day 14 |
+| Microsoft Learn: Microsoft Incident Response ransomware approach and best practices | https://learn.microsoft.com/en-us/security/operations/incident-response-playbook-dart-ransomware-approach | primer | 2026-10-15 | Day 06, Day 12, Day 14 |
+| Microsoft Learn: Find ransomware with advanced hunting (Microsoft Defender XDR) | https://learn.microsoft.com/en-us/defender-xdr/advanced-hunting-find-ransomware | primer | 2026-10-15 | Day 14 |
+| NIST IR 8374 Rev. 1: Ransomware Risk Management, A Cybersecurity Framework 2.0 Community Profile | https://csrc.nist.gov/pubs/ir/8374/r1/final | primer | 2026-10-15 | Day 14 |
+| Sophos: The State of Ransomware 2025 | https://www.sophos.com/en-us/blog/the-state-of-ransomware-2025 | sekunder | 2026-10-15 | Day 14 |
+| The DFIR Report: Quantum Ransomware | https://thedfirreport.com/2022/04/25/quantum-ransomware/ | komunitas | 2026-10-15 | Day 14 |
+| AWS Customer Playbook Framework: Compromised IAM Credentials | https://github.com/aws-samples/aws-customer-playbook-framework/blob/main/docs/Compromised_IAM_Credentials.md | primer | 2026-10-15 | Day 16 |
+| AWS IAM User Guide: Disabling permissions for temporary security credentials | https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_temp_control-access_disable-perms.html | primer | 2026-10-15 | Day 16 |
+| AWS IAM User Guide: Revoke IAM role temporary security credentials | https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_use_revoke-sessions.html | primer | 2026-10-15 | Day 16 |
+| AWS Managed Policy Reference: AWSCompromisedKeyQuarantineV3 | https://docs.aws.amazon.com/aws-managed-policy/latest/reference/AWSCompromisedKeyQuarantineV3.html | primer | 2026-10-15 | Day 16 |
+| AWS CloudTrail User Guide: Working with CloudTrail event history | https://docs.aws.amazon.com/awscloudtrail/latest/userguide/view-cloudtrail-events.html | primer | 2026-10-15 | Day 16 |
+| AWS CloudTrail User Guide: Logging data events | https://docs.aws.amazon.com/awscloudtrail/latest/userguide/logging-data-events-with-cloudtrail.html | primer | 2026-10-15 | Day 16 |
+| Amazon EC2 User Guide: Security group connection tracking | https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/security-group-connection-tracking.html | primer | 2026-10-15 | Day 16 |
+| Amazon GuardDuty User Guide: GuardDuty finding types | https://docs.aws.amazon.com/guardduty/latest/ug/guardduty_finding-types-active.html | primer | 2026-10-15 | Day 16 |
+| AWS Customer Playbook Framework: EC2 Forensics | https://github.com/aws-samples/aws-customer-playbook-framework/blob/main/docs/EC2_Forensics.md | primer | 2026-10-15 | Day 16 |
+| Microsoft Learn: Activity Log in Azure Monitor | https://learn.microsoft.com/en-us/azure/azure-monitor/platform/activity-log | primer | 2026-10-15 | Day 16 |
+| Microsoft Learn: Computer forensics chain of custody in Azure | https://learn.microsoft.com/en-us/azure/architecture/example-scenario/forensics/ | primer | 2026-10-15 | Day 16 |
+| Microsoft Learn: Create a snapshot of an Azure managed disk | https://learn.microsoft.com/en-us/azure/virtual-machines/snapshot-copy-managed-disk | primer | 2026-10-15 | Day 16 |
+| Microsoft Learn: Compromised and malicious applications investigation | https://learn.microsoft.com/en-us/security/operations/incident-response-playbook-compromised-malicious-app | primer | 2026-10-15 | Day 16 |
+| Microsoft Learn: az ad app credential | https://learn.microsoft.com/en-us/cli/azure/ad/app/credential | primer | 2026-10-15 | Day 16 |
+| Microsoft Learn: Manage storage account access keys | https://learn.microsoft.com/en-us/azure/storage/common/storage-account-keys-manage | primer | 2026-10-15 | Day 16 |
+| MITRE ATT&CK: Valid Accounts: Cloud Accounts (T1078.004) | https://attack.mitre.org/techniques/T1078/004/ | primer | 2026-10-15 | Day 16 |
+| MITRE ATT&CK: Unsecured Credentials: Credentials In Files (T1552.001) | https://attack.mitre.org/techniques/T1552/001/ | primer | 2026-10-15 | Day 16 |
+| MITRE ATT&CK: Resource Hijacking (T1496) | https://attack.mitre.org/techniques/T1496/ | primer | 2026-10-15 | Day 16 |
+| MITRE ATT&CK: Data from Cloud Storage (T1530) | https://attack.mitre.org/techniques/T1530/ | primer | 2026-10-15 | Day 16 |
+| Cybr: My AWS IAM access keys were exposed and exploited, what should I do? (cheat sheet) | https://cybr.com/?p=21730 | komunitas | 2026-10-15 | Day 16 |
+| NSA Cybersecurity: Mitigating-Web-Shells (repositori GitHub) | https://github.com/nsacyber/Mitigating-Web-Shells | primer | 2026-10-15 | Day 15 |
+| CISA Eviction Strategies Tool: CM0106 Eliminate Web Shells | https://www.cisa.gov/eviction-strategies-tool/info-countermeasures/CM0106 | primer | 2026-10-15 | Day 15 |
+| MITRE ATT&CK: Server Software Component: Web Shell (T1505.003) | https://attack.mitre.org/techniques/T1505/003/ | primer | 2026-10-15 | Day 15 |
+| MITRE ATT&CK: Exploit Public-Facing Application (T1190) | https://attack.mitre.org/techniques/T1190/ | primer | 2026-10-15 | Day 15 |
+| MITRE ATT&CK: Scheduled Task/Job: Cron (T1053.003) | https://attack.mitre.org/techniques/T1053/003/ | primer | 2026-10-15 | Day 15 |
+| MITRE ATT&CK: Account Manipulation: SSH Authorized Keys (T1098.004) | https://attack.mitre.org/techniques/T1098/004/ | primer | 2026-10-15 | Day 15 |
+| MITRE ATT&CK: Create or Modify System Process: Systemd Service (T1543.002) | https://attack.mitre.org/techniques/T1543/002/ | primer | 2026-10-15 | Day 15 |
+| MITRE ATT&CK: Hijack Execution Flow: Dynamic Linker Hijacking (T1574.006) | https://attack.mitre.org/techniques/T1574/006/ | primer | 2026-10-15 | Day 15 |
+| OWASP Cheat Sheet Series: File Upload Cheat Sheet | https://cheatsheetseries.owasp.org/cheatsheets/File_Upload_Cheat_Sheet.html | primer | 2026-10-15 | Day 15 |
+| auditctl(8), Linux manual page | https://man7.org/linux/man-pages/man8/auditctl.8.html | primer | 2026-10-15 | Day 15 |
+| crontab(1), Debian bookworm manpages | https://manpages.debian.org/bookworm/cron/crontab.1.en.html | primer | 2026-10-15 | Day 15 |
+| Elastic Security: prebuilt rule Suspicious Child Execution via Web Server | https://www.elastic.co/guide/en/security/current/suspicious-child-execution-via-web-server.html | sekunder | 2026-10-15 | Day 15 |
+| SigmaHQ: Webshell Remote Command Execution (lnx_auditd_web_rce) | https://github.com/SigmaHQ/sigma/blob/master/rules/linux/auditd/syscall/lnx_auditd_web_rce.yml | komunitas | 2026-10-15 | Day 15 |
