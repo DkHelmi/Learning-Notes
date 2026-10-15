@@ -356,6 +356,6 @@ Indeks sumber global, disusun dari tabel Sumber (bagian 9) setiap Day. Kolom "Di
 | What's new in Splunk Security Essentials (3.8) | https://help.splunk.com/en/splunk-enterprise-security-8/security-essentials/release-notes-and-resources/3.8/splunk-security-essentials-release-notes/whats-new-in-splunk-security-essentials | primer | halaman diperbarui 2025-07-22; diakses 2026-10-07 | Day 45, 47 |
 | Splunk Lantern: Use Case Explorer for Security | https://lantern.splunk.com/Security/UCE | primer | diakses 2026-10-07 | Day 45 |
 | ES 8.7: Use detections to search for threats | https://help.splunk.com/en/splunk-enterprise-security-8/administer/8.7/detections | primer | diakses 2026-10-07 | Day 45 |
-| GitHub splunk/security_content (macro dan detection) | https://github.com/splunk/security_content | primer | diakses 2026-10-07 (Day 25) | Day 45 |
+| GitHub splunk/security_content (macro dan detection) | https://github.com/splunk/security_content | primer | diakses 2026-10-07 | Day 25, 45 |
 | MITRE ATT&CK v19: T1566 (Phishing), T1505.003 (Web Shell), T1021 (Remote Services), T1543.003 (Windows Service), T1053.005 (Scheduled Task) | https://attack.mitre.org/techniques/enterprise/ | primer | dirujuk 2026-10-09 | Day 46 |
 | Knowledge Manager Manual: "Use summary indexing for increased search efficiency" | https://help.splunk.com/en/splunk-enterprise | primer | judul halaman dirujuk 2026-10-09 | Day 47 |
