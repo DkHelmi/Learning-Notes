@@ -240,7 +240,7 @@ Semua setelan di bawah ditulis sebagai tabel supaya bisa disalin ke form, dan se
 | Open link in | New window |
 | Link method | get |
 
-**Penjelasan tiap bagian.** Label memuat `$src$` supaya analyst membaca IP yang akan dikirim sebelum mengklik [S2]. Daftar field berisi satu nama, sehingga menu tidak pernah muncul di `user`, `customer_id`, atau `_raw` [S1]. Event type `jab_fw_blocked_external` (dibuat di Day 17 untuk event firewall dengan `action=blocked` dan tujuan di luar ruang alamat internal) menjadi pembatas kedua, sehingga log internal tidak mendapat menu ini [S1]. Link method `get` membuat Splunk membangun URL berisi nilai field yang sudah di-URL-encode [S2].
+**Penjelasan tiap bagian.** Label memuat `$src$` supaya analyst membaca IP yang akan dikirim sebelum mengklik [S2]. Daftar field berisi satu nama, sehingga menu tidak pernah muncul di `user`, `customer_id`, atau `_raw` [S1]. Event type `jab_fw_blocked_external` (kamu buat sendiri dengan cara Day 17 bagian 2.1, berisi event firewall dengan `action=blocked` dan tujuan di luar ruang alamat internal, misalnya `index=firewall action=blocked NOT dest=10.10.0.0/16 NOT dest=10.20.0.0/16 NOT dest=10.30.0.0/16`) menjadi pembatas kedua, sehingga log internal tidak mendapat menu ini [S1]. Link method `get` membuat Splunk membangun URL berisi nilai field yang sudah di-URL-encode [S2].
 
 **Keluaran ilustrasi.** Pada satu event firewall dengan `src=203.0.113.45`, menu Actions untuk field `src` berisi satu baris baru:
 

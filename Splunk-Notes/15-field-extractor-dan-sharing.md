@@ -43,7 +43,7 @@ RAW EVENT (sourcetype jab:vpnlegacy)
        akun pemilik dihapus -> objek yatim -> yang terjadwal berhenti
 ```
 
-Situasi yang dipakai sepanjang Day ini: Senin pagi di PT Jaringan Anak Bangsa (PT JAB, ISP menengah fiktif, SOC internal satu lantai dengan NOC). Dua sumber log baru masuk pekan lalu dan keduanya tidak punya add-on yang dirawat: concentrator VPN lama untuk akses vendor di `jkt-vpnl01` (sourcetype `jab:vpnlegacy`, index `vpn`) dan firewall POP Bandung dari vendor kedua (sourcetype `jab:fw:pop`, index `firewall`). Tiket SOC-2026-0231 dibuka akhir pekan karena akun vendor `vendor.bnet01` login dari `203.0.113.45` setelah 147 percobaan gagal, dan triage-nya terhambat karena tidak ada satu pun field yang bisa dipakai menyaring. Detection engineer menulis di grup:
+Situasi yang dipakai sepanjang Day ini: Senin pagi di PT Jaringan Anak Bangsa (PT JAB, ISP menengah fiktif, SOC internal satu lantai dengan NOC). Dua sumber log baru masuk pekan lalu dan keduanya tidak punya add-on yang dirawat: concentrator VPN lama untuk akses vendor di `jkt-vpnl01` (sourcetype `jab:vpnlegacy`, index `vpn`) dan firewall POP Bandung dari vendor kedua (sourcetype `jab:fw:pop`, index `firewall`). Tiket SOC-2026-0235 dibuka akhir pekan karena akun vendor `vendor.bnet01` login dari `203.0.113.45` setelah 147 percobaan gagal, dan triage-nya terhambat karena tidak ada satu pun field yang bisa dipakai menyaring. Detection engineer menulis di grup:
 
 > "Dua sumber baru itu masih mentah, semua orang menyalin regex dari chat. Tolong buat field extraction yang benar untuk keduanya, pakai Field Extractor saja supaya tercatat di Splunk dan bukan di catatan pribadi. Syaratnya tiga: field-nya harus muncul untuk semua orang di app SOC, detection terjadwal yang dimiliki akun `svc_soc` harus bisa memakainya, dan jangan sampai extraction ini mati waktu kontrak anak magang yang bantu onboarding selesai bulan depan."
 
@@ -112,7 +112,7 @@ Satu hal yang perlu kamu tahu tentang perilaku bawaan sebelum menulis extraction
 
 ### 1.2 Lima langkah Field Extractor dan apa yang diputuskan di tiap langkah
 
-Field Extractor punya lima langkah, dan alurnya bercabang di langkah kedua sesuai metode yang dipilih [S1]:
+Dokumentasi menyebut Field Extractor punya lima langkah, dan alurnya bercabang di langkah kedua sesuai metode yang dipilih [S1]. Karena itu daftar di bawah memuat enam butir: jalur regex melewati lima di antaranya, jalur delimiter empat.
 
 1. **Select sample.** Pilih sourcetype atau source yang memuat field itu, lalu pilih satu event contoh. Langkah ini berlaku untuk kedua metode.
 2. **Select method.** Pilih `Regular expression` atau `Delimiters`. Dokumentasi menempatkan regex untuk data tidak terstruktur dan delimiter untuk data terstruktur yang punya header [S1].
@@ -235,7 +235,7 @@ Untuk scheduled search yang sudah yatim, pilihan tindakannya ditentukan tujuanny
 
 ## 2. Contoh dan langkah praktis di PT JAB
 
-Semua keluaran di bagian ini adalah keluaran ilustrasi: angkanya disusun agar konsisten dengan tiket SOC-2026-0231 dan bisa dijumlahkan ulang, bukan hasil eksekusi. Semua rentang waktu memakai bentuk absolut atau snap-to jam supaya hasilnya bisa diulang, dan semua index memakai index PT JAB.
+Semua keluaran di bagian ini adalah keluaran ilustrasi: angkanya disusun agar konsisten dengan tiket SOC-2026-0235 dan bisa dijumlahkan ulang, bukan hasil eksekusi. Semua rentang waktu memakai bentuk absolut atau snap-to jam supaya hasilnya bisa diulang, dan semua index memakai index PT JAB.
 
 ### 2.1 Memastikan field memang belum ada, dan seberapa banyak event yang terdampak
 
@@ -291,11 +291,11 @@ Kebiasaan yang menghemat banyak waktu: bangun dulu regexnya di search bar, karen
 
 ```
 index=vpn sourcetype=jab:vpnlegacy earliest=-24h@h latest=@h
-| rex field=_raw "AUTH\s+(?<jab_result>OK|FAIL)\s+(?<jab_user>[\w.\-]+)\s+from\s+(?<jab_src>\d{1,3}(?:\.\d{1,3}){3})\s+group\s+(?<jab_group>\S+)"
+| rex field=_raw "AUTH\s+(?<jab_result>OK|FAIL)\s+(?:(?<jab_user>[\w.\-]+)|\(unknown user\))\s+from\s+(?<jab_src>\d{1,3}(?:\.\d{1,3}){3})\s+group\s+(?<jab_group>\S+)"
 | stats count AS total, count(jab_user) AS ada_user, count(jab_src) AS ada_src BY jab_result
 ```
 
-**Penjelasan tiap bagian:** `(?<jab_result>OK|FAIL)` menangkap dua varian sekaligus, sehingga regexnya tidak terjangkar pada satu di antaranya. `[\w.\-]+` untuk nama akun sengaja tidak memakai `\S+`, supaya teks seperti `(unknown` yang dipakai perangkat saat akun tidak dikenal tidak ikut tertangkap. `\d{1,3}(?:\.\d{1,3}){3}` membatasi tangkapan alamat ke bentuk alamat IPv4, bukan sembarang teks. Awalan `jab_` dipakai supaya jelas bahwa field ini buatan sendiri dan bukan field dari add-on; penyamaan nama ke nama standar lintas vendor dikerjakan di Day 16, bukan di sini.
+**Penjelasan tiap bagian:** `(?<jab_result>OK|FAIL)` menangkap dua varian sekaligus, sehingga regexnya tidak terjangkar pada satu di antaranya. `[\w.\-]+` untuk nama akun sengaja tidak memakai `\S+`, supaya teks seperti `(unknown` yang dipakai perangkat saat akun tidak dikenal tidak ikut tertangkap. Grup itu dibungkus `(?:...|\(unknown user\))` supaya varian tanpa nama akun tetap cocok: tanpa alternatif ini, baris `AUTH FAIL (unknown user)` membuat seluruh regex gagal di tengah, dan regex yang gagal tidak mengisi grup apa pun, termasuk `jab_result` dan `jab_src`. `\d{1,3}(?:\.\d{1,3}){3}` membatasi tangkapan alamat ke bentuk alamat IPv4, bukan sembarang teks. Awalan `jab_` dipakai supaya jelas bahwa field ini buatan sendiri dan bukan field dari add-on; penyamaan nama ke nama standar lintas vendor dikerjakan di Day 16, bukan di sini.
 
 Keluaran ilustrasi:
 
@@ -315,11 +315,11 @@ sslvpn[5542]: AUTH FAIL vendor.bnet01 from 203.0.113.45 group VENDOR-NOC via por
 sslvpn[5542]: AUTH OK vendor.bnet01 from 203.0.113.45 group VENDOR-NOC via portal assigned 10.10.250.37 session 118391
 sslvpn[5542]: AUTH FAIL (unknown user) from 198.51.100.23 group - via portal (no such user) session 118400
 sslvpn[5542]: SESSION CLOSE session 118391 duration 742"
-| rex field=_raw "AUTH\s+(?<jab_result>OK|FAIL)\s+(?<jab_user>[\w.\-]+)\s+from\s+(?<jab_src>\d{1,3}(?:\.\d{1,3}){3})\s+group\s+(?<jab_group>\S+)"
+| rex field=_raw "AUTH\s+(?<jab_result>OK|FAIL)\s+(?:(?<jab_user>[\w.\-]+)|\(unknown user\))\s+from\s+(?<jab_src>\d{1,3}(?:\.\d{1,3}){3})\s+group\s+(?<jab_group>\S+)"
 | table _raw jab_result jab_user jab_src jab_group
 ```
 
-Hasil yang benar: baris pertama dan kedua terisi lengkap, baris ketiga hanya `jab_result` yang terisi karena nama akunnya tidak cocok dengan `[\w.\-]+` sehingga seluruh sisa regex gagal, dan baris keempat seluruhnya kosong karena tidak memuat kata `AUTH`. Hitung sendiri dulu sebelum menjalankan: empat baris masuk, dua baris terisi penuh, satu baris terisi satu field, satu baris kosong.
+Hasil yang benar: baris pertama dan kedua terisi lengkap; baris ketiga mendapat `jab_result`, `jab_src`, dan `jab_group` (bernilai `-`) tetapi tanpa `jab_user`, karena yang cocok adalah alternatif `\(unknown user\)` yang tidak menangkap apa pun; dan baris keempat seluruhnya kosong karena tidak memuat kata `AUTH`. Hitung sendiri dulu sebelum menjalankan: empat baris masuk, dua baris terisi penuh, satu baris terisi tanpa nama akun, satu baris kosong. Untuk melihat kenapa alternatif itu perlu, hapus `|\(unknown user\)` dari regex dan jalankan lagi: baris ketiga ikut kosong seluruhnya.
 
 **Kapan gagal:** `makeresults format=csv` dengan `_raw` berisi tanda kutip atau koma butuh penulisan yang lebih hati-hati, dan di sebagian versi perilakunya berbeda; kalau bentuk ini tidak jalan di instance-mu, pakai berkas log kecil yang kamu unggah sendiri ke index lab.
 
@@ -356,7 +356,7 @@ jab_src          gagal   akun_unik   grup
 198.51.100.14        4           1   STAFF-REMOTE
 ```
 
-**Cara membaca hasil:** `203.0.113.45` dengan 147 kegagalan pada satu akun adalah pola tiket SOC-2026-0231, dan sekarang bisa disaring di baris pertama search, bukan setelah `rex`. Baris kedua, `198.51.100.23` dengan `akun_unik` bernilai 0, adalah 86 event varian `(unknown user)`: `dc()` menghitung nol karena field-nya memang tidak terisi, dan itu informasi yang berguna, bukan kerusakan. Kelima baris pertama berjumlah 277 kegagalan dari total 1.918, jadi sisanya tersebar di banyak sumber kecil.
+**Cara membaca hasil:** `203.0.113.45` dengan 147 kegagalan pada satu akun adalah pola tiket SOC-2026-0235, dan sekarang bisa disaring di baris pertama search, bukan setelah `rex`. Baris kedua, `198.51.100.23` dengan `akun_unik` bernilai 0, adalah 86 event varian `(unknown user)`: `dc()` menghitung nol karena field-nya memang tidak terisi, dan itu informasi yang berguna, bukan kerusakan. Kelima baris pertama berjumlah 277 kegagalan dari total 1.918, jadi sisanya tersebar di banyak sumber kecil.
 
 **Kapan gagal:** kalau `jab_result=FAIL` tidak mengembalikan apa pun padahal wizard menampilkan hasil, kemungkinan terbesar extraction masih private dan kamu sedang men-search dari app lain, atau permission app-nya belum diatur. Itu dikerjakan di bagian 2.6. Kemungkinan kedua, nama field tidak sama persis: nama field bersifat sensitif huruf, jadi `jab_Result` dan `jab_result` adalah dua hal berbeda.
 
@@ -439,7 +439,7 @@ Dua langkah ini yang menjawab syarat pertama dan ketiga detection engineer. Kerj
 3. Beri `Read` pada role analyst L1, dan `Write` hanya pada role detection engineer serta SOC lead. Read berarti bisa memakai tanpa mengubah definisinya [S5]. Jangan memberi Write ke `Everyone`, karena satu suntingan regex yang keliru di objek global langsung mengubah hasil search semua orang.
 4. Bila tipenya `uses transform`, ulangi langkah 1 sampai 3 untuk stanza transform-nya di halaman Field transformations [S2].
 5. Pindahkan kepemilikan ke akun fungsional tim SOC, `svc_soc`, lewat Settings > All configurations > Reassign Knowledge Objects [S6]. Ini yang mencegah extraction menjadi yatim ketika kontrak anak magang yang membuatnya selesai. Hanya role Admin yang bisa melakukannya [S6], jadi mintakan ke admin platform bila rolemu bukan admin.
-6. Catat di dokumentasi internal: nama extraction, sourcetype sasarannya, siapa pemiliknya sekarang, dan nomor tiket yang menjadi alasannya, misalnya SOC-2026-0231. Halaman Field extractions tidak menyimpan alasan sebuah objek dibuat.
+6. Catat di dokumentasi internal: nama extraction, sourcetype sasarannya, siapa pemiliknya sekarang, dan nomor tiket yang menjadi alasannya, misalnya SOC-2026-0235. Halaman Field extractions tidak menyimpan alasan sebuah objek dibuat.
 
 Verifikasi yang jujur bukan dengan membuka ulang halaman Permissions, tetapi dengan menjalankan search dari akun lain. Minta rekan satu shift menjalankan ini dari app yang biasa ia pakai:
 
@@ -688,4 +688,4 @@ What makes this answer strong: it names silent failure as the default hypothesis
 | S8 | Splunk Community: "Field extraction invisible to other users despite global" dan "sharing field extraction saved search or dashboard between users" | https://community.splunk.com/t5/Splunk-Search/Field-extraction-invisible-to-other-users-despite-global/td-p/104063 | komunitas | tanggal tidak tercatat (thread lama) | Rendah-sedang. Laporan bahwa transform yang dirujuk tetap private saat extraction dibagikan lewat UI (disebut known issue SPL-118752) dan kasus stanza props tersimpan di konteks user; keduanya perlu diuji di versi 10.6 |
 | S9 | Splunk Enterprise 10.6 Knowledge Manager Manual: When Splunk software extracts fields | https://help.splunk.com/en/splunk-enterprise/manage-knowledge-objects/knowledge-management-manual/10.6/fields-and-field-extractions/when-splunk-software-extracts-fields | primer | diakses 2026-10-14 | Tinggi. Beda index-time dan search-time, default field, batas 100 pasangan `key=value` pertama saat field discovery aktif, saran tidak menambah field ke daftar default index-time |
 
-**Catatan sumber:** bentuk penyimpanan hasil wizard untuk metode delimiter tidak dinyatakan di halaman Field Extractor [S1]; yang pasti dari dokumentasi adalah bahwa `DELIMS` dan `FIELDS` merupakan setting field transform [S3] dan bahwa halaman Field extractions membedakan tipe `inline` dan `uses transform` [S2], jadi periksa kolom Type di instance-mu seperti pada langkah 6 di bagian 3. Pernyataan bahwa field yang tidak ada menghasilkan nol baris tanpa error adalah konsekuensi langsung dari model permission [S2][S5] dan bukan kutipan satu halaman tersendiri; buktikan dengan langkah 7 di bagian 3. Jebakan nilai yang memuat pemisah pada metode delimiter tidak dibahas dokumentasi dan diuji di lab seperti pada bagian 2.4. Klaim komunitas tentang transform yang tetap private dan stanza di konteks user [S8] berasal dari thread lama dan belum dikonfirmasi untuk 10.6. Semua angka di keluaran ilustrasi disusun agar konsisten dengan tiket SOC-2026-0231 dan bisa dijumlahkan ulang, tetapi bukan hasil eksekusi.
+**Catatan sumber:** bentuk penyimpanan hasil wizard untuk metode delimiter tidak dinyatakan di halaman Field Extractor [S1]; yang pasti dari dokumentasi adalah bahwa `DELIMS` dan `FIELDS` merupakan setting field transform [S3] dan bahwa halaman Field extractions membedakan tipe `inline` dan `uses transform` [S2], jadi periksa kolom Type di instance-mu seperti pada langkah 6 di bagian 3. Pernyataan bahwa field yang tidak ada menghasilkan nol baris tanpa error adalah konsekuensi langsung dari model permission [S2][S5] dan bukan kutipan satu halaman tersendiri; buktikan dengan langkah 7 di bagian 3. Jebakan nilai yang memuat pemisah pada metode delimiter tidak dibahas dokumentasi dan diuji di lab seperti pada bagian 2.4. Klaim komunitas tentang transform yang tetap private dan stanza di konteks user [S8] berasal dari thread lama dan belum dikonfirmasi untuk 10.6. Semua angka di keluaran ilustrasi disusun agar konsisten dengan tiket SOC-2026-0235 dan bisa dijumlahkan ulang, tetapi bukan hasil eksekusi.

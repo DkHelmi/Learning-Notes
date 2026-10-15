@@ -85,9 +85,7 @@ Jadi, untuk timeline investigasi ("IP pertama yang dipakai akun ini"), gunakan `
 
 Varian `earliest_time()` dan `latest_time()` mengembalikan timestamp saat nilai itu muncul. Ini berguna untuk kolom firstSeen/lastSeen, cek ketersediaannya di versi lab-mu.
 
-### 1.5 Enterprise vs ES
-
-`transaction`, `stats`, dan semua fungsi di atas adalah fitur inti Splunk Enterprise, tidak butuh ES. Di ES, kamu akan melihat pola `stats earliest/latest` (sering dalam bentuk `min(_time) as firstTime max(_time) as lastTime`) di hampir setiap detection, karena alasan biaya yang sama. Lihat contoh security_content di Day 25.
+**Tanpa ES:** `transaction`, `stats`, dan semua fungsi di atas adalah fitur inti Splunk Enterprise, tidak butuh ES. Di ES, kamu akan melihat pola `stats earliest/latest` (sering dalam bentuk `min(_time) as firstTime max(_time) as lastTime`) di hampir setiap detection, karena alasan biaya yang sama. Lihat contoh security_content di Day 25.
 
 ## 2. Contoh SPL dan langkah di ES
 

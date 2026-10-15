@@ -496,7 +496,7 @@ _time                host        jenis       pelaku    rincian
 
 ## 3. Lab praktik
 
-Lab memakai dua sumber: BOTS v1 (format klasik, data statis Agustus 2016) dan VM Windows lab terisolasi milikmu (format XML). Semua perintah Windows di bawah dijalankan di VM lab dengan snapshot, bukan di mesin kerja.
+Lab memakai dua sumber: BOTS v1 (format klasik, data statis dari 2016; ukur rentangnya dulu dengan cara Day 01 bagian 2.5) dan VM Windows lab terisolasi milikmu (format XML). Semua perintah Windows di bawah dijalankan di VM lab dengan snapshot, bukan di mesin kerja.
 
 1. **Rentang waktu BOTS v1.** Jalankan `| tstats min(_time) AS awal max(_time) AS akhir where index=botsv1 sourcetype="WinEventLog:Security" | eval awal=strftime(awal, "%F %T"), akhir=strftime(akhir, "%F %T")`. Catat rentangnya dan pakai di semua search berikutnya. Jangan memakai `earliest=-7d` pada dataset ini.
 2. **Inventaris event BOTS v1.** Dengan rentang dari langkah 1 (misalnya `earliest="08/01/2016:00:00:00" latest="09/01/2016:00:00:00"`), jalankan `index=botsv1 sourcetype="WinEventLog:Security" | stats count BY EventCode | sort - count`. Catat lima event terbanyak.

@@ -184,7 +184,7 @@ index=wineventlog sourcetype="XmlWinEventLog:Security" (EventCode=4719 OR EventC
 ```
 
 - **Composite:** discovery saja (jinak, dilakukan admin) dan pola akses LSASS saja (bisa alat sah) digabung dalam jendela 30 menit.
-- Pola `*lsass*` di command line hanyalah salah satu procedure. Akses memori LSASS lebih baik dideteksi lewat Sysmon EID 10 (Day 21), cek pemetaan ke CIM.
+- Pola `*lsass*` di command line hanyalah salah satu procedure. Akses memori LSASS lebih baik dideteksi lewat Sysmon EID 10 (Day 04), cek pemetaan ke CIM.
 - Ini sebaiknya dijadikan RBA (intermediate finding per komponen) daripada satu detection kaku (Day 35).
 
 ### 2.6 Di ES (generik)

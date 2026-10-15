@@ -74,11 +74,7 @@ Lookup definition dan match type. CSV yang diunggah perlu lookup definition agar
 - Opsi `format=csv|json` dengan `data=` membuat event dari data inline. Batasnya 29.999 karakter [S3]. Cek versi yang mulai mendukung opsi ini.
 - Di lingkungan terdistribusi atau federated, hasil bisa berlipat sesuai jumlah server bila `splunk_server` tidak dibatasi [S3].
 
-### 1.4 Enterprise vs ES
-
-- Ketiga command adalah fitur inti Splunk Enterprise.
-- **ES memakai lookup secara masif**: daftar aset dan identitas, threat intelligence, dan banyak lookup pendukung detection. Kamu umumnya tidak mengedit lookup inti ES secara langsung, tetapi lewat menu konfigurasi ES, cek nama menu di ES 8.x.
-- `makeresults` sering dipakai untuk menguji detection dan adaptive response di ES tanpa menunggu kejadian nyata.
+**Tanpa ES:** ketiga command adalah fitur inti Splunk Enterprise. Bedanya, ES memakai lookup secara masif: daftar aset dan identitas, threat intelligence, dan banyak lookup pendukung detection. Kamu umumnya tidak mengedit lookup inti ES secara langsung, tetapi lewat menu konfigurasi ES; cek nama menunya di ES 8.x. `makeresults` sering dipakai untuk menguji detection dan adaptive response di ES tanpa menunggu kejadian nyata.
 
 ## 2. Contoh SPL dan langkah di ES
 

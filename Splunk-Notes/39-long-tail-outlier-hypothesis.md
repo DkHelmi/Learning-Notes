@@ -156,6 +156,9 @@ Perhatikan bahwa `action=remove` membuang outlier [S3]. Untuk hunting, kita just
 | `jitter = sd/avg` | Koefisien variasi. Mendekati 0 berarti sangat teratur |
 | `conns >= 20` | Cukup sampel |
 
+- **Penjelasan jinak:** agen monitoring, update check, NTP, dan Wazuh/Splunk forwarder (interval teratur). Bandingkan dengan daftar tujuan yang diketahui (lookup).
+- Beaconing canggih menambah jitter acak. Ambang 0,1 adalah ilustrasi. Koefisien variasi (stdev dibagi rata-rata) mudah rusak oleh satu interval panjang, misalnya saat laptop tidur semalam. Versi yang lebih tahan memakai median dan median absolute deviation (MAD) seperti di bawah.
+
 Varian tahan jitter dan interval ekstrem (menggantikan baris setelah `eval delta=...`):
 
 ```
@@ -172,9 +175,6 @@ Varian tahan jitter dan interval ekstrem (menggantikan baris setelah `eval delta
 - `median(delta)` tidak terpengaruh beberapa interval sangat panjang, sehingga beacon 60 detik yang terputus semalam tetap terlihat teratur.
 - MAD dibagi median adalah padanan "tahan outlier" dari koefisien variasi. Beacon dengan jitter acak plus minus 20% biasanya menghasilkan nilai di kisaran 0,1; trafik manusia yang membuka situs biasanya jauh di atas 0,5. Angka ini ilustrasi dan perlu dikalibrasi.
 - `values(delta)` membuang duplikat. Untuk beacon sangat teratur itu tidak masalah, karena yang dicari adalah sebaran nilai interval. Bila ingin presisi penuh, ganti dengan `list(delta)` dan perhatikan batas 100 nilai default `list`.
-
-- **Penjelasan jinak:** agen monitoring, update check, NTP, dan Wazuh/Splunk forwarder (interval teratur). Bandingkan dengan daftar tujuan yang diketahui (lookup).
-- Beaconing canggih menambah jitter acak. Ambang 0,1 adalah ilustrasi. Koefisien variasi (stdev dibagi rata-rata) mudah rusak oleh satu interval panjang, misalnya saat laptop tidur semalam. Versi yang lebih tahan memakai median dan median absolute deviation (MAD) seperti di bawah.
 
 ### 2.5 Satu hunt PEAK lengkap (template singkat)
 

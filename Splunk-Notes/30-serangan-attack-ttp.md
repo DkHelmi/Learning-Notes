@@ -321,7 +321,7 @@ Keluaran ilustrasi, dengan kolom `first` dan `last` dihilangkan supaya ringkas:
 | dest | user | parent_process_name | count | cmd |
 |---|---|---|---|---|
 | JKT-FS01 | JAB\svc_backup | vendorbackup.exe | 6 | `wbadmin delete backup -keepVersions:3` |
-| JKT-WS-0523 | JAB\dewi.lestari | wscript.exe | 2 | `vssadmin.exe delete shadows /all /quiet` |
+| JKT-WS-0523 | JAB\rina.wulandari | wscript.exe | 2 | `vssadmin.exe delete shadows /all /quiet` |
 
 - **Cara membaca hasil:** baris pertama adalah pekerjaan agen backup yang berulang setiap hari dan dijalankan akun service, jadi wajar. Baris kedua dijalankan dari `wscript.exe` oleh akun karyawan biasa dengan `/all /quiet`, dan itu pola ransomware.
 - **Variasi:** tambahkan `Processes.process_name="powershell.exe" Processes.process="*Win32_Shadowcopy*"` untuk cara yang memakai WMI lewat PowerShell, dan jalankan ulang per minggu untuk membangun daftar pelaku rutin yang sah.
@@ -346,7 +346,7 @@ Keluaran ilustrasi, dengan kolom `registry_path` dihilangkan supaya ringkas:
 
 | dest | registry_value_name | count | data |
 |---|---|---|---|
-| JKT-WS-0523 | EdgeUpdate | 1 | `C:\Users\dewi.lestari\AppData\Roaming\upd.vbs` |
+| JKT-WS-0523 | EdgeUpdate | 1 | `C:\Users\rina.wulandari\AppData\Roaming\upd.vbs` |
 | JKT-JUMP01 | SecurityHealth | 1 | `C:\Program Files\Windows Defender\MSASCuiL.exe` |
 
 - **Cara membaca hasil:** nilai yang menunjuk ke `%APPDATA%`, `%TEMP%`, atau `C:\Users\Public` lebih mencurigakan daripada `Program Files`. Nama value yang meniru produk resmi, seperti baris pertama, adalah upaya menyamarkan diri.
@@ -462,7 +462,7 @@ Keluaran ilustrasi untuk versi TTP, tanpa kolom `first`:
 
 | dest | user | parent_process_name | count | cmd |
 |---|---|---|---|---|
-| JKT-WS-0523 | JAB\dewi.lestari | wscript.exe | 1 | `schtasks.exe /create /sc onlogon /tn EdgeUpdate /tr C:\Users\Public\u.bat` |
+| JKT-WS-0523 | JAB\rina.wulandari | wscript.exe | 1 | `schtasks.exe /create /sc onlogon /tn EdgeUpdate /tr C:\Users\Public\u.bat` |
 
 - **Cara membaca hasil:** satu baris pun cukup untuk membuka investigasi, karena pembuatan scheduled task dari `wscript.exe` oleh akun karyawan bukan pekerjaan rutin. Host yang sama juga muncul di bagian 2.1 dan 2.2, yang memperkuat dugaan.
 - **Variasi:** hapus filter `parent_process_name` untuk melihat seluruh pembuatan task, lalu bangun daftar parent yang sah di PT JAB (agen deployment, installer vendor) dan kecualikan daftar itu saja.

@@ -17,7 +17,7 @@ Kamu sudah menulis pipeline seperti ini di shell. `grep` menyaring baris, `awk` 
 
 Situasi yang dipakai sepanjang Day ini: pukul 06.40 di PT Jaringan Anak Bangsa (PT JAB), dua puluh menit sebelum handover shift pagi. SOC lead menulis di channel SOC:
 
-> "Sebelum handover saya mau tiga hal dari shift malam ini, pukul 22.00 sampai 06.00. Satu, berapa host internal yang kena blok firewall dan siapa lima teratas. Dua, apakah ada host yang request ke domain yang belum pernah muncul seminggu ini, dan berapa banyak. Tiga, untuk tiket SOC-2026-0231 (andi.pratama mengunduh file executable lewat proxy) saya mau tabel kronologinya. Kirim satu tabel yang bisa saya baca, bukan tujuh screenshot, dan tulis angkanya apa adanya; kalau ada yang dipotong, bilang."
+> "Sebelum handover saya mau tiga hal dari shift malam ini, pukul 22.00 sampai 06.00. Satu, berapa host internal yang kena blok firewall dan siapa lima teratas. Dua, apakah ada host yang request ke domain yang belum pernah muncul seminggu ini, dan berapa banyak. Tiga, untuk tiket SOC-2026-0226 (andi.pratama mengunduh file executable lewat proxy) saya mau tabel kronologinya. Kirim satu tabel yang bisa saya baca, bukan tujuh screenshot, dan tulis angkanya apa adanya; kalau ada yang dipotong, bilang."
 
 Pesan itu memuat enam pertanyaan:
 
@@ -315,7 +315,7 @@ total   lewat_searchmatch  lewat_eval_lower  lewat_eval_persis
 204118  1284               1284              1192
 ```
 
-**Cara membaca hasil:** 92 event memakai ejaan huruf berbeda, misalnya `Andi.Pratama` dari satu agent proxy. Filter yang dibuat dengan `where user="andi.pratama"` akan melewatkan 92 event itu, sedangkan filter `search user=andi.pratama` tidak, karena nilai di command `search` tidak peka huruf besar-kecil [S1]. Untuk tiket SOC-2026-0231, selisih ini bisa berarti kronologi yang bolong.
+**Cara membaca hasil:** 92 event memakai ejaan huruf berbeda, misalnya `Andi.Pratama` dari satu agent proxy. Filter yang dibuat dengan `where user="andi.pratama"` akan melewatkan 92 event itu, sedangkan filter `search user=andi.pratama` tidak, karena nilai di command `search` tidak peka huruf besar-kecil [S1]. Untuk tiket SOC-2026-0226, selisih ini bisa berarti kronologi yang bolong.
 
 Tiga perbandingan lain yang perlu diuji sekali supaya tidak lupa:
 
@@ -452,7 +452,7 @@ api-sinkron.test             0           9        4     10.10.11.4 ...   rina.wu
 **Variasi:** ganti `BY dest_host` dengan `BY src` untuk membalik pertanyaan menjadi "host mana yang paling banyak mengunjungi domain baru". Untuk pola yang lebih dalam, termasuk long tail dan outlier, lihat Day 39.
 **Kapan gagal:** domain CDN yang namanya berisi angka acak akan selalu terlihat baru, sehingga tabel ini penuh derau; buang domain yang sudah dikenal lewat lookup (Day 12). Baseline tujuh hari juga tidak cukup bila sumber datanya sempat terputus; cek dulu kelengkapan data di periode baseline (Day 01 bagian 2.1).
 
-### 2.6 Kronologi tiket SOC-2026-0231
+### 2.6 Kronologi tiket SOC-2026-0226
 
 Permintaan ketiga. Di sini hasilnya tetap berupa event, bukan agregasi, karena yang diminta adalah urutan kejadian.
 
@@ -488,7 +488,7 @@ Waktu                Host          Domain                     URL               
 2026-10-14 01:48:10  10.10.24.51   cdn-paket3.example         /p/3f9a1c/payload              403     0.00   blocked  lain
 ```
 
-**Cara membaca hasil:** satu unduhan executable 42,18 MB yang diizinkan proxy, diikuti arsip kecil, lalu satu permintaan yang diblokir ke domain lain. Tiga baris ini yang masuk ke tiket SOC-2026-0231, dengan catatan bahwa kolom MB adalah `bytes_out` dari sisi proxy, bukan ukuran file sebenarnya. Langkah berikutnya bukan lagi pekerjaan Day ini: apa yang dijalankan host itu setelah unduhan selesai dijawab dari log endpoint (Day 03 dan Day 04), dan keputusan disposisinya mengikuti alur triage L1 (Day 07).
+**Cara membaca hasil:** satu unduhan executable 42,18 MB yang diizinkan proxy, diikuti arsip kecil, lalu satu permintaan yang diblokir ke domain lain. Tiga baris ini yang masuk ke tiket SOC-2026-0226, dengan catatan bahwa kolom MB adalah `bytes_out` dari sisi proxy, bukan ukuran file sebenarnya. Langkah berikutnya bukan lagi pekerjaan Day ini: apa yang dijalankan host itu setelah unduhan selesai dijawab dari log endpoint (Day 03 dan Day 04), dan keputusan disposisinya mengikuti alur triage L1 (Day 07).
 **Variasi:** untuk kronologi lintas index, jalankan pola yang sama di `firewall` dan `proxy` lalu gabungkan dengan `append`, atau rangkai per sesi dengan `transaction` bila memang satu sesi utuh (Day 13 bagian 1.3).
 **Kapan gagal:** tanda pipe di dalam nilai field, misalnya di user agent, akan merusak tabel saat kamu menempelkannya ke dokumen; escape dengan `\|` bila harus ditulis di sel tabel markdown. Bila `bytes_out` kosong untuk sebagian sourcetype, kolom MB akan kosong juga, dan `fillnull value=0` di kolom itu akan membuat unduhan besar terlihat seperti nol byte; biarkan kosong, atau beri label.
 
@@ -533,7 +533,7 @@ Host          Blok   Tujuan unik  Blok per tujuan  Port             Tingkat     
 
 **Cara membaca hasil:** tiga baris pertama membutuhkan tiga tindakan berbeda, dan itulah gunanya kolom Tingkat. Baris pertama diserahkan ke L2 bersama temuan domain baru dari bagian 2.5 karena host-nya sama. Baris kedua milik service billing dan lebih mirip salah konfigurasi, jadi cukup tiket perbaikan ke pemilik aplikasi. Baris ketiga tidak terdaftar di tabel aset, dan "tidak terdaftar" di sini adalah temuan tersendiri: aset POP memang belum masuk inventaris, dan itu perlu dicatat sebagai celah konteks, bukan diabaikan.
 
-**Isi yang dikirim ke SOC lead:** tabel di atas, tiga angka dari bagian 2.1, baris domain baru dari bagian 2.5, kronologi tiket SOC-2026-0231 dari bagian 2.6, dan satu kalimat jujur tentang pemotongan: "tabel menampilkan 10 dari 37 host; sisanya di bawah 100 blok per host."
+**Isi yang dikirim ke SOC lead:** tabel di atas, tiga angka dari bagian 2.1, baris domain baru dari bagian 2.5, kronologi tiket SOC-2026-0226 dari bagian 2.6, dan satu kalimat jujur tentang pemotongan: "tabel menampilkan 10 dari 37 host; sisanya di bawah 100 blok per host."
 
 ## 3. Lab praktik (di VM lab terisolasi)
 

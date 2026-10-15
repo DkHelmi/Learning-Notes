@@ -82,9 +82,7 @@ Dokumentasi 10.2 mengelompokkan fungsi ke beberapa kategori. Selain kategori kla
 
 Semua fungsi di atas tercantum di referensi Evaluation functions 10.2 [S3]. Fungsi seperti entropi (Shannon) tidak ada sebagai fungsi eval bawaan. Biasanya fungsi itu datang dari app tambahan seperti URL Toolbox (macro `ut_shannon`); pastikan app dan macro itu terpasang di instance-mu sebelum memakainya.
 
-### 1.4 Enterprise vs ES
-
-`rex`, `regex`, `eval`, dan semua fungsi di atas adalah fitur inti Splunk Enterprise. ES tidak menambah fungsi eval, tetapi detection ES memakainya secara luas, misalnya `eval` untuk membangun field `risk_score` atau pesan dinamis (Day 35-36).
+**Tanpa ES:** `rex`, `regex`, `eval`, dan semua fungsi di atas adalah fitur inti Splunk Enterprise. ES tidak menambah fungsi eval, tetapi detection ES memakainya secara luas, misalnya `eval` untuk membangun field `risk_score` atau pesan dinamis (Day 35-36).
 
 ## 2. Contoh SPL dan langkah di ES
 
