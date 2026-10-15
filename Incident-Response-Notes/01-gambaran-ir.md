@@ -106,7 +106,7 @@ Menyatakan insiden adalah keputusan, bukan label. Setelah keputusan itu, beberap
 - Tindakan dan temuan dicatat, dan integritas catatan serta bukti dijaga (RS.AN-06, RS.AN-07) [S1].
 - Pihak internal dan eksternal diberi tahu sesuai prosedur dan aturan yang berlaku (RS.CO-02) [S1].
 
-Poin terakhir yang membuat kriteria harus tertulis. Di Indonesia, misalnya, UU 27/2022 tentang Pelindungan Data Pribadi Pasal 46 mewajibkan pengendali data pribadi menyampaikan pemberitahuan tertulis paling lambat 3 x 24 jam kepada subjek data dan lembaga bila terjadi kegagalan pelindungan data pribadi [S14][S13]. Teks pasal yang diperiksa tidak menyebut kapan hitungan 3 x 24 jam dimulai, jadi titik mulainya perlu dicek di penjelasan resmi UU dan peraturan pelaksananya; detail pelaporan dibahas tersendiri nanti. Untuk Day ini cukup dipegang: catatan waktu declare dan isi catatannya bisa ikut menentukan apakah kewajiban seperti ini terpenuhi.
+Poin terakhir yang membuat kriteria harus tertulis. Di Indonesia, misalnya, UU 27/2022 tentang Pelindungan Data Pribadi Pasal 46 mewajibkan pengendali data pribadi menyampaikan pemberitahuan tertulis paling lambat 3 x 24 jam kepada subjek data dan lembaga bila terjadi kegagalan pelindungan data pribadi [S14][S13]. Teks pasal dan penjelasannya tidak menyebut kapan hitungan 3 x 24 jam dimulai; cara menetapkan titik mulai dan detail pelaporan dibahas di Day 18 bagian 1.4. Untuk Day ini cukup dipegang: catatan waktu declare dan isi catatannya bisa ikut menentukan apakah kewajiban seperti ini terpenuhi.
 
 Dua kesalahan yang berlawanan sama-sama mahal. Terlambat menyatakan insiden berarti orang yang dibutuhkan tidak dipanggil dan bukti hilang. Menyatakan insiden untuk setiap alert membuat CSIRT virtual lelah. Insiden yang sudah dinyatakan tetap boleh ditutup bila ternyata bukan insiden, asalkan alasannya dicatat.
 
@@ -482,7 +482,7 @@ SEVERITY: dimensi = functional impact | information impact | recoverability (r2)
   SEV-4 upaya gagal, tanpa dampak
   Ragu? pilih lebih tinggi, turunkan dengan bukti. Setiap perubahan dicatat + alasan.
   Severity insiden != prioritas alert (P1-P4 dari rule)
-UU PDP Pasal 46: pemberitahuan tertulis maks 3 x 24 jam (cek titik mulai di sumber resmi)
+UU PDP Pasal 46: pemberitahuan tertulis maks 3 x 24 jam (titik mulai: Day 18 bagian 1.4)
 ```
 
 ## 8. Uji diri

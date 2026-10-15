@@ -4,9 +4,9 @@ Indeks sumber global, disusun dari tabel bagian 9 setiap Day. Kolom "Dipakai di"
 
 | Judul | URL | Tipe | Diakses | Dipakai di |
 |---|---|---|---|---|
-| NIST SP 800-61 Rev. 3: Incident Response Recommendations and Considerations for Cybersecurity Risk Management: A CSF 2.0 Community Profile (PDF) | https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-61r3.pdf | primer | 2026-10-14 | Day 01, Day 02, Day 03, Day 04, Day 05, Day 06, Day 07 |
+| NIST SP 800-61 Rev. 3: Incident Response Recommendations and Considerations for Cybersecurity Risk Management: A CSF 2.0 Community Profile (PDF) | https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-61r3.pdf | primer | 2026-10-14 | Day 01, Day 02, Day 03, Day 04, Day 05, Day 06, Day 07, Day 18, Day 19 |
 | NIST CSRC: SP 800-61 Rev. 3 (halaman publikasi) | https://csrc.nist.gov/pubs/sp/800/61/r3/final | primer | 2026-10-14 | Day 01, Day 02 |
-| NIST SP 800-61 Rev. 2: Computer Security Incident Handling Guide (PDF) | https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-61r2.pdf | primer | 2026-10-14 | Day 01, Day 02, Day 03, Day 04, Day 05, Day 06, Day 07 |
+| NIST SP 800-61 Rev. 2: Computer Security Incident Handling Guide (PDF) | https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-61r2.pdf | primer | 2026-10-14 | Day 01, Day 02, Day 03, Day 04, Day 05, Day 06, Day 07, Day 18, Day 19 |
 | NIST CSRC: SP 800-61 Rev. 2 (halaman publikasi) | https://csrc.nist.gov/pubs/sp/800/61/r2/final | primer | 2026-10-14 | Day 01, Day 07 |
 | NIST CSRC: The NIST Cybersecurity Framework (CSF) 2.0, CSWP 29 | https://csrc.nist.gov/pubs/cswp/29/the-nist-cybersecurity-framework-csf-20/final | primer | 2026-10-14 | Day 01 |
 | SANS: Incident Handler's Handbook (Patrick Kral) | https://www.sans.org/white-papers/33901 | sekunder | 2026-10-14 | Day 01, Day 07 |
@@ -16,21 +16,21 @@ Indeks sumber global, disusun dari tabel bagian 9 setiap Day. Kolom "Dipakai di"
 | PagerDuty Incident Response Documentation: Scribe training | https://response.pagerduty.com/training/scribe/ | sekunder | 2026-10-14 | Day 01 |
 | USENIX SREcon18 Americas: Incident Command for IT, What We've Learned from the Fire Department (Brent Chapman) | https://www.usenix.org/conference/srecon18americas/presentation/chapman | sekunder | 2026-10-14 | Day 01 |
 | CISA: National Cyber Incident Scoring System (NCISS) | https://www.cisa.gov/news-events/news/cisa-national-cyber-incident-scoring-system-nciss | primer | 2026-10-14 | Day 01 |
-| BPK JDIH: UU Nomor 27 Tahun 2022 tentang Pelindungan Data Pribadi | https://peraturan.bpk.go.id/Details/229798/uu-no-27-tahun-2022 | primer | 2026-10-14 | Day 01, Day 07 |
+| BPK JDIH: UU Nomor 27 Tahun 2022 tentang Pelindungan Data Pribadi | https://peraturan.bpk.go.id/Details/229798/uu-no-27-tahun-2022 | primer | 2026-10-14 | Day 01, Day 07, Day 18 |
 | Pasal.id: UU 27/2022 Pasal 46 | https://pasal.id/peraturan/uu/uu-no-27-tahun-2022/pasal-46 | sekunder | 2026-10-14 | Day 01, Day 07, Day 09 |
-| NCSC UK: Incident management collection, halaman Processes for Cyber Incident Response | https://www.ncsc.gov.uk/collection/incident-management/cyber-incident-response-processes | primer | 2026-10-14 | Day 02, Day 07 |
+| NCSC UK: Incident management collection, halaman Processes for Cyber Incident Response | https://www.ncsc.gov.uk/collection/incident-management/cyber-incident-response-processes | primer | 2026-10-14 | Day 02, Day 07, Day 18 |
 | Google SRE Book, bab 14: Managing Incidents | https://sre.google/sre-book/managing-incidents/ | sekunder | 2026-10-14 | Day 02 |
 | PagerDuty Incident Response Documentation: Being On-Call | https://response.pagerduty.com/oncall/being_oncall/ | sekunder | 2026-10-14 | Day 02 |
 | PagerDuty Incident Response Documentation: During an Incident | https://response.pagerduty.com/during/during_an_incident/ | sekunder | 2026-10-14 | Day 02 |
 | CIO.com: The RACI matrix, your blueprint for project success | https://www.cio.com/article/287088/project-management-what-is-raci-and-how-does-it-improve-clarity.html | sekunder | 2026-10-14 | Day 02 |
 | CISA: Federal Government Cybersecurity Incident and Vulnerability Response Playbooks | https://www.cisa.gov/resources-tools/resources/federal-government-cybersecurity-incident-and-vulnerability-response-playbooks | primer | 2026-10-14 | Day 02 |
-| CISA: Cybersecurity Incident and Vulnerability Response Playbooks (PDF, November 2021) | https://www.cisa.gov/sites/default/files/publications/Federal_Government_Cybersecurity_Incident_and_Vulnerability_Response_Playbooks_508C.pdf | primer | 2026-10-15 | Day 03, Day 04, Day 05, Day 06, Day 07 |
+| CISA: Cybersecurity Incident and Vulnerability Response Playbooks (PDF, November 2021) | https://www.cisa.gov/sites/default/files/publications/Federal_Government_Cybersecurity_Incident_and_Vulnerability_Response_Playbooks_508C.pdf | primer | 2026-10-15 | Day 03, Day 04, Day 05, Day 06, Day 07, Day 18, Day 19 |
 | CISA: Technical Approaches to Uncovering and Remediating Malicious Activity (AA20-245A) | https://www.cisa.gov/news-events/cybersecurity-advisories/aa20-245a | primer | 2026-10-15 | Day 03, Day 04, Day 05, Day 06, Day 07, Day 12, Day 13 |
 | Google Cloud Blog: M-Trends 2026 | https://cloud.google.com/blog/topics/threat-intelligence/m-trends-2026/ | sekunder | 2026-10-15 | Day 03, Day 07 |
 | RFC 3227: Guidelines for Evidence Collection and Archiving (BCP 55) | https://www.rfc-editor.org/rfc/rfc3227.txt | primer | 2026-10-15 | Day 04, Day 07 |
 | NIST SP 800-86: Guide to Integrating Forensic Techniques into Incident Response (PDF) | https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-86.pdf | primer | 2026-10-15 | Day 04, Day 07 |
 | Microsoft Learn: Take response actions on a device in Microsoft Defender for Endpoint | https://learn.microsoft.com/en-us/defender-endpoint/respond-machine-alerts | primer | 2026-10-15 | Day 04, Day 05, Day 07 |
-| Microsoft Learn: Investigate entities on devices using live response in Microsoft Defender for Endpoint | https://learn.microsoft.com/en-us/defender-endpoint/live-response | primer | 2026-10-15 | Day 04 |
+| Microsoft Learn: Investigate entities on devices using live response in Microsoft Defender for Endpoint | https://learn.microsoft.com/en-us/defender-endpoint/live-response | primer | 2026-10-15 | Day 04, Day 17 |
 | GitHub microsoft/avml: Acquire Volatile Memory for Linux | https://github.com/microsoft/avml | primer | 2026-10-15 | Day 04 |
 | GitHub 504ensicsLabs/LiME: Linux Memory Extractor | https://github.com/504ensicsLabs/LiME | primer | 2026-10-15 | Day 04 |
 | GitHub Velocidex/WinPmem | https://github.com/Velocidex/WinPmem | primer | 2026-10-15 | Day 04 |
@@ -165,3 +165,32 @@ Indeks sumber global, disusun dari tabel bagian 9 setiap Day. Kolom "Dipakai di"
 | crontab(1), Debian bookworm manpages | https://manpages.debian.org/bookworm/cron/crontab.1.en.html | primer | 2026-10-15 | Day 15 |
 | Elastic Security: prebuilt rule Suspicious Child Execution via Web Server | https://www.elastic.co/guide/en/security/current/suspicious-child-execution-via-web-server.html | sekunder | 2026-10-15 | Day 15 |
 | SigmaHQ: Webshell Remote Command Execution (lnx_auditd_web_rce) | https://github.com/SigmaHQ/sigma/blob/master/rules/linux/auditd/syscall/lnx_auditd_web_rce.yml | komunitas | 2026-10-15 | Day 15 |
+| Microsoft Learn: Advanced hunting overview in Microsoft Defender XDR | https://learn.microsoft.com/en-us/defender-xdr/advanced-hunting-overview | primer | 2026-10-15 | Day 17 |
+| Microsoft Learn: DeviceFileEvents table in the advanced hunting schema | https://learn.microsoft.com/en-us/defender-xdr/advanced-hunting-devicefileevents-table | primer | 2026-10-15 | Day 17 |
+| Microsoft Learn: DeviceProcessEvents table in the advanced hunting schema | https://learn.microsoft.com/en-us/defender-xdr/advanced-hunting-deviceprocessevents-table | primer | 2026-10-15 | Day 17 |
+| Microsoft Learn: DeviceImageLoadEvents table in the advanced hunting schema | https://learn.microsoft.com/en-us/defender-xdr/advanced-hunting-deviceimageloadevents-table | primer | 2026-10-15 | Day 17 |
+| Microsoft Learn: DeviceNetworkEvents table in the advanced hunting schema | https://learn.microsoft.com/en-us/defender-xdr/advanced-hunting-devicenetworkevents-table | primer | 2026-10-15 | Day 17 |
+| Microsoft Learn: Investigate devices in Microsoft Defender for Endpoint | https://learn.microsoft.com/en-us/defender-endpoint/investigate-machines | primer | 2026-10-15 | Day 17 |
+| Microsoft Learn: Data tables in the Microsoft Defender XDR advanced hunting schema | https://learn.microsoft.com/en-us/defender-xdr/advanced-hunting-schema-tables | primer | 2026-10-15 | Day 17 |
+| MITRE ATT&CK: Hijack Execution Flow: DLL (T1574.001) | https://attack.mitre.org/techniques/T1574/001/ | primer | 2026-10-15 | Day 17 |
+| MITRE ATT&CK: Drive-by Compromise (T1189) | https://attack.mitre.org/techniques/T1189/ | primer | 2026-10-15 | Day 17 |
+| CrowdStrike Tech Center: How to Remotely Remediate an Incident (Real Time Response) | https://www.crowdstrike.com/blog/tech-center/remote-remediation-real-time-response/ | sekunder | 2026-10-15 | Day 17 |
+| CrowdStrike API reference: Real Time Response Admin | https://developer.crowdstrike.com/api-reference/collections/real-time-response-admin/ | primer | 2026-10-15 | Day 17 |
+| CrowdStrike University: FALCON 202 course syllabus | https://www.crowdstrike.com/en-gb/resources/data-sheets/crowdstrike-university-falcon-202-course-syllabus/ | sekunder | 2026-10-15 | Day 17 |
+| SentinelOne: Rapid Threat Hunting with Storylines (Feature Spotlight) | https://www.sentinelone.com/blog/rapid-threat-hunting-with-deep-visibility-feature-spotlight/ | sekunder | 2026-10-15 | Day 17 |
+| SentinelOne: Revolutionize Incident Response and Endpoint Management with Remote Script Orchestration | https://www.sentinelone.com/blog/revolutionize-incident-response-and-endpoint-management-with-remote-script-orchestration/ | sekunder | 2026-10-15 | Day 17 |
+| GitHub Bert-JanP: Hunting-Queries-Detection-Rules | https://github.com/Bert-JanP/Hunting-Queries-Detection-Rules | komunitas | 2026-10-15 | Day 17 |
+| Google SRE Book, bab 15: Postmortem Culture, Learning from Failure | https://sre.google/sre-book/postmortem-culture/ | sekunder | 2026-10-15 | Day 19 |
+| PagerDuty Postmortem Documentation: The Blameless Postmortem | https://postmortems.pagerduty.com/culture/blameless/ | sekunder | 2026-10-15 | Day 19 |
+| PagerDuty Postmortem Documentation: How to Write a Postmortem, Step by Step | https://postmortems.pagerduty.com/how_to_write/writing/ | sekunder | 2026-10-15 | Day 19 |
+| PagerDuty Postmortem Documentation: Postmortem Meeting | https://postmortems.pagerduty.com/meeting/ | sekunder | 2026-10-15 | Day 19 |
+| John Allspaw: The Infinite Hows (or, the Dangers of the Five Whys) | https://www.kitchensoap.com/2014/11/14/the-infinite-hows-or-the-dangers-of-the-five-whys/ | komunitas | 2026-10-15 | Day 19 |
+| JDIH Kemenkeu: PP Nomor 71 Tahun 2019 tentang Penyelenggaraan Sistem dan Transaksi Elektronik (PDF) | https://jdih.kemenkeu.go.id/FullText/2019/71TAHUN2019PP.pdf | primer | 2026-10-15 | Day 18 |
+| Peraturan.go.id: Peraturan BSSN Nomor 1 Tahun 2024 tentang Pengelolaan Insiden Siber (PDF) | https://www.peraturan.go.id/files/peraturan-bssn-no-1-tahun-2024.pdf | primer | 2026-10-15 | Day 18 |
+| PagerDuty Incident Response Documentation: External Communication Guidelines | https://response.pagerduty.com/during/external_communication_guidelines/ | sekunder | 2026-10-15 | Day 18 |
+| Kompas.id: Peraturan pelaksana UU PDP akhirnya terbit, lembaga pengawas masih dinanti | https://www.kompas.id/artikel/peraturan-pelaksana-uu-pdp-akhirnya-terbit-lembaga-pengawas-masih-dinanti | sekunder | 2026-10-15 | Day 18 |
+| Kompas.com: Komdigi ungkap Perpres pembentukan Badan Perlindungan Data Pribadi sedang disusun | https://nasional.kompas.com/read/2026/07/27/15423511/komdigi-ungkap-perpres-pembentukan-badan-perlindungan-data-pribadi-sedang | sekunder | 2026-10-15 | Day 18 |
+| CNBC Indonesia: Lembaga perlindungan data belum ada, begini nasib data warga RI | https://www.cnbcindonesia.com/tech/20260916120242-37-768329/lembaga-perlindungan-data-belum-ada-begini-nasib-data-warga-ri | sekunder | 2026-10-15 | Day 18 |
+| DDS Law: PP 33 Tahun 2026 tentang Pelindungan Data Pribadi dan kewajiban penting perusahaan | https://ddslaw.id/pp-33-tahun-2026-pelindungan-data-pribadi/ | komunitas | 2026-10-15 | Day 18 |
+| KRES.ID: Hitung mundur 16 Januari 2027, PP 33/2026 terbit | https://www.kres.id/pp-33-2026-aturan-pelaksana-uu-pdp | sekunder | 2026-10-15 | Day 18 |
+| PostgreSQL 18 Documentation: LIMIT and OFFSET | https://www.postgresql.org/docs/current/queries-limit.html | primer | 2026-10-15 | Day 18 |

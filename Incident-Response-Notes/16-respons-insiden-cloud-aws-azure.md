@@ -375,7 +375,7 @@ Cara membaca hasil:
 - Tim aplikasi menghitung isi berkas yang sama: 38.400 baris tiket (rata-rata 1.280 baris per berkas), berisi nomor pelanggan, nama, nomor telepon, dan alamat pemasangan, tanpa NIK. Angka ini dari isi berkas, bukan dari CloudTrail, dan dicatat sebagai bukti `INC-2026-025-E10` bersama hash setiap berkas.
 - Tidak ada `GetObject` setelah 01:44:52 maupun setelah jam H.
 
-Temuan ini diteruskan ke DPO Agus Setiawan dan Legal Ratna Sari pukul 05:20. Penilaian kewajiban pemberitahuan dan pelaporannya dibahas di Day 18.
+Temuan ini diteruskan ke DPO Agus Setiawan dan Legal Ratna Sari pukul 05:20. Penilaian kewajiban pemberitahuan dan pelaporannya dibahas di Day 18 bagian 1.4 dan 2.3.
 
 **Kapan gagal:** data event tidak aktif untuk bucket itu. Kesimpulan yang bisa ditulis hanya "penyerang punya izin `s3:GetObject` dan memanggil `ListObjects`; pengunduhan tidak bisa dibuktikan atau disingkirkan", dan penilaian dampak harus memakai skenario terburuk.
 
