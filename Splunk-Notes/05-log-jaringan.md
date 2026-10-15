@@ -29,7 +29,7 @@ Satu kejadian, empat jejak
                      klien asli (DNS di belakang resolver), pemilik IP setelah pool dipakai ulang (VPN)
 ```
 
-Situasi yang dipakai sepanjang Day ini: pukul 09.00, NOC lead PT Jaringan Anak Bangsa (PT JAB, ISP menengah fiktif) menulis di channel bersama SOC dan membuka tiket SOC-2026-0231:
+Situasi yang dipakai sepanjang Day ini: pukul 09.00, NOC lead PT Jaringan Anak Bangsa (PT JAB, ISP menengah fiktif) menulis di channel bersama SOC dan membuka tiket SOC-2026-0229:
 
 > "Tiga hal pagi ini. Satu, query di resolver pelanggan `jkt-dns01` naik tiga kali lipat sejak jam 03.00 dan NOC curiga ada yang salah di sisi kami. Dua, pelanggan korporat menelepon, katanya IP kantor mereka `198.51.100.77` diblokir perangkat kami. Tiga, dari sisi SOC ada alert proxy 'akses ke domain yang belum pernah terlihat' untuk JKT-WS-0412 jam 03.14. Ini satu kejadian atau tiga kejadian terpisah?"
 
@@ -490,7 +490,7 @@ _time                sumber    rincian
 **Cara membaca hasil:** urutannya wajar (nama dicari dulu, lalu koneksi, lalu request), sehingga tiga laporan NOC lead bukan tiga kejadian terpisah untuk host ini. Yang paling penting adalah baris terakhir: setelah jalur web, host yang sama membuka SMB ke alamat yang sama. Selisih satu detik antara DNS dan firewall tidak bisa dipakai untuk memastikan urutan sebab akibat, karena jam perangkat bisa berbeda beberapa detik (bagian 1.7).
 **Kapan gagal:** `multisearch` menolak subsearch yang memuat command transforming seperti `stats`; untuk itu pakai `append` atau `union`. Satu index yang jauh lebih besar dari yang lain juga akan mendominasi hasil, jadi persempit rentang waktu sebelum menambah cabang.
 
-**Ringkasan untuk tiket SOC-2026-0231:** tiga laporan pagi ini adalah dua kejadian. Pertama, keluhan pelanggan bukan pemblokiran layanan: trafik ke portal tetap diizinkan dan yang ditolak adalah 38 percobaan SSH ke jaringan manajemen oleh aturan `deny-mgmt-from-wan`; balas ke NOC dengan bukti bagian 2.2 dan tanyakan asal percobaan itu. Kedua, lonjakan resolver dan alert proxy berhubungan dengan satu host: JKT-WS-0412 (10.10.14.12) menanyakan subdomain acak ke `cdnmetrics.test`, membuka `CONNECT` ke tujuan baru dengan user agent pustaka Python, lalu mengirim sekitar 18,4 MB keluar lewat port 445. Eskalasikan ke L2 dengan kronologi bagian 2.7, dan catat terpisah bahwa dua alamat pelanggan di belakang CGNAT menghasilkan volume NXDOMAIN yang sangat besar, yang penanganannya di jalur abuse pelanggan, bukan di SOC.
+**Ringkasan untuk tiket SOC-2026-0229:** tiga laporan pagi ini adalah dua kejadian. Pertama, keluhan pelanggan bukan pemblokiran layanan: trafik ke portal tetap diizinkan dan yang ditolak adalah 38 percobaan SSH ke jaringan manajemen oleh aturan `deny-mgmt-from-wan`; balas ke NOC dengan bukti bagian 2.2 dan tanyakan asal percobaan itu. Kedua, lonjakan resolver dan alert proxy berhubungan dengan satu host: JKT-WS-0412 (10.10.14.12) menanyakan subdomain acak ke `cdnmetrics.test`, membuka `CONNECT` ke tujuan baru dengan user agent pustaka Python, lalu mengirim sekitar 18,4 MB keluar lewat port 445. Eskalasikan ke L2 dengan kronologi bagian 2.7, dan catat terpisah bahwa dua alamat pelanggan di belakang CGNAT menghasilkan volume NXDOMAIN yang sangat besar, yang penanganannya di jalur abuse pelanggan, bukan di SOC.
 
 ## 3. Lab praktik (di VM lab terisolasi)
 

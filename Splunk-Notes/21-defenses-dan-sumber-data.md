@@ -94,10 +94,7 @@ Dulu ATT&CK memetakan teknik ke Data Sources/Data Components. Sejak v18 (28 Okt 
 
 Implikasinya: materi lama yang menyebut "ATT&CK data sources" masih relevan secara konsep. Saat mencari di attack.mitre.org sekarang, kamu akan melihat Detection Strategies dan Analytics. Cek tampilan halaman teknik di v19.
 
-### 1.5 Enterprise vs ES
-
-- Ingest, normalisasi CIM, dan inventaris data bisa dilakukan di Splunk Enterprise + add-on CIM + TA vendor.
-- ES menambahkan cara menilai cakupan sumber data, mis. dashboard audit data model dan konten yang memeriksa sumber data (Day 27), serta memakai data itu untuk detection, risk, dan aset/identitas.
+**Tanpa ES:** ingest, normalisasi CIM, dan inventaris data bisa dilakukan di Splunk Enterprise ditambah add-on CIM dan TA vendor. ES menambahkan cara menilai cakupan sumber data, misalnya dashboard audit data model dan konten yang memeriksa sumber data (Day 27), serta memakai data itu untuk detection, risk, dan aset/identitas.
 
 ## 2. Contoh SPL dan langkah di ES
 
@@ -147,14 +144,14 @@ proxy     bluecoat:proxysg:access            0.9 jt    10/06/2026 03:10:55   231
 ### 2.3 Profil cepat satu sumber: Sysmon
 
 ```
-index=* sourcetype="XmlWinEventLog:Microsoft-Windows-Sysmon/Operational" earliest=-24h
+index=sysmon sourcetype="XmlWinEventLog:Microsoft-Windows-Sysmon/Operational" earliest=-24h
 | stats count BY EventCode host
 | xyseries host EventCode count
 ```
 
 - Menunjukkan event ID Sysmon apa yang benar-benar dikumpulkan per host.
 - **Cara membaca hasil:** jika EID 3, 10, atau 22 tidak ada, kemungkinan konfigurasi Sysmon tidak mengaktifkannya. Ingat, EID 3 default nonaktif [S4]. Detection yang bergantung pada event itu akan buta.
-- Di lab, ganti `index=*` dengan index Sysmon-mu (efisiensi, Day 14).
+- `index=sysmon` mengikuti penamaan index PT JAB. Di lab, ganti dengan index Sysmon-mu, dan hindari `index=*` karena search itu memindai semua index yang boleh kamu baca (Day 14).
 
 ### 2.4 Metadata cepat
 

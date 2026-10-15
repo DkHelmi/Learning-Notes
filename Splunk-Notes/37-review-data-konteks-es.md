@@ -432,7 +432,7 @@ Tabel ini memetakan gejala yang sering muncul ke Day yang perlu diulang. Mulai d
 
 Bagian ini menampung status versi dan perubahan istilah yang memengaruhi cara membaca dokumentasi. Isinya tidak mengubah review di atas.
 
-- ES 8.7.0 (2 September 2026) masih rilis ES terbaru per 2026-10-07 [S1]. Cek halaman release notes bila membaca catatan ini jauh setelah tanggal itu.
+- Catatan Day 21-36 ditulis dengan acuan ES 8.7.0 (2 September 2026). Per 2026-10-15 rilis terbaru di halaman release notes adalah ES 8.7.1 (1 Oktober 2026), masih di jalur 8.7 [S1]. Cek halaman release notes bila membaca catatan ini jauh setelah tanggal itu.
 - ATT&CK v19 (April 2026) memecah Defense Evasion menjadi Stealth dan Defense Impairment, dan v19.2 (Agustus 2026) adalah rilis Agile pertama [S2].
 - CIM 6.4.0 (Februari 2026) menambah field unit bisnis di Data Access untuk aset dan identitas, plus beberapa field di Network Sessions, Network Traffic, dan Endpoint [S7].
 - SSE 3.8 dan Detection Studio di ES 8.x adalah dua alat penilai cakupan yang dipakai di Day 27 [S3][S19].
@@ -544,7 +544,7 @@ Sumber untuk setiap klaim rinci ada di tabel Sumber Day asalnya. Tabel di bawah 
 
 | ID | Judul | URL | Tipe | Terbit/diakses | Keandalan dan catatan |
 |---|---|---|---|---|---|
-| S1 | Release notes ES 8.7 | https://help.splunk.com/en/splunk-enterprise-security-8/release-notes-and-resources/8.7 | primer | 2026-09-02; dilihat 2026-10-07 | Tinggi. Versi ES 8.7.0 |
+| S1 | Release notes ES 8.7 | https://help.splunk.com/en/splunk-enterprise-security-8/release-notes-and-resources/8.7 | primer | 2026-09-02; dilihat 2026-10-07 dan 2026-10-15 | Tinggi. Versi ES 8.7.0 dan 8.7.1 (1 Oktober 2026) |
 | S2 | MITRE ATT&CK: Enterprise tactics v19 (Day 30) | https://attack.mitre.org/tactics/enterprise/ | primer | diakses 2026-10-07 | Tinggi. Daftar 15 taktik |
 | S3 | ES 8.7: Monitor detection coverage and health using Detection Studio (Day 27) | https://help.splunk.com/en/splunk-enterprise-security-8/administer/8.7/detections/identify-optimal-detections-for-your-security-environment-using-detection-studio-in-splunk-enterprise-security/monitor-detection-coverage-and-health-using-detection-studio-in-splunk-enterprise-security | primer | diakses 2026-10-07 | Tinggi |
 | S4 | CIS: CIS Critical Security Controls v8.1 (Day 29) | https://www.cisecurity.org/insights/white-papers/cis-critical-security-controls-v8-1 | primer | 2024-06; dilihat 2026-10-07 | Tinggi |

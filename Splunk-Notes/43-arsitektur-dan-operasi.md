@@ -115,7 +115,7 @@ Yang menentukan apakah sebuah detection bertahan saat platform sibuk:
 
 - **Jadwal yang berjejal.** Banyak detection dijadwalkan pada menit 0 setiap jam. Pakai cron yang disebar (`3,33 * * * *`) atau `schedule_window` supaya scheduler boleh menggeser.
 - **Durasi lebih panjang daripada interval.** Search 9 menit dengan jadwal 5 menit pasti menumpuk (Day 14).
-- **Prioritas.** Real-time schedule mengunci slot; continuous schedule memakai antrean yang lebih sopan terhadap platform.
+- **Mode jadwal.** Real-time schedule (`realtime_schedule = 1`, nilai default) dihitung dari waktu sekarang dan didahulukan scheduler, tetapi boleh melompati periode supaya selalu memeriksa rentang terbaru. Continuous schedule (`realtime_schedule = 0`) dihitung dari eksekusi terakhir dan tidak pernah melompati periode, tetapi bisa tertinggal saat scheduler sibuk. `schedule_priority` menaikkan urutan satu search dan sebaiknya hanya untuk search yang benar-benar kritis [S7].
 - **Search yang mahal milik orang lain.** Satu dashboard dengan sepuluh panel `index=*` bisa menghabiskan kuota untuk semua orang.
 
 Kebiasaan yang layak dipasang sejak awal: satu alert yang memantau skipped search. Detection yang tidak jalan adalah kegagalan yang sunyi, dan satu-satunya jejaknya ada di `index=_internal`.
@@ -293,7 +293,7 @@ Yang pertama memperlihatkan hari tanpa data sama sekali, yang kedua memperlihatk
 - Menyimpulkan "tidak ada bukti" tanpa memeriksa retensi dan kesehatan cluster.
 - Mengira retensi hanya diatur waktu, padahal batas ukuran sering memotong lebih dulu.
 - Menjadwalkan semua detection pada menit 0 setiap jam, lalu bingung melihat skipped.
-- Memakai real-time schedule untuk detection yang tidak membutuhkannya, sehingga slot search terkunci.
+- Memakai real-time schedule untuk detection yang butuh cakupan utuh, sehingga periode yang terlewat saat platform sibuk tidak pernah dipindai ulang.
 - Mengunggah lookup besar lewat UI di lingkungan search head cluster.
 - Menilai efisiensi biaya dari gigabyte saja, tanpa menghitung deteksi yang hilang bila sumber dipangkas.
 - Mengandalkan satu alert tanpa memantau apakah alert itu sendiri berjalan.
@@ -342,7 +342,7 @@ Batas ukuran tercapai lebih dulu daripada batas usia. Bucket menjadi frozen kare
 
 <details><summary>Jawaban</summary>
 
-B. Hasil manual yang benar sudah mengesampingkan masalah logika, jadi yang tersisa adalah pertanyaan apakah eksekusi terjadwalnya pernah terjadi. `skipped` berarti eksekusi itu hilang selamanya dan bukan tertunda, sementara `deferred` berarti hanya tergeser, dan keduanya hanya terlihat di `index=_internal sourcetype=scheduler` [S4]. Setelah itu `run_time` menentukan letak perbaikannya: bila durasi rata-rata mendekati atau melebihi interval jadwalnya, perbaikannya ada di search (Day 14), bukan di jadwal. A keliru karena memperbaiki hal yang sudah terbukti benar. C justru memperburuk: real-time schedule mengunci slot search dan memperbesar kemungkinan search lain ikut skipped, sedangkan continuous schedule memakai antrean yang lebih sopan terhadap platform. Lihat bagian 1.6 dan 2.2.
+B. Hasil manual yang benar sudah mengesampingkan masalah logika, jadi yang tersisa adalah pertanyaan apakah eksekusi terjadwalnya pernah terjadi. `skipped` berarti eksekusi itu hilang selamanya dan bukan tertunda, sementara `deferred` berarti hanya tergeser, dan keduanya hanya terlihat di `index=_internal sourcetype=scheduler` [S4]. Setelah itu `run_time` menentukan letak perbaikannya: bila durasi rata-rata mendekati atau melebihi interval jadwalnya, perbaikannya ada di search (Day 14), bukan di jadwal. A keliru karena memperbaiki hal yang sudah terbukti benar. C justru memperburuk: real-time schedule memang didahulukan, tetapi boleh melompati periode saat scheduler sibuk, dan periode yang terlewat tidak dipindai ulang; mode yang tidak pernah melompati periode adalah continuous schedule [S7]. Lihat bagian 1.6 dan 2.2.
 
 </details>
 
@@ -384,5 +384,6 @@ What makes this answer strong: it separates "no activity" from "no data", names 
 | S4 | Admin Manual: spesifikasi `limits.conf` bagian `[search]` dan concurrency scheduled search | https://help.splunk.com/en/splunk-enterprise | primer | judul halaman dirujuk 2026-10-09 | Tinggi untuk nama setting; nilai default bergantung versi dan jumlah CPU |
 | S5 | Monitoring Splunk Enterprise: dashboard Search Activity, Scheduler Activity, Indexer Clustering | https://help.splunk.com/en/splunk-enterprise | primer | judul halaman dirujuk 2026-10-09 | Tinggi |
 | S6 | Splunk-Notes Day 14 (search efisien), Day 26 (acceleration), Day 27 (sumber data ke konten), Day 36 (jadwal detection), Day 28 (onboarding) | (lokal) | rujukan internal | 2026-10-09 | Keterkaitan antar Day |
+| S7 | Admin Manual 9.4.16: spesifikasi `savedsearches.conf` (`realtime_schedule`, `schedule_priority`) | https://help.splunk.com/en/splunk-enterprise/administer/admin-manual/9.4/configuration-file-reference/9.4.16-configuration-file-reference/savedsearches.conf | primer | diakses 2026-10-15 | Tinggi. Real-time schedule boleh melompati periode dan didahulukan, continuous tidak pernah melompati periode; urutan prioritas dan capability `edit_search_schedule_priority`. Versi spesifikasi 9.4, cek ulang di 10.6 |
 
 **Catatan sumber:** rasio kompresi dan ukuran tsidx adalah pendekatan yang dipakai luas, bukan angka resmi, jadi harus diukur sendiri dengan `dbinspect`. Nama endpoint REST untuk cluster berubah antar versi dan perlu dicek. Model lisensi dan fitur arsip bergantung kontrak serta jenis deployment (Enterprise atau Cloud).

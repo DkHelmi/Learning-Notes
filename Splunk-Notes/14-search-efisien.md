@@ -91,9 +91,7 @@ Cek nama komponen persis di versi-mu. Bandingkan dua versi search di rentang wak
 
 Di tingkat platform, Monitoring Console menyediakan dashboard Search Activity dan Scheduler Activity untuk melihat search yang paling mahal dan yang terlewat [S2].
 
-### 1.7 Enterprise vs ES
-
-Semua prinsip di atas berlaku di Splunk Enterprise. Di ES, efisiensi menjadi kritis karena ES menjalankan banyak search terjadwal (detection, akselerasi data model, threat intel). Lantern menyebut ES sebagai pemroses batch yang berat (lihat Day 25 [S6] di catatan Day 25). Itulah alasan detection ES ditulis dengan `tstats` + `summariesonly`.
+**Tanpa ES:** semua prinsip di atas berlaku di Splunk Enterprise. Di ES, efisiensi menjadi kritis karena ES menjalankan banyak search terjadwal (detection, akselerasi data model, threat intel). Panduan Lantern tentang mengelola data model di ES, yang dipakai di Day 25 bagian 2.4, menyebut ES sebagai pemroses batch yang berat. Itulah alasan detection ES ditulis dengan `tstats` + `summariesonly`.
 
 ## 2. Contoh SPL dan langkah di ES
 
@@ -133,7 +131,7 @@ index=botsv1 sourcetype=stream:http earliest="08/01/2016:00:00:00" latest="09/01
 
 Kenapa lebih baik:
 - Index dan sourcetype spesifik.
-- Rentang waktu eksplisit. Data BOTS v1 bertanggal Agustus 2016, jadi `earliest=-30d` justru akan mengembalikan nol hasil. Untuk data live, pakai rentang relatif seperti `earliest=-24h`. Cek rentang tanggal persis BOTS v1 di instance-mu.
+- Rentang waktu eksplisit. Data BOTS v1 berasal dari 2016, jadi `earliest=-30d` justru akan mengembalikan nol hasil; ukur rentang persisnya dengan cara Day 01 bagian 2.5. Untuk data live, pakai rentang relatif seperti `earliest=-24h`.
 - Semua filter dipindah ke search awal, sehingga event dibuang di indexer sebelum diproses. `NOT` di sini tidak masalah karena didampingi filter positif yang sudah mempersempit data; yang mahal adalah search yang hanya berisi `NOT`.
 - `uri="*.exe"` masih leading wildcard, tetapi pada field dan setelah data dipersempit. Bila kamu tahu nama file spesifik, pakai itu.
 - `fields` mengurangi data yang berpindah.
