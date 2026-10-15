@@ -219,7 +219,7 @@ Konten detection resmi Splunk, yang ditulis di repo publik `security_content` da
 
 ## 2. Contoh dan langkah praktis di PT JAB
 
-Semua keluaran di bagian ini adalah keluaran ilustrasi untuk organisasi fiktif PT JAB, bukan hasil eksekusi. Asumsi data melanjutkan Day 17: empat event type otentikasi (`jab_vpn_auth`, `jab_win_auth`, `jab_linux_auth`, `jab_o365_auth`) sudah diberi tag `authentication`, perangkat POP sudah diberi tag `pop` pada field `host`, dan field `user`, `src`, serta `action` sudah bernama dan bernilai sesuai CIM. Rentang acuan sama, yaitu `earliese` tidak dipakai di sini melainkan `earliest="10/14/2026:00:00:00"` sampai `latest="10/14/2026:08:00:00"` dalam WIB, dengan 693 kegagalan otentikasi dari 12.180 event otentikasi. Tabel berikut adalah daftar macro yang dibangun di bagian ini; cari kolom terakhir untuk melihat masalah yang diselesaikan masing-masing.
+Semua keluaran di bagian ini adalah keluaran ilustrasi untuk organisasi fiktif PT JAB, bukan hasil eksekusi. Asumsi data melanjutkan Day 17: empat event type otentikasi (`jab_vpn_auth`, `jab_win_auth`, `jab_linux_auth`, `jab_o365_auth`) sudah diberi tag `authentication`, perangkat POP sudah diberi tag `pop` pada field `host`, dan field `user`, `src`, serta `action` sudah bernama dan bernilai sesuai CIM. Rentang acuan sama, yaitu `earliest="10/14/2026:00:00:00"` sampai `latest="10/14/2026:08:00:00"` dalam WIB, dengan 693 kegagalan otentikasi dari 12.180 event otentikasi. Tabel berikut adalah daftar macro yang dibangun di bagian ini; cari kolom terakhir untuk melihat masalah yang diselesaikan masing-masing.
 
 | Macro | Argumen | Masalah yang diselesaikan |
 |---|---|---|
@@ -621,7 +621,7 @@ Tabel ini memuat gejala yang paling sering muncul saat memakai macro. Cari gejal
 | Error sintaks di search yang tidak menyebut macro apa pun | Kesalahan ada di definisi macro, dan yang di-parse adalah hasil ekspansi | Tekan Control-Shift-E atau Command-Shift-E, lalu Open in Search untuk mengisolasi [S2] |
 | Macro bernama `nama-macro` tidak jalan | App Search tidak mendukung tanda hubung di nama macro [S2] | Ganti ke garis bawah |
 | Definisi dengan `tstats` menghasilkan error | Generating command butuh pipe di luar macro, bukan di dalam definisi [S1][S2] | Hapus pipe dari definisi dan tulis `\| ` + pemanggilan di search |
-| Validasi tidak pernah menolak apa pun | Ekspresi bukan boleh boolean dan hasilnya null, yang berarti lolos [S1][S4] | Pastikan `validate()` mengembalikan string saat kondisi gagal |
+| Validasi tidak pernah menolak apa pun | Ekspresi bukan boolean dan hasilnya null, yang berarti lolos [S1][S4] | Pastikan `validate()` mengembalikan string saat kondisi gagal |
 | Validasi selalu menolak | Ekspresi boolean mengembalikan null, yang dihitung gagal [S1][S4] | Periksa fungsi di dalamnya terhadap argumen yang kosong |
 | Hasil kolom kosong tanpa error | Argumen dibaca sebagai string padahal dimaksudkan angka [S3] | Tambahkan validasi `isnum()`, dan bungkus nilai dengan `tonumber()` saat memanggil |
 | Error siklus saat menyimpan atau menjalankan | Macro memanggil macro yang memanggilnya kembali [S4] | Putus salah satu rantainya |
@@ -714,7 +714,7 @@ Coba jawab dulu tanpa membuka bagian di atas. Bila jawabanmu berbeda dengan kunc
 
 **1. Pertanyaan jebakan.** Rekanmu membuat macro bernama `jab_window` dengan satu argumen bernama `jam`, lalu memanggilnya dengan `` `jab_window(8)` `` dan mendapat pesan bahwa macro tidak ditemukan. Definisinya jelas ada di Settings. Apa yang terjadi?
 
-<parameter name="x">details><summary>Jawaban</summary>
+<details><summary>Jawaban</summary>
 
 Nama macro berargumen harus memuat jumlah argumennya, jadi yang terdaftar seharusnya `jab_window(1)`, bukan `jab_window`. Angka itu bagian dari identitas macro: `jab_window` dan `jab_window(1)` adalah dua objek berbeda, dan memanggil dengan satu argumen berarti mencari yang kedua. Pesan yang muncul menyebut macro tidak ditemukan, bukan menyebut jumlah argumen salah, dan itulah yang membuat gejala ini membingungkan. Lihat bagian 1.4 dan 2.3.
 
@@ -767,7 +767,7 @@ Ketiganya bisa jalan, dan jawaban yang bisa dipertahankan adalah A atau C dengan
 
 **6. Pertanyaan jebakan.** Sebuah macro berisi `tstats count from datamodel=Authentication by Authentication.src`. Rekanmu memanggilnya dengan `` `jab_tstats_auth` | sort - count `` dan mendapat error. Apa yang kurang?
 
-<parameter name="x">details><summary>Jawaban</summary>
+<details><summary>Jawaban</summary>
 
 Pipe di depan pemanggilan. Macro yang isinya dimulai dengan generating command seperti `tstats`, `inputlookup`, `metadata`, `pivot`, atau `from` tidak membawa pipe-nya sendiri: pipe ditulis di search, di luar macro, sehingga pemanggilannya menjadi `` | `jab_tstats_auth` | sort - count ``. Dokumentasi menyarankan justru tidak menulis pipe di dalam definisi, supaya macro itu tetap jelas sebagai awal pipeline. Lihat bagian 1.7 dan tabel Troubleshooting.
 

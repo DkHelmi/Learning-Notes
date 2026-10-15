@@ -17,6 +17,7 @@ Catatan saya belajar Splunk Enterprise dan Enterprise Security, dari SPL sampai 
 | 07 | [Alur triage alert L1: disposisi, eskalasi, handover](07-alur-triage-alert-l1.md) |
 | 08 | [chart, timechart, dan memilih visualisasi](08-chart-timechart-visualisasi.md) |
 | 09 | [Report, scheduled alert, throttle, dashboard](09-report-alert-dashboard.md) |
+| 10 | [Review fondasi](10-review-fondasi.md) |
 | 11 | [rex dan eval](11-rex-eval.md) |
 | 12 | [foreach, lookup, makeresults](12-foreach-lookup-makeresults.md) |
 | 13 | [transaction dan first/last](13-transaction-first-last.md) |
@@ -26,7 +27,7 @@ Catatan saya belajar Splunk Enterprise dan Enterprise Security, dari SPL sampai 
 | 17 | [Event type dan tag](17-event-type-dan-tag.md) |
 | 18 | [Macro](18-macro.md) |
 | 19 | [Workflow action GET, POST, dan Search](19-workflow-action.md) |
-| 20 | [Review Minggu 1](20-review-spl-dan-knowledge-object.md) |
+| 20 | [Review SPL lanjutan dan knowledge object](20-review-spl-dan-knowledge-object.md) |
 | 21 | [Defenses dan sumber data](21-defenses-dan-sumber-data.md) |
 | 22 | [Membuat data model dan memakai Pivot](22-data-model-dan-pivot.md) |
 | 23 | [CIM, CIM Add-on, dan praktik terbaik SIEM](23-siem-cim-data-model.md) |
@@ -43,7 +44,7 @@ Catatan saya belajar Splunk Enterprise dan Enterprise Security, dari SPL sampai 
 | 34 | [Continuous monitoring dan lima tahap investigasi](34-investigasi-dan-metrik.md) |
 | 35 | [Risk framework dan RBA](35-risk-framework-rba.md) |
 | 36 | [Correlation search dan detection](36-correlation-search.md) |
-| 37 | [Review paruh pertama: SOC, ancaman, data, investigasi](37-review-data-konteks-es.md) |
+| 37 | [Review data, konteks, dan ES](37-review-data-konteks-es.md) |
 | 38 | [Teknik hunting](38-teknik-hunting.md) |
 | 39 | [Long tail, outlier, hypothesis hunting](39-long-tail-outlier-hypothesis.md) |
 | 40 | [Summary index, KV store lookup, dan metrics](40-summary-index-kvstore-metrics.md) |
@@ -53,4 +54,4 @@ Catatan saya belajar Splunk Enterprise dan Enterprise Security, dari SPL sampai 
 | 44 | [RBAC, srchFilter, dan penanganan data sensitif](44-rbac-dan-data-sensitif.md) |
 | 45 | [Sumber daya SPL di ES, SSE, Lantern](45-sumber-daya-spl-es-sse-lantern.md) |
 | 46 | [Tiga studi kasus investigasi: phishing, serangan web, lateral movement](46-studi-kasus-investigasi.md) |
-| 47 | [Review akhir SPL, hunting, dan respons](47-review-akhir.md) |
+| 47 | [Review akhir dan rencana memperkuat kelemahan](47-review-akhir.md) |
