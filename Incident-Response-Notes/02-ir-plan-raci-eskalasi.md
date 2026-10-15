@@ -309,7 +309,7 @@ Cara membaca elemen pentingnya:
 - **Isolasi host:** dua R karena eksekusinya bisa lewat EDR (L2) atau port switch (NOC). Bila host yang diisolasi langsung melayani pelanggan, seperti `jkt-portal01`, tindakan itu sama dengan mematikan layanan pelanggan dan pindah ke baris keenam.
 - **Mematikan layanan pelanggan:** IC hanya C. IC menyiapkan rekomendasi dan risikonya, Direktur Teknologi memutuskan, NOC menjalankan.
 - **Retainer:** IC boleh mengaktifkan selama masih dalam kuota jam kontrak. Penambahan biaya di luar kuota adalah keputusan pembayaran ke pihak ketiga dan menjadi A Direktur Teknologi.
-- **Notifikasi regulator:** DPO adalah R karena memahami kewajiban UU PDP, tetapi A tetap di Direktur Teknologi karena yang melapor adalah perusahaan. Rinciannya dibahas di Day tentang komunikasi dan pelaporan.
+- **Notifikasi regulator:** DPO adalah R karena memahami kewajiban UU PDP, tetapi A tetap di Direktur Teknologi karena yang melapor adalah perusahaan. Rinciannya dibahas di Day 18 bagian 1.4 dan 1.5.
 
 **Kapan gagal:** RACI ini gagal bila nama orang di balik setiap kolom tidak jelas pada malam tertentu. Kolom "IC" berarti IC on-call minggu itu, bukan selalu Dimas; karena itu RACI selalu dibaca bersama jadwal on-call di bagian 2.4.
 

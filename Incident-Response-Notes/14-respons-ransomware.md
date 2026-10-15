@@ -277,7 +277,7 @@ C. Minta decryptor publik atau dari penegak hukum sebelum menyimpulkan
 KEPUTUSAN (Hendra Wijaya, Legal, DPO, 11:40)
 - Pilihan A, tidak membayar. Pulihkan dari tape offline ke file server bersih.
 - Cek decryptor publik dan lapor ke penegak hukum (paralel).
-- DPO dan Legal menyiapkan penilaian kewajiban pemberitahuan (lihat Day 18).
+- DPO dan Legal menyiapkan penilaian kewajiban pemberitahuan (lihat Day 18 bagian 1.4 dan 2.3).
 - Corporate Communication menyiapkan pesan internal; pengumuman publik ditahan
   sampai scope data yang dicuri jelas.
 ```
@@ -292,7 +292,7 @@ Cara membaca elemennya:
 
 ### 2.4 Garis waktu pelaporan dan hal yang dicatat sejak awal
 
-Artefak ini menjawab pertanyaan ketujuh: apa yang harus dicatat sejak sekarang supaya kewajiban pelaporan bisa dipenuhi. Isinya ringkas; prosedur dan batas waktu lengkap ada di Day 18.
+Artefak ini menjawab pertanyaan ketujuh: apa yang harus dicatat sejak sekarang supaya kewajiban pelaporan bisa dipenuhi. Isinya ringkas; prosedur dan batas waktu lengkap ada di Day 18 bagian 1.4 dan 2.3.
 
 ```
 INC-2026-017 | Catatan untuk pelaporan | disusun bertahap sejak Sabtu 2026-10-10
@@ -306,7 +306,7 @@ DICATAT (fakta, bukan dugaan):
 - Keyakinan pencurian: sedang-tinggi (bukti transfer + klaim tebusan).
 MENUNGGU:
 - Isi persis data yang dicuri (menentukan subjek data yang perlu diberi tahu).
-- Penilaian Legal/DPO atas kewajiban dan titik mulai hitungan waktu (Day 18).
+- Penilaian Legal/DPO atas kewajiban dan titik mulai hitungan waktu (Day 18 bagian 2.3).
 PRINSIP: titik mulai 3 x 24 jam UU PDP Pasal 46 dipastikan ke penjelasan resmi,
 jangan diasumsikan; catat waktu validasi kejadian dengan teliti.
 ```
@@ -315,7 +315,7 @@ Cara membaca elemennya:
 
 - **Fakta dipisah dari dugaan**, sama seperti catatan declare Day 01 bagian 2.1. Laporan ke regulator berdiri di atas fakta bertanggal.
 - **Keyakinan ditulis eksplisit** ("sedang-tinggi"), karena pelaporan sering harus dilakukan sebelum semua pasti.
-- **Titik mulai hitungan waktu tidak diasumsikan.** Salah titik mulai berarti terlambat lapor; ini dipastikan ke sumber resmi di Day 18.
+- **Titik mulai hitungan waktu tidak diasumsikan.** Salah titik mulai berarti terlambat lapor; ini dibahas di Day 18 bagian 1.4.
 
 ## 3. Lab praktik (di VM lab terisolasi)
 

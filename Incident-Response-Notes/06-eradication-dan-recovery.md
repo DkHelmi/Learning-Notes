@@ -53,7 +53,7 @@ Pesan itu memuat tujuh pertanyaan:
 Pertanyaan 1 dijawab di bagian 1.1, pertanyaan 2 di bagian 1.2, pertanyaan 3 di bagian 1.3, pertanyaan 4 di bagian 1.4, pertanyaan 5 di bagian 1.5, pertanyaan 6 di bagian 1.6, dan pertanyaan 7 di bagian 1.7. Bagian 2 berisi laporan awal retainer, rencana eradication dan recovery, pencarian salinan kredensial, gerbang validasi, dan pernyataan akhir recovery PT JAB.
 
 **Kapan relevan:** setelah containment dinyatakan berhasil dan sebelum layanan dikembalikan ke kondisi normal; juga saat menyiapkan gold image, prosedur rebuild, inventaris rahasia per sistem, dan kriteria akhir recovery sebelum insiden terjadi.
-**Kapan bukan jawaban:** eradication dan recovery tidak menjawab kewajiban atas data yang sudah diambil penyerang; pemberitahuan ke regulator dan subjek data dibahas di Day 18. Tahap ini juga bukan lessons learned: perbaikan proses jangka panjang dan laporan insiden dibahas di Day 19, walaupun bahannya dikumpulkan sejak sekarang.
+**Kapan bukan jawaban:** eradication dan recovery tidak menjawab kewajiban atas data yang sudah diambil penyerang; pemberitahuan ke regulator dan subjek data dibahas di Day 18 bagian 1.4 dan 2.3. Tahap ini juga bukan lessons learned: perbaikan proses jangka panjang dan laporan insiden dibahas di Day 19 bagian 1.1 dan 1.5, walaupun bahannya dikumpulkan sejak sekarang.
 
 ## 1. Konsep inti
 
@@ -235,7 +235,7 @@ Cara membaca elemennya:
 
 - **Salinan kedua di `/var/tmp`** tidak terlihat di live response Day 04 karena perintahnya memeriksa `/dev/shm`, `/tmp`, dan `/var/tmp` di tingkat atas, sedangkan salinan ini ada di dalam subfolder tersembunyi yang namanya mirip folder sistem. Ini contoh nyata kenapa clean hanya menghapus apa yang ditemukan.
 - **Keyakinan ditulis per kesimpulan.** "Kemungkinan besar diambil" dan "tidak ada bukti kompromi domain" punya dasar dan batas yang berbeda, dan keduanya dipakai untuk keputusan yang berbeda: yang pertama oleh DPO untuk pelaporan, yang kedua untuk keputusan krbtgt.
-- **Kesimpulan tentang data** langsung diteruskan Dimas ke DPO Agus Setiawan dan Legal Ratna Sari pukul 10:20. Kewajiban pelaporannya dibahas di Day 18; eradication tidak menunggu keputusan itu.
+- **Kesimpulan tentang data** langsung diteruskan Dimas ke DPO Agus Setiawan dan Legal Ratna Sari pukul 10:20. Kewajiban pelaporannya dibahas di Day 18 bagian 1.4 dan 2.3; eradication tidak menunggu keputusan itu.
 
 **Kapan gagal:** laporan retainer hanya berisi daftar IOC tanpa riwayat perintah dan tingkat keyakinan. Tim bisa menghapus IOC, tetapi tidak tahu apa yang diambil dan apa lagi yang mungkin ditinggalkan.
 
