@@ -93,7 +93,7 @@ Pertanyaan Dimas ("masih perlu image penuh semua?") adalah pilihan antara tiga p
 | Triage collection | File/artefak terpilih (registry hive, event log, Prefetch, $MFT, dll.) | Cepat, kecil, bisa ke banyak host | Bisa melewatkan bukti yang tidak masuk daftar target | Awal kasus, scoping, banyak host |
 | Adaptive collection | Triage + file tambahan yang dipilih berdasarkan parsing artefak saat koleksi (mis. biner yang dirujuk Prefetch/scheduled task) | Jalan tengah: lebih lengkap dari triage, jauh lebih kecil dari image | Bergantung pada logika alat; tetap bukan image | Host yang dicurigai, saat image tidak praktis |
 
-Velociraptor (Sep 2025) berpendapat bahwa full image makin tidak praktis karena ukuran dan kecepatan, dan triage dasar saja sering kurang. Adaptive collection adalah jalan tengah [S4]. Di Velociraptor, artefak `Windows.Triage.Targets` disebut sebagai penerus pendekatan KapeFiles, dengan kebijakan koleksi seperti `ExcludeSigned` (default; tidak mengambil biner bertanda tangan tepercaya) dan `HashOnly` (hanya mencatat hash dan keberadaan file) [S4]. Artikel yang sama menyebut `Windows.KapeFiles.Targets` tidak lagi dibawa bawaan sejak versi 0.75, dan menyebut kebijakan ketiga, `AllFiles`, yang tidak disarankan untuk adaptive collection karena ikut mengambil file sistem dan biner tepercaya [S4]. Cek nama artefak dan opsi di versi Velociraptor lab-mu (Day 04).
+Velociraptor (Sep 2025) berpendapat bahwa full image makin tidak praktis karena ukuran dan kecepatan, dan triage dasar saja sering kurang. Adaptive collection adalah jalan tengah [S4]. Di Velociraptor, artefak `Windows.Triage.Targets` disebut sebagai penerus pendekatan KapeFiles, dengan kebijakan koleksi seperti `ExcludeSigned` (default; tidak mengambil biner bertanda tangan tepercaya) dan `HashOnly` (hanya mencatat hash dan keberadaan file) [S4]. Artikel yang sama menyebut `Windows.KapeFiles.Targets` tidak lagi dibawa bawaan sejak versi 0.75, dan menyebut kebijakan ketiga, `AllFiles`, yang tidak disarankan untuk adaptive collection karena ikut mengambil file sistem dan biner tepercaya [S4]. Karena target itu kini dikelola di proyek terpisah, `Windows.Triage.Targets` juga tidak bawaan dan harus diimpor ke server lebih dulu [S4]. Cek nama artefak dan opsi di versi Velociraptor lab-mu (Day 04).
 
 Pola yang umum di lapangan [S5]:
 
@@ -210,7 +210,7 @@ Keluaran ilustrasi: `2026-10-15T08:40:12.3456789+07:00`, `(UTC+07:00) Bangkok, H
 
 ### 2.2 Hashing arsip koleksi
 
-Langkah ini menjawab pertanyaan keempat Yoga untuk bukti berbentuk berkas. Contohnya arsip triage `JKT-WS-0412` (E14) yang diambil Selasa sore, diverifikasi ulang sebelum diserahkan ke retainer.
+Langkah ini menjawab pertanyaan keempat Yoga untuk bukti berbentuk berkas. Contohnya arsip triage `JKT-WS-0412` (E14) yang diambil Selasa malam, diverifikasi ulang sebelum diserahkan ke retainer.
 
 Windows (PowerShell):
 
@@ -354,7 +354,7 @@ Tabel ini memuat masalah yang sering muncul saat mengambil dan memindahkan bukti
 Bagian ini menampung detail versi dan perubahan sumber yang bisa berubah lagi. Berguna saat membuka dokumen sumbernya, tetapi tidak mengubah alur keputusan di atas.
 
 - NIST SP 800-61r3 (3 Apr 2025) menggantikan r2 (2012) dan menyelaraskan IR dengan CSF 2.0 [S3]. r3 menyusun rekomendasinya mengikuti enam fungsi CSF 2.0 (Govern, Identify, Protect, Detect, Respond, Recover), sehingga empat fase r2 (preparation; detection and analysis; containment, eradication, and recovery; post-incident activity) sebaiknya dibaca sebagai konteks historis. Untuk catatan ini cukup diingat bahwa kegiatan forensik endpoint paling banyak berada di fungsi Detect dan Respond. Pernyataan tentang data insiden sebagai bukti ada di subkategori RS.AN-07 [S8].
-- **Velociraptor "Adaptive Collections" (28 Sep 2025):** pergeseran dari daftar target statis ke koleksi yang diputuskan berdasarkan parsing artefak [S4]. Sejak 0.75, `Windows.KapeFiles.Targets` tidak lagi bawaan dan penerusnya bernama `Windows.Triage.Targets` [S4].
+- **Velociraptor "Adaptive Collections" (28 Sep 2025):** pergeseran dari daftar target statis ke koleksi yang diputuskan berdasarkan parsing artefak [S4]. Sejak 0.75, `Windows.KapeFiles.Targets` tidak lagi bawaan dan penerusnya bernama `Windows.Triage.Targets`, yang juga harus diimpor ke server [S4].
 - **Elcomsoft "The Cloud Gap" (8 Jan 2026):** Files On-Demand membuat image offline dan triage live sama-sama berisiko kehilangan isi file [S6].
 - **`Get-FileHash`:** halaman dokumentasi PowerShell 7.6 yang diperiksa bertanggal 2022-12-12; algoritma yang diterima SHA1, SHA256, SHA384, SHA512, dan MD5 [S9].
 - RFC 3227 (2002) dan SP 800-86 (2006) berusia lebih dari 3 tahun, tetapi masih menjadi rujukan prinsip. Contoh teknisnya (alat, media) sudah usang.
