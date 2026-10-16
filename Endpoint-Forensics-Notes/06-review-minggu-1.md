@@ -187,7 +187,7 @@ Permintaan pertama Dimas dijawab tabel berikut. Semua waktu WIB; kolom "Status" 
 | E04-E07 | `jkt-billing01`: output live response, memori, biner penyerang, `/var/log` | Selasa; memori dengan AVML 13:20-13:41 | Master `jkt-evid01` | Di luar cakupan endpoint Windows minggu ini | Day 01 bagian 1.3 dan 2.5 |
 | E08 | Memori `BDG-WS-0142` | Fajar Nugraha, Selasa 14:05-14:13, WinPmem dari `USB-E-09` | Master `jkt-evid01` | Diserahkan ke retainer | Day 01 bagian 2.5 |
 | E09-E12 | Bukti pendukung lain hari Selasa (antara lain email asli dan ekspor log jaringan) | Selasa | Master `jkt-evid01` | Tidak diolah minggu ini | Day 01 bagian Ide inti |
-| E13 | Memori `JKT-WS-0412` | Yoga, Selasa 17:45-17:58 | Master `jkt-evid01` | Diserahkan ke retainer | Day 03 bagian 2.1 |
+| E13 | Memori `JKT-WS-0412` | Yoga, Selasa 17:45-17:58, WinPmem dari `USB-E-10` dengan elevasi `ir-admin` | Master `jkt-evid01` | Diserahkan ke retainer | Day 03 bagian 2.1 |
 | E14 | Triage KAPE `JKT-WS-0412` (`INC-2026-019-E14_JKT-WS-0412_triage.zip`) | Yoga, Selasa 18:02-18:29, KAPE `!SANS_Triage` dari `USB-E-11`, `adm.yoga` | Master 19:05 (`4c7e...`), diverifikasi ulang Kamis 08:52; salinan kerja `E14-W1` | Diolah Kamis dengan `!EZParser`; hasil di `analysis/E14-W1/EZ-2026.5.0/` | Day 03 bagian 2.1 sampai 2.6 |
 | E15 | Image disk `JKT-WS-0388` | Kamis 09:00, sebelum reimage | Master; salinan kerja `E15-W1` Jumat 08:10 | Event log diolah Jumat; artefak lain belum | Day 05 bagian 2.1 sampai 2.8 |
 | E16 | Image disk `JKT-WS-0412` | Kamis 09:00, sebelum reimage | Master | Belum diolah; menjawab kolom "menunggu E16" | Day 03 bagian 2.6 |
@@ -228,7 +228,7 @@ Langkah keempat paling sering ditanyakan orang di luar tim, karena jejak tim sen
 | `JKT-WS-0388` | Selasa 12:31-12:37 | Proses sensor Defender sebagai SYSTEM (paket investigasi, `getfile`) | Yoga lewat live response | Riwayat Action center |
 | `JKT-WS-0388` | Selasa 12:38-12:55 | 4625 salah ketik, 4624 type 2 berpasangan dengan elevated token, 4672, `cmd.exe` `%%1937`, WinPmem dari `E:\tools\`, 7045 dan 4697 kernel driver, `certutil`, 4647 | Yoga dengan `ir-admin` | Case notes Yoga; evidence log E01 12:42-12:53 |
 | `JKT-WS-0388` | Kamis 08:46-08:47 | 4624 `ir-admin`, 4672, System 1074 dan 6006 | Yoga mematikan laptop sebelum image | Case notes; jadwal image E15 09:00 |
-| `JKT-WS-0412` | Selasa 17:45-18:35 | Akuisisi memori, logon konsol `adm.yoga` 18:00, KAPE dari `E:` (tanpa 4688 karena audit bawaan) | Yoga | Case notes E13 dan E14 |
+| `JKT-WS-0412` | Selasa 17:43-18:35 | `USB-E-10` dicolok 17:43 di sesi Rizky, elevasi UAC dengan `ir-admin` 17:44 untuk WinPmem (memori E13 17:45-17:58), logon konsol `adm.yoga` 18:00, KAPE dari `USB-E-11` 18:02 (tanpa 4688 karena audit bawaan) | Yoga | Case notes E13 dan E14 |
 | `JKT-WS-0395`, `-0397`, `BDG-WS-0151` | Kamis 17:48, 17:55, 18:12 | MSI Velociraptor, service `velociraptor` di `C:\Program Files\Velociraptor\` | Pemasangan lewat live response | Command log Defender; case notes per host |
 | `JKT-WS-0405` | Jumat 10:24 | Idem | Live response diulang 10:20 | Command log Defender |
 | `JKT-WS-0418` | Kamis 17:35 | MSI disalin lewat admin share, `msiexec` dari jarak jauh | Yoga dengan `adm.yoga` dari `JKT-JUMP01` | Case notes |

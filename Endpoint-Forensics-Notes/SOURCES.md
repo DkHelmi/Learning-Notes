@@ -14,11 +14,11 @@ Indeks sumber global, disusun dari tabel Sumber (bagian 9) setiap Day di folder 
 | NIST SP 800-61 Rev. 3: Incident Response Recommendations and Considerations for Cybersecurity Risk Management (PDF) | https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-61r3.pdf | primer | 2026-10-15 | Day 01, 06 |
 | Microsoft Learn: Get-FileHash (Microsoft.PowerShell.Utility) | https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.utility/get-filehash | primer | 2026-10-16 | Day 01, 02, 06 |
 | Volatility 3 releases | https://github.com/volatilityfoundation/volatility3/releases | primer | 2026-10-16 | Day 02, 06 |
-| Eric Zimmerman tools (EZ Tools, Get-ZimmermanTools) | https://ericzimmerman.github.io/ | primer | 2026-10-16 | Day 02, 03, 04, 05, 06, 07, 08 |
+| Eric Zimmerman tools (EZ Tools, Get-ZimmermanTools) | https://ericzimmerman.github.io/ | primer | 2026-10-16 | Day 02, 03, 04, 05, 06, 07, 08, 09, 10, 11, 12 |
 | KAPE (Kroll) | https://www.kroll.com/en/services/cyber/incident-response-litigation-support/kroll-artifact-parser-extractor-kape | primer (vendor) | 2026-10-16 | Day 02 |
 | Velociraptor releases | https://github.com/Velocidex/velociraptor/releases | primer | 2026-10-16 | Day 02, 04, 06 |
 | Plaso documentation | https://plaso.readthedocs.io/ | primer | 2026-10-09 | Day 02 |
-| Sysinternals: Sysmon | https://learn.microsoft.com/en-us/sysinternals/downloads/sysmon | primer | 2026-10-16 | Day 02, 05, 06 |
+| Sysinternals: Sysmon | https://learn.microsoft.com/en-us/sysinternals/downloads/sysmon | primer | 2026-10-16 | Day 02, 05, 06, 11 |
 | Microsoft Learn: Command line process auditing | https://learn.microsoft.com/en-us/windows-server/identity/ad-ds/manage/component-updates/command-line-process-auditing | primer | 2026-10-16 | Day 02, 05, 06 |
 | Atomic Red Team (Red Canary) | https://github.com/redcanaryco/atomic-red-team | primer | 2026-10-10 | Day 02 |
 | Volatility 3 README (GitHub) | https://github.com/volatilityfoundation/volatility3 | primer | 2026-10-16 | Day 02 |
@@ -75,16 +75,16 @@ Indeks sumber global, disusun dari tabel Sumber (bagian 9) setiap Day di folder 
 | Velociraptor VQL reference: hunt_results | https://docs.velociraptor.app/vql_reference/server/hunt_results/ | primer | 2026-10-16 | Day 04 |
 | Velocidex: velociraptor-triage-collector (GitHub) | https://github.com/Velocidex/velociraptor-triage-collector | primer (repo resmi) | 2026-10-16 | Day 04 |
 | Microsoft Learn: Advanced security audit policy settings | https://learn.microsoft.com/en-us/windows/security/threat-protection/auditing/advanced-security-audit-policy-settings | primer | 2026-10-09 | Day 05 |
-| Microsoft Learn: 4624(S) An account was successfully logged on | https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/auditing/event-4624 | primer | 2026-10-16 | Day 05, 06 |
+| Microsoft Learn: 4624(S) An account was successfully logged on | https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/auditing/event-4624 | primer | 2026-10-16 | Day 05, 06, 11, 12 |
 | Microsoft Learn: 4625(F) An account failed to log on | https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/auditing/event-4625 | primer | 2026-10-16 | Day 05 |
-| Microsoft Learn: 4648(S) A logon was attempted using explicit credentials | https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/auditing/event-4648 | primer | 2026-10-16 | Day 05 |
+| Microsoft Learn: 4648(S) A logon was attempted using explicit credentials | https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/auditing/event-4648 | primer | 2026-10-16 | Day 05, 11 |
 | Microsoft Learn: 4672(S) Special privileges assigned to new logon | https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/auditing/event-4672 | primer | 2026-10-16 | Day 05 |
 | Microsoft Learn: 4688(S) A new process has been created | https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/auditing/event-4688 | primer | 2026-10-16 | Day 05 |
-| Microsoft Learn: 4698(S) A scheduled task was created | https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/auditing/event-4698 | primer | 2026-10-16 | Day 05, 06 |
+| Microsoft Learn: 4698(S) A scheduled task was created | https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/auditing/event-4698 | primer | 2026-10-16 | Day 05, 06, 11, 12 |
 | Microsoft Learn: 4720(S) A user account was created | https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/auditing/event-4720 | primer | 2026-10-16 | Day 05 |
 | Microsoft Learn: 4732(S) A member was added to a security-enabled local group | https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/auditing/event-4732 | primer | 2026-10-16 | Day 05 |
 | Microsoft Learn: 1102(S) The audit log was cleared | https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/auditing/event-1102 | primer | 2026-10-16 | Day 05, 06 |
-| Microsoft Learn: 4697(S) A service was installed in the system | https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/auditing/event-4697 | primer | 2026-10-16 | Day 05 |
+| Microsoft Learn: 4697(S) A service was installed in the system | https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/auditing/event-4697 | primer | 2026-10-16 | Day 05, 11 |
 | Microsoft Learn: Audit Other Object Access Events | https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/auditing/audit-other-object-access-events | primer | 2026-10-16 | Day 05 |
 | Microsoft Learn: Audit Process Creation | https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/auditing/audit-process-creation | primer | 2026-10-16 | Day 05 |
 | Microsoft Learn: Audit Logon | https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/auditing/audit-logon | primer | 2026-10-16 | Day 05 |
@@ -93,46 +93,116 @@ Indeks sumber global, disusun dari tabel Sumber (bagian 9) setiap Day di folder 
 | Velociraptor: Windows.EventLogs.PowershellScriptblock | https://docs.velociraptor.app/artifact_references/pages/windows.eventlogs.powershellscriptblock | primer (dokumentasi proyek) | 2026-10-16 | Day 05, 06 |
 | GitHub: EricZimmerman/evtx (README EvtxECmd) | https://github.com/EricZimmerman/evtx | primer (repo resmi) | 2026-10-16 | Day 05, 06 |
 | GitHub: evtx Maps README | https://raw.githubusercontent.com/EricZimmerman/evtx/master/evtx/Maps/!!!!README.md | primer (repo resmi) | 2026-10-16 | Day 05 |
-| GitHub: evtx Maps (map 4624, 4698, 7045, 104, 106, 201, 4104, Sysmon 1, 1149, 21) | https://github.com/EricZimmerman/evtx/tree/master/evtx/Maps | primer (repo resmi) | 2026-10-16 | Day 05, 06 |
+| GitHub: evtx Maps (map 4624, 4698, 7045, 104, 106, 201, 4104, Sysmon 1, 1149, 21) | https://github.com/EricZimmerman/evtx/tree/master/evtx/Maps | primer (repo resmi) | 2026-10-16 | Day 05, 06, 11 |
 | NinjaOne: How to enable or disable Task Scheduler history | https://www.ninjaone.com/blog/enable-or-disable-task-scheduler-history/ | komunitas (blog vendor how-to) | 2026-10-16 | Day 05 |
 | Mekanisme Prefetch Windows (literatur DFIR umum) | tanpa URL | sekunder | 2026-10-10 | Day 07 |
-| SANS: Windows Forensic Analysis poster | https://www.sans.org/posters/windows-forensic-analysis/ | sekunder (SANS) | 2026-10-16 | Day 07, 08 |
-| Sygnia: Diving into the new Windows 11 PCA artifact | https://www.sygnia.co/?p=133 | sekunder (peneliti) | 2026-10-16 | Day 07 |
+| SANS: Windows Forensic Analysis poster | https://www.sans.org/posters/windows-forensic-analysis/ | sekunder (SANS) | 2026-10-16 | Day 07, 08, 09, 10, 12 |
+| Sygnia: Diving into the new Windows 11 PCA artifact | https://www.sygnia.co/?p=133 | sekunder (peneliti) | 2026-10-16 | Day 07, 12 |
 | Andrea Fortuna: Windows 11 PCA artifact | https://andreafortuna.org/2026/03/19/windows11-pca-artifact/ | sekunder | 2026-10-16 | Day 07 |
 | Velociraptor artifact: Windows.System.AppCompatPCA | https://docs.velociraptor.app/exchange/artifacts/pages/windows.system.appcompatpca | primer | 2026-10-16 | Day 07 |
 | PECmd README (GitHub) | https://raw.githubusercontent.com/EricZimmerman/PECmd/master/README.md | primer | 2026-10-16 | Day 07 |
 | AppCompatCacheParser README (GitHub) | https://raw.githubusercontent.com/EricZimmerman/AppCompatCacheParser/master/README.md | primer | 2026-10-16 | Day 07 |
 | AmcacheParser README (GitHub) | https://raw.githubusercontent.com/EricZimmerman/AmcacheParser/master/README.md | primer | 2026-10-16 | Day 07 |
 | SrumECmd README (GitHub) | https://raw.githubusercontent.com/EricZimmerman/Srum/master/README.md | primer | 2026-10-16 | Day 07 |
-| RECmd README (GitHub) | https://raw.githubusercontent.com/EricZimmerman/RECmd/master/README.md | primer | 2026-10-16 | Day 07 |
+| RECmd README (GitHub) | https://raw.githubusercontent.com/EricZimmerman/RECmd/master/README.md | primer | 2026-10-16 | Day 07, 09 |
 | RECmd BatchExamples dan DFIRBatch.reb | https://github.com/EricZimmerman/RECmd/tree/master/BatchExamples | primer | 2026-10-16 | Day 07 |
-| libscca: Windows Prefetch File (PF) format | https://github.com/libyal/libscca/blob/main/documentation/Windows%20Prefetch%20File%20(PF)%20format.asciidoc | primer (spesifikasi hasil reverse engineering) | 2026-10-16 | Day 07 |
+| libscca: Windows Prefetch File (PF) format | https://github.com/libyal/libscca/blob/main/documentation/Windows%20Prefetch%20File%20(PF)%20format.asciidoc | primer (spesifikasi hasil reverse engineering) | 2026-10-16 | Day 07, 12 |
 | forensics.wiki: Prefetch | https://forensics.wiki/prefetch/ | sekunder (wiki komunitas) | 2026-10-16 | Day 07 |
 | Velociraptor artifact: Windows.Forensics.Prefetch | https://docs.velociraptor.app/artifact_references/pages/windows.forensics.prefetch | primer | 2026-10-16 | Day 07 |
-| nullsec.us: AppCompatCache Deep Dive | https://nullsec.us/windows-10-11-appcompatcache-deep-dive/ | sekunder (praktisi) | 2026-10-16 | Day 07 |
+| nullsec.us: AppCompatCache Deep Dive | https://nullsec.us/windows-10-11-appcompatcache-deep-dive/ | sekunder (praktisi) | 2026-10-16 | Day 07, 12 |
 | Velociraptor artifact: Windows.Registry.AppCompatCache | https://docs.velociraptor.app/artifact_references/pages/windows.registry.appcompatcache | primer | 2026-10-16 | Day 07 |
-| Kaspersky Securelist: Forensic journey, hunting evil within AmCache | https://securelist.com/amcache-forensic-artifact/117622/ | sekunder (peneliti vendor) | 2026-10-16 | Day 07 |
+| Kaspersky Securelist: Forensic journey, hunting evil within AmCache | https://securelist.com/amcache-forensic-artifact/117622/ | sekunder (peneliti vendor) | 2026-10-16 | Day 07, 12 |
 | Cyber Triage: ShimCache and AmCache Forensic Analysis 2026 | https://www.cybertriage.com/blog/shimcache-and-amcache-forensic-analysis-2026/ | sekunder (vendor alat) | 2026-10-16 | Day 07 |
 | Magnet Forensics: ShimCache vs AmCache | https://www.magnetforensics.com/blog/shimcache-vs-amcache-key-windows-forensic-artifacts/ | sekunder (vendor alat) | 2026-10-16 | Day 07 |
-| Velociraptor artifact: Windows.Forensics.Bam | https://docs.velociraptor.app/artifact_references/pages/windows.forensics.bam | primer | 2026-10-16 | Day 07 |
+| Velociraptor artifact: Windows.Forensics.Bam | https://docs.velociraptor.app/artifact_references/pages/windows.forensics.bam | primer | 2026-10-16 | Day 07, 12 |
 | winreg-kb: Background activity moderator (BAM) | https://winreg-kb.readthedocs.io/en/latest/sources/system-keys/Background-activity-moderator.html | primer (dokumentasi format, reverse engineering) | 2026-10-16 | Day 07 |
 | Velociraptor artifact: Windows.Registry.UserAssist | https://docs.velociraptor.app/artifact_references/pages/windows.registry.userassist | primer | 2026-10-16 | Day 07 |
-| Magnet Forensics: SRUM forensic analysis | https://www.magnetforensics.com/blog/srum-forensic-analysis-of-windows-system-resource-utilization-monitor/ | sekunder (vendor alat) | 2026-10-16 | Day 07 |
+| Magnet Forensics: SRUM forensic analysis | https://www.magnetforensics.com/blog/srum-forensic-analysis-of-windows-system-resource-utilization-monitor/ | sekunder (vendor alat) | 2026-10-16 | Day 07, 12 |
 | SANS ISC: SRUM-DUMP Version 3 | https://isc.sans.edu/diary/31896 | sekunder (SANS) | 2026-10-16 | Day 07 |
 | KapeFiles: EvidenceOfExecution.tkape dan folder Targets\Windows | https://raw.githubusercontent.com/EricZimmerman/KapeFiles/master/Targets/Compound/EvidenceOfExecution.tkape | primer | 2026-10-16 | Day 07 |
 | Microsoft: NTFS dan file system (referensi struktur) | https://learn.microsoft.com/en-us/windows-server/storage/file-server/ntfs-overview | primer | 2026-10-09 | Day 08 |
-| Microsoft Learn: USN_RECORD_V2 structure (winioctl.h) | https://learn.microsoft.com/en-us/windows/win32/api/winioctl/ns-winioctl-usn_record_v2 | primer (dokumentasi vendor) | 2026-10-16 | Day 08 |
+| Microsoft Learn: USN_RECORD_V2 structure (winioctl.h) | https://learn.microsoft.com/en-us/windows/win32/api/winioctl/ns-winioctl-usn_record_v2 | primer (dokumentasi vendor) | 2026-10-16 | Day 08, 12 |
 | Microsoft Learn: Change Journals | https://learn.microsoft.com/en-us/windows/win32/fileio/change-journals | primer (dokumentasi vendor) | 2026-10-16 | Day 08 |
 | Microsoft Learn: Creating, Modifying, and Deleting a Change Journal | https://learn.microsoft.com/en-us/windows/win32/fileio/creating-modifying-and-deleting-a-change-journal | primer (dokumentasi vendor) | 2026-10-16 | Day 08 |
 | Microsoft Learn: fsutil usn | https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/fsutil-usn | primer | 2026-10-16 | Day 08 |
-| Microsoft Learn: fsutil behavior | https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/fsutil-behavior | primer (dokumentasi vendor) | 2026-10-16 | Day 08 |
+| Microsoft Learn: fsutil behavior | https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/fsutil-behavior | primer (dokumentasi vendor) | 2026-10-16 | Day 08, 12 |
 | Microsoft Learn: File Times | https://learn.microsoft.com/en-us/windows/win32/sysinfo/file-times | primer (dokumentasi vendor) | 2026-10-16 | Day 08 |
 | Microsoft Learn: Master File Table (Local File Systems) | https://learn.microsoft.com/en-us/windows/win32/fileio/master-file-table | primer (dokumentasi vendor) | 2026-10-16 | Day 08 |
 | MFTECmd README (GitHub) | https://github.com/EricZimmerman/MFTECmd | primer (repo resmi) | 2026-10-16 | Day 08 |
-| RBCmd README (GitHub) | https://github.com/EricZimmerman/RBCmd | primer (repo resmi) | 2026-10-16 | Day 08 |
-| Inversecos: Defence Evasion Technique: Timestomping Detection, NTFS Forensics | https://inversecos.com/2022/04/defence-evasion-technique-timestomping.html | sekunder (blog praktisi) | 2026-10-16 | Day 08 |
+| RBCmd README (GitHub) | https://github.com/EricZimmerman/RBCmd | primer (repo resmi) | 2026-10-16 | Day 08, 12 |
+| Inversecos: Defence Evasion Technique: Timestomping Detection, NTFS Forensics | https://inversecos.com/2022/04/defence-evasion-technique-timestomping.html | sekunder (blog praktisi) | 2026-10-16 | Day 08, 12 |
 | Winaero: How to Enable or Disable NTFS Last Access Time Updates in Windows 10 | https://winaero.com/disable-ntfs-last-access-time-updates-in-windows-10 | sekunder (blog teknologi) | 2026-10-16 | Day 08 |
 | Citrix: PVS and MCS devices cache disk quickly consumed by NTFSDisableLastAccessUpdate (CTX338425) | https://support.citrix.com/external/article/CTX338425/pvs-and-mcs-devices-cache-disk-quickly-c.html | sekunder (vendor) | 2026-10-16 | Day 08 |
 | Microsoft Learn: Use App Control to secure PowerShell | https://learn.microsoft.com/powershell/scripting/learn/application-control | primer (dokumentasi vendor) | 2026-10-16 | Day 08 |
 | Champlain College Leahy Center: Windows 10 Recycle Bin Activity Introduction | https://leahycenterblog.champlain.edu/?p=1250 | sekunder (riset akademik) | 2026-10-16 | Day 08 |
 | Andrea Fortuna: Going beneath NTFS: USN Journal, dfir_ntfs, and artefact-driven investigations | https://andreafortuna.org/2026/07/06/ntfs-forensics-deep-dive/ | sekunder (blog praktisi) | 2026-10-16 | Day 08 |
+| Microsoft: Registry (struktur hive) | https://learn.microsoft.com/en-us/windows/win32/sysinfo/registry | primer | 2026-10-09 | Day 09 |
+| MITRE ATT&CK: T1547.001 Registry Run Keys / Startup Folder | https://attack.mitre.org/techniques/T1547/001/ | primer | 2026-10-16 | Day 09, 11 |
+| RECmd BatchExamples: DFIRBatch.reb | https://raw.githubusercontent.com/EricZimmerman/RECmd/master/BatchExamples/DFIRBatch.reb | primer | 2026-10-16 | Day 09, 11 |
+| GitHub EricZimmerman/RegistryPlugins | https://github.com/EricZimmerman/RegistryPlugins | primer | 2026-10-16 | Day 09 |
+| RegistryPlugin.KnownNetworks (KnownNetworks.cs) | https://raw.githubusercontent.com/EricZimmerman/RegistryPlugins/master/RegistryPlugin.KnownNetworks/KnownNetworks.cs | primer (kode sumber plugin) | 2026-10-16 | Day 09, 12 |
+| Microsoft Learn: Registry Hives | https://learn.microsoft.com/en-us/windows/win32/sysinfo/registry-hives | primer | 2026-10-16 | Day 09 |
+| Windows registry file format specification (msuhanov/regf) | https://raw.githubusercontent.com/msuhanov/regf/master/Windows%20registry%20file%20format%20specification.md | primer (spesifikasi hasil reverse engineering) | 2026-10-16 | Day 09, 12 |
+| Microsoft Learn: RegQueryInfoKeyW | https://learn.microsoft.com/en-us/windows/win32/api/winreg/nf-winreg-regqueryinfokeyw | primer | 2026-10-16 | Day 09, 12 |
+| Microsoft Learn: KEY_SET_INFORMATION_CLASS (wdm.h) | https://learn.microsoft.com/en-us/windows-hardware/drivers/ddi/wdm/ne-wdm-_key_set_information_class | primer | 2026-10-16 | Day 09 |
+| Microsoft Learn: TIME_ZONE_INFORMATION | https://learn.microsoft.com/en-us/windows/win32/api/timezoneapi/ns-timezoneapi-time_zone_information | primer | 2026-10-16 | Day 09 |
+| Microsoft Learn: Can't set time zone automatically | https://learn.microsoft.com/en-us/troubleshoot/windows-client/shell-experience/cannot-set-timezone-automatically | primer | 2026-10-16 | Day 09 |
+| Microsoft Learn: Windows Time Service Tools and Settings | https://learn.microsoft.com/en-us/windows-server/networking/windows-time-service/windows-time-service-tools-and-settings | primer | 2026-10-16 | Day 09 |
+| Microsoft Learn: 4616(S) The system time was changed | https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/auditing/event-4616 | primer (arsip) | 2026-10-16 | Day 09, 12 |
+| Microsoft Learn: INetwork::GetTimeCreatedAndConnected | https://learn.microsoft.com/en-us/windows/win32/api/netlistmgr/nf-netlistmgr-inetwork-gettimecreatedandconnected | primer | 2026-10-16 | Day 09 |
+| Dr. Datenschutz (intersoft consulting): Daten verraten alle jemals verbundenen Netzwerke | https://www.dr-datenschutz.de/daten-verraten-alle-jemals-verbundenen-netzwerke/ | sekunder (praktisi) | 2026-10-16 | Day 09 |
+| Cyber Triage: How to Find Evidence of Network Windows Registry | https://www.cybertriage.com/?p=27764 | sekunder (vendor alat) | 2026-10-16 | Day 09 |
+| Plaso: parser winreg_plugins networks (NetworkList) | https://plaso-fork.readthedocs.io/en/latest/_modules/plaso/parsers/winreg_plugins/networks.html | primer (kode sumber proyek) | 2026-10-16 | Day 09 |
+| Microsoft Learn: Appendix A: TCP/IP Configuration Parameters (Windows Server 2003) | https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2003/cc739819(v=ws.10) | primer (arsip) | 2026-10-16 | Day 09 |
+| Microsoft Learn: 802.11 Wireless Connectivity (event WLAN-AutoConfig) | https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc727690(v=ws.10) | primer (arsip) | 2026-10-16 | Day 09 |
+| Microsoft Learn: DEVPKEY_Device_InstallDate | https://learn.microsoft.com/en-us/windows-hardware/drivers/install/devpkey-device-installdate | primer | 2026-10-16 | Day 09 |
+| Microsoft Learn: DEVPKEY_Device_FirstInstallDate | https://learn.microsoft.com/en-us/windows-hardware/drivers/install/devpkey-device-firstinstalldate | primer | 2026-10-16 | Day 09, 12 |
+| mingw-w64 headers: devpkey.h | https://raw.githubusercontent.com/mingw-w64/mingw-w64/master/mingw-w64-headers/include/devpkey.h | primer (header publik, tiruan SDK) | 2026-10-16 | Day 09 |
+| Elcomsoft: USB Device Forensics on Windows 10 and 11 | https://blog.elcomsoft.com/2026/02/usb-device-forensics-on-windows-10-and-11/ | sekunder (vendor forensik) | 2026-10-16 | Day 09, 12 |
+| IT-Connect: Forensic Windows Part 15, Tracing USB Device History | https://www.it-connect.tech/forensic-windows-part-15-tracing-usb-device-history/ | sekunder (praktisi) | 2026-10-16 | Day 09, 12 |
+| Magnet Forensics: Artifact Profile, USB Devices | https://www.magnetforensics.com/blog/artifact-profile-usb-devices/ | sekunder (vendor alat) | 2026-10-16 | Day 09 |
+| Security Ronin: usb-forensic README | https://docs.rs/crate/usb-forensic/0.2.0/source/README.md | komunitas (proyek alat sumber terbuka) | 2026-10-16 | Day 09 |
+| Microsoft Learn: Format of a Text Log Section Header (SetupAPI) | https://learn.microsoft.com/en-us/windows-hardware/drivers/install/format-of-a-text-log-section-header | primer | 2026-10-16 | Day 09 |
+| Microsoft Security Blog: Tarrask malware uses scheduled tasks for defense evasion | https://www.microsoft.com/en-us/security/blog/2022/04/12/tarrask-malware-uses-scheduled-tasks-for-defense-evasion/ | primer (vendor) | 2026-10-16 | Day 09, 12 |
+| Microsoft Learn: HKLM\SYSTEM\CurrentControlSet\Services Registry Tree | https://learn.microsoft.com/en-us/windows-hardware/drivers/install/hklm-system-currentcontrolset-services-registry-tree | primer | 2026-10-16 | Day 09 |
+| Microsoft Learn: Autoruns (Sysinternals) | https://learn.microsoft.com/en-us/sysinternals/downloads/autoruns | primer | 2026-10-16 | Day 09 |
+| winreg-kb: Security Accounts Manager (SAM) keys, Domains | https://winreg-kb.readthedocs.io/en/latest/sources/security-accounts-manager-keys/Domains.html | primer (dokumentasi format, reverse engineering) | 2026-10-16 | Day 09 |
+| Microsoft Learn: Interactive logon, Number of previous logons to cache | https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/security-policy-settings/interactive-logon-number-of-previous-logons-to-cache-in-case-domain-controller-is-not-available | primer (arsip) | 2026-10-16 | Day 09 |
+| Microsoft Q&A: Windows 11 Product Name in registry | https://learn.microsoft.com/en-us/answers/questions/555857/windows-11-product-name-in-registry | komunitas (jawaban yang diteruskan dari Microsoft Developer Support) | 2026-10-16 | Day 09 |
+| Microsoft Learn: Windows 11 release information | https://learn.microsoft.com/en-us/windows/release-health/windows11-release-information | primer | 2026-10-16 | Day 09 |
+| Microsoft Learn: Audit Security State Change | https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/auditing/audit-security-state-change | primer (arsip) | 2026-10-16 | Day 09 |
+| HackMD (chinhnamdo): catatan Registry Explorer dan transaction log | https://hackmd.io/@chinhnamdo/H1aW5MKtA | komunitas (catatan belajar) | 2026-10-16 | Day 09 |
+| Microsoft Open Specifications: [MS-SHLLINK] Shell Link (.LNK) Binary File Format | https://learn.microsoft.com/en-us/openspecs/windows_protocols/ms-shllink/16cb4ca1-9339-4d0c-a68d-bf1d6cc0f943 | primer | 2026-10-16 | Day 10 |
+| [MS-SHLLINK] ShellLinkHeader | https://learn.microsoft.com/en-us/openspecs/windows_protocols/ms-shllink/c3376b21-0931-45e4-b2fc-a48ac0e60d15 | primer | 2026-10-16 | Day 10 |
+| [MS-SHLLINK] VolumeID | https://learn.microsoft.com/en-us/openspecs/windows_protocols/ms-shllink/b7b3eea7-dbff-4275-bd58-83ba3f12d87a | primer | 2026-10-16 | Day 10, 12 |
+| [MS-SHLLINK] TrackerDataBlock | https://learn.microsoft.com/en-us/openspecs/windows_protocols/ms-shllink/df8e3748-fba5-4524-968a-f72be06d71fc | primer | 2026-10-16 | Day 10 |
+| Microsoft Learn: SHAddToRecentDocs function (shlobj_core.h) | https://learn.microsoft.com/en-us/windows/win32/api/shlobj_core/nf-shlobj_core-shaddtorecentdocs | primer | 2026-10-16 | Day 10, 12 |
+| LECmd README (GitHub) | https://github.com/EricZimmerman/LECmd | primer (repo resmi) | 2026-10-16 | Day 10 |
+| JLECmd README (GitHub) | https://github.com/EricZimmerman/JLECmd | primer (repo resmi) | 2026-10-16 | Day 10 |
+| RECmd README (GitHub) | https://github.com/EricZimmerman/RECmd | primer (repo resmi) | 2026-10-16 | Day 10 |
+| RECmd BatchExamples: UserActivity.reb | https://raw.githubusercontent.com/EricZimmerman/RECmd/master/BatchExamples/UserActivity.reb | primer (repo resmi) | 2026-10-16 | Day 10 |
+| RECmd BatchExamples: DFIRBatch.md | https://github.com/EricZimmerman/RECmd/blob/master/BatchExamples/DFIRBatch.md | primer (repo resmi) | 2026-10-16 | Day 10 |
+| KapeFiles: LNKFilesAndJumpLists.tkape | https://raw.githubusercontent.com/EricZimmerman/KapeFiles/master/Targets/Windows/LNKFilesAndJumpLists.tkape | primer (repo resmi) | 2026-10-16 | Day 10 |
+| KapeFiles: RegistryHivesUser.tkape | https://raw.githubusercontent.com/EricZimmerman/KapeFiles/master/Targets/Windows/RegistryHivesUser.tkape | primer (repo resmi) | 2026-10-16 | Day 10 |
+| Cyber Triage: ShellBags Forensic Analysis 2026 | https://www.cybertriage.com/blog/shellbags-forensic-analysis-2026/ | sekunder (vendor DFIR) | 2026-10-16 | Day 10, 12 |
+| Cyber Triage: Windows Registry Forensics Cheat Sheet 2026 | https://www.cybertriage.com/blog/windows-registry-forensics-cheat-sheet-2026/ | sekunder (vendor DFIR) | 2026-10-16 | Day 10 |
+| CSIRT.SK: LNK File Forensics | http://www.csirt.gov.sk/wp-content/uploads/2021/08/LNK_File_Forensics-RC.pdf | sekunder (CSIRT pemerintah) | 2026-10-16 | Day 10 |
+| IT-Connect: Forensic Windows, Partie 13: analyser les Jump Lists | https://www.it-connect.fr/forensic-windows-jump-lists/ | sekunder (blog praktisi) | 2026-10-16 | Day 10 |
+| IT-Connect: Windows Forensic, Partie 8: explorer les Shellbags | https://www.it-connect.fr/windows-forensic-partie-8-explorer-les-shellbags/ | sekunder (blog praktisi) | 2026-10-16 | Day 10 |
+| Mandiant: The Missing LNK: Correlating User Search LNK Files | https://cloud.google.com/blog/topics/threat-intelligence/the-missing-lnk-correlating-user-search-lnk-files | sekunder (vendor IR) | 2026-10-16 | Day 10, 12 |
+| Binalyze AIR Knowledge Base: OpenSavePidlMRU | https://kb.binalyze.com/air/features/acquisition/supported-evidence/windows-collections-detail/opensavepidlmru | sekunder (vendor DFIR) | 2026-10-16 | Day 10 |
+| Microsoft Learn (arsip): Do not keep history of recently opened documents | https://learn.microsoft.com/en-us/previous-versions/ms811590(v=msdn.10) | primer (arsip) | 2026-10-16 | Day 10 |
+| Microsoft Learn: Run and RunOnce Registry Keys | https://learn.microsoft.com/en-us/windows/win32/setupapi/run-and-runonce-registry-keys | primer | 2026-10-16 | Day 11, 12 |
+| MITRE ATT&CK: T1546.003, T1543.003, T1053.005, T1021, T1569.002 | https://attack.mitre.org/techniques/T1546/003/ | primer | 2026-10-16 | Day 11 |
+| JPCERT/CC: Tool Analysis Result Sheet (PsExec, wmic, WinRM, mstsc, schtasks) | https://jpcertcc.github.io/ToolAnalysisResultSheet/ | sekunder (CERT) | 2026-10-16 | Day 11, 12 |
+| Microsoft Learn: PsExec (Sysinternals) | https://learn.microsoft.com/en-us/sysinternals/downloads/psexec | primer | 2026-10-16 | Day 11 |
+| Microsoft Learn: Remove entries from Remote Desktop Connection Computer box | https://learn.microsoft.com/en-us/troubleshoot/windows-server/remote/remove-entries-from-remote-desktop-connection-computer | primer | 2026-10-16 | Day 11, 12 |
+| Elastic Security: Incoming Execution via PowerShell Remoting | https://www.elastic.co/guide/en/security/current/incoming-execution-via-powershell-remoting.html | sekunder (vendor) | 2026-10-16 | Day 11 |
+| Microsoft Learn: Receiving Events at All Times (permanent event consumer) | https://learn.microsoft.com/en-us/windows/win32/wmisdk/receiving-events-at-all-times | primer | 2026-10-16 | Day 11, 12 |
+| Microsoft Learn: Standard Consumer Classes | https://learn.microsoft.com/en-us/windows/win32/wmisdk/standard-consumer-classes | primer | 2026-10-16 | Day 11 |
+| Velociraptor: Windows.Persistence.PermanentWMIEvents | https://docs.velociraptor.app/artifact_references/pages/windows.persistence.permanentwmievents/ | primer (dokumentasi proyek) | 2026-10-16 | Day 11 |
+| Microsoft Learn: 4778(S) A session was reconnected to a Window Station | https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/auditing/event-4778 | primer | 2026-10-16 | Day 11 |
+| Microsoft Learn: Installation and configuration for Windows Remote Management | https://learn.microsoft.com/en-us/windows/win32/winrm/installation-and-configuration-for-windows-remote-management | primer | 2026-10-16 | Day 11 |
+| GitHub: woanware/wmi-parser | https://github.com/woanware/wmi-parser | primer (repo) | 2026-10-16 | Day 11 |
+| GitHub: davidpany/WMI_Forensics (PyWMIPersistenceFinder) | https://github.com/davidpany/WMI_Forensics | primer (repo) | 2026-10-16 | Day 11 |
+| Microsoft Learn: Tracing WMI Activity | https://learn.microsoft.com/en-us/windows/win32/wmisdk/tracing-wmi-activity | primer | 2026-10-16 | Day 11 |

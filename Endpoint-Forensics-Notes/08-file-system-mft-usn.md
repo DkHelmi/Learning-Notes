@@ -388,7 +388,7 @@ Keluaran ilustrasi:
 ```
 287416
 2026-10-11 03:17:52.0845519
-2026-10-15 01:46:30.9917702
+2026-10-15 01:47:50.4417702
 ```
 
 **Cara membaca hasil:** jendela `$J` E15 adalah Minggu 2026-10-11 10:17:52 WIB sampai Kamis 2026-10-15 08:47:50 WIB, saat laptop dimatikan untuk image. Seluruh insiden (Senin 15:58 sampai containment) ada di dalam jendela, sehingga "tidak ada record" di bawah berarti tidak ada perubahan selama jendela itu, bukan "tidak tahu". Perubahan sebelum Minggu pagi tidak bisa dinilai dari `$J`.
