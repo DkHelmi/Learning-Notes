@@ -489,7 +489,7 @@ TimeCreated                 EventId Channel
 
 **Cara membaca hasil:** event 4104 pertama Senin 20:14:52 WIB, lalu berulang sekitar 15 menit kemudian, cocok dengan trigger task. Isi blok skrip di kolom payload menunjukkan loader yang sama dengan laptop pertama, sehingga sebagian isi `upd.ps1` bisa dibaca dari sini [S19]. Tidak ada 4698 (task dibuat) di hasil ini; itu bisa berarti audit yang diperlukan tidak aktif di laptop itu, bukan berarti task tidak dibuat. Cek kebijakan audit host sebelum menulis kesimpulan (Day 05).
 
-**Variasi:** buka output PECmd dan cari Prefetch `WSCRIPT.EXE` yang mereferensikan `Tagihan-Okt-2026.js`; di contoh ini waktu jalannya Senin 20:14:21 WIB, 16 detik sebelum `upd.ps1` dibuat. Output SrumECmd memberi pemakaian jaringan per aplikasi selama laptop di luar kantor, tanpa alamat tujuan (Day 10).
+**Variasi:** buka output PECmd dan cari Prefetch `WSCRIPT.EXE` yang mereferensikan `Tagihan-Okt-2026.js`; di contoh ini waktu jalannya Senin 20:14:21 WIB, 16 detik sebelum `upd.ps1` dibuat. Output SrumECmd memberi pemakaian jaringan per aplikasi selama laptop di luar kantor, tanpa alamat tujuan (Day 07).
 
 **Kapan gagal:** zona waktu tidak dinormalisasi, sehingga 13:14 UTC dibaca sebagai 13:14 WIB dan kejadian tampak terjadi sebelum email diterima pukul 15:58.
 
