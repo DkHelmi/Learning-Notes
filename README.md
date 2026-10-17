@@ -11,5 +11,6 @@ Tiap folder berisi catatan yang dipecah per Day.
 - [Splunk](Splunk-Notes/)
 - [Incident Response](Incident-Response-Notes/)
 - [Endpoint Forensics](Endpoint-Forensics-Notes/)
+- [Threat Hunting](Threat-Hunting-Notes/)
 - [CTI](CTI-Notes/)
 - [ISO 27001](ISO27001-Notes/)
