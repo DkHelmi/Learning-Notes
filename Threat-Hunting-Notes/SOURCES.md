@@ -14,7 +14,7 @@ Indeks sumber global, disusun dari tabel Sumber (bagian 9) setiap Day di folder 
 | Sqrrl: The Threat Hunting Reference Model Part 2: The Hunting Loop | https://www.threathunting.net/files/The%20Threat%20Hunting%20Reference%20Model%20Part%202_%20The%20Hunting%20Loop%20_%20Sqrrl.pdf | primer | 2026-10-18 | Day 02 |
 | Expel: What are threat hunting frameworks? | https://expel.com/cyberspeak/what-are-threat-hunting-frameworks/ | sekunder | 2026-10-08 | Day 02 |
 | Splunk: Hypothesis-Driven Hunting with the PEAK Framework | https://www.splunk.com/en_us/blog/security/peak-hypothesis-driven-threat-hunting.html | sekunder | 2026-10-18 | Day 02, 03 |
-| Microsoft Learn: Sysmon (Sysinternals) | https://learn.microsoft.com/en-us/sysinternals/downloads/sysmon | primer | 2026-10-18 | Day 02, 03, 04 |
+| Microsoft Learn: Sysmon (Sysinternals) | https://learn.microsoft.com/en-us/sysinternals/downloads/sysmon | primer | 2026-10-18 | Day 02, 03, 04, 10 |
 | Atomic Red Team: T1105 Ingress Tool Transfer | https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1105/T1105.md | primer | 2026-10-18 | Day 02 |
 | Splunk: Baseline Hunting with the PEAK Framework | https://www.splunk.com/en_us/blog/security/peak-baseline-hunting.html | sekunder | 2026-10-18 | Day 02, 05 |
 | Splunk: Turning Hunts Into Detections with PEAK | https://www.splunk.com/en_us/blog/security/peak-turning-hunts-into-detections.html | sekunder | 2026-10-18 | Day 02 |
@@ -30,11 +30,11 @@ Indeks sumber global, disusun dari tabel Sumber (bagian 9) setiap Day di folder 
 | MITRE ATT&CK: Groups | https://attack.mitre.org/groups/ | primer | 2026-10-10 | Day 03 |
 | MITRE ATT&CK: T1071.004 Application Layer Protocol: DNS | https://attack.mitre.org/techniques/T1071/004/ | primer | 2026-10-18 | Day 03 |
 | MITRE ATT&CK: T1048 Exfiltration Over Alternative Protocol | https://attack.mitre.org/techniques/T1048/ | primer | 2026-10-18 | Day 03 |
-| MITRE ATT&CK: T1053.005 Scheduled Task/Job: Scheduled Task | https://attack.mitre.org/techniques/T1053/005/ | primer | 2026-10-18 | Day 03, 07, 09 |
+| MITRE ATT&CK: T1053.005 Scheduled Task/Job: Scheduled Task | https://attack.mitre.org/techniques/T1053/005/ | primer | 2026-10-18 | Day 03, 07, 09, 10 |
 | MITRE ATT&CK: DET0400 Behavioral Detection of DNS Tunneling and Application Layer Abuse | https://attack.mitre.org/detectionstrategies/DET0400/ | primer | 2026-10-18 | Day 03, 04 |
 | MITRE ATT&CK: Versions of ATT&CK | https://attack.mitre.org/resources/versions/ | primer | 2026-10-18 | Day 03, 04, 07 |
 | EventSentry: Sysmon Event ID 22 | https://system32.eventsentry.com/sysmon/event/22 | sekunder | 2026-10-18 | Day 03 |
-| Microsoft Learn: 4698(S) A scheduled task was created | https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/auditing/event-4698 | primer | 2026-10-18 | Day 03, 04, 07 |
+| Microsoft Learn: 4698(S) A scheduled task was created | https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/auditing/event-4698 | primer | 2026-10-18 | Day 03, 04, 07, 10 |
 | Unit 42: Detecting DNS Tunneling Campaigns in the Wild (Ruian Duan, Daiping Liu) | https://unit42.paloaltonetworks.com/dns-tunneling-in-the-wild/ | sekunder | 2026-10-18 | Day 03 |
 | IETF RFC 1035: Domain Names, Implementation and Specification | https://www.rfc-editor.org/rfc/rfc1035 | primer | 2026-10-18 | Day 03 |
 | Splunk Docs: CIM 6.4 Network Resolution (DNS) data model | https://help.splunk.com/en/data-management/common-information-model/6.4/data-models/network-resolution-dns | primer | 2026-10-18 | Day 03 |
@@ -92,9 +92,9 @@ Indeks sumber global, disusun dari tabel Sumber (bagian 9) setiap Day di folder 
 | Splunk CIM: release notes 6.4 dan 8.7, Endpoint data model 8.7 | https://help.splunk.com/en/data-management/common-information-model/8.7/introduction/release-notes-for-the-splunk-common-information-model-add-on | primer | 2026-10-18 | Day 06 |
 | Splunk Enterprise 10.6 release notes | https://help.splunk.com/en/splunk-enterprise/release-notes-and-updates/release-notes/10.6 | primer | 2026-10-18 | Day 06 |
 | Splunk: Introducing the PEAK Threat Hunting Framework; PEAK hypothesis-driven hunting | https://www.splunk.com/en_us/blog/security/peak-threat-hunting-framework.html ; https://www.splunk.com/en_us/blog/security/peak-hypothesis-driven-threat-hunting.html | sekunder | 2026-10-10 | Day 07 |
-| Atomic Red Team: T1053.005 | https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1053.005/T1053.005.md | primer | 2026-10-18 | Day 07 |
+| Atomic Red Team: T1053.005 | https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1053.005/T1053.005.md | primer | 2026-10-18 | Day 07, 10 |
 | Microsoft Learn: Audit Other Object Access Events | https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/auditing/audit-other-object-access-events | primer | 2026-10-18 | Day 07 |
-| Microsoft Learn: 4699(S) A scheduled task was deleted | https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/auditing/event-4699 | primer | 2026-10-18 | Day 07 |
+| Microsoft Learn: 4699(S) A scheduled task was deleted | https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/auditing/event-4699 | primer | 2026-10-18 | Day 07, 10 |
 | MITRE ATT&CK: DET0441 Detection of Suspicious Scheduled Task Creation and Execution on Windows | https://attack.mitre.org/detectionstrategies/DET0441/ | primer | 2026-10-18 | Day 07 |
 | Splunk Enterprise Search Manual 10.0: About subsearches | https://help.splunk.com/en/splunk-enterprise/search/search-manual/10.0/subsearches | primer | 2026-10-18 | Day 07 |
 | Wazuh documentation: Event logging (Wazuh archives) | https://documentation.wazuh.com/current/user-manual/manager/event-logging.html | primer | 2026-10-18 | Day 08 |
@@ -121,16 +121,16 @@ Indeks sumber global, disusun dari tabel Sumber (bagian 9) setiap Day di folder 
 | Wazuh 4.14 documentation: Threat hunting (use case) | https://documentation.wazuh.com/4.14/getting-started/use-cases/threat-hunting.html | primer | 2026-10-18 | Day 08 |
 | Wazuh documentation: Navigating the Wazuh dashboard | https://documentation.wazuh.com/current/user-manual/wazuh-dashboard/navigating-the-wazuh-dashboard.html | primer | 2026-10-18 | Day 08 |
 | Wazuh documentation: Rules XML syntax | https://documentation.wazuh.com/current/user-manual/ruleset/ruleset-xml-syntax/rules.html | primer | 2026-10-18 | Day 08 |
-| Velociraptor releases (0.77.3) | https://github.com/Velocidex/velociraptor/releases | primer | 2026-10-18 | Day 09 |
+| Velociraptor releases (0.77.3) | https://github.com/Velocidex/velociraptor/releases | primer | 2026-10-18 | Day 09, 10 |
 | Velociraptor documentation: Overview | https://docs.velociraptor.app/docs/overview/ | primer | 2026-10-18 | Day 09 |
 | Velociraptor documentation: VQL fundamentals | https://docs.velociraptor.app/docs/vql/fundamentals/ | primer | 2026-10-18 | Day 09 |
-| Velociraptor artifact reference: Windows.Sysinternals.Autoruns | https://docs.velociraptor.app/artifact_references/pages/windows.sysinternals.autoruns/ | primer | 2026-10-18 | Day 09 |
-| Velociraptor artifact reference: Windows.Sys.StartupItems | https://docs.velociraptor.app/artifact_references/pages/windows.sys.startupitems/ | primer | 2026-10-18 | Day 09 |
-| Velociraptor artifact reference: Windows.System.TaskScheduler | https://docs.velociraptor.app/artifact_references/pages/windows.system.taskscheduler/ | primer | 2026-10-18 | Day 09 |
+| Velociraptor artifact reference: Windows.Sysinternals.Autoruns | https://docs.velociraptor.app/artifact_references/pages/windows.sysinternals.autoruns/ | primer | 2026-10-18 | Day 09, 10 |
+| Velociraptor artifact reference: Windows.Sys.StartupItems | https://docs.velociraptor.app/artifact_references/pages/windows.sys.startupitems/ | primer | 2026-10-18 | Day 09, 10 |
+| Velociraptor artifact reference: Windows.System.TaskScheduler | https://docs.velociraptor.app/artifact_references/pages/windows.system.taskscheduler/ | primer | 2026-10-18 | Day 09, 10 |
 | Velociraptor artifact reference: Windows.Search.FileFinder | https://docs.velociraptor.app/artifact_references/pages/windows.search.filefinder/ | primer | 2026-10-18 | Day 09 |
 | Velociraptor artifact reference: Windows.Events.ProcessCreation | https://docs.velociraptor.app/artifact_references/pages/windows.events.processcreation/ | primer | 2026-10-10 | Day 09 |
 | Velociraptor artifact reference: Windows.Sigma.EventLogs | https://docs.velociraptor.app/artifact_references/pages/windows.sigma.eventlogs/ | primer | 2026-10-18 | Day 09 |
-| MITRE ATT&CK: T1547.001 Registry Run Keys / Startup Folder | https://attack.mitre.org/techniques/T1547/001/ | primer | 2026-10-10 | Day 09 |
+| MITRE ATT&CK: T1547.001 Registry Run Keys / Startup Folder | https://attack.mitre.org/techniques/T1547/001/ | primer | 2026-10-18 | Day 09, 10 |
 | Velociraptor documentation: Hunting | https://docs.velociraptor.app/docs/hunting/ | primer | 2026-10-18 | Day 09 |
 | Velociraptor documentation: Client monitoring | https://docs.velociraptor.app/docs/clients/monitoring/ | primer | 2026-10-18 | Day 09 |
 | Velociraptor documentation: Limiting resource usage | https://docs.velociraptor.app/docs/artifacts/resources/ | primer | 2026-10-18 | Day 09 |
@@ -145,3 +145,23 @@ Indeks sumber global, disusun dari tabel Sumber (bagian 9) setiap Day di folder 
 | Velociraptor artifact reference: Windows.System.DNSCache | https://docs.velociraptor.app/artifact_references/pages/windows.system.dnscache/ | primer | 2026-10-18 | Day 09 |
 | Velociraptor artifact reference: Windows.Network.NetstatEnriched | https://docs.velociraptor.app/artifact_references/pages/windows.network.netstatenriched/ | primer | 2026-10-18 | Day 09 |
 | Velociraptor artifact reference: Windows.Remediation.Quarantine | https://docs.velociraptor.app/artifact_references/pages/windows.remediation.quarantine/ | primer | 2026-10-18 | Day 09 |
+| MITRE ATT&CK: Persistence (TA0003) dan Execution (TA0002) | https://attack.mitre.org/tactics/TA0003/ | primer | 2026-10-18 | Day 10 |
+| Microsoft Learn: about_Logging_Windows (PowerShell 7.6, Script Block Logging, 4104) | https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_logging_windows | primer | 2026-10-18 | Day 10 |
+| Atomic Red Team: T1547.001 | https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1547.001/T1547.001.md | primer | 2026-10-18 | Day 10 |
+| Atomic Red Team: T1059.001 | https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1059.001/T1059.001.md | primer | 2026-10-18 | Day 10 |
+| MITRE ATT&CK v20: T1543.003 Windows Service | https://attack.mitre.org/techniques/T1543/003/ | primer | 2026-10-18 | Day 10 |
+| MITRE ATT&CK v20: T1546.003 WMI Event Subscription | https://attack.mitre.org/techniques/T1546/003/ | primer | 2026-10-18 | Day 10 |
+| MITRE ATT&CK v20: T1059.001 PowerShell | https://attack.mitre.org/techniques/T1059/001/ | primer | 2026-10-18 | Day 10 |
+| Microsoft Learn: 4702(S) A scheduled task was updated | https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/auditing/event-4702 | primer | 2026-10-18 | Day 10 |
+| Microsoft Learn: 4697(S) A service was installed in the system | https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/auditing/event-4697 | primer | 2026-10-18 | Day 10 |
+| ManageEngine ADAudit Plus: Event ID 7045 | https://www.manageengine.com/products/active-directory-audit/kb/system-events/event-id-7045.html | sekunder | 2026-10-18 | Day 10 |
+| Microsoft Learn: about_Logging (Windows PowerShell 5.1) | https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_logging?view=powershell-5.1 | primer | 2026-10-18 | Day 10 |
+| TrustedSec: Building a Detection Foundation Part 3, PowerShell and Script Logging (Carlos Perez) | https://trustedsec.com/blog/building-a-detection-foundation-part-3-powershell-and-script-logging | sekunder | 2026-10-18 | Day 10 |
+| Velociraptor: Windows.EventLogs.PowershellScriptblock | https://docs.velociraptor.app/artifact_references/pages/windows.eventlogs.powershellscriptblock/ | primer | 2026-10-18 | Day 10 |
+| Microsoft Security Blog: Tarrask malware uses scheduled tasks for defense evasion | https://www.microsoft.com/en-us/security/blog/2022/04/12/tarrask-malware-uses-scheduled-tasks-for-defense-evasion/ | primer | 2026-10-18 | Day 10 |
+| Splunk Security Content: Powershell Fileless Script Contains Base64 Encoded Content | https://research.splunk.com/endpoint/8acbc04c-c882-11eb-b060-acde48001122/ | sekunder | 2026-10-18 | Day 10 |
+| Velociraptor Artifact Exchange: Windows.Registry.TaskCache.HiddenTasks | https://docs.velociraptor.app/exchange/artifacts/pages/windows.registry.taskcache.hiddentasks/ | komunitas | 2026-10-18 | Day 10 |
+| Atomic Red Team: T1546.003 | https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1546.003/T1546.003.md | primer | 2026-10-18 | Day 10 |
+| Velociraptor: Windows.Persistence.PermanentWMIEvents | https://docs.velociraptor.app/artifact_references/pages/windows.persistence.permanentwmievents/ | primer | 2026-10-18 | Day 10 |
+| Splunk Docs: streamstats (Search Reference 10.2) | https://help.splunk.com/en/splunk-enterprise/search/spl-search-reference/10.2/search-commands/streamstats | primer | 2026-10-18 | Day 10 |
+| Atomic Red Team: T1543.003 | https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1543.003/T1543.003.md | primer | 2026-10-18 | Day 10 |
