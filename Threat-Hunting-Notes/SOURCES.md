@@ -4,10 +4,10 @@ Indeks sumber global, disusun dari tabel Sumber (bagian 9) setiap Day di folder 
 
 | Judul | URL | Tipe | Diakses | Dipakai di |
 |---|---|---|---|---|
-| Splunk: Introducing the PEAK Threat Hunting Framework | https://www.splunk.com/en_us/blog/security/peak-threat-hunting-framework.html | sekunder | 2026-10-18 | Day 01, 02, 14 |
+| Splunk: Introducing the PEAK Threat Hunting Framework | https://www.splunk.com/en_us/blog/security/peak-threat-hunting-framework.html | sekunder | 2026-10-18 | Day 01, 02, 14, 15 |
 | TaHiTI: a threat hunting methodology (whitepaper) | https://www.betaalvereniging.nl/wp-content/uploads/2026/03/TaHiTI-Threat-Hunting-Methodology-whitepaper.pdf | primer | 2026-10-18 | Day 01, 02, 03, 07 |
 | Sqrrl: Hunt Evil: Your Practical Guide to Threat Hunting (berisi HMM) | https://www.threathunting.net/files/hunt-evil-practical-guide-threat-hunting.pdf | primer | 2026-10-10 | Day 01, 07 |
-| SANS: Threat hunters call data their biggest barrier (2026 survey) | https://www.sans.org/press/announcements/threat-hunters-call-data-their-biggest-barrier-overtaking-staffing-first-time-survey-finds | sekunder | 2026-10-07 | Day 01, 02, 04, 07 |
+| SANS: Threat hunters call data their biggest barrier (2026 survey) | https://www.sans.org/press/announcements/threat-hunters-call-data-their-biggest-barrier-overtaking-staffing-first-time-survey-finds | sekunder | 2026-10-18 | Day 01, 02, 04, 07, 15 |
 | Wiz Academy: Threat Hunters: Responsibilities, Salary, Career Progression | https://www.wiz.io/academy/threat-hunters | sekunder | 2026-10-10 | Day 01 |
 | SANS 2025 Threat Hunting Survey: Advancements in Threat Hunting Amid AI and Cloud Challenges (Josh Lemon) | https://www.sans.org/white-papers/sans-2025-threat-hunting-survey-advancements-threat-hunting-amid-ai-cloud-challenges | sekunder | 2026-10-10 | Day 01 |
 | Google Cloud / Mandiant: M-Trends 2026: Data, Insights, and Strategies From the Frontlines | https://cloud.google.com/blog/topics/threat-intelligence/m-trends-2026/ | sekunder | 2026-10-18 | Day 01 |
@@ -18,7 +18,7 @@ Indeks sumber global, disusun dari tabel Sumber (bagian 9) setiap Day di folder 
 | Atomic Red Team: T1105 Ingress Tool Transfer | https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1105/T1105.md | primer | 2026-10-18 | Day 02 |
 | Splunk: Baseline Hunting with the PEAK Framework | https://www.splunk.com/en_us/blog/security/peak-baseline-hunting.html | sekunder | 2026-10-18 | Day 02, 05 |
 | Splunk: Turning Hunts Into Detections with PEAK | https://www.splunk.com/en_us/blog/security/peak-turning-hunts-into-detections.html | sekunder | 2026-10-18 | Day 02 |
-| Splunk: Measuring Hunting Success with PEAK | https://www.splunk.com/en_us/blog/security/peak-threat-hunting-metrics.html | sekunder | 2026-10-18 | Day 02 |
+| Splunk: Measuring Hunting Success with PEAK | https://www.splunk.com/en_us/blog/security/peak-threat-hunting-metrics.html | sekunder | 2026-10-18 | Day 02, 15 |
 | Splunk: Key Threat Hunting Deliverables with PEAK | https://www.splunk.com/en_us/blog/security/key-threat-hunting-deliverables-with-peak.html | sekunder | 2026-10-18 | Day 02 |
 | MITRE ATT&CK: T1105 Ingress Tool Transfer | https://attack.mitre.org/techniques/T1105/ | primer | 2026-10-18 | Day 02 |
 | LOLBAS Project: Certutil | https://lolbas-project.github.io/lolbas/Binaries/Certutil/ | komunitas | 2026-10-18 | Day 02, 13 |
@@ -32,7 +32,7 @@ Indeks sumber global, disusun dari tabel Sumber (bagian 9) setiap Day di folder 
 | MITRE ATT&CK: T1048 Exfiltration Over Alternative Protocol | https://attack.mitre.org/techniques/T1048/ | primer | 2026-10-18 | Day 03, 12 |
 | MITRE ATT&CK: T1053.005 Scheduled Task/Job: Scheduled Task | https://attack.mitre.org/techniques/T1053/005/ | primer | 2026-10-18 | Day 03, 07, 09, 10 |
 | MITRE ATT&CK: DET0400 Behavioral Detection of DNS Tunneling and Application Layer Abuse | https://attack.mitre.org/detectionstrategies/DET0400/ | primer | 2026-10-18 | Day 03, 04 |
-| MITRE ATT&CK: Versions of ATT&CK | https://attack.mitre.org/resources/versions/ | primer | 2026-10-18 | Day 03, 04, 07, 12 |
+| MITRE ATT&CK: Versions of ATT&CK | https://attack.mitre.org/resources/versions/ | primer | 2026-10-18 | Day 03, 04, 07, 12, 15 |
 | EventSentry: Sysmon Event ID 22 | https://system32.eventsentry.com/sysmon/event/22 | sekunder | 2026-10-18 | Day 03 |
 | Microsoft Learn: 4698(S) A scheduled task was created | https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/auditing/event-4698 | primer | 2026-10-18 | Day 03, 04, 07, 10 |
 | Unit 42: Detecting DNS Tunneling Campaigns in the Wild (Ruian Duan, Daiping Liu) | https://unit42.paloaltonetworks.com/dns-tunneling-in-the-wild/ | sekunder | 2026-10-18 | Day 03 |
@@ -240,7 +240,7 @@ Indeks sumber global, disusun dari tabel Sumber (bagian 9) setiap Day di folder 
 | Splunk: Risk-Based Alerting, the new frontier for SIEM | https://www.splunk.com/en_us/blog/security/risk-based-alerting-the-new-frontier-for-siem.html | sekunder | 2026-10-10 | Day 14 |
 | MITRE ATT&CK: T1218.010 Regsvr32 | https://attack.mitre.org/techniques/T1218/010/ | primer | 2026-10-18 | Day 14 |
 | MITRE ATT&CK: T1204.002 Malicious File | https://attack.mitre.org/techniques/T1204/002/ | primer | 2026-10-18 | Day 14 |
-| MITRE ATT&CK Navigator | https://github.com/mitre-attack/attack-navigator | primer | 2026-10-10 | Day 14 |
+| MITRE ATT&CK Navigator | https://github.com/mitre-attack/attack-navigator | primer | 2026-10-18 | Day 14, 15 |
 | MITRE ATT&CK: T1071 Application Layer Protocol | https://attack.mitre.org/techniques/T1071/ | primer | 2026-10-10 | Day 14 |
 | Threat-Hunting Day 01-13 (laporan hunt, usulan, uji lab Day 13) | (lokal) | rujukan internal | 2026-10-18 | Day 14 |
 | SigmaHQ: SigmaHQ Rule Convention | https://github.com/SigmaHQ/sigma-specification/blob/main/sigmahq/sigmahq-rule-convention.md | primer | 2026-10-18 | Day 14 |
@@ -258,3 +258,11 @@ Indeks sumber global, disusun dari tabel Sumber (bagian 9) setiap Day di folder 
 | Splunk Security Content: Office Application Spawn rundll32 process (removed) | https://research.splunk.com/removed/958751e4-9c5f-11eb-b103-acde48001122/ | primer | 2026-10-18 | Day 14 |
 | Splunk: contentctl (GitHub) | https://github.com/splunk/contentctl | primer | 2026-10-18 | Day 14 |
 | Splunk blog: From Data to Defense: Mastering the Detection Lifecycle with Detection Studio | https://www.splunk.com/en_us/blog/security/mastering-the-detection-lifecycle-with-detection-studio.html | sekunder | 2026-10-18 | Day 14 |
+| Intel 471: How threat hunting and good metrics help the business | https://www.intel471.com/blog/how-threat-hunting-and-good-metrics-help-the-business | sekunder | 2026-10-18 | Day 15 |
+| Dropzone AI: Threat Hunting Metrics That Actually Measure Success in Your SOC (Tyson Supasatit) | https://www.dropzone.ai/blog/blog-threat-hunting-metrics | sekunder | 2026-10-18 | Day 15 |
+| Threat-Hunting Day 01-14 (laporan hunt, kartu kesiapan, triase dan tanggal aktif detection) | (lokal) | rujukan internal | 2026-10-18 | Day 15 |
+| MITRE ATT&CK Navigator: CHANGELOG | https://raw.githubusercontent.com/mitre-attack/attack-navigator/master/CHANGELOG.md | primer | 2026-10-18 | Day 15 |
+| MITRE ATT&CK Navigator: Layer File Format v4.5 | https://github.com/mitre-attack/attack-navigator/blob/master/layers/spec/v4.5/layerformat.md | primer | 2026-10-18 | Day 15 |
+| AttackIQ: What Does MITRE ATT&CK Coverage Really Mean? (Jon Baker, William Booth) | https://www.attackiq.com/2026/03/10/what-does-mitre-attack-coverage-really-mean/ | sekunder | 2026-10-18 | Day 15 |
+| Splunk ES 8.7: Monitor your security operations center with findings | https://help.splunk.com/en/splunk-enterprise-security-8/administer/8.7/findings | primer | 2026-10-18 | Day 15 |
+| Splunk ES 7.3: How risk annotations provide additional context in Splunk Enterprise Security | https://help.splunk.com/en/splunk-enterprise-security-7/risk-based-alerting/7.3/identify-threat/how-risk-annotations-provide-additional-context-in-splunk-enterprise-security | primer | 2026-10-18 | Day 15 |
