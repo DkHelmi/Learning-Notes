@@ -30,7 +30,6 @@ backup/
 # Day struktur lama yang belum dimigrasi (disembunyikan dari GitHub sejak 2026-10-16).
 # Saat satu Day selesai dimigrasi, hapus barisnya di sini; saat topik mulai dimigrasi, ganti baris foldernya dengan daftar file Day yang belum.
 Detection-Engineering-Notes/
-Threat-Hunting-Notes/18-hunting-dengan-notebook.md
 Threat-Hunting-Notes/19-program-hunt.md
 Wazuh-Notes/
 Network-Forensics-Notes/

@@ -30,7 +30,7 @@ Indeks sumber global, disusun dari tabel Sumber (bagian 9) setiap Day di folder 
 | MITRE ATT&CK: Groups | https://attack.mitre.org/groups/ | primer | 2026-10-10 | Day 03 |
 | MITRE ATT&CK: T1071.004 Application Layer Protocol: DNS | https://attack.mitre.org/techniques/T1071/004/ | primer | 2026-10-18 | Day 03, 12 |
 | MITRE ATT&CK: T1048 Exfiltration Over Alternative Protocol | https://attack.mitre.org/techniques/T1048/ | primer | 2026-10-18 | Day 03, 12 |
-| MITRE ATT&CK: T1053.005 Scheduled Task/Job: Scheduled Task | https://attack.mitre.org/techniques/T1053/005/ | primer | 2026-10-18 | Day 03, 07, 09, 10 |
+| MITRE ATT&CK: T1053.005 Scheduled Task/Job: Scheduled Task | https://attack.mitre.org/techniques/T1053/005/ | primer | 2026-10-18 | Day 03, 07, 09, 10, 18 |
 | MITRE ATT&CK: DET0400 Behavioral Detection of DNS Tunneling and Application Layer Abuse | https://attack.mitre.org/detectionstrategies/DET0400/ | primer | 2026-10-18 | Day 03, 04 |
 | MITRE ATT&CK: Versions of ATT&CK | https://attack.mitre.org/resources/versions/ | primer | 2026-10-18 | Day 03, 04, 07, 12, 15, 16 |
 | EventSentry: Sysmon Event ID 22 | https://system32.eventsentry.com/sysmon/event/22 | sekunder | 2026-10-18 | Day 03 |
@@ -299,3 +299,34 @@ Indeks sumber global, disusun dari tabel Sumber (bagian 9) setiap Day di folder 
 | MITRE ATT&CK: T1528 Steal Application Access Token | https://attack.mitre.org/techniques/T1528/ | primer | 2026-10-18 | Day 17 |
 | MITRE ATT&CK: T1548.005 Temporary Elevated Cloud Access, dan Versions of ATT&CK | https://attack.mitre.org/techniques/T1548/005/ ; https://attack.mitre.org/resources/versions/ | primer | 2026-10-18 | Day 17 |
 | Summit Route: Public dataset of CloudTrail logs from flaws.cloud | https://summitroute.com/blog/2020/10/09/public_dataset_of_cloudtrail_logs_from_flaws_cloud/ | sekunder | 2026-10-18 | Day 17 |
+| MSTICPy: MSTIC Jupyter and Python Security Tools (dokumentasi resmi) | https://msticpy.readthedocs.io/en/latest/ | primer | 2026-10-09 | Day 18 |
+| Repo microsoft/msticpy (rilis dan aktivitas) | https://github.com/microsoft/msticpy | primer | 2026-10-18 | Day 18 |
+| pandas: dokumentasi resmi | https://pandas.pydata.org/docs/ | primer | 2026-10-09 | Day 18 |
+| Project Jupyter | https://jupyter.org/ | primer | 2026-10-09 | Day 18 |
+| MITRE ATT&CK: T1059 Command and Scripting Interpreter, T1071 Application Layer Protocol | https://attack.mitre.org/techniques/T1059/ | primer | 2026-10-09 | Day 18 |
+| MSTICPy: Splunk Provider | https://msticpy.readthedocs.io/en/latest/data_acquisition/SplunkProvider.html | primer | 2026-10-18 | Day 18 |
+| MSTICPy: splunk_driver.py (kode sumber, cabang utama) | https://github.com/microsoft/msticpy/blob/main/msticpy/data/drivers/splunk_driver.py | primer | 2026-10-18 | Day 18 |
+| MSTICPy: query_provider_connections_mixin.py (kode sumber) | https://github.com/microsoft/msticpy/blob/main/msticpy/data/core/query_provider_connections_mixin.py | primer | 2026-10-18 | Day 18 |
+| MSTICPy: Threat Intel Lookups (TIProviders) | https://msticpy.readthedocs.io/en/latest/data_acquisition/TIProviders.html | primer | 2026-10-18 | Day 18 |
+| MSTICPy: tilookup.py (kode sumber) | https://github.com/microsoft/msticpy/blob/main/msticpy/context/tilookup.py | primer | 2026-10-18 | Day 18 |
+| MSTICPy: IoC Extraction | https://msticpy.readthedocs.io/en/latest/data_analysis/IoCExtract.html | primer | 2026-10-18 | Day 18 |
+| MSTICPy: Pivot Functions | https://msticpy.readthedocs.io/en/latest/data_analysis/PivotFunctions.html | primer | 2026-10-18 | Day 18 |
+| MSTICPy: Velociraptor provider | https://msticpy.readthedocs.io/en/latest/data_acquisition/DataProv-Velociraptor.html | primer | 2026-10-18 | Day 18 |
+| MSTICPy: requirements.txt (cabang utama) | https://github.com/microsoft/msticpy/blob/main/requirements.txt | primer | 2026-10-18 | Day 18 |
+| pandas: pandas.to_datetime (dokumentasi 3.0.6) | https://pandas.pydata.org/docs/reference/api/pandas.to_datetime.html | primer | 2026-10-18 | Day 18 |
+| pandas: What's new in 3.0.0 | https://pandas.pydata.org/docs/whatsnew/v3.0.0.html | primer | 2026-10-18 | Day 18 |
+| pandas: Release notes (indeks) dan What's new in 2.3.3 | https://pandas.pydata.org/docs/whatsnew/index.html | primer | 2026-10-18 | Day 18 |
+| pandas: DataFrame.merge | https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.merge.html | primer | 2026-10-18 | Day 18 |
+| pandas: DataFrameGroupBy.diff | https://pandas.pydata.org/docs/reference/api/pandas.api.typing.DataFrameGroupBy.diff.html | primer | 2026-10-18 | Day 18 |
+| pandas: DataFrame.drop_duplicates | https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.drop_duplicates.html | primer | 2026-10-18 | Day 18 |
+| Splunk Enterprise 10.6 Search Manual: Export data using the Splunk REST API | https://help.splunk.com/en/splunk-enterprise/search/search-manual/10.6/export-search-results/export-data-using-the-splunk-rest-api | primer | 2026-10-18 | Day 18 |
+| Splunk REST API Tutorials 10.2: Creating searches using the REST API | https://help-preview.splunk.com/en/splunk-enterprise/leverage-rest-apis/rest-api-tutorials/10.2/rest-api-tutorials/creating-searches-using-the-rest-api | primer | 2026-10-18 | Day 18 |
+| Splunk Enterprise 10.4: Use authentication tokens | https://help.splunk.com/en/splunk-enterprise/administer/manage-users-and-security/10.4/authenticate-into-the-splunk-platform-with-tokens/use-authentication-tokens | primer | 2026-10-18 | Day 18 |
+| Tekstream: Running Searches Using Splunk's REST API, Part One (Jon Walthour) | https://www.tekstream.com/blog/splunk-rest-api-part1/ | sekunder | 2026-10-18 | Day 18 |
+| JupyterLab releases (GitHub) | https://github.com/jupyterlab/jupyterlab/releases | primer | 2026-10-18 | Day 18 |
+| nbstripout (README) | https://github.com/kynan/nbstripout | primer | 2026-10-18 | Day 18 |
+| nbconvert: Configuration options | https://nbconvert.readthedocs.io/en/latest/config_options.html | primer | 2026-10-18 | Day 18 |
+| papermill: Parameterize | https://papermill.readthedocs.io/en/latest/usage-parameterize.html | primer | 2026-10-18 | Day 18 |
+| Velociraptor: Server API | https://docs.velociraptor.app/docs/server_automation/server_api/ | primer | 2026-10-18 | Day 18 |
+| Velociraptor VQL reference: hunt_results | https://docs.velociraptor.app/vql_reference/server/hunt_results/ | primer | 2026-10-18 | Day 18 |
+| Velociraptor VQL reference: client_info | https://docs.velociraptor.app/vql_reference/server/client_info/ | primer | 2026-10-18 | Day 18 |
