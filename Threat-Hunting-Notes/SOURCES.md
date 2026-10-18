@@ -16,7 +16,7 @@ Indeks sumber global, disusun dari tabel Sumber (bagian 9) setiap Day di folder 
 | Splunk: Hypothesis-Driven Hunting with the PEAK Framework | https://www.splunk.com/en_us/blog/security/peak-hypothesis-driven-threat-hunting.html | sekunder | 2026-10-18 | Day 02, 03 |
 | Microsoft Learn: Sysmon (Sysinternals) | https://learn.microsoft.com/en-us/sysinternals/downloads/sysmon | primer | 2026-10-18 | Day 02, 03, 04 |
 | Atomic Red Team: T1105 Ingress Tool Transfer | https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1105/T1105.md | primer | 2026-10-18 | Day 02 |
-| Splunk: Baseline Hunting with the PEAK Framework | https://www.splunk.com/en_us/blog/security/peak-baseline-hunting.html | sekunder | 2026-10-18 | Day 02 |
+| Splunk: Baseline Hunting with the PEAK Framework | https://www.splunk.com/en_us/blog/security/peak-baseline-hunting.html | sekunder | 2026-10-18 | Day 02, 05 |
 | Splunk: Turning Hunts Into Detections with PEAK | https://www.splunk.com/en_us/blog/security/peak-turning-hunts-into-detections.html | sekunder | 2026-10-18 | Day 02 |
 | Splunk: Measuring Hunting Success with PEAK | https://www.splunk.com/en_us/blog/security/peak-threat-hunting-metrics.html | sekunder | 2026-10-18 | Day 02 |
 | Splunk: Key Threat Hunting Deliverables with PEAK | https://www.splunk.com/en_us/blog/security/key-threat-hunting-deliverables-with-peak.html | sekunder | 2026-10-18 | Day 02 |
@@ -59,3 +59,16 @@ Indeks sumber global, disusun dari tabel Sumber (bagian 9) setiap Day di folder 
 | BleepingComputer: Microsoft rolls out native Windows 11 Sysmon security monitoring | https://bleepingcomputer.com/news/microsoft/microsoft-rolls-out-native-windows-11-sysmon-security-monitoring | sekunder | 2026-10-18 | Day 04 |
 | Wazuh 4.14 documentation: Event logging (archives) | https://documentation.wazuh.com/4.14/user-manual/manager/event-logging.html | primer | 2026-10-18 | Day 04 |
 | Mado no Mori (forest.watch.impress.co.jp, Impress): halaman perangkat lunak Sysmon | https://forest.watch.impress.co.jp/library/software/sysmon/ | sekunder | 2026-10-18 | Day 04 |
+| Sqrrl: Hunt Evil: Your Practical Guide to Threat Hunting (berkas huntpedia.pdf di threathunting.net) | https://www.threathunting.net/files/huntpedia.pdf | primer | 2026-10-18 | Day 05 |
+| Intel 471: Threat Hunting Tactics and Techniques | https://www.intel471.com/blog/threat-hunting-tactics-techniques | sekunder | 2026-10-18 | Day 05 |
+| SANS Institute: brosur acara (abstrak sesi tentang prosedur hunt yang bergantung pada stacking), tanpa tahun | tautan asli tidak lagi tersedia | sekunder | 2026-10-08 | Day 05 |
+| Splunk: SPL Search Reference 10.6, streamstats dan outputlookup | https://help.splunk.com/en/splunk-enterprise/search/spl-search-reference/10.6/search-commands/streamstats ; https://help.splunk.com/en/splunk-enterprise/search/spl-search-reference/10.6/search-commands/outputlookup | primer | 2026-10-18 | Day 05 |
+| Day 01-04 Threat-Hunting-note | (lokal) | rujukan internal | 2026-10-08 | Day 05 |
+| Splunk: SPL Search Reference 10.6, eventstats, inputlookup, dan statistical and charting functions | https://help.splunk.com/en/splunk-enterprise/search/spl-search-reference/10.6/search-commands/eventstats ; https://help.splunk.com/en/splunk-enterprise/search/spl-search-reference/10.6/search-commands/inputlookup ; https://help.splunk.com/en/splunk-enterprise/search/spl-search-reference/10.6/statistical-and-charting-functions/statistical-and-charting-functions | primer | 2026-10-18 | Day 05 |
+| Sqrrl: The Threat Hunting Reference Model Part 2: The Hunting Loop (salinan di threathunting.net) | https://threathunting.net/files/The%20Threat%20Hunting%20Reference%20Model%20Part%202_%20The%20Hunting%20Loop%20_%20Sqrrl.pdf | sekunder | 2026-10-18 | Day 05 |
+| Active Countermeasures: RITA (repositori GitHub, README dan daftar rilis) | https://github.com/activecm/rita ; https://github.com/activecm/rita/releases | primer | 2026-10-18 | Day 05 |
+| RITA: default_config.hjson | https://raw.githubusercontent.com/activecm/rita/main/default_config.hjson | primer | 2026-10-18 | Day 05 |
+| The DFIR Report: Cobalt Strike, a Defender's Guide - Part 2 | https://thedfirreport.com/2022/01/24/cobalt-strike-a-defenders-guide-part-2/ | sekunder | 2026-10-18 | Day 05 |
+| Squid wiki: Feature: Customizable Log Formats (LogFormat) | https://wiki.squid-cache.org/Features/LogFormat | primer | 2026-10-18 | Day 05 |
+| MITRE ATT&CK: T1071.001 Web Protocols dan T1176 Software Extensions | https://attack.mitre.org/techniques/T1071/001/ ; https://attack.mitre.org/techniques/T1176/ | primer | 2026-10-18 | Day 05 |
+| Sohail: When Agents Look Like Beacons: NIDS Evasion by Model Context Protocol Traffic (arXiv:2609.19091) | https://arxiv.org/abs/2609.19091 | sekunder | 2026-10-18 | Day 05 |

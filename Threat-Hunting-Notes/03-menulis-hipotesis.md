@@ -434,7 +434,7 @@ Tabel berikut menjelaskan tiap baris query.
 | `len(sub)` | Panjang bagian subdomain, tempat data dikodekan |
 | `dc(sub)` | Jumlah subdomain unik per domain induk; tunneling menghasilkan nama yang hampir selalu baru |
 | `dc(src)` / `values(record_type)` | Berapa klien yang terlibat, dan tipe record apa yang dipakai |
-| `where unique_sub > 200 AND avg_sub_len > 30` | Ambang awal (asumsi), disetel dari baseline di Day 05 |
+| `where unique_sub > 200 AND avg_sub_len > 30` | Ambang awal (asumsi), disetel ulang dari agregat domain induk 28 hari (`jab_hunt_baseline_dns_parent.csv`) |
 | `round(...)` lalu `sort` | Merapikan angka, lalu domain dengan subdomain unik terbanyak di atas |
 
 Nama tanpa subdomain (misalnya `avcloud.example` saja) tidak cocok dengan regex, sehingga `parent` kosong dan baris itu tidak ikut dihitung. Itu disengaja, karena nama tanpa subdomain tidak bisa membawa data yang dikodekan.
