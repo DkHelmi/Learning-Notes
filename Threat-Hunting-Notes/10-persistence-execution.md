@@ -368,7 +368,7 @@ Hasilnya 17 kombinasi. Enam sisanya ada di tiga host atau lebih, dan semuanya ro
 - **9 kombinasi:** updater per-user aplikasi dari daftar software resmi, ditulis oleh installer-nya sendiri di folder `AppData\Local\Programs`. Jinak.
 - **4 kombinasi:** nilai `RunOnce` sisa installer, yang dihapus otomatis setelah reboot berikutnya (terlihat sebagai EID 12 delete pada kunci yang sama). Jinak.
 - **3 kombinasi:** tool portabel admin IT di `Downloads`, dijalankan staf IT dan dikonfirmasi ke atasannya. Jinak.
-- **1 kombinasi:** `hku/<sid>/software/microsoft/windows/currentversion/run/calsync` dengan data `c:/users/<user>/appdata/local/calsync/calsync.exe --tray` di `JKT-WS-0583` (`fitri.handayani`, Marketing Jakarta), ditulis Senin 2027-02-22 10:41 oleh installer yang diunduh pengguna dari situs vendor aplikasi sinkron kalender pribadi. Aplikasi itu tidak ada di daftar software resmi. Label: jinak, pelanggaran kebijakan software, diteruskan ke IT; bukan insiden.
+- **1 kombinasi:** `hku/<sid>/software/microsoft/windows/currentversion/run/calsync` dengan data `c:/users/<user>/appdata/local/calsync/calsync.exe --tray` di `JKT-WS-0593` (`wulan.sari`, Marketing Jakarta), ditulis Senin 2027-02-22 10:41 oleh installer yang diunduh pengguna dari situs vendor aplikasi sinkron kalender pribadi. Aplikasi itu tidak ada di daftar software resmi. Label: jinak, pelanggaran kebijakan software, diteruskan ke IT; bukan insiden.
 
 **Cara membaca hasil:** 61 kombinasi baru dari 1.341 terdengar banyak, tetapi normalisasi dan dua syarat (lokasi dan prevalence) memperkecilnya menjadi 17 yang benar-benar ditinjau. Tidak ada yang cocok dengan hipotesis. Pola yang sama dengan `\PDFSuite Updater` (biner di `AppData\Local\<nama vendor>`, satu host, tidak ada di daftar software) muncul sekali, dan itu jinak; itulah kenapa konfirmasi pemilik wajib, bukan opsional.
 
@@ -436,7 +436,7 @@ Ke-58 entri ditinjau dengan pivot ke `OSPath`, `Name`, dan hash (untuk file di f
 - **47 entri:** updater per-user aplikasi resmi yang sama dengan sisi Splunk, hanya di path yang belum dinormalisasi (versi di nama folder). Jinak.
 - **6 entri:** tool portabel admin IT. Jinak.
 - **3 entri:** shortcut `.bat` di folder Startup tiga workstation Bandung yang menjalankan `net use` ke share cabang, dipasang IT lokal Bandung. Jinak; diusulkan dipindah ke logon script GPO.
-- **2 entri:** `calsync.exe` di `BDG-WS-0207` dan `BDG-WS-0211`, aplikasi sinkron kalender yang sama dengan `JKT-WS-0583`. Jinak, pelanggaran kebijakan software, ikut diteruskan ke IT.
+- **2 entri:** `calsync.exe` di `BDG-WS-0207` dan `BDG-WS-0211`, aplikasi sinkron kalender yang sama dengan `JKT-WS-0593`. Jinak, pelanggaran kebijakan software, ikut diteruskan ke IT.
 
 **Cara membaca hasil:** 47 dari 58 entri langka adalah artefak normalisasi yang lebih lemah di VQL dibanding macro SPL. Itu biaya yang diterima demi query yang sederhana; bila hunt ini diulang, tambahkan aturan `<ver>` ke `regex_replace`. Snapshot ini menjawab "apa yang terpasang per 2 Maret", bukan "apa yang terjadi di Februari".
 
@@ -544,7 +544,7 @@ task_n                                   cmd_n                                  
 
 Jumlahnya 412 (4 + 2 + 2 + 19 + 97 + 288). Tiga baris teratas ada di satu atau dua host dan ditinjau:
 
-- **`\calsync autostart` di `JKT-WS-0583`:** aplikasi sinkron kalender yang sama dengan temuan Run key (bagian 2.2), task dibuat ulang tiap kali aplikasi memperbarui diri. Jinak, shadow IT, sudah diteruskan.
+- **`\calsync autostart` di `JKT-WS-0593`:** aplikasi sinkron kalender yang sama dengan temuan Run key (bagian 2.2), task dibuat ulang tiap kali aplikasi memperbarui diri. Jinak, shadow IT, sudah diteruskan.
 - **`\noc-probe-check` di `JKT-WS-0552` (`arif.kurniawan`, engineer NOC):** tool pemeriksa agent synthetic monitoring buatan tim Service Assurance NOC, dikonfirmasi Bambang Hartono. Jinak; dicatat sebagai software internal yang belum terdaftar di inventaris aset SOC.
 - **`\designsuite updater` di dua workstation Marketing:** updater per-user aplikasi desain dari daftar software resmi, biner ditandatangani vendor (diperiksa lewat kolom `Authenticode` di sisi Velociraptor). Jinak.
 
@@ -596,7 +596,7 @@ c:\users/<user>/appdata\local\calsync\calsync.exe                      3
 
 Campuran `\` dan `/` di `CmdN` adalah akibat `regex_replace` hanya mengganti bagian nama profil; untuk stacking itu tidak masalah selama aturan yang sama dipakai di semua baris.
 
-Keempatnya ditinjau. Tiga sudah dikenal dari sisi 4698 dan Run key: `calsync.exe` kini terlihat di tiga host (`JKT-WS-0583`, `BDG-WS-0207`, `BDG-WS-0211`), `probecheck.exe` di `JKT-WS-0552`, dan updater aplikasi desain di dua host Marketing. Yang baru adalah `cleanup.exe` di `SBY-WS-0112`, workstation POP Surabaya: task pembersihan antrean cetak dari paket driver printer vendor, biner ditandatangani vendor, dan model printer yang sama ada di POP itu. Jinak.
+Keempatnya ditinjau. Tiga sudah dikenal dari sisi 4698 dan Run key: `calsync.exe` kini terlihat di tiga host (`JKT-WS-0593`, `BDG-WS-0207`, `BDG-WS-0211`), `probecheck.exe` di `JKT-WS-0552`, dan updater aplikasi desain di dua host Marketing. Yang baru adalah `cleanup.exe` di `SBY-WS-0112`, workstation POP Surabaya: task pembersihan antrean cetak dari paket driver printer vendor, biner ditandatangani vendor, dan model printer yang sama ada di POP itu. Jinak.
 
 **Positive control:** query yang sama dijalankan atas hasil `HUNT-2027-013` (koleksi Kamis 2027-02-25). Hasilnya menandai `\PDFSuite Updater` di `SBY-WS-0107` dengan command di folder `AppData\Local\PDFSuite` milik `rani.oktaviani`, `hosts` 1. Itu bukti bahwa filter dan normalisasi hari ini sanggup menangkap pola yang dicari; tanpa uji ini, "tidak ditemukan" bisa berarti query-nya yang buta.
 
@@ -764,7 +764,7 @@ Cakupan nyata : Log 1-28 Feb 2027: Sysmon EID 1/11/12/13 dari 213 host, 4698 dar
 Positive ctrl : Query TaskScheduler menandai \PDFSuite Updater pada koleksi HUNT-2027-013
 Jinak terkonfirmasi: 17 kombinasi Run key (Splunk), 58 entri StartupItems, 3 task langka (4698),
                 4 command task langka (disk), 4 skrip PowerShell, 6 rantai logon script printer
-Lain-lain     : Shadow IT calsync.exe di JKT-WS-0583, BDG-WS-0207, BDG-WS-0211 -> IT;
+Lain-lain     : Shadow IT calsync.exe di JKT-WS-0593, BDG-WS-0207, BDG-WS-0211 -> IT;
                 installer irm|iex di JKT-WS-0552 -> catatan edukasi ke Dimas;
                 probecheck.exe NOC belum di inventaris aset SOC -> Bambang
 Celah data    : (1) 4698 dan Sysmon hanya di 214 host -> Agung (tautkan JAB-WS-Audit ke OU lain);
@@ -798,7 +798,7 @@ Triage L1     : cek pemilik dan software resmi; cek Authenticode biner lewat Vel
 
 **Cara membaca usulan:** baris Cakupan paling penting. Detection ini tidak akan menangkap `SBY-WS-0107` versi berikutnya karena laptop seperti itu tidak menghasilkan 4698. Menuliskannya terang-terangan mencegah rasa aman palsu, dan sekaligus menjadi argumen untuk celah data nomor (1).
 
-**Kapan gagal:** usulan dikirim tanpa angka volume, sehingga Sari harus menebak apakah rule ini akan membanjiri L1; atau pengecualian ditulis per host ("kecuali JKT-WS-0583"), sehingga penyerang yang masuk ke host itu ikut dikecualikan.
+**Kapan gagal:** usulan dikirim tanpa angka volume, sehingga Sari harus menebak apakah rule ini akan membanjiri L1; atau pengecualian ditulis per host ("kecuali JKT-WS-0593"), sehingga penyerang yang masuk ke host itu ikut dikecualikan.
 
 ### 2.9 Jawaban untuk Dimas
 

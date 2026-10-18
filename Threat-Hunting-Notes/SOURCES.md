@@ -4,7 +4,7 @@ Indeks sumber global, disusun dari tabel Sumber (bagian 9) setiap Day di folder 
 
 | Judul | URL | Tipe | Diakses | Dipakai di |
 |---|---|---|---|---|
-| Splunk: Introducing the PEAK Threat Hunting Framework | https://www.splunk.com/en_us/blog/security/peak-threat-hunting-framework.html | sekunder | 2026-10-18 | Day 01, 02 |
+| Splunk: Introducing the PEAK Threat Hunting Framework | https://www.splunk.com/en_us/blog/security/peak-threat-hunting-framework.html | sekunder | 2026-10-18 | Day 01, 02, 14 |
 | TaHiTI: a threat hunting methodology (whitepaper) | https://www.betaalvereniging.nl/wp-content/uploads/2026/03/TaHiTI-Threat-Hunting-Methodology-whitepaper.pdf | primer | 2026-10-18 | Day 01, 02, 03, 07 |
 | Sqrrl: Hunt Evil: Your Practical Guide to Threat Hunting (berisi HMM) | https://www.threathunting.net/files/hunt-evil-practical-guide-threat-hunting.pdf | primer | 2026-10-10 | Day 01, 07 |
 | SANS: Threat hunters call data their biggest barrier (2026 survey) | https://www.sans.org/press/announcements/threat-hunters-call-data-their-biggest-barrier-overtaking-staffing-first-time-survey-finds | sekunder | 2026-10-07 | Day 01, 02, 04, 07 |
@@ -88,7 +88,7 @@ Indeks sumber global, disusun dari tabel Sumber (bagian 9) setiap Day di folder 
 | Splunk Enterprise 10.2: Configure cgroups v2 in Splunk Enterprise | https://help.splunk.com/en/splunk-enterprise/administer/manage-workloads/10.2/set-up-linux-for-workload-management/configure-cgroups-v2-in-splunk-enterprise | primer | 2026-10-18 | Day 06 |
 | Splunk Enterprise 10.2: Create and manage roles with authorize.conf | https://help.splunk.com/en/splunk-enterprise/administer/manage-users-and-security/10.2/perform-advanced-user-and-role-management-in-splunk-enterprise | primer | 2026-10-18 | Day 06 |
 | Search Manual 9.4: Wildcards | https://help.splunk.com/en/splunk-enterprise/search/search-manual/9.4/search-primer/wildcards | primer | 2026-10-18 | Day 06 |
-| Splunk Research: Windows Office Product Spawned Uncommon Process | https://research.splunk.com/endpoint/55d8741c-fa32-4692-8109-410304961eb8/ | primer | 2026-10-18 | Day 06 |
+| Splunk Research: Windows Office Product Spawned Uncommon Process | https://research.splunk.com/endpoint/55d8741c-fa32-4692-8109-410304961eb8/ | primer | 2026-10-18 | Day 06, 14 |
 | Splunk CIM: release notes 6.4 dan 8.7, Endpoint data model 8.7 | https://help.splunk.com/en/data-management/common-information-model/8.7/introduction/release-notes-for-the-splunk-common-information-model-add-on | primer | 2026-10-18 | Day 06 |
 | Splunk Enterprise 10.6 release notes | https://help.splunk.com/en/splunk-enterprise/release-notes-and-updates/release-notes/10.6 | primer | 2026-10-18 | Day 06 |
 | Splunk: Introducing the PEAK Threat Hunting Framework; PEAK hypothesis-driven hunting | https://www.splunk.com/en_us/blog/security/peak-threat-hunting-framework.html ; https://www.splunk.com/en_us/blog/security/peak-hypothesis-driven-threat-hunting.html | sekunder | 2026-10-10 | Day 07 |
@@ -120,7 +120,7 @@ Indeks sumber global, disusun dari tabel Sumber (bagian 9) setiap Day di folder 
 | FreshPorts: security/wazuh-indexer | https://www.freshports.org/security/wazuh-indexer | sekunder | 2026-10-18 | Day 08 |
 | Wazuh 4.14 documentation: Threat hunting (use case) | https://documentation.wazuh.com/4.14/getting-started/use-cases/threat-hunting.html | primer | 2026-10-18 | Day 08 |
 | Wazuh documentation: Navigating the Wazuh dashboard | https://documentation.wazuh.com/current/user-manual/wazuh-dashboard/navigating-the-wazuh-dashboard.html | primer | 2026-10-18 | Day 08 |
-| Wazuh documentation: Rules XML syntax | https://documentation.wazuh.com/current/user-manual/ruleset/ruleset-xml-syntax/rules.html | primer | 2026-10-18 | Day 08 |
+| Wazuh documentation: Rules XML syntax | https://documentation.wazuh.com/current/user-manual/ruleset/ruleset-xml-syntax/rules.html | primer | 2026-10-18 | Day 08, 14 |
 | Velociraptor releases (0.77.3) | https://github.com/Velocidex/velociraptor/releases | primer | 2026-10-18 | Day 09, 10 |
 | Velociraptor documentation: Overview | https://docs.velociraptor.app/docs/overview/ | primer | 2026-10-18 | Day 09 |
 | Velociraptor documentation: VQL fundamentals | https://docs.velociraptor.app/docs/vql/fundamentals/ | primer | 2026-10-18 | Day 09 |
@@ -210,7 +210,7 @@ Indeks sumber global, disusun dari tabel Sumber (bagian 9) setiap Day di folder 
 | Squid configuration directive: logformat | https://www.squid-cache.org/Doc/config/logformat/ | primer | 2026-10-18 | Day 12 |
 | MITRE ATT&CK: T1218 System Binary Proxy Execution, T1127, T1059 | https://attack.mitre.org/techniques/T1218/ | primer | 2026-10-18 | Day 13 |
 | LOLBAS Project | https://lolbas-project.github.io/ | sekunder | 2026-10-18 | Day 13 |
-| Atomic Red Team: T1218.010 | https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1218.010/T1218.010.md | primer | 2026-10-18 | Day 13 |
+| Atomic Red Team: T1218.010 | https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1218.010/T1218.010.md | primer | 2026-10-18 | Day 13, 14 |
 | Atomic Red Team: T1218.005 | https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1218.005/T1218.005.md | primer | 2026-10-18 | Day 13 |
 | Red Canary Threat Detection Report: Techniques | https://redcanary.com/threat-detection-report/techniques/ | sekunder | 2026-10-18 | Day 13 |
 | MITRE ATT&CK: T1218.011 Rundll32 | https://attack.mitre.org/techniques/T1218/011/ | primer | 2026-10-18 | Day 13 |
@@ -233,3 +233,28 @@ Indeks sumber global, disusun dari tabel Sumber (bagian 9) setiap Day di folder 
 | Atomic Red Team: T1059.007 | https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1059.007/T1059.007.md | primer | 2026-10-18 | Day 13 |
 | EventSentry: Sysmon | https://www.eventsentry.com/sysmon | sekunder | 2026-10-18 | Day 13 |
 | Olaf Hartong: Sysmon schema manifest (gist) | https://gist.github.com/olafhartong/42b93050b6e0f49742cc3ea151d97f12 | komunitas | 2026-10-18 | Day 13 |
+| SigmaHQ: Sigma specification (Sigma Rules Specification 2.1.0) | https://github.com/SigmaHQ/sigma-specification | primer | 2026-10-18 | Day 14 |
+| SigmaHQ: sigma-cli dan pySigma-backend-splunk | https://github.com/SigmaHQ/sigma-cli | primer | 2026-10-18 | Day 14 |
+| Palantir: Alerting and Detection Strategy Framework | https://github.com/palantir/alerting-detection-strategy-framework | primer | 2026-10-10 | Day 14 |
+| David Bianco: The Pyramid of Pain | https://detect-respond.blogspot.com/2013/03/the-pyramid-of-pain.html | primer | 2026-10-10 | Day 14 |
+| Splunk: Risk-Based Alerting, the new frontier for SIEM | https://www.splunk.com/en_us/blog/security/risk-based-alerting-the-new-frontier-for-siem.html | sekunder | 2026-10-10 | Day 14 |
+| MITRE ATT&CK: T1218.010 Regsvr32 | https://attack.mitre.org/techniques/T1218/010/ | primer | 2026-10-18 | Day 14 |
+| MITRE ATT&CK: T1204.002 Malicious File | https://attack.mitre.org/techniques/T1204/002/ | primer | 2026-10-18 | Day 14 |
+| MITRE ATT&CK Navigator | https://github.com/mitre-attack/attack-navigator | primer | 2026-10-10 | Day 14 |
+| MITRE ATT&CK: T1071 Application Layer Protocol | https://attack.mitre.org/techniques/T1071/ | primer | 2026-10-10 | Day 14 |
+| Threat-Hunting Day 01-13 (laporan hunt, usulan, uji lab Day 13) | (lokal) | rujukan internal | 2026-10-18 | Day 14 |
+| SigmaHQ: SigmaHQ Rule Convention | https://github.com/SigmaHQ/sigma-specification/blob/main/sigmahq/sigmahq-rule-convention.md | primer | 2026-10-18 | Day 14 |
+| SigmaHQ: Sigma Tags appendix | https://github.com/SigmaHQ/sigma-specification/blob/main/specification/sigma-appendix-tags.md | primer | 2026-10-18 | Day 14 |
+| SigmaHQ rule: Suspicious Microsoft Office Child Process (`proc_creation_win_office_susp_child_processes.yml`) | https://github.com/SigmaHQ/sigma/blob/master/rules/windows/process_creation/proc_creation_win_office_susp_child_processes.yml | primer | 2026-10-18 | Day 14 |
+| PyPI: sigma-cli | https://pypi.org/project/sigma-cli/ | primer | 2026-10-18 | Day 14 |
+| PyPI: pySigma | https://pypi.org/project/pySigma/ | primer | 2026-10-18 | Day 14 |
+| PyPI: pySigma-backend-splunk | https://pypi.org/project/pySigma-backend-splunk/ | primer | 2026-10-18 | Day 14 |
+| SigmaHQ: pySigma-backend-splunk (README, `sigma/pipelines/splunk/splunk.py`, rilis) | https://github.com/SigmaHQ/pySigma-backend-splunk | primer | 2026-10-18 | Day 14 |
+| SigmaHQ: pySigma-pipeline-sysmon | https://github.com/SigmaHQ/pySigma-pipeline-sysmon | primer | 2026-10-18 | Day 14 |
+| SigmaHQ: sigma-cli `check.py` | https://github.com/SigmaHQ/sigma-cli/blob/main/sigma/cli/check.py | primer | 2026-10-18 | Day 14 |
+| pySigma documentation: Processing Pipelines (v1.5.0) | https://sigmahq-pysigma.readthedocs.io/en/v1.5.0/_sources/Processing_Pipelines.rst.txt | primer | 2026-10-18 | Day 14 |
+| Splunk ES 8.7: Assign risk using risk modifiers | https://help.splunk.com/en/splunk-enterprise-security-8/administer/8.7/risk-based-alerting/assign-risk-using-risk-modifiers-in-splunk-enterprise-security | primer | 2026-10-18 | Day 14 |
+| Splunk ES 8.7: Create finding-based detections | https://help.splunk.com/en/splunk-enterprise-security-8/administer/8.7/detections/create-finding-based-detections-in-splunk-enterprise-security | primer | 2026-10-18 | Day 14 |
+| Splunk Security Content: Office Application Spawn rundll32 process (removed) | https://research.splunk.com/removed/958751e4-9c5f-11eb-b103-acde48001122/ | primer | 2026-10-18 | Day 14 |
+| Splunk: contentctl (GitHub) | https://github.com/splunk/contentctl | primer | 2026-10-18 | Day 14 |
+| Splunk blog: From Data to Defense: Mastering the Detection Lifecycle with Detection Studio | https://www.splunk.com/en_us/blog/security/mastering-the-detection-lifecycle-with-detection-studio.html | sekunder | 2026-10-18 | Day 14 |
