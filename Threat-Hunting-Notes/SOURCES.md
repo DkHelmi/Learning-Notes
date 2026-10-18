@@ -7,14 +7,14 @@ Indeks sumber global, disusun dari tabel Sumber (bagian 9) setiap Day di folder 
 | Splunk: Introducing the PEAK Threat Hunting Framework | https://www.splunk.com/en_us/blog/security/peak-threat-hunting-framework.html | sekunder | 2026-10-18 | Day 01, 02 |
 | TaHiTI: a threat hunting methodology (whitepaper) | https://www.betaalvereniging.nl/wp-content/uploads/2026/03/TaHiTI-Threat-Hunting-Methodology-whitepaper.pdf | primer | 2026-10-18 | Day 01, 02, 03 |
 | Sqrrl: Hunt Evil: Your Practical Guide to Threat Hunting (berisi HMM) | https://www.threathunting.net/files/hunt-evil-practical-guide-threat-hunting.pdf | primer | 2026-10-07 | Day 01 |
-| SANS: Threat hunters call data their biggest barrier (2026 survey) | https://www.sans.org/press/announcements/threat-hunters-call-data-their-biggest-barrier-overtaking-staffing-first-time-survey-finds | sekunder | 2026-10-07 | Day 01, 02 |
+| SANS: Threat hunters call data their biggest barrier (2026 survey) | https://www.sans.org/press/announcements/threat-hunters-call-data-their-biggest-barrier-overtaking-staffing-first-time-survey-finds | sekunder | 2026-10-07 | Day 01, 02, 04 |
 | Wiz Academy: Threat Hunters: Responsibilities, Salary, Career Progression | https://www.wiz.io/academy/threat-hunters | sekunder | 2026-10-10 | Day 01 |
 | SANS 2025 Threat Hunting Survey: Advancements in Threat Hunting Amid AI and Cloud Challenges (Josh Lemon) | https://www.sans.org/white-papers/sans-2025-threat-hunting-survey-advancements-threat-hunting-amid-ai-cloud-challenges | sekunder | 2026-10-10 | Day 01 |
 | Google Cloud / Mandiant: M-Trends 2026: Data, Insights, and Strategies From the Frontlines | https://cloud.google.com/blog/topics/threat-intelligence/m-trends-2026/ | sekunder | 2026-10-18 | Day 01 |
 | Sqrrl: The Threat Hunting Reference Model Part 2: The Hunting Loop | https://www.threathunting.net/files/The%20Threat%20Hunting%20Reference%20Model%20Part%202_%20The%20Hunting%20Loop%20_%20Sqrrl.pdf | primer | 2026-10-18 | Day 02 |
 | Expel: What are threat hunting frameworks? | https://expel.com/cyberspeak/what-are-threat-hunting-frameworks/ | sekunder | 2026-10-08 | Day 02 |
 | Splunk: Hypothesis-Driven Hunting with the PEAK Framework | https://www.splunk.com/en_us/blog/security/peak-hypothesis-driven-threat-hunting.html | sekunder | 2026-10-18 | Day 02, 03 |
-| Microsoft Learn: Sysmon (Sysinternals) | https://learn.microsoft.com/en-us/sysinternals/downloads/sysmon | primer | 2026-10-18 | Day 02, 03 |
+| Microsoft Learn: Sysmon (Sysinternals) | https://learn.microsoft.com/en-us/sysinternals/downloads/sysmon | primer | 2026-10-18 | Day 02, 03, 04 |
 | Atomic Red Team: T1105 Ingress Tool Transfer | https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1105/T1105.md | primer | 2026-10-18 | Day 02 |
 | Splunk: Baseline Hunting with the PEAK Framework | https://www.splunk.com/en_us/blog/security/peak-baseline-hunting.html | sekunder | 2026-10-18 | Day 02 |
 | Splunk: Turning Hunts Into Detections with PEAK | https://www.splunk.com/en_us/blog/security/peak-turning-hunts-into-detections.html | sekunder | 2026-10-18 | Day 02 |
@@ -31,11 +31,31 @@ Indeks sumber global, disusun dari tabel Sumber (bagian 9) setiap Day di folder 
 | MITRE ATT&CK: T1071.004 Application Layer Protocol: DNS | https://attack.mitre.org/techniques/T1071/004/ | primer | 2026-10-18 | Day 03 |
 | MITRE ATT&CK: T1048 Exfiltration Over Alternative Protocol | https://attack.mitre.org/techniques/T1048/ | primer | 2026-10-18 | Day 03 |
 | MITRE ATT&CK: T1053.005 Scheduled Task/Job: Scheduled Task | https://attack.mitre.org/techniques/T1053/005/ | primer | 2026-10-18 | Day 03 |
-| MITRE ATT&CK: DET0400 Behavioral Detection of DNS Tunneling and Application Layer Abuse | https://attack.mitre.org/detectionstrategies/DET0400/ | primer | 2026-10-18 | Day 03 |
-| MITRE ATT&CK: Versions of ATT&CK | https://attack.mitre.org/resources/versions/ | primer | 2026-10-18 | Day 03 |
+| MITRE ATT&CK: DET0400 Behavioral Detection of DNS Tunneling and Application Layer Abuse | https://attack.mitre.org/detectionstrategies/DET0400/ | primer | 2026-10-18 | Day 03, 04 |
+| MITRE ATT&CK: Versions of ATT&CK | https://attack.mitre.org/resources/versions/ | primer | 2026-10-18 | Day 03, 04 |
 | EventSentry: Sysmon Event ID 22 | https://system32.eventsentry.com/sysmon/event/22 | sekunder | 2026-10-18 | Day 03 |
-| Microsoft Learn: 4698(S) A scheduled task was created | https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/auditing/event-4698 | primer | 2026-10-18 | Day 03 |
+| Microsoft Learn: 4698(S) A scheduled task was created | https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/auditing/event-4698 | primer | 2026-10-18 | Day 03, 04 |
 | Unit 42: Detecting DNS Tunneling Campaigns in the Wild (Ruian Duan, Daiping Liu) | https://unit42.paloaltonetworks.com/dns-tunneling-in-the-wild/ | sekunder | 2026-10-18 | Day 03 |
 | IETF RFC 1035: Domain Names, Implementation and Specification | https://www.rfc-editor.org/rfc/rfc1035 | primer | 2026-10-18 | Day 03 |
 | Splunk Docs: CIM 6.4 Network Resolution (DNS) data model | https://help.splunk.com/en/data-management/common-information-model/6.4/data-models/network-resolution-dns | primer | 2026-10-18 | Day 03 |
 | SANS: Generating Hypotheses for Successful Threat Hunting (Robert M. Lee, David Bianco) | https://www.sans.org/white-papers/37172 | sekunder | 2026-10-18 | Day 03 |
+| Practical Threat Intelligence (O'Reilly): Working with Data | https://www.oreilly.com/library/view/practical-threat-intelligence/9781838556372/B13376_05_Final_SK_ePub.xhtml | sekunder | 2026-10-08 | Day 04 |
+| Practical Threat Intelligence (O'Reilly): Assessing Data Quality (OSSEM Power-up, DeTT&CT) | https://www.oreilly.com/library/view/practical-threat-intelligence/9781838556372/B13376_11_Final_SK_ePub.xhtml | sekunder | 2026-10-08 | Day 04 |
+| Decryption Digest: Log source onboarding dan prioritization | https://www.decryptiondigest.com/blog/log-source-onboarding-siem-prioritization | sekunder | 2026-10-08 | Day 04 |
+| Dataversity: How to plan a threat hunt using log analytics | https://www.dataversity.net/articles/how-to-plan-a-threat-hunt-using-log-analytics-to-manage-data-in-depth/ | sekunder | 2026-10-08 | Day 04 |
+| Microsoft Learn: Command line process auditing | https://learn.microsoft.com/en-us/windows-server/identity/ad-ds/manage/component-updates/command-line-process-auditing | primer | 2026-10-10 | Day 04 |
+| MITRE ATT&CK: Data Components (indeks dan halaman komponen DC0032, DC0029, DC0085, DC0103) | https://attack.mitre.org/datacomponents/ | primer | 2026-10-18 | Day 04 |
+| OTRF: OSSEM (GitHub) | https://github.com/OTRF/OSSEM | primer | 2026-10-18 | Day 04 |
+| Rabobank CDC: DeTT&CT wiki (Data quality scoring, Visibility scoring) | https://github.com/rabobank-cdc/DeTTECT/wiki/Data-quality-scoring | primer | 2026-10-18 | Day 04 |
+| MITRE ATT&CK: Updates October 2025 (v18) | https://attack.mitre.org/resources/updates/updates-october-2025/ | primer | 2026-10-18 | Day 04 |
+| MITRE ATT&CK: Data Component DC0001 Scheduled Job Creation | https://attack.mitre.org/datacomponents/DC0001/ | primer | 2026-10-18 | Day 04 |
+| MITRE ATT&CK: Data Component DC0082 Network Connection Creation | https://attack.mitre.org/datacomponents/DC0082/ | primer | 2026-10-18 | Day 04 |
+| Rabobank CDC: DeTT&CT release v2.2.0 | https://github.com/rabobank-cdc/DeTTECT/releases/tag/v2.2.0 | primer | 2026-10-18 | Day 04 |
+| Splunk: SPL Search Reference 10.2, metadata | https://help.splunk.com/en/splunk-enterprise/search/spl-search-reference/10.2/search-commands/metadata | primer | 2026-10-18 | Day 04 |
+| Splunk: SPL Search Reference 10.2, tstats | https://help.splunk.com/en/splunk-enterprise/search/spl-search-reference/10.2/search-commands/tstats | primer | 2026-10-18 | Day 04 |
+| Splunk: Knowledge Manager Manual 10.4, Use default fields | https://help.splunk.com/en/splunk-enterprise/manage-knowledge-objects/knowledge-management-manual/10.4/fields-and-field-extractions/use-default-fields | primer | 2026-10-18 | Day 04 |
+| Splunk: Getting Data In 10.4, Specify time zones for timestamps | https://help.splunk.com/en/splunk-enterprise/get-started/get-data-in/10.4/configure-timestamps/specify-time-zones-for-timestamps | primer | 2026-10-18 | Day 04 |
+| Microsoft Learn: Advanced hunting overview in Microsoft Defender XDR | https://learn.microsoft.com/en-us/defender-xdr/advanced-hunting-overview | primer | 2026-10-18 | Day 04 |
+| BleepingComputer: Microsoft rolls out native Windows 11 Sysmon security monitoring | https://bleepingcomputer.com/news/microsoft/microsoft-rolls-out-native-windows-11-sysmon-security-monitoring | sekunder | 2026-10-18 | Day 04 |
+| Wazuh 4.14 documentation: Event logging (archives) | https://documentation.wazuh.com/4.14/user-manual/manager/event-logging.html | primer | 2026-10-18 | Day 04 |
+| Mado no Mori (forest.watch.impress.co.jp, Impress): halaman perangkat lunak Sysmon | https://forest.watch.impress.co.jp/library/software/sysmon/ | sekunder | 2026-10-18 | Day 04 |
