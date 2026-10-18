@@ -14,7 +14,7 @@ Indeks sumber global, disusun dari tabel Sumber (bagian 9) setiap Day di folder 
 | Sqrrl: The Threat Hunting Reference Model Part 2: The Hunting Loop | https://www.threathunting.net/files/The%20Threat%20Hunting%20Reference%20Model%20Part%202_%20The%20Hunting%20Loop%20_%20Sqrrl.pdf | primer | 2026-10-18 | Day 02 |
 | Expel: What are threat hunting frameworks? | https://expel.com/cyberspeak/what-are-threat-hunting-frameworks/ | sekunder | 2026-10-08 | Day 02 |
 | Splunk: Hypothesis-Driven Hunting with the PEAK Framework | https://www.splunk.com/en_us/blog/security/peak-hypothesis-driven-threat-hunting.html | sekunder | 2026-10-18 | Day 02, 03 |
-| Microsoft Learn: Sysmon (Sysinternals) | https://learn.microsoft.com/en-us/sysinternals/downloads/sysmon | primer | 2026-10-18 | Day 02, 03, 04, 10, 11 |
+| Microsoft Learn: Sysmon (Sysinternals) | https://learn.microsoft.com/en-us/sysinternals/downloads/sysmon | primer | 2026-10-18 | Day 02, 03, 04, 10, 11, 12 |
 | Atomic Red Team: T1105 Ingress Tool Transfer | https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1105/T1105.md | primer | 2026-10-18 | Day 02 |
 | Splunk: Baseline Hunting with the PEAK Framework | https://www.splunk.com/en_us/blog/security/peak-baseline-hunting.html | sekunder | 2026-10-18 | Day 02, 05 |
 | Splunk: Turning Hunts Into Detections with PEAK | https://www.splunk.com/en_us/blog/security/peak-turning-hunts-into-detections.html | sekunder | 2026-10-18 | Day 02 |
@@ -28,11 +28,11 @@ Indeks sumber global, disusun dari tabel Sumber (bagian 9) setiap Day di folder 
 | Splunk .conf23: Blue Team Academy: Cybersecurity Defense Analyst, The Art of Investigation and Threat Hunting With Splunk (SEC1584B), slides | https://conf.splunk.com/files/2023/slides/SEC1584B.pdf | primer | 2026-10-18 | Day 03 |
 | Day 01-02 Threat-Hunting-Notes | (lokal) | rujukan internal | 2026-10-18 | Day 03 |
 | MITRE ATT&CK: Groups | https://attack.mitre.org/groups/ | primer | 2026-10-10 | Day 03 |
-| MITRE ATT&CK: T1071.004 Application Layer Protocol: DNS | https://attack.mitre.org/techniques/T1071/004/ | primer | 2026-10-18 | Day 03 |
-| MITRE ATT&CK: T1048 Exfiltration Over Alternative Protocol | https://attack.mitre.org/techniques/T1048/ | primer | 2026-10-18 | Day 03 |
+| MITRE ATT&CK: T1071.004 Application Layer Protocol: DNS | https://attack.mitre.org/techniques/T1071/004/ | primer | 2026-10-18 | Day 03, 12 |
+| MITRE ATT&CK: T1048 Exfiltration Over Alternative Protocol | https://attack.mitre.org/techniques/T1048/ | primer | 2026-10-18 | Day 03, 12 |
 | MITRE ATT&CK: T1053.005 Scheduled Task/Job: Scheduled Task | https://attack.mitre.org/techniques/T1053/005/ | primer | 2026-10-18 | Day 03, 07, 09, 10 |
 | MITRE ATT&CK: DET0400 Behavioral Detection of DNS Tunneling and Application Layer Abuse | https://attack.mitre.org/detectionstrategies/DET0400/ | primer | 2026-10-18 | Day 03, 04 |
-| MITRE ATT&CK: Versions of ATT&CK | https://attack.mitre.org/resources/versions/ | primer | 2026-10-18 | Day 03, 04, 07 |
+| MITRE ATT&CK: Versions of ATT&CK | https://attack.mitre.org/resources/versions/ | primer | 2026-10-18 | Day 03, 04, 07, 12 |
 | EventSentry: Sysmon Event ID 22 | https://system32.eventsentry.com/sysmon/event/22 | sekunder | 2026-10-18 | Day 03 |
 | Microsoft Learn: 4698(S) A scheduled task was created | https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/auditing/event-4698 | primer | 2026-10-18 | Day 03, 04, 07, 10 |
 | Unit 42: Detecting DNS Tunneling Campaigns in the Wild (Ruian Duan, Daiping Liu) | https://unit42.paloaltonetworks.com/dns-tunneling-in-the-wild/ | sekunder | 2026-10-18 | Day 03 |
@@ -66,10 +66,10 @@ Indeks sumber global, disusun dari tabel Sumber (bagian 9) setiap Day di folder 
 | Day 01-04 Threat-Hunting-note | (lokal) | rujukan internal | 2026-10-08 | Day 05 |
 | Splunk: SPL Search Reference 10.6, eventstats, inputlookup, dan statistical and charting functions | https://help.splunk.com/en/splunk-enterprise/search/spl-search-reference/10.6/search-commands/eventstats ; https://help.splunk.com/en/splunk-enterprise/search/spl-search-reference/10.6/search-commands/inputlookup ; https://help.splunk.com/en/splunk-enterprise/search/spl-search-reference/10.6/statistical-and-charting-functions/statistical-and-charting-functions | primer | 2026-10-18 | Day 05 |
 | Sqrrl: The Threat Hunting Reference Model Part 2: The Hunting Loop (salinan di threathunting.net) | https://threathunting.net/files/The%20Threat%20Hunting%20Reference%20Model%20Part%202_%20The%20Hunting%20Loop%20_%20Sqrrl.pdf | sekunder | 2026-10-18 | Day 05 |
-| Active Countermeasures: RITA (repositori GitHub, README dan daftar rilis) | https://github.com/activecm/rita ; https://github.com/activecm/rita/releases | primer | 2026-10-18 | Day 05 |
+| Active Countermeasures: RITA (repositori GitHub, README dan daftar rilis) | https://github.com/activecm/rita ; https://github.com/activecm/rita/releases | primer | 2026-10-18 | Day 05, 12 |
 | RITA: default_config.hjson | https://raw.githubusercontent.com/activecm/rita/main/default_config.hjson | primer | 2026-10-18 | Day 05 |
 | The DFIR Report: Cobalt Strike, a Defender's Guide - Part 2 | https://thedfirreport.com/2022/01/24/cobalt-strike-a-defenders-guide-part-2/ | sekunder | 2026-10-18 | Day 05 |
-| Squid wiki: Feature: Customizable Log Formats (LogFormat) | https://wiki.squid-cache.org/Features/LogFormat | primer | 2026-10-18 | Day 05 |
+| Squid wiki: Feature: Customizable Log Formats (LogFormat) | https://wiki.squid-cache.org/Features/LogFormat | primer | 2026-10-18 | Day 05, 12 |
 | MITRE ATT&CK: T1071.001 Web Protocols dan T1176 Software Extensions | https://attack.mitre.org/techniques/T1071/001/ ; https://attack.mitre.org/techniques/T1176/ | primer | 2026-10-18 | Day 05 |
 | Sohail: When Agents Look Like Beacons: NIDS Evasion by Model Context Protocol Traffic (arXiv:2609.19091) | https://arxiv.org/abs/2609.19091 | sekunder | 2026-10-18 | Day 05 |
 | Splunk Enterprise Search Manual: View search job properties (10.0; dicek ulang di 10.6) | https://help.splunk.com/en/splunk-enterprise/search/search-manual/10.0/manage-jobs/view-search-job-properties | primer | 2026-10-18 | Day 06 |
@@ -188,3 +188,23 @@ Indeks sumber global, disusun dari tabel Sumber (bagian 9) setiap Day di folder 
 | Atomic Red Team: T1021.006 | https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1021.006/T1021.006.md | primer | 2026-10-18 | Day 11 |
 | Atomic Red Team: T1110.003 | https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1110.003/T1110.003.md | primer | 2026-10-18 | Day 11 |
 | Microsoft Learn: Sysinternals (What's New, versi Sysmon) | https://learn.microsoft.com/en-us/sysinternals/ | primer | 2026-10-18 | Day 11 |
+| MITRE ATT&CK: Command and Control (TA0011) dan Exfiltration (TA0010) | https://attack.mitre.org/tactics/TA0011/ | primer | 2026-10-09 | Day 12 |
+| Atomic Red Team: T1071.004 | https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1071.004/T1071.004.md | primer | 2026-10-10 | Day 12 |
+| Zeek documentation: conn.log | https://docs.zeek.org/en/master/logs/conn.html | primer | 2026-10-18 | Day 12 |
+| Zeek source: `scripts/base/protocols/conn/main.zeek` (komentar dokumentasi field conn.log) | https://raw.githubusercontent.com/zeek/zeek/master/scripts/base/protocols/conn/main.zeek | primer | 2026-10-18 | Day 12 |
+| MITRE ATT&CK: T1071.001 Application Layer Protocol: Web Protocols | https://attack.mitre.org/techniques/T1071/001/ | primer | 2026-10-18 | Day 12 |
+| MITRE ATT&CK: T1572 Protocol Tunneling | https://attack.mitre.org/techniques/T1572/ | primer | 2026-10-18 | Day 12 |
+| MITRE ATT&CK: T1041 Exfiltration Over C2 Channel dan DET0348 | https://attack.mitre.org/techniques/T1041/ ; https://attack.mitre.org/detectionstrategies/DET0348/ | primer | 2026-10-18 | Day 12 |
+| MITRE ATT&CK: T1567 Exfiltration Over Web Service | https://attack.mitre.org/techniques/T1567/ | primer | 2026-10-18 | Day 12 |
+| MITRE ATT&CK: T1571 Non-Standard Port | https://attack.mitre.org/techniques/T1571/ | primer | 2026-10-18 | Day 12 |
+| MITRE ATT&CK: T1568 Dynamic Resolution | https://attack.mitre.org/techniques/T1568/ | primer | 2026-10-18 | Day 12 |
+| MITRE ATT&CK: T1176 Software Extensions, T1176.001 Browser Extensions, dan DET0044 | https://attack.mitre.org/techniques/T1176/ ; https://attack.mitre.org/techniques/T1176/001/ ; https://attack.mitre.org/detectionstrategies/DET0044/ | primer | 2026-10-18 | Day 12 |
+| IETF RFC 8484: DNS Queries over HTTPS (DoH) | https://www.rfc-editor.org/rfc/rfc8484 | primer | 2026-10-18 | Day 12 |
+| IETF RFC 9849: TLS Encrypted Client Hello | https://www.rfc-editor.org/rfc/rfc9849.html | primer | 2026-10-18 | Day 12 |
+| Microsoft Learn: kebijakan Microsoft Edge `DnsOverHttpsMode` dan `ExtensionInstallBlocklist` (dan indeks kebijakan) | https://learn.microsoft.com/en-us/deployedge/microsoft-edge-browser-policies/dnsoverhttpsmode ; https://learn.microsoft.com/en-us/deployedge/microsoft-edge-browser-policies/extensioninstallblocklist ; https://learn.microsoft.com/en-us/deployedge/microsoft-edge-policies | primer | 2026-10-18 | Day 12 |
+| Microsoft Learn: Compare Microsoft Defender Vulnerability Management plans and capabilities | https://learn.microsoft.com/en-us/defender-vulnerability-management/defender-vulnerability-management-capabilities | primer | 2026-10-18 | Day 12 |
+| Velociraptor docs: `Windows.Applications.Chrome.Extensions` | https://docs.velociraptor.app/artifact_references/pages/windows.applications.chrome.extensions/ | primer | 2026-10-18 | Day 12 |
+| Palo Alto Networks: Traffic Log Fields (PAN-OS / NGFW) | https://docs.paloaltonetworks.com/ngfw/administration/monitoring/use-syslog-for-monitoring/syslog-field-descriptions/traffic-log-fields | primer | 2026-10-18 | Day 12 |
+| Splunk Docs: CIM 6.4 Network Traffic data model | https://help.splunk.com/en/data-management/common-information-model/6.4/data-models/network-traffic | primer | 2026-10-18 | Day 12 |
+| Splunk Add-on for Palo Alto Networks: dokumentasi dan pemetaan CIM | https://splunk.github.io/splunk-add-on-for-palo-alto-networks/ ; https://splunk.github.io/splunk-add-on-for-palo-alto-networks/Cimmapping/ | primer | 2026-10-18 | Day 12 |
+| Squid configuration directive: logformat | https://www.squid-cache.org/Doc/config/logformat/ | primer | 2026-10-18 | Day 12 |
