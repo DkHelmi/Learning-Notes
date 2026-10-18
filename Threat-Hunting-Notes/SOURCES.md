@@ -97,3 +97,27 @@ Indeks sumber global, disusun dari tabel Sumber (bagian 9) setiap Day di folder 
 | Microsoft Learn: 4699(S) A scheduled task was deleted | https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/auditing/event-4699 | primer | 2026-10-18 | Day 07 |
 | MITRE ATT&CK: DET0441 Detection of Suspicious Scheduled Task Creation and Execution on Windows | https://attack.mitre.org/detectionstrategies/DET0441/ | primer | 2026-10-18 | Day 07 |
 | Splunk Enterprise Search Manual 10.0: About subsearches | https://help.splunk.com/en/splunk-enterprise/search/search-manual/10.0/subsearches | primer | 2026-10-18 | Day 07 |
+| Wazuh documentation: Event logging (Wazuh archives) | https://documentation.wazuh.com/current/user-manual/manager/event-logging.html | primer | 2026-10-18 | Day 08 |
+| wazuh/wazuh-indexer (repositori GitHub) | https://github.com/wazuh/wazuh-indexer | primer | 2026-10-18 | Day 08 |
+| OpenSearch documentation: Dashboards Query Language (DQL) | https://docs.opensearch.org/latest/dashboards/dql/ | primer | 2026-10-18 | Day 08 |
+| OpenSearch documentation: Terms aggregation | https://docs.opensearch.org/latest/aggregations/bucket/terms/ | primer | 2026-10-18 | Day 08 |
+| OpenSearch documentation: Multi-terms aggregation | https://docs.opensearch.org/latest/aggregations/bucket/multi-terms/ | primer | 2026-10-10 | Day 08 |
+| OpenSearch documentation: Cardinality aggregation | https://docs.opensearch.org/latest/aggregations/metric/cardinality/ | primer | 2026-10-10 | Day 08 |
+| Wazuh documentation: API queries | https://documentation.wazuh.com/current/user-manual/api/queries.html | primer | 2026-10-10 | Day 08 |
+| Threat-Hunting Day 04-06 (data, teknik, hunt di Splunk) | (lokal) | rujukan internal | 2026-10-08 | Day 08 |
+| Wazuh documentation: Custom rules | https://documentation.wazuh.com/current/user-manual/ruleset/rules/custom.html | primer | 2026-10-18 | Day 08 |
+| Wazuh documentation: Audit configuration (system calls monitoring) | https://documentation.wazuh.com/current/user-manual/capabilities/system-calls-monitoring/audit-configuration.html | primer | 2026-10-18 | Day 08 |
+| Wazuh 4.14 documentation: Monitoring commands run as root | https://documentation.wazuh.com/4.14/user-manual/capabilities/system-calls-monitoring/use-cases/monitoring-commands-run-as-root.html | primer | 2026-10-18 | Day 08 |
+| Wazuh ruleset v4.14.0: 0365-auditd_rules.xml | https://raw.githubusercontent.com/wazuh/wazuh/v4.14.0/ruleset/rules/0365-auditd_rules.xml | primer | 2026-10-18 | Day 08 |
+| Wazuh ruleset v4.14.0: 0040-auditd_decoders.xml | https://raw.githubusercontent.com/wazuh/wazuh/v4.14.0/ruleset/decoders/0040-auditd_decoders.xml | primer | 2026-10-18 | Day 08 |
+| Wazuh ruleset v4.14.0: 0095-sshd_rules.xml | https://raw.githubusercontent.com/wazuh/wazuh/v4.14.0/ruleset/rules/0095-sshd_rules.xml | primer | 2026-10-18 | Day 08 |
+| Wazuh ruleset v4.14.0: 0310-ssh_decoders.xml | https://raw.githubusercontent.com/wazuh/wazuh/v4.14.0/ruleset/decoders/0310-ssh_decoders.xml | primer | 2026-10-18 | Day 08 |
+| Wazuh documentation: Decoders XML syntax | https://documentation.wazuh.com/current/user-manual/ruleset/ruleset-xml-syntax/decoders.html | primer | 2026-10-18 | Day 08 |
+| Wazuh documentation: ossec.conf alerts (log_alert_level) | https://documentation.wazuh.com/current/user-manual/reference/ossec-conf/alerts.html | primer | 2026-10-18 | Day 08 |
+| Wazuh documentation: Index lifecycle management | https://documentation.wazuh.com/current/user-manual/wazuh-indexer-cluster/index-lifecycle-management.html | primer | 2026-10-18 | Day 08 |
+| OpenSearch documentation: Rare terms aggregation | https://docs.opensearch.org/latest/aggregations/bucket/rare-terms/ | primer | 2026-10-18 | Day 08 |
+| Wazuh documentation: Release notes (4.14.9) | https://documentation.wazuh.com/current/release-notes/index.html | primer | 2026-10-18 | Day 08 |
+| FreshPorts: security/wazuh-indexer | https://www.freshports.org/security/wazuh-indexer | sekunder | 2026-10-18 | Day 08 |
+| Wazuh 4.14 documentation: Threat hunting (use case) | https://documentation.wazuh.com/4.14/getting-started/use-cases/threat-hunting.html | primer | 2026-10-18 | Day 08 |
+| Wazuh documentation: Navigating the Wazuh dashboard | https://documentation.wazuh.com/current/user-manual/wazuh-dashboard/navigating-the-wazuh-dashboard.html | primer | 2026-10-18 | Day 08 |
+| Wazuh documentation: Rules XML syntax | https://documentation.wazuh.com/current/user-manual/ruleset/ruleset-xml-syntax/rules.html | primer | 2026-10-18 | Day 08 |
