@@ -14,14 +14,14 @@ Indeks sumber global, disusun dari tabel Sumber (bagian 9) setiap Day di folder 
 | Sqrrl: The Threat Hunting Reference Model Part 2: The Hunting Loop | https://www.threathunting.net/files/The%20Threat%20Hunting%20Reference%20Model%20Part%202_%20The%20Hunting%20Loop%20_%20Sqrrl.pdf | primer | 2026-10-18 | Day 02 |
 | Expel: What are threat hunting frameworks? | https://expel.com/cyberspeak/what-are-threat-hunting-frameworks/ | sekunder | 2026-10-08 | Day 02 |
 | Splunk: Hypothesis-Driven Hunting with the PEAK Framework | https://www.splunk.com/en_us/blog/security/peak-hypothesis-driven-threat-hunting.html | sekunder | 2026-10-18 | Day 02, 03 |
-| Microsoft Learn: Sysmon (Sysinternals) | https://learn.microsoft.com/en-us/sysinternals/downloads/sysmon | primer | 2026-10-18 | Day 02, 03, 04, 10, 11, 12 |
+| Microsoft Learn: Sysmon (Sysinternals) | https://learn.microsoft.com/en-us/sysinternals/downloads/sysmon | primer | 2026-10-18 | Day 02, 03, 04, 10, 11, 12, 13 |
 | Atomic Red Team: T1105 Ingress Tool Transfer | https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1105/T1105.md | primer | 2026-10-18 | Day 02 |
 | Splunk: Baseline Hunting with the PEAK Framework | https://www.splunk.com/en_us/blog/security/peak-baseline-hunting.html | sekunder | 2026-10-18 | Day 02, 05 |
 | Splunk: Turning Hunts Into Detections with PEAK | https://www.splunk.com/en_us/blog/security/peak-turning-hunts-into-detections.html | sekunder | 2026-10-18 | Day 02 |
 | Splunk: Measuring Hunting Success with PEAK | https://www.splunk.com/en_us/blog/security/peak-threat-hunting-metrics.html | sekunder | 2026-10-18 | Day 02 |
 | Splunk: Key Threat Hunting Deliverables with PEAK | https://www.splunk.com/en_us/blog/security/key-threat-hunting-deliverables-with-peak.html | sekunder | 2026-10-18 | Day 02 |
 | MITRE ATT&CK: T1105 Ingress Tool Transfer | https://attack.mitre.org/techniques/T1105/ | primer | 2026-10-18 | Day 02 |
-| LOLBAS Project: Certutil | https://lolbas-project.github.io/lolbas/Binaries/Certutil/ | komunitas | 2026-10-18 | Day 02 |
+| LOLBAS Project: Certutil | https://lolbas-project.github.io/lolbas/Binaries/Certutil/ | komunitas | 2026-10-18 | Day 02, 13 |
 | LOLBAS Project: Bitsadmin | https://lolbas-project.github.io/lolbas/Binaries/Bitsadmin/ | komunitas | 2026-10-18 | Day 02 |
 | Splunk Cloud Platform Admin Manual 10.4.2604: Configure limits using Splunk Web | https://help.splunk.com/en/splunk-cloud-platform/administer/admin-manual/10.4.2604/configure-your-splunk-cloud-platform-deployment/configure-limits-using-splunk-web | primer | 2026-10-18 | Day 02 |
 | Splunk: Hypothesis-Driven Cryptominer Hunting with PEAK (David Bianco) | https://www.splunk.com/en_us/blog/security/hypothesis-driven-cryptominer-hunting-with-peak | sekunder | 2026-10-18 | Day 03 |
@@ -151,7 +151,7 @@ Indeks sumber global, disusun dari tabel Sumber (bagian 9) setiap Day di folder 
 | Atomic Red Team: T1059.001 | https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1059.001/T1059.001.md | primer | 2026-10-18 | Day 10 |
 | MITRE ATT&CK v20: T1543.003 Windows Service | https://attack.mitre.org/techniques/T1543/003/ | primer | 2026-10-18 | Day 10 |
 | MITRE ATT&CK v20: T1546.003 WMI Event Subscription | https://attack.mitre.org/techniques/T1546/003/ | primer | 2026-10-18 | Day 10 |
-| MITRE ATT&CK v20: T1059.001 PowerShell | https://attack.mitre.org/techniques/T1059/001/ | primer | 2026-10-18 | Day 10 |
+| MITRE ATT&CK v20: T1059.001 PowerShell | https://attack.mitre.org/techniques/T1059/001/ | primer | 2026-10-18 | Day 10, 13 |
 | Microsoft Learn: 4702(S) A scheduled task was updated | https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/auditing/event-4702 | primer | 2026-10-18 | Day 10 |
 | Microsoft Learn: 4697(S) A service was installed in the system | https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/auditing/event-4697 | primer | 2026-10-18 | Day 10 |
 | ManageEngine ADAudit Plus: Event ID 7045 | https://www.manageengine.com/products/active-directory-audit/kb/system-events/event-id-7045.html | sekunder | 2026-10-18 | Day 10 |
@@ -208,3 +208,28 @@ Indeks sumber global, disusun dari tabel Sumber (bagian 9) setiap Day di folder 
 | Splunk Docs: CIM 6.4 Network Traffic data model | https://help.splunk.com/en/data-management/common-information-model/6.4/data-models/network-traffic | primer | 2026-10-18 | Day 12 |
 | Splunk Add-on for Palo Alto Networks: dokumentasi dan pemetaan CIM | https://splunk.github.io/splunk-add-on-for-palo-alto-networks/ ; https://splunk.github.io/splunk-add-on-for-palo-alto-networks/Cimmapping/ | primer | 2026-10-18 | Day 12 |
 | Squid configuration directive: logformat | https://www.squid-cache.org/Doc/config/logformat/ | primer | 2026-10-18 | Day 12 |
+| MITRE ATT&CK: T1218 System Binary Proxy Execution, T1127, T1059 | https://attack.mitre.org/techniques/T1218/ | primer | 2026-10-18 | Day 13 |
+| LOLBAS Project | https://lolbas-project.github.io/ | sekunder | 2026-10-18 | Day 13 |
+| Atomic Red Team: T1218.010 | https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1218.010/T1218.010.md | primer | 2026-10-18 | Day 13 |
+| Atomic Red Team: T1218.005 | https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1218.005/T1218.005.md | primer | 2026-10-18 | Day 13 |
+| Red Canary Threat Detection Report: Techniques | https://redcanary.com/threat-detection-report/techniques/ | sekunder | 2026-10-18 | Day 13 |
+| MITRE ATT&CK: T1218.011 Rundll32 | https://attack.mitre.org/techniques/T1218/011/ | primer | 2026-10-18 | Day 13 |
+| MITRE ATT&CK: T1036.003 Rename Legitimate Utilities | https://attack.mitre.org/techniques/T1036/003/ | primer | 2026-10-18 | Day 13 |
+| MITRE ATT&CK: T1036.005 Match Legitimate Resource Name or Location | https://attack.mitre.org/techniques/T1036/005/ | primer | 2026-10-18 | Day 13 |
+| MITRE ATT&CK: T1059.005 Visual Basic | https://attack.mitre.org/techniques/T1059/005/ | primer | 2026-10-18 | Day 13 |
+| MITRE ATT&CK: T1059.007 JavaScript | https://attack.mitre.org/techniques/T1059/007/ | primer | 2026-10-18 | Day 13 |
+| MITRE ATT&CK: TA0005 Stealth | https://attack.mitre.org/tactics/TA0005/ | primer | 2026-10-18 | Day 13 |
+| LOLBAS Project: Regsvr32 | https://lolbas-project.github.io/lolbas/Binaries/Regsvr32/ | komunitas | 2026-10-18 | Day 13 |
+| LOLBAS Project: Rundll32 | https://lolbas-project.github.io/lolbas/Binaries/Rundll32/ | komunitas | 2026-10-18 | Day 13 |
+| LOLBAS Project: Mshta | https://lolbas-project.github.io/lolbas/Binaries/Mshta/ | komunitas | 2026-10-18 | Day 13 |
+| Microsoft Learn: Deprecated features in the Windows client | https://learn.microsoft.com/en-us/windows/whats-new/deprecated-features | primer | 2026-10-18 | Day 13 |
+| Microsoft Learn: Resources for deprecated features (VBScript) | https://learn.microsoft.com/en-us/windows/whats-new/deprecated-features-resources | primer | 2026-10-18 | Day 13 |
+| Microsoft 365 Developer Blog: How to prepare VBA projects for VBScript deprecation | https://devblogs.microsoft.com/microsoft365dev/how-to-prepare-vba-projects-for-vbscript-deprecation/ | primer | 2026-10-18 | Day 13 |
+| Microsoft Learn: ASR rules reference | https://learn.microsoft.com/en-us/defender-endpoint/attack-surface-reduction-rules-reference | primer | 2026-10-18 | Day 13 |
+| Microsoft Learn: DeviceProcessEvents table | https://learn.microsoft.com/en-us/defender-xdr/advanced-hunting-deviceprocessevents-table | primer | 2026-10-18 | Day 13 |
+| Atomic Red Team: T1204.002 | https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1204.002/T1204.002.md | primer | 2026-10-18 | Day 13 |
+| Atomic Red Team: T1218.011 | https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1218.011/T1218.011.md | primer | 2026-10-18 | Day 13 |
+| Atomic Red Team: T1036.003 | https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1036.003/T1036.003.md | primer | 2026-10-18 | Day 13 |
+| Atomic Red Team: T1059.007 | https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1059.007/T1059.007.md | primer | 2026-10-18 | Day 13 |
+| EventSentry: Sysmon | https://www.eventsentry.com/sysmon | sekunder | 2026-10-18 | Day 13 |
+| Olaf Hartong: Sysmon schema manifest (gist) | https://gist.github.com/olafhartong/42b93050b6e0f49742cc3ea151d97f12 | komunitas | 2026-10-18 | Day 13 |
