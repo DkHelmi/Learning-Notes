@@ -274,3 +274,28 @@ Indeks sumber global, disusun dari tabel Sumber (bagian 9) setiap Day di folder 
 | Microsoft Learn: 4688(S) A new process has been created | https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/auditing/event-4688 | primer | 2026-10-18 | Day 16 |
 | MITRE ATT&CK: T1059.003 Windows Command Shell | https://attack.mitre.org/techniques/T1059/003/ | primer | 2026-10-18 | Day 16 |
 | Threat-Hunting Day 01-15 (metode siklus, templat, register, metrik) | (lokal) | rujukan internal | 2026-10-18 | Day 16 |
+| Microsoft Entra ID Protection: What are risk detections? | https://learn.microsoft.com/en-us/entra/id-protection/concept-identity-protection-risks | primer | 2026-10-18 | Day 17 |
+| Amazon Athena User Guide: Query AWS CloudTrail logs | https://docs.aws.amazon.com/athena/latest/ug/cloudtrail-logs.html | primer | 2026-10-18 | Day 17 |
+| AWS CloudTrail Lake dan CloudTrail Lake availability change | https://docs.aws.amazon.com/awscloudtrail/latest/userguide/cloudtrail-lake.html ; https://docs.aws.amazon.com/awscloudtrail/latest/userguide/cloudtrail-lake-service-availability-change.html | primer | 2026-10-18 | Day 17 |
+| MITRE ATT&CK: T1078.004 Valid Accounts (Cloud Accounts), T1539 Steal Web Session Cookie, T1098.001 Additional Cloud Credentials | https://attack.mitre.org/techniques/T1078/004/ ; https://attack.mitre.org/techniques/T1539/ ; https://attack.mitre.org/techniques/T1098/001/ | primer | 2026-10-18 | Day 17 |
+| Microsoft Learn: Sign-in logs in Microsoft Entra ID | https://learn.microsoft.com/en-us/entra/identity/monitoring-health/concept-sign-ins | primer | 2026-10-18 | Day 17 |
+| AWS CloudTrail User Guide: Logging data events | https://docs.aws.amazon.com/awscloudtrail/latest/userguide/logging-data-events-with-cloudtrail.html | primer | 2026-10-10 | Day 17 |
+| Microsoft Learn: What is Microsoft Entra ID Protection? (license requirements) | https://learn.microsoft.com/en-us/entra/id-protection/overview-identity-protection | primer | 2026-10-18 | Day 17 |
+| Microsoft Learn: Non-interactive sign-in logs | https://learn.microsoft.com/en-us/entra/identity/monitoring-health/concept-noninteractive-sign-ins | primer | 2026-10-18 | Day 17 |
+| Microsoft Graph beta: signIn resource type | https://learn.microsoft.com/en-us/graph/api/resources/signin?view=graph-rest-beta | primer | 2026-10-18 | Day 17 |
+| Microsoft Learn: Azure Monitor Logs reference, SigninLogs | https://learn.microsoft.com/en-us/azure/azure-monitor/reference/tables/signinlogs | primer | 2026-10-18 | Day 17 |
+| Microsoft Learn: monitoring and health activity log schemas | https://learn.microsoft.com/en-us/entra/identity/monitoring-health/concept-activity-log-schemas | primer | 2026-10-18 | Day 17 |
+| Microsoft Learn: Microsoft Entra data retention | https://learn.microsoft.com/en-us/entra/identity/monitoring-health/reference-reports-data-retention | primer | 2026-10-18 | Day 17 |
+| Microsoft Learn: Token Protection in Conditional Access, dan Token Protection deployment guide Windows | https://learn.microsoft.com/en-us/entra/identity/conditional-access/concept-token-protection ; https://learn.microsoft.com/en-us/entra/identity/conditional-access/deployment-guide-token-protection-windows | primer | 2026-10-18 | Day 17 |
+| Microsoft Learn: Add and manage app credentials in Microsoft Entra ID | https://learn.microsoft.com/en-us/entra/identity-platform/how-to-add-credentials | primer | 2026-10-18 | Day 17 |
+| Microsoft Learn: Enforce secret and certificate standards using application management policies | https://learn.microsoft.com/en-us/entra/identity/enterprise-apps/tutorial-enforce-secret-standards | primer | 2026-10-18 | Day 17 |
+| Microsoft Learn: Microsoft Entra audit log activity reference | https://learn.microsoft.com/en-us/entra/identity/monitoring-health/reference-audit-activities | primer | 2026-10-18 | Day 17 |
+| Microsoft Graph v1.0: passwordCredential resource type | https://learn.microsoft.com/en-us/graph/api/resources/passwordcredential?view=graph-rest-1.0 | primer | 2026-10-18 | Day 17 |
+| AWS CloudTrail User Guide: CloudTrail userIdentity element | https://docs.aws.amazon.com/awscloudtrail/latest/userguide/cloudtrail-event-reference-user-identity.html | primer | 2026-10-18 | Day 17 |
+| AWS IAM User Guide: Monitor and control actions taken with assumed roles (source identity) | https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_temp_control-access_monitor.html | primer | 2026-10-18 | Day 17 |
+| AWS IAM User Guide: IAM roles, terms and concepts (role chaining) | https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_terms-and-concepts.html | primer | 2026-10-18 | Day 17 |
+| Amazon GuardDuty User Guide: IAM finding types | https://docs.aws.amazon.com/guardduty/latest/ug/guardduty_finding-types-iam.html | primer | 2026-10-18 | Day 17 |
+| MITRE ATT&CK: T1550.001 Application Access Token dan T1550.004 Web Session Cookie | https://attack.mitre.org/techniques/T1550/001/ ; https://attack.mitre.org/techniques/T1550/004/ | primer | 2026-10-18 | Day 17 |
+| MITRE ATT&CK: T1528 Steal Application Access Token | https://attack.mitre.org/techniques/T1528/ | primer | 2026-10-18 | Day 17 |
+| MITRE ATT&CK: T1548.005 Temporary Elevated Cloud Access, dan Versions of ATT&CK | https://attack.mitre.org/techniques/T1548/005/ ; https://attack.mitre.org/resources/versions/ | primer | 2026-10-18 | Day 17 |
+| Summit Route: Public dataset of CloudTrail logs from flaws.cloud | https://summitroute.com/blog/2020/10/09/public_dataset_of_cloudtrail_logs_from_flaws_cloud/ | sekunder | 2026-10-18 | Day 17 |
