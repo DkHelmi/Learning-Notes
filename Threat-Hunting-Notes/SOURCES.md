@@ -14,7 +14,7 @@ Indeks sumber global, disusun dari tabel Sumber (bagian 9) setiap Day di folder 
 | Sqrrl: The Threat Hunting Reference Model Part 2: The Hunting Loop | https://www.threathunting.net/files/The%20Threat%20Hunting%20Reference%20Model%20Part%202_%20The%20Hunting%20Loop%20_%20Sqrrl.pdf | primer | 2026-10-18 | Day 02 |
 | Expel: What are threat hunting frameworks? | https://expel.com/cyberspeak/what-are-threat-hunting-frameworks/ | sekunder | 2026-10-08 | Day 02 |
 | Splunk: Hypothesis-Driven Hunting with the PEAK Framework | https://www.splunk.com/en_us/blog/security/peak-hypothesis-driven-threat-hunting.html | sekunder | 2026-10-18 | Day 02, 03 |
-| Microsoft Learn: Sysmon (Sysinternals) | https://learn.microsoft.com/en-us/sysinternals/downloads/sysmon | primer | 2026-10-18 | Day 02, 03, 04, 10 |
+| Microsoft Learn: Sysmon (Sysinternals) | https://learn.microsoft.com/en-us/sysinternals/downloads/sysmon | primer | 2026-10-18 | Day 02, 03, 04, 10, 11 |
 | Atomic Red Team: T1105 Ingress Tool Transfer | https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1105/T1105.md | primer | 2026-10-18 | Day 02 |
 | Splunk: Baseline Hunting with the PEAK Framework | https://www.splunk.com/en_us/blog/security/peak-baseline-hunting.html | sekunder | 2026-10-18 | Day 02, 05 |
 | Splunk: Turning Hunts Into Detections with PEAK | https://www.splunk.com/en_us/blog/security/peak-turning-hunts-into-detections.html | sekunder | 2026-10-18 | Day 02 |
@@ -165,3 +165,26 @@ Indeks sumber global, disusun dari tabel Sumber (bagian 9) setiap Day di folder 
 | Velociraptor: Windows.Persistence.PermanentWMIEvents | https://docs.velociraptor.app/artifact_references/pages/windows.persistence.permanentwmievents/ | primer | 2026-10-18 | Day 10 |
 | Splunk Docs: streamstats (Search Reference 10.2) | https://help.splunk.com/en/splunk-enterprise/search/spl-search-reference/10.2/search-commands/streamstats | primer | 2026-10-18 | Day 10 |
 | Atomic Red Team: T1543.003 | https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1543.003/T1543.003.md | primer | 2026-10-18 | Day 10 |
+| MITRE ATT&CK: T1003.001 OS Credential Dumping: LSASS Memory | https://attack.mitre.org/techniques/T1003/001/ | primer | 2026-10-18 | Day 11 |
+| MITRE ATT&CK: T1110.003 Brute Force: Password Spraying | https://attack.mitre.org/techniques/T1110/003/ | primer | 2026-10-18 | Day 11 |
+| MITRE ATT&CK: T1047 Windows Management Instrumentation | https://attack.mitre.org/techniques/T1047/ | primer | 2026-10-18 | Day 11 |
+| MITRE ATT&CK: T1021.002 Remote Services: SMB/Windows Admin Shares | https://attack.mitre.org/techniques/T1021/002/ | primer | 2026-10-18 | Day 11 |
+| MITRE ATT&CK: T1021.003 Remote Services: DCOM | https://attack.mitre.org/techniques/T1021/003/ | primer | 2026-10-18 | Day 11 |
+| MITRE ATT&CK: T1021.006 Remote Services: WinRM | https://attack.mitre.org/techniques/T1021/006/ | primer | 2026-10-18 | Day 11 |
+| MITRE ATT&CK: T1550 Use Alternate Auth Material dan T1550.002 Pass the Hash | https://attack.mitre.org/techniques/T1550/ ; https://attack.mitre.org/techniques/T1550/002/ | primer | 2026-10-18 | Day 11 |
+| MITRE ATT&CK: T1558.003 Kerberoasting | https://attack.mitre.org/techniques/T1558/003/ | primer | 2026-10-18 | Day 11 |
+| Microsoft Learn: 4624(S) An account was successfully logged on | https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/auditing/event-4624 | primer | 2026-10-18 | Day 11 |
+| Microsoft Learn: 4625(F) An account failed to log on | https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/auditing/event-4625 | primer | 2026-10-18 | Day 11 |
+| Microsoft Learn: 4648(S) A logon was attempted using explicit credentials | https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/auditing/event-4648 | primer | 2026-10-18 | Day 11 |
+| Microsoft Learn: 4672(S) Special privileges assigned to new logon | https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/auditing/event-4672 | primer | 2026-10-18 | Day 11 |
+| Microsoft Learn: 4768 dan 4769 (Kerberos TGT/TGS) | https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/auditing/event-4768 ; https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/auditing/event-4769 | primer | 2026-10-18 | Day 11 |
+| Microsoft Learn: 4771(F) Kerberos pre-authentication failed | https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/auditing/event-4771 | primer | 2026-10-18 | Day 11 |
+| Microsoft Learn: 4776(S, F) The computer attempted to validate the credentials | https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/auditing/event-4776 | primer | 2026-10-18 | Day 11 |
+| Microsoft Learn: Process Security and Access Rights | https://learn.microsoft.com/en-us/windows/win32/procthread/process-security-and-access-rights | primer | 2026-10-18 | Day 11 |
+| Microsoft Learn: Configure added LSA protection | https://learn.microsoft.com/en-us/windows-server/security/credentials-protection-and-management/configuring-additional-lsa-protection | primer | 2026-10-18 | Day 11 |
+| Microsoft Entra: authentication and authorization error codes | https://learn.microsoft.com/en-us/entra/identity-platform/reference-error-codes | primer | 2026-10-18 | Day 11 |
+| Atomic Red Team: T1047 | https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1047/T1047.md | primer | 2026-10-18 | Day 11 |
+| Atomic Red Team: T1021.002 | https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1021.002/T1021.002.md | primer | 2026-10-10 | Day 11 |
+| Atomic Red Team: T1021.006 | https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1021.006/T1021.006.md | primer | 2026-10-18 | Day 11 |
+| Atomic Red Team: T1110.003 | https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1110.003/T1110.003.md | primer | 2026-10-18 | Day 11 |
+| Microsoft Learn: Sysinternals (What's New, versi Sysmon) | https://learn.microsoft.com/en-us/sysinternals/ | primer | 2026-10-18 | Day 11 |
