@@ -72,3 +72,22 @@ Indeks sumber global, disusun dari tabel Sumber (bagian 9) setiap Day di folder 
 | Squid wiki: Feature: Customizable Log Formats (LogFormat) | https://wiki.squid-cache.org/Features/LogFormat | primer | 2026-10-18 | Day 05 |
 | MITRE ATT&CK: T1071.001 Web Protocols dan T1176 Software Extensions | https://attack.mitre.org/techniques/T1071/001/ ; https://attack.mitre.org/techniques/T1176/ | primer | 2026-10-18 | Day 05 |
 | Sohail: When Agents Look Like Beacons: NIDS Evasion by Model Context Protocol Traffic (arXiv:2609.19091) | https://arxiv.org/abs/2609.19091 | sekunder | 2026-10-18 | Day 05 |
+| Splunk Enterprise Search Manual: View search job properties (10.0; dicek ulang di 10.6) | https://help.splunk.com/en/splunk-enterprise/search/search-manual/10.0/manage-jobs/view-search-job-properties | primer | 2026-10-18 | Day 06 |
+| SPL Search Reference: tstats (10.2; dicek ulang di 10.6) | https://help.splunk.com/en/splunk-enterprise/spl-search-reference/10.6/search-commands/tstats | primer | 2026-10-18 | Day 06 |
+| Knowledge Manager Manual 10.4: Accelerate data models | https://help.splunk.com/en/splunk-enterprise/manage-knowledge-objects/knowledge-management-manual/10.4/use-data-summaries-to-accelerate-searches/accelerate-data-models | primer | 2026-10-18 | Day 06 |
+| Search Manual 9.4: Write better searches | https://help.splunk.com/en/splunk-enterprise/search/search-manual/9.4/optimizing-searches/write-better-searches | primer | 2026-10-18 | Day 06 |
+| SPL Search Reference: outputlookup (10.2; dicek ulang di 10.6) | https://help.splunk.com/en/splunk-enterprise/spl-search-reference/10.6/search-commands/outputlookup | primer | 2026-10-18 | Day 06 |
+| SPL Search Reference: collect (10.2; dicek ulang di 10.6) | https://help.splunk.com/en/splunk-enterprise/spl-search-reference/10.6/search-commands/collect | primer | 2026-10-18 | Day 06 |
+| CIM 6.4: Endpoint data model | https://help.splunk.com/en/data-management/common-information-model/6.4/data-models/endpoint | primer | 2026-10-18 | Day 06 |
+| Splunk Security Content (repo GitHub), macro `security_content_summariesonly` dan macro konfigurasinya | https://github.com/splunk/security_content | primer | 2026-10-18 | Day 06 |
+| Threat-Hunting Day 02-05 (loop, hipotesis, data, stacking/baseline) | (lokal) | rujukan internal | 2026-10-08 | Day 06 |
+| Knowledge Manager Manual 10.4: Share data model acceleration summaries among search heads | https://help.splunk.com/en/splunk-enterprise/manage-knowledge-objects/knowledge-management-manual/10.4/use-data-summaries-to-accelerate-searches/share-data-model-acceleration-summaries-among-search-heads | primer | 2026-10-18 | Day 06 |
+| REST API Reference 10.4: Knowledge endpoint descriptions (`admin/summarization`) | https://help.splunk.com/en/splunk-enterprise/rest-api-reference/10.4/knowledge-endpoints | primer | 2026-10-18 | Day 06 |
+| Splunk Lantern: Reducing skipped searches | https://lantern.splunk.com/Platform_Data_Management/Transform_Data/Reducing_skipped_searches | sekunder | 2026-10-18 | Day 06 |
+| Splunk Enterprise 10.4: Workload management examples | https://help.splunk.com/en/splunk-enterprise/administer/manage-workloads/10.4/workload-management-examples | primer | 2026-10-18 | Day 06 |
+| Splunk Enterprise 10.2: Configure cgroups v2 in Splunk Enterprise | https://help.splunk.com/en/splunk-enterprise/administer/manage-workloads/10.2/set-up-linux-for-workload-management/configure-cgroups-v2-in-splunk-enterprise | primer | 2026-10-18 | Day 06 |
+| Splunk Enterprise 10.2: Create and manage roles with authorize.conf | https://help.splunk.com/en/splunk-enterprise/administer/manage-users-and-security/10.2/perform-advanced-user-and-role-management-in-splunk-enterprise | primer | 2026-10-18 | Day 06 |
+| Search Manual 9.4: Wildcards | https://help.splunk.com/en/splunk-enterprise/search/search-manual/9.4/search-primer/wildcards | primer | 2026-10-18 | Day 06 |
+| Splunk Research: Windows Office Product Spawned Uncommon Process | https://research.splunk.com/endpoint/55d8741c-fa32-4692-8109-410304961eb8/ | primer | 2026-10-18 | Day 06 |
+| Splunk CIM: release notes 6.4 dan 8.7, Endpoint data model 8.7 | https://help.splunk.com/en/data-management/common-information-model/8.7/introduction/release-notes-for-the-splunk-common-information-model-add-on | primer | 2026-10-18 | Day 06 |
+| Splunk Enterprise 10.6 release notes | https://help.splunk.com/en/splunk-enterprise/release-notes-and-updates/release-notes/10.6 | primer | 2026-10-18 | Day 06 |

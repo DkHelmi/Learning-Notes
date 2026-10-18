@@ -498,7 +498,7 @@ Regex diuji dengan kasus positif dan negatif sebelum dipakai. Tabel ini memperli
 Query distribusi atas Januari 2027:
 
 ```
-index=sysmon sourcetype=XmlWinEventLog EventCode=1
+index=sysmon sourcetype=XmlWinEventLog EventCode=1 host=JKT-WS-*
     earliest="01/01/2027:00:00:00" latest="02/01/2027:00:00:00"
 | `jab_norm_parentchild`
 | stats count AS executions dc(host) AS hosts BY parent_n child_n
@@ -531,7 +531,7 @@ Query ini dijalankan setelah baseline disimpan (bagian 2.5) dan sebelum baseline
 **Variasi:** least-frequency pada satu field, untuk menemukan biner yang baru muncul atau hanya ada di satu tempat:
 
 ```
-index=sysmon sourcetype=XmlWinEventLog EventCode=1
+index=sysmon sourcetype=XmlWinEventLog EventCode=1 host=JKT-WS-*
     earliest="01/01/2027:00:00:00" latest="02/01/2027:00:00:00"
 | `jab_norm_parentchild`
 | stats count dc(host) AS hosts BY child_n
@@ -550,7 +550,7 @@ Dengan normalisasi siap, baseline Januari ditulis ke lookup. Ini jawaban konkret
 **Tujuan:** membangun `jab_hunt_baseline_parentchild.csv` dari Sysmon EID 1 workstation ber-Sysmon selama 1 sampai 31 Januari 2027, lengkap dengan kolom `first_seen`.
 
 ```
-index=sysmon sourcetype=XmlWinEventLog EventCode=1
+index=sysmon sourcetype=XmlWinEventLog EventCode=1 host=JKT-WS-*
     earliest="01/01/2027:00:00:00" latest="02/01/2027:00:00:00"
 | `jab_norm_parentchild`
 | stats count AS executions dc(host) AS hosts min(_time) AS first_seen max(_time) AS last_seen
@@ -570,7 +570,7 @@ Keluaran ilustrasi: 2.611 baris tertulis ke `jab_hunt_baseline_parentchild.csv` 
 Untuk pembaruan, pola yang menggabungkan baseline lama dengan data baru adalah `inputlookup append=true` di tengah search, lalu agregasi ulang:
 
 ```
-index=sysmon sourcetype=XmlWinEventLog EventCode=1 earliest=-1d@d latest=@d
+index=sysmon sourcetype=XmlWinEventLog EventCode=1 host=JKT-WS-* earliest=-1d@d latest=@d
 | `jab_norm_parentchild`
 | stats count AS executions dc(host) AS hosts min(_time) AS first_seen max(_time) AS last_seen
         BY parent_n child_n
@@ -615,7 +615,7 @@ Target selesai : Kamis 2027-02-11
 **Tujuan:** menampilkan pasangan parent-child di jendela hunt yang tidak ada di baseline.
 
 ```
-index=sysmon sourcetype=XmlWinEventLog EventCode=1
+index=sysmon sourcetype=XmlWinEventLog EventCode=1 host=JKT-WS-*
     earliest="02/01/2027:00:00:00" latest="02/11/2027:00:00:00"
 | `jab_norm_parentchild`
 | stats count AS executions dc(host) AS hosts values(host) AS host_list values(User) AS users
