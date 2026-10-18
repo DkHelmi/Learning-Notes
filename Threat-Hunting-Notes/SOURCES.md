@@ -30,7 +30,7 @@ Indeks sumber global, disusun dari tabel Sumber (bagian 9) setiap Day di folder 
 | MITRE ATT&CK: Groups | https://attack.mitre.org/groups/ | primer | 2026-10-10 | Day 03 |
 | MITRE ATT&CK: T1071.004 Application Layer Protocol: DNS | https://attack.mitre.org/techniques/T1071/004/ | primer | 2026-10-18 | Day 03 |
 | MITRE ATT&CK: T1048 Exfiltration Over Alternative Protocol | https://attack.mitre.org/techniques/T1048/ | primer | 2026-10-18 | Day 03 |
-| MITRE ATT&CK: T1053.005 Scheduled Task/Job: Scheduled Task | https://attack.mitre.org/techniques/T1053/005/ | primer | 2026-10-18 | Day 03, 07 |
+| MITRE ATT&CK: T1053.005 Scheduled Task/Job: Scheduled Task | https://attack.mitre.org/techniques/T1053/005/ | primer | 2026-10-18 | Day 03, 07, 09 |
 | MITRE ATT&CK: DET0400 Behavioral Detection of DNS Tunneling and Application Layer Abuse | https://attack.mitre.org/detectionstrategies/DET0400/ | primer | 2026-10-18 | Day 03, 04 |
 | MITRE ATT&CK: Versions of ATT&CK | https://attack.mitre.org/resources/versions/ | primer | 2026-10-18 | Day 03, 04, 07 |
 | EventSentry: Sysmon Event ID 22 | https://system32.eventsentry.com/sysmon/event/22 | sekunder | 2026-10-18 | Day 03 |
@@ -121,3 +121,27 @@ Indeks sumber global, disusun dari tabel Sumber (bagian 9) setiap Day di folder 
 | Wazuh 4.14 documentation: Threat hunting (use case) | https://documentation.wazuh.com/4.14/getting-started/use-cases/threat-hunting.html | primer | 2026-10-18 | Day 08 |
 | Wazuh documentation: Navigating the Wazuh dashboard | https://documentation.wazuh.com/current/user-manual/wazuh-dashboard/navigating-the-wazuh-dashboard.html | primer | 2026-10-18 | Day 08 |
 | Wazuh documentation: Rules XML syntax | https://documentation.wazuh.com/current/user-manual/ruleset/ruleset-xml-syntax/rules.html | primer | 2026-10-18 | Day 08 |
+| Velociraptor releases (0.77.3) | https://github.com/Velocidex/velociraptor/releases | primer | 2026-10-18 | Day 09 |
+| Velociraptor documentation: Overview | https://docs.velociraptor.app/docs/overview/ | primer | 2026-10-18 | Day 09 |
+| Velociraptor documentation: VQL fundamentals | https://docs.velociraptor.app/docs/vql/fundamentals/ | primer | 2026-10-18 | Day 09 |
+| Velociraptor artifact reference: Windows.Sysinternals.Autoruns | https://docs.velociraptor.app/artifact_references/pages/windows.sysinternals.autoruns/ | primer | 2026-10-18 | Day 09 |
+| Velociraptor artifact reference: Windows.Sys.StartupItems | https://docs.velociraptor.app/artifact_references/pages/windows.sys.startupitems/ | primer | 2026-10-18 | Day 09 |
+| Velociraptor artifact reference: Windows.System.TaskScheduler | https://docs.velociraptor.app/artifact_references/pages/windows.system.taskscheduler/ | primer | 2026-10-18 | Day 09 |
+| Velociraptor artifact reference: Windows.Search.FileFinder | https://docs.velociraptor.app/artifact_references/pages/windows.search.filefinder/ | primer | 2026-10-18 | Day 09 |
+| Velociraptor artifact reference: Windows.Events.ProcessCreation | https://docs.velociraptor.app/artifact_references/pages/windows.events.processcreation/ | primer | 2026-10-10 | Day 09 |
+| Velociraptor artifact reference: Windows.Sigma.EventLogs | https://docs.velociraptor.app/artifact_references/pages/windows.sigma.eventlogs/ | primer | 2026-10-18 | Day 09 |
+| MITRE ATT&CK: T1547.001 Registry Run Keys / Startup Folder | https://attack.mitre.org/techniques/T1547/001/ | primer | 2026-10-10 | Day 09 |
+| Velociraptor documentation: Hunting | https://docs.velociraptor.app/docs/hunting/ | primer | 2026-10-18 | Day 09 |
+| Velociraptor documentation: Client monitoring | https://docs.velociraptor.app/docs/clients/monitoring/ | primer | 2026-10-18 | Day 09 |
+| Velociraptor documentation: Limiting resource usage | https://docs.velociraptor.app/docs/artifacts/resources/ | primer | 2026-10-18 | Day 09 |
+| Velociraptor documentation: Offline collections | https://docs.velociraptor.app/docs/deployment/offline_collections/ | primer | 2026-10-18 | Day 09 |
+| Velociraptor documentation: Deployment | https://docs.velociraptor.app/docs/deployment/ | primer | 2026-10-18 | Day 09 |
+| Velociraptor blog: Velociraptor's ACL model | https://docs.velociraptor.app/blog/2020/2020-03-29-velociraptors-acl-model-7f497575daee/ | primer | 2026-10-18 | Day 09 |
+| Velociraptor blog: Developing Sigma Rules in Velociraptor | https://docs.velociraptor.app/blog/2025/2025-02-02-sigma/ | primer | 2026-10-18 | Day 09 |
+| Velociraptor Sigma Project | https://sigma.velocidex.com/ | primer | 2026-10-18 | Day 09 |
+| MITRE ATT&CK: T1574.001 Hijack Execution Flow: DLL | https://attack.mitre.org/techniques/T1574/001/ | primer | 2026-10-18 | Day 09 |
+| MITRE ATT&CK: T1574 Hijack Execution Flow | https://attack.mitre.org/techniques/T1574/ | primer | 2026-10-18 | Day 09 |
+| Velociraptor artifact reference: Windows.Forensics.Prefetch | https://docs.velociraptor.app/artifact_references/pages/windows.forensics.prefetch/ | primer | 2026-10-18 | Day 09 |
+| Velociraptor artifact reference: Windows.System.DNSCache | https://docs.velociraptor.app/artifact_references/pages/windows.system.dnscache/ | primer | 2026-10-18 | Day 09 |
+| Velociraptor artifact reference: Windows.Network.NetstatEnriched | https://docs.velociraptor.app/artifact_references/pages/windows.network.netstatenriched/ | primer | 2026-10-18 | Day 09 |
+| Velociraptor artifact reference: Windows.Remediation.Quarantine | https://docs.velociraptor.app/artifact_references/pages/windows.remediation.quarantine/ | primer | 2026-10-18 | Day 09 |
