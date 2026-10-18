@@ -4,10 +4,10 @@ Indeks sumber global, disusun dari tabel Sumber (bagian 9) setiap Day di folder 
 
 | Judul | URL | Tipe | Diakses | Dipakai di |
 |---|---|---|---|---|
-| Splunk: Introducing the PEAK Threat Hunting Framework | https://www.splunk.com/en_us/blog/security/peak-threat-hunting-framework.html | sekunder | 2026-10-18 | Day 01, 02, 14, 15 |
-| TaHiTI: a threat hunting methodology (whitepaper) | https://www.betaalvereniging.nl/wp-content/uploads/2026/03/TaHiTI-Threat-Hunting-Methodology-whitepaper.pdf | primer | 2026-10-18 | Day 01, 02, 03, 07 |
-| Sqrrl: Hunt Evil: Your Practical Guide to Threat Hunting (berisi HMM) | https://www.threathunting.net/files/hunt-evil-practical-guide-threat-hunting.pdf | primer | 2026-10-10 | Day 01, 07 |
-| SANS: Threat hunters call data their biggest barrier (2026 survey) | https://www.sans.org/press/announcements/threat-hunters-call-data-their-biggest-barrier-overtaking-staffing-first-time-survey-finds | sekunder | 2026-10-18 | Day 01, 02, 04, 07, 15 |
+| Splunk: Introducing the PEAK Threat Hunting Framework | https://www.splunk.com/en_us/blog/security/peak-threat-hunting-framework.html | sekunder | 2026-10-18 | Day 01, 02, 14, 15, 19 |
+| TaHiTI: a threat hunting methodology (whitepaper) | https://www.betaalvereniging.nl/wp-content/uploads/2026/03/TaHiTI-Threat-Hunting-Methodology-whitepaper.pdf | primer | 2026-10-18 | Day 01, 02, 03, 07, 19 |
+| Sqrrl: Hunt Evil: Your Practical Guide to Threat Hunting (berisi HMM) | https://www.threathunting.net/files/hunt-evil-practical-guide-threat-hunting.pdf | primer | 2026-10-10 | Day 01, 07, 19 |
+| SANS: Threat hunters call data their biggest barrier (2026 survey) | https://www.sans.org/press/announcements/threat-hunters-call-data-their-biggest-barrier-overtaking-staffing-first-time-survey-finds | sekunder | 2026-10-18 | Day 01, 02, 04, 07, 15, 19 |
 | Wiz Academy: Threat Hunters: Responsibilities, Salary, Career Progression | https://www.wiz.io/academy/threat-hunters | sekunder | 2026-10-10 | Day 01 |
 | SANS 2025 Threat Hunting Survey: Advancements in Threat Hunting Amid AI and Cloud Challenges (Josh Lemon) | https://www.sans.org/white-papers/sans-2025-threat-hunting-survey-advancements-threat-hunting-amid-ai-cloud-challenges | sekunder | 2026-10-10 | Day 01 |
 | Google Cloud / Mandiant: M-Trends 2026: Data, Insights, and Strategies From the Frontlines | https://cloud.google.com/blog/topics/threat-intelligence/m-trends-2026/ | sekunder | 2026-10-18 | Day 01 |
@@ -18,7 +18,7 @@ Indeks sumber global, disusun dari tabel Sumber (bagian 9) setiap Day di folder 
 | Atomic Red Team: T1105 Ingress Tool Transfer | https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1105/T1105.md | primer | 2026-10-18 | Day 02 |
 | Splunk: Baseline Hunting with the PEAK Framework | https://www.splunk.com/en_us/blog/security/peak-baseline-hunting.html | sekunder | 2026-10-18 | Day 02, 05 |
 | Splunk: Turning Hunts Into Detections with PEAK | https://www.splunk.com/en_us/blog/security/peak-turning-hunts-into-detections.html | sekunder | 2026-10-18 | Day 02 |
-| Splunk: Measuring Hunting Success with PEAK | https://www.splunk.com/en_us/blog/security/peak-threat-hunting-metrics.html | sekunder | 2026-10-18 | Day 02, 15 |
+| Splunk: Measuring Hunting Success with PEAK | https://www.splunk.com/en_us/blog/security/peak-threat-hunting-metrics.html | sekunder | 2026-10-18 | Day 02, 15, 19 |
 | Splunk: Key Threat Hunting Deliverables with PEAK | https://www.splunk.com/en_us/blog/security/key-threat-hunting-deliverables-with-peak.html | sekunder | 2026-10-18 | Day 02 |
 | MITRE ATT&CK: T1105 Ingress Tool Transfer | https://attack.mitre.org/techniques/T1105/ | primer | 2026-10-18 | Day 02, 16 |
 | LOLBAS Project: Certutil | https://lolbas-project.github.io/lolbas/Binaries/Certutil/ | komunitas | 2026-10-18 | Day 02, 13, 16 |
@@ -258,7 +258,7 @@ Indeks sumber global, disusun dari tabel Sumber (bagian 9) setiap Day di folder 
 | Splunk Security Content: Office Application Spawn rundll32 process (removed) | https://research.splunk.com/removed/958751e4-9c5f-11eb-b103-acde48001122/ | primer | 2026-10-18 | Day 14 |
 | Splunk: contentctl (GitHub) | https://github.com/splunk/contentctl | primer | 2026-10-18 | Day 14 |
 | Splunk blog: From Data to Defense: Mastering the Detection Lifecycle with Detection Studio | https://www.splunk.com/en_us/blog/security/mastering-the-detection-lifecycle-with-detection-studio.html | sekunder | 2026-10-18 | Day 14 |
-| Intel 471: How threat hunting and good metrics help the business | https://www.intel471.com/blog/how-threat-hunting-and-good-metrics-help-the-business | sekunder | 2026-10-18 | Day 15 |
+| Intel 471: How threat hunting and good metrics help the business | https://www.intel471.com/blog/how-threat-hunting-and-good-metrics-help-the-business | sekunder | 2026-10-18 | Day 15, 19 |
 | Dropzone AI: Threat Hunting Metrics That Actually Measure Success in Your SOC (Tyson Supasatit) | https://www.dropzone.ai/blog/blog-threat-hunting-metrics | sekunder | 2026-10-18 | Day 15 |
 | Threat-Hunting Day 01-14 (laporan hunt, kartu kesiapan, triase dan tanggal aktif detection) | (lokal) | rujukan internal | 2026-10-18 | Day 15 |
 | MITRE ATT&CK Navigator: CHANGELOG | https://raw.githubusercontent.com/mitre-attack/attack-navigator/master/CHANGELOG.md | primer | 2026-10-18 | Day 15 |
@@ -330,3 +330,13 @@ Indeks sumber global, disusun dari tabel Sumber (bagian 9) setiap Day di folder 
 | Velociraptor: Server API | https://docs.velociraptor.app/docs/server_automation/server_api/ | primer | 2026-10-18 | Day 18 |
 | Velociraptor VQL reference: hunt_results | https://docs.velociraptor.app/vql_reference/server/hunt_results/ | primer | 2026-10-18 | Day 18 |
 | Velociraptor VQL reference: client_info | https://docs.velociraptor.app/vql_reference/server/client_info/ | primer | 2026-10-18 | Day 18 |
+| SANS: From Alerts to Adversaries: A Pragmatic Guide to Launching (and Maturing) Your Threat Hunting Program (Jan D'Herdt) | https://www.sans.org/blog/from-alerts-to-adversaries-a-pragmatic-guide-to-launching-and-maturing-your-threat-hunting-program | sekunder | 2026-10-18 | Day 19 |
+| Tulisan praktisi dan vendor tentang ritme program dan kalender purple team | (beberapa, lihat catatan sumber) | komunitas | 2026-10-09 | Day 19 |
+| MITRE ATT&CK Enterprise Matrix | https://attack.mitre.org/matrices/enterprise/ | primer | 2026-10-10 | Day 19 |
+| SCYTHE: Purple Team Exercise Framework (PTEF) v4 | https://github.com/scythe-io/purple-team-exercise-framework ; https://github.com/scythe-io/purple-team-exercise-framework/blob/master/PTEFv4.md | sekunder | 2026-10-18 | Day 19 |
+| Red Canary: Atomic Red Team | https://github.com/redcanaryco/atomic-red-team | primer | 2026-10-18 | Day 19 |
+| Red Canary: Invoke-AtomicRedTeam wiki (Execute Atomic Tests (Local), Execution Logging) dan PowerShell Gallery | https://github.com/redcanaryco/invoke-atomicredteam/wiki ; https://github.com/redcanaryco/invoke-atomicredteam/wiki/Execute-Atomic-Tests-(Local) ; https://github.com/redcanaryco/invoke-atomicredteam/wiki/Execution-Logging ; https://www.powershellgallery.com/packages/Invoke-AtomicRedTeam | primer | 2026-10-18 | Day 19 |
+| MITRE CTID: Adversary Emulation Library | https://github.com/center-for-threat-informed-defense/adversary_emulation_library | primer | 2026-10-18 | Day 19 |
+| MITRE CTID: Maturing Threat Informed Adversary Emulation with ATT&CK (Crys Tan) | https://ctid.mitre.org/events/apac-2025/14%20-%20Maturing%20Threat%20Informed%20Adversary%20Emulation%20with%20ATT&CK.pdf | sekunder | 2026-10-18 | Day 19 |
+| MITRE ATT&CK: Adversary Emulation and Red Teaming | https://attack.mitre.org/resources/get-started/adversary-emulation-and-red-teaming | primer | 2026-10-18 | Day 19 |
+| Threat-Hunting Day 01-18 (laporan hunt, register, metrik Q1, evaluasi Q1, usulan April) | (lokal) | rujukan internal | 2026-10-18 | Day 19 |

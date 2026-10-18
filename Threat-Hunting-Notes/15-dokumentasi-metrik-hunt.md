@@ -423,7 +423,7 @@ IMPACT
 Detection lahir dari hunt, aktif     : 12 (ES 10: alert 6, risk 3, finding-based 1; Wazuh 2)
 Hunt yang melahirkan detection aktif : 9 dari 22
 Detection lama diperbarui karena hunt: 0
-Laporan hunter terjadwal             : 4, plus 1 hunt Velociraptor mingguan (mulai 2027-03-22)
+Laporan hunter terjadwal             : 4, plus 1 hunt Velociraptor mingguan (mulai Kamis 2027-03-11)
 Usulan ditunda / ditolak / ke backlog: 3 / 1 / 1
 Insiden saat hunt                    : 1 (INC-2027-040, SEV-3, dinyatakan 2027-02-25 11:40)
 Insiden dari detection buatan hunt   : 0 (Wazuh aktif sejak 2027-02-25, ES sejak 2027-03-17 09:00)
