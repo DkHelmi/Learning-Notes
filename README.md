@@ -8,6 +8,7 @@ Coretan belajar mandiri saya seputar security operations. Ditulis untuk diri sen
 
 Tiap folder berisi catatan yang dipecah per Day.
 
+- [Security Fundamentals](Security-Fundamentals-Notes/)
 - [Splunk](Splunk-Notes/)
 - [Incident Response](Incident-Response-Notes/)
 - [Endpoint Forensics](Endpoint-Forensics-Notes/)
