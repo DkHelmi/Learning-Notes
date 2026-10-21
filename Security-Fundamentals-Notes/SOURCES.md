@@ -23,13 +23,13 @@ Indeks sumber global, disusun dari tabel Sumber (bagian 8) setiap Day di folder 
 | NIST CSRC Glossary: attack surface | https://csrc.nist.gov/glossary/term/attack_surface | primer | 2026-10-20 | Day 01 |
 | NIST CSRC Glossary: security control | https://csrc.nist.gov/glossary/term/security_control | primer | 2026-10-20 | Day 01 |
 | NIST CSRC Glossary: compensating controls | https://csrc.nist.gov/glossary/term/compensating_controls | primer | 2026-10-20 | Day 01 |
-| NIST SP 800-12 Rev. 1: An Introduction to Information Security | https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-12r1.pdf | primer | 2026-10-20 | Day 01 |
+| NIST SP 800-12 Rev. 1: An Introduction to Information Security | https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-12r1.pdf | primer | 2026-10-20 | Day 01, Day 18 |
 | NIST SP 800-30 Rev. 1: Guide for Conducting Risk Assessments | https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-30r1.pdf | primer | 2026-10-20 | Day 01 |
 | NIST SP 800-207: Zero Trust Architecture | https://csrc.nist.gov/pubs/sp/800/207/final | primer | 2026-10-20 | Day 01 |
 | NIST SP 800-207A: A Zero Trust Architecture Model for Access Control in Cloud-Native Applications in Multi-Cloud Environments | https://csrc.nist.gov/pubs/sp/800/207/a/final | primer | 2026-10-20 | Day 01 |
 | NIST CSRC News: Implementing a Zero Trust Architecture (SP 1800-35) | https://csrc.nist.gov/news/2025/implementing-a-zero-trust-architecture-sp-1800-35 | primer | 2026-10-20 | Day 01 |
 | CISA: Zero Trust Maturity Model Version 2.0 | https://www.cisa.gov/sites/default/files/2023-04/zero_trust_maturity_model_v2_508.pdf | primer | 2026-10-20 | Day 01 |
-| NIST: NIST Releases Version 2.0 of Landmark Cybersecurity Framework | https://www.nist.gov/news-events/news/2024/02/nist-releases-version-20-landmark-cybersecurity-framework | primer | 2026-10-20 | Day 01 |
+| NIST: NIST Releases Version 2.0 of Landmark Cybersecurity Framework | https://www.nist.gov/news-events/news/2024/02/nist-releases-version-20-landmark-cybersecurity-framework | primer | 2026-10-20 | Day 01, Day 18 |
 | RFC 2975: Introduction to Accounting Management | https://www.rfc-editor.org/rfc/rfc2975 | primer | 2026-10-20 | Day 01 |
 | RFC 2865: Remote Authentication Dial In User Service (RADIUS) | https://www.rfc-editor.org/rfc/rfc2865 | primer | 2026-10-20 | Day 01 |
 | Destination Certification: Types of Security Controls: Preventive, Detective, Corrective and More | https://destcert.com/resources/types-security-controls/ | sekunder | 2026-10-20 | Day 01 |
@@ -349,3 +349,24 @@ Indeks sumber global, disusun dari tabel Sumber (bagian 8) setiap Day di folder 
 | CSO Online: CVE program funding secured, easing fears of repeat crisis | https://www.csoonline.com/article/4142600/cve-program-funding-secured-easing-fears-of-repeat-crisis.html | sekunder | 2026-10-21 | Day 17 |
 | Help Net Security: NIST will enrich only highest-risk CVEs going forward | https://www.helpnetsecurity.com/2026/04/16/nist-national-vulnerability-database-nvd-enrichment/ | sekunder | 2026-10-21 | Day 17 |
 | Cloud Security Alliance: CSA Research Note, CISA BOD 26-04 | https://labs.cloudsecurityalliance.org/research/csa-research-note-cisa-bod-26-04-risk-based-vulnerability-re/ | sekunder | 2026-10-21 | Day 17 |
+| Database Peraturan BPK: UU Nomor 27 Tahun 2022 tentang Pelindungan Data Pribadi | https://peraturan.bpk.go.id/Details/229798 | primer | 2026-10-21 | Day 18 |
+| Pasal.id: UU No. 27 Tahun 2022 Pasal 46, 53, 57, 67, 70, 74 | https://pasal.id/peraturan/uu/uu-no-27-tahun-2022/pasal-46 (juga /pasal-53, /pasal-57, /pasal-67, /pasal-70, /pasal-74) | sekunder | 2026-10-21 | Day 18 |
+| Wikisource: UU Nomor 27 Tahun 2022, penjelasan Pasal 46 | https://id.wikisource.org/wiki/Halaman:UU_Nomor_27_Tahun_2022_Tentang_Perlindungan_Data_Pribadi.pdf/46 | sekunder | 2026-10-21 | Day 18 |
+| Kompas.id: Beredar Peraturan Pelaksana UU Perlindungan Data Pribadi | https://www.kompas.id/artikel/peraturan-pelaksana-uu-pdp-akhirnya-terbit-lembaga-pengawas-masih-dinanti | sekunder | 2026-10-21 | Day 18 |
+| Katadata: PP Pelindungan Data Pribadi Berlaku Januari 2027 | https://katadata.co.id/finansial/makro/6a9979b7c5745/pp-pelindungan-data-pribadi-berlaku-januari-2027-ini-aturan-baru-data-anak | sekunder | 2026-10-21 | Day 18 |
+| Veritask: Pengaturan Teknis PDP Akhirnya Terbit Lewat PP 33/2026 | https://veritask.ai/id/artikel/pengaturan-teknis-pelindungan-data-pribadi-dan-kewajiban-pengendali-serta-prosesor-akhirnya-terbit-lewat-pp-33-2026 | sekunder | 2026-10-21 | Day 18 |
+| Kompas.com: Komdigi Ungkap Perpres Pembentukan Badan PDP Sedang Disusun | https://nasional.kompas.com/read/2026/07/27/15423511/komdigi-ungkap-perpres-pembentukan-badan-perlindungan-data-pribadi-sedang | sekunder | 2026-10-21 | Day 18 |
+| NIST CSWP 29: The NIST Cybersecurity Framework (CSF) 2.0 | https://nvlpubs.nist.gov/nistpubs/CSWP/NIST.CSWP.29.pdf | primer | 2026-10-21 | Day 18 |
+| ISO committee: ISO/IEC 27001:2022 | https://committee.iso.org/standard/82875.html | primer | 2026-10-21 | Day 18 |
+| ISO committee: ISO/IEC 27001:2022/Amd 1:2024 | https://committee.iso.org/standard/88435.html | primer | 2026-10-21 | Day 18 |
+| Scrut: ISO 27001:2022 Annex A Controls | https://www.scrut.io/hub/iso-27001/iso-27001-controls | sekunder | 2026-10-21 | Day 18 |
+| Modulos: ISO 27001 Annex A | https://docs.modulos.ai/frameworks/iso-27001/annex-a | sekunder | 2026-10-21 | Day 18 |
+| European Accreditation FAQ: ISO/IEC 17021-1 klausul 9.1.3 | https://european-accreditation.org/?p=43034 | primer | 2026-10-21 | Day 18 |
+| European Accreditation FAQ: siklus sertifikasi tiga tahun (17021-1 8.2.2) | https://european-accreditation.org/?p=48729 | primer | 2026-10-21 | Day 18 |
+| NIST SP 800-34 Rev. 1: Contingency Planning Guide for Federal Information Systems | https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-34r1.pdf | primer | 2026-10-21 | Day 18 |
+| NIST CSRC: SP 800-34 Rev. 1 publication page | https://csrc.nist.gov/pubs/sp/800/34/r1/upd1/final | primer | 2026-10-21 | Day 18 |
+| NIST CSRC Glossary: recovery time objective, recovery point objective, maximum tolerable downtime, business continuity plan, disaster recovery plan | https://csrc.nist.gov/glossary/term/recovery_time_objective (juga recovery_point_objective, maximum_tolerable_downtime, business_continuity_plan, disaster_recovery_plan) | primer | 2026-10-21 | Day 18 |
+| NIST CSRC Glossary: risk register, risk response, risk appetite, risk tolerance | https://csrc.nist.gov/glossary/term/risk_register (juga risk_response, risk_appetite, risk_tolerance) | primer | 2026-10-21 | Day 18 |
+| US-CERT (CISA): Data Backup Options | https://www.cisa.gov/uscert/sites/default/files/publications/data_backup_options.pdf | primer | 2026-10-21 | Day 18 |
+| CISA: #StopRansomware Guide | https://www.cisa.gov/stopransomware/ransomware-guide | primer | 2026-10-21 | Day 18 |
+| NAKIVO: 3-2-1 Backup Rule | https://www.nakivo.com/blog/3-2-1-backup-rule/ | sekunder | 2026-10-21 | Day 18 |

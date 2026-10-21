@@ -220,7 +220,7 @@ Pertanyaan keempat Sari ("mana yang paling perlu dikhawatirkan") tidak bisa dija
 2. Nilai likelihood: apakah ancaman ini sudah pernah dicoba, apakah exploit-nya mudah didapat, apakah celahnya terlihat dari internet, pengaman apa yang sudah ada.
 3. Nilai impact: data apa dan berapa banyak yang terdampak, berapa lama layanan bisa berhenti, apa akibat hukumnya.
 4. Gabungkan keduanya dengan tabel yang disepakati organisasi menjadi tingkat risiko.
-5. Putuskan respons. NIST menyebut lima pilihan: menerima (acceptance), menghindari dengan menghentikan kegiatan berisiko (avoidance), menurunkan dengan menambah pengaman (mitigation), atau membagi dan memindahkan ke pihak lain seperti asuransi (sharing atau transfer) [S12].
+5. Putuskan respons. NIST menyebut lima pilihan: menerima (acceptance), menghindari dengan menghentikan kegiatan berisiko (avoidance), menurunkan dengan menambah pengaman (mitigation), membagi risiko dengan pihak lain (sharing), atau memindahkannya ke pihak lain seperti asuransi (transfer) [S12].
 
 Penilaian bisa kualitatif (kategori seperti sangat rendah sampai sangat tinggi) atau kuantitatif (angka uang dan probabilitas). Penilaian kualitatif lebih mudah dikomunikasikan ke pengambil keputusan, tetapi dua orang bisa memberi nilai berbeda bila setiap kategori tidak didefinisikan jelas [S12]. NIST SP 800-30 memakai lima tingkat, dari Very Low sampai Very High, dan menggabungkan likelihood dan impact dengan tabel [S12]; organisasi boleh menyederhanakannya. Risiko yang masih tersisa setelah pengaman dipasang disebut residual risk [S12].
 
