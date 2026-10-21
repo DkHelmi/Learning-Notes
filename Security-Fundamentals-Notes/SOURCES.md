@@ -97,7 +97,7 @@ Indeks sumber global, disusun dari tabel Sumber (bagian 8) setiap Day di folder 
 | RFC 3580: IEEE 802.1X RADIUS Usage Guidelines | https://www.rfc-editor.org/rfc/rfc3580.html | primer | 2026-10-21 | Day 03 |
 | NIST CSRC Glossary: denial of service | https://csrc.nist.gov/glossary/term/denial_of_service | primer | 2026-10-21 | Day 04 |
 | NIST CSRC Glossary: distributed denial of service | https://csrc.nist.gov/glossary/term/distributed_denial_of_service | primer | 2026-10-21 | Day 04 |
-| NIST CSRC Glossary: botnet | https://csrc.nist.gov/glossary/term/botnet | primer | 2026-10-21 | Day 04 |
+| NIST CSRC Glossary: botnet | https://csrc.nist.gov/glossary/term/botnet | primer | 2026-10-21 | Day 04, Day 16 |
 | CISA, FBI, MS-ISAC: Understanding and Responding to Distributed Denial-of-Service Attacks (v2.0, Maret 2024) | https://www.cisa.gov/sites/default/files/publications/understanding-and-responding-to-ddos-attacks_508c.pdf | primer | 2026-10-21 | Day 04 |
 | CISA Alert TA14-017A: UDP-Based Amplification Attacks | https://www.cisa.gov/news-events/alerts/2014/01/17/udp-based-amplification-attacks | primer | 2026-10-21 | Day 04 |
 | CISA Alert TA13-088A: DNS Amplification Attacks | https://www.cisa.gov/news-events/alerts/2013/03/29/dns-amplification-attacks | primer | 2026-10-21 | Day 04 |
@@ -225,7 +225,7 @@ Indeks sumber global, disusun dari tabel Sumber (bagian 8) setiap Day di folder 
 | MITRE ATT&CK T1566: Phishing (v2.8) | https://attack.mitre.org/techniques/T1566/ | primer | 2026-10-21 | Day 09, Day 14 |
 | Proofpoint: What Is Whaling? | https://www.proofpoint.com/us/threat-reference/whaling | sekunder | 2026-10-21 | Day 09 |
 | FBI IC3 PSA I-091124-PSA: Business Email Compromise: The $55 Billion Scam | https://www.ic3.gov/PSA/2024/PSA240911 | primer | 2026-10-21 | Day 09 |
-| FBI IC3 2025 Annual Report | https://www.ic3.gov/AnnualReport/Reports/2025_IC3Report.pdf | primer | 2026-10-21 | Day 09 |
+| FBI IC3 2025 Annual Report | https://www.ic3.gov/AnnualReport/Reports/2025_IC3Report.pdf | primer | 2026-10-21 | Day 09, Day 16 |
 | FBI IC3 PSA I-011822-PSA: Cybercriminals Tampering with QR Codes | https://www.ic3.gov/PSA/2022/PSA220118 | primer | 2026-10-21 | Day 09 |
 | RFC 5321: Simple Mail Transfer Protocol | https://www.rfc-editor.org/rfc/rfc5321.html | primer | 2026-10-21 | Day 09 |
 | RFC 5322: Internet Message Format | https://www.rfc-editor.org/rfc/rfc5322.html | primer | 2026-10-21 | Day 09 |
@@ -305,8 +305,8 @@ Indeks sumber global, disusun dari tabel Sumber (bagian 8) setiap Day di folder 
 | MITRE ATT&CK T1078: Valid Accounts | https://attack.mitre.org/techniques/T1078/ | primer | 2026-10-21 | Day 14 |
 | MITRE ATT&CK T1059 dan T1059.001 | https://attack.mitre.org/techniques/T1059/ ; https://attack.mitre.org/techniques/T1059/001/ | primer | 2026-10-21 | Day 14 |
 | MITRE ATT&CK T1021: Remote Services | https://attack.mitre.org/techniques/T1021/ | primer | 2026-10-21 | Day 14 |
-| MITRE ATT&CK T1486: Data Encrypted for Impact | https://attack.mitre.org/techniques/T1486/ | primer | 2026-10-21 | Day 14 |
-| MITRE ATT&CK T1490: Inhibit System Recovery | https://attack.mitre.org/techniques/T1490/ | primer | 2026-10-21 | Day 14 |
+| MITRE ATT&CK T1486: Data Encrypted for Impact | https://attack.mitre.org/techniques/T1486/ | primer | 2026-10-21 | Day 14, Day 16 |
+| MITRE ATT&CK T1490: Inhibit System Recovery | https://attack.mitre.org/techniques/T1490/ | primer | 2026-10-21 | Day 14, Day 16 |
 | MITRE ATT&CK T1003: OS Credential Dumping | https://attack.mitre.org/techniques/T1003/ | primer | 2026-10-21 | Day 14 |
 | MITRE ATT&CK T1595 Active Scanning dan T1046 Network Service Discovery | https://attack.mitre.org/techniques/T1595/ ; https://attack.mitre.org/techniques/T1046/ | primer | 2026-10-21 | Day 14 |
 | MITRE ATT&CK T1505.003, T1552.001, T1071.001, T1204.002 | https://attack.mitre.org/techniques/T1505/003/ ; https://attack.mitre.org/techniques/T1552/001/ ; https://attack.mitre.org/techniques/T1071/001/ ; https://attack.mitre.org/techniques/T1204/002/ | primer | 2026-10-21 | Day 14 |
@@ -368,5 +368,27 @@ Indeks sumber global, disusun dari tabel Sumber (bagian 8) setiap Day di folder 
 | NIST CSRC Glossary: recovery time objective, recovery point objective, maximum tolerable downtime, business continuity plan, disaster recovery plan | https://csrc.nist.gov/glossary/term/recovery_time_objective (juga recovery_point_objective, maximum_tolerable_downtime, business_continuity_plan, disaster_recovery_plan) | primer | 2026-10-21 | Day 18 |
 | NIST CSRC Glossary: risk register, risk response, risk appetite, risk tolerance | https://csrc.nist.gov/glossary/term/risk_register (juga risk_response, risk_appetite, risk_tolerance) | primer | 2026-10-21 | Day 18 |
 | US-CERT (CISA): Data Backup Options | https://www.cisa.gov/uscert/sites/default/files/publications/data_backup_options.pdf | primer | 2026-10-21 | Day 18 |
-| CISA: #StopRansomware Guide | https://www.cisa.gov/stopransomware/ransomware-guide | primer | 2026-10-21 | Day 18 |
+| CISA: #StopRansomware Guide | https://www.cisa.gov/stopransomware/ransomware-guide | primer | 2026-10-21 | Day 18, Day 16 |
 | NAKIVO: 3-2-1 Backup Rule | https://www.nakivo.com/blog/3-2-1-backup-rule/ | sekunder | 2026-10-21 | Day 18 |
+| NIST SP 800-83 Rev. 1: Guide to Malware Incident Prevention and Handling for Desktops and Laptops | https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-83r1.pdf | primer | 2026-10-21 | Day 16 |
+| NIST CSRC Glossary: malware | https://csrc.nist.gov/glossary/term/malware | primer | 2026-10-21 | Day 16 |
+| NIST CSRC Glossary: virus | https://csrc.nist.gov/glossary/term/virus | primer | 2026-10-21 | Day 16 |
+| NIST CSRC Glossary: worm | https://csrc.nist.gov/glossary/term/worm | primer | 2026-10-21 | Day 16 |
+| NIST CSRC Glossary: trojan horse | https://csrc.nist.gov/glossary/term/trojan_horse | primer | 2026-10-21 | Day 16 |
+| NIST CSRC Glossary: rootkit | https://csrc.nist.gov/glossary/term/rootkit | primer | 2026-10-21 | Day 16 |
+| NIST CSRC Glossary: spyware | https://csrc.nist.gov/glossary/term/spyware | primer | 2026-10-21 | Day 16 |
+| NIST CSRC Glossary: backdoor | https://csrc.nist.gov/glossary/term/backdoor | primer | 2026-10-21 | Day 16 |
+| Microsoft Threat Intelligence: Ransomware as a service, understanding the cybercrime gig economy | https://www.microsoft.com/en-us/security/blog/2022/05/09/ransomware-as-a-service-understanding-the-cybercrime-gig-economy-and-how-to-protect-yourself/ | sekunder | 2026-10-21 | Day 16 |
+| MITRE ATT&CK T1071: Application Layer Protocol | https://attack.mitre.org/techniques/T1071/ | primer | 2026-10-21 | Day 16 |
+| MITRE ATT&CK T1547.001: Registry Run Keys / Startup Folder | https://attack.mitre.org/techniques/T1547/001/ | primer | 2026-10-21 | Day 16 |
+| MITRE ATT&CK T1053.005: Scheduled Task | https://attack.mitre.org/techniques/T1053/005/ | primer | 2026-10-21 | Day 16 |
+| MITRE ATT&CK T1055: Process Injection | https://attack.mitre.org/techniques/T1055/ | primer | 2026-10-21 | Day 16 |
+| MITRE ATT&CK T1059.001: PowerShell | https://attack.mitre.org/techniques/T1059/001/ | primer | 2026-10-21 | Day 16 |
+| Microsoft Learn: Fileless threats | https://learn.microsoft.com/en-us/defender-endpoint/malware/fileless-threats | primer | 2026-10-21 | Day 16 |
+| Microsoft Learn: How Microsoft names malware | https://learn.microsoft.com/en-us/defender-xdr/malware-naming | primer | 2026-10-21 | Day 16 |
+| FBI dan CISA AA25-141B: Threat Actors Deploy LummaC2 Malware to Exfiltrate Sensitive Data | https://www.cisa.gov/news-events/cybersecurity-advisories/aa25-141b | primer | 2026-10-21 | Day 16 |
+| Microsoft On the Issues: Disrupting Lumma Stealer | https://blogs.microsoft.com/on-the-issues/2025/05/21/microsoft-leads-global-action-against-favored-cybercrime-tool/ | primer | 2026-10-21 | Day 16 |
+| CISA AA22-057A: Destructive Malware Targeting Organizations in Ukraine | https://www.cisa.gov/news-events/cybersecurity-advisories/aa22-057a | primer | 2026-10-21 | Day 16 |
+| CISA: Indicators Associated With WannaCry Ransomware | https://www.cisa.gov/news-events/alerts/2017/05/12/indicators-associated-wannacry-ransomware | primer | 2026-10-21 | Day 16 |
+| Fox-IT: Hunting for beacons | https://blog.fox-it.com/2020/01/15/hunting-for-beacons/ | sekunder | 2026-10-21 | Day 16 |
+| Microsoft Learn: Understanding malware and other threats | https://learn.microsoft.com/en-us/defender-endpoint/malware/understanding-malware | primer | 2026-10-21 | Day 16 |
