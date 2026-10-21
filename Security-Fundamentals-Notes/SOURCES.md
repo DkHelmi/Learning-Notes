@@ -393,7 +393,7 @@ Indeks sumber global, disusun dari tabel Sumber (bagian 8) setiap Day di folder 
 | Fox-IT: Hunting for beacons | https://blog.fox-it.com/2020/01/15/hunting-for-beacons/ | sekunder | 2026-10-21 | Day 16 |
 | Microsoft Learn: Understanding malware and other threats | https://learn.microsoft.com/en-us/defender-endpoint/malware/understanding-malware | primer | 2026-10-21 | Day 16 |
 | NIST CSRC Glossary: event, incident, false positive, false negative | https://csrc.nist.gov/glossary/term/event ; https://csrc.nist.gov/glossary/term/incident ; https://csrc.nist.gov/glossary/term/false_positive ; https://csrc.nist.gov/glossary/term/false_negative | primer | 2026-10-21 | Day 11 |
-| NIST SP 800-61r3: Incident Response Recommendations and Considerations for Cybersecurity Risk Management | https://doi.org/10.6028/NIST.SP.800-61r3 | primer | 2026-10-21 | Day 11 |
+| NIST SP 800-61r3: Incident Response Recommendations and Considerations for Cybersecurity Risk Management | https://doi.org/10.6028/NIST.SP.800-61r3 | primer | 2026-10-21 | Day 11, Day 19 |
 | Microsoft Learn: Basic incident tasks for Microsoft Sentinel incidents in the Azure portal | https://learn.microsoft.com/en-us/azure/sentinel/incident-navigate-triage | primer | 2026-10-21 | Day 11 |
 | Microsoft Learn: Handle false positives in Microsoft Sentinel | https://learn.microsoft.com/en-us/azure/sentinel/false-positives | primer | 2026-10-21 | Day 11 |
 | Microsoft Learn: Manage incidents in the Microsoft Defender portal (legacy) | https://learn.microsoft.com/en-us/defender-xdr/manage-incidents | primer | 2026-10-21 | Day 11 |
@@ -416,7 +416,7 @@ Indeks sumber global, disusun dari tabel Sumber (bagian 8) setiap Day di folder 
 | OWASP Session Management Cheat Sheet | https://cheatsheetseries.owasp.org/cheatsheets/Session_Management_Cheat_Sheet.html | primer | 2026-10-21 | Day 15 |
 | NIST CSRC Glossary: man-in-the-middle attack | https://csrc.nist.gov/glossary/term/man_in_the_middle_attack | primer | 2026-10-21 | Day 15 |
 | MITRE ATT&CK T1557: Adversary-in-the-Middle | https://attack.mitre.org/techniques/T1557/ | primer | 2026-10-21 | Day 15 |
-| MITRE ATT&CK T1539: Steal Web Session Cookie | https://attack.mitre.org/techniques/T1539/ | primer | 2026-10-21 | Day 15 |
+| MITRE ATT&CK T1539: Steal Web Session Cookie | https://attack.mitre.org/techniques/T1539/ | primer | 2026-10-21 | Day 15, Day 19 |
 | RFC 5452: Measures for Making DNS More Resilient against Forged Answers | https://www.rfc-editor.org/rfc/rfc5452 | primer | 2026-10-21 | Day 15 |
 | CERT/CC VU#800113: Multiple DNS implementations vulnerable to cache poisoning | https://www.kb.cert.org/vuls/id/800113 | primer | 2026-10-21 | Day 15 |
 | MITRE ATT&CK TA0004: Privilege Escalation (dan T1068) | https://attack.mitre.org/tactics/TA0004/ | primer | 2026-10-21 | Day 15 |
@@ -427,3 +427,11 @@ Indeks sumber global, disusun dari tabel Sumber (bagian 8) setiap Day di folder 
 | CISA dan NIST: Defending Against Software Supply Chain Attacks | https://www.cisa.gov/sites/default/files/publications/defending_against_software_supply_chain_attacks_508.pdf | primer | 2026-10-21 | Day 15 |
 | MITRE ATT&CK T1195.002: Compromise Software Supply Chain | https://attack.mitre.org/techniques/T1195/002/ | primer | 2026-10-21 | Day 15 |
 | MITRE ATT&CK: Versions of ATT&CK | https://attack.mitre.org/resources/versions/ | primer | 2026-10-21 | Day 15 |
+| NIST SP 800-61r2: Computer Security Incident Handling Guide (withdrawn 2025-04-03) | https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-61r2.pdf | primer | 2026-10-22 | Day 19 |
+| NIST CSRC Glossary: chain of custody | https://csrc.nist.gov/glossary/term/chain_of_custody | primer | 2026-10-22 | Day 19 |
+| NIST CSRC Glossary: root cause analysis | https://csrc.nist.gov/glossary/term/root_cause_analysis | primer | 2026-10-22 | Day 19 |
+| CISA: Federal Government Cybersecurity Incident and Vulnerability Response Playbooks | https://cisa.gov/sites/default/files/2024-08/Federal_Government_Cybersecurity_Incident_and_Vulnerability_Response_Playbooks_508C.pdf | primer | 2026-10-22 | Day 19 |
+| NIST SP 800-86: Guide to Integrating Forensic Techniques into Incident Response | https://csrc.nist.gov/pubs/sp/800/86/final | primer | 2026-10-22 | Day 19 |
+| SANS Institute: Incident Handler's Handbook (Patrick Kral) | https://www.sans.org/white-papers/33901 | sekunder | 2026-10-22 | Day 19 |
+| Palo Alto Networks Cortex Marketplace: SANS content pack | https://cortex.marketplace.pan.dev/marketplace/details/SANS | sekunder | 2026-10-22 | Day 19 |
+| Microsoft Learn: Revoke user access in an emergency in Microsoft Entra ID | https://learn.microsoft.com/en-us/entra/identity/users/users-revoke-access | primer | 2026-10-22 | Day 19 |
