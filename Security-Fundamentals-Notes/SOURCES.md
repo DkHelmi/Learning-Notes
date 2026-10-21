@@ -244,3 +244,19 @@ Indeks sumber global, disusun dari tabel Sumber (bagian 8) setiap Day di folder 
 | Barracuda Glossary: Inline Email Security Deployment | https://www.barracuda.com/support/glossary/inline-deployment | sekunder | 2026-10-21 | Day 09 |
 | NIST SP 800-177 Rev. 1: Trustworthy Email | https://csrc.nist.gov/pubs/sp/800/177/r1/final | primer | 2026-10-21 | Day 09 |
 | Microsoft Learn: Set up SPF for your Microsoft 365 domain | https://learn.microsoft.com/en-us/defender-office-365/email-authentication-spf-configure | primer | 2026-10-21 | Day 09 |
+| NIST SP 800-92: Guide to Computer Security Log Management | https://csrc.nist.gov/pubs/sp/800/92/final<br>https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-92.pdf | primer | 2026-10-21 | Day 10 |
+| NIST SP 800-92 Rev. 1 (Initial Public Draft): Cybersecurity Log Management Planning Guide | https://csrc.nist.gov/pubs/sp/800/92/r1/ipd | primer | 2026-10-21 | Day 10 |
+| NIST CSRC Glossary: SIEM, SOAR, Security Operations Center, service level agreement | https://csrc.nist.gov/glossary/term/security_information_and_event_management<br>https://csrc.nist.gov/glossary/term/security_orchestration_automation_and_response<br>https://csrc.nist.gov/glossary/term/security_operations_center<br>https://csrc.nist.gov/glossary/term/service_level_agreement | primer | 2026-10-21 | Day 10 |
+| NIST SP 800-61r3: Incident Response Recommendations and Considerations for Cybersecurity Risk Management | https://doi.org/10.6028/NIST.SP.800-61r3<br>https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-61r3.pdf | primer | 2026-10-21 | Day 10 |
+| CISA: Guidance for SIEM and SOAR Implementation | https://www.cisa.gov/resources-tools/resources/guidance-siem-and-soar-implementation | primer | 2026-10-21 | Day 10 |
+| Infosecurity Magazine: Governments Urge Organizations to Prioritize SIEM/SOAR Adoption | https://www.infosecurity-magazine.com/news/governments-prioritize-siem-soar/ | sekunder | 2026-10-21 | Day 10 |
+| Splunk: Use detections to search for threats in Splunk Enterprise Security (ES 8.0) | https://help.splunk.com/en/splunk-enterprise-security-8/administer/8.0/detections/use-detections-to-search-for-threats-in-splunk-enterprise-security | primer | 2026-10-21 | Day 10 |
+| Splunk: Overview of the Splunk Common Information Model (CIM 5.2) | https://help.splunk.com/en/splunk-enterprise/common-information-model/5.2/introduction | primer | 2026-10-21 | Day 10 |
+| Microsoft Learn: Advanced threat detection with UEBA in Microsoft Sentinel | https://learn.microsoft.com/en-us/azure/sentinel/identify-threats-with-entity-behavior-analytics | primer | 2026-10-21 | Day 10 |
+| Splunk Blog: NOCs vs. SOCs: Network and Security Operations Centers Compared | https://www.splunk.com/en_us/blog/learn/noc-vs-soc.html | sekunder | 2026-10-21 | Day 10 |
+| ISACA Journal: A Framework for SIEM Implementation | https://www.isaca.org/resources/isaca-journal/issues/2023/volume-3/a-framework-for-siem-implementation | sekunder | 2026-10-21 | Day 10 |
+| TechTarget: Compare runbooks vs. playbooks for IT process documentation | https://www.techtarget.com/it-infrastructure/tip/Compare-runbooks-vs-playbooks-for-IT-process-documentation | sekunder | 2026-10-21 | Day 10 |
+| Corelight Glossary: MTTR (mean time to respond, recover, resolve) | https://corelight.com/resources/glossary/mttr-mean-time-to-respond-recover-resolve | sekunder | 2026-10-21 | Day 10 |
+| FireHydrant: What is MTTR? Incident metrics explained (MTBF, MTTF, MTTA) | https://firehydrant.com/blog/mttr/ | sekunder | 2026-10-21 | Day 10 |
+| Wiz Academy: Tier 1 SOC analysts, responsibilities and career path | https://www.wiz.io/academy/cloud-careers/soc-analyst-tier-1 | sekunder | 2026-10-21 | Day 10 |
+| Kent, Tuptuk, Becker: Passing the Baton: Shift Handovers within Cybersecurity Incident Response Teams (arXiv:2601.07788v1) | https://arxiv.org/abs/2601.07788v1 | sekunder | 2026-10-21 | Day 10 |
