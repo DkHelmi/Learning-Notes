@@ -13,7 +13,7 @@ Indeks sumber global, disusun dari tabel Sumber (bagian 8) setiap Day di folder 
 | NIST CSRC Glossary: authentication, authorization, and accounting (AAA) | https://csrc.nist.gov/glossary/term/authentication_authorization_and_accounting | primer | 2026-10-20 | Day 01 |
 | NIST CSRC Glossary: asset | https://csrc.nist.gov/glossary/term/asset | primer | 2026-10-20 | Day 01 |
 | NIST CSRC Glossary: threat | https://csrc.nist.gov/glossary/term/threat | primer | 2026-10-20 | Day 01 |
-| NIST CSRC Glossary: threat actor | https://csrc.nist.gov/glossary/term/threat_actor | primer | 2026-10-20 | Day 01 |
+| NIST CSRC Glossary: threat actor | https://csrc.nist.gov/glossary/term/threat_actor | primer | 2026-10-20 | Day 01, Day 14 |
 | NIST CSRC Glossary: vulnerability | https://csrc.nist.gov/glossary/term/vulnerability | primer | 2026-10-20 | Day 01 |
 | NIST CSRC Glossary: risk | https://csrc.nist.gov/glossary/term/risk | primer | 2026-10-20 | Day 01 |
 | NIST CSRC Glossary: likelihood of occurrence | https://csrc.nist.gov/glossary/term/likelihood_of_occurrence | primer | 2026-10-20 | Day 01 |
@@ -184,7 +184,7 @@ Indeks sumber global, disusun dari tabel Sumber (bagian 8) setiap Day di folder 
 | Microsoft Learn: NTLM overview in Windows Server | https://learn.microsoft.com/en-us/windows-server/security/kerberos/ntlm-overview | primer | 2026-10-21 | Day 07 |
 | Microsoft Learn: Deprecated features in the Windows client (entri NTLM) | https://learn.microsoft.com/en-us/windows/whats-new/deprecated-features | primer | 2026-10-21 | Day 07 |
 | Microsoft Learn: Group Policy overview for Windows Server | https://learn.microsoft.com/en-us/windows-server/identity/ad-ds/manage/group-policy/group-policy-overview | primer | 2026-10-21 | Day 07 |
-| Microsoft Learn: 4624(S) An account was successfully logged on | https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/auditing/event-4624 | primer | 2026-10-21 | Day 07 |
+| Microsoft Learn: 4624(S) An account was successfully logged on | https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/auditing/event-4624 | primer | 2026-10-21 | Day 07, Day 13 |
 | Microsoft Learn: 4625(F) An account failed to log on | https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/auditing/event-4625 | primer | 2026-10-21 | Day 07 |
 | Microsoft Learn: 4768(S, F) A Kerberos authentication ticket (TGT) was requested | https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/auditing/event-4768 | primer | 2026-10-21 | Day 07 |
 | Microsoft Learn: 4769(S, F) A Kerberos service ticket was requested | https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/auditing/event-4769 | primer | 2026-10-21 | Day 07 |
@@ -222,7 +222,7 @@ Indeks sumber global, disusun dari tabel Sumber (bagian 8) setiap Day di folder 
 | NIST CSRC Glossary: social engineering | https://csrc.nist.gov/glossary/term/social_engineering | primer | 2026-10-21 | Day 09 |
 | NIST CSRC Glossary: phishing | https://csrc.nist.gov/glossary/term/phishing | primer | 2026-10-21 | Day 09 |
 | CISA: Avoiding Social Engineering and Phishing Attacks (2021-02-01, arsip) | https://www.cisa.gov/news-events/news/avoiding-social-engineering-and-phishing-attacks | primer | 2026-10-21 | Day 09 |
-| MITRE ATT&CK T1566: Phishing (v2.8) | https://attack.mitre.org/techniques/T1566/ | primer | 2026-10-21 | Day 09 |
+| MITRE ATT&CK T1566: Phishing (v2.8) | https://attack.mitre.org/techniques/T1566/ | primer | 2026-10-21 | Day 09, Day 14 |
 | Proofpoint: What Is Whaling? | https://www.proofpoint.com/us/threat-reference/whaling | sekunder | 2026-10-21 | Day 09 |
 | FBI IC3 PSA I-091124-PSA: Business Email Compromise: The $55 Billion Scam | https://www.ic3.gov/PSA/2024/PSA240911 | primer | 2026-10-21 | Day 09 |
 | FBI IC3 2025 Annual Report | https://www.ic3.gov/AnnualReport/Reports/2025_IC3Report.pdf | primer | 2026-10-21 | Day 09 |
@@ -260,3 +260,92 @@ Indeks sumber global, disusun dari tabel Sumber (bagian 8) setiap Day di folder 
 | FireHydrant: What is MTTR? Incident metrics explained (MTBF, MTTF, MTTA) | https://firehydrant.com/blog/mttr/ | sekunder | 2026-10-21 | Day 10 |
 | Wiz Academy: Tier 1 SOC analysts, responsibilities and career path | https://www.wiz.io/academy/cloud-careers/soc-analyst-tier-1 | sekunder | 2026-10-21 | Day 10 |
 | Kent, Tuptuk, Becker: Passing the Baton: Shift Handovers within Cybersecurity Incident Response Teams (arXiv:2601.07788v1) | https://arxiv.org/abs/2601.07788v1 | sekunder | 2026-10-21 | Day 10 |
+| NIST CSRC Glossary: indicator, indicator of compromise, tactics techniques and procedures, threat intelligence | https://csrc.nist.gov/glossary/term/indicator ; https://csrc.nist.gov/glossary/term/indicator_of_compromise ; https://csrc.nist.gov/glossary/term/tactics_techniques_and_procedures ; https://csrc.nist.gov/glossary/term/threat_intelligence | primer | 2026-10-21 | Day 12 |
+| NIST SP 800-150: Guide to Cyber Threat Information Sharing | https://csrc.nist.gov/pubs/sp/800/150/final ; https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-150.pdf | primer | 2026-10-21 | Day 12 |
+| David J. Bianco: The Pyramid of Pain | https://detect-respond.blogspot.com/2013/03/the-pyramid-of-pain.html | primer | 2026-10-21 | Day 12 |
+| OASIS: STIX Version 2.1 (OASIS Standard) | https://docs.oasis-open.org/cti/stix/v2.1/os/stix-v2.1-os.html | primer | 2026-10-21 | Day 12 |
+| OASIS: TAXII Version 2.1 (OASIS Standard) | https://docs.oasis-open.org/cti/taxii/v2.1/os/taxii-v2.1-os.html | primer | 2026-10-21 | Day 12 |
+| FIRST: Traffic Light Protocol (TLP) version 2.0 | https://www.first.org/tlp/ | primer | 2026-10-21 | Day 12 |
+| CISA: Traffic Light Protocol (TLP) Definitions and Usage | https://www.cisa.gov/news-events/news/traffic-light-protocol-tlp-definitions-and-usage | primer | 2026-10-21 | Day 12 |
+| CISA: Automated Indicator Sharing (AIS) | https://www.cisa.gov/topics/cyber-threats-and-advisories/information-sharing/automated-indicator-sharing-ais | primer | 2026-10-21 | Day 12 |
+| MITRE ATT&CK: T1566, T1539, T1564.008, Versions (v20.0) | https://attack.mitre.org/techniques/T1566/ ; https://attack.mitre.org/techniques/T1539/ ; https://attack.mitre.org/techniques/T1564/008/ ; https://attack.mitre.org/resources/versions/ | primer | 2026-10-21 | Day 12 |
+| CrowdStrike: What is an Indicator of Attack (IOA)? | https://www.crowdstrike.com/cybersecurity-101/threat-intelligence/indicators-of-attack-ioa/ | sekunder | 2026-10-21 | Day 12 |
+| CrowdStrike: What is Cyber Threat Intelligence? | https://www.crowdstrike.com/en-us/cybersecurity-101/threat-intelligence/ | sekunder | 2026-10-21 | Day 12 |
+| MWR InfoSecurity (dengan CPNI dan CERT-UK): Threat Intelligence: Collecting, Analysing, Evaluating (salinan OCR GWU) | https://nsarchive.gwu.edu/media/17212/ocr | sekunder | 2026-10-21 | Day 12 |
+| MISP Project: misp-warninglists | https://github.com/MISP/misp-warninglists | sekunder | 2026-10-21 | Day 12 |
+| MISP Project: Decaying of Indicators | https://www.misp-project.org/2019/09/12/Decaying-Of-Indicators.html | sekunder | 2026-10-21 | Day 12 |
+| Peraturan BSSN Nomor 10 Tahun 2020 tentang Tim Tanggap Insiden Siber (salinan CSIRT Kab. Pati) | https://csirt.patikab.go.id/./assets/event/Peraturan-BSSN-Nomor-10-Tahun-2020-_sign.pdf | primer | 2026-10-21 | Day 12 |
+| Cyber Policy Portal: ID-SIRTII/CC | https://database.cyberpolicyportal.org/en/entity/ctar6pjn1su | sekunder | 2026-10-21 | Day 12 |
+| NIST CSRC Glossary: honeypot | https://csrc.nist.gov/glossary/term/honeypot | primer | 2026-10-21 | Day 13 |
+| NIST CSRC Glossary: sandbox | https://csrc.nist.gov/glossary/term/sandbox | primer | 2026-10-21 | Day 13 |
+| NIST SP 800-53 Rev. 5 control RA-10 Threat Hunting (teks control via situs pemetaan) | https://opensecurityarchitecture.org/controls/ra-10 | primer (teks NIST lewat pihak ketiga) | 2026-10-21 | Day 13 |
+| NIST SP 800-53 Rev. 5 (halaman publikasi) | https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final | primer | 2026-10-21 | Day 13 |
+| Splunk: Introducing the PEAK Threat Hunting Framework | https://www.splunk.com/en_us/blog/security/peak-threat-hunting-framework.html | sekunder | 2026-10-21 | Day 13 |
+| Splunk: Hypothesis-Driven Hunting with the PEAK Framework | https://www.splunk.com/en_us/blog/security/peak-hypothesis-driven-threat-hunting.html | sekunder | 2026-10-21 | Day 13 |
+| Splunk: Baseline Hunting with the PEAK Framework | https://www.splunk.com/en_us/blog/security/peak-baseline-hunting | sekunder | 2026-10-21 | Day 13 |
+| Microsoft Learn: Advanced hunting overview in Microsoft Defender XDR | https://learn.microsoft.com/en-us/defender-xdr/advanced-hunting-overview | primer | 2026-10-21 | Day 13 |
+| Microsoft Learn: Take response actions on a file in Defender for Endpoint (Deep analysis) | https://learn.microsoft.com/en-us/defender-endpoint/respond-file-alerts | primer | 2026-10-21 | Day 13 |
+| MITRE Engage (beranda) | https://engage.mitre.org/ | primer | 2026-10-21 | Day 13 |
+| MITRE Engage Matrix | https://engage.mitre.org/matrix/ | primer | 2026-10-21 | Day 13 |
+| MITRE Engage: What Is Adversary Engagement | https://engage.mitre.org/learn-more-ae | primer | 2026-10-21 | Day 13 |
+| MITRE D3FEND: Dynamic Analysis (D3-DA) | https://d3fend.mitre.org/technique/d3f:DynamicAnalysis/ | primer | 2026-10-21 | Day 13 |
+| MITRE D3FEND: File Analysis (D3-FA) | https://d3fend.mitre.org/technique/d3f:FileAnalysis/ | primer | 2026-10-21 | Day 13 |
+| MITRE D3FEND: Decoy User Credential (D3-DUC) | https://d3fend.mitre.org/technique/d3f:DecoyUserCredential/ | primer | 2026-10-21 | Day 13 |
+| MITRE ATT&CK: Virtualization/Sandbox Evasion (T1497) | https://attack.mitre.org/techniques/T1497/ | primer | 2026-10-21 | Day 13 |
+| Canarytokens documentation: guide | https://docs.canarytokens.org/guide/ | sekunder | 2026-10-21 | Day 13 |
+| CrowdStrike: What is a Honeypot? | https://www.crowdstrike.com/en-us/cybersecurity-101/exposure-management/honeypots/ | sekunder | 2026-10-21 | Day 13 |
+| MITRE ATT&CK: Enterprise Matrix (v20) | https://attack.mitre.org/matrices/enterprise/ | primer | 2026-10-21 | Day 14 |
+| MITRE ATT&CK: Enterprise Tactics | https://attack.mitre.org/tactics/enterprise/ | primer | 2026-10-21 | Day 14 |
+| MITRE ATT&CK: Updates (v20) dan Version History | https://attack.mitre.org/resources/updates/ ; https://attack.mitre.org/resources/versions/ | primer | 2026-10-21 | Day 14 |
+| MITRE ATT&CK: Updates April 2026 (v19); Enterprise Matrix v18 | https://attack.mitre.org/resources/updates/updates-april-2026/ ; https://attack.mitre.org/versions/v18/matrices/enterprise/ | primer | 2026-10-21 | Day 14 |
+| MITRE: ATT&CK Design and Philosophy (rev. Maret 2020) | https://attack.mitre.org/docs/ATTACK_Design_and_Philosophy_March_2020.pdf | primer | 2026-10-21 | Day 14 |
+| MITRE ATT&CK: Mobile Matrix dan ICS Matrix | https://attack.mitre.org/matrices/mobile/ ; https://attack.mitre.org/matrices/ics/ | primer | 2026-10-21 | Day 14 |
+| MITRE ATT&CK: TA0005 Stealth, TA0112 Defense Impairment, T1685, T1685.001 | https://attack.mitre.org/tactics/TA0005/ ; https://attack.mitre.org/tactics/TA0112/ ; https://attack.mitre.org/techniques/T1685/ ; https://attack.mitre.org/techniques/T1685/001/ | primer | 2026-10-21 | Day 14 |
+| MITRE ATT&CK T1190: Exploit Public-Facing Application | https://attack.mitre.org/techniques/T1190/ | primer | 2026-10-21 | Day 14 |
+| MITRE ATT&CK T1078: Valid Accounts | https://attack.mitre.org/techniques/T1078/ | primer | 2026-10-21 | Day 14 |
+| MITRE ATT&CK T1059 dan T1059.001 | https://attack.mitre.org/techniques/T1059/ ; https://attack.mitre.org/techniques/T1059/001/ | primer | 2026-10-21 | Day 14 |
+| MITRE ATT&CK T1021: Remote Services | https://attack.mitre.org/techniques/T1021/ | primer | 2026-10-21 | Day 14 |
+| MITRE ATT&CK T1486: Data Encrypted for Impact | https://attack.mitre.org/techniques/T1486/ | primer | 2026-10-21 | Day 14 |
+| MITRE ATT&CK T1490: Inhibit System Recovery | https://attack.mitre.org/techniques/T1490/ | primer | 2026-10-21 | Day 14 |
+| MITRE ATT&CK T1003: OS Credential Dumping | https://attack.mitre.org/techniques/T1003/ | primer | 2026-10-21 | Day 14 |
+| MITRE ATT&CK T1595 Active Scanning dan T1046 Network Service Discovery | https://attack.mitre.org/techniques/T1595/ ; https://attack.mitre.org/techniques/T1046/ | primer | 2026-10-21 | Day 14 |
+| MITRE ATT&CK T1505.003, T1552.001, T1071.001, T1204.002 | https://attack.mitre.org/techniques/T1505/003/ ; https://attack.mitre.org/techniques/T1552/001/ ; https://attack.mitre.org/techniques/T1071/001/ ; https://attack.mitre.org/techniques/T1204/002/ | primer | 2026-10-21 | Day 14 |
+| MITRE ATT&CK: Groups dan Campaigns | https://attack.mitre.org/groups/ ; https://attack.mitre.org/campaigns/ | primer | 2026-10-21 | Day 14 |
+| MITRE ATT&CK: Updates October 2025 (v18) | https://attack.mitre.org/resources/updates/updates-october-2025/ | primer | 2026-10-21 | Day 14 |
+| Hutchins, Cloppert, Amin: Intelligence-Driven Computer Network Defense ... Intrusion Kill Chains | https://www.lockheedmartin.com/content/dam/lockheed-martin/rms/documents/cyber/LM-White-Paper-Intel-Driven-Defense.pdf | primer | 2026-10-21 | Day 14 |
+| Lockheed Martin: Cyber Kill Chain | https://www.lockheedmartin.com/en-us/capabilities/cyber/cyber-kill-chain.html | primer | 2026-10-21 | Day 14 |
+| Caltagirone, Pendergast, Betz: The Diamond Model of Intrusion Analysis (2013) | https://www.activeresponse.org/wp-content/uploads/2013/07/diamond.pdf ; https://apps.dtic.mil/sti/pdfs/ADA586960.pdf | primer | 2026-10-21 | Day 14 |
+| Unified Kill Chain | https://www.unifiedkillchain.com/ | primer | 2026-10-21 | Day 14 |
+| Wikipedia: Cyber kill chain | https://en.wikipedia.org/wiki/Cyber_kill_chain | sekunder | 2026-10-21 | Day 14 |
+| MITRE D3FEND | https://d3fend.mitre.org/ | primer | 2026-10-21 | Day 14 |
+| NIST CSRC Glossary: advanced persistent threat | https://csrc.nist.gov/glossary/term/advanced_persistent_threat | primer | 2026-10-21 | Day 14 |
+| NIST CSRC Glossary: insider threat | https://csrc.nist.gov/glossary/term/insider_threat | primer | 2026-10-21 | Day 14 |
+| CISA: Defining Insider Threats | https://www.cisa.gov/topics/physical-security/insider-threat-mitigation/defining-insider-threats | primer | 2026-10-21 | Day 14 |
+| CISA: Nation-State Cyber Actors | https://www.cisa.gov/topics/cyber-threats-and-advisories/nation-state-cyber-actors | primer | 2026-10-21 | Day 14 |
+| ENISA: ETL 2025 press release (EU consistently targeted by diverse yet convergent threat groups) | https://www.enisa.europa.eu/news/etl-2025-eu-consistently-targeted-by-diverse-yet-convergent-threat-groups | primer | 2026-10-21 | Day 14 |
+| NIST CSRC Glossary: zero day attack | https://csrc.nist.gov/glossary/term/zero_day_attack | primer | 2026-10-21 | Day 17 |
+| CVE Program: CNA Operational Rules 4.2.0 | https://www.cve.org/Resources/Roles/Cnas/CNA_Rules_v4.2.0.pdf | primer | 2026-10-21 | Day 17 |
+| NIST CSRC Glossary: common vulnerabilities and exposures (CVE) | https://csrc.nist.gov/glossary/term/common_vulnerabilities_and_exposures | primer | 2026-10-21 | Day 17 |
+| MITRE CWE: About CWE | https://cwe.mitre.org/about/index.html | primer | 2026-10-21 | Day 17 |
+| MITRE CWE: 2025 CWE Top 25 Most Dangerous Software Weaknesses | https://cwe.mitre.org/top25/archive/2025/2025_cwe_top25.html<br>https://cwe.mitre.org/top25/ | primer | 2026-10-21 | Day 17 |
+| FIRST: CVSS v4.0 Specification Document | https://www.first.org/cvss/v4-0/specification-document | primer | 2026-10-21 | Day 17 |
+| FIRST: CVSS v4.0 User Guide | https://www.first.org/cvss/v4-0/user-guide | primer | 2026-10-21 | Day 17 |
+| FIRST: CVSS v4.0 Examples | https://www.first.org/cvss/v4-0/examples | primer | 2026-10-21 | Day 17 |
+| FIRST: Exploit Prediction Scoring System (EPSS) dan EPSS FAQ | https://www.first.org/epss/<br>https://www.first.org/epss/faq | primer | 2026-10-21 | Day 17 |
+| FIRST: EPSS Get the Data | https://www.first.org/epss/data | primer | 2026-10-21 | Day 17 |
+| CISA: Known Exploited Vulnerabilities Catalog dan halaman KEV | https://www.cisa.gov/known-exploited-vulnerabilities-catalog<br>https://www.cisa.gov/known-exploited-vulnerabilities | primer | 2026-10-21 | Day 17 |
+| CISA: BOD 22-01 Reducing the Significant Risk of Known Exploited Vulnerabilities (dicabut) | https://www.cisa.gov/news-events/directives/bod-22-01-reducing-significant-risk-known-exploited-vulnerabilities | primer | 2026-10-21 | Day 17 |
+| CISA: BOD 26-04 Prioritizing Security Updates Based on Risk | https://www.cisa.gov/news-events/directives/bod-26-04-prioritizing-security-updates-based-risk | primer | 2026-10-21 | Day 17 |
+| NIST SP 800-40 Rev. 4: Guide to Enterprise Patch Management Planning | https://csrc.nist.gov/pubs/sp/800/40/r4/final<br>https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-40r4.pdf | primer | 2026-10-21 | Day 17 |
+| NIST SP 800-115: Technical Guide to Information Security Testing and Assessment | https://csrc.nist.gov/pubs/sp/800/115/final<br>https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-115.pdf | primer | 2026-10-21 | Day 17 |
+| NIST CSRC Glossary: penetration testing, vulnerability assessment | https://csrc.nist.gov/glossary/term/penetration_testing<br>https://csrc.nist.gov/glossary/term/vulnerability_assessment | primer | 2026-10-21 | Day 17 |
+| NIST CSRC Glossary: red team, blue team | https://csrc.nist.gov/glossary/term/red_team<br>https://csrc.nist.gov/glossary/term/blue_team | primer | 2026-10-21 | Day 17 |
+| OWASP Cheat Sheet Series: Virtual Patching Cheat Sheet | https://cheatsheetseries.owasp.org/cheatsheets/Virtual_Patching_Cheat_Sheet.html | primer | 2026-10-21 | Day 17 |
+| CISA: Software Bill of Materials (SBOM) | https://www.cisa.gov/sbom | primer | 2026-10-21 | Day 17 |
+| CISA: Coordinated Vulnerability Disclosure Process | https://www.cisa.gov/coordinated-vulnerability-disclosure-process | primer | 2026-10-21 | Day 17 |
+| OMB M-20-32: Improving Vulnerability Identification, Management, and Remediation | https://www.whitehouse.gov/wp-content/uploads/2020/09/M-20-32.pdf | primer | 2026-10-21 | Day 17 |
+| IANS: Understand the Roles of Red, Blue and Purple Teams | https://www.ians.com/blog/ians-research/understand-the-roles-of-red-blue-and-purple-teams | sekunder | 2026-10-21 | Day 17 |
+| The Record: CISA extends CVE program contract with MITRE for 11 months | https://therecord.media/cisa-extends-cve-program-contract-with-mitre | sekunder | 2026-10-21 | Day 17 |
+| CSO Online: CVE program funding secured, easing fears of repeat crisis | https://www.csoonline.com/article/4142600/cve-program-funding-secured-easing-fears-of-repeat-crisis.html | sekunder | 2026-10-21 | Day 17 |
+| Help Net Security: NIST will enrich only highest-risk CVEs going forward | https://www.helpnetsecurity.com/2026/04/16/nist-national-vulnerability-database-nvd-enrichment/ | sekunder | 2026-10-21 | Day 17 |
+| Cloud Security Alliance: CSA Research Note, CISA BOD 26-04 | https://labs.cloudsecurityalliance.org/research/csa-research-note-cisa-bod-26-04-risk-based-vulnerability-re/ | sekunder | 2026-10-21 | Day 17 |
