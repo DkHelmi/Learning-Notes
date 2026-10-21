@@ -76,7 +76,7 @@ Indeks sumber global, disusun dari tabel Sumber (bagian 8) setiap Day di folder 
 | OWASP: Web Application Firewall | https://community.owasp.org/Web_Application_Firewall | primer | 2026-10-21 | Day 03 |
 | OWASP CRS (Core Rule Set) | https://coreruleset.org/ | primer | 2026-10-21 | Day 03 |
 | OWASP: SQL Injection | https://community.owasp.org/attacks/SQL_Injection | primer | 2026-10-21 | Day 03 |
-| OWASP Cheat Sheet: SQL Injection Prevention | https://cheatsheetseries.owasp.org/cheatsheets/SQL_Injection_Prevention_Cheat_Sheet.html | primer | 2026-10-21 | Day 03 |
+| OWASP Cheat Sheet: SQL Injection Prevention | https://cheatsheetseries.owasp.org/cheatsheets/SQL_Injection_Prevention_Cheat_Sheet.html | primer | 2026-10-21 | Day 03, Day 15 |
 | Suricata User Guide: What is Suricata | https://docs.suricata.io/en/latest/what-is-suricata.html | primer | 2026-10-21 | Day 03 |
 | Suricata User Guide: Setting up IPS/inline for Linux | https://docs.suricata.io/en/latest/ips/setting-up-ipsinline-for-linux.html | primer | 2026-10-21 | Day 03 |
 | Suricata User Guide: Exception Policies | https://docs.suricata.io/en/latest/configuration/exception-policies.html | primer | 2026-10-21 | Day 03 |
@@ -126,7 +126,7 @@ Indeks sumber global, disusun dari tabel Sumber (bagian 8) setiap Day di folder 
 | RFC 6151: Updated Security Considerations for MD5 and HMAC-MD5 | https://www.rfc-editor.org/rfc/rfc6151.html | primer | 2026-10-21 | Day 05 |
 | SHAttered (CWI Amsterdam dan Google) | https://shattered.io/ | primer | 2026-10-21 | Day 05 |
 | NIST: NIST Retires SHA-1 Cryptographic Algorithm | https://www.nist.gov/news-events/news/2022/12/nist-retires-sha-1-cryptographic-algorithm | primer | 2026-10-21 | Day 05 |
-| NIST SP 800-63B-4: Authentication and Authenticator Management | https://pages.nist.gov/800-63-4/sp800-63b.html | primer | 2026-10-21 | Day 05 |
+| NIST SP 800-63B-4: Authentication and Authenticator Management | https://pages.nist.gov/800-63-4/sp800-63b.html | primer | 2026-10-21 | Day 05, Day 15 |
 | NIST CSRC Glossary: salt | https://csrc.nist.gov/glossary/term/salt | primer | 2026-10-21 | Day 05 |
 | OWASP Password Storage Cheat Sheet | https://cheatsheetseries.owasp.org/cheatsheets/Password_Storage_Cheat_Sheet.html | sekunder | 2026-10-21 | Day 05 |
 | NIST FIPS 197: Advanced Encryption Standard (AES) | https://csrc.nist.gov/pubs/fips/197/final | primer | 2026-10-21 | Day 05 |
@@ -185,7 +185,7 @@ Indeks sumber global, disusun dari tabel Sumber (bagian 8) setiap Day di folder 
 | Microsoft Learn: Deprecated features in the Windows client (entri NTLM) | https://learn.microsoft.com/en-us/windows/whats-new/deprecated-features | primer | 2026-10-21 | Day 07 |
 | Microsoft Learn: Group Policy overview for Windows Server | https://learn.microsoft.com/en-us/windows-server/identity/ad-ds/manage/group-policy/group-policy-overview | primer | 2026-10-21 | Day 07 |
 | Microsoft Learn: 4624(S) An account was successfully logged on | https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/auditing/event-4624 | primer | 2026-10-21 | Day 07, Day 13 |
-| Microsoft Learn: 4625(F) An account failed to log on | https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/auditing/event-4625 | primer | 2026-10-21 | Day 07 |
+| Microsoft Learn: 4625(F) An account failed to log on | https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/auditing/event-4625 | primer | 2026-10-21 | Day 07, Day 15 |
 | Microsoft Learn: 4768(S, F) A Kerberos authentication ticket (TGT) was requested | https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/auditing/event-4768 | primer | 2026-10-21 | Day 07 |
 | Microsoft Learn: 4769(S, F) A Kerberos service ticket was requested | https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/auditing/event-4769 | primer | 2026-10-21 | Day 07 |
 | Microsoft Learn: 4776(S, F) The computer attempted to validate the credentials for an account | https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/auditing/event-4776 | primer | 2026-10-21 | Day 07 |
@@ -301,7 +301,7 @@ Indeks sumber global, disusun dari tabel Sumber (bagian 8) setiap Day di folder 
 | MITRE: ATT&CK Design and Philosophy (rev. Maret 2020) | https://attack.mitre.org/docs/ATTACK_Design_and_Philosophy_March_2020.pdf | primer | 2026-10-21 | Day 14 |
 | MITRE ATT&CK: Mobile Matrix dan ICS Matrix | https://attack.mitre.org/matrices/mobile/ ; https://attack.mitre.org/matrices/ics/ | primer | 2026-10-21 | Day 14 |
 | MITRE ATT&CK: TA0005 Stealth, TA0112 Defense Impairment, T1685, T1685.001 | https://attack.mitre.org/tactics/TA0005/ ; https://attack.mitre.org/tactics/TA0112/ ; https://attack.mitre.org/techniques/T1685/ ; https://attack.mitre.org/techniques/T1685/001/ | primer | 2026-10-21 | Day 14 |
-| MITRE ATT&CK T1190: Exploit Public-Facing Application | https://attack.mitre.org/techniques/T1190/ | primer | 2026-10-21 | Day 14 |
+| MITRE ATT&CK T1190: Exploit Public-Facing Application | https://attack.mitre.org/techniques/T1190/ | primer | 2026-10-21 | Day 14, Day 15 |
 | MITRE ATT&CK T1078: Valid Accounts | https://attack.mitre.org/techniques/T1078/ | primer | 2026-10-21 | Day 14 |
 | MITRE ATT&CK T1059 dan T1059.001 | https://attack.mitre.org/techniques/T1059/ ; https://attack.mitre.org/techniques/T1059/001/ | primer | 2026-10-21 | Day 14 |
 | MITRE ATT&CK T1021: Remote Services | https://attack.mitre.org/techniques/T1021/ | primer | 2026-10-21 | Day 14 |
@@ -319,8 +319,8 @@ Indeks sumber global, disusun dari tabel Sumber (bagian 8) setiap Day di folder 
 | Wikipedia: Cyber kill chain | https://en.wikipedia.org/wiki/Cyber_kill_chain | sekunder | 2026-10-21 | Day 14 |
 | MITRE D3FEND | https://d3fend.mitre.org/ | primer | 2026-10-21 | Day 14 |
 | NIST CSRC Glossary: advanced persistent threat | https://csrc.nist.gov/glossary/term/advanced_persistent_threat | primer | 2026-10-21 | Day 14 |
-| NIST CSRC Glossary: insider threat | https://csrc.nist.gov/glossary/term/insider_threat | primer | 2026-10-21 | Day 14 |
-| CISA: Defining Insider Threats | https://www.cisa.gov/topics/physical-security/insider-threat-mitigation/defining-insider-threats | primer | 2026-10-21 | Day 14 |
+| NIST CSRC Glossary: insider threat | https://csrc.nist.gov/glossary/term/insider_threat | primer | 2026-10-21 | Day 14, Day 15 |
+| CISA: Defining Insider Threats | https://www.cisa.gov/topics/physical-security/insider-threat-mitigation/defining-insider-threats | primer | 2026-10-21 | Day 14, Day 15 |
 | CISA: Nation-State Cyber Actors | https://www.cisa.gov/topics/cyber-threats-and-advisories/nation-state-cyber-actors | primer | 2026-10-21 | Day 14 |
 | ENISA: ETL 2025 press release (EU consistently targeted by diverse yet convergent threat groups) | https://www.enisa.europa.eu/news/etl-2025-eu-consistently-targeted-by-diverse-yet-convergent-threat-groups | primer | 2026-10-21 | Day 14 |
 | NIST CSRC Glossary: zero day attack | https://csrc.nist.gov/glossary/term/zero_day_attack | primer | 2026-10-21 | Day 17 |
@@ -406,3 +406,24 @@ Indeks sumber global, disusun dari tabel Sumber (bagian 8) setiap Day di folder 
 | SANS: 2025 Detection and Response Survey | https://www.sans.org/research/detection-response-report | sekunder | 2026-10-21 | Day 11 |
 | Google ML Crash Course: Classification, accuracy, recall, precision | https://developers.google.com/machine-learning/crash-course/classification/accuracy-precision-recall | sekunder | 2026-10-21 | Day 11 |
 | PagerDuty: Incident Priority Matrix | https://www.pagerduty.com/resources/learn/incident-priority-matrix/ | sekunder | 2026-10-21 | Day 11 |
+| MITRE ATT&CK T1110: Brute Force | https://attack.mitre.org/techniques/T1110/ | primer | 2026-10-21 | Day 15 |
+| MITRE ATT&CK T1110.003: Password Spraying | https://attack.mitre.org/techniques/T1110/003/ | primer | 2026-10-21 | Day 15 |
+| MITRE ATT&CK T1110.004: Credential Stuffing | https://attack.mitre.org/techniques/T1110/004/ | primer | 2026-10-21 | Day 15 |
+| OWASP Top 10:2025, A05 Injection | https://top10.owasp.org/2025/A05_2025-Injection/ | primer | 2026-10-22 | Day 15 |
+| OWASP Community: Cross Site Scripting (XSS) | https://community.owasp.org/attacks/xss | primer | 2026-10-21 | Day 15 |
+| OWASP Cross Site Scripting Prevention Cheat Sheet | https://cheatsheetseries.owasp.org/cheatsheets/Cross_Site_Scripting_Prevention_Cheat_Sheet.html | primer | 2026-10-21 | Day 15 |
+| OWASP Cross-Site Request Forgery Prevention Cheat Sheet | https://cheatsheetseries.owasp.org/cheatsheets/Cross-Site_Request_Forgery_Prevention_Cheat_Sheet.html | primer | 2026-10-21 | Day 15 |
+| OWASP Session Management Cheat Sheet | https://cheatsheetseries.owasp.org/cheatsheets/Session_Management_Cheat_Sheet.html | primer | 2026-10-21 | Day 15 |
+| NIST CSRC Glossary: man-in-the-middle attack | https://csrc.nist.gov/glossary/term/man_in_the_middle_attack | primer | 2026-10-21 | Day 15 |
+| MITRE ATT&CK T1557: Adversary-in-the-Middle | https://attack.mitre.org/techniques/T1557/ | primer | 2026-10-21 | Day 15 |
+| MITRE ATT&CK T1539: Steal Web Session Cookie | https://attack.mitre.org/techniques/T1539/ | primer | 2026-10-21 | Day 15 |
+| RFC 5452: Measures for Making DNS More Resilient against Forged Answers | https://www.rfc-editor.org/rfc/rfc5452 | primer | 2026-10-21 | Day 15 |
+| CERT/CC VU#800113: Multiple DNS implementations vulnerable to cache poisoning | https://www.kb.cert.org/vuls/id/800113 | primer | 2026-10-21 | Day 15 |
+| MITRE ATT&CK TA0004: Privilege Escalation (dan T1068) | https://attack.mitre.org/tactics/TA0004/ | primer | 2026-10-21 | Day 15 |
+| MITRE ATT&CK TA0008: Lateral Movement (dan T1021.001 RDP) | https://attack.mitre.org/tactics/TA0008/ | primer | 2026-10-21 | Day 15 |
+| NIST CSRC Glossary: exfiltration | https://csrc.nist.gov/glossary/term/exfiltration | primer | 2026-10-21 | Day 15 |
+| MITRE ATT&CK TA0010: Exfiltration (T1048, T1567.002) | https://attack.mitre.org/tactics/TA0010/ | primer | 2026-10-21 | Day 15 |
+| NIST CSRC Glossary: supply chain attack | https://csrc.nist.gov/glossary/term/supply_chain_attack | primer | 2026-10-21 | Day 15 |
+| CISA dan NIST: Defending Against Software Supply Chain Attacks | https://www.cisa.gov/sites/default/files/publications/defending_against_software_supply_chain_attacks_508.pdf | primer | 2026-10-21 | Day 15 |
+| MITRE ATT&CK T1195.002: Compromise Software Supply Chain | https://attack.mitre.org/techniques/T1195/002/ | primer | 2026-10-21 | Day 15 |
+| MITRE ATT&CK: Versions of ATT&CK | https://attack.mitre.org/resources/versions/ | primer | 2026-10-21 | Day 15 |
