@@ -392,3 +392,17 @@ Indeks sumber global, disusun dari tabel Sumber (bagian 8) setiap Day di folder 
 | CISA: Indicators Associated With WannaCry Ransomware | https://www.cisa.gov/news-events/alerts/2017/05/12/indicators-associated-wannacry-ransomware | primer | 2026-10-21 | Day 16 |
 | Fox-IT: Hunting for beacons | https://blog.fox-it.com/2020/01/15/hunting-for-beacons/ | sekunder | 2026-10-21 | Day 16 |
 | Microsoft Learn: Understanding malware and other threats | https://learn.microsoft.com/en-us/defender-endpoint/malware/understanding-malware | primer | 2026-10-21 | Day 16 |
+| NIST CSRC Glossary: event, incident, false positive, false negative | https://csrc.nist.gov/glossary/term/event ; https://csrc.nist.gov/glossary/term/incident ; https://csrc.nist.gov/glossary/term/false_positive ; https://csrc.nist.gov/glossary/term/false_negative | primer | 2026-10-21 | Day 11 |
+| NIST SP 800-61r3: Incident Response Recommendations and Considerations for Cybersecurity Risk Management | https://doi.org/10.6028/NIST.SP.800-61r3 | primer | 2026-10-21 | Day 11 |
+| Microsoft Learn: Basic incident tasks for Microsoft Sentinel incidents in the Azure portal | https://learn.microsoft.com/en-us/azure/sentinel/incident-navigate-triage | primer | 2026-10-21 | Day 11 |
+| Microsoft Learn: Handle false positives in Microsoft Sentinel | https://learn.microsoft.com/en-us/azure/sentinel/false-positives | primer | 2026-10-21 | Day 11 |
+| Microsoft Learn: Manage incidents in the Microsoft Defender portal (legacy) | https://learn.microsoft.com/en-us/defender-xdr/manage-incidents | primer | 2026-10-21 | Day 11 |
+| Microsoft Learn: View and manage Microsoft Defender for Identity security alerts | https://learn.microsoft.com/en-us/defender-for-identity/understanding-security-alerts | primer | 2026-10-21 | Day 11 |
+| Splunk Enterprise Security 8.5: Glossary | https://help.splunk.com/en/splunk-enterprise-security-8/release-notes-and-resources/8.5/where-to-find-help/glossary | primer | 2026-10-21 | Day 11 |
+| Splunk Enterprise Security 8.5: Configure dispositions for findings | https://help.splunk.com/en/splunk-enterprise-security-8/administer/8.5/investigations/configure-dispositions-for-findings-in-splunk-enterprise-security | primer | 2026-10-21 | Day 11 |
+| Splunk Enterprise Security 8.5: Create suppression rules for findings | https://help.splunk.com/en/splunk-enterprise-security-8/administer/8.5/investigations/create-suppression-rules-for-findings-in-splunk-enterprise-security | primer | 2026-10-21 | Day 11 |
+| Splunk Enterprise Security 7.2: How urgency is assigned to notable events | https://help.splunk.com/en/splunk-enterprise-security-7/user-guide/7.2/incident-review/how-urgency-is-assigned-to-notable-events-in-splunk-enterprise-security | primer | 2026-10-21 | Day 11 |
+| Alahmadi, Axon, Martinovic: 99% False Positives, USENIX Security 2022 | https://www.usenix.org/conference/usenixsecurity22/presentation/alahmadi | primer | 2026-10-21 | Day 11 |
+| SANS: 2025 Detection and Response Survey | https://www.sans.org/research/detection-response-report | sekunder | 2026-10-21 | Day 11 |
+| Google ML Crash Course: Classification, accuracy, recall, precision | https://developers.google.com/machine-learning/crash-course/classification/accuracy-precision-recall | sekunder | 2026-10-21 | Day 11 |
+| PagerDuty: Incident Priority Matrix | https://www.pagerduty.com/resources/learn/incident-priority-matrix/ | sekunder | 2026-10-21 | Day 11 |
