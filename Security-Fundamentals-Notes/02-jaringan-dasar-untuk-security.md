@@ -320,8 +320,8 @@ Jenis record yang paling sering ditemui dirangkum di tabel berikut; cari kolom "
 |---|---|---|
 | A | IPv4 address sebuah nama [S13] | `www.jab.example` ke `198.51.100.10` |
 | AAAA | IPv6 address sebuah nama [S14] | `www.jab.example` ke `2001:db8:64:1::10` |
-| CNAME | Nama alias yang menunjuk nama lain [S13] | `portal.jab.example` adalah alias `www.jab.example` |
-| MX | Server penerima email untuk sebuah domain, dengan angka prioritas (lebih kecil lebih diutamakan) [S13] | Email ke `@jab.example` dikirim ke `mail.jab.example` |
+| CNAME | Nama alias yang menunjuk nama lain [S13] | `info.jab.example` adalah alias `www.jab.example` |
+| MX | Server penerima email untuk sebuah domain, dengan angka prioritas (lebih kecil lebih diutamakan) [S13] | Email ke `@jab.example` dikirim ke server email Microsoft 365 yang dipakai PT JAB |
 | TXT | Teks bebas [S13] | Kebijakan email (SPF, Day 09) dan verifikasi kepemilikan domain |
 | PTR | Nama untuk sebuah IP, kebalikan dari A [S13] | `198.51.100.10` dinamai `www.jab.example` |
 
@@ -477,18 +477,18 @@ Saat orientasi, Sari juga menunjukkan isi DNS publik domain PT JAB, supaya kamu 
 ```
 www.jab.example.               3600  IN  A      198.51.100.10
 www.jab.example.               3600  IN  AAAA   2001:db8:64:1::10
-portal.jab.example.            3600  IN  CNAME  www.jab.example.
-jab.example.                   3600  IN  MX     10 mail.jab.example.
+info.jab.example.              3600  IN  CNAME  www.jab.example.
+jab.example.                   3600  IN  MX     10 jab-example.mail.protection.outlook.com.
 mail.jab.example.              3600  IN  A      198.51.100.11
-jab.example.                   3600  IN  TXT    "v=spf1 ip4:198.51.100.11 -all"
+jab.example.                   3600  IN  TXT    "v=spf1 ip4:198.51.100.11 include:spf.protection.outlook.com -all"
 10.100.51.198.in-addr.arpa.    3600  IN  PTR    www.jab.example.
 ```
 
 **Cara membaca:** setiap baris berisi nama, TTL (3600 detik atau 1 jam boleh disimpan di cache), kelas `IN` (internet), jenis record, dan isinya.
 
 - `A` dan `AAAA`: situs `www.jab.example` bisa dijangkau lewat IPv4 `198.51.100.10` maupun IPv6 `2001:db8:64:1::10`. Alert yang menyebut salah satu alamat itu menunjuk server yang sama.
-- `CNAME`: `portal.jab.example` hanyalah nama lain untuk `www.jab.example`; resolver mengikuti alias itu sampai menemukan record `A`.
-- `MX`: email untuk `@jab.example` dikirim ke `mail.jab.example` dengan prioritas 10. Bila ada dua MX, yang angkanya lebih kecil dicoba lebih dulu [S13].
+- `CNAME`: `info.jab.example` hanyalah nama lain untuk `www.jab.example`; resolver mengikuti alias itu sampai menemukan record `A`.
+- `MX`: email untuk `@jab.example` dikirim ke server email Microsoft 365 (`jab-example.mail.protection.outlook.com`) dengan prioritas 10; `mail.jab.example` adalah server mail lama yang kini hanya dipakai aplikasi internal untuk mengirim notifikasi. Bila ada dua MX, yang angkanya lebih kecil dicoba lebih dulu [S13].
 - `TXT`: teks bebas. Isi di sini adalah kebijakan SPF yang menyatakan server pengirim email sah untuk domain ini; artinya dibahas di Day 09.
 - `PTR`: kebalikan `A`. Nama record ditulis dengan urutan angka IP dibalik di bawah `in-addr.arpa`, jadi `198.51.100.10` menjadi `10.100.51.198.in-addr.arpa`. Di alert, nama PTR membantu memberi petunjuk siapa pemilik sebuah IP, tetapi pemilik IP bebas mengisinya, jadi jangan dijadikan bukti.
 

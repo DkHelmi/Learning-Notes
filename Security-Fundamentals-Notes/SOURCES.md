@@ -63,3 +63,184 @@ Indeks sumber global, disusun dari tabel Sumber (bagian 8) setiap Day di folder 
 | MITRE ATT&CK T1071.004: Application Layer Protocol: DNS | https://attack.mitre.org/techniques/T1071/004/ | primer | 2026-10-20 | Day 02 |
 | MITRE ATT&CK T1133: External Remote Services | https://attack.mitre.org/techniques/T1133/ | primer | 2026-10-20 | Day 02 |
 | Internet Society Pulse: 18 years later, IPv6 reaches majority | https://pulse.internetsociety.org/en/blog/18-years-later-ipv6-reaches-majority/ | sekunder | 2026-10-20 | Day 02 |
+| NIST SP 800-94: Guide to Intrusion Detection and Prevention Systems (IDPS) | https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-94.pdf | primer | 2026-10-21 | Day 03, Day 06 |
+| NIST CSRC: SP 800-94, halaman publikasi | https://csrc.nist.gov/pubs/sp/800/94/final | primer | 2026-10-21 | Day 03 |
+| NIST SP 800-41 Rev. 1: Guidelines on Firewalls and Firewall Policy | https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-41r1.pdf | primer | 2026-10-21 | Day 03 |
+| NIST CSRC Glossary: firewall | https://csrc.nist.gov/glossary/term/firewall | primer | 2026-10-21 | Day 03 |
+| NIST CSRC Glossary: demilitarized zone | https://csrc.nist.gov/glossary/term/demilitarized_zone | primer | 2026-10-21 | Day 03 |
+| NIST CSRC Glossary: virtual private network | https://csrc.nist.gov/glossary/term/virtual_private_network | primer | 2026-10-21 | Day 03 |
+| NIST CSRC Glossary: proxy | https://csrc.nist.gov/glossary/term/proxy | primer | 2026-10-21 | Day 03 |
+| NIST CSRC Glossary: fail secure | https://csrc.nist.gov/glossary/term/fail_secure | primer | 2026-10-21 | Day 03 |
+| NIST CSRC Glossary: fail safe | https://csrc.nist.gov/glossary/term/fail_safe | primer | 2026-10-21 | Day 03 |
+| Cisco: What is a next-generation firewall (NGFW)? | https://www.cisco.com/c/en/us/products/security/firewalls/what-is-a-next-generation-firewall.html | sekunder | 2026-10-21 | Day 03 |
+| OWASP: Web Application Firewall | https://community.owasp.org/Web_Application_Firewall | primer | 2026-10-21 | Day 03 |
+| OWASP CRS (Core Rule Set) | https://coreruleset.org/ | primer | 2026-10-21 | Day 03 |
+| OWASP: SQL Injection | https://community.owasp.org/attacks/SQL_Injection | primer | 2026-10-21 | Day 03 |
+| OWASP Cheat Sheet: SQL Injection Prevention | https://cheatsheetseries.owasp.org/cheatsheets/SQL_Injection_Prevention_Cheat_Sheet.html | primer | 2026-10-21 | Day 03 |
+| Suricata User Guide: What is Suricata | https://docs.suricata.io/en/latest/what-is-suricata.html | primer | 2026-10-21 | Day 03 |
+| Suricata User Guide: Setting up IPS/inline for Linux | https://docs.suricata.io/en/latest/ips/setting-up-ipsinline-for-linux.html | primer | 2026-10-21 | Day 03 |
+| Suricata User Guide: Exception Policies | https://docs.suricata.io/en/latest/configuration/exception-policies.html | primer | 2026-10-21 | Day 03 |
+| Zeek documentation: What Is Zeek? | https://docs.zeek.org/en/master/about/what.html | primer | 2026-10-21 | Day 03 |
+| Snort | https://www.snort.org/ | primer | 2026-10-21 | Day 03 |
+| Wazuh documentation: Active Response | https://documentation.wazuh.com/current/user-manual/capabilities/active-response/index.html | primer | 2026-10-21 | Day 03 |
+| OSSEC | https://www.ossec.net/ | primer | 2026-10-21 | Day 03, Day 06 |
+| Tripwire Enterprise: Integrity and Compliance Monitoring | https://www.tripwire.com/products/tripwire-enterprise | sekunder | 2026-10-21 | Day 03 |
+| CrowdStrike: Falcon Insight XDR data sheet | https://crowdstrike.com/wp-content/uploads/2024/07/crowdstrike-falcon-insight-xdr-data-sheet.pdf | sekunder | 2026-10-21 | Day 03 |
+| MDN Web Docs: Proxy servers and tunneling | https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/Proxy_servers_and_tunneling | sekunder | 2026-10-21 | Day 03 |
+| CISA Alert TA17-075A: HTTPS Interception Weakens TLS Security | https://www.cisa.gov/news-events/alerts/2017/03/16/https-interception-weakens-tls-security | primer | 2026-10-21 | Day 03 |
+| CISA: NSA Releases Cyber Advisory, Managing Risk from TLS Inspection | https://www.cisa.gov/news-events/alerts/2019/11/19/nsa-releases-cyber-advisory-managing-risk-transport-layer-security | primer | 2026-10-21 | Day 03 |
+| NIST SP 800-77 Rev. 1: Guide to IPsec VPNs | https://csrc.nist.gov/pubs/sp/800/77/r1/final | primer | 2026-10-21 | Day 03 |
+| CISA: CISA and NSA Release Guidance on Selecting and Hardening VPNs | https://www.cisa.gov/news-events/alerts/2021/09/28/cisa-and-nsa-release-guidance-selecting-and-hardening-vpns | primer | 2026-10-21 | Day 03 |
+| NIST SP 800-207: Zero Trust Architecture | https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-207.pdf | primer | 2026-10-21 | Day 03 |
+| CISA: Part One of Zero Trust Microsegmentation Guidance | https://www.cisa.gov/news-events/alerts/2025/07/29/cisa-releases-part-one-zero-trust-microsegmentation-guidance | primer | 2026-10-21 | Day 03 |
+| IEEE 802.1X-2020: Port-Based Network Access Control | https://standards.ieee.org/ieee/802.1X/7345/ | primer | 2026-10-21 | Day 03 |
+| RFC 3580: IEEE 802.1X RADIUS Usage Guidelines | https://www.rfc-editor.org/rfc/rfc3580.html | primer | 2026-10-21 | Day 03 |
+| NIST CSRC Glossary: denial of service | https://csrc.nist.gov/glossary/term/denial_of_service | primer | 2026-10-21 | Day 04 |
+| NIST CSRC Glossary: distributed denial of service | https://csrc.nist.gov/glossary/term/distributed_denial_of_service | primer | 2026-10-21 | Day 04 |
+| NIST CSRC Glossary: botnet | https://csrc.nist.gov/glossary/term/botnet | primer | 2026-10-21 | Day 04 |
+| CISA, FBI, MS-ISAC: Understanding and Responding to Distributed Denial-of-Service Attacks (v2.0, Maret 2024) | https://www.cisa.gov/sites/default/files/publications/understanding-and-responding-to-ddos-attacks_508c.pdf | primer | 2026-10-21 | Day 04 |
+| CISA Alert TA14-017A: UDP-Based Amplification Attacks | https://www.cisa.gov/news-events/alerts/2014/01/17/udp-based-amplification-attacks | primer | 2026-10-21 | Day 04 |
+| CISA Alert TA13-088A: DNS Amplification Attacks | https://www.cisa.gov/news-events/alerts/2013/03/29/dns-amplification-attacks | primer | 2026-10-21 | Day 04 |
+| CISA Alert TA14-013A: NTP Amplification Attacks Using CVE-2013-5211 | https://www.cisa.gov/news-events/alerts/2014/01/13/ntp-amplification-attacks-using-cve-2013-5211 | primer | 2026-10-21 | Day 04 |
+| RFC 4987: TCP SYN Flooding Attacks and Common Mitigations | https://www.rfc-editor.org/rfc/rfc4987.html | primer | 2026-10-21 | Day 04 |
+| RFC 2827 (BCP 38): Network Ingress Filtering | https://www.rfc-editor.org/rfc/rfc2827.html | primer | 2026-10-21 | Day 04 |
+| RFC 5635: Remote Triggered Black Hole Filtering with uRPF | https://www.rfc-editor.org/rfc/rfc5635.html | primer | 2026-10-21 | Day 04 |
+| RFC 7999: BLACKHOLE Community | https://www.rfc-editor.org/rfc/rfc7999.html | primer | 2026-10-21 | Day 04 |
+| RFC 8955: Dissemination of Flow Specification Rules | https://www.rfc-editor.org/rfc/rfc8955.html | primer | 2026-10-21 | Day 04 |
+| NIST SP 800-189: Resilient Interdomain Traffic Exchange: BGP Security and DDoS Mitigation | https://csrc.nist.gov/pubs/sp/800/189/final | primer | 2026-10-21 | Day 04 |
+| RFC 4786 (BCP 126): Operation of Anycast Services | https://www.rfc-editor.org/rfc/rfc4786.html | primer | 2026-10-21 | Day 04 |
+| MITRE ATT&CK T1498: Network Denial of Service | https://attack.mitre.org/techniques/T1498/ | primer | 2026-10-21 | Day 04 |
+| MITRE ATT&CK T1498.002: Reflection Amplification | https://attack.mitre.org/techniques/T1498/002/ | primer | 2026-10-21 | Day 04 |
+| MITRE ATT&CK T1499: Endpoint Denial of Service | https://attack.mitre.org/techniques/T1499/ | primer | 2026-10-21 | Day 04 |
+| GitHub Blog: February 28th DDoS Incident Report | https://github.blog/news-insights/company-news/ddos-incident-report/ | primer | 2026-10-21 | Day 04 |
+| Cloudflare DDoS Threat Report H1 2026 | https://blog.cloudflare.com/ddos-threat-report-2026-h1/ | sekunder | 2026-10-21 | Day 04 |
+| APNIC Blog: Detecting and characterizing DDoS scrubbing from global BGP routing | https://blog.apnic.net/2026/04/23/detecting-and-characterizing-ddos-scrubbing-from-global-bgp-routing/ | sekunder | 2026-10-21 | Day 04 |
+| Kaspersky DDoS Protection: Configuring Always-On KDP-IP and On-Demand KDP-IP schemes | https://support.kaspersky.com/KDP/1.0/en-US/205380.htm | sekunder | 2026-10-21 | Day 04 |
+| RFC 4648: The Base16, Base32, and Base64 Data Encodings | https://www.rfc-editor.org/rfc/rfc4648.html | primer | 2026-10-21 | Day 05 |
+| RFC 7617: The 'Basic' HTTP Authentication Scheme | https://www.rfc-editor.org/rfc/rfc7617.html | primer | 2026-10-21 | Day 05 |
+| Microsoft Learn: about_Pwsh (PowerShell 7.6) | https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_pwsh | primer | 2026-10-21 | Day 05 |
+| MITRE ATT&CK T1027.010: Command Obfuscation | https://attack.mitre.org/techniques/T1027/010/ | primer | 2026-10-21 | Day 05 |
+| NIST CSRC Glossary: hash function | https://csrc.nist.gov/glossary/term/hash_function | primer | 2026-10-21 | Day 05 |
+| NIST FIPS 180-4: Secure Hash Standard | https://csrc.nist.gov/pubs/fips/180-4/upd1/final | primer | 2026-10-21 | Day 05 |
+| RFC 1321: The MD5 Message-Digest Algorithm | https://www.rfc-editor.org/rfc/rfc1321.html | primer | 2026-10-21 | Day 05 |
+| RFC 6151: Updated Security Considerations for MD5 and HMAC-MD5 | https://www.rfc-editor.org/rfc/rfc6151.html | primer | 2026-10-21 | Day 05 |
+| SHAttered (CWI Amsterdam dan Google) | https://shattered.io/ | primer | 2026-10-21 | Day 05 |
+| NIST: NIST Retires SHA-1 Cryptographic Algorithm | https://www.nist.gov/news-events/news/2022/12/nist-retires-sha-1-cryptographic-algorithm | primer | 2026-10-21 | Day 05 |
+| NIST SP 800-63B-4: Authentication and Authenticator Management | https://pages.nist.gov/800-63-4/sp800-63b.html | primer | 2026-10-21 | Day 05 |
+| NIST CSRC Glossary: salt | https://csrc.nist.gov/glossary/term/salt | primer | 2026-10-21 | Day 05 |
+| OWASP Password Storage Cheat Sheet | https://cheatsheetseries.owasp.org/cheatsheets/Password_Storage_Cheat_Sheet.html | sekunder | 2026-10-21 | Day 05 |
+| NIST FIPS 197: Advanced Encryption Standard (AES) | https://csrc.nist.gov/pubs/fips/197/final | primer | 2026-10-21 | Day 05 |
+| NIST CSRC Glossary: asymmetric cryptography | https://csrc.nist.gov/glossary/term/asymmetric_cryptography | primer | 2026-10-21 | Day 05 |
+| NIST CSRC Glossary: digital signature | https://csrc.nist.gov/glossary/term/digital_signature | primer | 2026-10-21 | Day 05 |
+| RFC 5280: Internet X.509 PKI Certificate and CRL Profile | https://www.rfc-editor.org/rfc/rfc5280.html | primer | 2026-10-21 | Day 05 |
+| NIST CSRC Glossary: certificate authority | https://csrc.nist.gov/glossary/term/certificate_authority | primer | 2026-10-21 | Day 05 |
+| NIST CSRC Glossary: public key infrastructure | https://csrc.nist.gov/glossary/term/public_key_infrastructure | primer | 2026-10-21 | Day 05 |
+| RFC 8446: The TLS Protocol Version 1.3 | https://www.rfc-editor.org/rfc/rfc8446.html | primer | 2026-10-21 | Day 05 |
+| MDN Web Docs: Transport Layer Security (TLS) | https://developer.mozilla.org/en-US/docs/Web/Security/Transport_Layer_Security | sekunder | 2026-10-21 | Day 05 |
+| RFC 8996: Deprecating TLS 1.0 and TLS 1.1 | https://www.rfc-editor.org/rfc/rfc8996.html | primer | 2026-10-21 | Day 05 |
+| RFC 9849: TLS Encrypted Client Hello | https://www.rfc-editor.org/rfc/rfc9849.html | primer | 2026-10-21 | Day 05 |
+| CA/Browser Forum: Ballot SC081v3 | https://cabforum.org/2025/04/11/ballot-sc081v3-introduce-schedule-of-reducing-validity-and-data-reuse-periods/ | primer | 2026-10-21 | Day 05 |
+| AppViewX: CA/Browser Forum and 47 Days | https://www.appviewx.com/blogs/its-official-ca-b-forum-votes-yes-to-47-day-tls-certificates/ | sekunder | 2026-10-21 | Day 05 |
+| GlobalSign: 47-Day TLS Certificate Lifespan | https://www.globalsign.com/en/blog/47-day-tls-certificate-lifespan-what-it-means-for-security-teams | sekunder | 2026-10-21 | Day 05 |
+| NIST: First 3 Finalized Post-Quantum Encryption Standards | https://www.nist.gov/news-events/news/2024/08/nist-releases-first-3-finalized-post-quantum-encryption-standards | primer | 2026-10-21 | Day 05 |
+| NIST CSRC Glossary: antivirus software | https://csrc.nist.gov/glossary/term/antivirus_software | primer | 2026-10-21 | Day 06 |
+| Microsoft Learn: Microsoft Defender for Endpoint | https://learn.microsoft.com/en-us/defender-endpoint/microsoft-defender-endpoint | primer | 2026-10-21 | Day 06 |
+| Microsoft Learn: Overview of endpoint detection and response capabilities | https://learn.microsoft.com/en-us/defender-endpoint/overview-endpoint-detection-response | primer | 2026-10-21 | Day 06 |
+| Microsoft Learn: Overview of next-generation protection in Microsoft Defender for Endpoint | https://learn.microsoft.com/en-us/defender-endpoint/next-generation-protection | primer | 2026-10-21 | Day 06 |
+| Microsoft Security 101: What is EDR? | https://www.microsoft.com/en-us/security/business/security-101/what-is-edr-endpoint-detection-response | sekunder | 2026-10-21 | Day 06 |
+| Microsoft Learn: What is Microsoft Defender XDR? | https://learn.microsoft.com/en-us/defender-xdr/microsoft-365-defender | primer | 2026-10-21 | Day 06 |
+| Microsoft Security 101: What is managed detection and response (MDR)? | https://www.microsoft.com/en-us/security/business/security-101/what-is-mdr-managed-detection-response | sekunder | 2026-10-21 | Day 06 |
+| CrowdStrike: What is Extended Detection and Response (XDR)? | https://www.crowdstrike.com/en-us/cybersecurity-101/endpoint-security/extended-detection-and-response-xdr/ | sekunder | 2026-10-21 | Day 06 |
+| Wazuh documentation: File integrity monitoring | https://documentation.wazuh.com/current/user-manual/capabilities/file-integrity/index.html | primer | 2026-10-21 | Day 06 |
+| Fortra: Tripwire Enterprise | https://www.fortra.com/products/tripwire-enterprise | sekunder | 2026-10-21 | Day 06 |
+| NIST CSRC Glossary: data loss prevention | https://csrc.nist.gov/glossary/term/data_loss_prevention | primer | 2026-10-21 | Day 06 |
+| Microsoft Learn: Learn about data loss prevention (Microsoft Purview) | https://learn.microsoft.com/en-us/purview/dlp-learn-about-dlp | primer | 2026-10-21 | Day 06 |
+| NIST SP 800-167: Guide to Application Whitelisting | https://csrc.nist.gov/pubs/sp/800/167/final | primer | 2026-10-21 | Day 06 |
+| Microsoft Learn: Application Control for Windows | https://learn.microsoft.com/en-us/windows/security/application-security/application-control/app-control-for-business/appcontrol | primer | 2026-10-21 | Day 06 |
+| NIST CSRC Glossary: identity and access management | https://csrc.nist.gov/glossary/term/identity_and_access_management | primer | 2026-10-21 | Day 06 |
+| NIST SP 800-63-4: Digital Identity Guidelines | https://csrc.nist.gov/pubs/sp/800/63/4/final | primer | 2026-10-21 | Day 06 |
+| NIST CSRC Glossary: single sign-on | https://csrc.nist.gov/glossary/term/single_sign_on | primer | 2026-10-21 | Day 06 |
+| NIST SP 800-63B-4: Authentication and Authenticator Management | https://csrc.nist.gov/pubs/sp/800/63/b/4/final | primer | 2026-10-21 | Day 06 |
+| NIST CSRC Glossary: multi-factor authentication | https://csrc.nist.gov/glossary/term/multi_factor_authentication | primer | 2026-10-21 | Day 06 |
+| CISA: Implementing Phishing-Resistant MFA (fact sheet) | https://www.cisa.gov/sites/default/files/publications/fact-sheet-implementing-phishing-resistant-mfa-508c.pdf | primer | 2026-10-21 | Day 06 |
+| CISA: Implementing Number Matching in MFA Applications (fact sheet) | https://www.cisa.gov/sites/default/files/publications/fact-sheet-implement-number-matching-in-mfa-applications-508c.pdf | primer | 2026-10-21 | Day 06 |
+| Microsoft Learn: How number matching works in MFA push notifications for Authenticator | https://learn.microsoft.com/en-us/entra/identity/authentication/how-to-mfa-number-match | primer | 2026-10-21 | Day 06 |
+| Microsoft Learn: Overview of Conditional Access authentication strengths | https://learn.microsoft.com/en-us/entra/identity/authentication/concept-authentication-strengths | primer | 2026-10-21 | Day 06 |
+| FIDO Alliance: Passkeys | https://fidoalliance.org/passkeys/ | primer | 2026-10-21 | Day 06 |
+| NIST CSRC Glossary: role-based access control | https://csrc.nist.gov/glossary/term/role_based_access_control | primer | 2026-10-21 | Day 06 |
+| Microsoft Learn: What is Microsoft Entra Privileged Identity Management? | https://learn.microsoft.com/en-us/entra/id-governance/privileged-identity-management/pim-configure | primer | 2026-10-21 | Day 06 |
+| Microsoft Learn: Active Directory Domain Services overview | https://learn.microsoft.com/en-us/windows-server/identity/ad-ds/get-started/virtual-dc/active-directory-domain-services-overview | primer | 2026-10-21 | Day 07 |
+| Microsoft Learn: Understanding the Active Directory Logical Model | https://learn.microsoft.com/en-us/windows-server/identity/ad-ds/plan/understanding-the-active-directory-logical-model | primer | 2026-10-21 | Day 07 |
+| Microsoft Learn: Active Directory Security Groups | https://learn.microsoft.com/en-us/windows-server/identity/ad-ds/manage/understand-security-groups | primer | 2026-10-21 | Day 07 |
+| Microsoft Learn: Active Directory Privileged Accounts and Groups Guide | https://learn.microsoft.com/en-us/windows-server/identity/ad-ds/plan/security-best-practices/appendix-b--privileged-accounts-and-groups-in-active-directory | primer | 2026-10-21 | Day 07 |
+| Microsoft Learn: Best practices for securing Active Directory | https://learn.microsoft.com/en-us/windows-server/identity/ad-ds/plan/security-best-practices/best-practices-for-securing-active-directory | primer | 2026-10-21 | Day 07 |
+| Microsoft Learn: Group Managed Service Accounts overview | https://learn.microsoft.com/en-us/windows-server/identity/ad-ds/manage/group-managed-service-accounts/group-managed-service-accounts/group-managed-service-accounts-overview | primer | 2026-10-21 | Day 07 |
+| Microsoft Learn: Domain member: Maximum machine account password age | https://learn.microsoft.com/en-us/windows/security/threat-protection/security-policy-settings/domain-member-maximum-machine-account-password-age | primer | 2026-10-21 | Day 07 |
+| RFC 4511: Lightweight Directory Access Protocol (LDAP): The Protocol | https://www.rfc-editor.org/rfc/rfc4511.html | primer | 2026-10-21 | Day 07 |
+| Microsoft Learn: Service overview and network port requirements for Windows | https://learn.microsoft.com/en-us/troubleshoot/windows-server/networking/service-overview-and-network-port-requirements | primer | 2026-10-21 | Day 07 |
+| Microsoft Learn: Kerberos authentication overview in Windows Server | https://learn.microsoft.com/en-us/windows-server/security/kerberos/kerberos-authentication-overview | primer | 2026-10-21 | Day 07 |
+| RFC 4120: The Kerberos Network Authentication Service (V5) | https://www.rfc-editor.org/rfc/rfc4120.html | primer | 2026-10-21 | Day 07 |
+| Microsoft Learn: Maximum lifetime for user ticket | https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/security-policy-settings/maximum-lifetime-for-user-ticket | primer | 2026-10-21 | Day 07 |
+| Microsoft Learn: NTLM overview in Windows Server | https://learn.microsoft.com/en-us/windows-server/security/kerberos/ntlm-overview | primer | 2026-10-21 | Day 07 |
+| Microsoft Learn: Deprecated features in the Windows client (entri NTLM) | https://learn.microsoft.com/en-us/windows/whats-new/deprecated-features | primer | 2026-10-21 | Day 07 |
+| Microsoft Learn: Group Policy overview for Windows Server | https://learn.microsoft.com/en-us/windows-server/identity/ad-ds/manage/group-policy/group-policy-overview | primer | 2026-10-21 | Day 07 |
+| Microsoft Learn: 4624(S) An account was successfully logged on | https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/auditing/event-4624 | primer | 2026-10-21 | Day 07 |
+| Microsoft Learn: 4625(F) An account failed to log on | https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/auditing/event-4625 | primer | 2026-10-21 | Day 07 |
+| Microsoft Learn: 4768(S, F) A Kerberos authentication ticket (TGT) was requested | https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/auditing/event-4768 | primer | 2026-10-21 | Day 07 |
+| Microsoft Learn: 4769(S, F) A Kerberos service ticket was requested | https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/auditing/event-4769 | primer | 2026-10-21 | Day 07 |
+| Microsoft Learn: 4776(S, F) The computer attempted to validate the credentials for an account | https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/auditing/event-4776 | primer | 2026-10-21 | Day 07 |
+| Microsoft Learn: Audit Security Group Management | https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/auditing/audit-security-group-management | primer | 2026-10-21 | Day 07 |
+| MITRE ATT&CK T1558.003: Kerberoasting | https://attack.mitre.org/techniques/T1558/003/ | primer | 2026-10-21 | Day 07 |
+| MITRE ATT&CK T1550.002: Pass the Hash | https://attack.mitre.org/techniques/T1550/002/ | primer | 2026-10-21 | Day 07 |
+| MITRE ATT&CK T1558.001: Golden Ticket | https://attack.mitre.org/techniques/T1558/001/ | primer | 2026-10-21 | Day 07 |
+| Canadian Centre for Cyber Security: Joint guidance on detecting and mitigating Active Directory compromises | https://www.cyber.gc.ca/en/news-events/joint-guidance-detecting-and-mitigating-active-directory-compromises | primer | 2026-10-21 | Day 07 |
+| CISA: Detecting and Mitigating Active Directory Compromises | https://www.cisa.gov/resources-tools/resources/detecting-and-mitigating-active-directory-compromises | primer | 2026-10-21 | Day 07 |
+| NIST SP 800-145: The NIST Definition of Cloud Computing | https://csrc.nist.gov/pubs/sp/800/145/final | primer | 2026-10-21 | Day 08 |
+| AWS: Shared Responsibility Model | https://aws.amazon.com/compliance/shared-responsibility-model/ | primer | 2026-10-21 | Day 08 |
+| Microsoft Learn: Shared responsibility in the cloud | https://learn.microsoft.com/en-us/azure/security/fundamentals/shared-responsibility | primer | 2026-10-21 | Day 08 |
+| AWS IAM User Guide: IAM roles | https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles.html | primer | 2026-10-21 | Day 08 |
+| AWS IAM User Guide: Policies and permissions in IAM | https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies.html | primer | 2026-10-21 | Day 08 |
+| AWS IAM User Guide: Policy evaluation logic | https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_evaluation-logic.html | primer | 2026-10-21 | Day 08 |
+| AWS IAM User Guide: Security best practices in IAM | https://docs.aws.amazon.com/IAM/latest/UserGuide/best-practices.html | primer | 2026-10-21 | Day 08 |
+| AWS IAM User Guide: IAM identifiers | https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_identifiers.html | primer | 2026-10-21 | Day 08 |
+| Amazon S3 User Guide: Blocking public access to your Amazon S3 storage | https://docs.aws.amazon.com/AmazonS3/latest/userguide/access-control-block-public-access.html | primer | 2026-10-21 | Day 08 |
+| AWS What's New: Amazon S3 applies two security best practices to all new buckets by default | https://aws.amazon.com/about-aws/whats-new/2023/04/amazon-s3-security-best-practices-buckets-default | primer | 2026-10-21 | Day 08 |
+| AWS CloudTrail User Guide: What is AWS CloudTrail; CloudTrail concepts | https://docs.aws.amazon.com/awscloudtrail/latest/userguide/cloudtrail-user-guide.html | primer | 2026-10-21 | Day 08 |
+| AWS CloudTrail User Guide: CloudTrail record contents | https://docs.aws.amazon.com/awscloudtrail/latest/userguide/cloudtrail-event-reference-record-contents.html | primer | 2026-10-21 | Day 08 |
+| Amazon S3 User Guide: Amazon S3 CloudTrail events | https://docs.aws.amazon.com/AmazonS3/latest/userguide/cloudtrail-logging-s3-info.html | primer | 2026-10-21 | Day 08 |
+| Microsoft Learn: Activity Log in Azure Monitor | https://learn.microsoft.com/en-us/azure/azure-monitor/fundamentals/activity-log | primer | 2026-10-21 | Day 08 |
+| Microsoft Learn: What is Azure RBAC? | https://learn.microsoft.com/en-us/azure/role-based-access-control/overview | primer | 2026-10-21 | Day 08 |
+| Microsoft Learn: Microsoft Defender for Cloud overview | https://learn.microsoft.com/en-us/azure/defender-for-cloud/defender-for-cloud-introduction | primer | 2026-10-21 | Day 08 |
+| Microsoft Learn: Overview of Microsoft Defender for Cloud Apps | https://learn.microsoft.com/en-us/defender-cloud-apps/what-is-defender-for-cloud-apps | primer | 2026-10-21 | Day 08 |
+| Cisco: What Is a CASB? | https://www.cisco.com/c/en/us/products/security/what-is-a-casb.html | sekunder | 2026-10-21 | Day 08 |
+| Palo Alto Networks Cyberpedia: What Is CWPP? | https://www.paloaltonetworks.com/cyberpedia/what-is-cwpp-cloud-workload-protection-platform | sekunder | 2026-10-21 | Day 08 |
+| CSA: Top Threats to Cloud Computing 2024 Report (press release) | https://cloudsecurityalliance.org/press-releases/2024/08/06/cloud-security-alliance-releases-top-threats-to-cloud-computing-2024-report | sekunder | 2026-10-21 | Day 08 |
+| CISA: CISA and NSA Release Cybersecurity Information Sheets on Cloud Security Best Practices | https://cisa.gov/news-events/alerts/2024/03/07/cisa-and-nsa-release-cybersecurity-information-sheets-cloud-security-best-practices | primer | 2026-10-21 | Day 08 |
+| Infosecurity Magazine: NSA Launches Top 10 Cloud Security Mitigation Strategies | https://www.infosecurity-magazine.com/news/nsa-top-10-cloud-security/ | sekunder | 2026-10-21 | Day 08 |
+| AWS Documentation: AWS Regions | https://docs.aws.amazon.com/global-infrastructure/latest/regions/aws-regions.html | primer | 2026-10-21 | Day 08 |
+| Microsoft Learn: New name for Azure Active Directory | https://learn.microsoft.com/en-us/entra/fundamentals/new-name | primer | 2026-10-21 | Day 08 |
+| NIST CSRC Glossary: social engineering | https://csrc.nist.gov/glossary/term/social_engineering | primer | 2026-10-21 | Day 09 |
+| NIST CSRC Glossary: phishing | https://csrc.nist.gov/glossary/term/phishing | primer | 2026-10-21 | Day 09 |
+| CISA: Avoiding Social Engineering and Phishing Attacks (2021-02-01, arsip) | https://www.cisa.gov/news-events/news/avoiding-social-engineering-and-phishing-attacks | primer | 2026-10-21 | Day 09 |
+| MITRE ATT&CK T1566: Phishing (v2.8) | https://attack.mitre.org/techniques/T1566/ | primer | 2026-10-21 | Day 09 |
+| Proofpoint: What Is Whaling? | https://www.proofpoint.com/us/threat-reference/whaling | sekunder | 2026-10-21 | Day 09 |
+| FBI IC3 PSA I-091124-PSA: Business Email Compromise: The $55 Billion Scam | https://www.ic3.gov/PSA/2024/PSA240911 | primer | 2026-10-21 | Day 09 |
+| FBI IC3 2025 Annual Report | https://www.ic3.gov/AnnualReport/Reports/2025_IC3Report.pdf | primer | 2026-10-21 | Day 09 |
+| FBI IC3 PSA I-011822-PSA: Cybercriminals Tampering with QR Codes | https://www.ic3.gov/PSA/2022/PSA220118 | primer | 2026-10-21 | Day 09 |
+| RFC 5321: Simple Mail Transfer Protocol | https://www.rfc-editor.org/rfc/rfc5321.html | primer | 2026-10-21 | Day 09 |
+| RFC 5322: Internet Message Format | https://www.rfc-editor.org/rfc/rfc5322.html | primer | 2026-10-21 | Day 09 |
+| RFC 7208: Sender Policy Framework (SPF) | https://www.rfc-editor.org/rfc/rfc7208.html | primer | 2026-10-21 | Day 09 |
+| RFC 6376: DKIM Signatures | https://www.rfc-editor.org/rfc/rfc6376.html | primer | 2026-10-21 | Day 09 |
+| RFC 9989: DMARC (Mei 2026, menggantikan RFC 7489 dan RFC 9091) | https://www.rfc-editor.org/rfc/rfc9989.html | primer | 2026-10-21 | Day 09 |
+| RFC 8601: Authentication-Results Header Field | https://www.rfc-editor.org/rfc/rfc8601.html | primer | 2026-10-21 | Day 09 |
+| Microsoft Learn: How email authentication works in Microsoft 365 | https://learn.microsoft.com/en-us/defender-office-365/email-authentication-about | primer | 2026-10-21 | Day 09 |
+| Microsoft Learn: Anti-phishing policies in Microsoft 365 | https://learn.microsoft.com/en-us/defender-office-365/anti-phishing-policies-about | primer | 2026-10-21 | Day 09 |
+| Microsoft Learn: Anti-spam message headers | https://learn.microsoft.com/en-us/defender-office-365/message-headers-eop-mdo | primer | 2026-10-21 | Day 09 |
+| Microsoft Learn: Why do I need Microsoft Defender for Office 365? | https://learn.microsoft.com/en-us/defender-office-365/mdo-about | primer | 2026-10-21 | Day 09 |
+| Microsoft Learn: Safe Links overview | https://learn.microsoft.com/en-us/defender-office-365/safe-links-about | primer | 2026-10-21 | Day 09 |
+| Microsoft Learn: Safe Attachments | https://learn.microsoft.com/en-us/defender-office-365/safe-attachments-about | primer | 2026-10-21 | Day 09 |
+| Microsoft Learn: Configure user reported message settings | https://learn.microsoft.com/en-us/defender-office-365/submissions-user-reported-messages-custom-mailbox | primer | 2026-10-21 | Day 09 |
+| Microsoft Security Blog: From cookie theft to BEC (AiTM, 2022-07-12) | https://www.microsoft.com/en-us/security/blog/2022/07/12/from-cookie-theft-to-bec-attackers-use-aitm-phishing-sites-as-entry-point-to-further-financial-fraud/ | sekunder | 2026-10-21 | Day 09 |
+| Barracuda Glossary: Inline Email Security Deployment | https://www.barracuda.com/support/glossary/inline-deployment | sekunder | 2026-10-21 | Day 09 |
+| NIST SP 800-177 Rev. 1: Trustworthy Email | https://csrc.nist.gov/pubs/sp/800/177/r1/final | primer | 2026-10-21 | Day 09 |
+| Microsoft Learn: Set up SPF for your Microsoft 365 domain | https://learn.microsoft.com/en-us/defender-office-365/email-authentication-spf-configure | primer | 2026-10-21 | Day 09 |
