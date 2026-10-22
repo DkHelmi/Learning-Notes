@@ -4,19 +4,19 @@ Indeks sumber global, disusun dari tabel Sumber (bagian 9) setiap Day di folder 
 
 | Judul | URL | Tipe | Diakses | Dipakai di |
 |---|---|---|---|---|
-| RFC 3227: Guidelines for Evidence Collection and Archiving (BCP 55) | https://datatracker.ietf.org/doc/html/rfc3227 | primer | 2026-10-07 | Day 01, 06 |
-| NIST SP 800-86: Guide to Integrating Forensic Techniques into Incident Response | https://csrc.nist.gov/pubs/sp/800/86/final | primer | 2026-10-07 | Day 01, 06 |
-| NIST SP 800-61 Rev. 3 | https://csrc.nist.gov/pubs/sp/800/61/r3/final | primer | 2026-10-07 | Day 01 |
+| RFC 3227: Guidelines for Evidence Collection and Archiving (BCP 55) | https://datatracker.ietf.org/doc/html/rfc3227 | primer | 2026-10-10 | Day 01, 06, 20 |
+| NIST SP 800-86: Guide to Integrating Forensic Techniques into Incident Response | https://csrc.nist.gov/pubs/sp/800/86/final | primer | 2026-10-22 | Day 01, 06, 19, 20 |
+| NIST SP 800-61 Rev. 3 | https://csrc.nist.gov/pubs/sp/800/61/r3/final | primer | 2026-10-22 | Day 01, 19, 20 |
 | Velociraptor: Adaptive Collections with Velociraptor | https://docs.velociraptor.app/blog/2025/2025-09-28-adaptive-collections/ | primer (blog proyek resmi) | 2026-10-16 | Day 01, 04, 06 |
 | Cado Security / Forensic Focus: The differences between full disk and triage acquisition | https://www.forensicfocus.com/articles/the-differences-between-full-disk-and-triage-acquisition/ | sekunder | 2026-10-07 | Day 01 |
 | Elcomsoft: The Cloud Gap: Forensic Triage vs. Disk Imaging in the Age of On-Demand Sync | https://blog.elcomsoft.com/2026/01/the-cloud-gap-forensic-triage-vs-disk-imaging-in-the-age-of-on-demand-sync/ | sekunder (vendor forensik) | 2026-10-07 | Day 01, 06 |
 | Cado Security wiki: Chain of custody, a digital forensics case study | https://cadosecurity.com/wiki/chain-of-custody-a-digital-forensics-case-study | sekunder | 2026-10-07 | Day 01 |
 | NIST SP 800-61 Rev. 3: Incident Response Recommendations and Considerations for Cybersecurity Risk Management (PDF) | https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-61r3.pdf | primer | 2026-10-15 | Day 01, 06 |
 | Microsoft Learn: Get-FileHash (Microsoft.PowerShell.Utility) | https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.utility/get-filehash | primer | 2026-10-16 | Day 01, 02, 06 |
-| Volatility 3 releases | https://github.com/volatilityfoundation/volatility3/releases | primer | 2026-10-22 | Day 02, 06, 14, 15, 16 |
-| Eric Zimmerman tools (EZ Tools, Get-ZimmermanTools) | https://ericzimmerman.github.io/ | primer | 2026-10-22 | Day 02, 03, 04, 05, 06, 07, 08, 09, 10, 11, 12, 13 |
+| Volatility 3 releases | https://github.com/volatilityfoundation/volatility3/releases | primer | 2026-10-22 | Day 02, 06, 14, 15, 16, 18, 20 |
+| Eric Zimmerman tools (EZ Tools, Get-ZimmermanTools) | https://ericzimmerman.github.io/ | primer | 2026-10-22 | Day 02, 03, 04, 05, 06, 07, 08, 09, 10, 11, 12, 13, 17, 20 |
 | KAPE (Kroll) | https://www.kroll.com/en/services/cyber/incident-response-litigation-support/kroll-artifact-parser-extractor-kape | primer (vendor) | 2026-10-16 | Day 02 |
-| Velociraptor releases | https://github.com/Velocidex/velociraptor/releases | primer | 2026-10-16 | Day 02, 04, 06 |
+| Velociraptor releases | https://github.com/Velocidex/velociraptor/releases | primer | 2026-10-22 | Day 02, 04, 06, 20 |
 | Plaso documentation | https://plaso.readthedocs.io/ | primer | 2026-10-09 | Day 02, 13 |
 | Sysinternals: Sysmon | https://learn.microsoft.com/en-us/sysinternals/downloads/sysmon | primer | 2026-10-22 | Day 02, 05, 06, 11, 15 |
 | Microsoft Learn: Command line process auditing | https://learn.microsoft.com/en-us/windows-server/identity/ad-ds/manage/component-updates/command-line-process-auditing | primer | 2026-10-16 | Day 02, 05, 06 |
@@ -28,7 +28,7 @@ Indeks sumber global, disusun dari tabel Sumber (bagian 9) setiap Day di folder 
 | SANS ISC: KAPE (Kroll Artifact Parser and Extractor) | https://isc.sans.edu/diary/25258 | sekunder | 2026-10-16 | Day 02, 03 |
 | KAPE-EZToolsAncillaryUpdater (GitHub) | https://github.com/AndrewRathbun/KAPE-EZToolsAncillaryUpdater | sekunder (skrip komunitas) | 2026-10-16 | Day 02 |
 | Plaso documentation: Installing with Docker | https://plaso.readthedocs.io/en/latest/sources/user/Installing-with-docker.html | primer | 2026-10-22 | Day 02, 13 |
-| Plaso (log2timeline) releases dan dokumentasi | https://github.com/log2timeline/plaso/releases | primer | 2026-10-22 | Day 02, 06, 13 |
+| Plaso (log2timeline) releases dan dokumentasi | https://github.com/log2timeline/plaso/releases | primer | 2026-10-22 | Day 02, 06, 13, 20 |
 | Velociraptor README (GitHub) | https://github.com/Velocidex/velociraptor | primer | 2026-10-16 | Day 02 |
 | Velociraptor documentation: Quickstart | https://docs.velociraptor.app/docs/deployment/quickstart/ | primer | 2026-10-16 | Day 02, 04 |
 | Microsoft Learn: Mount-DiskImage | https://learn.microsoft.com/en-us/powershell/module/storage/mount-diskimage | primer | 2026-10-16 | Day 02, 03, 06 |
@@ -68,7 +68,7 @@ Indeks sumber global, disusun dari tabel Sumber (bagian 9) setiap Day di folder 
 | Velociraptor artifact reference: Windows.EventLogs.EvtxHunter | https://docs.velociraptor.app/artifact_references/pages/windows.eventlogs.evtxhunter/ | primer | 2026-10-16 | Day 04 |
 | Velociraptor artifact reference: Windows.System.DNSCache | https://docs.velociraptor.app/artifact_references/pages/windows.system.dnscache/ | primer | 2026-10-16 | Day 04 |
 | Velociraptor artifact reference: Server.Import.Extras | https://docs.velociraptor.app/artifact_references/pages/server.import.extras/ | primer | 2026-10-16 | Day 04 |
-| Microsoft Learn: Investigate entities on devices using live response in Microsoft Defender for Endpoint | https://learn.microsoft.com/en-us/defender-endpoint/live-response | primer (dokumentasi vendor) | 2026-10-16 | Day 04, 06 |
+| Microsoft Learn: Investigate entities on devices using live response in Microsoft Defender for Endpoint | https://learn.microsoft.com/en-us/defender-endpoint/live-response | primer (dokumentasi vendor) | 2026-10-22 | Day 04, 06, 18, 20 |
 | Microsoft Learn: Live response command examples | https://learn.microsoft.com/en-us/defender-endpoint/live-response-command-examples | primer (dokumentasi vendor) | 2026-10-16 | Day 04 |
 | Microsoft Learn: msiexec | https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/msiexec | primer (dokumentasi vendor) | 2026-10-16 | Day 04 |
 | Cisco Talos: Velociraptor leveraged in ransomware attacks | https://blog.talosintelligence.com/velociraptor-leveraged-in-ransomware-attacks/ | sekunder (peneliti) | 2026-10-16 | Day 04 |
@@ -96,7 +96,7 @@ Indeks sumber global, disusun dari tabel Sumber (bagian 9) setiap Day di folder 
 | GitHub: evtx Maps (map 4624, 4698, 7045, 104, 106, 201, 4104, Sysmon 1, 1149, 21) | https://github.com/EricZimmerman/evtx/tree/master/evtx/Maps | primer (repo resmi) | 2026-10-16 | Day 05, 06, 11 |
 | NinjaOne: How to enable or disable Task Scheduler history | https://www.ninjaone.com/blog/enable-or-disable-task-scheduler-history/ | komunitas (blog vendor how-to) | 2026-10-16 | Day 05 |
 | Mekanisme Prefetch Windows (literatur DFIR umum) | tanpa URL | sekunder | 2026-10-10 | Day 07 |
-| SANS: Windows Forensic Analysis poster | https://www.sans.org/posters/windows-forensic-analysis/ | sekunder (SANS) | 2026-10-16 | Day 07, 08, 09, 10, 12 |
+| SANS: Windows Forensic Analysis poster | https://www.sans.org/posters/windows-forensic-analysis/ | sekunder (SANS) | 2026-10-16 | Day 07, 08, 09, 10, 12, 17 |
 | Sygnia: Diving into the new Windows 11 PCA artifact | https://www.sygnia.co/?p=133 | sekunder (peneliti) | 2026-10-16 | Day 07, 12 |
 | Andrea Fortuna: Windows 11 PCA artifact | https://andreafortuna.org/2026/03/19/windows11-pca-artifact/ | sekunder | 2026-10-16 | Day 07 |
 | Velociraptor artifact: Windows.System.AppCompatPCA | https://docs.velociraptor.app/exchange/artifacts/pages/windows.system.appcompatpca | primer | 2026-10-16 | Day 07 |
@@ -126,7 +126,7 @@ Indeks sumber global, disusun dari tabel Sumber (bagian 9) setiap Day di folder 
 | Microsoft Learn: Creating, Modifying, and Deleting a Change Journal | https://learn.microsoft.com/en-us/windows/win32/fileio/creating-modifying-and-deleting-a-change-journal | primer (dokumentasi vendor) | 2026-10-16 | Day 08 |
 | Microsoft Learn: fsutil usn | https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/fsutil-usn | primer | 2026-10-16 | Day 08 |
 | Microsoft Learn: fsutil behavior | https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/fsutil-behavior | primer (dokumentasi vendor) | 2026-10-16 | Day 08, 12 |
-| Microsoft Learn: File Times | https://learn.microsoft.com/en-us/windows/win32/sysinfo/file-times | primer (dokumentasi vendor) | 2026-10-16 | Day 08 |
+| Microsoft Learn: File Times | https://learn.microsoft.com/en-us/windows/win32/sysinfo/file-times | primer (dokumentasi vendor) | 2026-10-22 | Day 08, 17 |
 | Microsoft Learn: Master File Table (Local File Systems) | https://learn.microsoft.com/en-us/windows/win32/fileio/master-file-table | primer (dokumentasi vendor) | 2026-10-16 | Day 08 |
 | MFTECmd README (GitHub) | https://github.com/EricZimmerman/MFTECmd | primer (repo resmi) | 2026-10-16 | Day 08 |
 | RBCmd README (GitHub) | https://github.com/EricZimmerman/RBCmd | primer (repo resmi) | 2026-10-16 | Day 08, 12 |
@@ -156,9 +156,9 @@ Indeks sumber global, disusun dari tabel Sumber (bagian 9) setiap Day di folder 
 | Microsoft Learn: Appendix A: TCP/IP Configuration Parameters (Windows Server 2003) | https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2003/cc739819(v=ws.10) | primer (arsip) | 2026-10-16 | Day 09 |
 | Microsoft Learn: 802.11 Wireless Connectivity (event WLAN-AutoConfig) | https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc727690(v=ws.10) | primer (arsip) | 2026-10-16 | Day 09 |
 | Microsoft Learn: DEVPKEY_Device_InstallDate | https://learn.microsoft.com/en-us/windows-hardware/drivers/install/devpkey-device-installdate | primer | 2026-10-16 | Day 09 |
-| Microsoft Learn: DEVPKEY_Device_FirstInstallDate | https://learn.microsoft.com/en-us/windows-hardware/drivers/install/devpkey-device-firstinstalldate | primer | 2026-10-16 | Day 09, 12 |
+| Microsoft Learn: DEVPKEY_Device_FirstInstallDate | https://learn.microsoft.com/en-us/windows-hardware/drivers/install/devpkey-device-firstinstalldate | primer | 2026-10-22 | Day 09, 12, 17 |
 | mingw-w64 headers: devpkey.h | https://raw.githubusercontent.com/mingw-w64/mingw-w64/master/mingw-w64-headers/include/devpkey.h | primer (header publik, tiruan SDK) | 2026-10-16 | Day 09 |
-| Elcomsoft: USB Device Forensics on Windows 10 and 11 | https://blog.elcomsoft.com/2026/02/usb-device-forensics-on-windows-10-and-11/ | sekunder (vendor forensik) | 2026-10-16 | Day 09, 12 |
+| Elcomsoft: USB Device Forensics on Windows 10 and 11 | https://blog.elcomsoft.com/2026/02/usb-device-forensics-on-windows-10-and-11/ | sekunder (vendor forensik) | 2026-10-22 | Day 09, 12, 17 |
 | IT-Connect: Forensic Windows Part 15, Tracing USB Device History | https://www.it-connect.tech/forensic-windows-part-15-tracing-usb-device-history/ | sekunder (praktisi) | 2026-10-16 | Day 09, 12 |
 | Magnet Forensics: Artifact Profile, USB Devices | https://www.magnetforensics.com/blog/artifact-profile-usb-devices/ | sekunder (vendor alat) | 2026-10-16 | Day 09 |
 | Security Ronin: usb-forensic README | https://docs.rs/crate/usb-forensic/0.2.0/source/README.md | komunitas (proyek alat sumber terbuka) | 2026-10-16 | Day 09 |
@@ -174,7 +174,7 @@ Indeks sumber global, disusun dari tabel Sumber (bagian 9) setiap Day di folder 
 | HackMD (chinhnamdo): catatan Registry Explorer dan transaction log | https://hackmd.io/@chinhnamdo/H1aW5MKtA | komunitas (catatan belajar) | 2026-10-16 | Day 09 |
 | Microsoft Open Specifications: [MS-SHLLINK] Shell Link (.LNK) Binary File Format | https://learn.microsoft.com/en-us/openspecs/windows_protocols/ms-shllink/16cb4ca1-9339-4d0c-a68d-bf1d6cc0f943 | primer | 2026-10-16 | Day 10 |
 | [MS-SHLLINK] ShellLinkHeader | https://learn.microsoft.com/en-us/openspecs/windows_protocols/ms-shllink/c3376b21-0931-45e4-b2fc-a48ac0e60d15 | primer | 2026-10-16 | Day 10 |
-| [MS-SHLLINK] VolumeID | https://learn.microsoft.com/en-us/openspecs/windows_protocols/ms-shllink/b7b3eea7-dbff-4275-bd58-83ba3f12d87a | primer | 2026-10-16 | Day 10, 12 |
+| [MS-SHLLINK] VolumeID | https://learn.microsoft.com/en-us/openspecs/windows_protocols/ms-shllink/b7b3eea7-dbff-4275-bd58-83ba3f12d87a | primer | 2026-10-22 | Day 10, 12, 17 |
 | [MS-SHLLINK] TrackerDataBlock | https://learn.microsoft.com/en-us/openspecs/windows_protocols/ms-shllink/df8e3748-fba5-4524-968a-f72be06d71fc | primer | 2026-10-16 | Day 10 |
 | Microsoft Learn: SHAddToRecentDocs function (shlobj_core.h) | https://learn.microsoft.com/en-us/windows/win32/api/shlobj_core/nf-shlobj_core-shaddtorecentdocs | primer | 2026-10-16 | Day 10, 12 |
 | LECmd README (GitHub) | https://github.com/EricZimmerman/LECmd | primer (repo resmi) | 2026-10-16 | Day 10 |
@@ -246,7 +246,7 @@ Indeks sumber global, disusun dari tabel Sumber (bagian 9) setiap Day di folder 
 | Velociraptor: Windows.Memory.Acquisition | https://docs.velociraptor.app/artifact_references/pages/windows.memory.acquisition/ | primer (dokumentasi proyek) | 2026-10-22 | Day 14 |
 | SANS ISC: Searching live memory on a running machine with winpmem (Mark Baggett, 2013) | https://isc.sans.edu/diary/17063 | sekunder (praktisi) | 2026-10-22 | Day 14 |
 | GitHub issue Velocidex/WinPmem #19 | https://github.com/Velocidex/WinPmem/issues/19 | komunitas | 2026-10-22 | Day 14 |
-| Volatility 3 documentation | https://volatility3.readthedocs.io/ | primer | 2026-10-22 | Day 15, 16 |
+| Volatility 3 documentation | https://volatility3.readthedocs.io/ | primer | 2026-10-22 | Day 15, 16, 20 |
 | Volatility 3: volatility3.plugins.windows.malware package | https://volatility3.readthedocs.io/en/latest/volatility3.plugins.windows.malware.html | primer | 2026-10-22 | Day 15 |
 | Source windows/malware/malfind.py (v2.28.2) | https://raw.githubusercontent.com/volatilityfoundation/volatility3/v2.28.2/volatility3/framework/plugins/windows/malware/malfind.py | primer (source) | 2026-10-22 | Day 15 |
 | Source alias usang windows/malfind.py (v2.28.2) | https://raw.githubusercontent.com/volatilityfoundation/volatility3/v2.28.2/volatility3/framework/plugins/windows/malfind.py | primer (source) | 2026-10-22 | Day 15 |
@@ -286,9 +286,36 @@ Indeks sumber global, disusun dari tabel Sumber (bagian 9) setiap Day di folder 
 | volatility3 callbacks.py | https://raw.githubusercontent.com/volatilityfoundation/volatility3/develop/volatility3/framework/plugins/windows/callbacks.py | primer | 2026-10-22 | Day 16 |
 | volatility3 modules.py | https://raw.githubusercontent.com/volatilityfoundation/volatility3/develop/volatility3/framework/plugins/windows/modules.py | primer | 2026-10-22 | Day 16 |
 | volatility3 dumpfiles.py | https://raw.githubusercontent.com/volatilityfoundation/volatility3/develop/volatility3/framework/plugins/windows/dumpfiles.py | primer | 2026-10-22 | Day 16 |
-| Microsoft Learn: Take response actions on a device in Microsoft Defender for Endpoint | https://learn.microsoft.com/en-us/defender-endpoint/respond-machine-alerts | primer | 2026-10-22 | Day 16 |
+| Microsoft Learn: Take response actions on a device in Microsoft Defender for Endpoint | https://learn.microsoft.com/en-us/defender-endpoint/respond-machine-alerts | primer | 2026-10-22 | Day 16, 18 |
 | Microsoft Learn: Sigcheck | https://learn.microsoft.com/en-us/sysinternals/downloads/sigcheck | primer | 2026-10-22 | Day 16 |
 | Sigma rule WMI Persistence - Command Line Event Consumer (detection.fyi) | https://detection.fyi/sigmahq/sigma/windows/image_load/image_load_wmi_persistence_commandline_event_consumer | komunitas | 2026-10-22 | Day 16 |
 | Andrea Fortuna: Volatility cheatsheet part 5 networking | https://andreafortuna.org/2017/07/24/volatility-my-own-cheatsheet-part-5-networking/ | komunitas | 2026-10-22 | Day 16 |
 | Pureinfotech: KB5027397 22H2 ke 23H2 | https://pureinfotech.com/kb5027397-windows-11-change-22h2-23h2/ | sekunder | 2026-10-22 | Day 16 |
 | volatility3 symbols/windows/extensions/network.py | https://raw.githubusercontent.com/volatilityfoundation/volatility3/develop/volatility3/framework/symbols/windows/extensions/network.py | primer | 2026-10-22 | Day 16 |
+| Microsoft Learn: 5140(S, F) A network share object was accessed | https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/auditing/event-5140 | primer (arsip) | 2026-10-22 | Day 17 |
+| Microsoft Learn: 5145(S, F) A network share object was checked to see whether client can be granted desired access | https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/auditing/event-5145 | primer (arsip) | 2026-10-22 | Day 17 |
+| Provider Microsoft-Windows-Partition (winevt-kb) | https://winevt-kb.readthedocs.io/en/stable/sources/eventlog-providers/Provider-Microsoft-Windows-Partition.html | sekunder | 2026-10-10 | Day 17 |
+| Microsoft Learn: Audit Removable Storage | https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/auditing/audit-removable-storage | primer (arsip) | 2026-10-22 | Day 17 |
+| Microsoft Learn: Advanced hunting overview in Microsoft Defender XDR | https://learn.microsoft.com/en-us/defender-xdr/advanced-hunting-overview | primer | 2026-10-22 | Day 17 |
+| Microsoft Learn: DeviceFileEvents table in the advanced hunting schema | https://learn.microsoft.com/en-us/defender-xdr/advanced-hunting-devicefileevents-table | primer | 2026-10-22 | Day 17 |
+| Microsoft Learn: View device control events and information in Microsoft Defender for Endpoint | https://learn.microsoft.com/en-us/defender-endpoint/device-control-report | primer | 2026-10-22 | Day 17 |
+| Microsoft Learn: Investigate devices in Microsoft Defender for Endpoint | https://learn.microsoft.com/en-us/defender-endpoint/investigate-machines | primer | 2026-10-22 | Day 17 |
+| CISA: Defining Insider Threats | https://www.cisa.gov/topics/physical-security/insider-threat-mitigation/defining-insider-threats | primer (lembaga pemerintah) | 2026-10-22 | Day 17 |
+| Microsoft Tech Community: Monitoring copied files on external drive (USB) | https://techcommunity.microsoft.com/discussions/microsoftthreatprotection/monitoring-copied-files-on-external-drive---usb/3764979 | komunitas | 2026-10-22 | Day 17 |
+| MITRE ATT&CK: Hijack Execution Flow: DLL (T1574.001) | https://attack.mitre.org/techniques/T1574/001/ | primer | 2026-10-22 | Day 18 |
+| Microsoft Learn: Dynamic-link library search order | https://learn.microsoft.com/en-us/windows/win32/dlls/dynamic-link-library-search-order | primer | 2026-10-22 | Day 18 |
+| HijackLibs: version.dll (Microsoft) | https://hijacklibs.net/entries/microsoft/built-in/version.html | komunitas | 2026-10-22 | Day 18 |
+| MITRE ATT&CK: Drive-by Compromise (T1189) | https://attack.mitre.org/techniques/T1189/ | primer | 2026-10-22 | Day 18 |
+| MITRE ATT&CK: Scheduled Task (T1053.005) | https://attack.mitre.org/techniques/T1053/005/ | primer | 2026-10-22 | Day 18 |
+| GitHub: redcanaryco/atomic-red-team T1574.001 | https://github.com/redcanaryco/atomic-red-team/blob/master/atomics/T1574.001/T1574.001.md | primer (repo) | 2026-10-22 | Day 18 |
+| David Bianco: The Pyramid of Pain | https://detect-respond.blogspot.com/2013/03/the-pyramid-of-pain.html | sekunder | 2026-10-22 | Day 18 |
+| MITRE ATT&CK: Application Layer Protocol: Web Protocols (T1071.001) | https://attack.mitre.org/techniques/T1071/001/ | primer | 2026-10-22 | Day 18 |
+| MITRE ATT&CK: User Execution: Malicious File (T1204.002) | https://attack.mitre.org/techniques/T1204/002/ | primer | 2026-10-22 | Day 18 |
+| ODNI: Intelligence Community Directive 203, Analytic Standards | https://www.dni.gov/files/documents/ICD/ICD-203.pdf | primer (lembaga pemerintah) | 2026-10-22 | Day 19 |
+| IEC Webstore: ISO/IEC 27042:2015 Guidelines for the analysis and interpretation of digital evidence | https://webstore.iec.ch/publication/22757 | primer (abstrak penerbit) | 2026-10-22 | Day 19 |
+| Lenny Zeltser: IR writing guidelines (incident response report writing) | https://zeltser.com/media/docs/ir-writing-guidelines.yaml | sekunder (praktisi) | 2026-10-22 | Day 19 |
+| SANS: Report Writing for Digital Forensics, Part II | https://www.sans.org/blog/report-writing-for-digital-forensics-part-ii | sekunder | 2026-10-22 | Day 19 |
+| Champlain College Leahy Center: Enfuse 2017 Reflection, Forensic Report Writing | https://leahycenterblog.champlain.edu/2017/09/26/enfuse-2017-reflection-jonathan-castro-forensic-report-writing/ | komunitas | 2026-10-22 | Day 19 |
+| GitHub google/timesketch: Releases | https://github.com/google/timesketch/releases | primer | 2026-10-22 | Day 20 |
+| NIST: Computer Forensic Reference Data Set Portal (CFReDS), catatan katalog data.gov | https://catalog.data.gov/dataset/computer-forensic-reference-data-set-portal | primer (pemerintah) | 2026-10-22 | Day 20 |
+| DFIR Madness: Case 001, The Stolen Szechuan Sauce | https://dfirmadness.com/the-stolen-szechuan-sauce/ | komunitas | 2026-10-22 | Day 20 |
