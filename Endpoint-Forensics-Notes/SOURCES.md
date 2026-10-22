@@ -13,22 +13,22 @@ Indeks sumber global, disusun dari tabel Sumber (bagian 9) setiap Day di folder 
 | Cado Security wiki: Chain of custody, a digital forensics case study | https://cadosecurity.com/wiki/chain-of-custody-a-digital-forensics-case-study | sekunder | 2026-10-07 | Day 01 |
 | NIST SP 800-61 Rev. 3: Incident Response Recommendations and Considerations for Cybersecurity Risk Management (PDF) | https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-61r3.pdf | primer | 2026-10-15 | Day 01, 06 |
 | Microsoft Learn: Get-FileHash (Microsoft.PowerShell.Utility) | https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.utility/get-filehash | primer | 2026-10-16 | Day 01, 02, 06 |
-| Volatility 3 releases | https://github.com/volatilityfoundation/volatility3/releases | primer | 2026-10-16 | Day 02, 06 |
-| Eric Zimmerman tools (EZ Tools, Get-ZimmermanTools) | https://ericzimmerman.github.io/ | primer | 2026-10-16 | Day 02, 03, 04, 05, 06, 07, 08, 09, 10, 11, 12 |
+| Volatility 3 releases | https://github.com/volatilityfoundation/volatility3/releases | primer | 2026-10-22 | Day 02, 06, 14, 15, 16 |
+| Eric Zimmerman tools (EZ Tools, Get-ZimmermanTools) | https://ericzimmerman.github.io/ | primer | 2026-10-22 | Day 02, 03, 04, 05, 06, 07, 08, 09, 10, 11, 12, 13 |
 | KAPE (Kroll) | https://www.kroll.com/en/services/cyber/incident-response-litigation-support/kroll-artifact-parser-extractor-kape | primer (vendor) | 2026-10-16 | Day 02 |
 | Velociraptor releases | https://github.com/Velocidex/velociraptor/releases | primer | 2026-10-16 | Day 02, 04, 06 |
-| Plaso documentation | https://plaso.readthedocs.io/ | primer | 2026-10-09 | Day 02 |
-| Sysinternals: Sysmon | https://learn.microsoft.com/en-us/sysinternals/downloads/sysmon | primer | 2026-10-16 | Day 02, 05, 06, 11 |
+| Plaso documentation | https://plaso.readthedocs.io/ | primer | 2026-10-09 | Day 02, 13 |
+| Sysinternals: Sysmon | https://learn.microsoft.com/en-us/sysinternals/downloads/sysmon | primer | 2026-10-22 | Day 02, 05, 06, 11, 15 |
 | Microsoft Learn: Command line process auditing | https://learn.microsoft.com/en-us/windows-server/identity/ad-ds/manage/component-updates/command-line-process-auditing | primer | 2026-10-16 | Day 02, 05, 06 |
-| Atomic Red Team (Red Canary) | https://github.com/redcanaryco/atomic-red-team | primer | 2026-10-10 | Day 02 |
+| Atomic Red Team (Red Canary) | https://github.com/redcanaryco/atomic-red-team | primer | 2026-10-22 | Day 02, 15 |
 | Volatility 3 README (GitHub) | https://github.com/volatilityfoundation/volatility3 | primer | 2026-10-16 | Day 02 |
-| Volatility 3: Symbol Tables | https://volatility3.readthedocs.io/en/latest/symbol-tables.html | primer | 2026-10-16 | Day 02 |
+| Volatility 3: Symbol Tables | https://volatility3.readthedocs.io/en/latest/symbol-tables.html | primer | 2026-10-22 | Day 02, 14 |
 | Kroll: End User License Agreement (KAPE Solo Edition) | https://www.kroll.com/en/end-user-license-agreement | primer (vendor) | 2026-10-16 | Day 02, 03, 06 |
 | KapeFiles (Targets/Modules komunitas) | https://github.com/EricZimmerman/KapeFiles | primer | 2026-10-16 | Day 02, 03 |
 | SANS ISC: KAPE (Kroll Artifact Parser and Extractor) | https://isc.sans.edu/diary/25258 | sekunder | 2026-10-16 | Day 02, 03 |
 | KAPE-EZToolsAncillaryUpdater (GitHub) | https://github.com/AndrewRathbun/KAPE-EZToolsAncillaryUpdater | sekunder (skrip komunitas) | 2026-10-16 | Day 02 |
-| Plaso documentation: Installing with Docker | https://plaso.readthedocs.io/en/latest/sources/user/Installing-with-docker.html | primer | 2026-10-16 | Day 02 |
-| Plaso (log2timeline) releases dan dokumentasi | https://github.com/log2timeline/plaso/releases | primer | 2026-10-16 | Day 02, 06 |
+| Plaso documentation: Installing with Docker | https://plaso.readthedocs.io/en/latest/sources/user/Installing-with-docker.html | primer | 2026-10-22 | Day 02, 13 |
+| Plaso (log2timeline) releases dan dokumentasi | https://github.com/log2timeline/plaso/releases | primer | 2026-10-22 | Day 02, 06, 13 |
 | Velociraptor README (GitHub) | https://github.com/Velocidex/velociraptor | primer | 2026-10-16 | Day 02 |
 | Velociraptor documentation: Quickstart | https://docs.velociraptor.app/docs/deployment/quickstart/ | primer | 2026-10-16 | Day 02, 04 |
 | Microsoft Learn: Mount-DiskImage | https://learn.microsoft.com/en-us/powershell/module/storage/mount-diskimage | primer | 2026-10-16 | Day 02, 03, 06 |
@@ -193,7 +193,7 @@ Indeks sumber global, disusun dari tabel Sumber (bagian 9) setiap Day di folder 
 | Binalyze AIR Knowledge Base: OpenSavePidlMRU | https://kb.binalyze.com/air/features/acquisition/supported-evidence/windows-collections-detail/opensavepidlmru | sekunder (vendor DFIR) | 2026-10-16 | Day 10 |
 | Microsoft Learn (arsip): Do not keep history of recently opened documents | https://learn.microsoft.com/en-us/previous-versions/ms811590(v=msdn.10) | primer (arsip) | 2026-10-16 | Day 10 |
 | Microsoft Learn: Run and RunOnce Registry Keys | https://learn.microsoft.com/en-us/windows/win32/setupapi/run-and-runonce-registry-keys | primer | 2026-10-16 | Day 11, 12 |
-| MITRE ATT&CK: T1546.003, T1543.003, T1053.005, T1021, T1569.002 | https://attack.mitre.org/techniques/T1546/003/ | primer | 2026-10-16 | Day 11 |
+| MITRE ATT&CK: T1546.003, T1543.003, T1053.005, T1021, T1569.002 | https://attack.mitre.org/techniques/T1546/003/ | primer | 2026-10-22 | Day 11, 16 |
 | JPCERT/CC: Tool Analysis Result Sheet (PsExec, wmic, WinRM, mstsc, schtasks) | https://jpcertcc.github.io/ToolAnalysisResultSheet/ | sekunder (CERT) | 2026-10-16 | Day 11, 12 |
 | Microsoft Learn: PsExec (Sysinternals) | https://learn.microsoft.com/en-us/sysinternals/downloads/psexec | primer | 2026-10-16 | Day 11 |
 | Microsoft Learn: Remove entries from Remote Desktop Connection Computer box | https://learn.microsoft.com/en-us/troubleshoot/windows-server/remote/remove-entries-from-remote-desktop-connection-computer | primer | 2026-10-16 | Day 11, 12 |
@@ -203,6 +203,92 @@ Indeks sumber global, disusun dari tabel Sumber (bagian 9) setiap Day di folder 
 | Velociraptor: Windows.Persistence.PermanentWMIEvents | https://docs.velociraptor.app/artifact_references/pages/windows.persistence.permanentwmievents/ | primer (dokumentasi proyek) | 2026-10-16 | Day 11 |
 | Microsoft Learn: 4778(S) A session was reconnected to a Window Station | https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/auditing/event-4778 | primer | 2026-10-16 | Day 11 |
 | Microsoft Learn: Installation and configuration for Windows Remote Management | https://learn.microsoft.com/en-us/windows/win32/winrm/installation-and-configuration-for-windows-remote-management | primer | 2026-10-16 | Day 11 |
-| GitHub: woanware/wmi-parser | https://github.com/woanware/wmi-parser | primer (repo) | 2026-10-16 | Day 11 |
+| GitHub: woanware/wmi-parser | https://github.com/woanware/wmi-parser | primer (repo) | 2026-10-22 | Day 11, 13 |
 | GitHub: davidpany/WMI_Forensics (PyWMIPersistenceFinder) | https://github.com/davidpany/WMI_Forensics | primer (repo) | 2026-10-16 | Day 11 |
 | Microsoft Learn: Tracing WMI Activity | https://learn.microsoft.com/en-us/windows/win32/wmisdk/tracing-wmi-activity | primer | 2026-10-16 | Day 11 |
+| Timesketch | https://timesketch.org/ | primer | 2026-10-09 | Day 13 |
+| Timesketch: Upload data | https://timesketch.org/guides/user/upload-data/ | primer | 2026-10-22 | Day 13 |
+| Plaso: Using psort.py | https://plaso.readthedocs.io/en/latest/sources/user/Using-psort.html | primer | 2026-10-22 | Day 13 |
+| Plaso: Using log2timeline.py | https://plaso.readthedocs.io/en/latest/sources/user/Using-log2timeline.html | primer | 2026-10-22 | Day 13 |
+| Plaso: Event filters | https://plaso.readthedocs.io/en/latest/sources/user/Event-filters.html | primer | 2026-10-22 | Day 13 |
+| Plaso: Parsers and plugins | https://plaso.readthedocs.io/en/latest/sources/user/Parsers-and-plugins.html | primer | 2026-10-22 | Day 13 |
+| Plaso: presets.yaml | https://raw.githubusercontent.com/log2timeline/plaso/main/plaso/data/presets.yaml | primer (repo) | 2026-10-22 | Day 13 |
+| Plaso: Output and formatting | https://plaso.readthedocs.io/en/latest/sources/user/Output-and-formatting.html | primer | 2026-10-22 | Day 13 |
+| Plaso: Using pinfo.py | https://plaso.readthedocs.io/en/latest/sources/user/Using-pinfo.html | primer | 2026-10-22 | Day 13 |
+| Plaso: Switching from Log2Timeline Perl (Legacy) | https://plaso.readthedocs.io/en/latest/sources/user/Log2Timeline-Perl-(Legacy).html | primer | 2026-10-22 | Day 13 |
+| Timesketch release 20261014 | https://github.com/google/timesketch/releases/tag/20261014 | primer | 2026-10-22 | Day 13 |
+| Timesketch: Import from JSON or CSV | https://timesketch.org/guides/user/import-from-json-csv/ | primer | 2026-10-22 | Day 13 |
+| Timesketch: Search query guide | https://timesketch.org/guides/user/search-query-guide/ | primer | 2026-10-22 | Day 13 |
+| Timesketch: Basic concepts | https://timesketch.org/guides/user/basic-concepts/ | primer | 2026-10-22 | Day 13 |
+| Plaso source: SRUM plugin | https://plaso.readthedocs.io/en/stable/_modules/plaso/parsers/esedb_plugins/srum.html | primer (kode) | 2026-10-22 | Day 13 |
+| Plaso source: NTFS parsers | https://plaso.readthedocs.io/en/stable/_modules/plaso/parsers/ntfs.html | primer (kode) | 2026-10-22 | Day 13 |
+| Plaso source: winevtx parser | https://plaso.readthedocs.io/en/stable/_modules/plaso/parsers/winevtx.html | primer (kode) | 2026-10-22 | Day 13 |
+| Plaso: tag_windows.txt | https://raw.githubusercontent.com/log2timeline/plaso/main/plaso/data/tag_windows.txt | primer (repo) | 2026-10-22 | Day 13 |
+| Unicode CLDR: windowsZones.xml | https://raw.githubusercontent.com/unicode-org/cldr/main/common/supplemental/windowsZones.xml | primer | 2026-10-22 | Day 13 |
+| Microsoft Learn: StartWhenAvailable (settingsType) Element | https://learn.microsoft.com/en-us/windows/win32/taskschd/taskschedulerschema-startwhenavailable-settingstype-element | primer | 2026-10-22 | Day 13 |
+| Microsoft Learn: Microsoft Defender Antivirus event IDs and error codes | https://learn.microsoft.com/en-us/defender-endpoint/troubleshoot-microsoft-defender-antivirus | primer | 2026-10-22 | Day 13 |
+| Microsoft Q&A: The system has returned from a low power state | https://learn.microsoft.com/en-us/answers/a/7237344 | komunitas | 2026-10-22 | Day 13 |
+| PSU kuliah forensik: Plaso Super-Timeline Forensics | https://web.cecs.pdx.edu/~dmcgrath/courses/Su26/forensics/plaso.html | sekunder | 2026-10-22 | Day 13 |
+| Volatility 3 Windows plugins (daftar modul) | https://volatility3.readthedocs.io/en/latest/volatility3.plugins.windows.html | primer | 2026-10-22 | Day 14, 15 |
+| WinPmem (README, GitHub Velocidex) | https://github.com/Velocidex/WinPmem | primer | 2026-10-22 | Day 14, 15 |
+| volatility3 pslist.py (develop) | https://raw.githubusercontent.com/volatilityfoundation/volatility3/develop/volatility3/framework/plugins/windows/pslist.py | primer (source) | 2026-10-22 | Day 14 |
+| volatility3 psscan.py (develop) | https://raw.githubusercontent.com/volatilityfoundation/volatility3/develop/volatility3/framework/plugins/windows/psscan.py | primer (source) | 2026-10-22 | Day 14 |
+| volatility3 pstree.py (develop) | https://raw.githubusercontent.com/volatilityfoundation/volatility3/develop/volatility3/framework/plugins/windows/pstree.py | primer (source) | 2026-10-22 | Day 14 |
+| volatility3 cmdline.py (develop) | https://raw.githubusercontent.com/volatilityfoundation/volatility3/develop/volatility3/framework/plugins/windows/cmdline.py | primer (source) | 2026-10-22 | Day 14 |
+| volatility3 sessions.py (develop) | https://raw.githubusercontent.com/volatilityfoundation/volatility3/develop/volatility3/framework/plugins/windows/sessions.py | primer (source) | 2026-10-22 | Day 14 |
+| volatility3 info.py (develop) | https://raw.githubusercontent.com/volatilityfoundation/volatility3/develop/volatility3/framework/plugins/windows/info.py | primer (source) | 2026-10-22 | Day 14 |
+| volatility3 cli/__init__.py (develop) | https://raw.githubusercontent.com/volatilityfoundation/volatility3/develop/volatility3/cli/__init__.py | primer (source) | 2026-10-22 | Day 14 |
+| volatility3 pdbutil.py (develop) | https://raw.githubusercontent.com/volatilityfoundation/volatility3/develop/volatility3/framework/symbols/windows/pdbutil.py | primer (source) | 2026-10-22 | Day 14 |
+| GitHub: Velocidex/WinPmem releases | https://github.com/Velocidex/WinPmem/releases | primer | 2026-10-22 | Day 14 |
+| Pagani, Fedorov, Balzarotti: Introducing the Temporal Dimension to Memory Forensics (ACM TOPS 2019) | https://www.s3.eurecom.fr/docs/tops19_pagani.pdf | primer (riset) | 2026-10-22 | Day 14 |
+| Microsoft Learn: Credential Guard overview | https://learn.microsoft.com/en-us/windows/security/identity-protection/credential-guard/ | primer | 2026-10-22 | Day 14, 15 |
+| Microsoft Support: KB5027397 Windows 11 23H2 enablement package | https://support.microsoft.com/kb/5027397 | primer | 2026-10-22 | Day 14 |
+| Velociraptor: Windows.Memory.Acquisition | https://docs.velociraptor.app/artifact_references/pages/windows.memory.acquisition/ | primer (dokumentasi proyek) | 2026-10-22 | Day 14 |
+| SANS ISC: Searching live memory on a running machine with winpmem (Mark Baggett, 2013) | https://isc.sans.edu/diary/17063 | sekunder (praktisi) | 2026-10-22 | Day 14 |
+| GitHub issue Velocidex/WinPmem #19 | https://github.com/Velocidex/WinPmem/issues/19 | komunitas | 2026-10-22 | Day 14 |
+| Volatility 3 documentation | https://volatility3.readthedocs.io/ | primer | 2026-10-22 | Day 15, 16 |
+| Volatility 3: volatility3.plugins.windows.malware package | https://volatility3.readthedocs.io/en/latest/volatility3.plugins.windows.malware.html | primer | 2026-10-22 | Day 15 |
+| Source windows/malware/malfind.py (v2.28.2) | https://raw.githubusercontent.com/volatilityfoundation/volatility3/v2.28.2/volatility3/framework/plugins/windows/malware/malfind.py | primer (source) | 2026-10-22 | Day 15 |
+| Source alias usang windows/malfind.py (v2.28.2) | https://raw.githubusercontent.com/volatilityfoundation/volatility3/v2.28.2/volatility3/framework/plugins/windows/malfind.py | primer (source) | 2026-10-22 | Day 15 |
+| Source windows/malware/hollowprocesses.py (develop) | https://raw.githubusercontent.com/volatilityfoundation/volatility3/develop/volatility3/framework/plugins/windows/malware/hollowprocesses.py | primer (source) | 2026-10-22 | Day 15 |
+| Source windows/malware/pebmasquerade.py (v2.28.2) | https://raw.githubusercontent.com/volatilityfoundation/volatility3/v2.28.2/volatility3/framework/plugins/windows/malware/pebmasquerade.py | primer (source) | 2026-10-22 | Day 15 |
+| Source windows/malware/ldrmodules.py (v2.28.2) | https://raw.githubusercontent.com/volatilityfoundation/volatility3/v2.28.2/volatility3/framework/plugins/windows/malware/ldrmodules.py | primer (source) | 2026-10-22 | Day 15 |
+| Source windows/malware/psxview.py (v2.28.2) | https://raw.githubusercontent.com/volatilityfoundation/volatility3/v2.28.2/volatility3/framework/plugins/windows/malware/psxview.py | primer (source) | 2026-10-22 | Day 15 |
+| Source windows/dlllist.py (v2.28.2) | https://raw.githubusercontent.com/volatilityfoundation/volatility3/v2.28.2/volatility3/framework/plugins/windows/dlllist.py | primer (source) | 2026-10-22 | Day 15 |
+| Source windows/handles.py (v2.28.2) | https://raw.githubusercontent.com/volatilityfoundation/volatility3/v2.28.2/volatility3/framework/plugins/windows/handles.py | primer (source) | 2026-10-22 | Day 15 |
+| Source windows/dumpfiles.py (v2.28.2) | https://raw.githubusercontent.com/volatilityfoundation/volatility3/v2.28.2/volatility3/framework/plugins/windows/dumpfiles.py | primer (source) | 2026-10-22 | Day 15 |
+| Source symbols/windows/extensions/__init__.py (v2.28.2) | https://raw.githubusercontent.com/volatilityfoundation/volatility3/v2.28.2/volatility3/framework/symbols/windows/extensions/__init__.py | primer (source) | 2026-10-22 | Day 15 |
+| Source windows/vadinfo.py (v2.28.2) | https://raw.githubusercontent.com/volatilityfoundation/volatility3/v2.28.2/volatility3/framework/plugins/windows/vadinfo.py | primer (source) | 2026-10-22 | Day 15 |
+| Source windows/vadyarascan.py (v2.28.2) | https://raw.githubusercontent.com/volatilityfoundation/volatility3/v2.28.2/volatility3/framework/plugins/windows/vadyarascan.py | primer (source) | 2026-10-22 | Day 15 |
+| Source yarascan.py (v2.28.2) | https://raw.githubusercontent.com/volatilityfoundation/volatility3/v2.28.2/volatility3/framework/plugins/yarascan.py | primer (source) | 2026-10-22 | Day 15 |
+| Source windows/filescan.py (v2.28.2) | https://raw.githubusercontent.com/volatilityfoundation/volatility3/v2.28.2/volatility3/framework/plugins/windows/filescan.py | primer (source) | 2026-10-22 | Day 15 |
+| Microsoft Learn: How Credential Guard works | https://learn.microsoft.com/en-us/windows/security/identity-protection/credential-guard/how-it-works | primer | 2026-10-22 | Day 15 |
+| Microsoft Learn: Configure added LSA protection | https://learn.microsoft.com/en-us/windows-server/security/credentials-protection-and-management/configuring-additional-lsa-protection | primer | 2026-10-22 | Day 15 |
+| Microsoft Learn: Process Security and Access Rights | https://learn.microsoft.com/en-us/windows/win32/procthread/process-security-and-access-rights | primer | 2026-10-22 | Day 15 |
+| Microsoft Learn: Antimalware Scan Interface (AMSI) | https://learn.microsoft.com/en-us/windows/win32/amsi/antimalware-scan-interface-portal | primer | 2026-10-22 | Day 15 |
+| Microsoft Learn: Differences between Windows PowerShell 5.1 and PowerShell 7.x | https://learn.microsoft.com/en-us/powershell/scripting/whats-new/differences-from-windows-powershell | primer | 2026-10-22 | Day 15 |
+| MITRE ATT&CK: T1055.012 Process Hollowing | https://attack.mitre.org/techniques/T1055/012/ | primer | 2026-10-22 | Day 15 |
+| MITRE ATT&CK: T1003.001 LSASS Memory | https://attack.mitre.org/techniques/T1003/001/ | primer | 2026-10-22 | Day 15 |
+| insinuator.net (Frank Block): Release of PTE analysis plugins for Volatility 3 | https://insinuator.net/2021/12/release-of-pte-analysis-plugins-for-volatility-3/ | sekunder | 2026-10-22 | Day 15 |
+| startdebugging.net: What is the W^X flag in .NET | https://startdebugging.net/2026/09/what-is-the-w-xor-x-flag-in-dotnet-and-does-native-aot-need-it/ | komunitas | 2026-10-22 | Day 15 |
+| Velociraptor Artifact Exchange: Windows.Detection.Malfind | https://docs.velociraptor.app/exchange/artifacts/pages/malfind | komunitas | 2026-10-22 | Day 15 |
+| MITRE ATT&CK T1543.003 (juga T1547.001, T1071.001) | https://attack.mitre.org/techniques/T1543/003/ | primer | 2026-10-10 | Day 16 |
+| volatility3 netscan.py | https://raw.githubusercontent.com/volatilityfoundation/volatility3/develop/volatility3/framework/plugins/windows/netscan.py | primer | 2026-10-22 | Day 16 |
+| volatility3 netstat.py | https://raw.githubusercontent.com/volatilityfoundation/volatility3/develop/volatility3/framework/plugins/windows/netstat.py | primer | 2026-10-22 | Day 16 |
+| volatility3 svcscan.py | https://raw.githubusercontent.com/volatilityfoundation/volatility3/develop/volatility3/framework/plugins/windows/svcscan.py | primer | 2026-10-22 | Day 16 |
+| volatility3 malware/svcdiff.py | https://raw.githubusercontent.com/volatilityfoundation/volatility3/develop/volatility3/framework/plugins/windows/malware/svcdiff.py | primer | 2026-10-22 | Day 16 |
+| volatility3 svclist.py | https://raw.githubusercontent.com/volatilityfoundation/volatility3/develop/volatility3/framework/plugins/windows/svclist.py | primer | 2026-10-22 | Day 16 |
+| volatility3 registry/printkey.py | https://raw.githubusercontent.com/volatilityfoundation/volatility3/develop/volatility3/framework/plugins/windows/registry/printkey.py | primer | 2026-10-22 | Day 16 |
+| volatility3 registry/hivelist.py | https://raw.githubusercontent.com/volatilityfoundation/volatility3/develop/volatility3/framework/plugins/windows/registry/hivelist.py | primer | 2026-10-22 | Day 16 |
+| volatility3 registry/scheduled_tasks.py | https://raw.githubusercontent.com/volatilityfoundation/volatility3/develop/volatility3/framework/plugins/windows/registry/scheduled_tasks.py | primer | 2026-10-22 | Day 16 |
+| volatility3 driverscan.py | https://raw.githubusercontent.com/volatilityfoundation/volatility3/develop/volatility3/framework/plugins/windows/driverscan.py | primer | 2026-10-22 | Day 16 |
+| volatility3 malware/drivermodule.py | https://raw.githubusercontent.com/volatilityfoundation/volatility3/develop/volatility3/framework/plugins/windows/malware/drivermodule.py | primer | 2026-10-22 | Day 16 |
+| volatility3 callbacks.py | https://raw.githubusercontent.com/volatilityfoundation/volatility3/develop/volatility3/framework/plugins/windows/callbacks.py | primer | 2026-10-22 | Day 16 |
+| volatility3 modules.py | https://raw.githubusercontent.com/volatilityfoundation/volatility3/develop/volatility3/framework/plugins/windows/modules.py | primer | 2026-10-22 | Day 16 |
+| volatility3 dumpfiles.py | https://raw.githubusercontent.com/volatilityfoundation/volatility3/develop/volatility3/framework/plugins/windows/dumpfiles.py | primer | 2026-10-22 | Day 16 |
+| Microsoft Learn: Take response actions on a device in Microsoft Defender for Endpoint | https://learn.microsoft.com/en-us/defender-endpoint/respond-machine-alerts | primer | 2026-10-22 | Day 16 |
+| Microsoft Learn: Sigcheck | https://learn.microsoft.com/en-us/sysinternals/downloads/sigcheck | primer | 2026-10-22 | Day 16 |
+| Sigma rule WMI Persistence - Command Line Event Consumer (detection.fyi) | https://detection.fyi/sigmahq/sigma/windows/image_load/image_load_wmi_persistence_commandline_event_consumer | komunitas | 2026-10-22 | Day 16 |
+| Andrea Fortuna: Volatility cheatsheet part 5 networking | https://andreafortuna.org/2017/07/24/volatility-my-own-cheatsheet-part-5-networking/ | komunitas | 2026-10-22 | Day 16 |
+| Pureinfotech: KB5027397 22H2 ke 23H2 | https://pureinfotech.com/kb5027397-windows-11-change-22h2-23h2/ | sekunder | 2026-10-22 | Day 16 |
+| volatility3 symbols/windows/extensions/network.py | https://raw.githubusercontent.com/volatilityfoundation/volatility3/develop/volatility3/framework/symbols/windows/extensions/network.py | primer | 2026-10-22 | Day 16 |

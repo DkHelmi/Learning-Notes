@@ -258,7 +258,7 @@ Permintaan keempat Sari meminta cara berpikir, bukan fakta 017, karena fakta 017
 | Persistence bisa berada di luar registry dan task | WMI subscription di `JKT-WS-0457` hanya terlihat dari Sysmon 19-21 dan `OBJECTS.DATA` (Day 11 bagian 2.5) | Folder Startup dan WMI di `E16-W1` belum diperiksa; di laptop tanpa Sysmon, `OBJECTS.DATA` adalah satu-satunya sumber, jadi tulis "belum diperiksa", bukan "tidak ada" |
 | Disk tidak membuktikan apa yang terjadi di host lain atau di jaringan | Penulisan `.lck` ke `JKT-FS01` dari 5145 di file server; exfil 6 GB dari log proxy dan firewall (Day 11 bagian 1.7) | Data yang dibaca loader dan yang dikirim ke C2 dijawab memori dan log jaringan; untuk `JKT-WS-0412` di luar kantor, log PT JAB tidak ada sama sekali |
 
-Satu pelajaran lagi bersifat penulisan. Di 017, Run key, task, dan WMI subscription yang menjalankan `sync.exe` yang sama ditulis sebagai satu payload dengan beberapa jalur bertahan, bukan sebagai beberapa ancaman (Day 11 bagian 2.8). Di 019, task `\SysCacheUpdate` di tiga laptop adalah satu mekanisme yang sama di tiga host; menghitungnya sebagai "tiga persistence" di PIR akan memberi kesan skala yang salah.
+Satu pelajaran lagi bersifat penulisan. Di 017, setiap host punya satu payload dengan dua jalur bertahan (`sync.exe` lewat Run key dan task di `JKT-WS-0441`, `hlpsvc.exe` lewat service dan WMI subscription di `JKT-WS-0457`), dan masing-masing ditulis sebagai satu payload dengan beberapa jalur, bukan sebagai beberapa ancaman (Day 11 bagian 2.8). Di 019, task `\SysCacheUpdate` di tiga laptop adalah satu mekanisme yang sama di tiga host; menghitungnya sebagai "tiga persistence" di PIR akan memberi kesan skala yang salah.
 
 ### 1.11 Lembar batas bukti untuk PIR
 
