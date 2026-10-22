@@ -1,0 +1,28 @@
+# File kerja pribadi (aturan sesi, master prompt, standar penulisan internal)
+CLAUDE.md
+prompt.md
+STANDAR-NOTE.md
+REFERENSI.md
+TRACKER.md
+
+# Jawaban latihan pribadi. Hapus baris ini bila ingin mempublikasikan latihan.
+latihan/
+
+# OS dan editor
+.DS_Store
+Thumbs.db
+desktop.ini
+*.swp
+*~
+.vscode/
+.idea/
+
+# Cadangan dan file sementara
+*.bak
+*.tmp
+*.orig
+backup/
+
+# Bahan serah terima migrasi (file kerja pribadi)
+HANDOVER.md
+_handover/

@@ -13,5 +13,6 @@ Tiap folder berisi catatan yang dipecah per Day.
 - [Incident Response](Incident-Response-Notes/)
 - [Endpoint Forensics](Endpoint-Forensics-Notes/)
 - [Threat Hunting](Threat-Hunting-Notes/)
+- [Network Forensics](Network-Forensics-Notes/)
 - [CTI](CTI-Notes/)
 - [ISO 27001](ISO27001-Notes/)
