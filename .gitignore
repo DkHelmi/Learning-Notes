@@ -31,7 +31,6 @@ backup/
 # Saat satu Day selesai dimigrasi, hapus barisnya di sini; saat topik mulai dimigrasi, ganti baris foldernya dengan daftar file Day yang belum.
 Detection-Engineering-Notes/
 Wazuh-Notes/
-Network-Forensics-Notes/10-flow-analysis-isp.md
 Network-Forensics-Notes/11-beaconing-c2.md
 Network-Forensics-Notes/12-exfiltration.md
 Network-Forensics-Notes/13-metode-kerja-latihan-pcap.md

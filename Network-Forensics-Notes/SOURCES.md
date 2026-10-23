@@ -4,16 +4,16 @@ Indeks sumber global, disusun dari tabel Sumber (bagian 9) setiap Day di folder 
 
 | Judul | URL | Tipe | Diakses | Dipakai di |
 |---|---|---|---|---|
-| Zeek documentation: Logs (index) | https://docs.zeek.org/en/current/logs/index.html | primer | 2026-10-22 | Day 01, Day 08 |
+| Zeek documentation: Logs (index) | https://docs.zeek.org/en/current/logs/index.html | primer | 2026-10-22 | Day 01, Day 08, 10 |
 | Wireshark news: 4.6.9 dan 4.4.19 | https://www.wireshark.org/news/20260923.html | primer | 2026-10-22 | Day 01 |
 | Zeek: Get Zeek | https://zeek.org/get-zeek/ | primer | 2026-10-22 | Day 01, Day 07, Day 08 |
 | Suricata: Download | https://suricata.io/download/ | primer | 2026-10-22 | Day 01, 09 |
-| Plixer: packet capture vs flow data (blog vendor) | https://www.plixer.com/blog/packet-capture-vs-flow-data/ | sekunder | 2026-10-07 | Day 01 |
+| Plixer: packet capture vs flow data (blog vendor) | https://www.plixer.com/blog/packet-capture-vs-flow-data/ | sekunder | 2026-10-23 | Day 01, 10 |
 | Pasal.id: UU 11/2008 Pasal 31 | https://pasal.id/peraturan/uu/uu-no-11-tahun-2008/pasal-31 | primer | 2026-10-22 | Day 01 |
 | JDIH BPK: UU No. 27 Tahun 2022 (PDP) | https://peraturan.bpk.go.id/Details/229798 | primer | 2026-10-07 | Day 01 |
 | NIST SP 800-86: Guide to Integrating Forensic Techniques into Incident Response | https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-86.pdf | primer | 2026-10-22 | Day 01 |
 | Richard Bejtlich: The Practice of Network Security Monitoring, Bab 1 (sampel No Starch) | https://nostarch.com/download/samples/PNSM_Ch01.pdf | primer | 2026-10-22 | Day 01 |
-| RFC 7011: Specification of the IPFIX Protocol for the Exchange of Flow Information | https://www.rfc-editor.org/rfc/rfc7011 | primer | 2026-10-22 | Day 01 |
+| RFC 7011: Specification of the IPFIX Protocol for the Exchange of Flow Information | https://www.rfc-editor.org/rfc/rfc7011 | primer | 2026-10-22 | Day 01, 10 |
 | Wireshark: dumpcap manual page | https://www.wireshark.org/docs/man-pages/dumpcap.html | primer | 2026-10-22 | Day 01, Day 02, Day 04 |
 | Zeek documentation: Connection log (conn.log) | https://docs.zeek.org/en/current/logs/conn.html | primer | 2026-10-22 | Day 01 |
 | Wireshark news: 5.0.0rc1 Development Release | https://www.wireshark.org/news/20261021.html | primer | 2026-10-22 | Day 01 |
@@ -65,7 +65,7 @@ Indeks sumber global, disusun dari tabel Sumber (bagian 9) setiap Day di folder 
 | MITRE ATT&CK T1110.003: Password Spraying | https://attack.mitre.org/techniques/T1110/003/ | primer | 2026-10-22 | Day 04 |
 | MITRE ATT&CK T1110.001: Password Guessing | https://attack.mitre.org/techniques/T1110/001/ | primer | 2026-10-22 | Day 04 |
 | Wireshark man page: editcap | https://www.wireshark.org/docs/man-pages/editcap.html | primer | 2026-10-22 | Day 04 |
-| nfdump(1) man page | https://github.com/phaag/nfdump/blob/master/man/nfdump.1 | primer | 2026-10-22 | Day 04 |
+| nfdump(1) man page | https://github.com/phaag/nfdump/blob/master/man/nfdump.1 | primer | 2026-10-23 | Day 04, 10 |
 | Censys: Opt Out of Data Collection | https://docs.censys.com/docs/opt-out-of-data-collection | sekunder | 2026-10-22 | Day 04 |
 | Censys: Scanning FAQ | https://docs.censys.com/docs/scanning-faq | sekunder | 2026-10-22 | Day 04 |
 | MITRE ATT&CK T1071.004, T1568.002, T1568.001 (DNS C2, DGA, fast flux) | https://attack.mitre.org/techniques/T1071/004/ | primer | 2026-10-22 | Day 05, Day 07 |
@@ -102,7 +102,7 @@ Indeks sumber global, disusun dari tabel Sumber (bagian 9) setiap Day di folder 
 | RFC 9846: The TLS Protocol Version 1.3 | https://www.rfc-editor.org/rfc/rfc9846.html | primer | 2026-10-22 | Day 07 |
 | Zeek documentation (overview) | https://docs.zeek.org/en/master/ | primer | 2026-10-10 | Day 08 |
 | Zeek NEWS (cabang master) dan skrip hash-all-files | https://github.com/zeek/zeek | primer | 2026-10-22 | Day 08 |
-| Zeek source: scripts/base/protocols/conn/main.zeek | https://raw.githubusercontent.com/zeek/zeek/master/scripts/base/protocols/conn/main.zeek | primer | 2026-10-22 | Day 08 |
+| Zeek source: scripts/base/protocols/conn/main.zeek | https://raw.githubusercontent.com/zeek/zeek/master/scripts/base/protocols/conn/main.zeek | primer | 2026-10-23 | Day 08, 10 |
 | Zeek docs: files.log | https://docs.zeek.org/en/master/logs/files.html | primer | 2026-10-22 | Day 08 |
 | Zeek docs: weird.log and notice.log | https://docs.zeek.org/en/master/logs/weird-and-notice.html | primer | 2026-10-22 | Day 08 |
 | Zeek docs: Notice Framework | https://docs.zeek.org/en/master/frameworks/notice.html | primer | 2026-10-22 | Day 08 |
@@ -144,3 +144,18 @@ Indeks sumber global, disusun dari tabel Sumber (bagian 9) setiap Day di folder 
 | Splunkbase: CCX Add-on for Suricata (6994) | https://splunkbase.splunk.com/app/6994 | primer | 2026-10-23 | Day 09 |
 | Splunkbase: SuriZeek (9818) | https://splunkbase.splunk.com/app/9818 | primer | 2026-10-23 | Day 09 |
 | Suricata docs: Command Line Options | https://docs.suricata.io/en/latest/command-line-options.html | primer | 2026-10-23 | Day 09 |
+| RFC 3954 (NetFlow v9) | https://www.rfc-editor.org/rfc/rfc3954 | primer | 2026-10-09 | Day 10 |
+| IANA IPFIX Entities registry | https://www.iana.org/assignments/ipfix/ipfix.xhtml | primer | 2026-10-23 | Day 10 |
+| nfdump releases | https://github.com/phaag/nfdump/releases | primer | 2026-10-23 | Day 10 |
+| nfcapd(1) man page | https://github.com/phaag/nfdump/blob/master/man/nfcapd.1 | primer | 2026-10-23 | Day 10 |
+| nfpcapd(1) man page | https://github.com/phaag/nfdump/blob/master/man/nfpcapd.1 | primer | 2026-10-23 | Day 10 |
+| RFC 5103 (biflow IPFIX) | https://www.rfc-editor.org/rfc/rfc5103 | primer | 2026-10-23 | Day 10 |
+| SiLK rwfilter | https://tools.netsa.cert.org/silk/rwfilter.html | primer | 2026-10-23 | Day 10 |
+| SiLK rwstats | https://tools.netsa.cert.org/silk/rwstats.html | primer | 2026-10-23 | Day 10 |
+| SiLK download (3.24.2, 14 Mei 2026) | https://tools.netsa.cert.org/silk/download.html | primer | 2026-10-23 | Day 10 |
+| RFC 6302 (BCP 162) | https://www.rfc-editor.org/rfc/rfc6302 | primer | 2026-10-23 | Day 10 |
+| RFC 6888 (BCP 127) | https://www.rfc-editor.org/rfc/rfc6888 | primer | 2026-10-23 | Day 10 |
+| RFC 7422 | https://www.rfc-editor.org/rfc/rfc7422 | primer | 2026-10-23 | Day 10 |
+| RFC 6598 (BCP 153) | https://www.rfc-editor.org/rfc/rfc6598 | primer | 2026-10-23 | Day 10 |
+| RFC 2142 | https://www.rfc-editor.org/rfc/rfc2142 | primer | 2026-10-23 | Day 10 |
+| ElastiFlow documentation | https://docs.elastiflow.com/docs/ | sekunder | 2026-10-23 | Day 10 |
