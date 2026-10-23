@@ -32,7 +32,7 @@ Indeks sumber global, disusun dari tabel Sumber (bagian 9) setiap Day di folder 
 | Velociraptor README (GitHub) | https://github.com/Velocidex/velociraptor | primer | 2026-10-16 | Day 02 |
 | Velociraptor documentation: Quickstart | https://docs.velociraptor.app/docs/deployment/quickstart/ | primer | 2026-10-16 | Day 02, 04 |
 | Microsoft Learn: Mount-DiskImage | https://learn.microsoft.com/en-us/powershell/module/storage/mount-diskimage | primer | 2026-10-16 | Day 02, 03, 06 |
-| mount(8), Linux manual page | https://man7.org/linux/man-pages/man8/mount.8.html | primer | 2026-10-16 | Day 02, 06 |
+| mount(8), Linux manual page | https://man7.org/linux/man-pages/man8/mount.8.html | primer | 2026-10-22 | Day 02, 06, 23 |
 | BleepingComputer: Microsoft rolls out native Windows 11 Sysmon security monitoring | https://bleepingcomputer.com/news/microsoft/microsoft-rolls-out-native-windows-11-sysmon-security-monitoring | sekunder (media) | 2026-10-16 | Day 02 |
 | Kroll: KAPE Enterprise License Terms and Conditions | https://www.kroll.com/en/kape-enterprise-license-terms-conditions | primer (vendor) | 2026-10-16 | Day 02, 06 |
 | KAPE documentation: Frequently asked questions | https://raw.githubusercontent.com/EricZimmerman/KapeDocs/master/Pages/50-Frequently-asked-questions.md | primer (dokumentasi resmi) | 2026-10-16 | Day 02, 03, 06 |
@@ -345,3 +345,21 @@ Indeks sumber global, disusun dari tabel Sumber (bagian 9) setiap Day di folder 
 | Elcomsoft blog: Live System Analysis: Extracting BitLocker Keys | https://blog.elcomsoft.com/2022/05/live-system-analysis-extracting-bitlocker-keys/ | sekunder (vendor forensik) | 2026-10-22 | Day 22 |
 | Forensics Wiki: BitLocker how to image | https://forensics.wiki/bitlocker_how_to_image/ | komunitas | 2026-10-22 | Day 22 |
 | VeraCrypt: System Files and Application Data | https://veracrypt.io/en/VeraCrypt%20System%20Files.html | primer | 2026-10-22 | Day 22 |
+| UAC (Unix-like Artifacts Collector), README repo resmi | https://github.com/tclahr/uac | primer | 2026-10-22 | Day 23 |
+| journalctl(1), manual systemd | https://man7.org/linux/man-pages/man1/journalctl.1.html | primer | 2026-10-22 | Day 23 |
+| Apple Developer: Logging (unified logging system) | https://developer.apple.com/documentation/os/logging | primer | 2026-10-22 | Day 23 |
+| auditd(8), manual | https://man7.org/linux/man-pages/man8/auditd.8.html | primer | 2026-10-09 | Day 23 |
+| mac_apt (macOS Artifact Parsing Tool) | https://github.com/ydkhatri/mac_apt | primer | 2026-10-09 | Day 23 |
+| ld.so(8) dan crontab (manual) | https://man7.org/linux/man-pages/man8/ld.so.8.html | primer | 2026-10-09 | Day 23 |
+| GitHub: tclahr/uac Releases | https://github.com/tclahr/uac/releases | primer (repo resmi) | 2026-10-22 | Day 23 |
+| UAC Documentation (uac-docs) | https://tclahr.github.io/uac-docs/ | primer (dokumentasi proyek) | 2026-10-22 | Day 23 |
+| journald.conf(5), manual systemd | https://man7.org/linux/man-pages/man5/journald.conf.5.html | primer | 2026-10-22 | Day 23 |
+| ausearch(8), manual | https://man7.org/linux/man-pages/man8/ausearch.8.html | primer | 2026-10-22 | Day 23 |
+| GitHub: ydkhatri/mac_apt Releases | https://github.com/ydkhatri/mac_apt/releases | primer (repo resmi) | 2026-10-22 | Day 23 |
+| Apple Developer: Generating log messages from your code | https://developer.apple.com/documentation/os/generating-log-messages-from-your-code | primer | 2026-10-22 | Day 23 |
+| SS64: log (macOS) | https://ss64.com/mac/log.html | sekunder (referensi komunitas) | 2026-10-22 | Day 23 |
+| Apple Support: About System Integrity Protection on your Mac | https://support.apple.com/en-us/102149 | primer | 2026-10-22 | Day 23 |
+| Apple Platform Deployment: Privacy Preferences Policy Control payload settings | https://support.apple.com/guide/deployment/privacy-preferences-policy-control-payload-dep38df53c2a/web | primer | 2026-10-22 | Day 23 |
+| utmp(5), manual | https://man7.org/linux/man-pages/man5/utmp.5.html | primer | 2026-10-22 | Day 23 |
+| SANS ISC Diary: Improving Bash Forensics Capabilities (Xavier Mertens) | https://isc.sans.edu/diary/Improving+Bash+Forensics+Capabilities/20887/ | komunitas (SANS ISC) | 2026-10-22 | Day 23 |
+| Debian 12 (bookworm) Release Notes, bagian 5.1.7 Changes to system logging | https://www.debian.org/releases/oldstable/amd64/release-notes/ch-information.en.html | primer | 2026-10-22 | Day 23 |
