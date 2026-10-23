@@ -841,7 +841,7 @@ Versi  Tanggal      Status                     Perubahan
                     (bukan laporan)            (notes\ringkasan-forensik-2027-01-13.md)
 0.9    2027-01-20   Draf untuk review          Struktur JAB-DFIR-TPL-01; keyakinan per temuan; bagian data
                                                pribadi (287 baris, dihitung DPO 15 Januari); lampiran A-E
-1.0    <tanggal>    Final                      Setelah catatan D.1-D.5 diselesaikan
+1.0    2027-01-21   Final                      Setelah catatan D.1-D.5 diselesaikan
 Perubahan terhadap ringkasan 13 Januari: tidak ada temuan yang berubah keyakinannya. Perubahan kata
 pada butir 17 berkas lain (D.1) menyesuaikan skala; tingkat keyakinan tetap rendah.
 ```

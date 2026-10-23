@@ -363,3 +363,19 @@ Indeks sumber global, disusun dari tabel Sumber (bagian 9) setiap Day di folder 
 | utmp(5), manual | https://man7.org/linux/man-pages/man5/utmp.5.html | primer | 2026-10-22 | Day 23 |
 | SANS ISC Diary: Improving Bash Forensics Capabilities (Xavier Mertens) | https://isc.sans.edu/diary/Improving+Bash+Forensics+Capabilities/20887/ | komunitas (SANS ISC) | 2026-10-22 | Day 23 |
 | Debian 12 (bookworm) Release Notes, bagian 5.1.7 Changes to system logging | https://www.debian.org/releases/oldstable/amd64/release-notes/ch-information.en.html | primer | 2026-10-22 | Day 23 |
+| Bertolotti, Epifani, Lagorio: A Forensic Analysis of the WebView2-based Microsoft Teams Client (CEUR Workshop Proceedings Vol-4198, ITASEC dan SERICS 2026) | https://ceur-ws.org/Vol-4198/paper14.pdf | Primer (makalah penelitian) | 2026-10-22 | Day 24 |
+| OneDrive log .ODL reader (odl.py, Yogesh Khatri) | https://github.com/ydkhatri/OneDrive | Primer (kode dan dokumentasi alat) | 2026-10-22 | Day 24 |
+| OneDriveExplorer (Beercow) | https://github.com/Beercow/OneDriveExplorer | Primer (kode dan dokumentasi alat) | 2026-10-22 | Day 24 |
+| Reading OneDrive Logs (Yogesh Khatri, swiftforensics) | http://www.swiftforensics.com/2022/02/reading-onedrive-logs.html | Sekunder (riset praktisi) | 2026-10-09 | Day 24 |
+| Mozilla: Profiles, where Firefox stores your data | https://support.mozilla.org/en-US/kb/profiles-where-firefox-stores-user-data | Primer | 2026-10-09 | Day 24 |
+| Hindsight (parser riwayat browser) | https://github.com/obsidianforensics/hindsight | Primer (kode dan dokumentasi alat) | 2026-10-09 | Day 24 |
+| Microsoft Learn: Audit log activities (Microsoft Purview) | https://learn.microsoft.com/en-us/purview/audit-log-activities | Primer | 2026-10-22 | Day 24 |
+| Chromium source: `ui/base/page_transition_types.h` | https://chromium.googlesource.com/chromium/src/+/HEAD/ui/base/page_transition_types.h | Primer (kode sumber) | 2026-10-22 | Day 24 |
+| Chromium source: `components/history/core/browser/visit_database.cc` | https://chromium.googlesource.com/chromium/src/+/HEAD/components/history/core/browser/visit_database.cc | Primer (kode sumber) | 2026-10-22 | Day 24 |
+| Chromium source: `components/history/core/browser/download_database.cc` | https://chromium.googlesource.com/chromium/src/+/HEAD/components/history/core/browser/download_database.cc | Primer (kode sumber) | 2026-10-22 | Day 24 |
+| Hindsight releases | https://github.com/obsidianforensics/hindsight/releases | Primer (catatan rilis) | 2026-10-22 | Day 24 |
+| Microsoft Learn: Clear the Teams client cache | https://learn.microsoft.com/en-us/troubleshoot/microsoftteams/teams-administration/clear-teams-cache | Primer | 2026-10-22 | Day 24 |
+| Microsoft Learn: Learn about auditing solutions in Microsoft Purview | https://learn.microsoft.com/en-us/purview/audit-solutions-overview | Primer | 2026-10-22 | Day 24 |
+| Mozilla source: `nsINavHistoryService.idl` (Searchfox) | https://searchfox.org/mozilla-central/source/toolkit/components/places/nsINavHistoryService.idl | Primer (kode sumber) | 2026-10-22 | Day 24 |
+| Autopsy 4.19.0 `Firefox.java` (Recent Activity) | https://sleuthkit.org/autopsy/docs/api-docs/4.19.0/_firefox_8java_source.html | Sekunder (kode alat forensik) | 2026-10-22 | Day 24 |
+| dfindexeddb (Google) | https://github.com/google/dfindexeddb | Primer (kode dan dokumentasi alat) | 2026-10-22 | Day 24 |
