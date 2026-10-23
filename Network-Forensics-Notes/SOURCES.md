@@ -79,10 +79,10 @@ Indeks sumber global, disusun dari tabel Sumber (bagian 9) setiap Day di folder 
 | Wikipedia: DOS MZ executable | https://en.wikipedia.org/wiki/DOS_MZ_executable | sekunder | 2026-10-22 | Day 05 |
 | Unit 42: Leveraging DNS Tunneling for Tracking and Scanning | https://unit42.paloaltonetworks.com/three-dns-tunneling-campaigns/ | sekunder | 2026-10-22 | Day 05 |
 | MITRE ATT&CK T1071.001 (Web Protocols) dan T1105 (Ingress Tool Transfer) | https://attack.mitre.org/techniques/T1071/001/ | primer | 2026-10-22 | Day 05 |
-| Wireshark display filter reference: tls | https://www.wireshark.org/docs/dfref/t/tls.html | primer | 2026-10-23 | Day 06, 16 |
+| Wireshark display filter reference: tls | https://www.wireshark.org/docs/dfref/t/tls.html | primer | 2026-10-23 | Day 06, 16, 15 |
 | Wireshark wiki: TLS | https://wiki.wireshark.org/TLS | primer | 2026-10-22 | Day 06 |
 | Salesforce JA3 (GitHub, diarsipkan 2025-05-01) | https://github.com/salesforce/ja3 | primer | 2026-10-22 | Day 06 |
-| FoxIO JA4+ (GitHub) | https://github.com/FoxIO-LLC/ja4 | primer | 2026-10-22 | Day 06 |
+| FoxIO JA4+ (GitHub) | https://github.com/FoxIO-LLC/ja4 | primer | 2026-10-23 | Day 06, 15 |
 | FoxIO JA4 technical details (JA4.md) | https://github.com/FoxIO-LLC/ja4/blob/main/technical_details/JA4.md | primer | 2026-10-22 | Day 06 |
 | Wireshark dfref x509sat / x509ce / x509af | https://www.wireshark.org/docs/dfref/x/x509sat.html ; https://www.wireshark.org/docs/dfref/x/x509ce.html ; https://www.wireshark.org/docs/dfref/x/x509af.html | primer | 2026-10-22 | Day 06 |
 | RFC 5280: X.509 PKI Certificate and CRL Profile | https://www.rfc-editor.org/rfc/rfc5280 | primer | 2026-10-22 | Day 06 |
@@ -98,8 +98,8 @@ Indeks sumber global, disusun dari tabel Sumber (bagian 9) setiap Day di folder 
 | CA/Browser Forum Ballot SC-081v3 | https://cabforum.org/2025/04/11/ballot-sc081v3-introduce-schedule-of-reducing-validity-and-data-reuse-periods/ | primer | 2026-10-22 | Day 06 |
 | SSL.com: SSL Certificate Validity Changes | https://www.ssl.com/article/ssl-certificate-validity-changes-what-you-need-to-know/ | sekunder | 2026-10-22 | Day 06 |
 | RFC 9846: TLS 1.3 (Juli 2026, menggantikan RFC 8446) | https://www.rfc-editor.org/info/rfc9846 | primer | 2026-10-22 | Day 06 |
-| RFC 9849: TLS Encrypted Client Hello | https://www.rfc-editor.org/rfc/rfc9849.html | primer | 2026-10-23 | Day 07, 16 |
-| RFC 9846: The TLS Protocol Version 1.3 | https://www.rfc-editor.org/rfc/rfc9846.html | primer | 2026-10-22 | Day 07 |
+| RFC 9849: TLS Encrypted Client Hello | https://www.rfc-editor.org/rfc/rfc9849.html | primer | 2026-10-23 | Day 07, 16, 15 |
+| RFC 9846: The TLS Protocol Version 1.3 | https://www.rfc-editor.org/rfc/rfc9846.html | primer | 2026-10-23 | Day 07, 15 |
 | Zeek documentation (overview) | https://docs.zeek.org/en/master/ | primer | 2026-10-10 | Day 08 |
 | Zeek NEWS (cabang master) dan skrip hash-all-files | https://github.com/zeek/zeek | primer | 2026-10-22 | Day 08 |
 | Zeek source: scripts/base/protocols/conn/main.zeek | https://raw.githubusercontent.com/zeek/zeek/master/scripts/base/protocols/conn/main.zeek | primer | 2026-10-23 | Day 08, 10 |
@@ -203,3 +203,12 @@ Indeks sumber global, disusun dari tabel Sumber (bagian 9) setiap Day di folder 
 | Mozilla Support: Canary domain - use-application-dns.net | https://support.mozilla.org/en-US/kb/canary-domain-use-application-dnsnet | primer | 2026-10-23 | Day 16 |
 | RFC 9462: Discovery of Designated Resolvers | https://www.rfc-editor.org/rfc/rfc9462.html | primer | 2026-10-23 | Day 16 |
 | MITRE ATT&CK T1572 Protocol Tunneling | https://attack.mitre.org/techniques/T1572/ | primer | 2026-10-23 | Day 16 |
+| RFC 9460: SVCB dan HTTPS RR | https://www.rfc-editor.org/rfc/rfc9460.html | primer | 2026-10-09 | Day 15 |
+| RFC 9848: Bootstrapping TLS Encrypted ClientHello with DNS Service Bindings | https://www.rfc-editor.org/rfc/rfc9848.html | primer | 2026-10-23 | Day 15 |
+| Wireshark display filter reference: dns | https://www.wireshark.org/docs/dfref/d/dns.html | primer | 2026-10-23 | Day 15 |
+| FoxIO JA4+: Zeek README | https://github.com/FoxIO-LLC/ja4/blob/main/zeek/README.md | primer | 2026-10-23 | Day 15 |
+| FoxIO JA4+: GitHub releases (v1.0.0, v1.0.1) | https://github.com/FoxIO-LLC/ja4/releases | primer | 2026-10-23 | Day 15 |
+| Zeek docs: ssl.log | https://docs.zeek.org/en/current/logs/ssl.html | primer | 2026-10-23 | Day 15 |
+| Microsoft Edge Browser Policy: EncryptedClientHelloEnabled | https://learn.microsoft.com/en-us/deployedge/microsoft-edge-browser-policies/encryptedclienthelloenabled | primer | 2026-10-23 | Day 15 |
+| Cloudflare docs: Encrypted Client Hello (ECH) | https://developers.cloudflare.com/ssl/edge-certificates/ech/ | primer (vendor) | 2026-10-23 | Day 15 |
+| Chromium blink-dev: Intent to Ship: TLS Encrypted Client Hello (ECH) | https://groups.google.com/a/chromium.org/g/blink-dev/c/CmlXjQeNWDI/m/r-AUe0OqAQAJ | primer (vendor) | 2026-10-23 | Day 15 |
