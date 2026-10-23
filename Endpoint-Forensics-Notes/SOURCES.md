@@ -207,7 +207,7 @@ Indeks sumber global, disusun dari tabel Sumber (bagian 9) setiap Day di folder 
 | GitHub: davidpany/WMI_Forensics (PyWMIPersistenceFinder) | https://github.com/davidpany/WMI_Forensics | primer (repo) | 2026-10-16 | Day 11 |
 | Microsoft Learn: Tracing WMI Activity | https://learn.microsoft.com/en-us/windows/win32/wmisdk/tracing-wmi-activity | primer | 2026-10-16 | Day 11 |
 | Timesketch | https://timesketch.org/ | primer | 2026-10-09 | Day 13 |
-| Timesketch: Upload data | https://timesketch.org/guides/user/upload-data/ | primer | 2026-10-22 | Day 13 |
+| Timesketch: Upload data | https://timesketch.org/guides/user/upload-data/ | primer | 2026-10-22 | Day 13, 26 |
 | Plaso: Using psort.py | https://plaso.readthedocs.io/en/latest/sources/user/Using-psort.html | primer | 2026-10-22 | Day 13 |
 | Plaso: Using log2timeline.py | https://plaso.readthedocs.io/en/latest/sources/user/Using-log2timeline.html | primer | 2026-10-22 | Day 13 |
 | Plaso: Event filters | https://plaso.readthedocs.io/en/latest/sources/user/Event-filters.html | primer | 2026-10-22 | Day 13 |
@@ -217,9 +217,9 @@ Indeks sumber global, disusun dari tabel Sumber (bagian 9) setiap Day di folder 
 | Plaso: Using pinfo.py | https://plaso.readthedocs.io/en/latest/sources/user/Using-pinfo.html | primer | 2026-10-22 | Day 13 |
 | Plaso: Switching from Log2Timeline Perl (Legacy) | https://plaso.readthedocs.io/en/latest/sources/user/Log2Timeline-Perl-(Legacy).html | primer | 2026-10-22 | Day 13 |
 | Timesketch release 20261014 | https://github.com/google/timesketch/releases/tag/20261014 | primer | 2026-10-22 | Day 13 |
-| Timesketch: Import from JSON or CSV | https://timesketch.org/guides/user/import-from-json-csv/ | primer | 2026-10-22 | Day 13 |
-| Timesketch: Search query guide | https://timesketch.org/guides/user/search-query-guide/ | primer | 2026-10-22 | Day 13 |
-| Timesketch: Basic concepts | https://timesketch.org/guides/user/basic-concepts/ | primer | 2026-10-22 | Day 13 |
+| Timesketch: Import from JSON or CSV | https://timesketch.org/guides/user/import-from-json-csv/ | primer | 2026-10-22 | Day 13, 26 |
+| Timesketch: Search query guide | https://timesketch.org/guides/user/search-query-guide/ | primer | 2026-10-23 | Day 13, 26 |
+| Timesketch: Basic concepts | https://timesketch.org/guides/user/basic-concepts/ | primer | 2026-10-23 | Day 13, 26 |
 | Plaso source: SRUM plugin | https://plaso.readthedocs.io/en/stable/_modules/plaso/parsers/esedb_plugins/srum.html | primer (kode) | 2026-10-22 | Day 13 |
 | Plaso source: NTFS parsers | https://plaso.readthedocs.io/en/stable/_modules/plaso/parsers/ntfs.html | primer (kode) | 2026-10-22 | Day 13 |
 | Plaso source: winevtx parser | https://plaso.readthedocs.io/en/stable/_modules/plaso/parsers/winevtx.html | primer (kode) | 2026-10-22 | Day 13 |
@@ -316,7 +316,7 @@ Indeks sumber global, disusun dari tabel Sumber (bagian 9) setiap Day di folder 
 | Lenny Zeltser: IR writing guidelines (incident response report writing) | https://zeltser.com/media/docs/ir-writing-guidelines.yaml | sekunder (praktisi) | 2026-10-22 | Day 19 |
 | SANS: Report Writing for Digital Forensics, Part II | https://www.sans.org/blog/report-writing-for-digital-forensics-part-ii | sekunder | 2026-10-22 | Day 19 |
 | Champlain College Leahy Center: Enfuse 2017 Reflection, Forensic Report Writing | https://leahycenterblog.champlain.edu/2017/09/26/enfuse-2017-reflection-jonathan-castro-forensic-report-writing/ | komunitas | 2026-10-22 | Day 19 |
-| GitHub google/timesketch: Releases | https://github.com/google/timesketch/releases | primer | 2026-10-22 | Day 20 |
+| GitHub google/timesketch: Releases | https://github.com/google/timesketch/releases | primer | 2026-10-22 | Day 20, 26 |
 | NIST: Computer Forensic Reference Data Set Portal (CFReDS), catatan katalog data.gov | https://catalog.data.gov/dataset/computer-forensic-reference-data-set-portal | primer (pemerintah) | 2026-10-22 | Day 20 |
 | DFIR Madness: Case 001, The Stolen Szechuan Sauce | https://dfirmadness.com/the-stolen-szechuan-sauce/ | komunitas | 2026-10-22 | Day 20 |
 | Sysinternals: SDelete | https://learn.microsoft.com/en-us/sysinternals/downloads/sdelete | primer | 2026-10-23 | Day 21 |
@@ -392,3 +392,10 @@ Indeks sumber global, disusun dari tabel Sumber (bagian 9) setiap Day di folder 
 | Microsoft (arsip blog): Sysinternals Sysmon suspicious activity guide | https://learn.microsoft.com/en-us/archive/blogs/motiba/sysinternals-sysmon-suspicious-activity-guide | sekunder (blog Microsoft yang diarsipkan) | 2026-10-23 | Day 25 |
 | Sigma rule: Windows EventLog Autologger Session Registry Modification Via CommandLine | https://detection.fyi/sigmahq/sigma/windows/process_creation/proc_creation_win_autologger_session_registry_modification/ | komunitas | 2026-10-23 | Day 25 |
 | Madonoforest (Impress): Sysmon | https://forest.watch.impress.co.jp/library/software/sysmon/ | komunitas (listing perangkat lunak) | 2026-10-23 | Day 25 |
+| Timesketch: Sigma | https://timesketch.org/guides/user/sigma/ | primer | 2026-10-22 | Day 26 |
+| dfTimewolf (repo log2timeline) | https://github.com/log2timeline/dftimewolf | primer | 2026-10-22 | Day 26 |
+| Timesketch (repo resmi) | https://github.com/google/timesketch | primer | 2026-10-09 | Day 26 |
+| Sigma rule specification (SigmaHQ) | https://github.com/SigmaHQ/sigma-specification | primer | 2026-10-10 | Day 26 |
+| dfTimewolf: Getting started | https://dftimewolf.readthedocs.io/en/latest/getting-started.html | primer (dokumentasi proyek) | 2026-10-22 | Day 26 |
+| dfTimewolf commits (GitHub API) | https://api.github.com/repos/log2timeline/dftimewolf/commits?per_page=3 | primer (repo resmi) | 2026-10-22 | Day 26 |
+| Nextron Systems: From THOR Scan to Timeline: Correlating Findings in Timesketch | https://www.nextron-systems.com/2025/06/11/from-thor-scan-to-timeline-correlating-findings-in-timesketch/ | sekunder (blog vendor) | 2026-10-22 | Day 26 |
