@@ -4,7 +4,7 @@ Indeks sumber global, disusun dari tabel Sumber (bagian 9) setiap Day di folder 
 
 | Judul | URL | Tipe | Diakses | Dipakai di |
 |---|---|---|---|---|
-| Zeek documentation: Logs (index) | https://docs.zeek.org/en/current/logs/index.html | primer | 2026-10-22 | Day 01, Day 08, 10 |
+| Zeek documentation: Logs (index) | https://docs.zeek.org/en/current/logs/index.html | primer | 2026-10-22 | Day 01, Day 08, 10, 11 |
 | Wireshark news: 4.6.9 dan 4.4.19 | https://www.wireshark.org/news/20260923.html | primer | 2026-10-22 | Day 01 |
 | Zeek: Get Zeek | https://zeek.org/get-zeek/ | primer | 2026-10-22 | Day 01, Day 07, Day 08 |
 | Suricata: Download | https://suricata.io/download/ | primer | 2026-10-22 | Day 01, 09 |
@@ -44,7 +44,7 @@ Indeks sumber global, disusun dari tabel Sumber (bagian 9) setiap Day di folder 
 | RFC 9293 (TCP) | https://www.rfc-editor.org/rfc/rfc9293 | primer | 2026-10-22 | Day 03, Day 04 |
 | RFC 1035 (DNS) | https://www.rfc-editor.org/rfc/rfc1035 | primer | 2026-10-22 | Day 03, Day 05 |
 | Microsoft MS-SMB2 (termasuk SMB2 Packet Header dan NEGOTIATE Request) | https://learn.microsoft.com/en-us/openspecs/windows_protocols/ms-smb2/ | primer | 2026-10-22 | Day 03 |
-| MITRE ATT&CK T1571: Non-Standard Port | https://attack.mitre.org/techniques/T1571/ | primer | 2026-10-22 | Day 03 |
+| MITRE ATT&CK T1571: Non-Standard Port | https://attack.mitre.org/techniques/T1571/ | primer | 2026-10-22 | Day 03, 11 |
 | Wireshark User's Guide: TCP Analysis | https://www.wireshark.org/docs/wsug_html_chunked/ChAdvTCPAnalysis.html | primer | 2026-10-22 | Day 03, Day 04 |
 | Zeek documentation: base/protocols/conn/main.zeek | https://docs.zeek.org/en/master/scripts/base/protocols/conn/main.zeek.html | primer | 2026-10-22 | Day 03 |
 | RFC 8446 (TLS 1.3) | https://www.rfc-editor.org/rfc/rfc8446 | primer | 2026-10-22 | Day 03, Day 06 |
@@ -117,7 +117,7 @@ Indeks sumber global, disusun dari tabel Sumber (bagian 9) setiap Day di folder 
 | Splunkbase: TA for Zeek (app 5466) | https://splunkbase.splunk.com/app/5466 | primer | 2026-10-22 | Day 08 |
 | WLCG SOC Working Group: Zeek hardware requirements | https://wlcg-soc-wg-doc.web.cern.ch/data_sources/zeek/hardware_requirements.html | sekunder | 2026-10-22 | Day 08 |
 | Splunk Research: Data Source Zeek Conn | https://research.splunk.com/sources/01dff429-9c29-4181-87ae-ea19cde20031/ | primer | 2026-10-22 | Day 08 |
-| Splunk Research: Data Source Bro http | https://research.splunk.com/sources/c5d9612b-0ffd-44d3-8247-3cf3486ec5e2/ | primer | 2026-10-22 | Day 08 |
+| Splunk Research: Data Source Bro http | https://research.splunk.com/sources/c5d9612b-0ffd-44d3-8247-3cf3486ec5e2/ | primer | 2026-10-23 | Day 08, 11 |
 | Splunk Research: Data Source Bro ssl | https://research.splunk.com/sources/22c637eb-f62e-41f0-8637-ebf62e11f0a8/ | primer | 2026-10-22 | Day 08 |
 | Jason Murray: Zeek Installation and Splunk CIM Data Normalization Guide | https://jasonmurray.org/posts/2022/zeekinstallandsplunklog/ | komunitas | 2026-10-22 | Day 08 |
 | Suricata documentation (overview) | https://docs.suricata.io/ | primer | 2026-10-09 | Day 09 |
@@ -159,3 +159,14 @@ Indeks sumber global, disusun dari tabel Sumber (bagian 9) setiap Day di folder 
 | RFC 6598 (BCP 153) | https://www.rfc-editor.org/rfc/rfc6598 | primer | 2026-10-23 | Day 10 |
 | RFC 2142 | https://www.rfc-editor.org/rfc/rfc2142 | primer | 2026-10-23 | Day 10 |
 | ElastiFlow documentation | https://docs.elastiflow.com/docs/ | sekunder | 2026-10-23 | Day 10 |
+| MITRE ATT&CK: Command and Control (TA0011) | https://attack.mitre.org/tactics/TA0011/ | primer | 2026-10-22 | Day 11 |
+| MITRE ATT&CK T1071 Application Layer Protocol (dan T1071.001) | https://attack.mitre.org/techniques/T1071/ | primer | 2026-10-22 | Day 11 |
+| activecm/rita: README dan default_config.hjson | https://github.com/activecm/rita | primer | 2026-10-23 | Day 11 |
+| activecm/rita: rilis v5.1.2 | https://github.com/activecm/rita/releases/tag/v5.1.2 | primer | 2026-10-23 | Day 11 |
+| activecm/rita: analysis/beacons.go | https://github.com/activecm/rita/blob/main/analysis/beacons.go | primer | 2026-10-22 | Day 11 |
+| activecm/rita: config/config.go (dan docs/Configuration.md) | https://github.com/activecm/rita/blob/main/config/config.go | primer | 2026-10-23 | Day 11 |
+| activecm/rita: database/tables.go | https://github.com/activecm/rita/blob/main/database/tables.go | primer | 2026-10-23 | Day 11 |
+| MITRE ATT&CK T1573 Encrypted Channel | https://attack.mitre.org/techniques/T1573/ | primer | 2026-10-23 | Day 11 |
+| Microsoft Learn: Windows Time Service Tools and Settings | https://learn.microsoft.com/en-us/windows-server/networking/windows-time-service/windows-time-service-tools-and-settings | primer | 2026-10-23 | Day 11 |
+| Microsoft Learn: DeviceNetworkEvents table | https://learn.microsoft.com/en-us/defender-xdr/advanced-hunting-devicenetworkevents-table | primer | 2026-10-23 | Day 11 |
+| Sohail, When Agents Look Like Beacons (IEEE ICNP NIPA 2026), arXiv:2609.19091 | https://arxiv.org/abs/2609.19091 | sekunder | 2026-10-23 | Day 11 |
