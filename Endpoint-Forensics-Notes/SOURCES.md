@@ -18,7 +18,7 @@ Indeks sumber global, disusun dari tabel Sumber (bagian 9) setiap Day di folder 
 | KAPE (Kroll) | https://www.kroll.com/en/services/cyber/incident-response-litigation-support/kroll-artifact-parser-extractor-kape | primer (vendor) | 2026-10-16 | Day 02 |
 | Velociraptor releases | https://github.com/Velocidex/velociraptor/releases | primer | 2026-10-22 | Day 02, 04, 06, 20 |
 | Plaso documentation | https://plaso.readthedocs.io/ | primer | 2026-10-09 | Day 02, 13 |
-| Sysinternals: Sysmon | https://learn.microsoft.com/en-us/sysinternals/downloads/sysmon | primer | 2026-10-23 | Day 02, 05, 06, 11, 15, 21 |
+| Sysinternals: Sysmon | https://learn.microsoft.com/en-us/sysinternals/downloads/sysmon | primer | 2026-10-23 | Day 02, 05, 06, 11, 15, 21, 25 |
 | Microsoft Learn: Command line process auditing | https://learn.microsoft.com/en-us/windows-server/identity/ad-ds/manage/component-updates/command-line-process-auditing | primer | 2026-10-16 | Day 02, 05, 06 |
 | Atomic Red Team (Red Canary) | https://github.com/redcanaryco/atomic-red-team | primer | 2026-10-22 | Day 02, 15 |
 | Volatility 3 README (GitHub) | https://github.com/volatilityfoundation/volatility3 | primer | 2026-10-16 | Day 02 |
@@ -322,7 +322,7 @@ Indeks sumber global, disusun dari tabel Sumber (bagian 9) setiap Day di folder 
 | Sysinternals: SDelete | https://learn.microsoft.com/en-us/sysinternals/downloads/sdelete | primer | 2026-10-23 | Day 21 |
 | Microsoft Learn: 4719(S) System audit policy was changed | https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/auditing/event-4719 | primer | 2026-10-23 | Day 21 |
 | MITRE ATT&CK: Indicator Removal (T1070) | https://attack.mitre.org/techniques/T1070/ | primer | 2026-10-23 | Day 21 |
-| MITRE ATT&CK: Disable or Modify Tools (T1685) dan Updates April 2026 | https://attack.mitre.org/techniques/T1685/ | primer | 2026-10-23 | Day 21 |
+| MITRE ATT&CK: Disable or Modify Tools (T1685) dan Updates April 2026 | https://attack.mitre.org/techniques/T1685/ | primer | 2026-10-23 | Day 21, 25 |
 | Microsoft Learn: USN_JOURNAL_DATA_V0 | https://learn.microsoft.com/en-us/windows/win32/api/winioctl/ns-winioctl-usn_journal_data_v0 | primer | 2026-10-23 | Day 21 |
 | Microsoft Learn: cipher | https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/cipher | primer | 2026-10-23 | Day 21 |
 | Microsoft Learn: vssadmin delete shadows | https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/vssadmin-delete-shadows | primer | 2026-10-23 | Day 21 |
@@ -379,3 +379,16 @@ Indeks sumber global, disusun dari tabel Sumber (bagian 9) setiap Day di folder 
 | Mozilla source: `nsINavHistoryService.idl` (Searchfox) | https://searchfox.org/mozilla-central/source/toolkit/components/places/nsINavHistoryService.idl | Primer (kode sumber) | 2026-10-22 | Day 24 |
 | Autopsy 4.19.0 `Firefox.java` (Recent Activity) | https://sleuthkit.org/autopsy/docs/api-docs/4.19.0/_firefox_8java_source.html | Sekunder (kode alat forensik) | 2026-10-22 | Day 24 |
 | dfindexeddb (Google) | https://github.com/google/dfindexeddb | Primer (kode dan dokumentasi alat) | 2026-10-22 | Day 24 |
+| Microsoft Learn: About Event Tracing | https://learn.microsoft.com/en-us/windows/win32/etw/about-event-tracing | primer | 2026-10-23 | Day 25 |
+| Microsoft Learn: Configuring and Starting an AutoLogger Session | https://learn.microsoft.com/en-us/windows/win32/etw/configuring-and-starting-an-autologger-session | primer | 2026-10-23 | Day 25 |
+| Microsoft Learn: Event Tracing Sessions | https://learn.microsoft.com/en-us/windows/win32/etw/event-tracing-sessions | primer | 2026-10-09 | Day 25 |
+| Sysmon for Linux | https://github.com/microsoft/SysmonForLinux | primer | 2026-10-09 | Day 25 |
+| Microsoft Learn: logman query | https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/logman-query | primer | 2026-10-23 | Day 25 |
+| Microsoft Learn: logman create trace | https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/logman-create-trace | primer | 2026-10-23 | Day 25 |
+| Windows Insider Blog: Announcing Windows 11 Insider Preview Build 26300.7733 (Dev Channel) | https://blogs.windows.com/windows-insider/?p=178587 | primer | 2026-10-23 | Day 25 |
+| BleepingComputer: Windows 11 KB5077241 update improves BitLocker, adds Sysmon tool | https://www.bleepingcomputer.com/news/microsoft/windows-11-kb5077241-update-improves-bitlocker-adds-sysmon-tool/ | sekunder (media) | 2026-10-23 | Day 25 |
+| Pureinfotech: KB5079473 Windows 11 March 2026 update | https://pureinfotech.com/KB5079473-windows-11-march-2026-update/ | sekunder (media) | 2026-10-23 | Day 25 |
+| BleepingComputer: Microsoft: Windows 11 23H2 reaches end of support in 30 days | https://bleepingcomputer.com/news/microsoft/microsoft-windows-11-23h2-reaches-end-of-support-in-30-days | sekunder (media) | 2026-10-23 | Day 25 |
+| Microsoft (arsip blog): Sysinternals Sysmon suspicious activity guide | https://learn.microsoft.com/en-us/archive/blogs/motiba/sysinternals-sysmon-suspicious-activity-guide | sekunder (blog Microsoft yang diarsipkan) | 2026-10-23 | Day 25 |
+| Sigma rule: Windows EventLog Autologger Session Registry Modification Via CommandLine | https://detection.fyi/sigmahq/sigma/windows/process_creation/proc_creation_win_autologger_session_registry_modification/ | komunitas | 2026-10-23 | Day 25 |
+| Madonoforest (Impress): Sysmon | https://forest.watch.impress.co.jp/library/software/sysmon/ | komunitas (listing perangkat lunak) | 2026-10-23 | Day 25 |
