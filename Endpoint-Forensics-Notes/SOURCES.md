@@ -13,12 +13,12 @@ Indeks sumber global, disusun dari tabel Sumber (bagian 9) setiap Day di folder 
 | Cado Security wiki: Chain of custody, a digital forensics case study | https://cadosecurity.com/wiki/chain-of-custody-a-digital-forensics-case-study | sekunder | 2026-10-07 | Day 01 |
 | NIST SP 800-61 Rev. 3: Incident Response Recommendations and Considerations for Cybersecurity Risk Management (PDF) | https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-61r3.pdf | primer | 2026-10-15 | Day 01, 06 |
 | Microsoft Learn: Get-FileHash (Microsoft.PowerShell.Utility) | https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.utility/get-filehash | primer | 2026-10-16 | Day 01, 02, 06 |
-| Volatility 3 releases | https://github.com/volatilityfoundation/volatility3/releases | primer | 2026-10-22 | Day 02, 06, 14, 15, 16, 18, 20 |
+| Volatility 3 releases | https://github.com/volatilityfoundation/volatility3/releases | primer | 2026-10-22 | Day 02, 06, 14, 15, 16, 18, 20, 22 |
 | Eric Zimmerman tools (EZ Tools, Get-ZimmermanTools) | https://ericzimmerman.github.io/ | primer | 2026-10-22 | Day 02, 03, 04, 05, 06, 07, 08, 09, 10, 11, 12, 13, 17, 20 |
 | KAPE (Kroll) | https://www.kroll.com/en/services/cyber/incident-response-litigation-support/kroll-artifact-parser-extractor-kape | primer (vendor) | 2026-10-16 | Day 02 |
 | Velociraptor releases | https://github.com/Velocidex/velociraptor/releases | primer | 2026-10-22 | Day 02, 04, 06, 20 |
 | Plaso documentation | https://plaso.readthedocs.io/ | primer | 2026-10-09 | Day 02, 13 |
-| Sysinternals: Sysmon | https://learn.microsoft.com/en-us/sysinternals/downloads/sysmon | primer | 2026-10-22 | Day 02, 05, 06, 11, 15 |
+| Sysinternals: Sysmon | https://learn.microsoft.com/en-us/sysinternals/downloads/sysmon | primer | 2026-10-23 | Day 02, 05, 06, 11, 15, 21 |
 | Microsoft Learn: Command line process auditing | https://learn.microsoft.com/en-us/windows-server/identity/ad-ds/manage/component-updates/command-line-process-auditing | primer | 2026-10-16 | Day 02, 05, 06 |
 | Atomic Red Team (Red Canary) | https://github.com/redcanaryco/atomic-red-team | primer | 2026-10-22 | Day 02, 15 |
 | Volatility 3 README (GitHub) | https://github.com/volatilityfoundation/volatility3 | primer | 2026-10-16 | Day 02 |
@@ -83,7 +83,7 @@ Indeks sumber global, disusun dari tabel Sumber (bagian 9) setiap Day di folder 
 | Microsoft Learn: 4698(S) A scheduled task was created | https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/auditing/event-4698 | primer | 2026-10-16 | Day 05, 06, 11, 12 |
 | Microsoft Learn: 4720(S) A user account was created | https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/auditing/event-4720 | primer | 2026-10-16 | Day 05 |
 | Microsoft Learn: 4732(S) A member was added to a security-enabled local group | https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/auditing/event-4732 | primer | 2026-10-16 | Day 05 |
-| Microsoft Learn: 1102(S) The audit log was cleared | https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/auditing/event-1102 | primer | 2026-10-16 | Day 05, 06 |
+| Microsoft Learn: 1102(S) The audit log was cleared | https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/auditing/event-1102 | primer | 2026-10-23 | Day 05, 06, 21 |
 | Microsoft Learn: 4697(S) A service was installed in the system | https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/auditing/event-4697 | primer | 2026-10-16 | Day 05, 11 |
 | Microsoft Learn: Audit Other Object Access Events | https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/auditing/audit-other-object-access-events | primer | 2026-10-16 | Day 05 |
 | Microsoft Learn: Audit Process Creation | https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/auditing/audit-process-creation | primer | 2026-10-16 | Day 05 |
@@ -93,7 +93,7 @@ Indeks sumber global, disusun dari tabel Sumber (bagian 9) setiap Day di folder 
 | Velociraptor: Windows.EventLogs.PowershellScriptblock | https://docs.velociraptor.app/artifact_references/pages/windows.eventlogs.powershellscriptblock | primer (dokumentasi proyek) | 2026-10-16 | Day 05, 06 |
 | GitHub: EricZimmerman/evtx (README EvtxECmd) | https://github.com/EricZimmerman/evtx | primer (repo resmi) | 2026-10-16 | Day 05, 06 |
 | GitHub: evtx Maps README | https://raw.githubusercontent.com/EricZimmerman/evtx/master/evtx/Maps/!!!!README.md | primer (repo resmi) | 2026-10-16 | Day 05 |
-| GitHub: evtx Maps (map 4624, 4698, 7045, 104, 106, 201, 4104, Sysmon 1, 1149, 21) | https://github.com/EricZimmerman/evtx/tree/master/evtx/Maps | primer (repo resmi) | 2026-10-16 | Day 05, 06, 11 |
+| GitHub: evtx Maps (map 4624, 4698, 7045, 104, 106, 201, 4104, Sysmon 1, 1149, 21) | https://github.com/EricZimmerman/evtx/tree/master/evtx/Maps | primer (repo resmi) | 2026-10-23 | Day 05, 06, 11, 21 |
 | NinjaOne: How to enable or disable Task Scheduler history | https://www.ninjaone.com/blog/enable-or-disable-task-scheduler-history/ | komunitas (blog vendor how-to) | 2026-10-16 | Day 05 |
 | Mekanisme Prefetch Windows (literatur DFIR umum) | tanpa URL | sekunder | 2026-10-10 | Day 07 |
 | SANS: Windows Forensic Analysis poster | https://www.sans.org/posters/windows-forensic-analysis/ | sekunder (SANS) | 2026-10-16 | Day 07, 08, 09, 10, 12, 17 |
@@ -123,8 +123,8 @@ Indeks sumber global, disusun dari tabel Sumber (bagian 9) setiap Day di folder 
 | Microsoft: NTFS dan file system (referensi struktur) | https://learn.microsoft.com/en-us/windows-server/storage/file-server/ntfs-overview | primer | 2026-10-09 | Day 08 |
 | Microsoft Learn: USN_RECORD_V2 structure (winioctl.h) | https://learn.microsoft.com/en-us/windows/win32/api/winioctl/ns-winioctl-usn_record_v2 | primer (dokumentasi vendor) | 2026-10-16 | Day 08, 12 |
 | Microsoft Learn: Change Journals | https://learn.microsoft.com/en-us/windows/win32/fileio/change-journals | primer (dokumentasi vendor) | 2026-10-16 | Day 08 |
-| Microsoft Learn: Creating, Modifying, and Deleting a Change Journal | https://learn.microsoft.com/en-us/windows/win32/fileio/creating-modifying-and-deleting-a-change-journal | primer (dokumentasi vendor) | 2026-10-16 | Day 08 |
-| Microsoft Learn: fsutil usn | https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/fsutil-usn | primer | 2026-10-16 | Day 08 |
+| Microsoft Learn: Creating, Modifying, and Deleting a Change Journal | https://learn.microsoft.com/en-us/windows/win32/fileio/creating-modifying-and-deleting-a-change-journal | primer (dokumentasi vendor) | 2026-10-23 | Day 08, 21 |
+| Microsoft Learn: fsutil usn | https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/fsutil-usn | primer | 2026-10-23 | Day 08, 21 |
 | Microsoft Learn: fsutil behavior | https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/fsutil-behavior | primer (dokumentasi vendor) | 2026-10-16 | Day 08, 12 |
 | Microsoft Learn: File Times | https://learn.microsoft.com/en-us/windows/win32/sysinfo/file-times | primer (dokumentasi vendor) | 2026-10-22 | Day 08, 17 |
 | Microsoft Learn: Master File Table (Local File Systems) | https://learn.microsoft.com/en-us/windows/win32/fileio/master-file-table | primer (dokumentasi vendor) | 2026-10-16 | Day 08 |
@@ -319,3 +319,29 @@ Indeks sumber global, disusun dari tabel Sumber (bagian 9) setiap Day di folder 
 | GitHub google/timesketch: Releases | https://github.com/google/timesketch/releases | primer | 2026-10-22 | Day 20 |
 | NIST: Computer Forensic Reference Data Set Portal (CFReDS), catatan katalog data.gov | https://catalog.data.gov/dataset/computer-forensic-reference-data-set-portal | primer (pemerintah) | 2026-10-22 | Day 20 |
 | DFIR Madness: Case 001, The Stolen Szechuan Sauce | https://dfirmadness.com/the-stolen-szechuan-sauce/ | komunitas | 2026-10-22 | Day 20 |
+| Sysinternals: SDelete | https://learn.microsoft.com/en-us/sysinternals/downloads/sdelete | primer | 2026-10-23 | Day 21 |
+| Microsoft Learn: 4719(S) System audit policy was changed | https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/auditing/event-4719 | primer | 2026-10-23 | Day 21 |
+| MITRE ATT&CK: Indicator Removal (T1070) | https://attack.mitre.org/techniques/T1070/ | primer | 2026-10-23 | Day 21 |
+| MITRE ATT&CK: Disable or Modify Tools (T1685) dan Updates April 2026 | https://attack.mitre.org/techniques/T1685/ | primer | 2026-10-23 | Day 21 |
+| Microsoft Learn: USN_JOURNAL_DATA_V0 | https://learn.microsoft.com/en-us/windows/win32/api/winioctl/ns-winioctl-usn_journal_data_v0 | primer | 2026-10-23 | Day 21 |
+| Microsoft Learn: cipher | https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/cipher | primer | 2026-10-23 | Day 21 |
+| Microsoft Learn: vssadmin delete shadows | https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/vssadmin-delete-shadows | primer | 2026-10-23 | Day 21 |
+| MITRE ATT&CK: Inhibit System Recovery (T1490) | https://attack.mitre.org/techniques/T1490/ | primer | 2026-10-23 | Day 21 |
+| Elastic Security: Delete Volume USN Journal with Fsutil | https://www.elastic.co/guide/en/security/current/delete-volume-usn-journal-with-fsutil.html | sekunder (vendor) | 2026-10-23 | Day 21 |
+| Microsoft Learn: manage-bde | https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/manage-bde | primer | 2026-10-22 | Day 22 |
+| Microsoft Learn: BitLocker recovery overview | https://learn.microsoft.com/en-us/windows/security/operating-system-security/data-protection/bitlocker/recovery-overview | primer | 2026-10-22 | Day 22 |
+| Microsoft Graph: bitlockerRecoveryKey resource type | https://learn.microsoft.com/en-us/graph/api/resources/bitlockerrecoverykey | primer | 2026-10-09 | Day 22 |
+| VeraCrypt: Hidden Volume | https://veracrypt.io/en/Hidden%20Volume.html | primer | 2026-10-22 | Day 22 |
+| Microsoft Learn: ms-FVE-RecoveryPassword attribute | https://learn.microsoft.com/en-us/windows/win32/adschema/a-msfve-recoverypassword | primer | 2026-10-09 | Day 22 |
+| Microsoft Learn: BitLocker recovery process | https://learn.microsoft.com/en-us/windows/security/operating-system-security/data-protection/bitlocker/recovery-process | primer | 2026-10-22 | Day 22 |
+| Microsoft Graph: Get bitlockerRecoveryKey | https://learn.microsoft.com/en-us/graph/api/bitlockerrecoverykey-get | primer | 2026-10-22 | Day 22 |
+| Microsoft Learn: Manage devices in Microsoft Entra ID (View or copy BitLocker keys) | https://learn.microsoft.com/en-us/entra/identity/devices/manage-device-identities | primer | 2026-10-22 | Day 22 |
+| Microsoft Learn: Encrypt Windows devices with BitLocker using Intune | https://learn.microsoft.com/en-us/intune/intune-service/protect/encrypt-devices | primer | 2026-10-22 | Day 22 |
+| Microsoft Learn: BitLocker overview (Device encryption) | https://learn.microsoft.com/en-us/windows/security/operating-system-security/data-protection/bitlocker/ | primer | 2026-10-22 | Day 22 |
+| VeraCrypt: Release Notes | https://veracrypt.io/en/Release%20Notes.html | primer | 2026-10-22 | Day 22 |
+| VeraCrypt: Unencrypted Data in RAM | https://veracrypt.io/en/Unencrypted%20Data%20in%20RAM.html | primer | 2026-10-22 | Day 22 |
+| GitHub: volatility3 `windows/truecrypt.py` dan daftar plugin Windows | https://github.com/volatilityfoundation/volatility3/blob/develop/volatility3/framework/plugins/windows/truecrypt.py | primer (repo resmi) | 2026-10-22 | Day 22 |
+| GitHub: Aorimn/dislocker (README dan man page dislocker-fuse) | https://github.com/Aorimn/dislocker | primer (repo) | 2026-10-22 | Day 22 |
+| Elcomsoft blog: Live System Analysis: Extracting BitLocker Keys | https://blog.elcomsoft.com/2022/05/live-system-analysis-extracting-bitlocker-keys/ | sekunder (vendor forensik) | 2026-10-22 | Day 22 |
+| Forensics Wiki: BitLocker how to image | https://forensics.wiki/bitlocker_how_to_image/ | komunitas | 2026-10-22 | Day 22 |
+| VeraCrypt: System Files and Application Data | https://veracrypt.io/en/VeraCrypt%20System%20Files.html | primer | 2026-10-22 | Day 22 |
