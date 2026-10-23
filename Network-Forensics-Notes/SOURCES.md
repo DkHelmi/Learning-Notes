@@ -7,7 +7,7 @@ Indeks sumber global, disusun dari tabel Sumber (bagian 9) setiap Day di folder 
 | Zeek documentation: Logs (index) | https://docs.zeek.org/en/current/logs/index.html | primer | 2026-10-22 | Day 01, Day 08 |
 | Wireshark news: 4.6.9 dan 4.4.19 | https://www.wireshark.org/news/20260923.html | primer | 2026-10-22 | Day 01 |
 | Zeek: Get Zeek | https://zeek.org/get-zeek/ | primer | 2026-10-22 | Day 01, Day 07, Day 08 |
-| Suricata: Download | https://suricata.io/download/ | primer | 2026-10-22 | Day 01 |
+| Suricata: Download | https://suricata.io/download/ | primer | 2026-10-22 | Day 01, 09 |
 | Plixer: packet capture vs flow data (blog vendor) | https://www.plixer.com/blog/packet-capture-vs-flow-data/ | sekunder | 2026-10-07 | Day 01 |
 | Pasal.id: UU 11/2008 Pasal 31 | https://pasal.id/peraturan/uu/uu-no-11-tahun-2008/pasal-31 | primer | 2026-10-22 | Day 01 |
 | JDIH BPK: UU No. 27 Tahun 2022 (PDP) | https://peraturan.bpk.go.id/Details/229798 | primer | 2026-10-07 | Day 01 |
@@ -90,7 +90,7 @@ Indeks sumber global, disusun dari tabel Sumber (bagian 9) setiap Day di folder 
 | RFC 9849: TLS Encrypted Client Hello | https://www.rfc-editor.org/info/rfc9849 | primer | 2026-10-22 | Day 06 |
 | Fastly: A first look at Chrome's TLS ClientHello permutation in the wild | https://www.fastly.com/blog/a-first-look-at-chromes-tls-clienthello-permutation-in-the-wild | sekunder | 2026-10-22 | Day 06 |
 | Squid wiki: SslPeekAndSplice | https://wiki.squid-cache.org/Features/SslPeekAndSplice | primer | 2026-10-22 | Day 06 |
-| Suricata docs: JA3/JA4 keywords | https://docs.suricata.io/en/latest/rules/ja-keywords.html | primer | 2026-10-22 | Day 06 |
+| Suricata docs: JA3/JA4 keywords | https://docs.suricata.io/en/latest/rules/ja-keywords.html | primer | 2026-10-23 | Day 06, 09 |
 | Zeek docs: ssl.log | https://docs.zeek.org/en/master/logs/ssl.html | primer | 2026-10-22 | Day 06 |
 | MITRE ATT&CK T1573.002 | https://attack.mitre.org/techniques/T1573/002/ | primer | 2026-10-22 | Day 06 |
 | MITRE ATT&CK M1020 SSL/TLS Inspection | https://attack.mitre.org/mitigations/M1020/ | primer | 2026-10-22 | Day 06 |
@@ -120,3 +120,27 @@ Indeks sumber global, disusun dari tabel Sumber (bagian 9) setiap Day di folder 
 | Splunk Research: Data Source Bro http | https://research.splunk.com/sources/c5d9612b-0ffd-44d3-8247-3cf3486ec5e2/ | primer | 2026-10-22 | Day 08 |
 | Splunk Research: Data Source Bro ssl | https://research.splunk.com/sources/22c637eb-f62e-41f0-8637-ebf62e11f0a8/ | primer | 2026-10-22 | Day 08 |
 | Jason Murray: Zeek Installation and Splunk CIM Data Normalization Guide | https://jasonmurray.org/posts/2022/zeekinstallandsplunklog/ | komunitas | 2026-10-22 | Day 08 |
+| Suricata documentation (overview) | https://docs.suricata.io/ | primer | 2026-10-09 | Day 09 |
+| Suricata docs: Rules | https://docs.suricata.io/en/latest/rules/ | primer | 2026-10-09 | Day 09 |
+| Suricata docs: Eve JSON output | https://docs.suricata.io/en/latest/output/eve/eve-json-output.html | primer | 2026-10-23 | Day 09 |
+| Suricata docs: EVE JSON Format | https://docs.suricata.io/en/latest/output/eve/eve-json-format.html | primer | 2026-10-23 | Day 09 |
+| Suricata docs: Upgrading | https://docs.suricata.io/en/latest/upgrade.html | primer | 2026-10-23 | Day 09 |
+| Suricata docs: Global-Thresholds | https://docs.suricata.io/en/latest/configuration/global-thresholds.html | primer | 2026-10-23 | Day 09 |
+| Suricata 8.0.7 docs: Thresholding Keywords | https://docs.suricata.io/en/suricata-8.0.7/rules/thresholding.html | primer | 2026-10-23 | Day 09 |
+| suricata-update docs: Update | https://suricata-update.readthedocs.io/en/latest/update.html | primer | 2026-10-23 | Day 09 |
+| suricata-update docs: Quick Start | https://suricata-update.readthedocs.io/en/latest/quickstart.html | primer | 2026-10-23 | Day 09 |
+| Suricata docs: Rule Management with Suricata-Update | https://docs.suricata.io/en/latest/rule-management/suricata-update.html | primer | 2026-10-23 | Day 09 |
+| Suricata docs: Rules Format (intro) | https://docs.suricata.io/en/latest/rules/intro.html | primer | 2026-10-23 | Day 09 |
+| Suricata 8.0.7 docs: Meta Keywords | https://docs.suricata.io/en/suricata-8.0.7/rules/meta.html | primer | 2026-10-23 | Day 09 |
+| OISF suricata: etc/classification.config | https://raw.githubusercontent.com/OISF/suricata/master/etc/classification.config | primer | 2026-10-23 | Day 09 |
+| Suricata 8.0.7 docs: suricata.yaml | https://docs.suricata.io/en/suricata-8.0.7/configuration/suricata-yaml.html | primer | 2026-10-23 | Day 09 |
+| Suricata docs: Setting up IPS/inline for Linux | https://docs.suricata.io/en/latest/ips/setting-up-ipsinline-for-linux.html | primer | 2026-10-23 | Day 09 |
+| Corelight: Community ID spec | https://github.com/corelight/community-id-spec | primer | 2026-10-23 | Day 09 |
+| SID Allocation | https://sidallocation.org/ | sekunder | 2026-10-23 | Day 09 |
+| Emerging Threats Community: FAQ | https://community.emergingthreats.net/t/frequently-asked-questions/56 | primer | 2026-10-23 | Day 09 |
+| oss-security: Suricata 8.0.7 released with 67 vulnerabilities fixed | https://www.openwall.com/lists/oss-security/2026/09/19/1 | sekunder | 2026-10-23 | Day 09 |
+| oss-security: balasan Victor Julien | https://www.openwall.com/lists/oss-security/2026/09/19/3 | sekunder | 2026-10-23 | Day 09 |
+| Suricata docs: Statistics | https://docs.suricata.io/en/latest/performance/statistics.html | primer | 2026-10-23 | Day 09 |
+| Splunkbase: CCX Add-on for Suricata (6994) | https://splunkbase.splunk.com/app/6994 | primer | 2026-10-23 | Day 09 |
+| Splunkbase: SuriZeek (9818) | https://splunkbase.splunk.com/app/9818 | primer | 2026-10-23 | Day 09 |
+| Suricata docs: Command Line Options | https://docs.suricata.io/en/latest/command-line-options.html | primer | 2026-10-23 | Day 09 |
