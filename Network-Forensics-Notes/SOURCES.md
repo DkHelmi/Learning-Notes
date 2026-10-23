@@ -4,7 +4,7 @@ Indeks sumber global, disusun dari tabel Sumber (bagian 9) setiap Day di folder 
 
 | Judul | URL | Tipe | Diakses | Dipakai di |
 |---|---|---|---|---|
-| Zeek documentation: Logs (index) | https://docs.zeek.org/en/current/logs/index.html | primer | 2026-10-22 | Day 01, Day 08, 10, 11 |
+| Zeek documentation: Logs (index) | https://docs.zeek.org/en/current/logs/index.html | primer | 2026-10-22 | Day 01, Day 08, 10, 11, 12 |
 | Wireshark news: 4.6.9 dan 4.4.19 | https://www.wireshark.org/news/20260923.html | primer | 2026-10-22 | Day 01 |
 | Zeek: Get Zeek | https://zeek.org/get-zeek/ | primer | 2026-10-22 | Day 01, Day 07, Day 08 |
 | Suricata: Download | https://suricata.io/download/ | primer | 2026-10-22 | Day 01, 09 |
@@ -13,7 +13,7 @@ Indeks sumber global, disusun dari tabel Sumber (bagian 9) setiap Day di folder 
 | JDIH BPK: UU No. 27 Tahun 2022 (PDP) | https://peraturan.bpk.go.id/Details/229798 | primer | 2026-10-07 | Day 01 |
 | NIST SP 800-86: Guide to Integrating Forensic Techniques into Incident Response | https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-86.pdf | primer | 2026-10-22 | Day 01 |
 | Richard Bejtlich: The Practice of Network Security Monitoring, Bab 1 (sampel No Starch) | https://nostarch.com/download/samples/PNSM_Ch01.pdf | primer | 2026-10-22 | Day 01 |
-| RFC 7011: Specification of the IPFIX Protocol for the Exchange of Flow Information | https://www.rfc-editor.org/rfc/rfc7011 | primer | 2026-10-22 | Day 01, 10 |
+| RFC 7011: Specification of the IPFIX Protocol for the Exchange of Flow Information | https://www.rfc-editor.org/rfc/rfc7011 | primer | 2026-10-22 | Day 01, 10, 12 |
 | Wireshark: dumpcap manual page | https://www.wireshark.org/docs/man-pages/dumpcap.html | primer | 2026-10-22 | Day 01, Day 02, Day 04 |
 | Zeek documentation: Connection log (conn.log) | https://docs.zeek.org/en/current/logs/conn.html | primer | 2026-10-22 | Day 01 |
 | Wireshark news: 5.0.0rc1 Development Release | https://www.wireshark.org/news/20261021.html | primer | 2026-10-22 | Day 01 |
@@ -26,7 +26,7 @@ Indeks sumber global, disusun dari tabel Sumber (bagian 9) setiap Day di folder 
 | Veritask: pengaturan teknis PDP lewat PP 33/2026 | https://veritask.ai/id/artikel/pengaturan-teknis-pelindungan-data-pribadi-dan-kewajiban-pengendali-serta-prosesor-akhirnya-terbit-lewat-pp-33-2026 | sekunder | 2026-10-22 | Day 01 |
 | Wireshark User's Guide (filter, Follow Stream, Statistics, Export Objects, Profiles, Name Resolution, menu File/View, tshark) | https://www.wireshark.org/docs/wsug_html_chunked/ | primer | 2026-10-22 | Day 02, Day 07 |
 | Wireshark news/releases (4.6.9, 5.0.0rc1) | https://www.wireshark.org/news/ | primer | 2026-10-22 | Day 02 |
-| Wireshark display filter reference | https://www.wireshark.org/docs/dfref/ | primer | 2026-10-22 | Day 02, Day 03, Day 04, Day 05, Day 07 |
+| Wireshark display filter reference | https://www.wireshark.org/docs/dfref/ | primer | 2026-10-23 | Day 02, Day 03, Day 04, Day 05, Day 07, 12 |
 | malware-traffic-analysis.net (metode latihan pcap) | https://www.malware-traffic-analysis.net/ | sekunder | 2026-10-09 | Day 02, Day 05 |
 | MITRE ATT&CK T1218.005: System Binary Proxy Execution: Mshta | https://attack.mitre.org/techniques/T1218/005/ | primer | 2026-10-10 | Day 02 |
 | Wireshark User's Guide: Time Zones | https://www.wireshark.org/docs/wsug_html_chunked/ChAdvTimezones.html | primer | 2026-10-22 | Day 02 |
@@ -42,14 +42,14 @@ Indeks sumber global, disusun dari tabel Sumber (bagian 9) setiap Day di folder 
 | Wireshark 4.6.9 Release Notes | https://www.wireshark.org/docs/relnotes/wireshark-4.6.9.html | primer | 2026-10-22 | Day 02 |
 | RFC 9110 (HTTP semantics) | https://www.rfc-editor.org/rfc/rfc9110 | primer | 2026-10-09 | Day 03, Day 05 |
 | RFC 9293 (TCP) | https://www.rfc-editor.org/rfc/rfc9293 | primer | 2026-10-22 | Day 03, Day 04 |
-| RFC 1035 (DNS) | https://www.rfc-editor.org/rfc/rfc1035 | primer | 2026-10-22 | Day 03, Day 05 |
+| RFC 1035 (DNS) | https://www.rfc-editor.org/rfc/rfc1035 | primer | 2026-10-22 | Day 03, Day 05, 12 |
 | Microsoft MS-SMB2 (termasuk SMB2 Packet Header dan NEGOTIATE Request) | https://learn.microsoft.com/en-us/openspecs/windows_protocols/ms-smb2/ | primer | 2026-10-22 | Day 03 |
 | MITRE ATT&CK T1571: Non-Standard Port | https://attack.mitre.org/techniques/T1571/ | primer | 2026-10-22 | Day 03, 11 |
 | Wireshark User's Guide: TCP Analysis | https://www.wireshark.org/docs/wsug_html_chunked/ChAdvTCPAnalysis.html | primer | 2026-10-22 | Day 03, Day 04 |
 | Zeek documentation: base/protocols/conn/main.zeek | https://docs.zeek.org/en/master/scripts/base/protocols/conn/main.zeek.html | primer | 2026-10-22 | Day 03 |
 | RFC 8446 (TLS 1.3) | https://www.rfc-editor.org/rfc/rfc8446 | primer | 2026-10-22 | Day 03, Day 06 |
 | RFC 3596 (DNS Extensions to Support IPv6) | https://www.rfc-editor.org/rfc/rfc3596 | primer | 2026-10-22 | Day 03 |
-| RFC 9846 (TLS 1.3, Jul 2026) | https://www.rfc-editor.org/rfc/rfc9846 | primer | 2026-10-22 | Day 03 |
+| RFC 9846 (TLS 1.3, Jul 2026) | https://www.rfc-editor.org/rfc/rfc9846 | primer | 2026-10-23 | Day 03, 12 |
 | RFC 7208 (SPF) | https://www.rfc-editor.org/rfc/rfc7208 | primer | 2026-10-22 | Day 03 |
 | MITRE ATT&CK T1021.002: SMB/Windows Admin Shares | https://attack.mitre.org/techniques/T1021/002/ | primer | 2026-10-22 | Day 03 |
 | RFC 959 (FTP) | https://www.rfc-editor.org/rfc/rfc959 | primer | 2026-10-22 | Day 03, Day 04 |
@@ -170,3 +170,18 @@ Indeks sumber global, disusun dari tabel Sumber (bagian 9) setiap Day di folder 
 | Microsoft Learn: Windows Time Service Tools and Settings | https://learn.microsoft.com/en-us/windows-server/networking/windows-time-service/windows-time-service-tools-and-settings | primer | 2026-10-23 | Day 11 |
 | Microsoft Learn: DeviceNetworkEvents table | https://learn.microsoft.com/en-us/defender-xdr/advanced-hunting-devicenetworkevents-table | primer | 2026-10-23 | Day 11 |
 | Sohail, When Agents Look Like Beacons (IEEE ICNP NIPA 2026), arXiv:2609.19091 | https://arxiv.org/abs/2609.19091 | sekunder | 2026-10-23 | Day 11 |
+| MITRE ATT&CK: Exfiltration (TA0010) | https://attack.mitre.org/tactics/TA0010/ | primer | 2026-10-22 | Day 12 |
+| MITRE ATT&CK T1048 (dan T1041, T1567, T1029, T1030, T1020, T1074, T1560) | https://attack.mitre.org/techniques/T1048/ | primer | 2026-10-22 | Day 12 |
+| MITRE ATT&CK T1567.002 Exfiltration to Cloud Storage | https://attack.mitre.org/techniques/T1567/002/ | primer | 2026-10-23 | Day 12 |
+| MITRE ATT&CK T1048.003 | https://attack.mitre.org/techniques/T1048/003/ | primer | 2026-10-23 | Day 12 |
+| MITRE ATT&CK T1030 Data Transfer Size Limits | https://attack.mitre.org/techniques/T1030/ | primer | 2026-10-23 | Day 12 |
+| MITRE ATT&CK T1041 Exfiltration Over C2 Channel | https://attack.mitre.org/techniques/T1041/ | primer | 2026-10-23 | Day 12 |
+| MITRE ATT&CK T1700 AI-Enabled Exfiltration | https://attack.mitre.org/techniques/T1700/ | primer | 2026-10-23 | Day 12 |
+| Zeek source conn/main.zeek (dan init-bare.zeek, analyzer ICMP) | https://github.com/zeek/zeek/blob/master/scripts/base/protocols/conn/main.zeek | primer | 2026-10-23 | Day 12 |
+| phaag/nfdump | https://github.com/phaag/nfdump | primer | 2026-10-22 | Day 12 |
+| Squid logformat directive | https://www.squid-cache.org/Doc/config/logformat/ | primer | 2026-10-23 | Day 12 |
+| Microsoft 365 URLs and IP address ranges | https://learn.microsoft.com/en-us/microsoft-365/enterprise/urls-and-ip-address-ranges | primer | 2026-10-23 | Day 12 |
+| Microsoft Entra tenant restrictions v2 | https://learn.microsoft.com/en-us/entra/external-id/tenant-restrictions-v2 | primer | 2026-10-23 | Day 12 |
+| Splunk Research: DNS Query Length With High Standard Deviation (v16) | https://research.splunk.com/network/1a67f15a-f4ff-4170-84e9-08cf6f75d6f5/ | primer | 2026-10-23 | Day 12 |
+| Salesforce Engineering: Detecting Multithreaded Exfiltration in Zeek | https://engineering.salesforce.com/detecting-multithreaded-exfiltration-in-zeek-e8a244885896/ | sekunder | 2026-10-23 | Day 12 |
+| w8mej/ThreatPlays analyze_producer_consumer_ratio | https://github.com/w8mej/ThreatPlays/blob/master/analyze_producer_consumer_ratio.md | komunitas | 2026-10-23 | Day 12 |
