@@ -79,7 +79,7 @@ Indeks sumber global, disusun dari tabel Sumber (bagian 9) setiap Day di folder 
 | Wikipedia: DOS MZ executable | https://en.wikipedia.org/wiki/DOS_MZ_executable | sekunder | 2026-10-22 | Day 05 |
 | Unit 42: Leveraging DNS Tunneling for Tracking and Scanning | https://unit42.paloaltonetworks.com/three-dns-tunneling-campaigns/ | sekunder | 2026-10-22 | Day 05 |
 | MITRE ATT&CK T1071.001 (Web Protocols) dan T1105 (Ingress Tool Transfer) | https://attack.mitre.org/techniques/T1071/001/ | primer | 2026-10-22 | Day 05 |
-| Wireshark display filter reference: tls | https://www.wireshark.org/docs/dfref/t/tls.html | primer | 2026-10-22 | Day 06 |
+| Wireshark display filter reference: tls | https://www.wireshark.org/docs/dfref/t/tls.html | primer | 2026-10-23 | Day 06, 16 |
 | Wireshark wiki: TLS | https://wiki.wireshark.org/TLS | primer | 2026-10-22 | Day 06 |
 | Salesforce JA3 (GitHub, diarsipkan 2025-05-01) | https://github.com/salesforce/ja3 | primer | 2026-10-22 | Day 06 |
 | FoxIO JA4+ (GitHub) | https://github.com/FoxIO-LLC/ja4 | primer | 2026-10-22 | Day 06 |
@@ -98,7 +98,7 @@ Indeks sumber global, disusun dari tabel Sumber (bagian 9) setiap Day di folder 
 | CA/Browser Forum Ballot SC-081v3 | https://cabforum.org/2025/04/11/ballot-sc081v3-introduce-schedule-of-reducing-validity-and-data-reuse-periods/ | primer | 2026-10-22 | Day 06 |
 | SSL.com: SSL Certificate Validity Changes | https://www.ssl.com/article/ssl-certificate-validity-changes-what-you-need-to-know/ | sekunder | 2026-10-22 | Day 06 |
 | RFC 9846: TLS 1.3 (Juli 2026, menggantikan RFC 8446) | https://www.rfc-editor.org/info/rfc9846 | primer | 2026-10-22 | Day 06 |
-| RFC 9849: TLS Encrypted Client Hello | https://www.rfc-editor.org/rfc/rfc9849.html | primer | 2026-10-09 | Day 07 |
+| RFC 9849: TLS Encrypted Client Hello | https://www.rfc-editor.org/rfc/rfc9849.html | primer | 2026-10-23 | Day 07, 16 |
 | RFC 9846: The TLS Protocol Version 1.3 | https://www.rfc-editor.org/rfc/rfc9846.html | primer | 2026-10-22 | Day 07 |
 | Zeek documentation (overview) | https://docs.zeek.org/en/master/ | primer | 2026-10-10 | Day 08 |
 | Zeek NEWS (cabang master) dan skrip hash-all-files | https://github.com/zeek/zeek | primer | 2026-10-22 | Day 08 |
@@ -123,7 +123,7 @@ Indeks sumber global, disusun dari tabel Sumber (bagian 9) setiap Day di folder 
 | Suricata documentation (overview) | https://docs.suricata.io/ | primer | 2026-10-09 | Day 09 |
 | Suricata docs: Rules | https://docs.suricata.io/en/latest/rules/ | primer | 2026-10-09 | Day 09 |
 | Suricata docs: Eve JSON output | https://docs.suricata.io/en/latest/output/eve/eve-json-output.html | primer | 2026-10-23 | Day 09 |
-| Suricata docs: EVE JSON Format | https://docs.suricata.io/en/latest/output/eve/eve-json-format.html | primer | 2026-10-23 | Day 09 |
+| Suricata docs: EVE JSON Format | https://docs.suricata.io/en/latest/output/eve/eve-json-format.html | primer | 2026-10-23 | Day 09, 16 |
 | Suricata docs: Upgrading | https://docs.suricata.io/en/latest/upgrade.html | primer | 2026-10-23 | Day 09 |
 | Suricata docs: Global-Thresholds | https://docs.suricata.io/en/latest/configuration/global-thresholds.html | primer | 2026-10-23 | Day 09 |
 | Suricata 8.0.7 docs: Thresholding Keywords | https://docs.suricata.io/en/suricata-8.0.7/rules/thresholding.html | primer | 2026-10-23 | Day 09 |
@@ -185,3 +185,21 @@ Indeks sumber global, disusun dari tabel Sumber (bagian 9) setiap Day di folder 
 | Splunk Research: DNS Query Length With High Standard Deviation (v16) | https://research.splunk.com/network/1a67f15a-f4ff-4170-84e9-08cf6f75d6f5/ | primer | 2026-10-23 | Day 12 |
 | Salesforce Engineering: Detecting Multithreaded Exfiltration in Zeek | https://engineering.salesforce.com/detecting-multithreaded-exfiltration-in-zeek-e8a244885896/ | sekunder | 2026-10-23 | Day 12 |
 | w8mej/ThreatPlays analyze_producer_consumer_ratio | https://github.com/w8mej/ThreatPlays/blob/master/analyze_producer_consumer_ratio.md | komunitas | 2026-10-23 | Day 12 |
+| RFC 8484: DNS Queries over HTTPS (DoH) | https://www.rfc-editor.org/rfc/rfc8484.html | primer | 2026-10-09 | Day 16 |
+| RFC 7858: Specification for DNS over Transport Layer Security (DoT) | https://www.rfc-editor.org/rfc/rfc7858.html | primer | 2026-10-09 | Day 16 |
+| RFC 9250: DNS over Dedicated QUIC Connections (DoQ) | https://www.rfc-editor.org/rfc/rfc9250.html | primer | 2026-10-09 | Day 16 |
+| RFC 9000: QUIC: A UDP-Based Multiplexed and Secure Transport | https://www.rfc-editor.org/rfc/rfc9000.html | primer | 2026-10-09 | Day 16 |
+| RFC 9312: Manageability of the QUIC Transport Protocol | https://www.rfc-editor.org/rfc/rfc9312.html | primer | 2026-10-09 | Day 16 |
+| RFC 9114: HTTP/3 | https://www.rfc-editor.org/rfc/rfc9114.html | primer | 2026-10-09 | Day 16 |
+| RFC 9001: Using TLS to Secure QUIC | https://www.rfc-editor.org/rfc/rfc9001.html | primer | 2026-10-23 | Day 16 |
+| RFC 9369: QUIC Version 2 | https://www.rfc-editor.org/rfc/rfc9369.html | primer | 2026-10-23 | Day 16 |
+| Wireshark Display Filter Reference: QUIC IETF | https://www.wireshark.org/docs/dfref/q/quic.html | primer | 2026-10-23 | Day 16 |
+| Zeek docs: base/protocols/quic/main.zeek (QUIC::Info) | https://docs.zeek.org/en/current/scripts/base/protocols/quic/main.zeek.html | primer | 2026-10-23 | Day 16 |
+| Suricata docs: QUIC Keywords | https://docs.suricata.io/en/latest/rules/quic-keywords.html | primer | 2026-10-23 | Day 16 |
+| OISF Redmine Feature #5773: doh: support DNS over HTTPS (DoH) | https://redmine.openinfosecfoundation.org/issues/5773 | primer | 2026-10-23 | Day 16 |
+| Red Hat Customer Portal: CVE-2026-94083 | https://access.redhat.com/security/cve/CVE-2026-94083 | primer | 2026-10-23 | Day 16 |
+| Microsoft Learn: Microsoft Edge policy DnsOverHttpsMode | https://learn.microsoft.com/en-us/deployedge/microsoft-edge-browser-policies/dnsoverhttpsmode | primer | 2026-10-23 | Day 16 |
+| Microsoft Learn: Microsoft Edge policy QuicAllowed | https://learn.microsoft.com/en-us/deployedge/microsoft-edge-browser-policies/quicallowed | primer | 2026-10-23 | Day 16 |
+| Mozilla Support: Canary domain - use-application-dns.net | https://support.mozilla.org/en-US/kb/canary-domain-use-application-dnsnet | primer | 2026-10-23 | Day 16 |
+| RFC 9462: Discovery of Designated Resolvers | https://www.rfc-editor.org/rfc/rfc9462.html | primer | 2026-10-23 | Day 16 |
+| MITRE ATT&CK T1572 Protocol Tunneling | https://attack.mitre.org/techniques/T1572/ | primer | 2026-10-23 | Day 16 |
