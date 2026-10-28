@@ -6,15 +6,15 @@ Indeks sumber global, disusun dari tabel Sumber (bagian 9) setiap Day di folder 
 |---|---|---|---|---|
 | Zeek documentation: Logs (index) | https://docs.zeek.org/en/current/logs/index.html | primer | 2026-10-22 | Day 01, Day 08, 10, 11, 12 |
 | Wireshark news: 4.6.9 dan 4.4.19 | https://www.wireshark.org/news/20260923.html | primer | 2026-10-22 | Day 01 |
-| Zeek: Get Zeek | https://zeek.org/get-zeek/ | primer | 2026-10-22 | Day 01, Day 07, Day 08 |
-| Suricata: Download | https://suricata.io/download/ | primer | 2026-10-22 | Day 01, 09 |
+| Zeek: Get Zeek | https://zeek.org/get-zeek/ | primer | 2026-10-22 | Day 01, Day 07, Day 08, Day 18 |
+| Suricata: Download | https://suricata.io/download/ | primer | 2026-10-22 | Day 01, 09, Day 18 |
 | Plixer: packet capture vs flow data (blog vendor) | https://www.plixer.com/blog/packet-capture-vs-flow-data/ | sekunder | 2026-10-23 | Day 01, 10 |
 | Pasal.id: UU 11/2008 Pasal 31 | https://pasal.id/peraturan/uu/uu-no-11-tahun-2008/pasal-31 | primer | 2026-10-22 | Day 01 |
 | JDIH BPK: UU No. 27 Tahun 2022 (PDP) | https://peraturan.bpk.go.id/Details/229798 | primer | 2026-10-07 | Day 01 |
 | NIST SP 800-86: Guide to Integrating Forensic Techniques into Incident Response | https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-86.pdf | primer | 2026-10-22 | Day 01 |
 | Richard Bejtlich: The Practice of Network Security Monitoring, Bab 1 (sampel No Starch) | https://nostarch.com/download/samples/PNSM_Ch01.pdf | primer | 2026-10-22 | Day 01 |
 | RFC 7011: Specification of the IPFIX Protocol for the Exchange of Flow Information | https://www.rfc-editor.org/rfc/rfc7011 | primer | 2026-10-22 | Day 01, 10, 12 |
-| Wireshark: dumpcap manual page | https://www.wireshark.org/docs/man-pages/dumpcap.html | primer | 2026-10-22 | Day 01, Day 02, Day 04 |
+| Wireshark: dumpcap manual page | https://www.wireshark.org/docs/man-pages/dumpcap.html | primer | 2026-10-22 | Day 01, Day 02, Day 04, Day 18 |
 | Zeek documentation: Connection log (conn.log) | https://docs.zeek.org/en/current/logs/conn.html | primer | 2026-10-22 | Day 01 |
 | Wireshark news: 5.0.0rc1 Development Release | https://www.wireshark.org/news/20261021.html | primer | 2026-10-22 | Day 01 |
 | JDIH BPK: UU No. 1 Tahun 2023 tentang KUHP | https://peraturan.bpk.go.id/Details/234935/uu-no-1-tahun-2023 | primer | 2026-10-22 | Day 01 |
@@ -53,7 +53,7 @@ Indeks sumber global, disusun dari tabel Sumber (bagian 9) setiap Day di folder 
 | RFC 7208 (SPF) | https://www.rfc-editor.org/rfc/rfc7208 | primer | 2026-10-22 | Day 03 |
 | MITRE ATT&CK T1021.002: SMB/Windows Admin Shares | https://attack.mitre.org/techniques/T1021/002/ | primer | 2026-10-22 | Day 03 |
 | RFC 959 (FTP) | https://www.rfc-editor.org/rfc/rfc959 | primer | 2026-10-22 | Day 03, Day 04 |
-| Wireshark: Download | https://www.wireshark.org/download.html | primer | 2026-10-22 | Day 03, Day 07 |
+| Wireshark: Download | https://www.wireshark.org/download.html | primer | 2026-10-22 | Day 03, Day 07, Day 18 |
 | MITRE ATT&CK T1110: Brute Force | https://attack.mitre.org/techniques/T1110/ | primer | 2026-10-22 | Day 04 |
 | RFC 792 (ICMP) | https://www.rfc-editor.org/rfc/rfc792 | primer | 2026-10-09 | Day 04 |
 | Nmap Reference Guide: Port Scanning Techniques | https://nmap.org/book/man-port-scanning-techniques.html | primer | 2026-10-22 | Day 04 |
@@ -106,7 +106,7 @@ Indeks sumber global, disusun dari tabel Sumber (bagian 9) setiap Day di folder 
 | Zeek docs: files.log | https://docs.zeek.org/en/master/logs/files.html | primer | 2026-10-22 | Day 08 |
 | Zeek docs: weird.log and notice.log | https://docs.zeek.org/en/master/logs/weird-and-notice.html | primer | 2026-10-22 | Day 08 |
 | Zeek docs: Notice Framework | https://docs.zeek.org/en/master/frameworks/notice.html | primer | 2026-10-22 | Day 08 |
-| Zeek docs: capture_loss.log and reporter.log | https://docs.zeek.org/en/master/logs/capture-loss-and-reporter.html | primer | 2026-10-22 | Day 08 |
+| Zeek docs: capture_loss.log and reporter.log | https://docs.zeek.org/en/master/logs/capture-loss-and-reporter.html | primer | 2026-10-22 | Day 08, Day 18 |
 | Zeek source: scripts/policy/misc/capture-loss.zeek | https://raw.githubusercontent.com/zeek/zeek/master/scripts/policy/misc/capture-loss.zeek | primer | 2026-10-22 | Day 08 |
 | Zeek docs: Cluster Setup | https://docs.zeek.org/en/master/cluster-setup.html | primer | 2026-10-22 | Day 08 |
 | Zeek docs: Logging Framework | https://docs.zeek.org/en/master/frameworks/logging.html | primer | 2026-10-22 | Day 08 |
@@ -227,3 +227,12 @@ Indeks sumber global, disusun dari tabel Sumber (bagian 9) setiap Day di folder 
 | Amazon VPC Traffic Mirroring: What is Traffic Mirroring | https://docs.aws.amazon.com/vpc/latest/mirroring/what-is-traffic-mirroring.html | primer | 2026-10-29 | Day 17 |
 | Amazon VPC Traffic Mirroring: How Traffic Mirroring works | https://docs.aws.amazon.com/vpc/latest/mirroring/traffic-mirroring-how-it-works.html | primer | 2026-10-29 | Day 17 |
 | Amazon Route 53 Developer Guide: Resolver query logging | https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/resolver-query-logs.html | primer | 2026-10-29 | Day 17 |
+| Arkime FAQ | https://arkime.com/faq | primer | 2026-10-29 | Day 18 |
+| RFC 5475: Sampling and Filtering Techniques for IP Packet Selection | https://www.rfc-editor.org/rfc/rfc5475.html | primer | 2026-10-29 | Day 18 |
+| RFC 7011: IPFIX Protocol | https://www.rfc-editor.org/rfc/rfc7011.html | primer | 2026-10-09 | Day 18 |
+| RFC 3176: InMon Corporation's sFlow | https://www.rfc-editor.org/rfc/rfc3176.html | primer | 2026-10-09 | Day 18 |
+| Arkime: Architecture dan Settings | https://arkime.com/architecture ; https://arkime.com/settings | primer | 2026-10-29 (settings) | Day 18 |
+| Arkime: Rules Format | https://arkime.com/rulesformat | primer | 2026-10-29 | Day 18 |
+| Arkime: Estimators | https://arkime.com/estimators | primer | 2026-10-29 | Day 18 |
+| Arkime releases (GitHub) | https://github.com/arkime/arkime/releases | primer | 2026-10-29 | Day 18 |
+| Suricata docs: suricata.yaml, pcap-log | https://docs.suricata.io/en/latest/configuration/suricata-yaml.html | primer | 2026-10-29 | Day 18 |
