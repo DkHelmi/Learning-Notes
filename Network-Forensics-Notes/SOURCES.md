@@ -212,3 +212,18 @@ Indeks sumber global, disusun dari tabel Sumber (bagian 9) setiap Day di folder 
 | Microsoft Edge Browser Policy: EncryptedClientHelloEnabled | https://learn.microsoft.com/en-us/deployedge/microsoft-edge-browser-policies/encryptedclienthelloenabled | primer | 2026-10-23 | Day 15 |
 | Cloudflare docs: Encrypted Client Hello (ECH) | https://developers.cloudflare.com/ssl/edge-certificates/ech/ | primer (vendor) | 2026-10-23 | Day 15 |
 | Chromium blink-dev: Intent to Ship: TLS Encrypted Client Hello (ECH) | https://groups.google.com/a/chromium.org/g/blink-dev/c/CmlXjQeNWDI/m/r-AUe0OqAQAJ | primer (vendor) | 2026-10-23 | Day 15 |
+| AWS VPC User Guide: Flow log records | https://docs.aws.amazon.com/vpc/latest/userguide/flow-log-records.html | primer | 2026-10-29 | Day 17 |
+| Microsoft Learn: Virtual network flow logs overview | https://learn.microsoft.com/en-us/azure/network-watcher/vnet-flow-logs-overview | primer | 2026-10-29 | Day 17 |
+| Microsoft Learn: Network security group flow logs overview | https://learn.microsoft.com/en-us/azure/network-watcher/nsg-flow-logs-overview | primer | 2026-10-29 | Day 17 |
+| IANA Assigned Internet Protocol Numbers | https://www.iana.org/assignments/protocol-numbers/protocol-numbers.xhtml | primer | 2026-10-09 | Day 17 |
+| AWS VPC User Guide: Flow log record examples | https://docs.aws.amazon.com/vpc/latest/userguide/flow-logs-records-examples.html | primer | 2026-10-29 | Day 17 |
+| AWS VPC User Guide: Flow log limitations | https://docs.aws.amazon.com/vpc/latest/userguide/flow-logs-limitations.html | primer | 2026-10-29 | Day 17 |
+| Amazon Athena User Guide: Query Amazon VPC flow logs | https://docs.aws.amazon.com/athena/latest/ug/vpc-flow-logs.html | primer | 2026-10-29 | Day 17 |
+| Amazon Athena User Guide: Create a table for Amazon VPC flow logs and query it | https://docs.aws.amazon.com/athena/latest/ug/vpc-flow-logs-create-table-statement.html | primer | 2026-10-29 | Day 17 |
+| Splunk Add-on for AWS: Configure VPC Flow Logs inputs | https://splunk.github.io/splunk-add-on-for-amazon-web-services/VPCFlowLogs | primer | 2026-10-29 | Day 17 |
+| Splunkbase: Splunk Add-on for Amazon Web Services (app 1876) | https://splunkbase.splunk.com/app/1876/ | primer | 2026-10-29 | Day 17 |
+| Splunk Add-on for Microsoft Cloud Services: Source types | https://splunk.github.io/splunk-add-on-for-microsoft-cloud-services/Sourcetypes | primer | 2026-10-29 | Day 17 |
+| Splunkbase: Splunk Add-on for Microsoft Cloud Services (app 3110) | https://splunkbase.splunk.com/app/3110 | primer | 2026-10-29 | Day 17 |
+| Amazon VPC Traffic Mirroring: What is Traffic Mirroring | https://docs.aws.amazon.com/vpc/latest/mirroring/what-is-traffic-mirroring.html | primer | 2026-10-29 | Day 17 |
+| Amazon VPC Traffic Mirroring: How Traffic Mirroring works | https://docs.aws.amazon.com/vpc/latest/mirroring/traffic-mirroring-how-it-works.html | primer | 2026-10-29 | Day 17 |
+| Amazon Route 53 Developer Guide: Resolver query logging | https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/resolver-query-logs.html | primer | 2026-10-29 | Day 17 |
