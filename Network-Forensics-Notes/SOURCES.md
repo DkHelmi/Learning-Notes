@@ -6,7 +6,7 @@ Indeks sumber global, disusun dari tabel Sumber (bagian 9) setiap Day di folder 
 |---|---|---|---|---|
 | Zeek documentation: Logs (index) | https://docs.zeek.org/en/current/logs/index.html | primer | 2026-10-22 | Day 01, Day 08, 10, 11, 12 |
 | Wireshark news: 4.6.9 dan 4.4.19 | https://www.wireshark.org/news/20260923.html | primer | 2026-10-22 | Day 01 |
-| Zeek: Get Zeek | https://zeek.org/get-zeek/ | primer | 2026-10-22 | Day 01, Day 07, Day 08, Day 18 |
+| Zeek: Get Zeek | https://zeek.org/get-zeek/ | primer | 2026-10-22 | Day 01, Day 07, Day 08, Day 18, Day 19 |
 | Suricata: Download | https://suricata.io/download/ | primer | 2026-10-22 | Day 01, 09, Day 18 |
 | Plixer: packet capture vs flow data (blog vendor) | https://www.plixer.com/blog/packet-capture-vs-flow-data/ | sekunder | 2026-10-23 | Day 01, 10 |
 | Pasal.id: UU 11/2008 Pasal 31 | https://pasal.id/peraturan/uu/uu-no-11-tahun-2008/pasal-31 | primer | 2026-10-22 | Day 01 |
@@ -51,7 +51,7 @@ Indeks sumber global, disusun dari tabel Sumber (bagian 9) setiap Day di folder 
 | RFC 3596 (DNS Extensions to Support IPv6) | https://www.rfc-editor.org/rfc/rfc3596 | primer | 2026-10-22 | Day 03 |
 | RFC 9846 (TLS 1.3, Jul 2026) | https://www.rfc-editor.org/rfc/rfc9846 | primer | 2026-10-23 | Day 03, 12 |
 | RFC 7208 (SPF) | https://www.rfc-editor.org/rfc/rfc7208 | primer | 2026-10-22 | Day 03 |
-| MITRE ATT&CK T1021.002: SMB/Windows Admin Shares | https://attack.mitre.org/techniques/T1021/002/ | primer | 2026-10-22 | Day 03 |
+| MITRE ATT&CK T1021.002: SMB/Windows Admin Shares | https://attack.mitre.org/techniques/T1021/002/ | primer | 2026-10-22 | Day 03, Day 19 |
 | RFC 959 (FTP) | https://www.rfc-editor.org/rfc/rfc959 | primer | 2026-10-22 | Day 03, Day 04 |
 | Wireshark: Download | https://www.wireshark.org/download.html | primer | 2026-10-22 | Day 03, Day 07, Day 18 |
 | MITRE ATT&CK T1110: Brute Force | https://attack.mitre.org/techniques/T1110/ | primer | 2026-10-22 | Day 04 |
@@ -236,3 +236,21 @@ Indeks sumber global, disusun dari tabel Sumber (bagian 9) setiap Day di folder 
 | Arkime: Estimators | https://arkime.com/estimators | primer | 2026-10-29 | Day 18 |
 | Arkime releases (GitHub) | https://github.com/arkime/arkime/releases | primer | 2026-10-29 | Day 18 |
 | Suricata docs: suricata.yaml, pcap-log | https://docs.suricata.io/en/latest/configuration/suricata-yaml.html | primer | 2026-10-29 | Day 18 |
+| Zeek documentation: SMB logs | https://docs.zeek.org/en/master/logs/smb.html | primer | 2026-10-29 | Day 19 |
+| Zeek documentation: base/protocols/krb/main.zeek (KRB::Info) dan kode sumbernya | https://docs.zeek.org/en/master/scripts/base/protocols/krb/main.zeek.html | primer | 2026-10-29 | Day 19 |
+| IANA: Kerberos Encryption Type Numbers | https://www.iana.org/assignments/kerberos-parameters/kerberos-parameters.xhtml | primer | 2026-10-29 | Day 19 |
+| Microsoft Learn: Event 4769 A Kerberos service ticket was requested | https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/auditing/event-4769 | primer | 2026-10-29 | Day 19 |
+| RFC 4120 Kerberos V5 | https://www.rfc-editor.org/rfc/rfc4120.html | primer | 2026-10-09 | Day 19 |
+| BZAR (mitre-attack/bzar) | https://github.com/mitre-attack/bzar | primer | 2026-10-29 | Day 19 |
+| Microsoft Open Specifications MS-SCMR, MS-TSCH, MS-RRP | https://learn.microsoft.com/en-us/openspecs/windows_protocols/ms-scmr/e7a38186-cde2-40ad-90c7-650822bd6333 | primer | 2026-10-10 | Day 19 |
+| Zeek documentation: base/protocols/dce-rpc/main.zeek (DCE_RPC::Info) | https://docs.zeek.org/en/master/scripts/base/protocols/dce-rpc/main.zeek.html | primer | 2026-10-29 | Day 19 |
+| Zeek documentation: base/protocols/krb/consts.zeek | https://docs.zeek.org/en/master/scripts/base/protocols/krb/consts.zeek.html | primer | 2026-10-29 | Day 19 |
+| Microsoft Learn: Event 4768 A Kerberos authentication ticket (TGT) was requested | https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/auditing/event-4768 | primer | 2026-10-29 | Day 19 |
+| Microsoft Support KB5073381 (CVE-2026-20833, RC4 KDC) | https://support.microsoft.com/en-us/topic/how-to-manage-kerberos-kdc-usage-of-rc4-for-service-account-ticket-issuance-changes-related-to-cve-2026-20833-1ebcda33-720a-4da8-93c1-b0496e1910dc | primer | 2026-10-29 | Day 19 |
+| MITRE ATT&CK T1558.003 Kerberoasting | https://attack.mitre.org/techniques/T1558/003/ | primer | 2026-10-29 | Day 19 |
+| MITRE ATT&CK T1558.004 AS-REP Roasting | https://attack.mitre.org/techniques/T1558/004/ | primer | 2026-10-29 | Day 19 |
+| MITRE ATT&CK T1569.002 Service Execution | https://attack.mitre.org/techniques/T1569/002/ | primer | 2026-10-29 | Day 19 |
+| Suricata 8.0.7 User Guide: EVE JSON Format | https://docs.suricata.io/en/suricata-8.0.7/output/eve/eve-json-format.html | primer | 2026-10-29 | Day 19 |
+| Wireshark Display Filter Reference: kerberos (dan smb2) | https://www.wireshark.org/docs/dfref/k/kerberos.html | primer | 2026-10-29 | Day 19 |
+| Microsoft Learn: SMB security hardening in Windows Server and Windows Client | https://learn.microsoft.com/en-us/windows-server/storage/file-server/smb-security-hardening | primer | 2026-10-29 | Day 19 |
+| MS-SMB2: SMB2 TRANSFORM_HEADER | https://learn.microsoft.com/en-us/openspecs/windows_protocols/ms-smb2/d6ce2327-a4c9-4793-be66-7b5bad2175fa | primer | 2026-10-29 | Day 19 |
