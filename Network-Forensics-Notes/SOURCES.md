@@ -4,10 +4,10 @@ Indeks sumber global, disusun dari tabel Sumber (bagian 9) setiap Day di folder 
 
 | Judul | URL | Tipe | Diakses | Dipakai di |
 |---|---|---|---|---|
-| Zeek documentation: Logs (index) | https://docs.zeek.org/en/current/logs/index.html | primer | 2026-10-22 | Day 01, Day 08, 10, 11, 12, Day 13 |
+| Zeek documentation: Logs (index) | https://docs.zeek.org/en/current/logs/index.html | primer | 2026-10-22 | Day 01, Day 08, 10, 11, 12, Day 13, Day 14 |
 | Wireshark news: 4.6.9 dan 4.4.19 | https://www.wireshark.org/news/20260923.html | primer | 2026-10-22 | Day 01 |
-| Zeek: Get Zeek | https://zeek.org/get-zeek/ | primer | 2026-10-22 | Day 01, Day 07, Day 08, Day 18, Day 19, Day 13 |
-| Suricata: Download | https://suricata.io/download/ | primer | 2026-10-22 | Day 01, 09, Day 18, Day 13 |
+| Zeek: Get Zeek | https://zeek.org/get-zeek/ | primer | 2026-10-22 | Day 01, Day 07, Day 08, Day 18, Day 19, Day 13, Day 14 |
+| Suricata: Download | https://suricata.io/download/ | primer | 2026-10-22 | Day 01, 09, Day 18, Day 13, Day 14 |
 | Plixer: packet capture vs flow data (blog vendor) | https://www.plixer.com/blog/packet-capture-vs-flow-data/ | sekunder | 2026-10-23 | Day 01, 10 |
 | Pasal.id: UU 11/2008 Pasal 31 | https://pasal.id/peraturan/uu/uu-no-11-tahun-2008/pasal-31 | primer | 2026-10-22 | Day 01 |
 | JDIH BPK: UU No. 27 Tahun 2022 (PDP) | https://peraturan.bpk.go.id/Details/229798 | primer | 2026-10-07 | Day 01 |
@@ -53,7 +53,7 @@ Indeks sumber global, disusun dari tabel Sumber (bagian 9) setiap Day di folder 
 | RFC 7208 (SPF) | https://www.rfc-editor.org/rfc/rfc7208 | primer | 2026-10-22 | Day 03 |
 | MITRE ATT&CK T1021.002: SMB/Windows Admin Shares | https://attack.mitre.org/techniques/T1021/002/ | primer | 2026-10-22 | Day 03, Day 19 |
 | RFC 959 (FTP) | https://www.rfc-editor.org/rfc/rfc959 | primer | 2026-10-22 | Day 03, Day 04 |
-| Wireshark: Download | https://www.wireshark.org/download.html | primer | 2026-10-22 | Day 03, Day 07, Day 18, Day 13 |
+| Wireshark: Download | https://www.wireshark.org/download.html | primer | 2026-10-22 | Day 03, Day 07, Day 18, Day 13, Day 14 |
 | MITRE ATT&CK T1110: Brute Force | https://attack.mitre.org/techniques/T1110/ | primer | 2026-10-22 | Day 04 |
 | RFC 792 (ICMP) | https://www.rfc-editor.org/rfc/rfc792 | primer | 2026-10-09 | Day 04 |
 | Nmap Reference Guide: Port Scanning Techniques | https://nmap.org/book/man-port-scanning-techniques.html | primer | 2026-10-22 | Day 04 |
@@ -114,7 +114,7 @@ Indeks sumber global, disusun dari tabel Sumber (bagian 9) setiap Day di folder 
 | Zeek source: scripts/site/local.zeek | https://raw.githubusercontent.com/zeek/zeek/master/scripts/site/local.zeek | primer | 2026-10-22 | Day 08 |
 | Zeek source: scripts/policy/tuning/json-logs.zeek | https://raw.githubusercontent.com/zeek/zeek/master/scripts/policy/tuning/json-logs.zeek | primer | 2026-10-22 | Day 08 |
 | Zeek source: scripts/base/frameworks/files/main.zeek | https://raw.githubusercontent.com/zeek/zeek/master/scripts/base/frameworks/files/main.zeek | primer | 2026-10-22 | Day 08 |
-| Splunkbase: TA for Zeek (app 5466) | https://splunkbase.splunk.com/app/5466 | primer | 2026-10-22 | Day 08, Day 13 |
+| Splunkbase: TA for Zeek (app 5466) | https://splunkbase.splunk.com/app/5466 | primer | 2026-10-22 | Day 08, Day 13, Day 14 |
 | WLCG SOC Working Group: Zeek hardware requirements | https://wlcg-soc-wg-doc.web.cern.ch/data_sources/zeek/hardware_requirements.html | sekunder | 2026-10-22 | Day 08 |
 | Splunk Research: Data Source Zeek Conn | https://research.splunk.com/sources/01dff429-9c29-4181-87ae-ea19cde20031/ | primer | 2026-10-22 | Day 08 |
 | Splunk Research: Data Source Bro http | https://research.splunk.com/sources/c5d9612b-0ffd-44d3-8247-3cf3486ec5e2/ | primer | 2026-10-23 | Day 08, 11 |
@@ -122,10 +122,10 @@ Indeks sumber global, disusun dari tabel Sumber (bagian 9) setiap Day di folder 
 | Jason Murray: Zeek Installation and Splunk CIM Data Normalization Guide | https://jasonmurray.org/posts/2022/zeekinstallandsplunklog/ | komunitas | 2026-10-22 | Day 08 |
 | Suricata documentation (overview) | https://docs.suricata.io/ | primer | 2026-10-09 | Day 09 |
 | Suricata docs: Rules | https://docs.suricata.io/en/latest/rules/ | primer | 2026-10-09 | Day 09 |
-| Suricata docs: Eve JSON output | https://docs.suricata.io/en/latest/output/eve/eve-json-output.html | primer | 2026-10-23 | Day 09 |
+| Suricata docs: Eve JSON output | https://docs.suricata.io/en/latest/output/eve/eve-json-output.html | primer | 2026-10-23 | Day 09, Day 14 |
 | Suricata docs: EVE JSON Format | https://docs.suricata.io/en/latest/output/eve/eve-json-format.html | primer | 2026-10-23 | Day 09, 16 |
 | Suricata docs: Upgrading | https://docs.suricata.io/en/latest/upgrade.html | primer | 2026-10-23 | Day 09 |
-| Suricata docs: Global-Thresholds | https://docs.suricata.io/en/latest/configuration/global-thresholds.html | primer | 2026-10-23 | Day 09 |
+| Suricata docs: Global-Thresholds | https://docs.suricata.io/en/latest/configuration/global-thresholds.html | primer | 2026-10-23 | Day 09, Day 14 |
 | Suricata 8.0.7 docs: Thresholding Keywords | https://docs.suricata.io/en/suricata-8.0.7/rules/thresholding.html | primer | 2026-10-23 | Day 09 |
 | suricata-update docs: Update | https://suricata-update.readthedocs.io/en/latest/update.html | primer | 2026-10-23 | Day 09 |
 | suricata-update docs: Quick Start | https://suricata-update.readthedocs.io/en/latest/quickstart.html | primer | 2026-10-23 | Day 09 |
@@ -172,7 +172,7 @@ Indeks sumber global, disusun dari tabel Sumber (bagian 9) setiap Day di folder 
 | Sohail, When Agents Look Like Beacons (IEEE ICNP NIPA 2026), arXiv:2609.19091 | https://arxiv.org/abs/2609.19091 | sekunder | 2026-10-23 | Day 11 |
 | MITRE ATT&CK: Exfiltration (TA0010) | https://attack.mitre.org/tactics/TA0010/ | primer | 2026-10-22 | Day 12 |
 | MITRE ATT&CK T1048 (dan T1041, T1567, T1029, T1030, T1020, T1074, T1560) | https://attack.mitre.org/techniques/T1048/ | primer | 2026-10-22 | Day 12 |
-| MITRE ATT&CK T1567.002 Exfiltration to Cloud Storage | https://attack.mitre.org/techniques/T1567/002/ | primer | 2026-10-23 | Day 12 |
+| MITRE ATT&CK T1567.002 Exfiltration to Cloud Storage | https://attack.mitre.org/techniques/T1567/002/ | primer | 2026-10-23 | Day 12, Day 14 |
 | MITRE ATT&CK T1048.003 | https://attack.mitre.org/techniques/T1048/003/ | primer | 2026-10-23 | Day 12 |
 | MITRE ATT&CK T1030 Data Transfer Size Limits | https://attack.mitre.org/techniques/T1030/ | primer | 2026-10-23 | Day 12 |
 | MITRE ATT&CK T1041 Exfiltration Over C2 Channel | https://attack.mitre.org/techniques/T1041/ | primer | 2026-10-23 | Day 12 |
@@ -257,9 +257,14 @@ Indeks sumber global, disusun dari tabel Sumber (bagian 9) setiap Day di folder 
 | Netresec: publicly available PCAP files | https://www.netresec.com/?page=PcapFiles | sekunder | 2026-10-29 | Day 13 |
 | Splunk documentation: Common Information Model | https://docs.splunk.com/ | primer | 2026-10-10 | Day 13 |
 | NIST SP 800-86 Guide to Integrating Forensic Techniques into Incident Response | https://csrc.nist.gov/pubs/sp/800/86/final | primer | 2026-10-29 | Day 13 |
-| Splunk Help: CIM 6.2 data model Network Traffic | https://help.splunk.com/en/data-management/common-information-model/6.2/data-models/network-traffic | primer | 2026-10-29 | Day 13 |
+| Splunk Help: CIM 6.2 data model Network Traffic | https://help.splunk.com/en/data-management/common-information-model/6.2/data-models/network-traffic | primer | 2026-10-29 | Day 13, Day 14 |
 | Splunk Help: Set up the Splunk Common Information Model Add-on (ES 8, CIM 6.0) | https://help.splunk.com/en/splunk-enterprise-security-8/common-information-model/6.0/introduction/set-up-the-splunk-common-information-model-add-on | primer | 2026-10-29 | Day 13 |
 | Splunk Blog: Splunking Netflow with Splunk Stream, Part 2 | https://splunk.com/en_us/blog/tips-and-tricks/splunking-netflow-with-splunk-stream-part-2-basic-netflow-analytics.html | sekunder | 2026-10-29 | Day 13 |
 | Splunk Help: SPL search reference, tstats (Splunk Enterprise 10.0) | https://help.splunk.com/en/splunk-enterprise/search/spl-search-reference/10.0/search-commands/tstats | primer | 2026-10-29 | Day 13 |
 | malware-traffic-analysis.net: About | https://www.malware-traffic-analysis.net/about.html | sekunder | 2026-10-29 | Day 13 |
 | Wireshark Wiki: SampleCaptures | https://wiki.wireshark.org/SampleCaptures | primer | 2026-10-29 | Day 13 |
+| MITRE ATT&CK (T1105, T1071.001, T1573, T1039, T1030, T1048.002) | https://attack.mitre.org/ | primer | 2026-10-10 | Day 14 |
+| Zeek script reference: base/protocols/smb/main.zeek | https://docs.zeek.org/en/current/scripts/base/protocols/smb/main.zeek.html | primer | 2026-10-29 | Day 14 |
+| Zeek docs: SMB logs | https://docs.zeek.org/en/current/logs/smb.html | primer | 2026-10-29 | Day 14 |
+| MITRE ATT&CK: T1105 Ingress Tool Transfer | https://attack.mitre.org/techniques/T1105/ | primer | 2026-10-29 | Day 14 |
+| LOLBAS Project: Certutil | https://lolbas-project.github.io/lolbas/Binaries/Certutil/ | sekunder | 2026-10-29 | Day 14 |
