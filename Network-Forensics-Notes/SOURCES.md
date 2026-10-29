@@ -4,10 +4,10 @@ Indeks sumber global, disusun dari tabel Sumber (bagian 9) setiap Day di folder 
 
 | Judul | URL | Tipe | Diakses | Dipakai di |
 |---|---|---|---|---|
-| Zeek documentation: Logs (index) | https://docs.zeek.org/en/current/logs/index.html | primer | 2026-10-22 | Day 01, Day 08, 10, 11, 12 |
+| Zeek documentation: Logs (index) | https://docs.zeek.org/en/current/logs/index.html | primer | 2026-10-22 | Day 01, Day 08, 10, 11, 12, Day 13 |
 | Wireshark news: 4.6.9 dan 4.4.19 | https://www.wireshark.org/news/20260923.html | primer | 2026-10-22 | Day 01 |
-| Zeek: Get Zeek | https://zeek.org/get-zeek/ | primer | 2026-10-22 | Day 01, Day 07, Day 08, Day 18, Day 19 |
-| Suricata: Download | https://suricata.io/download/ | primer | 2026-10-22 | Day 01, 09, Day 18 |
+| Zeek: Get Zeek | https://zeek.org/get-zeek/ | primer | 2026-10-22 | Day 01, Day 07, Day 08, Day 18, Day 19, Day 13 |
+| Suricata: Download | https://suricata.io/download/ | primer | 2026-10-22 | Day 01, 09, Day 18, Day 13 |
 | Plixer: packet capture vs flow data (blog vendor) | https://www.plixer.com/blog/packet-capture-vs-flow-data/ | sekunder | 2026-10-23 | Day 01, 10 |
 | Pasal.id: UU 11/2008 Pasal 31 | https://pasal.id/peraturan/uu/uu-no-11-tahun-2008/pasal-31 | primer | 2026-10-22 | Day 01 |
 | JDIH BPK: UU No. 27 Tahun 2022 (PDP) | https://peraturan.bpk.go.id/Details/229798 | primer | 2026-10-07 | Day 01 |
@@ -24,10 +24,10 @@ Indeks sumber global, disusun dari tabel Sumber (bagian 9) setiap Day di folder 
 | Pasal.id: UU 27/2022 (PDP) Pasal 53 | https://pasal.id/peraturan/uu/uu-no-27-tahun-2022/pasal-53 | primer | 2026-10-22 | Day 01 |
 | Meridian Hukum: PP No. 33 Tahun 2026 | https://meridianhukum.com/peraturan/pp-no-33-tahun-2026 | sekunder | 2026-10-22 | Day 01 |
 | Veritask: pengaturan teknis PDP lewat PP 33/2026 | https://veritask.ai/id/artikel/pengaturan-teknis-pelindungan-data-pribadi-dan-kewajiban-pengendali-serta-prosesor-akhirnya-terbit-lewat-pp-33-2026 | sekunder | 2026-10-22 | Day 01 |
-| Wireshark User's Guide (filter, Follow Stream, Statistics, Export Objects, Profiles, Name Resolution, menu File/View, tshark) | https://www.wireshark.org/docs/wsug_html_chunked/ | primer | 2026-10-22 | Day 02, Day 07 |
+| Wireshark User's Guide (filter, Follow Stream, Statistics, Export Objects, Profiles, Name Resolution, menu File/View, tshark) | https://www.wireshark.org/docs/wsug_html_chunked/ | primer | 2026-10-22 | Day 02, Day 07, Day 13 |
 | Wireshark news/releases (4.6.9, 5.0.0rc1) | https://www.wireshark.org/news/ | primer | 2026-10-22 | Day 02 |
 | Wireshark display filter reference | https://www.wireshark.org/docs/dfref/ | primer | 2026-10-23 | Day 02, Day 03, Day 04, Day 05, Day 07, 12 |
-| malware-traffic-analysis.net (metode latihan pcap) | https://www.malware-traffic-analysis.net/ | sekunder | 2026-10-09 | Day 02, Day 05 |
+| malware-traffic-analysis.net (metode latihan pcap) | https://www.malware-traffic-analysis.net/ | sekunder | 2026-10-09 | Day 02, Day 05, Day 13 |
 | MITRE ATT&CK T1218.005: System Binary Proxy Execution: Mshta | https://attack.mitre.org/techniques/T1218/005/ | primer | 2026-10-10 | Day 02 |
 | Wireshark User's Guide: Time Zones | https://www.wireshark.org/docs/wsug_html_chunked/ChAdvTimezones.html | primer | 2026-10-22 | Day 02 |
 | Wireshark: tshark manual page | https://www.wireshark.org/docs/man-pages/tshark.html | primer | 2026-10-22 | Day 02, Day 05 |
@@ -53,7 +53,7 @@ Indeks sumber global, disusun dari tabel Sumber (bagian 9) setiap Day di folder 
 | RFC 7208 (SPF) | https://www.rfc-editor.org/rfc/rfc7208 | primer | 2026-10-22 | Day 03 |
 | MITRE ATT&CK T1021.002: SMB/Windows Admin Shares | https://attack.mitre.org/techniques/T1021/002/ | primer | 2026-10-22 | Day 03, Day 19 |
 | RFC 959 (FTP) | https://www.rfc-editor.org/rfc/rfc959 | primer | 2026-10-22 | Day 03, Day 04 |
-| Wireshark: Download | https://www.wireshark.org/download.html | primer | 2026-10-22 | Day 03, Day 07, Day 18 |
+| Wireshark: Download | https://www.wireshark.org/download.html | primer | 2026-10-22 | Day 03, Day 07, Day 18, Day 13 |
 | MITRE ATT&CK T1110: Brute Force | https://attack.mitre.org/techniques/T1110/ | primer | 2026-10-22 | Day 04 |
 | RFC 792 (ICMP) | https://www.rfc-editor.org/rfc/rfc792 | primer | 2026-10-09 | Day 04 |
 | Nmap Reference Guide: Port Scanning Techniques | https://nmap.org/book/man-port-scanning-techniques.html | primer | 2026-10-22 | Day 04 |
@@ -114,7 +114,7 @@ Indeks sumber global, disusun dari tabel Sumber (bagian 9) setiap Day di folder 
 | Zeek source: scripts/site/local.zeek | https://raw.githubusercontent.com/zeek/zeek/master/scripts/site/local.zeek | primer | 2026-10-22 | Day 08 |
 | Zeek source: scripts/policy/tuning/json-logs.zeek | https://raw.githubusercontent.com/zeek/zeek/master/scripts/policy/tuning/json-logs.zeek | primer | 2026-10-22 | Day 08 |
 | Zeek source: scripts/base/frameworks/files/main.zeek | https://raw.githubusercontent.com/zeek/zeek/master/scripts/base/frameworks/files/main.zeek | primer | 2026-10-22 | Day 08 |
-| Splunkbase: TA for Zeek (app 5466) | https://splunkbase.splunk.com/app/5466 | primer | 2026-10-22 | Day 08 |
+| Splunkbase: TA for Zeek (app 5466) | https://splunkbase.splunk.com/app/5466 | primer | 2026-10-22 | Day 08, Day 13 |
 | WLCG SOC Working Group: Zeek hardware requirements | https://wlcg-soc-wg-doc.web.cern.ch/data_sources/zeek/hardware_requirements.html | sekunder | 2026-10-22 | Day 08 |
 | Splunk Research: Data Source Zeek Conn | https://research.splunk.com/sources/01dff429-9c29-4181-87ae-ea19cde20031/ | primer | 2026-10-22 | Day 08 |
 | Splunk Research: Data Source Bro http | https://research.splunk.com/sources/c5d9612b-0ffd-44d3-8247-3cf3486ec5e2/ | primer | 2026-10-23 | Day 08, 11 |
@@ -254,3 +254,12 @@ Indeks sumber global, disusun dari tabel Sumber (bagian 9) setiap Day di folder 
 | Wireshark Display Filter Reference: kerberos (dan smb2) | https://www.wireshark.org/docs/dfref/k/kerberos.html | primer | 2026-10-29 | Day 19 |
 | Microsoft Learn: SMB security hardening in Windows Server and Windows Client | https://learn.microsoft.com/en-us/windows-server/storage/file-server/smb-security-hardening | primer | 2026-10-29 | Day 19 |
 | MS-SMB2: SMB2 TRANSFORM_HEADER | https://learn.microsoft.com/en-us/openspecs/windows_protocols/ms-smb2/d6ce2327-a4c9-4793-be66-7b5bad2175fa | primer | 2026-10-29 | Day 19 |
+| Netresec: publicly available PCAP files | https://www.netresec.com/?page=PcapFiles | sekunder | 2026-10-29 | Day 13 |
+| Splunk documentation: Common Information Model | https://docs.splunk.com/ | primer | 2026-10-10 | Day 13 |
+| NIST SP 800-86 Guide to Integrating Forensic Techniques into Incident Response | https://csrc.nist.gov/pubs/sp/800/86/final | primer | 2026-10-29 | Day 13 |
+| Splunk Help: CIM 6.2 data model Network Traffic | https://help.splunk.com/en/data-management/common-information-model/6.2/data-models/network-traffic | primer | 2026-10-29 | Day 13 |
+| Splunk Help: Set up the Splunk Common Information Model Add-on (ES 8, CIM 6.0) | https://help.splunk.com/en/splunk-enterprise-security-8/common-information-model/6.0/introduction/set-up-the-splunk-common-information-model-add-on | primer | 2026-10-29 | Day 13 |
+| Splunk Blog: Splunking Netflow with Splunk Stream, Part 2 | https://splunk.com/en_us/blog/tips-and-tricks/splunking-netflow-with-splunk-stream-part-2-basic-netflow-analytics.html | sekunder | 2026-10-29 | Day 13 |
+| Splunk Help: SPL search reference, tstats (Splunk Enterprise 10.0) | https://help.splunk.com/en/splunk-enterprise/search/spl-search-reference/10.0/search-commands/tstats | primer | 2026-10-29 | Day 13 |
+| malware-traffic-analysis.net: About | https://www.malware-traffic-analysis.net/about.html | sekunder | 2026-10-29 | Day 13 |
+| Wireshark Wiki: SampleCaptures | https://wiki.wireshark.org/SampleCaptures | primer | 2026-10-29 | Day 13 |
